@@ -1,0 +1,10 @@
+{
+    "summary": "This code seems to describe a generic data regenerator that accepts all types of data, derives new ones based on the original input, and checks LibHDF5 for hierarchical data format support.",
+    "details": [
+        {
+            "comment": "This code seems to describe a generic data regenerator that accepts all types of data, derives new ones based on the original input, and checks LibHDF5 for hierarchical data format support.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/README\":0-2",
+            "content": "THE GENERIC REGENERATOR. ALL FORM OF DATA ACCEPTED. DERIVE FROM ORIGINAL AND CONSTRUCT NEW ONES.\nCHECK THE LIBHDF5 FIRST. THE HIERACHICAL DATA FORMAT."
+        }
+    ]
+}

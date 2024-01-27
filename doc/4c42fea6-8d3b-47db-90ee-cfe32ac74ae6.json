@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads two CSV files, splits them into training and testing sets, scales the data, builds a Sequential model, fits it on the training data, predicts on test data, creates a confusion matrix, and saves the trained model for binary classification tasks.",
+    "details": [
+        {
+            "comment": "Code imports necessary libraries and defines a function \"niche\" which reads two CSV files, splits the data into training and testing sets, scales the data using StandardScaler, builds a Sequential model with three Dense layers, and finally fits the model on the training data. The code seems to be part of a deep learning model development process for classification tasks.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/superHot.py\":0-29",
+            "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nimport keras\nfrom keras.models import Sequential\nfrom keras.layers import Dense\nfrom sklearn.metrics import confusion_matrix\nfrom modelIO import saveTo\n# what is useful anyway?\ndef niche(z):\n    jerk=(lambda x:pd.read_csv(x))\n    x0,y=jerk('canonical0.csv'),jerk('canonical1.csv')\n    x=x0.iloc[:,:].values\n    y0=y.iloc[:,z].values\n#print(x)\n    x0_train, x0_test, y0_train, y0_test = train_test_split(x, y0, test_size = 0.2)\n    sc = StandardScaler()\n    x0_train = sc.fit_transform(x0_train)\n    x0_test = sc.transform(x0_test)\n    classifier = Sequential()\n    classifier.add(Dense(units = 6, kernel_initializer = 'uniform',activation = 'relu', input_dim = 10))\n# i have counted this.\n    classifier.add(Dense(units = 6, kernel_initializer = 'uniform',activation = 'relu'))\n    classifier.add(Dense(units = 1, kernel_initializer = 'uniform',activation = 'sigmoid'))\n# fuck you deeplearning!"
+        },
+        {
+            "comment": "The code is training a binary classifier, predicting on test data, creating a confusion matrix, and saving the trained model.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/superHot.py\":30-43",
+            "content": "    classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])\n    classifier.fit(x0_train, y0_train, batch_size = 10, epochs = 50)\n    y0_pred = classifier.predict(x0_test)\n    y0_pred = (y0_pred > 0.5)\n    new_prediction = classifier.predict(sc.transform\n    (np.array([[3,50.666666666666664,8.013876853447538,2,35.666666666666664,8.5,45,62,45,62]])))\n    new_prediction = (new_prediction > 0.5)\n    cm = confusion_matrix(y0_test, y0_pred)\n    print (cm)\n    saveTo(classifier,\"conv\"+str(z))"
+        }
+    ]
+}

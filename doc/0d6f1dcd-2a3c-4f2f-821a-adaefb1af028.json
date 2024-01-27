@@ -1,0 +1,10 @@
+{
+    "summary": "This code executes three scripts in order: newShit.sh, derive_prefixed_fixed.py, and scientologyN.py, with the output of the last script being redirected to zen.log.",
+    "details": [
+        {
+            "comment": "This code executes three scripts in order: newShit.sh, derive_prefixed_fixed.py, and scientologyN.py, with the output of the last script being redirected to zen.log.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/bruce.sh\":0-3",
+            "content": "#!/bin/bash\n./newShit.sh\npython derive_prefixed_fixed.py\npython scientologyN.py > zen.log"
+        }
+    ]
+}

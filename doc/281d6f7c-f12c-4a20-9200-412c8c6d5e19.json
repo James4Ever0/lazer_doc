@@ -1,0 +1,10 @@
+{
+    "summary": "This script is written in Bash and is used to change the current directory to \"zero\". It then executes the \"run-parts\" command on the current directory, which runs all shell scripts inside the specified directory. The output of this command is redirected to a file named \"zero.log0\" in the parent directory using the \">&\" operator. This script seems to be part of a larger program used for executing multiple scripts from a central location and logging the results.",
+    "details": [
+        {
+            "comment": "This script is written in Bash and is used to change the current directory to \"zero\". It then executes the \"run-parts\" command on the current directory, which runs all shell scripts inside the specified directory. The output of this command is redirected to a file named \"zero.log0\" in the parent directory using the \">&\" operator. This script seems to be part of a larger program used for executing multiple scripts from a central location and logging the results.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex/corefuck0.sh\":0-2",
+            "content": "#!/bin/bash\ncd zero\nrun-parts . &> ../zero.log0"
+        }
+    ]
+}

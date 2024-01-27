@@ -1,0 +1,10 @@
+{
+    "summary": "This Haskell code imports the System.Environment module and defines two functions, t and t0. The function t checks if a list consists only of digits. Function t0 takes a list, transforms it into a tuple by applying t to each element, and returns the transformed list. In the main function, it gets command-line arguments, applies t0 to them, and prints both the original list and the transformed list.",
+    "details": [
+        {
+            "comment": "This Haskell code imports the System.Environment module and defines two functions, t and t0. The function t checks if a list consists only of digits. Function t0 takes a list, transforms it into a tuple by applying t to each element, and returns the transformed list. In the main function, it gets command-line arguments, applies t0 to them, and prints both the original list and the transformed list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed.hs\":0-17",
+            "content": "import System.Enviroment\n-- i am not afraid of forgetting.\n-- i never forget. i never forgive.\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\n-- decide whether it misses anything or not.\n-- they must be separated, if possible change it into a tuple\n-- seriously it doesn't mean shit\n-- nothing is too crazy. you are just not aware of it.\nt lst = (length (filter (\\x -> x>='0' && x<= '9') lst)) == length lst\nt0 lst = [(x,t x)|x <-lst]\nmain = do\n  a <- getArgs\n  b <- t0 a\n  print a\n  print b"
+        }
+    ]
+}

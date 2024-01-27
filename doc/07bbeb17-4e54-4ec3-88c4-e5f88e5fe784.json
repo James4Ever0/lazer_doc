@@ -1,0 +1,15 @@
+{
+    "summary": "This code defines a keyboard layout and creates a function to return the next key, as well as generates a list of keys and their adjacent keys, writing them to a CSV file.",
+    "details": [
+        {
+            "comment": "The code defines a keyboard layout and provides a function to return the next key based on a given input. The 'curse' function generates a list of all keys on the keyboard and their corresponding adjacent keys. Then, it writes the list to a CSV file named \"fuck.csv\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/buster.py\":0-36",
+            "content": "keyboard=[['q','w','e','r','t','y','u','i','o','p'],['a','s','d','f','g','h','j','k','l'],['z','x','c','v','b','n','m']]\ndef returnNear(a):\n    b=[]\n    for x in range(3):\n        if a in keyboard[x]:\n            b=[x,keyboard[x].index(a),len(keyboard[x])-1]\n            break\n    if x==0:\n        if b[1]!=b[2]:\n            return (keyboard[0][b[1]+1],)\n        else:\n            return False\n    if x==1:\n        if b[1]!=b[2]:\n            return (keyboard[1][b[1]+1],*keyboard[0][b[1]:b[1]+2])\n        else:\n            return (*keyboard[0][b[1]:b[1]+2],)\n    if x==2:\n            if b[1]!=b[2]:\n                return (keyboard[1][b[1]+1],*keyboard[1][b[1]:b[1]+3])\n            else:\n                return (*keyboard[0][b[1]:b[1]+3],)\ndef curse():\n    r0=[]\n    for k0 in range(ord(\"a\"),ord(\"z\")+1):\n        r=returnNear(chr(k0))\n        if r!= False:\n            for r1 in r:\n                r0.append([chr(k0),r1])\n    return r0\ndef writeCSV(x):\n    with open(\"fuck.csv\",\"w+\") as fuck:\n        for x1 in x:\n            x2=\"\"\n            for x0 in x1:"
+        },
+        {
+            "comment": "Writes x0 value concatenated with a comma to file, appends a newline character, and calls writeCSV function on curse result.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/buster.py\":37-41",
+            "content": "                x2+=x0+\",\"\n            fuck.write(x2[:-1])\n            fuck.write(\"\\n\")\nwriteCSV(curse())"
+        }
+    ]
+}

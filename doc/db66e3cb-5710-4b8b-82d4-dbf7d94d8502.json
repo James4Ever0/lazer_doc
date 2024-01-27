@@ -1,0 +1,10 @@
+{
+    "summary": "This code initializes an empty dictionary, \"sick\", and then iterates through a range of 6 values. Inside the loop, it assigns each value to a key formed by formatting the current index with the string \"hello\". Finally, it prints the resulting dictionary.",
+    "details": [
+        {
+            "comment": "This code initializes an empty dictionary, \"sick\", and then iterates through a range of 6 values. Inside the loop, it assigns each value to a key formed by formatting the current index with the string \"hello\". Finally, it prints the resulting dictionary.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/connector/the_format.py\":0-3",
+            "content": "sick={}\nfor i in range(6):\n    sick[\"{}{}\".format(i,\"hello\")]=i\nprint(sick)"
+        }
+    ]
+}

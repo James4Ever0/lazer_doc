@@ -1,0 +1,10 @@
+{
+    "summary": "This code is used to execute a Python script within Termux environment, importing \"sampleModule\" and \"standardParse\", running monad analysis on \"sampleModule\", and then exiting.",
+    "details": [
+        {
+            "comment": "This code is used to execute a Python script within Termux environment, importing \"sampleModule\" and \"standardParse\", running monad analysis on \"sampleModule\", and then exiting.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/jerkOff.exp\":0-7",
+            "content": "#!/data/data/com.termux/files/usr/bin/expect\ncd /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer\nspawn python\nexpect -re \".*\" {send -- \"import sampleModule\\r\"}\nexpect -re \".*\" {send -- \"from standardParse import *\\r\"}\nexpect -re \".*\" {send -- \"monad(\\\"sampleModule\\\",globals())\\r\"}\nexpect -re \".*\" {send -- \"exit()\\r\"}\nexpect eof"
+        }
+    ]
+}

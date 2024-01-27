@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+    "details": [
+        {
+            "comment": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py\":0-19",
+            "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)"
+        }
+    ]
+}

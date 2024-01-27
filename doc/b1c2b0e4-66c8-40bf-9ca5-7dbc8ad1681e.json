@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines two functions, `k` and `k0`, which read and write files respectively. It then uses these functions to append contents of \"bitch.py\" and \"standardInsult.py\", and adds a line to print the output of a function named \"monad\" with its first argument as the file content and second argument as the global variables.",
+    "details": [
+        {
+            "comment": "This code defines two functions, `k` and `k0`, which read and write files respectively. It then uses these functions to append contents of \"bitch.py\" and \"standardInsult.py\", and adds a line to print the output of a function named \"monad\" with its first argument as the file content and second argument as the global variables.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/stickGlue.py\":0-8",
+            "content": "def k(a):\n    with open(a,\"r\") as d:\n        return d.read()\ndef k0(a,b):\n    with open(a,\"w+\") as d:\n        d.write(b)\nk0(\"peach.py\",k(\"bitch.py\")+\"\\n\"+k(\"standardInsult.py\")+\"\\n\"+\"print(monad(r[0],globals()))\\n\")"
+        }
+    ]
+}

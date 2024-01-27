@@ -1,0 +1,10 @@
+{
+    "summary": "Sends an HTTP GET request to Baidu search engine, retrieves the HTML response, and logs the data.",
+    "details": [
+        {
+            "comment": "Sends an HTTP GET request to Baidu search engine, retrieves the HTML response, and logs the data.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/node-quest.js\":0-17",
+            "content": "const http = require('http');\nhttp.get('http://www.baidu.com/s?word=%E5%A4%AE%E8%A7%86%E6%9A%82%E5%81%9CNBA%E8%BD%AC%E6%92%AD', (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});"
+        }
+    ]
+}

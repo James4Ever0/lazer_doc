@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads Python files, extracts table and constraint details, and returns table names and constraint lists. It uses regular expressions for pattern matching and list operations. Applied to 3 files: makeDB0.py, makeDB1.py, makeGroupingDatabase.py. The code also prints variables, stores a list [b, c, a] in storeAList.",
+    "details": [
+        {
+            "comment": "This code performs meta-programming by reading a Python file, extracting table and constraint details, and returning the table name and constraint names in a list. The code uses regular expressions for pattern matching and list operations to process the extracted information. It is applied to three different files: 'makeDB0.py', 'makeDB1.py', and 'makeGroupingDatabase.py'.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/derive_prefixed_fixed.py\":0-27",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=['makeDB0.py','makeDB1.py','makeGroupingDatabase.py']\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\nc=cockShock(dickHead[2])"
+        },
+        {
+            "comment": "The code prints a variable 'a', displays a spliter, and then prints another variable 'b' before storing the list [b, c, a] in a list called storeAList.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/derive_prefixed_fixed.py\":28-31",
+            "content": "'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([b,c,a])"
+        }
+    ]
+}

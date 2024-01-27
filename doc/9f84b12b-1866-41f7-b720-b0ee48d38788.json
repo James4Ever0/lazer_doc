@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a \"keyboard\" list, which represents the QWERTY keyboard layout. The function \"returnNear(a)\" takes a character and returns the next character in the same row or column. The function \"curse()\" iterates over all lowercase letters, calls \"returnNear()\", and prints the letter along with its returned value if it's not False (indicating no valid result).",
+    "details": [
+        {
+            "comment": "The code defines a \"keyboard\" list, which represents the QWERTY keyboard layout. The function \"returnNear(a)\" takes a character and returns the next character in the same row or column. The function \"curse()\" iterates over all lowercase letters, calls \"returnNear()\", and prints the letter along with its returned value if it's not False (indicating no valid result).",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/chainer.py\":0-28",
+            "content": "keyboard=[['q','w','e','r','t','y','u','i','o','p'],['a','s','d','f','g','h','j','k','l'],['z','x','c','v','b','n','m']]\ndef returnNear(a):\n    b=[]\n    for x in range(3):\n        if a in keyboard[x]:\n            b=[x,keyboard[x].index(a),len(keyboard[x])-1]\n            break\n    if x==0:\n        if b[1]!=b[2]:\n            return (keyboard[0][b[1]+1],)\n        else:\n            return False\n    if x==1:\n        if b[1]!=b[2]:\n            return (keyboard[1][b[1]+1],*keyboard[0][b[1]:b[1]+2])\n        else:\n            return (*keyboard[0][b[1]:b[1]+2],)\n    if x==2:\n            if b[1]!=b[2]:\n                return (keyboard[1][b[1]+1],*keyboard[1][b[1]:b[1]+3])\n            else:\n                return (*keyboard[0][b[1]:b[1]+3],)\ndef curse():\n    for k0 in range(ord(\"a\"),ord(\"z\")+1):\n        r=returnNear(chr(k0))\n        print(chr(k0),r if r!= False else \"nothing\")\ncurse()"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code is making multiple HTTP GET requests to Baidu search engine using Axios library. It retrieves the first 4 pages of results for a given query and then prints out their responses.",
+    "details": [
+        {
+            "comment": "This code is making multiple HTTP GET requests to Baidu search engine using Axios library. It retrieves the first 4 pages of results for a given query and then prints out their responses.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/node-batch1.js\":0-17",
+            "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),\naxios.get('http://www.baidu.com/s?pn='+(n+2)+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+3)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2,response3,response4) => {\n  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\nconsole.log(response4.data);\n})).catch(error => {\n  console.log(error);\n});"
+        }
+    ]
+}

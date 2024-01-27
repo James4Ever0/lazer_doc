@@ -1,0 +1,10 @@
+{
+    "summary": "Code is analyzing the need for importing specific modules or using standalone functions, listing all callable functions and related components such as other functions or global constants. The author mentions a need for Vim script automation with a GUI controller, as Autoexpect won't suffice. They also discuss the importance of understanding tokenization and suggest using highlighters or tokenizers for detecting source file types rather than relying on syntax checking alone.",
+    "details": [
+        {
+            "comment": "Code is analyzing the need for importing specific modules or using standalone functions, listing all callable functions and related components such as other functions or global constants. The author mentions a need for Vim script automation with a GUI controller, as Autoexpect won't suffice. They also discuss the importance of understanding tokenization and suggest using highlighters or tokenizers for detecting source file types rather than relying on syntax checking alone.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/README\":0-14",
+            "content": "DECIDE WHETHER THE FUNCTION IS STANDALONE OR NEEDED TO IMPORT SPECIFIC MODULE.\nLIST ALL CALLABLE FUNCTION IF IMPORTED.\nLIST ALL RELATED STUFF INCLUDING OTHER FUNCTIOB OR GLOBAL CONSTANT OR OTHER THINGS.\nHoly shit I have met my savior. THE DIR FUNCTION!\nWe need vim script or GUI controller to do vim automation. Autoexpect won't do.\ndef func(x):\n# add this line\n\tprint(type(x))\nMaybe we shall understand the tokenization more deeply.\nUse tokenize. Use xml parser.\nTHE TYPE DETECTER OF SOURCE FILE CANNOT BE AS NAIVE AS EXECUTING IT USING EXPECT AND SEE IF THERE IS SYNTAX ERROR. better use highlighter or some tokenizer. deeplearning is the best."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "Code appears to be instructions for a developer, emphasizing the need to focus on task and avoid using specific language. The code suggests using aria2c or curl with cookies for downloading. It mentions the importance of automatically escaping hashtags and working around limitations.",
+    "details": [
+        {
+            "comment": "Code appears to be instructions for a developer, emphasizing the need to focus on task and avoid using specific language. The code suggests using aria2c or curl with cookies for downloading. It mentions the importance of automatically escaping hashtags and working around limitations.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/README\":0-5",
+            "content": "ignore all irrelevant shits.\ndo not fuck with me. just think about how the fuck can we do this job.\nuse aria2c to work around the fucking limitation.\nor use curl with the mother-fucking cookie\ntime to fuck with the words. so fuck the python!\nwe need to automatically escape hashtags."
+        }
+    ]
+}

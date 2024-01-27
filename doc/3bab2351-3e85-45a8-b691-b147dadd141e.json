@@ -1,0 +1,10 @@
+{
+    "summary": "This code is using the \"cp\" command to copy two files, \"simpleStorageR.py\" and \"derive_prefixed_fixed.py\", into the specified location within the Termux environment. This ensures that these files are readily accessible for use in the given project directory.",
+    "details": [
+        {
+            "comment": "This code is using the \"cp\" command to copy two files, \"simpleStorageR.py\" and \"derive_prefixed_fixed.py\", into the specified location within the Termux environment. This ensures that these files are readily accessible for use in the given project directory.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/shallowCopy.sh\":0-2",
+            "content": "#!/bin/bash\ncp simpleStorageR.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks &\ncp derive_prefixed_fixed.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks &"
+        }
+    ]
+}

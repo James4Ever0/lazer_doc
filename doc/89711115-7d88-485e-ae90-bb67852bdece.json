@@ -1,0 +1,10 @@
+{
+    "summary": "The code is a comment indicating that the module failed to retrieve data from Baidu due to attempting to do it in one shot and dealing with heavy recoil.",
+    "details": [
+        {
+            "comment": "The code is a comment indicating that the module failed to retrieve data from Baidu due to attempting to do it in one shot and dealing with heavy recoil.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/README\":0-2",
+            "content": "you know why your module fail when trying to retrieve data from baidu?\nbecause you always want to do it in one shot.\nand the fucking recoil is too damn heavy."
+        }
+    ]
+}

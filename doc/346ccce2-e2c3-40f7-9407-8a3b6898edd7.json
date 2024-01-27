@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads an HTML file called \"quest-from-baidu.log\", parses it using BeautifulSoup library, and searches for a specific div element with class \"FYB_RD\". It then prints the found tag without further processing. Additionally, there is commented out code that demonstrates alternative ways to parse and manipulate XML documents using xml.dom.minidom module.",
+    "details": [
+        {
+            "comment": "This code reads an HTML file called \"quest-from-baidu.log\", parses it using BeautifulSoup library, and searches for a specific div element with class \"FYB_RD\". It then prints the found tag without further processing. Additionally, there is commented out code that demonstrates alternative ways to parse and manipulate XML documents using xml.dom.minidom module.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/parse-xml-hot.py\":0-29",
+            "content": "# -*- coding: UTF-8 -*-\nfrom bs4 import BeautifulSoup\nhtml0=open(\"quest-from-baidu.log\",\"r\")\nhtml=html0.read()\nsoup = BeautifulSoup(html, 'lxml')\n# result = soup('a',target_=\"_blank\")\n#tags = soup.findAll(\"div\",class_=\"result c-container\")\ntags = soup.find(\"div\",class_=\"FYB_RD\")\n# do not underscore words unless they're reserved.\n# class is a reserved word in python.\n#for tag in tags:\nprint(tags)\n#from xml.dom.minidom import parse\n# import xml.dom.minidom\n# \u4f7f\u7528minidom\u89e3\u6790\u5668\u6253\u5f00 XML \u6587\u6863\n#DOMTree = parse(\"quest-from-baidu.log\")\n#collection = DOMTree.documentElement\n#if collection.hasAttribute(\"shelf\"):\n#   print \"Root element : %s\" % collection.getAttribute(\"shelf\")\n# \u5728\u96c6\u5408\u4e2d\u83b7\u53d6\u6240\u6709\u7535\u5f71\n# movies = collection.getElementsByTagName(\"\")\n#if collection.hasAttribute(\"target\"):\n#   print (\"Root element : \" +collection.getAttribute(\"target\"))\nhtml0.close()"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads the file \"0.log\" from the directory \"WordsExample\", filters out lines starting with non-period characters followed by a period, and writes the output to the file \"0.summary\".",
+    "details": [
+        {
+            "comment": "This code reads the file \"0.log\" from the directory \"WordsExample\", filters out lines starting with non-period characters followed by a period, and writes the output to the file \"0.summary\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/FirstGrep.sh\":0-1",
+            "content": "#!/bin/bash\ncat WordsExample/0.log | grep -E -o \"^[^\u3002]+(\u3002)\" | cat > 0.summary"
+        }
+    ]
+}

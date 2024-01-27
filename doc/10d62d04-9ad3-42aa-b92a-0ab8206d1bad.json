@@ -1,0 +1,10 @@
+{
+    "summary": "This code is a shell script that changes directory to a specific location, executes a Lua file with command line arguments, and then searches for packages using apt-cache. The output of the search is likely related to \"supercube\" and stored in the specified file path.",
+    "details": [
+        {
+            "comment": "This code is a shell script that changes directory to a specific location, executes a Lua file with command line arguments, and then searches for packages using apt-cache. The output of the search is likely related to \"supercube\" and stored in the specified file path.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/socket.sh\":0-4",
+            "content": "#!/bin/bash\n#\n#cd /data/data/com.termux/files/home/lazer/multilingual/hotfix-v1\n#lua marine.lua 0 bing search api  > $var\"/supercube.txt\"\napt-cache search \"$@\""
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the royalty function from sampleModule and defines a nuclearBomb function that returns the result of calling the royalty function.",
+    "details": [
+        {
+            "comment": "This code imports the royalty function from sampleModule and defines a nuclearBomb function that returns the result of calling the royalty function.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/sampleIntermediate.py\":0-2",
+            "content": "from sampleModule import royalty\ndef nuclearBomb():\n    return royalty()"
+        }
+    ]
+}

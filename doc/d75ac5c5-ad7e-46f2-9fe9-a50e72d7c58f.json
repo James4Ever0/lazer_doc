@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports dill (Python serialization tool) and defines a function called \"returnAList\" which loads and returns a list stored in the file \"newFuckingDill.dill\" using pickle's load method. The function uses open() to open the file for reading in binary mode (\"rb\").",
+    "details": [
+        {
+            "comment": "The code imports dill (Python serialization tool) and defines a function called \"returnAList\" which loads and returns a list stored in the file \"newFuckingDill.dill\" using pickle's load method. The function uses open() to open the file for reading in binary mode (\"rb\").",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/getFromDill.py\":0-2",
+            "content": "import dill as pickle\ndef returnAList():\n    return pickle.load(open(\"newFuckingDill.dill\",\"rb\"))"
+        }
+    ]
+}

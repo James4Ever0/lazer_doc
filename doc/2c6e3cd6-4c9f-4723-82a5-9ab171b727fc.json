@@ -1,0 +1,10 @@
+{
+    "summary": "The code is importing the iconv module and storing a string 'nodejs tutorial' in a variable named 'content'. The content is then encoded using the encodeURIComponent function, which encodes special characters into their URL-safe counterparts. The original encoding of 'gb2312' is commented out, suggesting it was intended for use with iconv but has been removed or replaced. Finally, the encoded string is printed to the console.",
+    "details": [
+        {
+            "comment": "The code is importing the iconv module and storing a string 'nodejs tutorial' in a variable named 'content'. The content is then encoded using the encodeURIComponent function, which encodes special characters into their URL-safe counterparts. The original encoding of 'gb2312' is commented out, suggesting it was intended for use with iconv but has been removed or replaced. Finally, the encoded string is printed to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/node-conv0.js\":0-4",
+            "content": "// var iconv = require('iconv');\ncontent=\"nodejs tutorial\"\nvar p = encodeURIComponent(content)\n//iconv.encode(content, 'gb2312');\nconsole.log(p);"
+        }
+    ]
+}

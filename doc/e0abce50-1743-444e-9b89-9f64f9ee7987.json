@@ -1,0 +1,10 @@
+{
+    "summary": "This function checks if an integer exists in a list of tuples by checking the second element of each tuple. If it finds an integer, it returns True; otherwise, False.",
+    "details": [
+        {
+            "comment": "This function checks if an integer exists in a list of tuples by checking the second element of each tuple. If it finds an integer, it returns True; otherwise, False.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/processList.py\":0-1",
+            "content": "def simpleShit(lt):\n    return (\"INT\" in list(map((lambda x:x[1]),lt)))"
+        }
+    ]
+}

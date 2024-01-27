@@ -1,0 +1,528 @@
+{
+    "400": {
+        "file_id": 94,
+        "content": "/metalearning/shit/generalAI/gameTheory/simpleLauncher.py",
+        "type": "filepath"
+    },
+    "401": {
+        "file_id": 94,
+        "content": "This code imports a function that returns a list and defines another function, \"awful\". It then opens a file, writes each element in the returned list on separate lines, and finally calls the function with the desired filename and the list.",
+        "type": "summary"
+    },
+    "402": {
+        "file_id": 94,
+        "content": "from getFromPickle import returnAList\ndef awful(a,b):\n    with open(a,\"w+\") as fuck:\n        for k in b:\n            for k0 in k:\n                fuck.write(k0+\"\\n\")\nawful(\"whyAreYouHere.log\",returnAList())\n# 2 d",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/gameTheory/simpleLauncher.py:1-10"
+    },
+    "403": {
+        "file_id": 94,
+        "content": "This code imports a function that returns a list and defines another function, \"awful\". It then opens a file, writes each element in the returned list on separate lines, and finally calls the function with the desired filename and the list.",
+        "type": "comment"
+    },
+    "404": {
+        "file_id": 95,
+        "content": "/metalearning/shit/generalAI/glossBeat.sh",
+        "type": "filepath"
+    },
+    "405": {
+        "file_id": 95,
+        "content": "This script uses wget to download two files, gross0.log and gross1.log, which contain information about the repositories of the opencog GitHub page.",
+        "type": "summary"
+    },
+    "406": {
+        "file_id": 95,
+        "content": "#!/bin/bash\nwget \"https://github.com/opencog?tab=repositories\" -O gross0.log\nwget \"https://github.com/opencog?page=2&tab=repositories\" -O gross1.log",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/glossBeat.sh:1-3"
+    },
+    "407": {
+        "file_id": 95,
+        "content": "This script uses wget to download two files, gross0.log and gross1.log, which contain information about the repositories of the opencog GitHub page.",
+        "type": "comment"
+    },
+    "408": {
+        "file_id": 96,
+        "content": "/metalearning/shit/generalAI/newShit/fuckMe.py",
+        "type": "filepath"
+    },
+    "409": {
+        "file_id": 96,
+        "content": "The code reads two log files, creates a unique list of elements, applies a method to form a grid structure, generates a new list of indices, and replaces values with corresponding values from m1. The Grid0 object is printed and stored in a list for further analysis or processing.",
+        "type": "summary"
+    },
+    "410": {
+        "file_id": 96,
+        "content": "from niche import Method2\nfrom simpleStorage import storeAList\ndef tabNine(x0):\n    v=[[],[]]\n    with open(x0,\"r\") as fuck:\n        fucked=fuck.read()\n        v=[list(map((lambda x:x.split('/')[1]),list(filter((lambda x: x!=\"\"),fucked.split('\\n'))))),list(filter((lambda x: x!=\"\"),fucked.split('\\n')))]\n    return [v[0],list(map((lambda x: x.lower()),v[0])),v[1]]\nm=list(map((lambda x:tabNine(x)),['shitLord.log','fuckLord.log']))\n#print(m[1][2])\nm0=m[0][1]+[m[1][1][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nm1=m[0][2]+[m[1][2][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nGrid=Method2(m0,m0)\n# now we can mark these things.\n# we must have same elements, unique elements.\n# the matrix.\nGrid=list(filter((lambda x: sum(x)>1),list(map((lambda x: list(map((lambda x: int(x)),x))),Grid))))\nGrid=[[i0 for i0, x0 in enumerate(g) if x0 == 1] for g in Grid]\n#print(Grid)\n# you need to rehash.\nGrid1=list(set([Grid.index(x) for x in Grid]))\n#print(Grid1)\nGrid0=list(map((lambda x:list(map((lambda x:m1[x]),x))),[Grid[x] for x in Grid1]))",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/newShit/fuckMe.py:1-23"
+    },
+    "411": {
+        "file_id": 96,
+        "content": "This code reads two log files and creates a list of unique elements from them. It then applies a method (Method2) to the unique elements, resulting in a grid-like structure with all elements present at least once. The code then generates a new list (Grid1) containing only indices where each element appears, removes duplicate rows, and finally creates Grid0 by replacing the existing elements with corresponding values from m1. This process appears to be related to marking items in a matrix and potentially rehashing data for further processing.",
+        "type": "comment"
+    },
+    "412": {
+        "file_id": 96,
+        "content": "#print(Grid0)\nstoreAList(Grid0)",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/newShit/fuckMe.py:24-25"
+    },
+    "413": {
+        "file_id": 96,
+        "content": "The code is printing a Grid0 object and then storing it in a list using the storeAList function. The purpose might be to keep track of the Grid0 object for further analysis or processing.",
+        "type": "comment"
+    },
+    "414": {
+        "file_id": 97,
+        "content": "/metalearning/shit/generalAI/newShit/niche.py",
+        "type": "filepath"
+    },
+    "415": {
+        "file_id": 97,
+        "content": "This code imports numpy and defines a function 'Method2' that takes two inputs 'a' and 'b', and uses numpy meshgrid to create 2D grids for each input, then checks if the grid values are equal, returning a list of boolean values indicating equality.",
+        "type": "summary"
+    },
+    "416": {
+        "file_id": 97,
+        "content": "import numpy as np\ndef Method2(a, b):\n    group1, group2= np.meshgrid([*a],[*b])\n#    print(group1)\n#    print(group2)\n#    print(type(group1))\n#    print(dir(group1))\n    return (group1 == group2).tolist()\n#v=Method2(\"group\",\"groupChar\")\n#print(type(v))\n#print(v and v)",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/newShit/niche.py:1-13"
+    },
+    "417": {
+        "file_id": 97,
+        "content": "This code imports numpy and defines a function 'Method2' that takes two inputs 'a' and 'b', and uses numpy meshgrid to create 2D grids for each input, then checks if the grid values are equal, returning a list of boolean values indicating equality.",
+        "type": "comment"
+    },
+    "418": {
+        "file_id": 98,
+        "content": "/metalearning/shit/generalAI/newShit/reHash.py",
+        "type": "filepath"
+    },
+    "419": {
+        "file_id": 98,
+        "content": "This function takes a 2D array, converts its indices into a set (removing duplicates), and then maps the original array using only unique indices. It's unclear if it works for n-dimensional arrays.",
+        "type": "summary"
+    },
+    "420": {
+        "file_id": 98,
+        "content": "def reHash(Grid):\n    # this is for 2d arrays.\n    # not sure about n-d arrays.\n    Grid1=list(set([Grid.index(x) for x in Grid]))\n    return [Grid[x] for x in Grid1]",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/newShit/reHash.py:1-5"
+    },
+    "421": {
+        "file_id": 98,
+        "content": "This function takes a 2D array, converts its indices into a set (removing duplicates), and then maps the original array using only unique indices. It's unclear if it works for n-dimensional arrays.",
+        "type": "comment"
+    },
+    "422": {
+        "file_id": 99,
+        "content": "/metalearning/shit/generalAI/newShit/shitMe.py",
+        "type": "filepath"
+    },
+    "423": {
+        "file_id": 99,
+        "content": "The code processes a grid, removes duplicates, and stores it as 'Grid0'. It then converts the elements to indices and prints the resulting grid along with its length.",
+        "type": "summary"
+    },
+    "424": {
+        "file_id": 99,
+        "content": "# exclude the 'binrapt/ail' through search engine interface\n# it is an empty repo. should figure that out in log file if exists\nfrom niche import Method2\n#from simpleStorage import storeAList\ndef tabNine(x0):\n    v=[[],[]]\n    with open(x0,\"r\") as fuck:\n        fucked=fuck.read()\n        v=[list(map((lambda x:x.split('/')[1]),list(filter((lambda x: x!=\"\"),fucked.split('\\n'))))),list(filter((lambda x: x!=\"\"),fucked.split('\\n')))]\n    return [v[0],list(map((lambda x: x.lower()),v[0])),v[1]]\nm=list(map((lambda x:tabNine(x)),['shitLord.log','fuckLord.log']))\n#print(m[1][2])\nm0=m[0][1]+[m[1][1][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nm1=m[0][2]+[m[1][2][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nGrid=Method2(m0,m0)\n# now we can mark these things.\n# we must have same elements, unique elements.\n# the matrix.\nGrid=list(filter((lambda x: sum(x)>1),list(map((lambda x: list(map((lambda x: int(x)),x))),Grid))))\nGrid=[[i0 for i0, x0 in enumerate(g) if x0 == 1] for g in Grid]",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/newShit/shitMe.py:1-20"
+    },
+    "425": {
+        "file_id": 99,
+        "content": "The code is filtering and splitting filenames, creating two lists of file names and their lowercase versions. It then removes duplicates from the first list and stores them in Grid. Finally, it filters out matrices with a sum less than 2 and converts remaining elements to indices, resulting in a list of lists representing the matrix.",
+        "type": "comment"
+    },
+    "426": {
+        "file_id": 99,
+        "content": "#print(Grid)\n# you need to rehash.\nGrid1=list(set([Grid.index(x) for x in Grid]))\n#print(Grid1)\nGrid0=list(map((lambda x:list(map((lambda x:m1[x]),x))),[Grid[x] for x in Grid1]))\nfor GridX in Grid0:\n    print(GridX,len(GridX))\n#storeAList(Grid0)",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/newShit/shitMe.py:21-28"
+    },
+    "427": {
+        "file_id": 99,
+        "content": "This code appears to be processing a grid and storing it as 'Grid0'. It first removes duplicates in the grid by converting it into a set of indices. Then, it maps each element of the original grid to another list where each element is obtained from a lambda function that accesses the m1 array using its index. The resulting grid is printed along with its length before storing it.",
+        "type": "comment"
+    },
+    "428": {
+        "file_id": 100,
+        "content": "/metalearning/shit/generalAI/reTest.py",
+        "type": "filepath"
+    },
+    "429": {
+        "file_id": 100,
+        "content": "This code defines a function named \"openShit\" which takes one argument 'a'. It uses the map() function to apply a lambda function to each element in 'a', splitting the string into a list of substrings and reading from the specified location. The returned value is a list.",
+        "type": "summary"
+    },
+    "430": {
+        "file_id": 100,
+        "content": "def openShit(a):\n    return list(map((lambda x:x.split(\"/\"),a.read",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/reTest.py:1-2"
+    },
+    "431": {
+        "file_id": 100,
+        "content": "This code defines a function named \"openShit\" which takes one argument 'a'. It uses the map() function to apply a lambda function to each element in 'a', splitting the string into a list of substrings and reading from the specified location. The returned value is a list.",
+        "type": "comment"
+    },
+    "432": {
+        "file_id": 101,
+        "content": "/metalearning/shit/generalAI/readLink.py",
+        "type": "filepath"
+    },
+    "433": {
+        "file_id": 101,
+        "content": "The code reads a list of links from \"links.log\", splits them by space, constructs new URLs using the constructLinks function, and then iterates through each constructed URL to write a bash script (busterX.sh) that downloads the corresponding link into a log file. The final goal is to create multiple bash scripts with each script downloading a different link and saving it as a separate log file.",
+        "type": "summary"
+    },
+    "434": {
+        "file_id": 101,
+        "content": "vlan=\"https://github.com/search?\"\nwlan=len(vlan)\ndef constructLinks(a):\n    c,d=a\n    f=[vlan+\"p=\"]\n    g=[]\n#    if d[wlan]==\"p\":\n    f.append(d[d.index(\"&\"):])\n    if not d[wlan]==\"p\":\n        f[1]+=(\"&\"+d[len(vlan):d.index(\"&\")])\n    for e in range(int(c)):\n        g.append(str(e+1).join(f))\n    return g\ndef readLinks():\n    g=[]\n    with open(\"links.log\",\"r\") as fuck:\n        g=list(filter((lambda x:x!=\"\" and x!= \"\\n\"),fuck.read().split(\"\\n\")))\n    return g\nprt=list(map((lambda x: x.split(\" \")),readLinks()))\n#print(prt)\ngrt=list(map((lambda y:constructLinks(y)),prt))\n#print(grt)\nk0=0\nfor k in grt:\n    with open(\"buster\"+str(k0)+\".sh\",\"w+\") as buster:\n        buster.write(\"#!/bin/bash\\n\")\n        k2=0\n        for k1 in k:\n            buster.write(\"wget '\"+k1+\"' -O \"+str(k0)+\"_\"+str(k2)+\".log\\n\")\n            k2+=1\n    k0+=1",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/readLink.py:1-33"
+    },
+    "435": {
+        "file_id": 101,
+        "content": "The code reads a list of links from \"links.log\", splits them by space, constructs new URLs using the constructLinks function, and then iterates through each constructed URL to write a bash script (busterX.sh) that downloads the corresponding link into a log file. The final goal is to create multiple bash scripts with each script downloading a different link and saving it as a separate log file.",
+        "type": "comment"
+    },
+    "436": {
+        "file_id": 102,
+        "content": "/metalearning/shit/generalAI/shit.py",
+        "type": "filepath"
+    },
+    "437": {
+        "file_id": 102,
+        "content": "This code imports necessary libraries and defines functions to extract specific information from files, primarily using BeautifulSoup for parsing HTML. It then applies these functions to read files, filter out empty lines, and find specific elements (\"op\" in href attributes) within the parsed HTML. The result is stored as a list after removing duplicates, and finally saved with simpleStorage's storeList function.",
+        "type": "summary"
+    },
+    "438": {
+        "file_id": 102,
+        "content": "from bs4 import BeautifulSoup\nfrom simpleStorage import storeList\ndef soup(a):\n    return BeautifulSoup(a)\ndef openShit(b):\n    f=\"\"\n    with open(b,\"r\") as fuck:\n        f=fuck.read()\n    return f\ndef openList(b):\n    return list(filter((lambda x:x!=\"\"),openShit(b).split(\"\\n\")))\ndef shit(x):\n    return list(map((lambda x:x[1:]),(list(filter((lambda x: x[1:3]==\"op\" and \"?\" not in x),[a[\"href\"] for a in soup(openShit(x)).find_all(name=\"a\",attrs={\"class\":\"d-inline-block\"},recursive=True)])))))\n# fuck you.\n#d=[list(filter((lambda x:x!=[]),[shit(c) for c in b])) for b in [openList(a) for a in openList(\"trauma.log\")]]\n# this is not the worst part.\nfuckYou=(lambda x:[y for z in x for y in z])\nd=[shit(x) for x in openList(\"glossary.log\")]\n#print(d)\nstoreList(list(set(fuckYou(d))))\n#e=[[shit(c) for c ]]\n#print(len(d))",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/shit.py:1-26"
+    },
+    "439": {
+        "file_id": 102,
+        "content": "This code imports necessary libraries and defines functions to extract specific information from files, primarily using BeautifulSoup for parsing HTML. It then applies these functions to read files, filter out empty lines, and find specific elements (\"op\" in href attributes) within the parsed HTML. The result is stored as a list after removing duplicates, and finally saved with simpleStorage's storeList function.",
+        "type": "comment"
+    },
+    "440": {
+        "file_id": 103,
+        "content": "/metalearning/shit/generalAI/shitAgain/buster.sh",
+        "type": "filepath"
+    },
+    "441": {
+        "file_id": 103,
+        "content": "This script uses wget to download the repositories of GitHub users into separate log files. It retrieves the repositories for jiaxiaogang, Brethland, commaai (pages 1-3), and opennars.",
+        "type": "summary"
+    },
+    "442": {
+        "file_id": 103,
+        "content": "#!/bin/bash\nwget 'https://github.com/jiaxiaogang?tab=repositories' -O 0_.log\nwget 'https://github.com/Brethland?tab=repositories' -O 1_.log\nwget 'https://github.com/commaai?page=1&tab=repositories' -O 2_.log\nwget 'https://github.com/commaai?page=2&tab=repositories' -O 3_.log\nwget 'https://github.com/commaai?page=3&tab=repositories' -O 4_.log\nwget 'https://github.com/opennars?tab=repositories' -O 5_.log",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/shitAgain/buster.sh:1-7"
+    },
+    "443": {
+        "file_id": 103,
+        "content": "This script uses wget to download the repositories of GitHub users into separate log files. It retrieves the repositories for jiaxiaogang, Brethland, commaai (pages 1-3), and opennars.",
+        "type": "comment"
+    },
+    "444": {
+        "file_id": 104,
+        "content": "/metalearning/shit/generalAI/shitAgain/fuck.py",
+        "type": "filepath"
+    },
+    "445": {
+        "file_id": 104,
+        "content": "This code imports BeautifulSoup and simpleStorage libraries, defines a function to extract hyperlinks from HTML using BeautifulSoup, opens and reads a file, filters out empty strings, and creates a list of hyperlinks from specified files. It then prints the list and stores it in simpleStorage.",
+        "type": "summary"
+    },
+    "446": {
+        "file_id": 104,
+        "content": "from bs4 import BeautifulSoup\nfrom simpleStorage import storeAList\ndef soup(a):\n    return BeautifulSoup(a)\ndef openShit(b):\n    f=\"\"\n    with open(b,\"r\") as fuck:\n        f=fuck.read()\n    return f\n#def openList(b):\n#    return list(filter((lambda x:x!=\"\"),openShit(b).split(\"\\n\")))\ndef shit(x):\n    return [a[\"href\"] for a in soup(openShit(x)).find_all(name=\"a\",attrs={\"itemprop\":\"name codeRepository\"},recursive=True)]\n# fuck you.\n#d=[list(filter((lambda x:x!=[]),[shit(c) for c in b])) for b in [openList(a) for a in openList(\"trauma.log\")]]\nd=[shit(x) for x in [str(b)+\"_.log\" for b in range(6)]]\nprint(d)\nstoreAList(d)\n#e=[[shit(c) for c ]]\n#print(len(d))",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/shitAgain/fuck.py:1-24"
+    },
+    "447": {
+        "file_id": 104,
+        "content": "This code imports BeautifulSoup and simpleStorage libraries, defines a function to extract hyperlinks from HTML using BeautifulSoup, opens and reads a file, filters out empty strings, and creates a list of hyperlinks from specified files. It then prints the list and stores it in simpleStorage.",
+        "type": "comment"
+    },
+    "448": {
+        "file_id": 105,
+        "content": "/metalearning/shit/generalAI/shitAgain/readLink.py",
+        "type": "filepath"
+    },
+    "449": {
+        "file_id": 105,
+        "content": "The code reads a file named \"links.log\", filters out empty lines, and stores the remaining non-empty lines in a list called 'prt'. The list is then used to iterate through and write each line as a wget command in a bash script named \"buster.sh\". The script downloads each URL and saves it with a sequential number as \"_log_number_.log\".",
+        "type": "summary"
+    },
+    "450": {
+        "file_id": 105,
+        "content": "def readLinks():\n    g = []\n    with open(\"links.log\", \"r\") as fuck:\n        g = list(filter((lambda x: x != \"\" and x != \"\\n\"), fuck.read().split(\"\\n\")))\n    return g\nprt = readLinks()\n# print(prt)\n# grt=list(map((lambda y:constructLinks(y)),prt))\n# print(grt)\n# k0=0\nwith open(\"buster.sh\", \"w+\") as buster:\n    buster.write(\"#!/bin/bash\\n\")\n    k2 = 0\n    for k1 in prt:\n        buster.write(\"wget '\" + k1 + \"' -O \" + str(k2) + \"_.log\\n\")\n        k2 += 1\n#    k0+=1",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/shitAgain/readLink.py:1-19"
+    },
+    "451": {
+        "file_id": 105,
+        "content": "The code reads a file named \"links.log\", filters out empty lines, and stores the remaining non-empty lines in a list called 'prt'. The list is then used to iterate through and write each line as a wget command in a bash script named \"buster.sh\". The script downloads each URL and saves it with a sequential number as \"_log_number_.log\".",
+        "type": "comment"
+    },
+    "452": {
+        "file_id": 106,
+        "content": "/metalearning/shit/generalAI/shitAgain/simpleLauncher.py",
+        "type": "filepath"
+    },
+    "453": {
+        "file_id": 106,
+        "content": "This code imports a function \"returnAList\" from the \"getFromPickle\" module and defines a function \"awful\". It then opens a file named \"whyYouAreHere.log\" in write mode and writes each element of the list returned by \"returnAList()\" on a new line. The code appears to be writing data into a log file, likely for future processing or analysis.",
+        "type": "summary"
+    },
+    "454": {
+        "file_id": 106,
+        "content": "from getFromPickle import returnAList\ndef awful(a,b):\n    with open(a,\"w+\") as fuck:\n        for k in b:\n            for k0 in k:\n                fuck.write(k0+\"\\n\")\nawful(\"whyYouAreHere.log\",returnAList())\n# 2 d",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/shitAgain/simpleLauncher.py:1-10"
+    },
+    "455": {
+        "file_id": 106,
+        "content": "This code imports a function \"returnAList\" from the \"getFromPickle\" module and defines a function \"awful\". It then opens a file named \"whyYouAreHere.log\" in write mode and writes each element of the list returned by \"returnAList()\" on a new line. The code appears to be writing data into a log file, likely for future processing or analysis.",
+        "type": "comment"
+    },
+    "456": {
+        "file_id": 107,
+        "content": "/metalearning/shit/generalAI/shitload.py",
+        "type": "filepath"
+    },
+    "457": {
+        "file_id": 107,
+        "content": "This code imports a list, writes each item to a file, and ensures uniqueness within the list. It uses nested lists from returnAList() function, removes duplicates, then writes unique items to \"shitLord.log\".",
+        "type": "summary"
+    },
+    "458": {
+        "file_id": 107,
+        "content": "from getFromPickle import returnAList\ndef writeShit(a,b):\n    with open(a,\"w+\") as fuck:\n        for f in b:\n            fuck.write(f+\"\\n\")\n#    return f\nd=list(set([d for b in returnAList() for c in b for d in c]))\nwriteShit(\"shitLord.log\",d)",
+        "type": "code",
+        "location": "/metalearning/shit/generalAI/shitload.py:1-11"
+    },
+    "459": {
+        "file_id": 107,
+        "content": "This code imports a list, writes each item to a file, and ensures uniqueness within the list. It uses nested lists from returnAList() function, removes duplicates, then writes unique items to \"shitLord.log\".",
+        "type": "comment"
+    },
+    "460": {
+        "file_id": 108,
+        "content": "/multilingual/baidu-process/buffer.c",
+        "type": "filepath"
+    },
+    "461": {
+        "file_id": 108,
+        "content": "The code opens a pipe to execute the \"ls -l\" command and reads its output, storing it in a buffer. The modified section then prints each line of the output using printf.",
+        "type": "summary"
+    },
+    "462": {
+        "file_id": 108,
+        "content": "#include <stdio.h>\nint main()\n{\n    FILE * fp;\n    char buffer[1024];\n    fp = popen(\"ls -l\", \"r\");\n    // modification starts here.\n    while (fgets(buffer, sizeof(buffer), fp)!=NULL){\n    printf(\"%s\", buffer);}\n    pclose(fp);\n}",
+        "type": "code",
+        "location": "/multilingual/baidu-process/buffer.c:1-11"
+    },
+    "463": {
+        "file_id": 108,
+        "content": "The code opens a pipe to execute the \"ls -l\" command and reads its output, storing it in a buffer. The modified section then prints each line of the output using printf.",
+        "type": "comment"
+    },
+    "464": {
+        "file_id": 109,
+        "content": "/multilingual/baidu-process/character-shell.lisp",
+        "type": "filepath"
+    },
+    "465": {
+        "file_id": 109,
+        "content": "The code is importing the 'inferior-shell' library and executes the 'ls' command, displaying output as a string. Finally, it quits the program.",
+        "type": "summary"
+    },
+    "466": {
+        "file_id": 109,
+        "content": "(ql:quickload :inferior-shell)\n(print (inferior-shell:run \"ls\" :output :string))\n(quit)",
+        "type": "code",
+        "location": "/multilingual/baidu-process/character-shell.lisp:1-3"
+    },
+    "467": {
+        "file_id": 109,
+        "content": "The code is importing the 'inferior-shell' library and executes the 'ls' command, displaying output as a string. Finally, it quits the program.",
+        "type": "comment"
+    },
+    "468": {
+        "file_id": 110,
+        "content": "/multilingual/baidu-process/dope-process.py",
+        "type": "filepath"
+    },
+    "469": {
+        "file_id": 110,
+        "content": "Code imports subprocess and executes an 'ls -l' command, captures output in stdout and error in stderr, then prints both.",
+        "type": "summary"
+    },
+    "470": {
+        "file_id": 110,
+        "content": "import subprocess\n# import subprocess\nout = subprocess.Popen(['ls', '-l'],\n           stdout=subprocess.PIPE,\n           stderr=subprocess.STDOUT)\nstdout,stderr = out.communicate()\nprint(stdout)\nprint(stderr)",
+        "type": "code",
+        "location": "/multilingual/baidu-process/dope-process.py:1-11"
+    },
+    "471": {
+        "file_id": 110,
+        "content": "Code imports subprocess and executes an 'ls -l' command, captures output in stdout and error in stderr, then prints both.",
+        "type": "comment"
+    },
+    "472": {
+        "file_id": 111,
+        "content": "/multilingual/baidu-process/gogo.go",
+        "type": "filepath"
+    },
+    "473": {
+        "file_id": 111,
+        "content": "This code uses the exec package to run \"ls\" and \"pwd\" commands, handles errors, and prints outputs. It is part of an else block in a function that calls 'execute()' if the condition is not met.",
+        "type": "summary"
+    },
+    "474": {
+        "file_id": 111,
+        "content": "package main\nimport (\n    \"fmt\"\n    \"os/exec\"\n    \"runtime\"\n)\nfunc execute() {\n    // here we perform the pwd command.\n    // we can store the output of this in our out variable\n    // and catch any errors in err\n    out, err := exec.Command(\"ls\").Output()\n    // if there is an error with our execution\n    // handle it here\n    if err != nil {\n        fmt.Printf(\"%s\", err)\n    }\n    // as the out variable defined above is of type []byte we need to convert\n    // this to a string or else we will see garbage printed out in our console\n    // this is how we convert it to a string\n    fmt.Println(\"Command Successfully Executed\")\n    output := string(out[:])\n    fmt.Println(output)\n    // let's try the pwd command herer\n    out, err = exec.Command(\"pwd\").Output()\n    if err != nil {\n        fmt.Printf(\"%s\", err)\n    }\n    fmt.Println(\"Command Successfully Executed\")\n    output = string(out[:])\n    fmt.Println(output)\n}\nfunc main() {\n    if runtime.GOOS == \"windows\" {\n        fmt.Println(\"Can't Execute this on a windows machine\")",
+        "type": "code",
+        "location": "/multilingual/baidu-process/gogo.go:1-40"
+    },
+    "475": {
+        "file_id": 111,
+        "content": "This code executes two commands (\"ls\" and \"pwd\") using the exec package, stores their outputs in the \"out\" variable, and handles errors. It then converts the byte output to string, prints success messages, and finally displays the command outputs.",
+        "type": "comment"
+    },
+    "476": {
+        "file_id": 111,
+        "content": "    } else {\n        execute()\n    }\n}",
+        "type": "code",
+        "location": "/multilingual/baidu-process/gogo.go:41-44"
+    },
+    "477": {
+        "file_id": 111,
+        "content": "This code snippet is an else block of a function. If the condition is not met, it executes the function 'execute()'.",
+        "type": "comment"
+    },
+    "478": {
+        "file_id": 112,
+        "content": "/multilingual/baidu-process/node-conv.js",
+        "type": "filepath"
+    },
+    "479": {
+        "file_id": 112,
+        "content": "This code snippet is using the iconv module to encode a Chinese content string, \"央视暂停NBA转播,\" into gb2312 encoding. It also encodes it as a URI component and logs the result. The commented out line suggests that there was previously an attempt to use iconv for encoding but it has been removed or replaced with encodeURIComponent.",
+        "type": "summary"
+    },
+    "480": {
+        "file_id": 112,
+        "content": "// var iconv = require('iconv');\ncontent=\"央视暂停NBA转播\"\nvar p = encodeURIComponent(content)\n//iconv.encode(content, 'gb2312');\nconsole.log(p);",
+        "type": "code",
+        "location": "/multilingual/baidu-process/node-conv.js:1-5"
+    },
+    "481": {
+        "file_id": 112,
+        "content": "This code snippet is using the iconv module to encode a Chinese content string, \"央视暂停NBA转播,\" into gb2312 encoding. It also encodes it as a URI component and logs the result. The commented out line suggests that there was previously an attempt to use iconv for encoding but it has been removed or replaced with encodeURIComponent.",
+        "type": "comment"
+    },
+    "482": {
+        "file_id": 113,
+        "content": "/multilingual/baidu-process/node-conv0.js",
+        "type": "filepath"
+    },
+    "483": {
+        "file_id": 113,
+        "content": "The code is importing the iconv module and storing a string 'nodejs tutorial' in a variable named 'content'. The content is then encoded using the encodeURIComponent function, which encodes special characters into their URL-safe counterparts. The original encoding of 'gb2312' is commented out, suggesting it was intended for use with iconv but has been removed or replaced. Finally, the encoded string is printed to the console.",
+        "type": "summary"
+    },
+    "484": {
+        "file_id": 113,
+        "content": "// var iconv = require('iconv');\ncontent=\"nodejs tutorial\"\nvar p = encodeURIComponent(content)\n//iconv.encode(content, 'gb2312');\nconsole.log(p);",
+        "type": "code",
+        "location": "/multilingual/baidu-process/node-conv0.js:1-5"
+    },
+    "485": {
+        "file_id": 113,
+        "content": "The code is importing the iconv module and storing a string 'nodejs tutorial' in a variable named 'content'. The content is then encoded using the encodeURIComponent function, which encodes special characters into their URL-safe counterparts. The original encoding of 'gb2312' is commented out, suggesting it was intended for use with iconv but has been removed or replaced. Finally, the encoded string is printed to the console.",
+        "type": "comment"
+    },
+    "486": {
+        "file_id": 114,
+        "content": "/multilingual/baidu-process/node-quest-cache.js",
+        "type": "filepath"
+    },
+    "487": {
+        "file_id": 114,
+        "content": "This code uses the 'http' module to make a GET request to a Baidu cache server and logs the response data when it is received or displays an error message if there is one.",
+        "type": "summary"
+    },
+    "488": {
+        "file_id": 114,
+        "content": "const http = require('http');\nhttp.get('http://cache.baiducontent.com/c?m=9d78d513d9d437ac4f9ae4697c65c010184381132ba1d60209a28439e5732840506793e777710705a3d20a6216dc3a4b9af02101301767f7c5c7d20c9bf985295c953a753241c60753c419d88a1d799237902db8f246f0ba8763cfb382809e0d048c035624deedd70a5309ca6df31f26e3d09a4a025f66b8e72d33a2086029e9781be710b1a7652a0584f1da5a4bc73dd01650cde96aee&amp;', (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});",
+        "type": "code",
+        "location": "/multilingual/baidu-process/node-quest-cache.js:1-18"
+    },
+    "489": {
+        "file_id": 114,
+        "content": "This code uses the 'http' module to make a GET request to a Baidu cache server and logs the response data when it is received or displays an error message if there is one.",
+        "type": "comment"
+    },
+    "490": {
+        "file_id": 115,
+        "content": "/multilingual/baidu-process/node-quest.js",
+        "type": "filepath"
+    },
+    "491": {
+        "file_id": 115,
+        "content": "Sends an HTTP GET request to Baidu search engine, retrieves the HTML response, and logs the data.",
+        "type": "summary"
+    },
+    "492": {
+        "file_id": 115,
+        "content": "const http = require('http');\nhttp.get('http://www.baidu.com/s?word=%E5%A4%AE%E8%A7%86%E6%9A%82%E5%81%9CNBA%E8%BD%AC%E6%92%AD', (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});",
+        "type": "code",
+        "location": "/multilingual/baidu-process/node-quest.js:1-18"
+    },
+    "493": {
+        "file_id": 115,
+        "content": "Sends an HTTP GET request to Baidu search engine, retrieves the HTML response, and logs the data.",
+        "type": "comment"
+    },
+    "494": {
+        "file_id": 116,
+        "content": "/multilingual/baidu-process/node-quest0.js",
+        "type": "filepath"
+    },
+    "495": {
+        "file_id": 116,
+        "content": "This code sets up an HTTP GET request to Baidu's search engine with the keyword \"lisp multithreading arm64\" encoded. It handles the response data in chunks and prints it out when the whole response has been received, or logs any errors that occur.",
+        "type": "summary"
+    },
+    "496": {
+        "file_id": 116,
+        "content": "const http = require('http');\nvar k=\"lisp multithreading arm64\"\nhttp.get('http://www.baidu.com/s?word='+encodeURIComponent(k), (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});",
+        "type": "code",
+        "location": "/multilingual/baidu-process/node-quest0.js:1-18"
+    },
+    "497": {
+        "file_id": 116,
+        "content": "This code sets up an HTTP GET request to Baidu's search engine with the keyword \"lisp multithreading arm64\" encoded. It handles the response data in chunks and prints it out when the whole response has been received, or logs any errors that occur.",
+        "type": "comment"
+    },
+    "498": {
+        "file_id": 117,
+        "content": "/multilingual/baidu-process/node-quest1.js",
+        "type": "filepath"
+    },
+    "499": {
+        "file_id": 117,
+        "content": "This code sends an HTTP GET request to Baidu search engine with a specific query and retrieves the response data in chunks, then prints the full result upon completion or errors encountered.",
+        "type": "summary"
+    }
+}

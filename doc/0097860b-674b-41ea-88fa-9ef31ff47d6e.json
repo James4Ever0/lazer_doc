@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the tokenize module, retrieves all variable names from the current scope, filters out those with integer type values, and sorts them based on their corresponding values. Finally, it stores the sorted list in simpleStorage for future reference.",
+    "details": [
+        {
+            "comment": "This code imports the tokenize module, retrieves all variable names from the current scope, filters out those with integer type values, and sorts them based on their corresponding values. Finally, it stores the sorted list in simpleStorage for future reference.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/groupTypes.py\":0-7",
+            "content": "from tokenize import *\nfuck=dir()\nshit=[(h,eval(h)) for h in fuck if type(eval(h)).__name__ == \"int\"]\n#print(shit)\njerk=list(sorted(shit,key=(lambda x:x[1])))\n# very important! do it afterwards.\nfrom simpleStorage import storeAList\nstoreAList(jerk)"
+        }
+    ]
+}

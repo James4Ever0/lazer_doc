@@ -1,0 +1,10 @@
+{
+    "summary": "This code tries to evaluate a division by zero, catches the exception if it occurs, and prints either the result or the caught exception.",
+    "details": [
+        {
+            "comment": "This code tries to evaluate a division by zero, catches the exception if it occurs, and prints either the result or the caught exception.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/newStone.hs\":0-5",
+            "content": "import Control.Exception\nmain = do\n russia <- try (evaluate (div 5 0)) :: IO ( Either SomeException Int )\n case russia of\n  Left ex -> putStrLn $ \" Caught E!\"++ show ex\n  Right  v  ->   putStrLn $ \" Result: \" ++ show v"
+        }
+    ]
+}

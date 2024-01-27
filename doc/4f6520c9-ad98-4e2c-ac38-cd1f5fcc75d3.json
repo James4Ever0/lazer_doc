@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the re module, uses regular expressions to split a string based on words, converts Unicode characters to their corresponding numeric values, and then performs various operations such as sorting and mapping. The aim is to manipulate the given text with Unicode characters in an efficient manner.",
+    "details": [
+        {
+            "comment": "The code imports the re module, uses regular expressions to split a string based on words, converts Unicode characters to their corresponding numeric values, and then performs various operations such as sorting and mapping. The aim is to manipulate the given text with Unicode characters in an efficient manner.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/pyramid.py\":0-30",
+            "content": "#import re\n#u = \n\"\"\"\\t hello you  mother fucker     \\t     fuck you bitch      bitch      23443243234  23 42 35 23 5 26  643                        we shall split this fuck by the motherfucking newline should we?\n but you have    fucking told me that you can find that shit somewhere didn't you?\n oh calm the fuck down.          [the fucking tab is invisible here.]\n\"\"\"\n#verbose=re.compile(r'\\b')\n# print (u.split('\\n'));\n#print(set(u))\n# the most fucking efficient way of doing this fuck.\n#superset=set(u)\n# make it numeric.\n#x=\"\u6492\"\n#print(ord(x))\n#print(chr(ord(x)))\n# i love unicode!\nfor x in range(500000000000):\n    try:\n        print(\"     [\",x,\"]-[\"+chr(x)+\"]\")\n    except:\n        print(\"panic at #\",x)\n        break\n#superlist0=list(map(lambda x: ord(x),superset))\n#superlist1=sorted(superlist0)\n#superlist2=list(map(lambda x: chr(x),superlist0))\n#superlist3=sorted(superlist2)\n#superlist3=list(map(lambda x: chr(x),superlist1))\n# superfilter=filter(lambda x: )\n#print(superlist3)"
+        }
+    ]
+}

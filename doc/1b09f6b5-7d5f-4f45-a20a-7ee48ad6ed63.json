@@ -1,0 +1,10 @@
+{
+    "summary": "This code executes a command using the \"node duper-get.js java\" string and stores the result in the \"result\" variable before printing it. It uses the \"io.popen\" function to open the command and \"handle:read('*a')\" to read all output from the command execution. The comment suggests replacing local variables with specific functions for more efficient code execution.",
+    "details": [
+        {
+            "comment": "This code executes a command using the \"node duper-get.js java\" string and stores the result in the \"result\" variable before printing it. It uses the \"io.popen\" function to open the command and \"handle:read('*a')\" to read all output from the command execution. The comment suggests replacing local variables with specific functions for more efficient code execution.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/shell-execute-return.lua\":0-5",
+            "content": "command =\"node duper-get.js java\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nprint (result)"
+        }
+    ]
+}

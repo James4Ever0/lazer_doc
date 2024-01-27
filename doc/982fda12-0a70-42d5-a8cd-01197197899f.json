@@ -1,0 +1,10 @@
+{
+    "summary": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+    "details": [
+        {
+            "comment": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/simple.sh\":0-1",
+            "content": "#!/bin/bash\nls -lt"
+        }
+    ]
+}

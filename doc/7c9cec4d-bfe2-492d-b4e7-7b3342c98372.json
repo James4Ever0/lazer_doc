@@ -1,0 +1,10 @@
+{
+    "summary": "This code is executing a command using Bash, specifically utilizing the aria2c tool to download a file from Yandex search results containing \"hello\" and saving it as bitchass.log in the current directory. The purpose or functionality of this script cannot be determined without further context.",
+    "details": [
+        {
+            "comment": "This code is executing a command using Bash, specifically utilizing the aria2c tool to download a file from Yandex search results containing \"hello\" and saving it as bitchass.log in the current directory. The purpose or functionality of this script cannot be determined without further context.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/small-fuck.sh\":0-1",
+            "content": "#!/bin/bash\naria2c \"https://yandex.com/search/touch/?text=hello\" -o bitchass.log"
+        }
+    ]
+}

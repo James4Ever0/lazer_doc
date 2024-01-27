@@ -1,0 +1,10 @@
+{
+    "summary": "This PHP code defines a function curl_post_302() which uses cURL to perform a GET request on the provided URL, following any redirects and returning the final URL. It then tests the given URL \"http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\", retrieves the final URL, and echoes it.",
+    "details": [
+        {
+            "comment": "This PHP code defines a function curl_post_302() which uses cURL to perform a GET request on the provided URL, following any redirects and returning the final URL. It then tests the given URL \"http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\", retrieves the final URL, and echoes it.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/scrapy.php\":0-23",
+            "content": "<?php\nfunction  curl_post_302($url) {\n$ch = curl_init();\ncurl_setopt($ch, CURLOPT_URL, $url);\ncurl_setopt($ch, CURLOPT_VERBOSE, true);\ncurl_setopt($ch, CURLOPT_HEADER, true);\ncurl_setopt($ch, CURLOPT_NOBODY, true);\ncurl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\ncurl_setopt($ch, CURLOPT_TIMEOUT, 20);\ncurl_setopt($ch, CURLOPT_AUTOREFERER, true);\ncurl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);\ncurl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);\ncurl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);\n$ret = curl_exec($ch);\n$info = curl_getinfo($ch);\n$retURL = $info['url'];\ncurl_close($ch);\nreturn $retURL;\n          }\n$fuckingfucker=\"http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\";\n$super_redirect=curl_post_302($fuckingfucker);\necho $super_redirect;\n?>"
+        }
+    ]
+}

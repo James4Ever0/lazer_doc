@@ -1,0 +1,10 @@
+{
+    "summary": "This script copies four Python files into a directory within the Termux app's home folder. The files being copied are constructor.py, term0.py, getFromPickle.py, and newTestR.py. They are being copied to the holiday subdirectory within the info_gather-v0/wizard directory. This could be related to a software development workflow where files are being moved to specific directories for organization or execution purposes.",
+    "details": [
+        {
+            "comment": "This script copies four Python files into a directory within the Termux app's home folder. The files being copied are constructor.py, term0.py, getFromPickle.py, and newTestR.py. They are being copied to the holiday subdirectory within the info_gather-v0/wizard directory. This could be related to a software development workflow where files are being moved to specific directories for organization or execution purposes.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shallowCopy.sh\":0-4",
+            "content": "#!/bin/bash\ncp constructor.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &\ncp term0.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &\ncp getFromPickle.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &\ncp newTestR.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &"
+        }
+    ]
+}

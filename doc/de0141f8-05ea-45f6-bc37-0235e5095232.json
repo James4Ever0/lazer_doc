@@ -1,0 +1,10 @@
+{
+    "summary": "The script navigates to the \"hotfix\" directory and lists all files, redirecting output to \".list-full\".",
+    "details": [
+        {
+            "comment": "The script navigates to the \"hotfix\" directory and lists all files, redirecting output to \".list-full\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/super-agent.sh\":0-2",
+            "content": "#!/bin/bash\ncd hotfix\nls > .list-full"
+        }
+    ]
+}

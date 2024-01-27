@@ -1,0 +1,10 @@
+{
+    "summary": "Code example demonstrates the use of threads in PHP for concurrent execution. The AsyncOperation class extends Thread and runs multiple instances in a loop, sleeping for random durations before finishing. However, the pthreads extension cannot be used in a web server environment, limiting its use to CLI-based applications.",
+    "details": [
+        {
+            "comment": "Code example demonstrates the use of threads in PHP for concurrent execution. The AsyncOperation class extends Thread and runs multiple instances in a loop, sleeping for random durations before finishing. However, the pthreads extension cannot be used in a web server environment, limiting its use to CLI-based applications.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/threaded.php\":0-46",
+            "content": "<?php\n/*sorry you fucking pussy cat.\n *this fucking platform does not suppory threaded php\n *fucking fucked php!\n * */\n?>\nthese lines will simply be ignored.\nwith Threads, Workers and Threaded objects.\nWarning: The pthreads extension cannot be used in a web server environment. Threading in PHP should therefore remain to CLI-based applications only.\nSimple Test\n#!/usr/bin/php\n<?php\nclass AsyncOperation extends Thread {\n    public function __construct($arg) {\n        $this->arg = $arg;\n    }\n    public function run() {\n        if ($this->arg) {\n            $sleep = mt_rand(1, 10);\n            printf('%s: %s  -start -sleeps %d' . \"\\n\", date(\"g:i:sa\"), $this->arg, $sleep);\n            sleep($sleep);\n            printf('%s: %s  -finish' . \"\\n\", date(\"g:i:sa\"), $this->arg);\n        }\n    }\n}\n// Create a array\n$stack = array();\n//Initiate Multiple Thread\nforeach ( range(\"A\", \"D\") as $i ) {\n    $stack[] = new AsyncOperation($i);\n}\n// Start The Threads\nforeach ( $stack as $t ) {\n    $t->start();\n}\n?>"
+        }
+    ]
+}

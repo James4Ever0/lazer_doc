@@ -1,0 +1,10 @@
+{
+    "summary": "This code creates a SQLite database table called \"countryMap\" with columns for countryName and charGroup, ensuring uniqueness based on ascending alphabetical order of both fields. The code then closes the connection to the database. It seems to be organizing labels in an array, considering alphabetical order as the sorting mechanism, and mentioning relationships between labels but not specifying further details.",
+    "details": [
+        {
+            "comment": "This code creates a SQLite database table called \"countryMap\" with columns for countryName and charGroup, ensuring uniqueness based on ascending alphabetical order of both fields. The code then closes the connection to the database. It seems to be organizing labels in an array, considering alphabetical order as the sorting mechanism, and mentioning relationships between labels but not specifying further details.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB2.py\":0-18",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE countryMap (\ncountryName TEXT NOT NULL,\ncharGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (countryName ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses Axios to make parallel GET requests to Baidu search engine. It retrieves two pages of results for a given query using the `process.argv[2]` parameter, encodes it with `encodeURIComponent`, and prints the data returned by each request.",
+    "details": [
+        {
+            "comment": "This code uses Axios to make parallel GET requests to Baidu search engine. It retrieves two pages of results for a given query using the `process.argv[2]` parameter, encodes it with `encodeURIComponent`, and prints the data returned by each request.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/node-batch.js\":0-13",
+            "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2) => {\n  console.log(response1.data);\n  console.log(response2.data);\n})).catch(error => {\n  console.log(error);\n});"
+        }
+    ]
+}

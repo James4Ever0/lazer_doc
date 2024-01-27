@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a variable 'submarine' with a multiline string and then creates a regular expression using the newline character ('\\n') as a pattern. It then prints the original submarine string and the modified version without newlines, while expressing frustration with the variable naming convention.",
+    "details": [
+        {
+            "comment": "The code defines a variable 'submarine' with a multiline string and then creates a regular expression using the newline character ('\\n') as a pattern. It then prints the original submarine string and the modified version without newlines, while expressing frustration with the variable naming convention.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/submarine.js\":0-8",
+            "content": "var submarine=\"substitude me please\\nplease substitude me\\nplease cleanup the mess\\nwhat is this all about\";\nvar find = '\\n';\nvar regular_fucking_expression = new RegExp(find, 'g');\n// don't ya put fucking minus sign into the fucking shitty variable fucking name!\n//str = str.replace(re, '');\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine);\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine.replace(regular_fucking_expression,\"\"));"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports the \"storeADill\" module and defines a class \"Person\" with name and age attributes. An instance of Person is created with two lambda functions as arguments, representing operations to be performed on inputs. The instance, named joke, then applies these operations to input values 5 and 4 and stores the result in the \"storeAList\" function from the imported module.",
+    "details": [
+        {
+            "comment": "Code imports the \"storeADill\" module and defines a class \"Person\" with name and age attributes. An instance of Person is created with two lambda functions as arguments, representing operations to be performed on inputs. The instance, named joke, then applies these operations to input values 5 and 4 and stores the result in the \"storeAList\" function from the imported module.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/simpleClass.py\":0-8",
+            "content": "from storeADill import storeAList\nclass Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\njoke=Person((lambda x: x*2),(lambda y: y-1))\nprint(\"--\",\"sample:\",joke.name(5),joke.age(4),\"--\")\nstoreAList(joke)"
+        }
+    ]
+}

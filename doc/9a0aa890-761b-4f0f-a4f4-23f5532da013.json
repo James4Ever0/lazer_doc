@@ -1,0 +1,10 @@
+{
+    "summary": "This JavaScript code imports Axios, retrieves data from a Baidu link using Axios, handles response and error cases, includes a sleep function with a deadlock implementation.",
+    "details": [
+        {
+            "comment": "This JavaScript code imports Axios, retrieves data from a Baidu link using Axios, handles response and error cases, includes a sleep function with a deadlock implementation.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/scrapy.js\":0-24",
+            "content": "var axios=require(\"axios\");\nvar link=\"https://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\"\nfunction sleep (time) {\n  return new Promise((resolve) => setTimeout(resolve, time));\n}\n//sleep well you fucking bitch!\nvar source=\"\";\naxios.get(link).then(response => (\n\tconsole.log(response.responseUrl)\n)).catch(function (error) { \n// \u8bf7\u6c42\u5931\u8d25\u5904\u7406\n\t// this won't work.\n\t// this fucking works!\n\t// fucking fucked!\n//console.log(error.request.res.responseUrl);\n\t//make some fucking deadlock.\n//while (source==\"\"){\n//sleep(1).then(() => {\n    // \u8fd9\u91cc\u5199sleep\u4e4b\u540e\u9700\u8981\u53bb\u505a\u7684\u4e8b\u60c5\nconsole.log(error.request.res.responseUrl);\n//console.log(source);\n//})\n//}\n});"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines three functions: `schema`, `scheme`, and `chaos`. The `schema` function prints the arguments, their types, and a message. The `scheme` function takes an argument list (a[1]) as a tuple and uses a lambda to return the result of calling the second function in the argument list on the tuple. The `chaos` function calls `scheme` with the first and second arguments from another list, passing them as a single argument.",
+    "details": [
+        {
+            "comment": "The code defines three functions: `schema`, `scheme`, and `chaos`. The `schema` function prints the arguments, their types, and a message. The `scheme` function takes an argument list (a[1]) as a tuple and uses a lambda to return the result of calling the second function in the argument list on the tuple. The `chaos` function calls `scheme` with the first and second arguments from another list, passing them as a single argument.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/adidas.py\":0-26",
+            "content": "#from returnSameVar import retrieve_name\ndef schema(name,*args):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+name+\"--\")\n    print(args)\n    print([type(a0) for a0 in args])\n    # what if object doesn't match?\n    # pass global and local params!\ndef scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+str(a[0])+\"--\")\n    print(a[1])\n    print([type(a0) for a0 in a[1]])\n    # what if object doesn't match?\n    # pass global and local params!\n    return b(*a[1])\ndef chaos(sb,sc):\n    return scheme([sb[0],sc],sb[1])\n\"\"\"superLamb=(lambda x,y: x+y)\nprint(chaos([\"superLamb\",superLamb],(1,2)))\"\"\""
+        }
+    ]
+}

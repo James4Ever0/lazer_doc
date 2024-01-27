@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports functions from other modules and defines two functions, 'forMotherRussia' and 'toyProject'. The purpose of the code is to manipulate data from a list using 'returnAList' function and perform an operation based on 'numToKill' and 'superRats', then return the final result for further processing. The code also includes some comments expressing frustration or sarcastic remarks, possibly related to the development process.",
+    "details": [
+        {
+            "comment": "This code imports functions from other modules and defines two functions, 'forMotherRussia' and 'toyProject'. The purpose of the code is to manipulate data from a list using 'returnAList' function and perform an operation based on 'numToKill' and 'superRats', then return the final result for further processing. The code also includes some comments expressing frustration or sarcastic remarks, possibly related to the development process.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newTestN.py\":0-20",
+            "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    err=forMotherRussia(numToKill,superRats)\n    print(err)\n# there is the unique constraint\n    executeCode(err)\n# fucking pricks.\n#print(forMotherRussia(0,['singapore','newYear']))\n#print(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''"
+        }
+    ]
+}

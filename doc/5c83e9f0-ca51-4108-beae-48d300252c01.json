@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a log file named \"standard_pattern.log\", removes empty lines and non-blank lines, stores the remaining pattern in a list named 'fuck0', and prints it out.",
+    "details": [
+        {
+            "comment": "This code reads a log file named \"standard_pattern.log\", removes empty lines and non-blank lines, stores the remaining pattern in a list named 'fuck0', and prints it out.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/alphabetInspire.py\":0-3",
+            "content": "# Keep the pattern inside a list.\nwith open(\"standard_pattern.log\",\"r\") as fuck:\n    fuck0=list(filter((lambda x:x!=\"\"),fuck.read().split(\"\\n\")))\n    print(fuck0)"
+        }
+    ]
+}

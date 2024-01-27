@@ -1,0 +1,10 @@
+{
+    "summary": "The code is fetching web pages containing search results for 'artificial general intelligence' from GitHub using the wget utility and saving them as 0_9.log, 0_10.log, 0_11.log, 0_12.log, and 0_13.log respectively.",
+    "details": [
+        {
+            "comment": "The code is fetching web pages containing search results for 'artificial general intelligence' from GitHub using the wget utility and saving them as 0_9.log, 0_10.log, 0_11.log, 0_12.log, and 0_13.log respectively.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/b0.sh\":0-5",
+            "content": "#!/bin/bash\nwget 'https://github.com/search?p=10&q=artificial+general+intelligence&type=Repositories&utf8=\u2713' -O 0_9.log\nwget 'https://github.com/search?p=11&q=artificial+general+intelligence&type=Repositories&utf8=\u2713' -O 0_10.log\nwget 'https://github.com/search?p=12&q=artificial+general+intelligence&type=Repositories&utf8=\u2713' -O 0_11.log\nwget 'https://github.com/search?p=13&q=artificial+general+intelligence&type=Repositories&utf8=\u2713' -O 0_12.log\nwget 'https://github.com/search?p=14&q=artificial+general+intelligence&type=Repositories&utf8=\u2713' -O 0_13.log"
+        }
+    ]
+}

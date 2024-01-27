@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines three functions: `open_to_return`, `parse_file`, and `toyProject`. The `open_to_return` function opens a file, removes blank lines, and returns the list of non-empty lines. The `parse_file` function takes a list of file names as input, filters out the import/from statements, identifies unique keywords after those statements, and returns them in a list. Finally, the `toyProject` function calls `parse_file` on a given file name and prints the results for two example files.",
+    "details": [
+        {
+            "comment": "The code defines three functions: `open_to_return`, `parse_file`, and `toyProject`. The `open_to_return` function opens a file, removes blank lines, and returns the list of non-empty lines. The `parse_file` function takes a list of file names as input, filters out the import/from statements, identifies unique keywords after those statements, and returns them in a list. Finally, the `toyProject` function calls `parse_file` on a given file name and prints the results for two example files.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinear.py\":0-24",
+            "content": "import re\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n    print(flist)\n    cold=lamb[1](flist)\n    print(cold)\n    bless=lamb[0](cold)\n    print(bless)\n    angle=lamb[2](flist,bless)\n    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\nprint(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))"
+        }
+    ]
+}

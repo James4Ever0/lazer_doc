@@ -1,0 +1,10 @@
+{
+    "summary": "This script takes command-line arguments, prints the first argument twice, and then loops through the remaining arguments printing them out. It also includes some explicit language and humoristic remarks in its comments.",
+    "details": [
+        {
+            "comment": "This script takes command-line arguments, prints the first argument twice, and then loops through the remaining arguments printing them out. It also includes some explicit language and humoristic remarks in its comments.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/pass_args.php\":0-18",
+            "content": "<?php\n//you should start from 1\n//the number 0 stands for the script's name.\necho \"$argv[1]\\n\";\necho \"$argv[1]\\n\";\n//what if i do not want to write the fucking semicolon?\n//now you die.\n//you should respect your fucking name.\necho \"$argc\\n\";\n//the fucking number is the index number plus one.\n//$the_fucking_final_index_fucked_numer=$argc-1;\nfor ($i = 1; $i < $argc; $i++) {\n\techo $argv[$i];\n\t//no need to put the fucking return at the fucking fucked end.\n\t//this will print #1 to #2 arg\n\t//i ain't know nothing about the $argv\n}\n//WTF R U THINKING?\n?>"
+        }
+    ]
+}

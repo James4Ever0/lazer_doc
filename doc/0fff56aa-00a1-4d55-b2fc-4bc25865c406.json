@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the inspect module, defines a function retrieve_name that returns the name of a given variable within its calling frame, and then prints the result when called with y as an argument. It also initializes several variables (x,y,z,y0,y1) and y2 as a reference to y3.",
+    "details": [
+        {
+            "comment": "This code imports the inspect module, defines a function retrieve_name that returns the name of a given variable within its calling frame, and then prints the result when called with y as an argument. It also initializes several variables (x,y,z,y0,y1) and y2 as a reference to y3.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/retrieveVarName.py\":0-12",
+            "content": "import inspect\ny3=[0,1,2][2]\ny2=y3\nx,y,z = 1,y2,3\ny0=2\ny1=y\ndef retrieve_name(var):\n    callers_local_vars = inspect.currentframe().f_back.f_locals.items()\n    return [var_name for var_name, var_val in callers_local_vars if var_val is var]\nprint (retrieve_name(y))"
+        }
+    ]
+}

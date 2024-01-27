@@ -1,0 +1,10 @@
+{
+    "summary": "This script deletes all files in subdirectories zero, one, and two. It might be used for regular cleaning or starting with a clean slate in these directories.",
+    "details": [
+        {
+            "comment": "This script deletes all files in subdirectories zero, one, and two. It might be used for regular cleaning or starting with a clean slate in these directories.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex/refresh.sh\":0-3",
+            "content": "#!/bin/bash\nrm zero/*\nrm one/*\nrm two/*"
+        }
+    ]
+}

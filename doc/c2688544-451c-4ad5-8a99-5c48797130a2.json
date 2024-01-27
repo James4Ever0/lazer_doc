@@ -1,0 +1,10 @@
+{
+    "summary": "The code creates a template to generate a file named \"faith.log\" from other log files (\"a+str(x)+\".log\"). It uses a lambda function, \"supertemp\", to filter out the first line from each log file and writes them into \"faith.log\" with trailing newlines.",
+    "details": [
+        {
+            "comment": "The code creates a template to generate a file named \"faith.log\" from other log files (\"a+str(x)+\".log\"). It uses a lambda function, \"supertemp\", to filter out the first line from each log file and writes them into \"faith.log\" with trailing newlines.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/coref-v2/yeah.py\":0-16",
+            "content": "a=\"Kneel\"\n# I wanna to make a template.\nsupertemp=(lambda  fstring,strings,spliter: list(filter((lambda x:x!=fstring),strings.split(spliter))))\n# to create it from nothing.\nwith open(\"faith.log\",\"w+\") as faith:\n    for x in range(3):\n        with open(a+str(x)+\".log\",\"r\") as ontology:\n            #meta=list(filter((lambda x: x!=\"\"),ontology.read().split(\"\\n\")))\n            meta=supertemp(\"\",ontology.read(),\"\\n\")\n            for y in meta:\n                faith.write(y+\" \")\n            faith.write(\"\\n\")\n        # we are the machine.\n        # with the trailing newline.\n    faith.close()"
+        }
+    ]
+}

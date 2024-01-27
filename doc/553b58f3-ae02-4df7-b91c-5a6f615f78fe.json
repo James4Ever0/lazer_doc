@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function named \"scheme\" that takes two parameters, \"a\" and \"b\". The variable \"a\" is a tuple containing the name of a lambda function and its arguments. The code then prints the types of variables produced by executing the arguments of \"a\", and finally returns a new lambda function created by combining \"b\" with the second element of \"a\". In this example, it calls the \"scheme\" function with a tuple containing the name \"superLamb\" (a lambda function) and its argument \"(1,2)\" to execute and print the types of variables produced.",
+    "details": [
+        {
+            "comment": "This code defines a function named \"scheme\" that takes two parameters, \"a\" and \"b\". The variable \"a\" is a tuple containing the name of a lambda function and its arguments. The code then prints the types of variables produced by executing the arguments of \"a\", and finally returns a new lambda function created by combining \"b\" with the second element of \"a\". In this example, it calls the \"scheme\" function with a tuple containing the name \"superLamb\" (a lambda function) and its argument \"(1,2)\" to execute and print the types of variables produced.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/nuke.py\":0-8",
+            "content": "def scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+a[0]+\"--\")\n    print([type(a0) for a0 in eval(a[1])])\n    return eval(\"b\"+a[1])\nsuperLamb=(lambda x,y: x+y)\nprint(scheme([\"superLamb\",\"(1,2)\"],superLamb))"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This Bash script uses curl to send a request to \"http://www.baidu.com.s?=java+python\" with a cookie named \"baidu.cookies\".",
+    "details": [
+        {
+            "comment": "This Bash script uses curl to send a request to \"http://www.baidu.com.s?=java+python\" with a cookie named \"baidu.cookies\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/ducky.sh\":0-1",
+            "content": "#!/bin/bash\ncurl -b baidu.cookies \"http://www.baidu.com.s?=java+python\""
+        }
+    ]
+}

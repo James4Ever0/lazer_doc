@@ -1,0 +1,10 @@
+{
+    "summary": "This code utilizes the `child_process` module and promises to execute a curl command using baidu.cookies, retrieve the output, and log it. It then creates a promise that calls the `manipulate()` function with \"python\" as input, and uses `Promise.all()` to handle the resolved values.",
+    "details": [
+        {
+            "comment": "This code utilizes the `child_process` module and promises to execute a curl command using baidu.cookies, retrieve the output, and log it. It then creates a promise that calls the `manipulate()` function with \"python\" as input, and uses `Promise.all()` to handle the resolved values.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/node-async.js\":0-19",
+            "content": "const util = require('util');\nconst exec = util.promisify(require('child_process').exec);\nasync function manipulate(input) {\n\tvar command=\"curl -b baidu.cookies http://www.baidu.com/s?word=\"+input;\n  const { stdout, stderr } = await exec(command);\n//\tconsole.log(stdout);\n//\tconsole.log(stdout1);\n//  console.log('stderr:', stderr);\n\treturn stdout;\n};\nvar fuckinglist0=new Promise (function (){let hometown=manipulate(\"python\");\nreturn hometown;\n});\nPromise.all([fuckinglist0]).then(function(values) {\n  console.log(values);\n});\n//const {wtf0,wtf1}=await fuckinglist;\n//console.log(wtf0+wtf1);"
+        }
+    ]
+}

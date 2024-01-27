@@ -1,0 +1,10 @@
+{
+    "summary": "Code contains multiple instances of negative language and profanity. It defines a lambda function \"lickYouUp\" and two functions, \"road\" and \"rock\", which use this lambda function to perform operations on a given input 'a'. The last function \"jerk\" prints the provided text.",
+    "details": [
+        {
+            "comment": "Code contains multiple instances of negative language and profanity. It defines a lambda function \"lickYouUp\" and two functions, \"road\" and \"rock\", which use this lambda function to perform operations on a given input 'a'. The last function \"jerk\" prints the provided text.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/sample.py\":0-17",
+            "content": "       #this is shit.\n       #this is shit.\n       #this is shit.\nlickYouUp=(lambda c:4*c)\n# unlike haskell, it has sequential issue.\n# so we can store funtion names into an ordered list.\n# haskell is wicked. really wicked.\ndef road(a):\n    return lickYouUp(a)\ndef rock(a): # i have told you.\n    return road(a) #bullshit.\ndef jerk(n):\n    print(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")"
+        }
+    ]
+}

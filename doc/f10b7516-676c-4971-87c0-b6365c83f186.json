@@ -1,0 +1,10 @@
+{
+    "summary": "This code contains two loops. The first loop prints \"lemon\" 5 times, starting from 1 and incrementing by 2 each time. If the step is too large (i.e., greater than the length of the list), the loop will terminate immediately. The second loop iterates over a table called 'days', printing each day name on a separate line.",
+    "details": [
+        {
+            "comment": "This code contains two loops. The first loop prints \"lemon\" 5 times, starting from 1 and incrementing by 2 each time. If the step is too large (i.e., greater than the length of the list), the loop will terminate immediately. The second loop iterates over a table called 'days', printing each day name on a separate line.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/for.lua\":0-6",
+            "content": "for i=1,10,2 do\n\tprint(\"lemon\")\nend\n-- you must put an iterator at that point\n-- if the step is ridiculous then the loop will die immediately.\ndays = {\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"}\nfor i,v in ipairs(days) do  print(v) end"
+        }
+    ]
+}

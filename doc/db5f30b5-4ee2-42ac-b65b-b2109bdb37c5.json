@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports functions from different modules, creates a list of unique items, and then iterates over the list. It prints information for each item, checks some conditions, and finally closes the database connection.",
+    "details": [
+        {
+            "comment": "The code imports functions from different modules, creates a list of unique items, and then iterates over the list. It prints information for each item, checks some conditions, and finally closes the database connection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/turnItUp.py\":0-18",
+            "content": "from getFromPickle import returnAList\nfrom term1 import executeCode, closeConnection\nfrom conPro import sqlMaker\nmasochist=list(map((lambda x:x[0]),returnAList()))\nprint(masochist)\n# this is a fucking list.\ncountOn=0\nfor k in masochist:\n    print(\"-- spliter for \"+k+\" --\")\n    superMan=executeCode(sqlMaker(k))\n    for superMania in superMan:\n        if countOn!=0:\n            print(superMania)\n        else:\n            # check the fucking shit.\n            print(superMania[0],chr(superMania[0]),superMania[1],superMania[2],chr(superMania[2]),superMania[4])\n    print(\"-- spliter for \"+k+\" --\")\n    countOn+=1\ncloseConnection()"
+        }
+    ]
+}

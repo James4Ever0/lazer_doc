@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a string from the \"simple\" variable, escapes double quotes with backslashes using Lua's gsub function, and then passes it to a Python script via stdin. The output of the Python script is captured in the \"result\" variable before being printed. Additionally, it suggests saving the result to a file or using Redis for future processing, but notes that the user may attempt to process it through stdin anyway.",
+    "details": [
+        {
+            "comment": "The code reads a string from the \"simple\" variable, escapes double quotes with backslashes using Lua's gsub function, and then passes it to a Python script via stdin. The output of the Python script is captured in the \"result\" variable before being printed. Additionally, it suggests saving the result to a file or using Redis for future processing, but notes that the user may attempt to process it through stdin anyway.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/standard-input.lua\":0-14",
+            "content": "simple=[[hello you mot\"\"\"\"her fucker, you are now g\"\"\"\"oing to die.\nyou mother fucking whore!\nfuck you dickh\"\"\"\"\"\"ead!\nall your\"\"\"\"\" base are bel\"\"\"ong to us!]]\n-- print(simple:gsub(\"\\\"\",\"\\\\\\\"\"))\nhandle=io.popen(\"python sadomachist.py <<< \\\"\\\"\\\"\\\"\\\"\"..simple:gsub(\"\\\"\",\"\\\\\\\"\")..\"\\\"\\\"\\\"\\\"\\\"\")\nresult=handle:read(\"*a\")\nhandle:close()\nprint(result)\n-- try to let other process take this shit down!\n-- i suggest you to do this in two ways:\n-- one is to save it to some file\n-- two is use redis.\n-- but you will not give this shit up, will you?\n-- you will try to do this in stdin!"
+        }
+    ]
+}

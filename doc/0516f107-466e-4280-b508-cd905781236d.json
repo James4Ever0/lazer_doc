@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses awk to generate commands for wget, downloading files from the Unicode PDF charts based on the subconscious.sh file.",
+    "details": [
+        {
+            "comment": "This code uses awk to generate commands for wget, downloading files from the Unicode PDF charts based on the subconscious.sh file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/unicode-standard/swipe.sh\":0-1",
+            "content": "#!/bin/bash\nawk '{print \"wget \\\"https://unicode.org/charts/PDF/\"$0\"\\\" &\"}'  subconscious.sh"
+        }
+    ]
+}

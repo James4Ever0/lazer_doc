@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads the \"README\" file, extracts unique characters, filters out letters, and creates an empty list 'nothing'. It then loops through each character in the 'mississippi' string, appending index values ('hotspot') to 'nothing' list using MACD, PSY, KDJ finance methods. The loop prints index and corresponding list element.",
+    "details": [
+        {
+            "comment": "Code reads \"README\" file, extracts unique characters (ascii values), filters out letters, creates an empty list 'nothing', and loops through each character in the 'mississippi' string. If a character is present in the filtered list ('hotspot'), it appends the index (r) to the corresponding position in the 'nothing' list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py\":0-34",
+            "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?"
+        },
+        {
+            "comment": "This code adds the index to a list using finance method, specifically MACD, PSY, KDJ. The \"r\" represents the index and is appended to the corresponding hotspot index in the list. This loop prints the index and corresponding element of the list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py\":35-42",
+            "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nfor r,k in enumerate(nothing):\n    print(r,k)"
+        }
+    ]
+}

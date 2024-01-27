@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the 're' module and defines a function called 'cockShock'. This function reads the contents of a file, performs regex operations to extract table name, constraint names, and their corresponding columns. It then prints various results related to these extracted items. The function is executed twice using different files from the 'dickHead' list.",
+    "details": [
+        {
+            "comment": "The code imports the 're' module and defines a function called 'cockShock'. This function reads the contents of a file, performs regex operations to extract table name, constraint names, and their corresponding columns. It then prints various results related to these extracted items. The function is executed twice using different files from the 'dickHead' list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed.py\":0-24",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n        print(sd)\n        rn=so.replace(sd,'')\n        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n        print(svg)\n    # sample of metacoding\n    # I need transformation now!\ndickHead=[\"makeDatabase.py\",\"makeFroupingDatabase.py\"]\ncockShock(dickHead[0])\ncockShock(dickHead[1])"
+        }
+    ]
+}

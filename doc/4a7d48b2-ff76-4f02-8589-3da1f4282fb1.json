@@ -1,0 +1,10 @@
+{
+    "summary": "The code changes the current directory to a specific location and then executes a Lua script (marine.lua) with arguments 0, \"bing search api\", and redirects its output to a file named \"supercube.txt\" in the original working directory.",
+    "details": [
+        {
+            "comment": "The code changes the current directory to a specific location and then executes a Lua script (marine.lua) with arguments 0, \"bing search api\", and redirects its output to a file named \"supercube.txt\" in the original working directory.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/fuck.sh\":0-3",
+            "content": "#!/bin/bash\nvar=$(pwd)\ncd /data/data/com.termux/files/home/lazer/multilingual/hotfix-v1\nlua marine.lua 0 bing search api  > $var\"/supercube.txt\""
+        }
+    ]
+}

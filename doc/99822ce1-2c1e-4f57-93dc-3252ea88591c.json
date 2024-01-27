@@ -1,0 +1,10 @@
+{
+    "summary": "The code opens a pipe to execute the \"ls -l\" command and reads its output, storing it in a buffer. The modified section then prints each line of the output using printf.",
+    "details": [
+        {
+            "comment": "The code opens a pipe to execute the \"ls -l\" command and reads its output, storing it in a buffer. The modified section then prints each line of the output using printf.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/buffer.c\":0-10",
+            "content": "#include <stdio.h>\nint main()\n{\n    FILE * fp;\n    char buffer[1024];\n    fp = popen(\"ls -l\", \"r\");\n    // modification starts here.\n    while (fgets(buffer, sizeof(buffer), fp)!=NULL){\n    printf(\"%s\", buffer);}\n    pclose(fp);\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code discusses the need for a solution to manage a complex codebase, suggesting the creation of a discrete class with definitions, tags, and methods. It also mentions the importance of storage (database or pickle) and emphasizes the need for a pure form with arbitrary variable names for better communication. The use of uuid module for unique objects is mentioned, along with the suggestion to control experiments using AUTOEXPECT for logging purposes.",
+    "details": [
+        {
+            "comment": "This code discusses the need for a solution to manage a complex codebase, suggesting the creation of a discrete class with definitions, tags, and methods. It also mentions the importance of storage (database or pickle) and emphasizes the need for a pure form with arbitrary variable names for better communication. The use of uuid module for unique objects is mentioned, along with the suggestion to control experiments using AUTOEXPECT for logging purposes.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/README\":0-16",
+            "content": "I THINK HOOGLE IS ENOUGH FOR THOSE HARDCORE DEVS BUT NOW I HAVE ENCOUNTERED SERIOUS PROBLEM WHEN DEALING WITH THE ENTIRE CODEBASE OF UNICODE TABLE. I NEED A SOLUTION. I NEED TO WORK IT OUT ON MY OWN.\nBased on my philosophy just make definition, tags and methods shall be enough. You need to crrate a discrete class for it.\nAnd in order to make it indexable, I need to either store it into database or simply some pickle or other methods whatever can deal with the storage of classes.\nIt could be multilingual, but that's another story.\nIt has to be in its puriest form. the variables can have arbitrary name to make methods communicative.\nWe will make use of the uuid module, to create unique dill class objects and modified source code right at the spot. mention the origin beforehand.\nHow to make our experiment controllable?\nI'm sorry but AUTOEXPECT IS AWESOME!\nThe log file of expect can log anything.\nwe only log usable hints. Use uuid as token."
+        }
+    ]
+}

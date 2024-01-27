@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the library 'inferior-shell' and runs a command \"echo 'super hot'\" using the inferior shell, then prints the output as a string.",
+    "details": [
+        {
+            "comment": "The code imports the library 'inferior-shell' and runs a command \"echo 'super hot'\" using the inferior shell, then prints the output as a string.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/character-shell.lisp\":0-2",
+            "content": "(ql:quickload :inferior-shell)\n(print (inferior-shell:run \"echo 'super hot'\" :output :string))\n(quit)"
+        }
+    ]
+}

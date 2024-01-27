@@ -1,0 +1,10 @@
+{
+    "summary": "This code executes a Node.js instance, sends commands 2+2, 4+4, and 'console.log('hello') sequentially, then terminates the Node process.",
+    "details": [
+        {
+            "comment": "This code executes a Node.js instance, sends commands 2+2, 4+4, and 'console.log('hello') sequentially, then terminates the Node process.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/nodeOut.exp\":0-6",
+            "content": "#!/data/data/com.termux/files/usr/bin/expect\nspawn node\nexpect -re \".*\" {send -- \"2+2\\r\"}\nexpect -re \".*\" {send -- \"4+4\\r\"}\nexpect -re \".*\" {send -- \"console.log('hello')\\r\"}\nexpect -re \".*\" {send -- \".exit\\r\"}\nexpect eof"
+        }
+    ]
+}

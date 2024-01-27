@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the numpy library and defines a function, Method2. It takes two inputs, 'a' and 'b', and uses np.meshgrid to create 2D coordinate grids for each input. Then it prints the coordinates of group1 and group2, their types, and available methods using dir(). Finally, it checks if group1 is equal to group2 and returns the result. The function is then called with inputs \"group\" and \"groupChar\", and the returned value is printed along with the type of v.",
+    "details": [
+        {
+            "comment": "This code imports the numpy library and defines a function, Method2. It takes two inputs, 'a' and 'b', and uses np.meshgrid to create 2D coordinate grids for each input. Then it prints the coordinates of group1 and group2, their types, and available methods using dir(). Finally, it checks if group1 is equal to group2 and returns the result. The function is then called with inputs \"group\" and \"groupChar\", and the returned value is printed along with the type of v.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/niche.py\":0-12",
+            "content": "import numpy as np\ndef Method2(a, b):\n    group1, group2= np.meshgrid([*a],[*b])\n    print(group1)\n    print(group2)\n    print(type(group1))\n    print(dir(group1))\n    return group1 == group2\nv=Method2(\"group\",\"groupChar\")\nprint(type(v))\n$print(v and v)"
+        }
+    ]
+}

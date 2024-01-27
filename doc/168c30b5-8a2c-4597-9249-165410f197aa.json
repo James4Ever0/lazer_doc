@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses wget to download two logs, likely containing search results related to game theory. It seems to be scripted for the 19th and 20th page of search results.",
+    "details": [
+        {
+            "comment": "This code uses wget to download two logs, likely containing search results related to game theory. It seems to be scripted for the 19th and 20th page of search results.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/gameTheory/buster2.sh\":0-2",
+            "content": "#!/bin/bash\nwget 'https://github.com/search?p=19&q=game+theory&type=&utf8=%E2%9C%93' -O 0_18.log\nwget 'https://github.com/search?p=20&q=game+theory&type=&utf8=%E2%9C%93' -O 0_19.log"
+        }
+    ]
+}

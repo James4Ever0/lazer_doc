@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports a function retrieve_name and defines two functions, scheme and chaos. The scheme function takes a tuple (a[1]) as an argument and prints the types of elements in it. It then returns the result of applying the lambda function b to the elements of a[1]. The chaos function calls scheme with its second argument being an instance of the superLamb lambda function. Finally, it prints the result of calling chaos on the superLamb function.",
+    "details": [
+        {
+            "comment": "This code imports a function retrieve_name and defines two functions, scheme and chaos. The scheme function takes a tuple (a[1]) as an argument and prints the types of elements in it. It then returns the result of applying the lambda function b to the elements of a[1]. The chaos function calls scheme with its second argument being an instance of the superLamb lambda function. Finally, it prints the result of calling chaos on the superLamb function.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/nike.py\":0-15",
+            "content": "from returnSameVar import retrieve_name\ndef scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+str(a[0])+\"--\")\n    print([type(a0) for a0 in a[1]])\n    # what if object doesn't match?\n    # pass global and local params!\n    return b(*a[1])\ndef chaos(sb):\n    return scheme([retrieve_name(sb),(1,2)],sb)\nsuperLamb=(lambda x,y: x+y)\nprint(chaos(superLamb))"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines three functions: `sqlMaker`, `pairMaker`, and `finalPro`. `sqlMaker` creates an SQL INSERT statement. `pairMaker` generates a string of paired values for SQL fields. `finalPro` uses the previous two functions to create the final SQL query.",
+    "details": [
+        {
+            "comment": "This code defines three functions: `sqlMaker`, `pairMaker`, and `finalPro`. `sqlMaker` creates an SQL INSERT statement. `pairMaker` generates a string of paired values for SQL fields. `finalPro` uses the previous two functions to create the final SQL query.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/constructor.py\":0-30",
+            "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" )\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d"
+        }
+    ]
+}

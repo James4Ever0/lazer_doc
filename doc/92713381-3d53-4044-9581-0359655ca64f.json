@@ -1,0 +1,10 @@
+{
+    "summary": "This Lua script reads a file named \"unbash6.log\" and extracts specific URL patterns using regular expressions, printing them one by one. It continues reading the file line by line until reaching the end, then closes the file.",
+    "details": [
+        {
+            "comment": "This Lua script reads a file named \"unbash6.log\" and extracts specific URL patterns using regular expressions, printing them one by one. It continues reading the file line by line until reaching the end, then closes the file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/simple-regex-filter.lua\":0-26",
+            "content": "file=io.open(\"unbash6.log\",\"r\")\nfunction resolve (n)\n\t-- print(n)\n\tfor word in string.gmatch(n, 'http://www%.baidu%.com/link%?url=[^%\"\"]+') do\n\t\tprint(word)\n\tend\nend\n-- print(file:read())\nvariable=\"\"\nwhile true  do\n\tvariable=file:read()\n\t-- print(variable)\n\tif variable ~=nil\n\tthen\n\t\tresolve(variable)\n\t\t-- name with variable\n\telse\n\t\tbreak\n\tend\n\t-- to make sure there isn't any silly nil\nend\n-- it will only return one line at a time\n-- print(file:flush())\n-- does this work?\n-- no it does not work\n-- use colon to transfer the file object to the method.\nfile:close()"
+        }
+    ]
+}

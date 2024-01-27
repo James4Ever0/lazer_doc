@@ -1,0 +1,10 @@
+{
+    "summary": "This script is executing a JavaScript file, \"node-quest.js\", with the argument \"\u539f\u5b50\u5f39\" (atomic bomb in Chinese) using Node.js on a Bash system.",
+    "details": [
+        {
+            "comment": "This script is executing a JavaScript file, \"node-quest.js\", with the argument \"\u539f\u5b50\u5f39\" (atomic bomb in Chinese) using Node.js on a Bash system.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/example.sh\":0-1",
+            "content": "#!/bin/bash\nnode node-quest.js \u539f\u5b50\u5f39"
+        }
+    ]
+}

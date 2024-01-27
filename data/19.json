@@ -1,0 +1,534 @@
+{
+    "1900": {
+        "file_id": 314,
+        "content": "    wrapper=(lambda xy: ord(xy))\n#wrapper0=(lambda xy: xy)\n#    with open(\"alphabets.txt\",\"r\") as rockstar:\n#    mandarin=0\n# simply another workaround?\n        #for kn in rockstar.readlines():\n    kn=erectile\n    if stringSet[0] in kn:\n#            print(\"set only\")\n#            print(kn)\n#            ks=re.findall(r\" .(,?)| \\&#\\d*;(,?)\", kn[5:])\n        prt=standAlone(kn[5:-1])\n#            print(prt)\n        if len(prt)>1:\n            try:\n#                    print(list(map((lambda x: [x,len(x),wrap(x)]),prt)))\n                pat=list(map((lambda z: wrapper(re.findall(r\"[^ ]\",z)[0])),prt))\n#                    print(pat)\n                return pat\n            except:\n#                    print(\"FUCKED UP\\nFUCKED UP\")\n                return []\n        else:\n            return []\n#                print(\"TOO YOUNG TOO NAIVE\\nTOO YOUNG TOO NAIVE\")\n#            print(kn[-1])\n#            print(ks)\n#            print(standAlone(ks))\n    else:\n        return []\n\"\"\"            if (stringSet[1][0] in kn and stringSet[1][1] in kn):",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py:24-54"
+    },
+    "1901": {
+        "file_id": 314,
+        "content": "This code seems to be part of a larger program that deals with processing text data from a file called \"alphabets.txt\". It uses lambda functions and regular expressions (re) to extract characters from each line in the file, checks if a certain string is present in each line, and returns a list of character codes for lines that contain this string. The code also handles cases where there are no matching lines or where the extracted characters are too few.",
+        "type": "comment"
+    },
+    "1902": {
+        "file_id": 314,
+        "content": "                print(\"name only\")\n                print(kn)\n#        elif mandarin==1:\n            else:\n                print(\"empty line\")\n                print(kn)\"\"\"\n#        mandarin+=1\n#        if mandarin==3:\n#            mandarin=0",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py:55-63"
+    },
+    "1903": {
+        "file_id": 314,
+        "content": "This code prints the name and value of variable \"kn\" if mandarin is not equal to 1, otherwise it prints an empty line followed by the value of \"kn\". The code also includes a counter for mandarin with a cycling behavior.",
+        "type": "comment"
+    },
+    "1904": {
+        "file_id": 315,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/README",
+        "type": "filepath"
+    },
+    "1905": {
+        "file_id": 315,
+        "content": "The code suggests that the project may involve utilizing various techniques such as matrix, tensor operations, decision trees, Markov Logic, and possibly more to accomplish its objectives. The specific implementation details and purposes of these techniques are not explicitly mentioned.",
+        "type": "summary"
+    },
+    "1906": {
+        "file_id": 315,
+        "content": "MAY USE MATRIX, TENSOR, DECISION TREE, MARKOV LOGIC AND MORE",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/README:1-1"
+    },
+    "1907": {
+        "file_id": 315,
+        "content": "The code suggests that the project may involve utilizing various techniques such as matrix, tensor operations, decision trees, Markov Logic, and possibly more to accomplish its objectives. The specific implementation details and purposes of these techniques are not explicitly mentioned.",
+        "type": "comment"
+    },
+    "1908": {
+        "file_id": 316,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/difftree.lua",
+        "type": "filepath"
+    },
+    "1909": {
+        "file_id": 316,
+        "content": "This Lua code includes functions for list manipulation, checking for identical elements, calculating differences, and verifying single element lists. Applied to example lists (nuke and rape), results are printed. An empty function comment named \"hell\" is present for organization purposes.",
+        "type": "summary"
+    },
+    "1910": {
+        "file_id": 316,
+        "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nnuke={1,2,3,4,5}\nfor so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.\n-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/difftree.lua:1-59"
+    },
+    "1911": {
+        "file_id": 316,
+        "content": "This Lua code defines several functions for manipulating lists of numbers. It checks if all elements in a list are the same, calculates differences between consecutive elements, and verifies if a list contains only one element. The code also prints the results of these operations when applied to specific example lists (nuke and rape).",
+        "type": "comment"
+    },
+    "1912": {
+        "file_id": 316,
+        "content": "-- hell",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/difftree.lua:60-60"
+    },
+    "1913": {
+        "file_id": 316,
+        "content": "The code snippet represents an empty function comment named \"hell\" likely used for organization purposes within the file.",
+        "type": "comment"
+    },
+    "1914": {
+        "file_id": 317,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/dogod.lua",
+        "type": "filepath"
+    },
+    "1915": {
+        "file_id": 317,
+        "content": "The code defines functions to generate ranges, count occurrences, check lists, calculate differences, and process a list into a hierarchical structure. The takeOver function is used for this processing, with potential improvements suggested in comments.",
+        "type": "summary"
+    },
+    "1916": {
+        "file_id": 317,
+        "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nfunction takeOver(list0,stacks)\n\tlocal blowJob = false\n\tif #list0>1 and verify(list0) == true then\n\t\tblowJob = true\n\t\tprint(\"mark I\")\n--\t\tprint(blowJob)\n--[[\t\tprint(stacks)\n\t\tfor np,mp in ipairs(stacks) do\n\t\t\tprint(mp)\n\t\t\tfor nvk, mvk in ipairs(mp) do\n\t\t\t\tprint(mvk)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/dogod.lua:1-58"
+    },
+    "1917": {
+        "file_id": 317,
+        "content": "The code defines several functions: \"range\" to generate a range of numbers, \"ct\" to count occurrences of a value in a table, \"verify\" to check if all elements in the list are the same, \"takeAct\" to calculate differences between consecutive elements in the list, and \"takeOver\" to determine whether the list is valid and print the stacks.",
+        "type": "comment"
+    },
+    "1918": {
+        "file_id": 317,
+        "content": "\t\t\tend\n\t\tend]]\n--\t\tfury={blowJob,stacks}\n\t\treturn blowJob,stacks\n--\t\tprint(blowjob)\n\telseif #list0 ==1 then\n\t\tprint(\"mark II\")\n\t\treturn blowJob,stacks\n\telse\n\t\tmvp = takeAct(list0)\n\t\tstacks[#stacks+1]=mvp\n--[[\t\tfor np,mp in ipairs(mvp) do\n\t\t\tprint(mp)\n\t\tend]]\n\t\treturn takeOver(mvp,stacks)\n\tend\nend\nnuke={1,2,3,4,5}\n--bank=takeOver(nuke,{})\nprt,wrt=takeOver(nuke,{})\nprint(prt)\nprint(wrt)\nfor rk,rn in ipairs(wrt) do\n\tprint(rk,rn)\n\tprint(\"--spliter--\")\n\tfor rad, run in ipairs(rn) do\n\t\tprint(rad,run)\n\tend\nend\n-- greater than two.\n--[[for so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend]]\n-- stop it. do it in python.\n-- yeah.\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.\n-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]\n-- hell",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/dogod.lua:59-103"
+    },
+    "1919": {
+        "file_id": 317,
+        "content": "Function takeOver is used to process a list of numbers into a hierarchical structure. The code checks the size of the input list and applies different operations based on its length. If the list has only one element, it prints \"mark II\" and returns the same number along with an empty stack. Otherwise, it assigns the list to mvp, pushes the elements into stacks, and returns takeOver(mvp,stacks). The code then creates two variables prt and wrt from takeOver(nuke,{}), and prints their values. It iterates through each element in wrt and its sub-elements, printing them out as well. The code includes comments indicating potential improvements or alternative approaches, suggesting to stop certain sections of the code and move them to Python.",
+        "type": "comment"
+    },
+    "1920": {
+        "file_id": 318,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/lolita.py",
+        "type": "filepath"
+    },
+    "1921": {
+        "file_id": 318,
+        "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+        "type": "summary"
+    },
+    "1922": {
+        "file_id": 318,
+        "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py:1-20"
+    },
+    "1923": {
+        "file_id": 318,
+        "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+        "type": "comment"
+    },
+    "1924": {
+        "file_id": 319,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/marsWalk.lua",
+        "type": "filepath"
+    },
+    "1925": {
+        "file_id": 319,
+        "content": "The code defines functions for processing lists of numbers, including counting occurrences, checking equality, calculating differences, and handling multiple arguments. It also includes a function for iterating through stacks (not defined in this chunk). The comment \"hell\" suggests this section may contain challenging or complex logic.",
+        "type": "summary"
+    },
+    "1926": {
+        "file_id": 319,
+        "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nfunction takeOver(list0,stacks)\n\tlocal blowJob = false\n\tif #list0>1 and verify(list0) == true then\n\t\tblowJob = true\n--\t\tprint(\"mark I\")\n--\t\tprint(blowJob)\n--[[\t\tprint(stacks)\n\t\tfor np,mp in ipairs(stacks) do\n\t\t\tprint(mp)\n\t\t\tfor nvk, mvk in ipairs(mp) do\n\t\t\t\tprint(mvk)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/marsWalk.lua:1-58"
+    },
+    "1927": {
+        "file_id": 319,
+        "content": "The code defines several functions to process a list of numbers: \n1. \"range\" generates a function that returns the next value in a sequence based on a starting point, step size, and range.\n2. \"ct\" counts the occurrence of a specific number within a given list.\n3. \"verify\" checks if all elements in the list are equal to a specified element.\n4. \"takeAct\" calculates the difference between adjacent elements in the list for each pair of adjacent elements.\n5. \"takeOver\" verifies if the list has more than one unique element and is true, then iterates through stacks (not defined in this chunk).",
+        "type": "comment"
+    },
+    "1928": {
+        "file_id": 319,
+        "content": "\t\t\tend\n\t\tend]]\n--\t\tfury={blowJob,stacks}\n\t\treturn blowJob,stacks\n--\t\tprint(blowjob)\n\telseif #list0 ==1 then\n--\t\tprint(\"mark II\")\n\t\treturn blowJob,stacks\n\telse\n\t\tmvp = takeAct(list0)\n\t\tstacks[#stacks+1]=mvp\n--[[\t\tfor np,mp in ipairs(mvp) do\n\t\t\tprint(mp)\n\t\tend]]\n\t\treturn takeOver(mvp,stacks)\n\tend\nend\nnuke={}\nfor vm,argv in ipairs(arg) do\n\tnuke[#nuke+1]=argv\nend\n--bank=takeOver(nuke,{})\nprt,wrt=takeOver(nuke,{})\nprint(prt)\n--print(wrt)\nfor rk,rn in ipairs(wrt) do\n--\tprint(rk,rn)\n--\tprint(\"--spliter--\")\n\tfor rad, run in ipairs(rn) do\n\t\tif rad<#rn then\n\t\t\tio.write(run..\" \")\n\t\telse\n\t\t\tprint(run)\n\t\tend\n\tend\nend\n-- greater than two.\n--[[for so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend]]\n-- stop it. do it in python.\n-- yeah.\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.\n-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/marsWalk.lua:59-109"
+    },
+    "1929": {
+        "file_id": 319,
+        "content": "Function to handle multiple arguments and return appropriate output based on the number of input parameters.",
+        "type": "comment"
+    },
+    "1930": {
+        "file_id": 319,
+        "content": "-- hell",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/marsWalk.lua:110-110"
+    },
+    "1931": {
+        "file_id": 319,
+        "content": "The code appears to contain a single line comment \"hell\". This may indicate that this section of the code is related to or contains challenging or difficult parts of the program, possibly indicating debugging or complex logic.",
+        "type": "comment"
+    },
+    "1932": {
+        "file_id": 320,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/moonWalk.lua",
+        "type": "filepath"
+    },
+    "1933": {
+        "file_id": 320,
+        "content": "This code defines functions for working with lists such as counting occurrences, checking equality, calculating differences, and validates a list. The `takeOver` function takes an array and prints its elements.",
+        "type": "summary"
+    },
+    "1934": {
+        "file_id": 320,
+        "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nfunction takeOver(list0,stacks)\n\tlocal blowJob = false\n\tif #list0>1 and verify(list0) == true then\n\t\tblowJob = true\n--\t\tprint(\"mark I\")\n--\t\tprint(blowJob)\n--[[\t\tprint(stacks)\n\t\tfor np,mp in ipairs(stacks) do\n\t\t\tprint(mp)\n\t\t\tfor nvk, mvk in ipairs(mp) do\n\t\t\t\tprint(mvk)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/moonWalk.lua:1-58"
+    },
+    "1935": {
+        "file_id": 320,
+        "content": "The code defines several functions for working with lists of elements. \"range\" creates a function that returns values within a specified range, incrementing by a given step. \"ct\" counts the occurrences of a specific element in a list. \"verify\" checks if all elements in a list are equal. \"takeAct\" calculates differences between consecutive elements in a list. \"takeOver\" checks if the list is valid and prints stacks if it is.",
+        "type": "comment"
+    },
+    "1936": {
+        "file_id": 320,
+        "content": "\t\t\tend\n\t\tend]]\n--\t\tfury={blowJob,stacks}\n\t\treturn blowJob,stacks\n--\t\tprint(blowjob)\n\telseif #list0 ==1 then\n--\t\tprint(\"mark II\")\n\t\treturn blowJob,stacks\n\telse\n\t\tmvp = takeAct(list0)\n\t\tstacks[#stacks+1]=mvp\n--[[\t\tfor np,mp in ipairs(mvp) do\n\t\t\tprint(mp)\n\t\tend]]\n\t\treturn takeOver(mvp,stacks)\n\tend\nend\nnuke={1,2,3,4,3,2,1}\n--bank=takeOver(nuke,{})\nprt,wrt=takeOver(nuke,{})\nprint(prt)\n--print(wrt)\nfor rk,rn in ipairs(wrt) do\n--\tprint(rk,rn)\n--\tprint(\"--spliter--\")\n\tfor rad, run in ipairs(rn) do\n\t\tif rad<#rn then\n\t\t\tio.write(run..\" \")\n\t\telse\n\t\t\tprint(run)\n\t\tend\n\tend\nend\n-- greater than two.\n--[[for so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend]]\n-- stop it. do it in python.\n-- yeah.\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.\n-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]\n-- hell",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/moonWalk.lua:59-107"
+    },
+    "1937": {
+        "file_id": 320,
+        "content": "This code defines a function called `takeOver` that takes an array (`nuke`) and returns two values, `prt` and `wrt`. It then iterates over `wrt`, printing each element. The code also includes comments suggesting potential improvements or alternative approaches.",
+        "type": "comment"
+    },
+    "1938": {
+        "file_id": 321,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/operate.py",
+        "type": "filepath"
+    },
+    "1939": {
+        "file_id": 321,
+        "content": "The code reads data from two pickle files and a text file, performs string manipulations, compares the content of each pickle file to the text file, stores the results in a 2D list called \"fuckme\", defines a function that creates a new list containing elements from the first list where each element is present in the second list, and prints the resulting list.",
+        "type": "summary"
+    },
+    "1940": {
+        "file_id": 321,
+        "content": "import pickle\nfrom lolita import fury\nfrom shadesOfGrey import neuron\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/operate.py:1-41"
+    },
+    "1941": {
+        "file_id": 321,
+        "content": "The code reads data from two pickle files and a text file, performs string manipulations, and then compares the content of each pickle file to the text file. The results are stored in a 2D list called \"fuckme\" where each sublist contains coordinates representing matches found between the pickle file data and the text file data.",
+        "type": "comment"
+    },
+    "1942": {
+        "file_id": 321,
+        "content": "    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(dizzy)\n    for kids in range(len(dizzy)):\n        royal=dizzy[kids]\n        print(shit0[royal])\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(neuron(shit0[jokes+royal],6,0))\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/operate.py:42-64"
+    },
+    "1943": {
+        "file_id": 321,
+        "content": "This code defines a function that takes a list of lists and two indexes as input. It creates a new list containing elements from the first list, where each element is present in the second list. Then, it prints the resulting list and iterates over it to print specific elements from another list. The code also includes comments describing its purpose and limitations.",
+        "type": "comment"
+    },
+    "1944": {
+        "file_id": 322,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/shadesOfGrey.py",
+        "type": "filepath"
+    },
+    "1945": {
+        "file_id": 322,
+        "content": "This code defines a function called 'neuron' which takes three parameters: shade (a string with certain characters), rk (a number representing the index of the character to consider), and rho (a number representing the position within the string). The function extracts specific characters from the input string based on their position, sorts them by their ASCII values, and then executes a Lua script with these sorted characters as inputs. If more than two distinct characters are extracted, it prints the results.",
+        "type": "summary"
+    },
+    "1946": {
+        "file_id": 322,
+        "content": "#shade0=\"     set: А, а, Б, б, В, в, Г, г, Ґ, ґ, Д, д, Е, е, Є, є, Ж, ж, З, з, И, и, І, і, Ї, ї, Й, й, К, к, Л, л, М, м, Н, н, О, о, П, п, Р, р, С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, Ч, ч, Ш, ш, Щ, щ, Ь, ь, Ю, ю, Я, я\"\nimport os\ndef neuron(shade,rk,rho):\n    horror=list(shade)\n    crystal=[]\n    if len(horror)>rk:\n        for r,k in enumerate(horror):\n            if r>rk and r%3==rho:\n                crystal.append([k,ord(k)])\n    else:\n        pass\n            # use the index only.\n    fuckme=sorted(list(map((lambda x:x[1]),crystal)))\n    if len(fuckme)>2:\n        init=\"lua venusWalk.lua\"\n        for fuckall in fuckme:\n            init+=\" \"+str(fuckall)\n#    print(fuckme)\n        myCmd0 = os.popen(init)\n        myCmd=list(filter((lambda x:x!=\"\"),myCmd0.read().split(\"\\n\")))\n        myCmd0.close()\n        print(\"--spilter--\")\n        for mv in myCmd:\n            print(list(filter((lambda x:x!=\"\"),mv.split(\" \"))))\n        print(\"--spliter--\")\n    else:\n        pass\n    return crystal\n#print(neuron(shade0,9,1))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/shadesOfGrey.py:1-32"
+    },
+    "1947": {
+        "file_id": 322,
+        "content": "This code defines a function called 'neuron' which takes three parameters: shade (a string with certain characters), rk (a number representing the index of the character to consider), and rho (a number representing the position within the string). The function extracts specific characters from the input string based on their position, sorts them by their ASCII values, and then executes a Lua script with these sorted characters as inputs. If more than two distinct characters are extracted, it prints the results.",
+        "type": "comment"
+    },
+    "1948": {
+        "file_id": 323,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/shortCut.lua",
+        "type": "filepath"
+    },
+    "1949": {
+        "file_id": 323,
+        "content": "This Lua code defines a function `ct` that counts occurrences of an element in a table and a function `verify` which checks if all elements in the table are equal. It then tests these functions with two tables, one containing only 1s and another with mixed values, printing the results.",
+        "type": "summary"
+    },
+    "1950": {
+        "file_id": 323,
+        "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.\n-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/shortCut.lua:1-31"
+    },
+    "1951": {
+        "file_id": 323,
+        "content": "This Lua code defines a function `ct` that counts occurrences of an element in a table and a function `verify` which checks if all elements in the table are equal. It then tests these functions with two tables, one containing only 1s and another with mixed values, printing the results.",
+        "type": "comment"
+    },
+    "1952": {
+        "file_id": 324,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/spliter.py",
+        "type": "filepath"
+    },
+    "1953": {
+        "file_id": 324,
+        "content": "Iterates through a list, checks if consecutive elements are the same and splits the list accordingly.",
+        "type": "summary"
+    },
+    "1954": {
+        "file_id": 324,
+        "content": "#exam=[1,2,3,4,5,8,9,0,1,2,3]\n#exam0=[]\n#exam1=[]\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/spliter.py:1-6"
+    },
+    "1955": {
+        "file_id": 324,
+        "content": "Iterates through a list, checks if consecutive elements are the same and splits the list accordingly.",
+        "type": "comment"
+    },
+    "1956": {
+        "file_id": 325,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/venusWalk.lua",
+        "type": "filepath"
+    },
+    "1957": {
+        "file_id": 325,
+        "content": "The Lua script handles arguments, includes various functions, and is part of a game/application. A strong negative message is printed followed by verify(rape0) result, but its relevance remains unclear without broader context.",
+        "type": "summary"
+    },
+    "1958": {
+        "file_id": 325,
+        "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction round(float)\n    return math.floor(float + .5)\nend\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nfunction takeOver(list0,stacks)\n\tlocal blowJob = false\n\tif #list0>1 and verify(list0) == true then\n\t\tblowJob = true\n--\t\tprint(\"mark I\")\n--\t\tprint(blowJob)\n--[[\t\tprint(stacks)\n\t\tfor np,mp in ipairs(stacks) do",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/venusWalk.lua:1-58"
+    },
+    "1959": {
+        "file_id": 325,
+        "content": "This code contains functions for rounding numbers, iterating through a range of values, counting occurrences of an element in a list, verifying if a list has unique elements, taking the differences between consecutive elements in a list (takeAct), and performing an operation on a list of stacks if the list is verified as having unique elements (takeOver).",
+        "type": "comment"
+    },
+    "1960": {
+        "file_id": 325,
+        "content": "\t\t\tprint(mp)\n\t\t\tfor nvk, mvk in ipairs(mp) do\n\t\t\t\tprint(mvk)\n\t\t\tend\n\t\tend]]\n--\t\tfury={blowJob,stacks}\n\t\treturn blowJob,stacks\n--\t\tprint(blowjob)\n\telseif #list0 ==1 then\n--\t\tprint(\"mark II\")\n\t\treturn blowJob,stacks\n\telse\n\t\tmvp = takeAct(list0)\n\t\tstacks[#stacks+1]=mvp\n--[[\t\tfor np,mp in ipairs(mvp) do\n\t\t\tprint(mp)\n\t\tend]]\n\t\treturn takeOver(mvp,stacks)\n\tend\nend\nnuke={}\nfor vm,argv in ipairs(arg) do\n\tnuke[#nuke+1]=round(argv)\nend\n--bank=takeOver(nuke,{})\nprt,wrt=takeOver(nuke,{})\nprint(prt)\n--print(wrt)\nfor rk,rn in ipairs(wrt) do\n--\tprint(rk,rn)\n--\tprint(\"--spliter--\")\n\tfor rad, run in ipairs(rn) do\n\t\tif rad<#rn then\n\t\t\tio.write(run..\" \")\n\t\telse\n\t\t\tprint(run)\n\t\tend\n\tend\nend\n-- greater than two.\n--[[for so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend]]\n-- stop it. do it in python.\n-- yeah.\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/venusWalk.lua:59-109"
+    },
+    "1961": {
+        "file_id": 325,
+        "content": "This Lua script appears to involve handling arguments and performing operations based on the number of arguments passed. It includes various print statements and function calls for processing these arguments. The code also uses loops and conditional statements to determine the appropriate actions based on the argument count.",
+        "type": "comment"
+    },
+    "1962": {
+        "file_id": 325,
+        "content": "-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]\n-- hell",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/venusWalk.lua:110-113"
+    },
+    "1963": {
+        "file_id": 325,
+        "content": "This code snippet seems to be a part of a game or application. It is printing a message with a strong and negative connotation, followed by the result of a function called verify(rape0). The purpose and relevance of this specific segment within the broader context of the codebase are not clear from the given information.",
+        "type": "comment"
+    },
+    "1964": {
+        "file_id": 326,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/README",
+        "type": "filepath"
+    },
+    "1965": {
+        "file_id": 326,
+        "content": "This code discusses three matrices (superior order, reference, and semantic) that are dynamic and constantly changing.",
+        "type": "summary"
+    },
+    "1966": {
+        "file_id": 326,
+        "content": "I believe when the things have been simplified, we can do some lego over this.\nthe superior order matrix. the reference matrix, the semantic matrix.\nit is not static, it is ever-changing.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/README:1-4"
+    },
+    "1967": {
+        "file_id": 326,
+        "content": "This code discusses three matrices (superior order, reference, and semantic) that are dynamic and constantly changing.",
+        "type": "comment"
+    },
+    "1968": {
+        "file_id": 327,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/alphabetInspire.py",
+        "type": "filepath"
+    },
+    "1969": {
+        "file_id": 327,
+        "content": "This code reads a log file named \"standard_pattern.log\", removes empty lines and non-blank lines, stores the remaining pattern in a list named 'fuck0', and prints it out.",
+        "type": "summary"
+    },
+    "1970": {
+        "file_id": 327,
+        "content": "# Keep the pattern inside a list.\nwith open(\"standard_pattern.log\",\"r\") as fuck:\n    fuck0=list(filter((lambda x:x!=\"\"),fuck.read().split(\"\\n\")))\n    print(fuck0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/alphabetInspire.py:1-4"
+    },
+    "1971": {
+        "file_id": 327,
+        "content": "This code reads a log file named \"standard_pattern.log\", removes empty lines and non-blank lines, stores the remaining pattern in a list named 'fuck0', and prints it out.",
+        "type": "comment"
+    },
+    "1972": {
+        "file_id": 328,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/backToSchuler.js",
+        "type": "filepath"
+    },
+    "1973": {
+        "file_id": 328,
+        "content": "This regular expression code matches various writing systems and scripts, such as Latin, Greek, Chinese, Japanese, Arabic, Devanagari, Tamil, etc. It is likely used for text normalization or language detection purposes. The given code snippet uses regex to search for languages within a string and displays any matches in the console.",
+        "type": "summary"
+    },
+    "1974": {
+        "file_id": 328,
+        "content": "var killer=/\\[(?:unified\\-canadian\\-aboriginal\\-syllabics|(?:international\\-phonetic\\-alphab|tai\\-vi)et|linear\\-b\\-Syllabary|(?:caucasian\\-alba|ukrai)nian|(?:japanese\\-(?:katak|hirag)an|s(?:aurashtr|inhal)|t(?:agbanw|irhut)|phags\\-p|o(?:sman|ri)y|sharad|kannad|granth|thaan|lepch)a|c(?:y(?:priot\\-syllabary|rillic)|optic|ha(?:kma|m))|(?:old\\-(?:south\\-arab|north\\-arab|pers)|phoenic|b(?:elarus|ulgar)|mongol|hungar|georg|shav|ital|russ|ly[cd]|car)ian|(?:imperial\\-arama|old\\-(?:turk|perm)|old\\-ital|ethiop|manda|goth|run)ic|(?:meroitic\\-cursiv|new\\-tai\\-lu|palmyren|cheroke|tai\\-l)e|(?:m(?:ende\\-kikaku|ahajan|od)|varang\\-kshit|(?:syloti\\-nag|tak)r|k(?:harosh|ai)th|devanagar|kh(?:udawad|ojk)|ol\\-chik|gu(?:rmukh|jarat)|pahlav)i|yi\\-syllables|(?:sora\\-sompe|reja)ng|pahawh\\-hmong|(?:meetei\\-may|gre)ek|(?:pau\\-cin\\-ha|telug)u|(?:glagol|ugar)itic|(?:(?:manich|nabat)ae|(?:samari|tibe)t|elbas|germ)an|(?:esperant|hanuno|nk|mr)o|(?:malayal|(?:tai\\-t|sidd|og)h)am|(?:(?:sund|jav)a|chi)nese|b(?:a(?:s(?:sa",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/backToSchuler.js:1-1"
+    },
+    "1975": {
+        "file_id": 328,
+        "content": "This code is a regular expression that matches various writing systems and scripts, including Latin, Greek, Chinese, Japanese, Arabic, Devanagari, Tamil, and many more. It's likely used for text normalization or language detection purposes.",
+        "type": "comment"
+    },
+    "1976": {
+        "file_id": 328,
+        "content": "\\-vah|hkir)|linese|tak|mum)|opomofo|uginese|engali|rahmi|uhid)|kayah\\-li|(?:tifinag|(?:turk|span)is|englis|kazak|polis|frenc|czec)h|a(?:r(?:menian|ab)|vestan)|tagalog|deseret|pollard|(?:(?:myanm|tat)a|khme)r|h(?:ebrew|angul)|syriac|l(?:i(?:mb|s)u|ao)|tamil|latin|thai|vai)\\]/\nvar noman=\"[arab] iraq [arab]\"\n// what does this mean?\n// i hate regex.\nvar norman=killer.exec(noman)\n//var northman=killer.split(noman)\nconsole.log(norman)\nconsole.log(\"--fuck--\")\n//console.log(northman)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/backToSchuler.js:1-10"
+    },
+    "1977": {
+        "file_id": 328,
+        "content": "The code snippet uses regular expressions to search for specific languages within a string. The regular expression is designed to match various language codes and names, such as \"arab\" for Arabic, \"englis\" for English, \"turkish\", etc. It then executes the killer.exec() function on the string \"noman\" to extract any matches and displays them in the console along with a profanity.",
+        "type": "comment"
+    },
+    "1978": {
+        "file_id": 329,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/begina.py",
+        "type": "filepath"
+    },
+    "1979": {
+        "file_id": 329,
+        "content": "The code defines a function `souviet` that takes a string as input and returns a modified list of boolean values indicating the start, end, and both start and end positions in the input string. It identifies and marks the positions where newlines are encountered and applies marking rules to the positions accordingly. The code then tests the function on several test inputs.",
+        "type": "summary"
+    },
+    "1980": {
+        "file_id": 329,
+        "content": "mild=[\"56\\n5738-\\ndg\",\"\\n56\\n5738-\\ndg\",\"56\\n5738-\\ndg\\n\",\"56\\n5738-\\n\",\"\\n5738-\\ndg\"]\ndef souviet(union):\n    # at head at tail\n    mark=list(map((lambda x: [x, False,False]),list(filter((lambda x:x!=\"\"),union.split(\"\\n\")))))\n    print(mark)\n    merge=[x for x,y in enumerate(union) if y==\"\\n\"]\n    print(merge)\n    quack=len(union)\n    # f f t t f t t f\n#    gross=[]\n#    grass=\"\"\n    if merge!=[]:\n        if merge[0]==0 and mark[0][1]==False:\n            mark[0][1]= True\n        if merge[-1]==(quack-1) and mark[-1][2]==False:\n            mark[-1][2]=True\n        if len(merge)>1:\n            if mark[0][2]==False:\n                mark[0][2]= True\n            if mark[-1][1]==False:\n                mark[-1][1]=True\n            for mk in range(len(mark)-2):\n                print(mk+1)\n                mark[mk+1][1], mark[mk+1][2]=True,True\n    else:\n        pass\n    return mark\nfor jerk in mild:\n    print(\"-----spliter-----\")\n    print(jerk)\n    print(souviet(jerk))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/begina.py:1-31"
+    },
+    "1981": {
+        "file_id": 329,
+        "content": "The code defines a function `souviet` that takes a string as input and returns a modified list of boolean values indicating the start, end, and both start and end positions in the input string. It identifies and marks the positions where newlines are encountered and applies marking rules to the positions accordingly. The code then tests the function on several test inputs.",
+        "type": "comment"
+    },
+    "1982": {
+        "file_id": 330,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/crucifix.py",
+        "type": "filepath"
+    },
+    "1983": {
+        "file_id": 330,
+        "content": "The code uses difflib and re libraries to find overlapping substrings in a string, count their occurrences, and identify positions of a specific character. It then returns the unique substrings and counts.",
+        "type": "summary"
+    },
+    "1984": {
+        "file_id": 330,
+        "content": "import difflib\nimport re\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck=fuckall([pos for pos, char in enumerate(superstring) if char == \"\\n\"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/crucifix.py:1-41"
+    },
+    "1985": {
+        "file_id": 330,
+        "content": "The code is importing difflib and re libraries. It defines a function called \"fuckall\" that takes in a list, removes duplicate consecutive elements, and returns the result. Then there's another function \"same_fuck\" which seems to find positions where a specific character (\"\\n\") appears in a superstring.",
+        "type": "comment"
+    },
+    "1986": {
+        "file_id": 330,
+        "content": "    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu+=thug\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    mop=[[]]*cp\n    for x in range(cp):\n        ruby=bsd[x]\n        mop[x]=[ruby,gnu.count(ruby)]\n    print(mop)\n    return gnu\n#shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nwith open(\"standard_pattern.log\",\"r\") as dickhead:\n    shit=dickhead.read()\n    print(shit)\n    print(\"-----spliter-----\")\n    print(same_fuck(shit))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/crucifix.py:42-66"
+    },
+    "1987": {
+        "file_id": 330,
+        "content": "The code is reading a string, finding overlapping substrings using difflib, storing them in 'gnu', creating a list of unique substrings and their counts, storing it in 'mop', and finally returning 'gnu'. The code reads from \"standard_pattern.log\", prints the input string, separator, and result of the same_fuck function on the input.",
+        "type": "comment"
+    },
+    "1988": {
+        "file_id": 331,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/dagger.py",
+        "type": "filepath"
+    },
+    "1989": {
+        "file_id": 331,
+        "content": "This code utilizes difflib and re libraries to compare strings, defines functions for finding differences and matching substrings. It reads a text file with alphabet data, sorts and filters based on std, stores geek data, and prints kill count and relevant information.",
+        "type": "summary"
+    },
+    "1990": {
+        "file_id": 331,
+        "content": "import difflib\nimport re\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck0=fuckall([pos for pos, char in enumerate(superstring) if char == \"\\n\"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/dagger.py:1-41"
+    },
+    "1991": {
+        "file_id": 331,
+        "content": "The code uses difflib and re libraries for string comparison. It defines a function, 'fuckall', that takes in a list of numbers as input, iterates through the list, compares each element with its adjacent one, and appends it to the 'bitch' list if they are not equal. The function then deletes any duplicate consecutive elements from the 'bitch' list. It also checks if the last two elements in the list are consecutive before returning the final 'bitch' list. Additionally, there is a function, 'same_fuck', that takes a superstring as input and uses the 'fuckall' function to find the positions where \"\\n\" appears.",
+        "type": "comment"
+    },
+    "1992": {
+        "file_id": 331,
+        "content": "    #print(fuck0)\n    # this ain't right.\n    if len(fuck0)>9:\n        select=int(len(fuck0)-2)//5\n        fuck=[]\n        for mk in range(5):\n            fuck.append(fuck0[int(select*(mk+0.5))])\n    #    print(fuck)\n    else:\n        fuck=fuck0\n    #fuck=filter(lambda x:fuck.index)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+2::],superstring[:k]\n#        print([a,b])\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu+=thug\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    mop=[[]]*cp\n    for x in range(cp):\n        ruby=bsd[x]\n        mop[x]=[ruby,gnu.count(ruby)]\n    #print(mop)\n    #print(\"-----spliter-----\")\n    return mop\n#shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\n#print(nope)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/dagger.py:42-77"
+    },
+    "1993": {
+        "file_id": 331,
+        "content": "The code reads a string, splits it into chunks of 5 characters each, and compares them with another string to find matching substrings. It stores the matches in a list, then creates another list containing the unique matches and their counts. The code also includes some comments expressing frustration and potential optimizations that could be made.",
+        "type": "comment"
+    },
+    "1994": {
+        "file_id": 331,
+        "content": "with open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read()\n    #print(shit)\n    #print(\"-----spliter-----\")\n    joke=list(reversed(sorted(same_fuck(shit),key=(lambda x:x[1]))))\n    #print(joke)\n    std=joke[0][1]\n    numkill=list(filter((lambda x:(std-x[1])/std<0.2),joke))\n    print(numkill)\n    geeks=[]\n    for geek in numkill:\n        geeks+=geek[0].split(\"\\n\")\n    print(geeks)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/dagger.py:78-90"
+    },
+    "1995": {
+        "file_id": 331,
+        "content": "This code reads a text file containing alphabet data, sorts and reverses the list, filters based on standard deviation (std), stores relevant geek data in a list, and finally prints both filtered kill count and geek data.",
+        "type": "comment"
+    },
+    "1996": {
+        "file_id": 332,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/difftool/crucifix.py",
+        "type": "filepath"
+    },
+    "1997": {
+        "file_id": 332,
+        "content": "The code defines two functions, `fuckall` and `same_fuck`, which filter a list based on consecutive elements being one more than the previous element and return the filtered list. The code is used to find repeated substrings in a string.",
+        "type": "summary"
+    },
+    "1998": {
+        "file_id": 332,
+        "content": "import difflib\nimport re\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck=fuckall([pos for pos, char in enumerate(superstring) if char == \" \"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/crucifix.py:1-41"
+    },
+    "1999": {
+        "file_id": 332,
+        "content": "The code defines two functions: `fuckall` and `same_fuck`. The `fuckall` function takes a list as input, filters it by checking if consecutive elements are one more than the previous element, and removes any elements that don't fit this pattern. It also loops twice to remove any trailing elements that don't meet the condition. Finally, it returns the filtered list. The `same_fuck` function takes a superstring as input, splits it using spaces as delimiters, calls the `fuckall` function on the resulting list of positions, and returns the resulting filtered list. The code also includes comments that mention not being concerned about time complexity, but this is not necessarily accurate.",
+        "type": "comment"
+    }
+}

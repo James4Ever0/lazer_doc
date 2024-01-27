@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines two functions, saveTo and loadOn. The saveTo function serializes a Keras model to JSON and HDF5 format for saving to disk, while the loadOn function loads a previously saved model from disk.",
+    "details": [
+        {
+            "comment": "This code defines two functions, saveTo and loadOn. The saveTo function serializes a Keras model to JSON and HDF5 format for saving to disk, while the loadOn function loads a previously saved model from disk.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/modelIO.py\":0-19",
+            "content": "from keras.models import model_from_json\ndef saveTo(model,name):\n    # serialize model to JSON\n    model_json = model.to_json()\n    with open(name+\".json\", \"w\") as json_file:\n        json_file.write(model_json)\n# serialize weights to HDF5\n# maybe module is separated from weights.\n    model.save_weights(name+\".h5\")\n    print(\"Saved model to disk\")\ndef loadOn(name):\n    json_file = open(name+'.json', 'r')\n    loaded_model_json = json_file.read()\n    json_file.close()\n    loaded_model = model_from_json(loaded_model_json)\n# load weights into new model\n    loaded_model.load_weights(name+\".h5\")\n    print(\"Loaded model from disk\")\n    return loaded_model"
+        }
+    ]
+}

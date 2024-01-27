@@ -1,0 +1,15 @@
+{
+    "summary": "The code generates a file, imports modules from 'adidas', and creates random strings for debugging. It separates prank definitions and lists for in-place debugging and writes out function definitions based on input, handling schema calls and writing the output to \"fuck\".",
+    "details": [
+        {
+            "comment": "This code creates a file and imports modules from 'adidas', based on the given turtle list. It generates random strings for debugging, and separates prank definitions and prank lists for in-place debugging.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/niche.py\":0-23",
+            "content": "import uuid\nfrom defTester import smoke\n# to create random stuff.\ndef wroteAHaskell(name,turtle):\n    holyIndent=\"\\t\"\n    with open(name,\"w+\") as fuck:\n        jerkMeUp=str(uuid.uuid4())[:8]\n        suckMeUp=str(uuid.uuid4())[:8]\n        mess=[0 in list(map((lambda x:x[2][0]),turtle)),1 in list(map((lambda x:x[2][0]),turtle))]\n        messUp=list(sorted(list(set(list(map((lambda x:x[0]),turtle))))))\n        if mess[0]==True:\n            fuck.write(\"from adidas import chaos as chaos\"+jerkMeUp+\"\\n\")\n        if mess[1]==True:\n            fuck.write(\"from adidas import schema as schema\"+suckMeUp+\"\\n\")\n        # read, and then generate prank list.\n        prankLamb=[tur[4] for tur in turtle if tur[2][0]==0]\n        hashDog=[str(uuid.uuid4())[:8] for r in range(len(prankLamb))]\n#        prankQuote=[]\n# reserved for in place debugging without def\n        prankDef=[tur[4] for tur in turtle if tur[2][0]==1]\n        devil=[]\n        for i in range(1+turtle[-1][-1]):\n            if i in prankLamb:\n                airPods=turtle[i][2][1]+hashDog[prankLamb.index(i)]"
+        },
+        {
+            "comment": "This code is defining and writing out functions, where a function definition is created based on the input. If the input is a lambda expression, it writes the function with the lambda expression; otherwise, it writes the function name directly. The code also handles schema calls for certain inputs and writes the output to a file called \"fuck\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/niche.py\":24-32",
+            "content": "                f=smoke(turtle[i][1].split(\"=\",1)[1])\n                devil.append(holyIndent*messUp.index(turtle[i][0])+turtle[i][2][1]+hashDog[prankLamb.index(i)]+\"=\"+f[0])\n                devil.append(holyIndent*messUp.index(turtle[i][0])+turtle[i][2][1]+\"=(lambda \"+f[1]+\":chaos\"+jerkMeUp+\"([\\\"\"+turtle[i][2][1]+\"\\\",\"+airPods+\"],\"+f[2]+\"))\\n\")\n            else:\n                devil.append(holyIndent*messUp.index(turtle[i][0])+turtle[i][1])\n                if i in prankDef:\n                    devil.append(holyIndent*(messUp.index(turtle[i][0])+1)+\"schema\"+suckMeUp+\"(\\\"\"+turtle[i][-2][0]+\"\\\",\"+turtle[i][-3][1]+\")\\n\")\n        for pm in devil:\n            fuck.write(pm)"
+        }
+    ]
+}

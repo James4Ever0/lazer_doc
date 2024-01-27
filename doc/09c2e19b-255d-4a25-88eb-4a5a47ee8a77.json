@@ -1,0 +1,10 @@
+{
+    "summary": "The code initializes a range module and iterates through numbers from 1 to 400, printing each number. It is a simple loop using the range module for iteration, producing expected results from 1 to 400 as desired.",
+    "details": [
+        {
+            "comment": "The code initializes a range module and iterates through numbers from 1 to 400, printing each number. It is a simple loop using the range module for iteration, producing expected results from 1 to 400 as desired.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/test_range.lua\":0-7",
+            "content": "range=require(\"range_module.init\")\nfor i in range(1,400) do\n\tprint(i)\nend\n-- this shit is fucking beautiful.\n-- it is exactly the thing, exactly from 1 to the mother fucking 400!"
+        }
+    ]
+}

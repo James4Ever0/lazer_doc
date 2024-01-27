@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a file named 'core.log', filters and processes data from the file, then passes the processed data to a function called toyProject in newTestN module. The lambda functions joker and greatWall2 are used for filtering and processing.",
+    "details": [
+        {
+            "comment": "This code reads a file named 'core.log', filters and processes data from the file, then passes the processed data to a function called toyProject in newTestN module. The lambda functions joker and greatWall2 are used for filtering and processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/cockshock.py\":0-14",
+            "content": "from newTestN import toyProject\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \"]))\nshit=''\nwith open('core.log','r') as fuck:\n    shit=fuck.read()\np=[]\nwith open(joker(shit)+'entities.txt','r') as f:\n    for j in f.readlines():\n        if j[0]!='#' and len(j)>1:\n            p.append(list(map((lambda x: greatWall2(x)),joker(j).split(':'))))\n'''for a,b in enumerate(p):\n    print(a,b)'''\nfor a in p:\n    toyProject(0,[a[1],a[0]])"
+        }
+    ]
+}

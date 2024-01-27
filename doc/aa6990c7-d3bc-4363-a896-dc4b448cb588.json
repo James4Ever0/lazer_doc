@@ -1,0 +1,10 @@
+{
+    "summary": "Imports uuid and ast modules, generates a UUID as a string in lowercase hex format, and then evaluates it as an integer literal using ast.",
+    "details": [
+        {
+            "comment": "Imports uuid and ast modules, generates a UUID as a string in lowercase hex format, and then evaluates it as an integer literal using ast.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/chumble/radical/usedto.py\":0-3",
+            "content": "import uuid, ast\nfuck=uuid.uuid4().hex\nprint(ast.literal_eval(\"0x\"+fuck.lower()))"
+        }
+    ]
+}

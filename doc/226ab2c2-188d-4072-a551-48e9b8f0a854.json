@@ -1,0 +1,10 @@
+{
+    "summary": "Importing a function to return a list, assigning it to variable p and printing the list. Then calling non-existent \"name\" method on list without passing any arguments.",
+    "details": [
+        {
+            "comment": "Importing a function to return a list, assigning it to variable p and printing the list. Then calling non-existent \"name\" method on list without passing any arguments.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/shitsFuckedUp.py\":0-5",
+            "content": "from getFromDill import returnAList\np=returnAList()\nprint(p)\np.name()\n#print(\"--\",\"sample:\",p.name(5),p.age(4),\"--\")"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This script installs various text-based web browsers including lynx, links, w3m, elinks, and links2 using apt-get.",
+    "details": [
+        {
+            "comment": "This script installs various text-based web browsers including lynx, links, w3m, elinks, and links2 using apt-get.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/websitegrep/apt-fetch.sh\":0-5",
+            "content": "#!/bin/bash\napt-get install lynx\napt-get install links\napt-get install w3m\napt-get install elinks\napt-get install links2"
+        }
+    ]
+}

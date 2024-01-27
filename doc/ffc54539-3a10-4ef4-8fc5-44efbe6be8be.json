@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the iconv module and encodes a user-provided content (retrieved from process.argv[2]) using the 'gb2312' encoding. The encoded content is then logged to the console.",
+    "details": [
+        {
+            "comment": "This code imports the iconv module and encodes a user-provided content (retrieved from process.argv[2]) using the 'gb2312' encoding. The encoded content is then logged to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/node-conv.js\":0-4",
+            "content": "// var iconv = require('iconv');\ncontent=process.argv[2];\nvar p = encodeURIComponent(content);\n//iconv.encode(content, 'gb2312');\nconsole.log(p);"
+        }
+    ]
+}

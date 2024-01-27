@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a file named \"makeDatabase.py\" and uses regular expressions to extract strings enclosed in triple quotes (\"\"\"\"). It then prints the extracted strings, but mentions needing transformation next.",
+    "details": [
+        {
+            "comment": "This code reads a file named \"makeDatabase.py\" and uses regular expressions to extract strings enclosed in triple quotes (\"\"\"\"). It then prints the extracted strings, but mentions needing transformation next.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_fixed.py\":0-5",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nwith open(\"makeDatabase.py\",\"r\") as s:\n    so=re.findall(r'(\"\"\").+(\"\"\")',s.read())\n    print(so)\n    # I need transformation now!"
+        }
+    ]
+}

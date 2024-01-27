@@ -1,0 +1,15 @@
+{
+    "summary": "This code imports libraries, defines functions, connects to a SQLite database, retrieves table and column information, returns data in pandas DataFrame format, closes cursor and connection.",
+    "details": [
+        {
+            "comment": "The code imports necessary libraries and defines three functions: `toxic`, `to_tables`, and `to_columns`. It then connects to a SQLite database specified by `cer` and retrieves information about tables, their columns, and returns sample data in a pandas DataFrame format.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/verifyIfWorks.py\":0-37",
+            "content": "import sqlite3\nimport pandas as pd\ndef toxic(jerk):\n    return [[jerk[1][a],jerk[2][a]] for a in range(len(jerk[1]))]\ndef to_tables(cer):\n    db = sqlite3.connect(cer)\n    cursor = db.cursor()\n    cursor.execute(\"SELECT name FROM sqlite_master WHERE type='table';\")\n    tables = cursor.fetchall()\n    cursor.close()\n    db.close()\n    return tables\ndef to_columns(per,cer):\n    db=sqlite3.connect(cer)\n    db.text_factory = str\n    cur = db.cursor()\n    der=[]\n    for jer in per:\n        result = cur.execute(\"PRAGMA table_info('%s')\" % jer).fetchall()\n        her=toxic(list(zip(*result)))\n        der.append(her)\n    cur.close()\n    db.close()\n    return der\ndef to_sample(cer):\n    db = sqlite3.connect(cer)\n    cursor = db.cursor()\n    cursor.execute(\"SELECT name FROM sqlite_master WHERE type='table';\")\n    tables = cursor.fetchall()\n    for table_name in tables:\n        table_name = table_name[0]\n        table = pd.read_sql_query(\"SELECT * FROM %s LIMIT 1\" % table_name, db)\n        print(table)\n#        table.to_csv(dir0+\"/\"+table_name + '.csv', index_label='index')"
+        },
+        {
+            "comment": "Closing the database cursor and database connection to ensure proper resource management.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/verifyIfWorks.py\":38-39",
+            "content": "    cursor.close()\n    db.close()"
+        }
+    ]
+}

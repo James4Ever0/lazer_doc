@@ -1,0 +1,10 @@
+{
+    "summary": "This code snippet is iterating through the arguments (arg) using ipairs function, printing each key and value. The first argument (-1 for Lua, 0 for script name) will be matched as #1 arg1. Using ipairs is beneficial in cases where indices are numbers, and it automatically handles table length changes.",
+    "details": [
+        {
+            "comment": "This code snippet is iterating through the arguments (arg) using ipairs function, printing each key and value. The first argument (-1 for Lua, 0 for script name) will be matched as #1 arg1. Using ipairs is beneficial in cases where indices are numbers, and it automatically handles table length changes.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/arg-process.lua\":0-7",
+            "content": "for key ,value in ipairs(arg) do\n\tprint(key)\n\tprint(value)\n\t--done\n\t--had better use ipairs\n\t-- #1 match for arg1\n\t-- -1 for lua and 0 for script-name \nend"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "arg is selected from the table using select function and printed; iterates through the first absent integer in the table using ipairs and prints; able to scan through the table using pairs and prints; assigns value 5777 to key 2.5, prints; assigns values 233 and 334 to a and b respectively, then prints both values.",
+    "details": [
+        {
+            "comment": "arg is selected from the table using select function and printed; iterates through the first absent integer in the table using ipairs and prints; able to scan through the table using pairs and prints; assigns value 5777 to key 2.5, prints; assigns values 233 and 334 to a and b respectively, then prints both values.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/magic.lua\":0-10",
+            "content": "arg=select(4,1,2,3,4,5,6,7,8,9)\nprint(arg)\na={1,2,3,4}\nprint(ipairs(a))\n-- iterate to first absent integer.\nprint(pairs(a))\n-- able to scan through the table.\na[2.5]=5777\nprint(a[2.5])\na,b=233,334\nprint(a,b)"
+        }
+    ]
+}

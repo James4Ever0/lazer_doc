@@ -1,0 +1,10 @@
+{
+    "summary": "Iterates through a list, checks if consecutive elements are the same and splits the list accordingly.",
+    "details": [
+        {
+            "comment": "Iterates through a list, checks if consecutive elements are the same and splits the list accordingly.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/deepNine/spliter.py\":0-5",
+            "content": "#exam=[1,2,3,4,5,8,9,0,1,2,3]\n#exam0=[]\n#exam1=[]\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a variable 'r' as 1 and outputs the sum of r and 1 to the console. It then assigns the string \"s\" to variable 's', concatenates it with the sum of r and 1, and logs it to the console. Finally, it combines s, r, and 1 using various orderings and logs each result to the console.",
+    "details": [
+        {
+            "comment": "The code defines a variable 'r' as 1 and outputs the sum of r and 1 to the console. It then assigns the string \"s\" to variable 's', concatenates it with the sum of r and 1, and logs it to the console. Finally, it combines s, r, and 1 using various orderings and logs each result to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/magic.js\":0-5",
+            "content": "var r=1;\nconsole.log(r+1);\nvar s=\"s\";\nconsole.log(s+(r+1));\nconsole.log(s+r+1);\nconsole.log((s+r)+1);"
+        }
+    ]
+}

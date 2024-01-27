@@ -1,0 +1,15 @@
+{
+    "summary": "This Lua code defines a range iterator function that creates number or character ranges based on input parameters and returns values in either ascending or descending order.",
+    "details": [
+        {
+            "comment": "This Lua code defines a function that creates a range of numbers or characters based on input parameters. It includes functions for number and string ranges, with options for step size and data type. If any incorrect parameters are provided, it throws an error.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/range_module/init.lua\":0-51",
+            "content": "local NUMBER_EPSILON = 0.00000000000001\n-- create a table with values :from until :to\nlocal function number_range (from, to, step)\n\tlocal t = {}\n\tfor value = from, to, step do\n\t\tt[#t + 1] = value\n\tend\n\treturn t\nend\n-- create a table with values char of :from to char of :to\nlocal function string_range (from, to, step)\n\tlocal t = {}\n\tfor value = from:byte (), to:byte (), step do\n\t\tt[#t + 1] = string.char (value)\n\tend\n\treturn t\nend\n-- table holding the mapping from data type to creator function\nlocal creators = {\n\tnumber = number_range,\n\tstring = string_range\n}\n-- range function export\nreturn function (from, to, step)\n\tif not from then\n\t\terror (\"lua-range needs at least a start parameter (from)\")\n\tend\n\tlocal type_name = type (from)\n\tlocal range_creator = creators[type_name]\n\tif not range_creator then\n\t\terror (\"Unknown type \" .. type_name)\n\tend\n\t-- if no step width is specified default to 1\n\tif not step then\n\t\tstep = 1\n\tend\n\t-- if no upper bound is set, end where it started\n\tif not to then\n\t\tto = from\n\tend\n\t-- if upper bound is bigger than lower bound swap both"
+        },
+        {
+            "comment": "This code creates a range iterator function that returns values in either ascending or descending order based on the input \"from\" and \"to\" values. It first checks if \"from\" is less than \"to\", and if so, it reverses the order of the range. Then, it creates a closure/iterator using the \"range_creator\" function with the adjusted values. Finally, it returns a function that iterates through the range and returns values one by one.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/range_module/init.lua\":52-83",
+            "content": "\tlocal is_reversed = false\n\tif to < from then\n\t\tfrom, to = to, from\n\t\tis_reversed = true\n\tend\n\t-- create the closure/iterator\n\tlocal range = range_creator (from, to, step)\n\tlocal pos = 0\n\tlocal size = #range\n\tif is_reversed then\n\t\tlocal buffer = range\n\t\trange = {}\n\t\twhile #buffer > 0 do\n\t\t\ttable.insert (range, table.remove (buffer))\n\t\tend\n\tend\n\treturn function ()\n\t\tlocal r\n\t\tpos = pos + 1\n\t\tif pos <= size then\n\t\t\tr = range[pos]\n\t\telse\n\t\t\tr = nil\n\t\tend\n\t\treturn r\n\tend\nend"
+        }
+    ]
+}

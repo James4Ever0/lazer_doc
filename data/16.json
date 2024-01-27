@@ -1,0 +1,540 @@
+{
+    "1600": {
+        "file_id": 274,
+        "content": "# need preprocessing.\n# always remember that the name of our very fucking phone is of the root directory.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/showtime.py:155-156"
+    },
+    "1601": {
+        "file_id": 274,
+        "content": "These lines indicate that the code requires preprocessing and serves as a reminder for the name of the phone's root directory.",
+        "type": "comment"
+    },
+    "1602": {
+        "file_id": 275,
+        "content": "/multilingual/rockstar/connector/silver.py",
+        "type": "filepath"
+    },
+    "1603": {
+        "file_id": 275,
+        "content": "The code imports libraries, defines functions for CSV generation and file listing, and suggests professional tools. It creates a CSV using directory paths, SQLite database data, and lists, but has unclear variables and strong emotional language indicating dissatisfaction with its performance. The developer is concerned about simplification and efficiency, acknowledges potential issues with representation, and emphasizes the need for preprocessing.",
+        "type": "summary"
+    },
+    "1604": {
+        "file_id": 275,
+        "content": "import os, re, sqlite3\nimport pandas as pd\n#import sqlite3\n# remember that we need to merge relative path to absolute path once we find it.\n# you could keep something like UUID here.\ndef superskimmer(path):\n    path0=list(filter((lambda x:x!=\"\"),path.split(\"/\")))[:-1]  \n    p0=\"\" \n    for p in path0: \n        p0+=(\"/\"+p) \n    return p0\n# anything called DROP DATABASE here?\n# ALL YOUR BASE ARE BELONG TO US!\n# WHO YOU ARE! NOT WHERE YOU CAME FROM!\n# I DON'T GIVE A FUCK WHO YOU ARE!\n# hey! generate some fucking csv file!\n# and then load it with the fucking mechanism.\n# i want to know about it.\n# the structure could be rather simple.\n# each line starts with the fucking directory name.\n# and then the following subdirectory or other shits.\n# or simply doing this, make a simple distinction over shits.\n# store the fucking category along with the fucking shit.\n# we would make it even.\n# when the number is 0, it means directory.\n# when it is 1, it is a fucking file!\n# but how do we escape the fucking shit?\n# i mean if we use the delimiter as content inside the csv file!",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:1-29"
+    },
+    "1605": {
+        "file_id": 275,
+        "content": "The code is importing necessary libraries and defining a function `superskimmer` to generate a CSV file and load it using a mechanism. It handles directory and file distinctions, with 0 representing directories and 1 representing files. However, the code raises concerns about escaping delimiters in the CSV file content.",
+        "type": "comment"
+    },
+    "1606": {
+        "file_id": 275,
+        "content": "# we should make it simpler.\n# unless  you wanna die.\n# export it using profressional tools.\n# we should make things clearer\n##################################################################################\n#                                                                                #\n# EACH LINE IS SIMPLY A ONE_LINER REPRESENTING ONE SINGLE DIRETORY_FILE HIERACHY #\n#                                                                                #\n##################################################################################\n# which make things much simpler.\n# you could use pandas to make this happen.\n# remember that it could be trinary or binary here.\n# if you want binary, then you should export two files.\n# if you want trinary, then you should export only one single file but with an extra column.\n# anyway, you decice which one to be stored.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:30-46"
+    },
+    "1607": {
+        "file_id": 275,
+        "content": "This code appears to be a multilingual connector for exporting data in binary or trinary formats. It suggests using professional tools and libraries like pandas, and highlights the importance of dictionary objects for directory-like storage and list for file storage. The code also mentions considering numeric and alphabetical differentiation or metatable constraints for organization.",
+        "type": "comment"
+    },
+    "1608": {
+        "file_id": 275,
+        "content": "\"\"\"\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    #superdictionary={}\n    # at the beginning of the fucking thing we wanna to make things absolutely clear.\n#    maximum_depth=2\n#    depth_list=[]\n    superlist=[]\n    name_of_root=os.path.basename(startpath)\n    # this is the list that we are gonna to return.\n    # to change this into some fucking csv file is as easy as shit.\n    for root, dirs, files in os.walk(startpath):\n        #level = root.replace(startpath, '').count(os.sep)\n        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        #indent = ' ' * 4 * (level)\n#       print(level)\n#        print(\"-----first mark-----\")\n        #print(os.path.basename(root))\n        #print(root)\n        # it seems to be a string.\n        # oh never forget the locate database.\n        # the base is presumed.\n        # if you want to expand the filesystem tree, remember to do something called the root-finding.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:47-72"
+    },
+    "1609": {
+        "file_id": 275,
+        "content": "The code defines a function 'list_files' that utilizes the os.walk() method to iterate through the files and directories within a given start path. It creates a superlist to store the file paths and names, and uses indentation to represent levels in the file hierarchy. The depth of the walk is not explicitly defined but can be controlled by adjusting the arguments passed to os.walk().",
+        "type": "comment"
+    },
+    "1610": {
+        "file_id": 275,
+        "content": "        # you need to make sure which level is the first common place for all.\n        # usually this can be done by checking the pwd link.\n        # and it is fucking damn easy.\n        # but what should be done after this?\n        # how could you do this then?\n        # i suggest you to use the full fucing path.\n        # though it will be tedious, you can always get the joy out of shit.\n        # and it could be reusable.\n        # never fucking mind.\n        # i can drop database every fucking day.\n        # i will deal with it later on.\n        # the first priority is this fucking unicode standard.\n        rhino=re.sub(startpath,\"\",root).split(\"/\")\n        rhino[0]=name_of_root\n        crakn=[os.path.basename(root),0,len(rhino[:-1])]\n        try:\n            crakn.append(rhino[:-1][-1])\n        except:\n#            pass\n# this is the root dir.\n            crakn.append(\"\")\n        superlist.append(crakn)\n#        depth_list.append(len(crakn)-1)\n        # you can decide the comma values by the maximum depth.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:73-96"
+    },
+    "1611": {
+        "file_id": 275,
+        "content": "The code aims to determine the first common level among file paths and create a list of directory information. It suggests using the full path for accuracy, but acknowledges potential difficulties in implementation. The resulting superlist contains each path's directory structure information, with the depth determined by the maximum depth encountered.",
+        "type": "comment"
+    },
+    "1612": {
+        "file_id": 275,
+        "content": "        # to make it way simpler than anything, we append the directory after the type identifier..\n        #print(\"0\")\n        # first we make sure our base directory is connected.\n        # next we make the files under it get connected.\n        #print('{}{}/ {}'.format(indent, os.path.basename(root),level+1))\n#        print(\"-----first mark-----\")\n        #subindent = ' ' * 4 * (level + 1)\n        for f in files:\n#            print(\"-----second mark-----\")\n            grakn=[f,1,len(rhino),rhino[-1]]\n            superlist.append(grakn)\n#            depth_list.append(len(grakn))\n#    superlist[0]=sorted(depth_list,reverse=True)[0]\n#    superlist[1]=depth_list\n    return superlist\n\"\"\"\n#            print(\"-----second mark-----\")\n            #print('{}{} {}'.format(subindent, f,level+1))\n#startpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/unicode-table-data\"\n# when run without the trailing slash, the root directory name will simply be printed out.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:97-119"
+    },
+    "1613": {
+        "file_id": 275,
+        "content": "This code is appending directory to the type identifier and ensuring all files under the base directory are connected. It creates a list of file paths with their respective depth levels, sorts the depth levels in reverse order, and returns the sorted list along with the original unsorted list. The code assumes a specific start path for the directories.",
+        "type": "comment"
+    },
+    "1614": {
+        "file_id": 275,
+        "content": "# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\n# startpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# Keep It Simple Stupid.\n# Never Overestimate the Understanding Ability of Computer.\n# Never Ever Think that Computer May Get Tired of Repetitive Tasks.\n# this time we have integrated the fucking slash here.\n\"\"\"\nomega=list_files(startpath)\n#print(omega)\nfor nintendo in range(len(omega)):\n    omega[nintendo].insert(0,nintendo)\n\"\"\"\nsadist=[[],[],[],[]]\n\"\"\"\nmasochist=[]\n\"\"\"\nconn = sqlite3.connect('tits.db')\ncursor = conn.execute(\"SELECT id, name, type,depth,parent ,miscellaneous FROM subdir ORDER BY depth\")\nterminator=[]\n# the id starts from zero.\nfor list0 in cursor:\n    sugar=list(list0[:3])\n    newbie=list0[4]\n    honker=list0[3]\n    dreado=list0[5]\n    if newbie!=None:\n        cur=conn.execute(\"SELECT id,name,miscellaneous FROM subdir WHERE name='{}' AND depth={};\".format(newbie,honker-1))\n        for shit in cur:\n            if shit[2]==superskimmer(dreado):",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:120-151"
+    },
+    "1615": {
+        "file_id": 275,
+        "content": "This code is connecting to a SQLite database named \"tits.db\" and retrieving data from the \"subdir\" table, ordering by depth. It then iterates through each row, extracting specific columns and possibly checking if any subdirectories have the same type as specified parameters. The extracted information is used to populate lists \"omega\", \"sadist\", and \"masochist\". The code seems to be part of a larger program with undefined variables like \"superskimmer\" and \"startpath0\".",
+        "type": "comment"
+    },
+    "1616": {
+        "file_id": 275,
+        "content": "                terminator.append(sugar+[shit[0]])\n            else:\n                pass\n    else:\n        terminator.append(sugar+[None])\n#print(terminator)\n# the terminator is ready here.\n# it is great.\n# but we need to connvert this into csv file.\n# the number is 4 here.\n#sql = (\"CREATE INDEX index0 ON subdir (name);\")\n# sql0 = (\"CREATE INDEX index1 ON subdir (id);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\n#conn.execute(sql)\n#conn.execute(sql1)\n # you shall not execute it every time.\n\"\"\"conn.execute('''CREATE TABLE subdir\n (id INT PRIMARY KEY     NOT NULL,\nname           TEXT    NOT NULL,\n type         TINYINT     NOT NULL,\n depth TINYINT NOT NULL,\nparent TEXT );''')\"\"\"\n\"\"\"\nfor a,b,c,d,e in omega:\n    if e!=\"\":\n        conn.execute(\"INSERT INTO subdir (id,name,type,depth,parent)  VALUES ( {},'{}',{},{},'{}');\".format(a,b,c,d,e))\n    else:\n        conn.execute(\"INSERT INTO subdir (id,name,type,depth)  VALUES ( {},'{}',{},{});\".format(a,b,c,d))\n\"\"\"\n# do not scan the one with depth 0.\n#conn.commit()\nconn.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:152-189"
+    },
+    "1617": {
+        "file_id": 275,
+        "content": "This code creates a SQLite database by defining and executing CREATE TABLE and INSERT statements. It appends the terminator list, based on certain conditions, and then inserts the values into the \"subdir\" table using the omega iterator. Finally, it commits the changes to the database and closes the connection.",
+        "type": "comment"
+    },
+    "1618": {
+        "file_id": 275,
+        "content": "\"\"\"\nalpha=omega[0]\nprint(alpha)\ngamma=omega[1]\nprint(gamma)\"\"\"\n# things are now getting funny.\n# i wrote shits.\n# my code sucks, and it is fucking perfect.\n#\n#for m in range(alpha):\n#    masochist.append([\"\"]*(len(omega)-2))\n#for r in range(len(omega)-2):\n#    beta=omega[r+2]\n#    sigma=len(beta)\n#    if sigma!=0:\n#        for d in range(sigma):\n#            beta+=[\"\"]\n#    sadist.append(beta)\nsick={}\n#print(terminator)\nfor l in range(4):\n    sadist[l]+=[\"\"]*len(terminator)\n#for l in range(4):\n    for k in range(len(terminator)):\n        sadist[l][k]=terminator[k][l]\n    sick[\"{}{}\".format(\"key\",l)]=sadist[l]\n#print (sick)\n#numeric value preserved. don't even look.\ndf = pd.DataFrame(sick)\n# an equivalent approach will be depth + parentname.\n# pandas is way too fucking slow.\n# keep it as a fucking habit?\n# any alternatives?\nthe_real_shit=df.to_csv(index=False)\n#print(the_real_shit)\nfuckyou=open(\"gotcha.csv\",\"w+\")\nfuckyou.write(the_real_shit)\nfuckyou.close()\n    # you wanna to do this in pandas?\n    # better convert this!\n# print(\"\\n----[the fucking divide line]----\\n\")",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:191-236"
+    },
+    "1619": {
+        "file_id": 275,
+        "content": "The code reads a list (omega) and creates two empty lists, masochist and sadist. Then it iterates over the list to add an empty string for each missing element in omega. The values are then appended to a dictionary, sick, with keys formatted as \"key\" followed by the index. Finally, the dictionary is converted to a CSV using pandas and saved in a file called \"gotcha.csv.\" The code seems to have a strong emotional language indicating potential frustration or dissatisfaction with its performance.",
+        "type": "comment"
+    },
+    "1620": {
+        "file_id": 275,
+        "content": "# list_files(startpath0)\n#print(\"\\n----[the fucking divide line]----\\n\")\n# make index on those that change the most.\n#print(os.walk(startpath))\n#print(\"\\n----[the fucking divide line]----\\n\")\n# print(list(os.walk(startpath)))\n# maybe the representation sucks so i cannot take care of simplification and efficiency at the same time.\n# if exists, my machine will integrate it.\n# you could integrate the root directory finding process into the cypher text.\n# tuples inside.\n# this is really useless.\n# i do not think this is necessary to print it out directly.\n# need preprocessing.\n# always remember that the name of our very fucking phone is of the root directory.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/silver.py:238-255"
+    },
+    "1621": {
+        "file_id": 275,
+        "content": "This code is involved in file management, using the os.walk function to traverse a given start path and generate an index of the files that change most frequently. The developer seems to be concerned about simplification and efficiency, but acknowledges potential issues with representation. They mention the possibility of integrating the root directory finding process into the cypher text and emphasize the need for preprocessing.",
+        "type": "comment"
+    },
+    "1622": {
+        "file_id": 276,
+        "content": "/multilingual/rockstar/connector/ss.py",
+        "type": "filepath"
+    },
+    "1623": {
+        "file_id": 276,
+        "content": "This code reads a CSV file named \"gamma.csv\", removes newline characters, and for each line in the file it gets synonyms from WordNet and writes them into another CSV file called \"sigma.csv\" excluding the original word itself. It handles exceptions during processing.",
+        "type": "summary"
+    },
+    "1624": {
+        "file_id": 276,
+        "content": "from nltk.corpus import wordnet as wn\nimport re\ndef groupy(k0):\n    w=wn.synsets(k0)\n    r=[]\n    for w0 in w:\n        r.append(w0.lemma_names())\n    return r\na=open(\"gamma.csv\",\"r\")\nb=open(\"sigma.csv\",\"w+\")\nfor k in a.readlines():\n    k=re.sub(\"\\n\",\"\",k)\n    try:\n        g=groupy(k)\n        for g0 in g:\n            for g1 in g0:\n                if g1==k:\n                    pass\n                else:\n                    b.write(g1+\",\"+k+\"\\n\")\n    except:\n        pass\nb.write(\"\\n\")\na.close()\nb.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/ss.py:1-29"
+    },
+    "1625": {
+        "file_id": 276,
+        "content": "This code reads a CSV file named \"gamma.csv\", removes newline characters, and for each line in the file it gets synonyms from WordNet and writes them into another CSV file called \"sigma.csv\" excluding the original word itself. It handles exceptions during processing.",
+        "type": "comment"
+    },
+    "1626": {
+        "file_id": 277,
+        "content": "/multilingual/rockstar/connector/ss0.py",
+        "type": "filepath"
+    },
+    "1627": {
+        "file_id": 277,
+        "content": "The code utilizes NLTK for preprocessing, removes stopwords and finds synonyms. It processes these synonyms for definitions and examples, extracts names from synsets, stores connections in CSV files, handles empty lines, writes to multiple files with error handling, and includes additional write operations that are commented out.",
+        "type": "summary"
+    },
+    "1628": {
+        "file_id": 277,
+        "content": "from nltk.stem.snowball import SnowballStemmer\nfrom nltk.corpus import wordnet, stopwords\nfrom nltk.tokenize import word_tokenize\nimport re\nlist_stopWords=list(set(stopwords.words('english')))\ndef RemoveStopwordsReturnList(example_text):\n    list_words=word_tokenize(re.sub(r\"[^a-z _]\",\" \",example_text.lower()))\n#    list_words=word_tokenize(example_text)\n    return [w for w in list_words if not w in list_stopWords]\ndef EnglishStemmer(quack):\n    return SnowballStemmer(\"english\").stem(quack)\ndef ReturnSynsets(word):\n    return wordnet.synsets(word)\ndef ProcessWordList(list0):\n    k0=[]\n    for k in list0:\n        k0+=ReturnSynsets(k)\n    return set(k0)\ndef ReturnExampleWithDefinition(SS):\n    return [SS.definition(),SS.examples()]\ndef ReturnNameWithConnector(SS):\n    return [SS.name(),re.match(r\"^[^\\.]+\",SS.name())[0]]\ndef UberCommando(SS):\n    red=ReturnExampleWithDefinition(SS)\n    rnc=ReturnNameWithConnector(SS)\n    red0=red[0]\n    def runoob(red0):\n        r1=[]\n        for r0 in RemoveStopwordsReturnList(red0):",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/ss0.py:1-37"
+    },
+    "1629": {
+        "file_id": 277,
+        "content": "This code utilizes the NLTK library to remove stopwords, stem English words, and find synonyms for a given word list. It then processes these synonyms, retrieves definitions and examples for each synonym, and extracts the name without dots from the synset object. The function \"runoob\" takes the definition, removes stopwords from it, and returns the processed result.",
+        "type": "comment"
+    },
+    "1630": {
+        "file_id": 277,
+        "content": "            r1.append(EnglishStemmer(r0))\n        return set(r1)\n    r1=runoob(red0)\n    red1=red[1]\n    r2=[]\n    for red2 in red1:\n        r2.append(runoob(red2))\n    return ([r1,r2],rnc)\n# use readlines to create a list.\n# this time we write results into csv files.\na=open(\"gamma.csv\",\"r\")\nb=open(\"delta.csv\",\"w+\")\nc=open(\"psi.csv\",\"w+\")\nd=open(\"epsilon.csv\",\"w+\")\n#try:\nwordlist=[]\nfor p in a.readlines():\n#    print (p)\n    p=re.sub(\"\\n\",\"\",p)\n#    p0=steam(p)\n    if p==\"\":\n        pass\n    else:\n        wordlist.append(p)\nwordlist=set(wordlist)\na.close()\nsynet=ProcessWordList(wordlist)\nsynet0=[]\nfor s0 in synet:\n    synet0.append(UberCommando(s0))\nfor s1 in synet0:\n    s2=s1[0]\n    # definition and example connections.\n    s3=s1[1]\n    # namespace connections.\n#    b.write(s3[0])\n    if s2[0]!=\"\":\n        for sk2 in s2[0]:\n            b.write(s3[0]+\",\"+sk2+\"\\n\")\n#    b.write(\"\\n\")\n    # this for definition\n#    c.write(s3[0])\n        for sk3 in s2[1]:\n            for sk4 in sk3:\n                c.write(s3[0]+\",\"+sk4+\"\\n\")\n    else:",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/ss0.py:38-88"
+    },
+    "1631": {
+        "file_id": 277,
+        "content": "This code reads lines from \"gamma.csv\" and stores them in a list called wordlist. It removes empty lines and converts the list to a set. Then, it processes the set of words with ProcessWordList and UberCommando functions, storing the results in lists synet0. The code then writes definition connections to \"delta.csv\", example connections to \"psi.csv\", and namespace connections to \"epsilon.csv\". It handles empty lines by skipping them and separates each connection with commas and newlines.",
+        "type": "comment"
+    },
+    "1632": {
+        "file_id": 277,
+        "content": "        pass\n#    c.write(\"\\n\")\n    # this for examples\n    d.write(s3[0]+\",\"+s3[1]+\"\\n\")\n    # this for namespace\nb.write(\"\\b\")\nc.write(\"\\b\")\nd.write(\"\\b\")\nimport time\ntime.sleep(5)\nb.close()\nc.close()\nd.close()\n#        print (p0)\n#        try:\n#            b.write(p0+\",\"+p+\"\\n\")\n#        except:\n#            pass\n#except:\n#    pass\n#b.write(\"\\b\")\n#a.close()\n#b.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/ss0.py:89-114"
+    },
+    "1633": {
+        "file_id": 277,
+        "content": "This code writes values to three different files, adds backspace characters, and waits 5 seconds before closing the files. It also includes optional error handling and potential additional write operations that are commented out.",
+        "type": "comment"
+    },
+    "1634": {
+        "file_id": 278,
+        "content": "/multilingual/rockstar/connector/the_format.py",
+        "type": "filepath"
+    },
+    "1635": {
+        "file_id": 278,
+        "content": "This code initializes an empty dictionary, \"sick\", and then iterates through a range of 6 values. Inside the loop, it assigns each value to a key formed by formatting the current index with the string \"hello\". Finally, it prints the resulting dictionary.",
+        "type": "summary"
+    },
+    "1636": {
+        "file_id": 278,
+        "content": "sick={}\nfor i in range(6):\n    sick[\"{}{}\".format(i,\"hello\")]=i\nprint(sick)",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/the_format.py:1-4"
+    },
+    "1637": {
+        "file_id": 278,
+        "content": "This code initializes an empty dictionary, \"sick\", and then iterates through a range of 6 values. Inside the loop, it assigns each value to a key formed by formatting the current index with the string \"hello\". Finally, it prints the resulting dictionary.",
+        "type": "comment"
+    },
+    "1638": {
+        "file_id": 279,
+        "content": "/multilingual/rockstar/connector/whatif.py",
+        "type": "filepath"
+    },
+    "1639": {
+        "file_id": 279,
+        "content": "This code segment generates a CSV file containing directory-file hierarchies using os.walk() and discusses potential challenges and database operations under the root directory. It emphasizes maintaining indentation, keeping code simple, considering computer limitations, and avoiding repetitive tasks.",
+        "type": "summary"
+    },
+    "1640": {
+        "file_id": 279,
+        "content": "import os\nimport re\n# hey! generate some fucking csv file!\n# and then load it with the fucking mechanism.\n# i want to know about it.\n# the structure could be rather simple.\n# each line starts with the fucking directory name.\n# and then the following subdirectory or other shits.\n# or simply doing this, make a simple distinction over shits.\n# store the fucking category along with the fucking shit.\n# we would make it even.\n# when the number is 0, it means directory.\n# when it is 1, it is a fucking file!\n# but how do we escape the fucking shit?\n# i mean if we use the delimiter as content inside the csv file!\n# we should make it simpler.\n# unless  you wanna die.\n# export it using profressional tools.\n# we should make things clearer\n##################################################################################\n#                                                                                #\n# EACH LINE IS SIMPLY A ONE_LINER REPRESENTING ONE SINGLE DIRETORY_FILE HIERACHY #\n#                                                                                #",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/whatif.py:1-23"
+    },
+    "1641": {
+        "file_id": 279,
+        "content": "This code is generating a CSV file to store directory-file hierarchies, where each line represents a single hierarchy. The structure includes a category (0 for directory, 1 for file) and content, with a focus on escaping delimiters in the CSV file. Professional tools may be used for exporting it.",
+        "type": "comment"
+    },
+    "1642": {
+        "file_id": 279,
+        "content": "##################################################################################\n# which make things much simpler.\n# you could use pandas to make this happen.\n# remember that it could be trinary or binary here.\n# if you want binary, then you should export two files.\n# if you want trinary, then you should export only one single file but with an extra column.\n# anyway, you decice which one to be stored.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    #superdictionary={}\n    superlist=[]\n    name_of_root=os.path.basename(startpath)\n    # this is the list that we are gonna to return.\n    # to change this into some fucking csv file is as easy as shit.\n    for root, dirs, files in os.walk(startpath):\n        #level = root.replace(startpath, '').count(os.sep)",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/whatif.py:24-41"
+    },
+    "1643": {
+        "file_id": 279,
+        "content": "This code uses os.walk() to list all files in a directory and its subdirectories, storing them either as a dictionary or a list depending on the desired format (binary, trinary). The walk function returns the root directory, subdirectories, and file names at each level, which are then processed to create the final output.",
+        "type": "comment"
+    },
+    "1644": {
+        "file_id": 279,
+        "content": "        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        #indent = ' ' * 4 * (level)\n#       print(level)\n        print(\"-----first mark-----\")\n        #print(os.path.basename(root))\n        #print(root)\n        # it seems to be a string.\n        # oh never forget the locate database.\n        # the base is presumed.\n        # if you want to expand the filesystem tree, remember to do something called the root-finding.\n        # you need to make sure which level is the first common place for all.\n        # usually this can be done by checking the pwd link.\n        # and it is fucking damn easy.\n        # but what should be done after this?\n        # how could you do this then?\n        # i suggest you to use the full fucing path.\n        # though it will be tedious, you can always get the joy out of shit.\n        # and it could be reusable.\n        # never fucking mind.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/whatif.py:42-63"
+    },
+    "1645": {
+        "file_id": 279,
+        "content": "This code block seems to be commenting on the process of finding the root directory for a filesystem tree, suggesting the use of full paths for analysis. It also mentions using the pwd link to determine the first common level and cautions about potential challenges in the process.",
+        "type": "comment"
+    },
+    "1646": {
+        "file_id": 279,
+        "content": "        # i can drop database every fucking day.\n        # i will deal with it later on.\n        # the first priority is this fucking unicode standard.\n        rhino=re.sub(startpath,\"\",root).split(\"/\")\n        rhino[0]=name_of_root\n        print([os.path.basename(root),0]+rhino[:-1])\n        # to make it way simpler than anything, we append the directory after the type identifier..\n        #print(\"0\")\n        # first we make sure our base directory is connected.\n        # next we make the files under it get connected.\n        #print('{}{}/ {}'.format(indent, os.path.basename(root),level+1))\n        print(\"-----first mark-----\")\n        #subindent = ' ' * 4 * (level + 1)\n        for f in files:\n            print(\"-----second mark-----\")\n            print([f,1]+rhino)\n            print(\"-----second mark-----\")\n            #print('{}{} {}'.format(subindent, f,level+1))\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\n# when run without the trailing slash, the root directory name will simply be printed out.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/whatif.py:64-85"
+    },
+    "1647": {
+        "file_id": 279,
+        "content": "The code is handling a database operation and organizing files under the root directory. It replaces the starting path, appends directory after type identifier, prints file names with their level of indentation, and identifies two important marks in the process.",
+        "type": "comment"
+    },
+    "1648": {
+        "file_id": 279,
+        "content": "# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\n# startpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# Keep It Simple Stupid.\n# Never Overestimate the Understanding Ability of Computer.\n# Never Ever Think that Computer May Get Tired of Repetitive Tasks.\n# this time we have integrated the fucking slash here.\nlist_files(startpath)\n# print(\"\\n----[the fucking divide line]----\\n\")\n# list_files(startpath0)\nprint(\"\\n----[the fucking divide line]----\\n\")\nprint(os.walk(startpath))\nprint(\"\\n----[the fucking divide line]----\\n\")\nprint(list(os.walk(startpath)))\n# you could integrate the root directory finding process into the cypher text.\n# tuples inside.\n# this is really useless.\n# i do not think this is necessary to print it out directly.\n# need preprocessing.\n# always remember that the name of our very fucking phone is of the root directory.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/whatif.py:86-113"
+    },
+    "1649": {
+        "file_id": 279,
+        "content": "This code segment compares two methods of listing files in a directory and demonstrates the importance of maintaining indentation. It emphasizes keeping code simple, considering computer limitations, and avoiding repetitive tasks. The code also highlights the importance of integrating root directory finding into the cryptic text and points out unnecessary printed output that requires preprocessing.",
+        "type": "comment"
+    },
+    "1650": {
+        "file_id": 280,
+        "content": "/multilingual/rockstar/coref-v2/README",
+        "type": "filepath"
+    },
+    "1651": {
+        "file_id": 280,
+        "content": "This code indicates the decision to use brute force approach in a Natural Language Processing (NLP) task, emphasizing that there is no specific strategy and all options are randomized.",
+        "type": "summary"
+    },
+    "1652": {
+        "file_id": 280,
+        "content": "I DECIDE TO BRUTE FORCE IT. [TIMELINE!]\nTHERE IS NO MUCH STRATEGY IN NLP. [TIMELINE!]\nNO PRESUMPTION. ALL RANDOMIZED. [TIMELINE!]",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/README:1-3"
+    },
+    "1653": {
+        "file_id": 280,
+        "content": "This code indicates the decision to use brute force approach in a Natural Language Processing (NLP) task, emphasizing that there is no specific strategy and all options are randomized.",
+        "type": "comment"
+    },
+    "1654": {
+        "file_id": 281,
+        "content": "/multilingual/rockstar/coref-v2/address.py",
+        "type": "filepath"
+    },
+    "1655": {
+        "file_id": 281,
+        "content": "The code retrieves data from an SQLite database, creates indexes for improved performance, and groups results into lists before committing changes. It fails to create a complete list due to missing conditions or print statements.",
+        "type": "summary"
+    },
+    "1656": {
+        "file_id": 281,
+        "content": "import sqlite3\n# this is authority.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\nblitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/address.py:1-39"
+    },
+    "1657": {
+        "file_id": 281,
+        "content": "The code establishes a connection with an SQLite database and executes queries to retrieve data from the \"subdir\" table. It then stores the results in a list called \"blitz\", excluding the first element of each retrieved tuple. The code also creates indexes on certain columns (e.g., \"pos\", \"uuid\", \"depth\") for improved query performance. Finally, it commits changes to the database and closes the connection.",
+        "type": "comment"
+    },
+    "1658": {
+        "file_id": 281,
+        "content": "print(blitz0)\nblitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nprint(blitz1)\nblitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\nprint(blitz2)\nblitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nprint(blitz3)\nblitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/address.py:40-70"
+    },
+    "1659": {
+        "file_id": 281,
+        "content": "This code creates sets of different values from a list called 'blitz' and prints them. It also connects to a SQLite database and prepares some index creation statements. The purpose is to identify and relate objects based on UUIDs, making searches more efficient by indexing specific attributes (pos, uuid, depth) for faster retrieval of data.",
+        "type": "comment"
+    },
+    "1660": {
+        "file_id": 281,
+        "content": "#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\nblitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]\n#print(blitz5)\n# sentence.\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/address.py:71-104"
+    },
+    "1661": {
+        "file_id": 281,
+        "content": "This code is creating and executing SQL statements to create indexes on a \"subdir\" table. It then connects to a database called \"fuckyou.db\". The code then creates four lists, blitz5, blitz6, blitz7, and blitz8, by grouping data from the blitz list based on specific conditions. Finally, it creates another list, blitz9, but it seems incomplete as there is no associated condition or print statement.",
+        "type": "comment"
+    },
+    "1662": {
+        "file_id": 282,
+        "content": "/multilingual/rockstar/coref-v2/authentic.py",
+        "type": "filepath"
+    },
+    "1663": {
+        "file_id": 282,
+        "content": "The code imports necessary libraries, reads a log file, processes and filters data, connects to a SQLite database, and manipulates lists using list comprehensions. Purpose remains unclear without further context.",
+        "type": "summary"
+    },
+    "1664": {
+        "file_id": 282,
+        "content": "import sqlite3\n#it0, it=None, None\nwith open(\"SOB.log\",\"r\") as sadist:\n#    global it\n#    global it0\n    it =list(filter((lambda x:x!=\"\"), sadist.read().split(\"\\n\")))\n    it0 =[[y for y in list(filter((lambda x:x!=\"\"),k.split(\" \")))] for k in it]\n    # two dimentional.\nprint(\"initial commit\")\nprint(it0)\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\",\"fuck\",\"fuck\"]\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/authentic.py:1-31"
+    },
+    "1665": {
+        "file_id": 282,
+        "content": "The code imports sqlite3, reads a log file, filters out empty lines and spaces, stores the data in two dimensions for easier processing, and initializes a function that prints messages using a list of strong words. It also mentions creating indexes on a table called \"subdir\" but does not execute these SQL statements. The purpose is not clear from this code snippet.",
+        "type": "comment"
+    },
+    "1666": {
+        "file_id": 282,
+        "content": "#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\n#genius()\n# normal summarization.\nblitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )\n#print(blitz0)\n#genius()\nblitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\n#print(blitz1)\n#genius()\nblitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\n#print(blitz2)\n#genius()\nblitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\n#print(blitz3)\n#genius()\nblitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/authentic.py:33-77"
+    },
+    "1667": {
+        "file_id": 282,
+        "content": "This code connects to a SQLite database, retrieves data from the \"subdir\" table, and stores the second element of each row in a list called blitz. It then creates sets containing elements from specific positions within each row.",
+        "type": "comment"
+    },
+    "1668": {
+        "file_id": 282,
+        "content": "# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\ngenius()\n\"\"\"blitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/authentic.py:78-108"
+    },
+    "1669": {
+        "file_id": 282,
+        "content": "This code is creating SQLite database connections and indexes for a 'subdir' table, potentially to improve search efficiency. The indexing is based on 'pos', 'uuid', and 'depth' columns. It also includes the creation of an undefined function called 'genius()'. Additionally, there are two lists, 'blitz4' and 'blitz5', being manipulated with list comprehensions to filter and group data based on certain conditions. The exact purpose of this code remains unclear without further context.",
+        "type": "comment"
+    },
+    "1670": {
+        "file_id": 282,
+        "content": "print(blitz5)\"\"\"\n# sentence.\ngenius()\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\ngenius()\nprint(it0)\ngenius()\nprint(it0[0])\ngenius()\nprint(list(filter((lambda x: x[0][1] in it0[1]),blitz6)))\n\"\"\"\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\ngenius()\n\"\"\"\ngenius()\nprint(list(filter((lambda x: x[0][1] in it0[0]),blitz6)))\n\"\"\"\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\ngenius()\n\"\"\"\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()\n# from general to specific to general.",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/authentic.py:109-149"
+    },
+    "1671": {
+        "file_id": 282,
+        "content": "This code seems to be processing text data by grouping entities based on their position of speech (POS) and checking if a rule is applied. It also prints various lists for debugging purposes. The final purpose or outcome of this process is unclear as the code snippet ends abruptly without any conclusion or further instructions. The code includes several print statements, lambda functions, and list comprehensions to generate and filter lists.",
+        "type": "comment"
+    },
+    "1672": {
+        "file_id": 283,
+        "content": "/multilingual/rockstar/coref-v2/diploma.py",
+        "type": "filepath"
+    },
+    "1673": {
+        "file_id": 283,
+        "content": "The code establishes a SQLite connection, retrieves and manipulates data from the \"subdir\" table, creates unique values, and performs groupings before printing results. The purpose of exporting a UUID to a log file is unclear and not executed.",
+        "type": "summary"
+    },
+    "1674": {
+        "file_id": 283,
+        "content": "import sqlite3\n# this is authority.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\nblitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/diploma.py:1-39"
+    },
+    "1675": {
+        "file_id": 283,
+        "content": "The code creates a SQLite connection, executes index creation statements (not executed in provided code), and retrieves data from the \"subdir\" table. It then prints each row's contents, appends it to a list, and commits the changes. Finally, it closes the connection and generates a set of unique values from a specific column of the retrieved rows.",
+        "type": "comment"
+    },
+    "1676": {
+        "file_id": 283,
+        "content": "print(blitz0)\nblitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nprint(blitz1)\nblitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\nprint(blitz2)\nblitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nprint(blitz3)\nblitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/diploma.py:40-70"
+    },
+    "1677": {
+        "file_id": 283,
+        "content": "This code creates sets of unique objects from a list called blitz, then prints them. It also mentions creating SQLite indices for efficient searching and using UUIDs to identify and relate objects. The code connects to a database named \"fuckyou.db\" and performs index operations without actually executing the SQL queries.",
+        "type": "comment"
+    },
+    "1678": {
+        "file_id": 283,
+        "content": "#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\nblitz5=[[y for y in blitz if y[2]==x] for x in blitz0]\n#print(blitz5)\n# sentence.\nblitz6=[[y for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\nblitz7=[[y for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\nblitz8=[[y for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\nblitz9=[[y for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/diploma.py:71-104"
+    },
+    "1679": {
+        "file_id": 283,
+        "content": "The code creates indexes on a SQLite database, performs several groupings based on different conditions, and prints the resulting blitz lists. It also mentions exporting a UUID to a log file but does not execute the action. The purpose is unclear, and the code seems disorganized with comments that do not directly relate to the specific actions being performed.",
+        "type": "comment"
+    },
+    "1680": {
+        "file_id": 284,
+        "content": "/multilingual/rockstar/coref-v2/fibonacci.py",
+        "type": "filepath"
+    },
+    "1681": {
+        "file_id": 284,
+        "content": "This code creates an SQLite database, defines a function to increment counters, executes SELECT queries and processes results for creating relations, and includes potential issue warnings while operating on lists of data. It prints sublists, calls genius() function, exports UUIDs if needed, and writes structured data to \"hello.log\".",
+        "type": "summary"
+    },
+    "1682": {
+        "file_id": 284,
+        "content": "import sqlite3\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\"]\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/fibonacci.py:1-29"
+    },
+    "1683": {
+        "file_id": 284,
+        "content": "The code is creating an SQLite database named \"fuckyou.db\" and importing the sqlite3 module. It defines a function genius() that increments a counter, prints a separator string, but does not return anything. The code also includes comments about creating indexes on the \"subdir\" table using different columns (POS, UUID, and depth), although it doesn't execute those statements. Finally, it executes a SELECT query on the \"subdir\" table without doing anything with the results.",
+        "type": "comment"
+    },
+    "1684": {
+        "file_id": 284,
+        "content": "blitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\n#genius()\nblitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )\nprint(blitz0)\n#genius()\nblitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nprint(blitz1)\n#genius()\nblitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\nprint(blitz2)\n#genius()\nblitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nprint(blitz3)\n#genius()\nblitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/fibonacci.py:31-66"
+    },
+    "1685": {
+        "file_id": 284,
+        "content": "This code retrieves data from a database, prints and stores specific elements of each tuple in the result set, then creates sets of these elements. It demonstrates indexing and set operations on similar objects identified by UUIDs to create relations.",
+        "type": "comment"
+    },
+    "1686": {
+        "file_id": 284,
+        "content": "#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\ngenius()\nblitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]\nprint(blitz5)\n# sentence.\ngenius()\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\ngenius()\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\ngenius()\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/fibonacci.py:68-104"
+    },
+    "1687": {
+        "file_id": 284,
+        "content": "This code snippet creates SQLite indices and performs various operations on lists of data. It connects to the database, executes queries for creating indices based on specific attributes (uuid, depth, pos), prints different sublists from a main list (blitz) based on specific conditions, and ultimately, it appears to be working with data related to sentence parsing or text processing.",
+        "type": "comment"
+    },
+    "1688": {
+        "file_id": 284,
+        "content": "print(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\ngenius()\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/fibonacci.py:105-117"
+    },
+    "1689": {
+        "file_id": 284,
+        "content": "The code snippet prints the values of blitz8, then calls a function genius(). It creates a new list called blitz9 by iterating through blitz, checking if the 5th element matches x, and storing the corresponding values. After printing blitz9, it again calls genius(). The code also includes some comments suggesting potential issues, exporting a UUID in case of forgetfulness, and writing structured data to a file named \"hello.log\".",
+        "type": "comment"
+    },
+    "1690": {
+        "file_id": 285,
+        "content": "/multilingual/rockstar/coref-v2/kneelDown.sh",
+        "type": "filepath"
+    },
+    "1691": {
+        "file_id": 285,
+        "content": "This script filters and extracts specific lines from the \"POS.log\" file based on keywords (\"noun\", \"verb\", \"word\") and saves them to separate files (Kneel0.log, Kneel1.log, Kneel2.log) respectively.",
+        "type": "summary"
+    },
+    "1692": {
+        "file_id": 285,
+        "content": "#!/bin/bash\ncat POS.log | grep \" noun\" | grep -E -o \"^[^ ]+\" > Kneel0.log\ncat POS.log | grep \" word\" | grep -E -o \"^[^ ]+\" > Kneel1.log\ncat POS.log | grep \" verb\" | grep -E -o \"^[^ ]+\" > Kneel2.log",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/kneelDown.sh:1-4"
+    },
+    "1693": {
+        "file_id": 285,
+        "content": "This script filters and extracts specific lines from the \"POS.log\" file based on keywords (\"noun\", \"verb\", \"word\") and saves them to separate files (Kneel0.log, Kneel1.log, Kneel2.log) respectively.",
+        "type": "comment"
+    },
+    "1694": {
+        "file_id": 286,
+        "content": "/multilingual/rockstar/coref-v2/lunatic.py",
+        "type": "filepath"
+    },
+    "1695": {
+        "file_id": 286,
+        "content": "This code imports sqlite3, defines functions for file processing and logging/debugging, retrieves data from a database, identifies similar objects, creates relationships, organizes data using SQLite indices and queries, groups lists by POS, filters and sorts similar items, applies heuristic filtering, prints results, defines two lists, performs file operations, and iterates over a state to generate candidates.",
+        "type": "summary"
+    },
+    "1696": {
+        "file_id": 286,
+        "content": "import sqlite3\n#it0, it=None, None\n# render all things in vain\nsupertemp=(lambda fstring,strings,spliter: list(filter((lambda x:x!=fstring),strings.split(spliter))))\n#wrapper=(lambda fstring,string0,spliter0: [[y for y in supertemp(fstring,k,spliter0)] for k in string0])\n# this is not really recursive.\n# you shall test the DEPTH first.\n# use something like format and eval will do this task?\n# the variable name could be weird and distinct.\n# want to be recursive? check the repetitive things first.\ndef serious(battle):\n    with open(battle,\"r\") as sadist:\n#    global it\n#    global it0\n        it = supertemp(\"\", sadist.read(),\"\\n\")\n        it0=[[y for y in supertemp(\"\",k,\" \")] for k in it]\n    return it, it0\n# check if this works.\nit,it0 = serious(\"SOB.log\")\n    # global already.\n   # it =list(filter((lambda x:x!=\"\"), sadist.read().split(\"\\n\")))\n   # it0 =[[y for y in list(filter((lambda x:x!=\"\"),k.split(\" \")))] for k in it]\n    # two dimentional.\nstate, state0=serious(\"faith.log\")\n# bullshit.\n#with open(\"faith.log\",\"r\") as violence:",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/lunatic.py:1-29"
+    },
+    "1697": {
+        "file_id": 286,
+        "content": "This code imports sqlite3 and defines a function called serious(). It reads a file line by line, stripping leading/trailing whitespace, and splits it into a list of lines. Then, it further processes the lines to create another nested list with words. The function returns these two lists. The code demonstrates a simple file processing approach using Python's built-in functions and list comprehensions.",
+        "type": "comment"
+    },
+    "1698": {
+        "file_id": 286,
+        "content": "#    state=supertemp\nprint(\"initial commit\")\nprint(it0)\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\",\"fuck\",\"fuck\"]\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.",
+        "type": "code",
+        "location": "/multilingual/rockstar/coref-v2/lunatic.py:30-61"
+    },
+    "1699": {
+        "file_id": 286,
+        "content": "The code defines a function `genius()` that prints messages and increases a counter for the current strong word. It also creates SQLite connections and indexes but does not execute any SQL queries. The primary focus is on printing and incrementing the counter, possibly for a logging or debugging purpose.",
+        "type": "comment"
+    }
+}

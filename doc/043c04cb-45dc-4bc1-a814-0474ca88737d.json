@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines the \"main\" function, which is the entry point of a Haskell program. It prints the strings \"hello\" and \"world\" to the console using the \"putStrLn\" function. This simple script demonstrates a basic Haskell program that outputs two greetings.",
+    "details": [
+        {
+            "comment": "The code defines the \"main\" function, which is the entry point of a Haskell program. It prints the strings \"hello\" and \"world\" to the console using the \"putStrLn\" function. This simple script demonstrates a basic Haskell program that outputs two greetings.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/firstScript.hs\":0-3",
+            "content": "main :: IO ()\nmain = do\n  putStrLn \"hello\"\n  putStrLn \"world\""
+        }
+    ]
+}

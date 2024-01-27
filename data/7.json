@@ -1,0 +1,539 @@
+{
+    "700": {
+        "file_id": 158,
+        "content": "--;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\nfunction Split(str, delim, maxNb)\n    -- Eliminate bad cases...\n    if string.find(str, delim) == nil then\n        return { str }\n    end\n    if maxNb == nil or maxNb < 1 then\n        maxNb = 0    -- No limit\n    end\n    local result = {}\n    local pat = \"(.-)\" .. delim .. \"()\"\n    local nb = 0\n    local lastPos\n    for part, pos in string.gmatch(str, pat) do\n--string.gfind() is renamed.\n        nb = nb + 1\n        result[nb] = part\n        lastPos = pos\n        if nb == maxNb then break end\n    end\n    -- Handle the last field\n    if nb ~= maxNb then\n        result[nb + 1] = string.sub(str, lastPos)\n    end\n    return result\nend\nfuck=\"shit\\nfuck\\nshitfuck\\nall your base are belong to us\"\nfuckall=Split(fuck,\"\\n\",2)\nasshole=Split(fuck,\"\\n\",1)\nbitchass=Split(fuck,\"\\n\",3)\nfunction shitshow(dicktable)\n\tfor vagina,pussy in ipairs(dicktable) do\n\t\tprint(vagina..\" --fuckyou-- \"..pussy)\n\tend\nend\nprint(\"+1 fuckall\")\nshitshow(fuckall)\nprint(\"+2 fuckall\")\nshitshow(asshole)\nprint(\"+3 fuckall\")\nshitshow(bitchass)",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/split-return.lua:1-46"
+    },
+    "701": {
+        "file_id": 158,
+        "content": "This code defines a function called Split that splits a string by a specified delimiter and, optionally, limits the number of resulting strings. The code then demonstrates the usage of this function on different inputs and prints the results using a custom function, shitshow. The code also includes some humorous variable names for added humor and personality.",
+        "type": "comment"
+    },
+    "702": {
+        "file_id": 159,
+        "content": "/multilingual/hotfix-v0/submarine.js",
+        "type": "filepath"
+    },
+    "703": {
+        "file_id": 159,
+        "content": "The code defines a variable 'submarine' with a multiline string and then creates a regular expression using the newline character ('\\n') as a pattern. It then prints the original submarine string and the modified version without newlines, while expressing frustration with the variable naming convention.",
+        "type": "summary"
+    },
+    "704": {
+        "file_id": 159,
+        "content": "var submarine=\"substitude me please\\nplease substitude me\\nplease cleanup the mess\\nwhat is this all about\";\nvar find = '\\n';\nvar regular_fucking_expression = new RegExp(find, 'g');\n// don't ya put fucking minus sign into the fucking shitty variable fucking name!\n//str = str.replace(re, '');\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine);\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine.replace(regular_fucking_expression,\"\"));",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/submarine.js:1-9"
+    },
+    "705": {
+        "file_id": 159,
+        "content": "The code defines a variable 'submarine' with a multiline string and then creates a regular expression using the newline character ('\\n') as a pattern. It then prints the original submarine string and the modified version without newlines, while expressing frustration with the variable naming convention.",
+        "type": "comment"
+    },
+    "706": {
+        "file_id": 160,
+        "content": "/multilingual/hotfix-v0/submarine.lua",
+        "type": "filepath"
+    },
+    "707": {
+        "file_id": 160,
+        "content": "The code defines Split and Splitv functions for splitting strings with optional maximum splits limit, handling bad cases and preventing exceeding the limit. It is part of a larger program that processes data and outputs results using Lua functions. The code also includes strong language expressing frustration with implementation issues.",
+        "type": "summary"
+    },
+    "708": {
+        "file_id": 160,
+        "content": "superspliter = [[;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]]\n---------------------------------------------------\n-- range = require(\"range_module.init\")\n-- fuckyeah!\n-- you bitch!\nfunction Split(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0  \n    local lastPos   \n    for part, pos in string.gmatch(str, pat) do\n\t    if part ~=\"\\n\" and part ~=\"\" then\n        nb = nb + 1  \n        result[nb] = part   \n        lastPos = pos   \n        if nb == maxNb then break end  \nend\n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then  \n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--result[1]=nil\n    return result   \nend  \nfunction Splitv(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    maxLimit=maxNb+1\n    if string.find(str, delim) == nil then  \n        return { str }  ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/submarine.lua:1-39"
+    },
+    "709": {
+        "file_id": 160,
+        "content": "The code defines two functions, Split and Splitv. Split takes a string, a delimiter, and an optional maximum number of splits as input. It eliminates bad cases where the string doesn't contain the delimiter and handles the last field appropriately. Splitv seems to be similar to Split but has an additional maxLimit parameter which is maxNb+1. Both functions return a table containing the split strings.",
+        "type": "comment"
+    },
+    "710": {
+        "file_id": 160,
+        "content": "    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0\n    local nb0 = 0\n    local lastPos\n    local lastPos0\n    for part, pos in string.gmatch(str, pat) do  if part~=\"\\n\" and part~=\"\" then\n--string.gfind() is renamed.\n        nb0 = nb0 + 1 \n\tif nb0 <= maxLimit then\n        result[nb0] = part\nend\n\tlastPos0=pos\n        if nb0 <= maxNb then \n\t\tlastPos=lastPos0\n\t\tnb=nb0\n\tend\n        if nb0 > maxLimit then result[maxLimit]=result[maxLimit]..delim..part end  \n    end  \n    end\n    -- Handle the last field   \n    if nb ~= maxNb then \n-- this means not equal to the maxNb.\n-- better make sure that is not real.\n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--[[local fuckingnumber=#result\n    if fuckingnumber>maxLimit then\n\t    for i in range(maxLimit+1,fuckingnumber) do\n\t\t    result[i]=nil\n\t    end]]\n--result[1]=nil\n    return result   \nend  \n--command =\"node duper-get.js java\"\n--the_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/submarine.lua:40-82"
+    },
+    "711": {
+        "file_id": 160,
+        "content": "The code reads a string and splits it into parts based on a given delimiter, keeping track of the count to prevent exceeding a specified maximum limit. It handles the last part separately if the total number of parts exceeds the maximum allowed. The result is returned as a table.",
+        "type": "comment"
+    },
+    "712": {
+        "file_id": 160,
+        "content": "--fucking shit.\ncommand =\"node supercat.js java 0\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nsupertable=Split(result,superspliter,nil)\nfor key,value in pairs(supertable) do\n--\tif key>1 then\nlocal\tnextable=Splitv(value,\"\\n\",2)\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\tfor fuckingkey,fuckingvalue in pairs(nextable) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.\n\t\t-- i always cheat myself.\n\t--\tprint(fuckingvalue)\n\t--else\n\t\tlocal command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n\t\tlocal handle=io.popen(command) \n\t\tlocal result=handle:read(\"*a\") \n\t\thandle:close() \n--\t\tprint(result) \n\t\tio.write(result)\n\t\t--the final return should be integrated.\n\telse\n\t\tprint (fuckingvalue)\n\tend\n\t\t-- wtf is the difference between the fucking colon and the period?",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/submarine.lua:83-123"
+    },
+    "713": {
+        "file_id": 160,
+        "content": "This code seems to be a part of a larger program that fetches data from an external source using the 'supercat.js' command, then processes and outputs the result. It uses Lua functions for splitting strings into tables based on specific characters, and subsequently runs the resulting items through another script ('shell-args.lua') which generates additional output that is written to the console or integrated as the final return value. The code contains strong language and expresses frustration with the current implementation.",
+        "type": "comment"
+    },
+    "714": {
+        "file_id": 160,
+        "content": "\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend\n--end\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/submarine.lua:124-137"
+    },
+    "715": {
+        "file_id": 160,
+        "content": "The code snippet contains comments expressing frustration and confusion, likely related to a function or variable definition. The developer is removing the first item from a key range (1 to 4) and expects it to be defined in the original function. The code also includes print statements for a processed value and a divide line, indicating potential debugging efforts.",
+        "type": "comment"
+    },
+    "716": {
+        "file_id": 161,
+        "content": "/multilingual/hotfix-v0/subsequent.lua",
+        "type": "filepath"
+    },
+    "717": {
+        "file_id": 161,
+        "content": "Code defines 'Split' and 'Splitv' functions to split a string by delimiters, but has errors, variable naming issues, and unnecessary iterations; code also related to printing second item of each key in a multi-threaded program with Lua commands.",
+        "type": "summary"
+    },
+    "718": {
+        "file_id": 161,
+        "content": "superspliter = [[;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]]\n---------------------------------------------------\n-- range = require(\"range_module.init\")\n-- fuckyeah!\n-- you bitch!\nfunction Split(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0  \n    local lastPos   \n    for part, pos in string.gmatch(str, pat) do\n\t    if part ~=\"\\n\" and part ~=\"\" then\n        nb = nb + 1  \n        result[nb] = part   \n        lastPos = pos   \n        if nb == maxNb then break end  \nend\n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then  \n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--result[1]=nil\n    return result   \nend  \nfunction Splitv(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    maxLimit=maxNb+1\n    if string.find(str, delim) == nil then  \n        return { str }  ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/subsequent.lua:1-39"
+    },
+    "719": {
+        "file_id": 161,
+        "content": "This code defines two functions: 'Split' and 'Splitv'. The 'Split' function takes a string, delimiter, and an optional maximum number of splits. It returns an array of substrings split by the delimiter. The 'Splitv' function is similar to 'Split', but with a modified maximum limit variable. Both functions handle edge cases where the delimiter is not found in the string and handle the last field if the maximum number of splits has not been reached.",
+        "type": "comment"
+    },
+    "720": {
+        "file_id": 161,
+        "content": "    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0\n    local nb0 = 0\n    local lastPos\n    local lastPos0\n    for part, pos in string.gmatch(str, pat) do  if part~=\"\\n\" and part~=\"\" then\n--string.gfind() is renamed.\n        nb0 = nb0 + 1 \n\tif nb0 <= maxLimit then\n        result[nb0] = part\nend\n\tlastPos0=pos\n        if nb0 <= maxNb then \n\t\tlastPos=lastPos0\n\t\tnb=nb0\n\tend\n        if nb0 > maxLimit then result[maxLimit]=result[maxLimit]..delim..part end  \n    end  \n    end\n    -- Handle the last field   \n    if nb ~= maxNb then \n-- this means not equal to the maxNb.\n-- better make sure that is not real.\n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--[[local fuckingnumber=#result\n    if fuckingnumber>maxLimit then\n\t    for i in range(maxLimit+1,fuckingnumber) do\n\t\t    result[i]=nil\n\t    end]]\n--result[1]=nil\n    return result   \nend  \n--command =\"node duper-get.js java\"\n--the_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/subsequent.lua:40-82"
+    },
+    "721": {
+        "file_id": 161,
+        "content": "This code parses a string and extracts parts separated by specified delimiters, returning them in an array. It handles cases where the number of extracted parts exceeds a maximum limit (maxNb) or the total number of parts is greater than maxLimit. It also handles the last field if it doesn't match maxNb.",
+        "type": "comment"
+    },
+    "722": {
+        "file_id": 161,
+        "content": "--fucking shit.\ncommand =\"node supercat.js java 0\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nsupertable=Split(result,superspliter,nil)\none_fuck_all=\"\"\n-- never fucking use minus sign in variable name and fuck you!\nfor key,value in pairs(supertable) do\n--\tif key>1 then\n--local\t\nsupertable[key]=Splitv(value,\"\\n\",2)\none_fuck_all=one_fuck_all..\" \"..supertable[key][2]\n-- you little piece of shit!\n-- forgot to add the mother fucking space!\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\t--[[for fuckingkey,fuckingvalue in pairs(nextable) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.\n\t\t-- i always cheat myself.\n\t--\tprint(fuckingvalue)\n\t--else\n\t\tlocal command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n\t\tlocal handle=io.popen(command) ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/subsequent.lua:83-122"
+    },
+    "723": {
+        "file_id": 161,
+        "content": "This code appears to contain a mix of frustration and errors. It attempts to execute another script using Lua, but there are multiple issues with variable naming, missing spaces, unnecessary iterations, and possibly incorrect usage. The author seems frustrated with the process and their own code.",
+        "type": "comment"
+    },
+    "724": {
+        "file_id": 161,
+        "content": "\t\tlocal result=handle:read(\"*a\") \n\t\thandle:close() \n--\t\tprint(result) \n\t\tio.write(result)\n\t\t--the final return should be integrated.\n\telse\n\t\tprint (fuckingvalue)\n\tend\n\t\t-- wtf is the difference between the fucking colon and the period?\n\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend--]]\nend\n--end\n--one_fuck_all_table={}\nfuckyou_command = \"lua shell-args.lua \"..one_fuck_all\n--print(one_fuck_all)\n--i do not need that prick no more.\nfuckyou_handle = io.popen(fuckyou_command)\nfuckyou_result = Split(fuckyou_handle:read(\"*a\"),\"\\n\")\nfuckyou_handle:close()\n-- the table will be returned.\n--result = Split(result0,\"\\n\")\n--[[print(fuckyou_result[1])\nfor dickkey,dickvalue in pairs(fuckyou_result) do\n\tsupertable[dickkey][2]=dickvalue\nend\n]]\n--i am gonna make it multithreaded.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/subsequent.lua:123-160"
+    },
+    "725": {
+        "file_id": 161,
+        "content": "This code seems to handle input and output operations, possibly for a specific application. It uses file handling, reading data from a file and writing it back using Lua's io library. The code also contains some commentary expressing frustration or confusion about certain aspects of the code. The final result should be integrated into the function, and there is an attempt to split the input by newline characters. It appears to be part of a larger script that utilizes tables and potentially multithreading.",
+        "type": "comment"
+    },
+    "726": {
+        "file_id": 161,
+        "content": "--fucking shit. you bitchs are great.\nfor key,value in pairs(supertable) do\n--\tif key>1 then\n--local\tnextable=Splitv(value,\"\\n\",2)\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\tfor fuckingkey,fuckingvalue in pairs(supertable[key]) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.\n\t\t-- i always cheat myself.\n\t\tprint(fuckyou_result[key])\nelse\n\t\t--local command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n--\t\tlocal handle=io.popen(command) \n--\t\tlocal result=handle:read(\"*a\") \n--\t\thandle:close() \n--\t\tprint(result) \n--\t\tio.write(result)\n\t\t--the final return should be integrated.\n--\telse\n\t\tprint (fuckingvalue)\n\t\t-- let's just test.\n\t\t-- if shits happen we change it later on.\nend\n\t\t-- wtf is the difference between the fucking colon and the period?\n\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/subsequent.lua:161-199"
+    },
+    "727": {
+        "file_id": 161,
+        "content": "The code iterates through a supertable and prints the second item of each key. If the key is 2, it prints the value from another table called fuckyou_result. The code also comments on its own functionality, expressing frustration and profanity. It attempts to execute a Lua command using io.popen but does not explain the purpose or result of this action.",
+        "type": "comment"
+    },
+    "728": {
+        "file_id": 161,
+        "content": "\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend\n--end\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/subsequent.lua:200-211"
+    },
+    "729": {
+        "file_id": 161,
+        "content": "This code seems to be fixing an issue related to key ranges in a function, removing the first item from the range, and printing a message for division. It also includes print statements for separation and might automatically add the return statement. The code may belong to a multi-threaded program, but more context is needed for a comprehensive understanding.",
+        "type": "comment"
+    },
+    "730": {
+        "file_id": 162,
+        "content": "/multilingual/hotfix-v0/super-duper.js",
+        "type": "filepath"
+    },
+    "731": {
+        "file_id": 162,
+        "content": "The code uses axios, cheerio, and regexp to extract data from web pages with modifications needed for more pages. It has issues with URL matching and incomplete/erroneous code. Developer finds Lua-based multithreading impressive but desires a direct approach.",
+        "type": "summary"
+    },
+    "732": {
+        "file_id": 162,
+        "content": "/* this script can only read from page one\n * to page two\n * therefore needs modification\n * to add up more pages\n * by passing arguments\n * */\n//var fs = require('fs');\nvar content=process.argv[2];               // remember to write things here.  \n// better find way to cope with blanks\nvar p = encodeURIComponent(content);\nvar n=2*process.argv[3];\n// we have multiplied this.\nvar axios = require('axios');              \nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/super-duper.js:1-33"
+    },
+    "733": {
+        "file_id": 162,
+        "content": "This code is for a script that reads content from page one to page two and needs modification to add more pages by passing arguments. It uses axios and cheerio libraries. The code includes a regexp (pattern) to find a specific URL, but it seems to have some issues with it. There are also functions to generate number ranges and an incrementing range function.",
+        "type": "comment"
+    },
+    "734": {
+        "file_id": 162,
+        "content": "\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\n// use something apart from this.\n// this thing is merely a improvement over the local thing.\n/*/ make sure you have the real experiment.\n/\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n*/\nfunction fuckingfucked(data){\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/super-duper.js:34-66"
+    },
+    "735": {
+        "file_id": 162,
+        "content": "This code is modifying an HTML file, selecting specific elements using Cheerio, and returning the selected elements' IDs. It performs a series of operations on the HTML data to extract the required information and potentially improve upon existing local functionality.",
+        "type": "comment"
+    },
+    "736": {
+        "file_id": 162,
+        "content": "//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\");\n\t\t  //lisp forever!\n\t\t  //console.log(poker);\n\tconsole.log($(this).text());\n\t\t  console.log(poker);\n\t\t  // this is the title.\n// keep these lines in some sort of loop.\n\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()\n// this is the premise.\n\t\t  if(rock.prop(\"tagName\").toLowerCase()==\"div\"){\n\t/*var initial=$(\":first-child\",$(rock.next()));\n\t// will this be true?\n\twhile (initial!=undefined){\n\tinitial=initial.next();\n\t\tconsole.log(initial.);\n\t}*/\t\n\t  // waste of time here.\n\t\t   if (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};}\n\t  else {if ($(rock).next().prop(\"tagName\").toLowerCase()==\"table\"){",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/super-duper.js:67-99"
+    },
+    "737": {
+        "file_id": 162,
+        "content": "The code is checking if the \"poker\" array contains a specific pattern (patt0). If it does, it then retrieves text from different elements and logs them to the console. It also checks for a specific HTML tag (\"div\") and performs further actions based on that condition. The code seems to be searching for specific content within a document structure and logging relevant data to the console.",
+        "type": "comment"
+    },
+    "738": {
+        "file_id": 162,
+        "content": "\t\t  console.log($(rock).next().text());\n\t\t  // the next sibling is a table instead of the fucking style!\n\t//console.log($($(rock).next()).next().text());\n\t  };}\n}\n//for the damn selector. DO NOT REMOVE.\n});\n\t//the key is those fucking brackets.\n\t//this bracket is for that filesystem module.\n//});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.\n};\n// what to do next? want to process the whole thing at once? then add those fucks together!\n//var data0=\"\";\n//var data1=\"\";\naxios.all([                                  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),                             axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)                        ]).then(axios.spread((response1, response2) => {                              \nfuckingfucked(response1.data);\n\tfuckingfucked(response2.data);\n// this will make something.\n})).catch(error => {                         console.log(error);                      });\n// no need to start more requests.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/super-duper.js:100-124"
+    },
+    "739": {
+        "file_id": 162,
+        "content": "Code snippet fetches data from Baidu search results for two different pages using axios. Then, it calls the \"fuckingfucked\" function with the response data of each page. The purpose or functionality of the \"fuckingfucked\" function is not clear. The code may be incomplete or contain errors as it seems to have unfinished comments and brackets that are not properly closed.",
+        "type": "comment"
+    },
+    "740": {
+        "file_id": 162,
+        "content": "// do multithreading in lua.\n/*fs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }*/\n// wow this is awesome.\n\t// but i need a direct approach.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/super-duper.js:125-131"
+    },
+    "741": {
+        "file_id": 162,
+        "content": "The code attempts to implement multithreading using Lua and reads the 'index.html' file in utf-8 encoding, handling errors through a callback function. The developer finds this method impressive but desires a more direct approach.",
+        "type": "comment"
+    },
+    "742": {
+        "file_id": 163,
+        "content": "/multilingual/hotfix-v0/super-get.js",
+        "type": "filepath"
+    },
+    "743": {
+        "file_id": 163,
+        "content": "Reads 'index.html' file, uses Cheerio to load HTML data, finds all anchor tags with target attribute containing '_blank', and logs their href values.",
+        "type": "summary"
+    },
+    "744": {
+        "file_id": 163,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n  $(\"a[target|='_blank']\").each(function (i, elem) {\n    console.log($(this).attr('href'));\n  });\n});",
+        "type": "code",
+        "location": "/multilingual/hotfix/super-get.js:1-14"
+    },
+    "745": {
+        "file_id": 163,
+        "content": "Reads 'index.html' file, uses Cheerio to load HTML data, finds all anchor tags with target attribute containing '_blank', and logs their href values.",
+        "type": "comment"
+    },
+    "746": {
+        "file_id": 164,
+        "content": "/multilingual/hotfix-v0/supercat.js",
+        "type": "filepath"
+    },
+    "747": {
+        "file_id": 164,
+        "content": "This JavaScript function uses Axios and Cheerio to scrape web data, handle HTTP requests, manipulate HTML, and extract specified tags for Baidu search results. It may have errors or typos and could be part of a larger program with multithreading in Lua and fs module handling.",
+        "type": "summary"
+    },
+    "748": {
+        "file_id": 164,
+        "content": "/* this script can only read from page one\n * to page two\n * therefore needs modification\n * to add up more pages\n * by passing arguments\n * */\nfunction fucking_elimination(submarine,fucking_pattern){\nvar find = fucking_pattern;\nvar regular_fucking_expression = new RegExp(find, 'g');\n// don't ya put fucking minus sign into the fucking shitty variable fucking name!\n//str = str.replace(re, '');\n/*console.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine);\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(*/\n\treturn submarine.replace(regular_fucking_expression,\"\");\n};\n//var fs = require('fs');\nvar content=process.argv[3];\nvar monarchy=process.argv.length;\nif (monarchy>4){\n\tfor (var k=4;k<monarchy;k++){\n\t\tcontent+=(\" \"+process.argv[k]);};\n};\n// give a test for the thing.\n// how fucking long is it?\n// starts from #2, and now the #2 is for pages.\n// remember to write things here.  \n// needs java here!\n// fucking shit!\n// better turn into some fucking java & python!\n// motherfucking nodejs!\n// better find way to cope with blanks",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:1-33"
+    },
+    "749": {
+        "file_id": 164,
+        "content": "The code is a JavaScript function for eliminating specified patterns from input text and handling command-line arguments to process multiple pages of content. It uses regular expressions for pattern matching but may need modification to support more pages or different languages.",
+        "type": "comment"
+    },
+    "750": {
+        "file_id": 164,
+        "content": "var p = encodeURIComponent(content);\nvar n=2*process.argv[2];\n// we have multiplied this.\nvar axios = require('axios');              \nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\n// we shall use this pattern.\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:34-67"
+    },
+    "751": {
+        "file_id": 164,
+        "content": "This code snippet seems to involve a series of functions and manipulations. It uses Axios and Cheerio libraries for HTTP requests and manipulating HTML/webpage data, respectively. The code includes a regular expression pattern to search for a specific URL string within the webpage content. Additionally, there's a function named \"mobious\" which seems to generate a selector string for elements with IDs ranging from numberStart to numberEnd. Overall, this appears to be related to web scraping or data extraction tasks.",
+        "type": "comment"
+    },
+    "752": {
+        "file_id": 164,
+        "content": "// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\n// use something apart from this.\n// this thing is merely a improvement over the local thing.\n/*/ make sure you have the real experiment.\n/\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n*/\nfunction fuckingfucked(data){\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\");",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:68-97"
+    },
+    "753": {
+        "file_id": 164,
+        "content": "This code is searching for a specific tag in an HTML file, checking if it contains a particular string. It uses the cheerio library and fs module to read the 'index.html' file and then iterates through each matching element using jQuery-like syntax. The programmer emphasizes not to consider other options and advises saving time by directly looking for the specific tag with the given criteria. They also mention that this code is an improvement over the previous method, but still suggest considering Python or Lua for more \"magical\" regex operations if needed.",
+        "type": "comment"
+    },
+    "754": {
+        "file_id": 164,
+        "content": "\t\t  //lisp forever!\n\t\t  //console.log(poker);\n\t\t  //there must be conspirscy inside.\n\tconsole.log(fucking_elimination($(this).text(),\"\\n\"));\n\t\t  //ain't need no shit.\n\t\t  console.log(poker);\n\t\t  //console.log(\"fuckyou\");\n\t\t  // this is the title.\n// keep these lines in some sort of loop.\n\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()\n// this is the premise.\n\t\t  if(rock.prop(\"tagName\").toLowerCase()==\"div\"){\n\t/*var initial=$(\":first-child\",$(rock.next()));\n\t// will this be true?\n\twhile (initial!=undefined){\n\tinitial=initial.next();\n\t\tconsole.log(initial.);\n\t}*/\t\n\t  // waste of time here.\n\t\t   if (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};}\n\t  else {if ($(rock).next().prop(\"tagName\").toLowerCase()==\"table\"){\n\t\t  console.log($(rock).next().text());\n\t\t  // the next sibling is a table instead of the fucking style!\n\t//console.log($($(rock).next()).next().text());",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:98-129"
+    },
+    "755": {
+        "file_id": 164,
+        "content": "This code appears to be searching for specific elements within a jQuery collection, extracting their text content, and logging it to the console. The code includes various conditional statements and potentially unnecessary nested loops, which may indicate that the author is experimenting with different approaches to achieve the desired outcome.",
+        "type": "comment"
+    },
+    "756": {
+        "file_id": 164,
+        "content": "\t  };}\n}\n//for the damn selector. DO NOT REMOVE.\n});\n\t//the key is those fucking brackets.\n\t//this bracket is for that filesystem module.\n//});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.\n};\n// what to do next? want to process the whole thing at once? then add those fucks together!\n//var data0=\"\";\n//var data1=\"\";\naxios.all([                                  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),                             axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)                        ]).then(axios.spread((response1, response2) => {                              \nfuckingfucked(response1.data);\n\tfuckingfucked(response2.data);\n// this will make something.\n})).catch(error => {                         console.log(error);                      });\n// no need to start more requests.\n// do multithreading in lua.\n/*fs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }*/\n// wow this is awesome.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:130-157"
+    },
+    "757": {
+        "file_id": 164,
+        "content": "The code fetches data from Baidu search results using axios, possibly for the words 'p' and 'n0'. The function 'fuckingfucked' processes the retrieved data. This may be a part of a larger program that performs multithreading in Lua and handles filesystem operations, as indicated by comments related to fs module. There are multiple errors or typos in the code which may affect its functionality.",
+        "type": "comment"
+    },
+    "758": {
+        "file_id": 164,
+        "content": "\t// but i need a direct approach.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:158-158"
+    },
+    "759": {
+        "file_id": 164,
+        "content": "The code snippet seems to indicate that the developer is expressing a need for a more direct approach to solving a problem or achieving a specific task within the current codebase.",
+        "type": "comment"
+    },
+    "760": {
+        "file_id": 165,
+        "content": "/multilingual/hotfix-v0/superman.lua",
+        "type": "filepath"
+    },
+    "761": {
+        "file_id": 165,
+        "content": "The Lua code defines two string splitting functions, Split and Splitv, with optional parameters for maximum fields and processed string length. It is inefficient and contains unnecessary comments and hardcoded values, indicating frustration from the programmer.",
+        "type": "summary"
+    },
+    "762": {
+        "file_id": 165,
+        "content": "superspliter = [[;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]]\n---------------------------------------------------\n-- range = require(\"range_module.init\")\n-- fuckyeah!\n-- you bitch!\nfunction Split(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0  \n    local lastPos   \n    for part, pos in string.gmatch(str, pat) do\n\t    if part ~=\"\\n\" and part ~=\"\" then\n        nb = nb + 1  \n        result[nb] = part   \n        lastPos = pos   \n        if nb == maxNb then break end  \nend\n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then  \n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--result[1]=nil\n    return result   \nend  \nfunction Splitv(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    maxLimit=maxNb+1\n    if string.find(str, delim) == nil then  \n        return { str }  ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/superman.lua:1-39"
+    },
+    "763": {
+        "file_id": 165,
+        "content": "The provided code defines two Lua functions, Split and Splitv. Both functions take a string, delimiter, and an optional maximum number of fields as input arguments and return the given string split into separate fields based on the specified delimiter. The main difference between the two functions is that Splitv also accepts a second optional argument representing the maximum limit for the length of the string to be processed at once.",
+        "type": "comment"
+    },
+    "764": {
+        "file_id": 165,
+        "content": "    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0\n    local nb0 = 0\n    local lastPos\n    local lastPos0\n    for part, pos in string.gmatch(str, pat) do  if part~=\"\\n\" and part~=\"\" then\n--string.gfind() is renamed.\n        nb0 = nb0 + 1 \n\tif nb0 <= maxLimit then\n        result[nb0] = part\nend\n\tlastPos0=pos\n        if nb0 <= maxNb then \n\t\tlastPos=lastPos0\n\t\tnb=nb0\n\tend\n        if nb0 > maxLimit then result[maxLimit]=result[maxLimit]..delim..part end  \n    end  \n    end\n    -- Handle the last field   \n    if nb ~= maxNb then \n-- this means not equal to the maxNb.\n-- better make sure that is not real.\n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--[[local fuckingnumber=#result\n    if fuckingnumber>maxLimit then\n\t    for i in range(maxLimit+1,fuckingnumber) do\n\t\t    result[i]=nil\n\t    end]]\n--result[1]=nil\n    return result   \nend  \n--command =\"node duper-get.js java\"\n--the_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/superman.lua:40-82"
+    },
+    "765": {
+        "file_id": 165,
+        "content": "This Lua function parses a string using regular expressions and limits the number of returned results based on a provided maximum limit. It handles the last field, ensuring it doesn't exceed the specified maximum number.",
+        "type": "comment"
+    },
+    "766": {
+        "file_id": 165,
+        "content": "--fucking shit.\ncommand =\"node supercat.js java 0\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nsupertable=Split(result,superspliter,nil)\nfor key,value in pairs(supertable) do\n--\tif key>1 then\nlocal\tnextable=Splitv(value,\"\\n\",2)\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\tfor fuckingkey,fuckingvalue in pairs(nextable) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- i always cheat myself.\n\t\tprint(fuckingvalue)\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend\n--end\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/superman.lua:83-115"
+    },
+    "767": {
+        "file_id": 165,
+        "content": "The code appears to be a mix of frustration and inefficient implementation. It seems to involve splitting data and looping through it, but the profanity used suggests that the programmer is frustrated with the process. The code contains unnecessary comments and hardcoded values, making it difficult to understand its purpose or intended functionality.",
+        "type": "comment"
+    },
+    "768": {
+        "file_id": 166,
+        "content": "/multilingual/hotfix-v0/supertest.lua",
+        "type": "filepath"
+    },
+    "769": {
+        "file_id": 166,
+        "content": "The code defines functions Split and Splitv that split a string into parts based on a pattern and delimiter, handle maximum limit and count of parts, store results in \"result\" array, discard excess parts if necessary, and return the result array. The code reads command output using `io.popen`, splits it into subtables by delimiter, and prints each entry with an identifying key. It also includes debugging comments and a suggestion for automatic return addition in another thread.",
+        "type": "summary"
+    },
+    "770": {
+        "file_id": 166,
+        "content": "superspliter = [[;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]]\n---------------------------------------------------\n-- range = require(\"range_module.init\")\n-- fuckyeah!\n-- you bitch!\nfunction Split(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0  \n    local lastPos   \n    for part, pos in string.gmatch(str, pat) do  \n        nb = nb + 1  \n        result[nb] = part   \n        lastPos = pos   \n        if nb == maxNb then break end  \n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then  \n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n    return result   \nend  \nfunction Splitv(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    maxLimit=maxNb+1\n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supertest.lua:1-37"
+    },
+    "771": {
+        "file_id": 166,
+        "content": "Function Split takes a string, a delimiter, and an optional maximum number of split parts as input. It checks for bad cases where the delimiter is not found in the string and handles the last field separately if the maxNb limit isn't met. Function Splitv has similar functionality but with minor differences in the code implementation.",
+        "type": "comment"
+    },
+    "772": {
+        "file_id": 166,
+        "content": "        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0\n    local nb0 = 0\n    local lastPos\n    local lastPos0\n    for part, pos in string.gmatch(str, pat) do  \n--string.gfind() is renamed.\n        nb0 = nb0 + 1 \n\tif nb0 <= maxLimit then\n        result[nb0] = part\nend\n\tlastPos0=pos\n        if nb0 <= maxNb then \n\t\tlastPos=lastPos0\n\t\tnb=nb0\n\tend\n        if nb0 > maxLimit then result[maxLimit]=result[maxLimit]..delim..part end  \n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then \n-- this means not equal to the maxNb.\n-- better make sure that is not real.\n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--[[local fuckingnumber=#result\n    if fuckingnumber>maxLimit then\n\t    for i in range(maxLimit+1,fuckingnumber) do\n\t\t    result[i]=nil\n\t    end]]\n    return result   \nend  \n--command =\"node duper-get.js java\"\n--the_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]\n--fucking shit.\ncommand =\"node super-duper.js java 0\"",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supertest.lua:38-78"
+    },
+    "773": {
+        "file_id": 166,
+        "content": "The code splits a string into parts based on a pattern and delimiter. It handles maximum limit and count of parts, and stores the results in an array called \"result\". If there are more parts than the specified limit, it discards the excess parts. Finally, it returns the result array.",
+        "type": "comment"
+    },
+    "774": {
+        "file_id": 166,
+        "content": "handle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nsupertable=Split(result,superspliter,nil)\nfor key,value in pairs(supertable) do\n\tif key>1 then\nlocal\tnextable=Splitv(value,\"\\n\",3)\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\tfor fuckingkey,fuckingvalue in pairs(nextable) do\n\t\tif fuckingkey >1 then\n\t\tprint(\"[\"..fuckingkey..\"]\")\n\t\tprint(fuckingvalue)\n\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend\nend\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supertest.lua:79-103"
+    },
+    "775": {
+        "file_id": 166,
+        "content": "This code reads the output of a command using `io.popen`, then splits the result into subtables based on a delimiter and iterates over them, printing each entry with an identifying key. It also includes comments for debugging purposes and a comment suggesting automatic return addition in another thread.",
+        "type": "comment"
+    },
+    "776": {
+        "file_id": 167,
+        "content": "/multilingual/hotfix-v0/test_lua.sh",
+        "type": "filepath"
+    },
+    "777": {
+        "file_id": 167,
+        "content": "This code appears to be a Bash script that launches a Lua script (shell-args.lua) with two URLs as arguments, possibly for testing purposes. The author seems dissatisfied with the execution speed and considers writing another Lua script to optimize it.",
+        "type": "summary"
+    },
+    "778": {
+        "file_id": 167,
+        "content": "#!/bin/bash\nfuckinglinks=\"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\"\nlua shell-args.lua $fuckinglinks\n# this thing is way too slow.\n# how about write another lua script to wrap it around?",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/test_lua.sh:1-5"
+    },
+    "779": {
+        "file_id": 167,
+        "content": "This code appears to be a Bash script that launches a Lua script (shell-args.lua) with two URLs as arguments, possibly for testing purposes. The author seems dissatisfied with the execution speed and considers writing another Lua script to optimize it.",
+        "type": "comment"
+    },
+    "780": {
+        "file_id": 168,
+        "content": "/multilingual/hotfix-v0/test_range.lua",
+        "type": "filepath"
+    },
+    "781": {
+        "file_id": 168,
+        "content": "The code initializes a range module and iterates through numbers from 1 to 400, printing each number. It is a simple loop using the range module for iteration, producing expected results from 1 to 400 as desired.",
+        "type": "summary"
+    },
+    "782": {
+        "file_id": 168,
+        "content": "range=require(\"range_module.init\")\nfor i in range(1,400) do\n\tprint(i)\nend\n-- this shit is fucking beautiful.\n-- it is exactly the thing, exactly from 1 to the mother fucking 400!",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/test_range.lua:1-8"
+    },
+    "783": {
+        "file_id": 168,
+        "content": "The code initializes a range module and iterates through numbers from 1 to 400, printing each number. It is a simple loop using the range module for iteration, producing expected results from 1 to 400 as desired.",
+        "type": "comment"
+    },
+    "784": {
+        "file_id": 169,
+        "content": "/multilingual/hotfix-v0/threaded.php",
+        "type": "filepath"
+    },
+    "785": {
+        "file_id": 169,
+        "content": "Code example demonstrates the use of threads in PHP for concurrent execution. The AsyncOperation class extends Thread and runs multiple instances in a loop, sleeping for random durations before finishing. However, the pthreads extension cannot be used in a web server environment, limiting its use to CLI-based applications.",
+        "type": "summary"
+    },
+    "786": {
+        "file_id": 169,
+        "content": "<?php\n/*sorry you fucking pussy cat.\n *this fucking platform does not suppory threaded php\n *fucking fucked php!\n * */\n?>\nthese lines will simply be ignored.\nwith Threads, Workers and Threaded objects.\nWarning: The pthreads extension cannot be used in a web server environment. Threading in PHP should therefore remain to CLI-based applications only.\nSimple Test\n#!/usr/bin/php\n<?php\nclass AsyncOperation extends Thread {\n    public function __construct($arg) {\n        $this->arg = $arg;\n    }\n    public function run() {\n        if ($this->arg) {\n            $sleep = mt_rand(1, 10);\n            printf('%s: %s  -start -sleeps %d' . \"\\n\", date(\"g:i:sa\"), $this->arg, $sleep);\n            sleep($sleep);\n            printf('%s: %s  -finish' . \"\\n\", date(\"g:i:sa\"), $this->arg);\n        }\n    }\n}\n// Create a array\n$stack = array();\n//Initiate Multiple Thread\nforeach ( range(\"A\", \"D\") as $i ) {\n    $stack[] = new AsyncOperation($i);\n}\n// Start The Threads\nforeach ( $stack as $t ) {\n    $t->start();\n}\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/threaded.php:1-47"
+    },
+    "787": {
+        "file_id": 169,
+        "content": "Code example demonstrates the use of threads in PHP for concurrent execution. The AsyncOperation class extends Thread and runs multiple instances in a loop, sleeping for random durations before finishing. However, the pthreads extension cannot be used in a web server environment, limiting its use to CLI-based applications.",
+        "type": "comment"
+    },
+    "788": {
+        "file_id": 170,
+        "content": "/multilingual/hotfix-v1/README",
+        "type": "filepath"
+    },
+    "789": {
+        "file_id": 170,
+        "content": "Code appears to be instructions for a developer, emphasizing the need to focus on task and avoid using specific language. The code suggests using aria2c or curl with cookies for downloading. It mentions the importance of automatically escaping hashtags and working around limitations.",
+        "type": "summary"
+    },
+    "790": {
+        "file_id": 170,
+        "content": "ignore all irrelevant shits.\ndo not fuck with me. just think about how the fuck can we do this job.\nuse aria2c to work around the fucking limitation.\nor use curl with the mother-fucking cookie\ntime to fuck with the words. so fuck the python!\nwe need to automatically escape hashtags.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/README:1-6"
+    },
+    "791": {
+        "file_id": 170,
+        "content": "Code appears to be instructions for a developer, emphasizing the need to focus on task and avoid using specific language. The code suggests using aria2c or curl with cookies for downloading. It mentions the importance of automatically escaping hashtags and working around limitations.",
+        "type": "comment"
+    },
+    "792": {
+        "file_id": 171,
+        "content": "/multilingual/hotfix-v1/catpurr.js",
+        "type": "filepath"
+    },
+    "793": {
+        "file_id": 171,
+        "content": "The code defines a regex function for pattern elimination and suggests using Cheerio to parse HTML. Refactoring is needed, considering other languages like Python or Lua. The code may be inefficient due to debugging loops and console logs. Fetches data from Baidu Search API using Axios, handles requests and errors, but uses a confusing function in multilingual comments. Direct approach desired over multithreading in Lua.",
+        "type": "summary"
+    },
+    "794": {
+        "file_id": 171,
+        "content": "/* this script can only read from page one\n * to page two\n * therefore needs modification\n * to add up more pages\n * by passing arguments\n * */\nfunction fucking_elimination(submarine,fucking_pattern){\nvar find = fucking_pattern;\nvar regular_fucking_expression = new RegExp(find, 'g');\n// don't ya put fucking minus sign into the fucking shitty variable fucking name!\n//str = str.replace(re, '');\n/*console.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine);\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(*/\n\treturn submarine.replace(regular_fucking_expression,\"\");\n};\n//var fs = require('fs');\nvar content=process.argv[3];\nvar monarchy=process.argv.length;\nif (monarchy>4){\n\tfor (var k=4;k<monarchy;k++){\n\t\tcontent+=(\" \"+process.argv[k]);};\n};\n// give a test for the thing.\n// how fucking long is it?\n// starts from #2, and now the #2 is for pages.\n// remember to write things here.  \n// needs java here!\n// fucking shit!\n// better turn into some fucking java & python!\n// motherfucking nodejs!\n// better find way to cope with blanks",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/catpurr.js:1-33"
+    },
+    "795": {
+        "file_id": 171,
+        "content": "This code defines a function, \"fucking_elimination,\" which takes two arguments: submarine and fucking_pattern. It uses regular expressions to find and eliminate occurrences of the pattern from the submarine string. If there are more than four command-line arguments, it concatenates them with a space separator into the content variable. This code seems unfinished and requires modifications for handling multiple pages or other functionalities. It may also need refactoring to improve readability and remove vulgar language.",
+        "type": "comment"
+    },
+    "796": {
+        "file_id": 171,
+        "content": "var p = encodeURIComponent(content);\nvar n=2*process.argv[2];\n// we have multiplied this.\nvar axios = require('axios');              \nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\n// we shall use this pattern.\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/catpurr.js:34-67"
+    },
+    "797": {
+        "file_id": 171,
+        "content": "The code defines a variable `p`, encodes the `content` using `encodeURIComponent()`. It calculates `n` by multiplying `process.argv[2]` by 2, and then requires 'axios' and 'cheerio'. The code defines a regular expression `patt0` matching \"http://www.baidu.com/link?url=\". It utilizes the `includes()` method on a string object with a substring, but with some profanity. There is an unused function definition for `range(size, startAt)`, and another unused function definition `mobious(numberStart, numberEnd)`. Finally, there's a comment suggesting that it would be better to create a function to utilize the selector.",
+        "type": "comment"
+    },
+    "798": {
+        "file_id": 171,
+        "content": "// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\n// use something apart from this.\n// this thing is merely a improvement over the local thing.\n/*/ make sure you have the real experiment.\n/\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n*/\nfunction fuckingfucked(data){\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  try{if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\");",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/catpurr.js:68-97"
+    },
+    "799": {
+        "file_id": 171,
+        "content": "The code is using cheerio to parse an HTML file and select elements based on specific conditions. It checks if the selected element's href attribute includes a certain pattern, and logs a message if it does. The code also warns against using regex in this context and suggests considering other languages like Python or Lua.",
+        "type": "comment"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports a function called 'trust' from the 'tree' module and assigns its result to variable 'tbug'. Then it prints the value of 'tbug' to the console.",
+    "details": [
+        {
+            "comment": "This code imports a function called 'trust' from the 'tree' module and assigns its result to variable 'tbug'. Then it prints the value of 'tbug' to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/chumble/demo.py\":0-2",
+            "content": "from tree import trust\ntbug=trust()\nprint(tbug)"
+        }
+    ]
+}

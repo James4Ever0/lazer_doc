@@ -1,0 +1,10 @@
+{
+    "summary": "This script uses aria2c to download files from Baidu using custom cookies, limits the number of connections per server, and saves output to main.log. It searches for \"java+pyton\" on Baidu's search engine.",
+    "details": [
+        {
+            "comment": "This script uses aria2c to download files from Baidu using custom cookies, limits the number of connections per server, and saves output to main.log. It searches for \"java+pyton\" on Baidu's search engine.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/elephant.sh\":0-1",
+            "content": "#!/bin/bash\naria2c --load-cookies=baidu.cookies --max-connection-per-server=4 --min-split-size=1M \"http://www.baidu.com/s?word=java+pyton\" -o main.log"
+        }
+    ]
+}

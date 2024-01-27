@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the Map module and defines a function \"myMap\" that takes an integer, n, and creates a Map with keys from 1 to n, each mapped to a list containing only that key. The \"main\" function calls \"sing(myMap 3)\" which likely uses the created map for further processing.",
+    "details": [
+        {
+            "comment": "The code imports the Map module and defines a function \"myMap\" that takes an integer, n, and creates a Map with keys from 1 to n, each mapped to a list containing only that key. The \"main\" function calls \"sing(myMap 3)\" which likely uses the created map for further processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHappens.hs\":0-7",
+            "content": "import Data.Map (Map) \nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain =             sing(myMap 3)"
+        }
+    ]
+}

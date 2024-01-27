@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses the http module to make a GET request to Baidu search engine with encoded content and retrieves the response data. It handles both data chunks and end of response events, printing out the final data or any errors encountered.",
+    "details": [
+        {
+            "comment": "This code uses the http module to make a GET request to Baidu search engine with encoded content and retrieves the response data. It handles both data chunks and end of response events, printing out the final data or any errors encountered.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/node-quest.js\":0-20",
+            "content": "const http = require('http');\n// var iconv = require('iconv');  \ncontent=process.argv[2];                      var p = encodeURIComponent(content);          //iconv.encode(content, 'gb2312');    \n//console.log(p);\n//is this thing really needed?\nhttp.get('http://www.baidu.com/s?word='+p, (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});"
+        }
+    ]
+}

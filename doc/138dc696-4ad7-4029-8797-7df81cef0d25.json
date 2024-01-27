@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports a function \"returnAList\" from the \"getFromPickle\" module and defines a function \"awful\". It then opens a file named \"whyYouAreHere.log\" in write mode and writes each element of the list returned by \"returnAList()\" on a new line. The code appears to be writing data into a log file, likely for future processing or analysis.",
+    "details": [
+        {
+            "comment": "This code imports a function \"returnAList\" from the \"getFromPickle\" module and defines a function \"awful\". It then opens a file named \"whyYouAreHere.log\" in write mode and writes each element of the list returned by \"returnAList()\" on a new line. The code appears to be writing data into a log file, likely for future processing or analysis.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/shitAgain/simpleLauncher.py\":0-9",
+            "content": "from getFromPickle import returnAList\ndef awful(a,b):\n    with open(a,\"w+\") as fuck:\n        for k in b:\n            for k0 in k:\n                fuck.write(k0+\"\\n\")\nawful(\"whyYouAreHere.log\",returnAList())\n# 2 d"
+        }
+    ]
+}

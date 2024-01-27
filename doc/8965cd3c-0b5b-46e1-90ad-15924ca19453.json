@@ -1,0 +1,10 @@
+{
+    "summary": "The code declares a \"greeting\" variable with the value \"Goodbye World!\". It then defines an IO action \"main\", which prints the greeting using putStrLn function.",
+    "details": [
+        {
+            "comment": "The code declares a \"greeting\" variable with the value \"Goodbye World!\". It then defines an IO action \"main\", which prints the greeting using putStrLn function.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/fuckMe.hs\":0-5",
+            "content": "greeting :: String\ngreeting = \"Goodbye \" ++ \"World!\"\n-- asshole :: IO ()\nmain = do\n  putStrLn greeting"
+        }
+    ]
+}

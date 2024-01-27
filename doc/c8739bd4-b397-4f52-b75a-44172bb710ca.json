@@ -1,0 +1,10 @@
+{
+    "summary": "This code discusses the focus on three features (country, symbol, name) and mentions unicode-16 support being necessary. The discovery of a pattern where two unicode characters can be combined is highlighted as amazing. Some issues during chr() ord() conversion are mentioned but not considered a problem here. The need to separate combinations in case of a loop is emphasized.",
+    "details": [
+        {
+            "comment": "This code discusses the focus on three features (country, symbol, name) and mentions unicode-16 support being necessary. The discovery of a pattern where two unicode characters can be combined is highlighted as amazing. Some issues during chr() ord() conversion are mentioned but not considered a problem here. The need to separate combinations in case of a loop is emphasized.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/README\":0-10",
+            "content": "only three features are focused: country, symbol, name.\ninternal relationship could be derived later.\nnow we shall concern about the basic shits.\nthe problem is: unicode-16 support is needed.\nMaybe I have seen that? Did I? In the alphabet processing?\nI have discovered a new pattern here. Two fucking unicode can just be one. It is amazing.\nthere are some grey areas during chr() ord() conversion. But it is not the problem here.\nWHAT IF THERE IS A LOOP? MUST SEPARATE THESE COMBINATIONS NOW!"
+        }
+    ]
+}

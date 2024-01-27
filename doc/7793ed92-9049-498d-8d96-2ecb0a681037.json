@@ -1,0 +1,10 @@
+{
+    "summary": "This script fetches documentation for various web browsers (lynx, links, w3m, elinks, and links2) using the 'man' command. It then removes backslashes (\\), pipes the output to a column formatter (col -b), and saves each document in separate files within the \"docs\" directory.",
+    "details": [
+        {
+            "comment": "This script fetches documentation for various web browsers (lynx, links, w3m, elinks, and links2) using the 'man' command. It then removes backslashes (\\), pipes the output to a column formatter (col -b), and saves each document in separate files within the \"docs\" directory.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/websitegrep/doc-fetch.sh\":0-5",
+            "content": "#!/bin/bash\nman lynx | col -b | cat > docs/lynx.log\nman links | col -b | cat > docs/links.log\nman w3m | col -b | cat > docs/w3m.log\nman elinks | col -b | cat > docs/elinks.log\nman links2 | col -b | cat > docs/links2.log"
+        }
+    ]
+}

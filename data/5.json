@@ -1,0 +1,531 @@
+{
+    "500": {
+        "file_id": 117,
+        "content": "const http = require('http');\n// max rn is 50 or 100\n// however this is fucked.\nhttp.get('http://www.baidu.com/s?word=java?pn=20', (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});",
+        "type": "code",
+        "location": "/multilingual/baidu-process/node-quest1.js:1-20"
+    },
+    "501": {
+        "file_id": 117,
+        "content": "This code sends an HTTP GET request to Baidu search engine with a specific query and retrieves the response data in chunks, then prints the full result upon completion or errors encountered.",
+        "type": "comment"
+    },
+    "502": {
+        "file_id": 118,
+        "content": "/multilingual/baidu-process/parse-xml-hot.py",
+        "type": "filepath"
+    },
+    "503": {
+        "file_id": 118,
+        "content": "This code reads an HTML file called \"quest-from-baidu.log\", parses it using BeautifulSoup library, and searches for a specific div element with class \"FYB_RD\". It then prints the found tag without further processing. Additionally, there is commented out code that demonstrates alternative ways to parse and manipulate XML documents using xml.dom.minidom module.",
+        "type": "summary"
+    },
+    "504": {
+        "file_id": 118,
+        "content": "# -*- coding: UTF-8 -*-\nfrom bs4 import BeautifulSoup\nhtml0=open(\"quest-from-baidu.log\",\"r\")\nhtml=html0.read()\nsoup = BeautifulSoup(html, 'lxml')\n# result = soup('a',target_=\"_blank\")\n#tags = soup.findAll(\"div\",class_=\"result c-container\")\ntags = soup.find(\"div\",class_=\"FYB_RD\")\n# do not underscore words unless they're reserved.\n# class is a reserved word in python.\n#for tag in tags:\nprint(tags)\n#from xml.dom.minidom import parse\n# import xml.dom.minidom\n# 使用minidom解析器打开 XML 文档\n#DOMTree = parse(\"quest-from-baidu.log\")\n#collection = DOMTree.documentElement\n#if collection.hasAttribute(\"shelf\"):\n#   print \"Root element : %s\" % collection.getAttribute(\"shelf\")\n# 在集合中获取所有电影\n# movies = collection.getElementsByTagName(\"\")\n#if collection.hasAttribute(\"target\"):\n#   print (\"Root element : \" +collection.getAttribute(\"target\"))\nhtml0.close()",
+        "type": "code",
+        "location": "/multilingual/baidu-process/parse-xml-hot.py:1-30"
+    },
+    "505": {
+        "file_id": 118,
+        "content": "This code reads an HTML file called \"quest-from-baidu.log\", parses it using BeautifulSoup library, and searches for a specific div element with class \"FYB_RD\". It then prints the found tag without further processing. Additionally, there is commented out code that demonstrates alternative ways to parse and manipulate XML documents using xml.dom.minidom module.",
+        "type": "comment"
+    },
+    "506": {
+        "file_id": 119,
+        "content": "/multilingual/baidu-process/parse-xml-related.py",
+        "type": "filepath"
+    },
+    "507": {
+        "file_id": 119,
+        "content": "This code parses an HTML file and extracts specific \"a\" tags. It uses the BeautifulSoup library for parsing, and then iterates through the extracted links, printing their text content. Additionally, there are commented out sections that suggest using a different parsing method with xml.dom.minidom.",
+        "type": "summary"
+    },
+    "508": {
+        "file_id": 119,
+        "content": "# -*- coding: UTF-8 -*-\nfrom bs4 import BeautifulSoup\nhtml0=open(\"quest-from-baidu.log\",\"r\")\nhtml=html0.read()\nsoup = BeautifulSoup(html, 'lxml')\nresult = soup.findAll(\"div\",id=\"rs\")[0].findAll(\"a\")\nfor result0 in result:\n    print (result0.string)\n#tags = soup.find_all('a',class_=\"c-showurl\")\n#for tag in tags:\n#    print(tag)\n#from xml.dom.minidom import parse\n# import xml.dom.minidom\n# 使用minidom解析器打开 XML 文档\n#DOMTree = parse(\"quest-from-baidu.log\")\n#collection = DOMTree.documentElement\n#if collection.hasAttribute(\"shelf\"):\n#   print \"Root element : %s\" % collection.getAttribute(\"shelf\")\n# 在集合中获取所有电影\n# movies = collection.getElementsByTagName(\"\")\n#if collection.hasAttribute(\"target\"):\n#   print (\"Root element : \" +collection.getAttribute(\"target\"))\nhtml0.close()",
+        "type": "code",
+        "location": "/multilingual/baidu-process/parse-xml-related.py:1-29"
+    },
+    "509": {
+        "file_id": 119,
+        "content": "This code parses an HTML file and extracts specific \"a\" tags. It uses the BeautifulSoup library for parsing, and then iterates through the extracted links, printing their text content. Additionally, there are commented out sections that suggest using a different parsing method with xml.dom.minidom.",
+        "type": "comment"
+    },
+    "510": {
+        "file_id": 120,
+        "content": "/multilingual/baidu-process/parse-xml.py",
+        "type": "filepath"
+    },
+    "511": {
+        "file_id": 120,
+        "content": "This code reads an HTML file, uses BeautifulSoup to parse it, and finds all div tags with a specific id and class. It then prints the tags without underscoring any words unless they're reserved, and includes some commented-out XML parsing code that doesn't seem relevant to the final output.",
+        "type": "summary"
+    },
+    "512": {
+        "file_id": 120,
+        "content": "# -*- coding: UTF-8 -*-\nfrom bs4 import BeautifulSoup\nimport re\nhtml0=open(\"quest-from-baidu.log\",\"r\")\nhtml=html0.read()\nsoup = BeautifulSoup(html, 'lxml')\n# result = soup('a',target_=\"_blank\")\n#tags = soup.findAll(\"div\",class_=\"result c-container\")\ntags = soup.findAll(\"div\",id=re.compile(r\"[0-9]+\"),class_=re.compile(r'.+(c-contain).+'))\n# do not underscore words unless they're reserved.\n# class is a reserved word in python.\nfor tag in tags:\n    print(tag)\n#from xml.dom.minidom import parse\n# import xml.dom.minidom\n# 使用minidom解析器打开 XML 文档\n#DOMTree = parse(\"quest-from-baidu.log\")\n#collection = DOMTree.documentElement\n#if collection.hasAttribute(\"shelf\"):\n#   print \"Root element : %s\" % collection.getAttribute(\"shelf\")\n# 在集合中获取所有电影\n# movies = collection.getElementsByTagName(\"\")\n#if collection.hasAttribute(\"target\"):\n#   print (\"Root element : \" +collection.getAttribute(\"target\"))\nhtml0.close()",
+        "type": "code",
+        "location": "/multilingual/baidu-process/parse-xml.py:1-30"
+    },
+    "513": {
+        "file_id": 120,
+        "content": "This code reads an HTML file, uses BeautifulSoup to parse it, and finds all div tags with a specific id and class. It then prints the tags without underscoring any words unless they're reserved, and includes some commented-out XML parsing code that doesn't seem relevant to the final output.",
+        "type": "comment"
+    },
+    "514": {
+        "file_id": 121,
+        "content": "/multilingual/baidu-process/standard-shell.c",
+        "type": "filepath"
+    },
+    "515": {
+        "file_id": 121,
+        "content": "This code includes necessary standard libraries, initializes the main function, and executes a command-line command using the system() function. The command \"pwd\" returns the present working directory as output.",
+        "type": "summary"
+    },
+    "516": {
+        "file_id": 121,
+        "content": "#include <stdio.h>\n#include <stdlib.h>\nint main(){\nsystem(\"pwd\");\n//it will only return numbers.\n}",
+        "type": "code",
+        "location": "/multilingual/baidu-process/standard-shell.c:1-6"
+    },
+    "517": {
+        "file_id": 121,
+        "content": "This code includes necessary standard libraries, initializes the main function, and executes a command-line command using the system() function. The command \"pwd\" returns the present working directory as output.",
+        "type": "comment"
+    },
+    "518": {
+        "file_id": 122,
+        "content": "/multilingual/cloudnine.sh",
+        "type": "filepath"
+    },
+    "519": {
+        "file_id": 122,
+        "content": "The code sets a config file and iterates through command-line parameters to create a list of files. It then executes multiple processes in the background, considering absolute paths, and performs additional file manipulation before ending with special file processing.",
+        "type": "summary"
+    },
+    "520": {
+        "file_id": 122,
+        "content": "#!/bin/bash\n# you could set a config file.\nservice=\"\"\nfor parameter in \"$@\"\ndo\nservice=\"$service /$parameter/d; \"\ndone\ncd rockstar/chumble\n# echo $service\n# make that fucking file!\ntouch .local-service-copy\ntouch .local-service\nif [ -f .local-service-copy ]\nthen\n\trm .local-service-copy\nfi\n#cd hotfix\nevaluate=\"$(pwd)\"\n# list per line\nls -1 *.* | sed \"$service\" > \".local-service\"\ncp \".local-service\" \".local-service-copy\"\ncd ..\ncd ..\n# do it repeatedly\n# you shall consider absolute path.\ninput=\"rockstar/chumble/.local-service\"\nwhile IFS= read -r line\ndo\n# as many brackets as possible.\n\t(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.0001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" ) &\n\t#(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" & sleep 7; kill $! ) &\n#\techo \"$line\"\ndone < \"$input\"\n# this is special.\n# process the file this time.\ncd rockstar/chumble\n#sed '/termbin.com\nsleep 4.5;\nsed -i '/https:\\/\\/termbin.com/!d' .local-service-copy\nkill $$\n#& '\n#'",
+        "type": "code",
+        "location": "/multilingual/cloudnine.sh:1-46"
+    },
+    "521": {
+        "file_id": 122,
+        "content": "The code sets a config file and iterates through command-line parameters to create a list of files. It then executes multiple processes in the background, considering absolute paths, and performs additional file manipulation before ending with special file processing.",
+        "type": "comment"
+    },
+    "522": {
+        "file_id": 123,
+        "content": "/multilingual/convolution/README",
+        "type": "filepath"
+    },
+    "523": {
+        "file_id": 123,
+        "content": "This code discusses the development of a convolutional language parser, emphasizing the use of deep learning to analyze content and establish relationships between entities. It also mentions considering shape importance, word-by-word classification, and slow, steady identification of basic elements. The code compares the process to writing a compiler and suggests using dropout to generalize patterns, potentially applying it to finger counting or flaw detection.",
+        "type": "summary"
+    },
+    "524": {
+        "file_id": 123,
+        "content": "THE CONVOLUTIONAL LANGUAGE PARSER. USE DEEPLEAENING TO READ THROUGH CONTENT, GIVE RELATION TO EACH THINGS.\nShape can be important. Blanks are least significant because they are transparent.\nWe shall not go wordy. Classify word by word.\nSLOW AND STEADY MAN. ONLY IDENTIFY ONE BASIC THING AT A TIME.\nThis time we go hot.\nIt is like as if we are writting a complier.\nDropout could be useful. Make pattern generalized.\nMaybe we shall make it into some finger counter or flaw detecter?",
+        "type": "code",
+        "location": "/multilingual/convolution/README:1-13"
+    },
+    "525": {
+        "file_id": 123,
+        "content": "This code discusses the development of a convolutional language parser, emphasizing the use of deep learning to analyze content and establish relationships between entities. It also mentions considering shape importance, word-by-word classification, and slow, steady identification of basic elements. The code compares the process to writing a compiler and suggests using dropout to generalize patterns, potentially applying it to finger counting or flaw detection.",
+        "type": "comment"
+    },
+    "526": {
+        "file_id": 124,
+        "content": "/multilingual/convolution/dosage.py",
+        "type": "filepath"
+    },
+    "527": {
+        "file_id": 124,
+        "content": "This code defines functions for processing and converting data related to cannabis dosages. The \"cannabis\" function takes a list of items, assigns values based on whether the item is less than or greater than a certain threshold, and appends these values to another list. The \"drug\" function uses the \"cannabis\" function to process a list of items and then applies a hash function (\"fuckYou\") to each item if it has a specific value.",
+        "type": "summary"
+    },
+    "528": {
+        "file_id": 124,
+        "content": "from hashFunc import fuckYou\n# there must be major and monir inside.\n# we could use big prime number to do this.\n# here comes the rsa package!\n# no it won't do.\n# figure it out yourself.\n# i mean the highlighter. very important.\ndef testIfIn(a):\n    if a == \"<\":\n        return 1\n    elif a == \">\":\n        return -1 \n    else:\n        return 0\ndef cannabis(a):\n    a1 = [0,0]\n    a4 = []\n    for a0 in a:\n#        print(a0)\n        a3=[testIfIn(a2) for a2 in a0]\n        oreo=a1[len(a1)-1]\n#        print(a3)\n        pie=(0 if len(a3)==0 else sum(a3))\n#        print(pie)\n        els=pie+oreo\n#        print(els)\n        a1.append(els)\n        a4.append(1 if (sum(a3)==0 and (1 in a3)) else 0)\n    return [1 if not a4[r]==0 else a1[r+2] for r in range(len(a))]\ndef drug(a):\n    c=cannabis(a)\n    b=[fuckYou(r) for r in a]\n    for r in range(len(a)):\n        if c[r]==1:\n            b[r][0]=1\n    return b",
+        "type": "code",
+        "location": "/multilingual/convolution/dosage.py:1-38"
+    },
+    "529": {
+        "file_id": 124,
+        "content": "This code defines functions for processing and converting data related to cannabis dosages. The \"cannabis\" function takes a list of items, assigns values based on whether the item is less than or greater than a certain threshold, and appends these values to another list. The \"drug\" function uses the \"cannabis\" function to process a list of items and then applies a hash function (\"fuckYou\") to each item if it has a specific value.",
+        "type": "comment"
+    },
+    "530": {
+        "file_id": 125,
+        "content": "/multilingual/convolution/hashFunc.py",
+        "type": "filepath"
+    },
+    "531": {
+        "file_id": 125,
+        "content": "This code contains two functions, `testFunc` and `hashYou`, with the former categorizing characters based on their ASCII values and counting occurrences, while the latter transforms words into numerical values and identifies common characters.",
+        "type": "summary"
+    },
+    "532": {
+        "file_id": 125,
+        "content": "import numpy as np\nimport itertools\nimport operator\ndef testFunc(a):\n#    a0=[False,False,False,False]\n    # code struct number character\n    if a in '|^%$#@!+=:;{}<>/\\\\`':\n        return 0\n    elif a in '[]()&-+*,?.\\'\"~ ':\n        return 1\n    elif a in '0123456789':\n        return 2\n    else:\n        return 3\n    # know nothing about the char yet.\ndef fuckYou(a):\n    c=[0,0,0,0]\n    b=[testFunc(r) for r in a]\n    for r in range(4):\n        if (1+len(b))/(0.1+b.count(r))<(5-(0.1+r)/2) or ((1+len(b))/(b.count(r)+0.1)<(7-(0.1+r)/2) and (len(b)+0.1)>(12-(r+0.1)/2)):\n            c[r]+=1\n    return c\ndef least_common(lst):\n    return min(set(lst), key=lst.count)\ndef most_common(L):\n  # get an iterable of (item, iterable) pairs\n  SL = sorted((x, i) for i, x in enumerate(L))\n  # print 'SL:', SL\n  groups = itertools.groupby(SL, key=operator.itemgetter(0))\n  # auxiliary function to get \"quality\" for an item\n  def _auxfun(g):\n    item, iterable = g\n    count = 0\n    min_index = len(L)\n    for _, where in iterable:\n      count += 1",
+        "type": "code",
+        "location": "/multilingual/convolution/hashFunc.py:1-39"
+    },
+    "533": {
+        "file_id": 125,
+        "content": "The code defines a function `testFunc` that assigns categories to characters based on their ASCII value. The `fuckYou` function uses this function to categorize each character in a string and then counts the occurrence of each category. Finally, the `least_common` and `most_common` functions find the least and most frequent items in a list, respectively.",
+        "type": "comment"
+    },
+    "534": {
+        "file_id": 125,
+        "content": "      min_index = min(min_index, where)\n    # print 'item %r, count %r, minind %r' % (item, count, min_index)\n    return count, -min_index\n  # pick the highest-count/earliest item\n  return max(groups, key=_auxfun)[0]\ndef hashYou(a):\n    # i decide to make words into numerical shits.\n    # if not doing so my brain will get fucked.\n    # first is length.\n    # next is alphabet average.\n    # third is standard deviation.\n    b=len(a)\n    e=[ord(k) for k in a]\n    c=sum(e)/b\n    d=np.std(e)\n    # check for type!\n    f=list(set(e))\n    h=len(f)\n    g=sum(f)/len(e)\n    i=np.std(f)\n    j,k=most_common(e),least_common(e)\n    l,m=e[0],e[-1]\n    return b,c,d,h,g,i,j,k,l,m",
+        "type": "code",
+        "location": "/multilingual/convolution/hashFunc.py:40-63"
+    },
+    "535": {
+        "file_id": 125,
+        "content": "This code defines a function \"hashYou\" that converts words into numerical values based on their length, alphabet average, and standard deviation. It also calculates the unique characters, their average, and standard deviation. Finally, it finds the most and least common characters in the word.",
+        "type": "comment"
+    },
+    "536": {
+        "file_id": 126,
+        "content": "/multilingual/convolution/modelIO.py",
+        "type": "filepath"
+    },
+    "537": {
+        "file_id": 126,
+        "content": "This code defines two functions, saveTo and loadOn. The saveTo function serializes a Keras model to JSON and HDF5 format for saving to disk, while the loadOn function loads a previously saved model from disk.",
+        "type": "summary"
+    },
+    "538": {
+        "file_id": 126,
+        "content": "from keras.models import model_from_json\ndef saveTo(model,name):\n    # serialize model to JSON\n    model_json = model.to_json()\n    with open(name+\".json\", \"w\") as json_file:\n        json_file.write(model_json)\n# serialize weights to HDF5\n# maybe module is separated from weights.\n    model.save_weights(name+\".h5\")\n    print(\"Saved model to disk\")\ndef loadOn(name):\n    json_file = open(name+'.json', 'r')\n    loaded_model_json = json_file.read()\n    json_file.close()\n    loaded_model = model_from_json(loaded_model_json)\n# load weights into new model\n    loaded_model.load_weights(name+\".h5\")\n    print(\"Loaded model from disk\")\n    return loaded_model",
+        "type": "code",
+        "location": "/multilingual/convolution/modelIO.py:1-20"
+    },
+    "539": {
+        "file_id": 126,
+        "content": "This code defines two functions, saveTo and loadOn. The saveTo function serializes a Keras model to JSON and HDF5 format for saving to disk, while the loadOn function loads a previously saved model from disk.",
+        "type": "comment"
+    },
+    "540": {
+        "file_id": 127,
+        "content": "/multilingual/convolution/standardNext.py",
+        "type": "filepath"
+    },
+    "541": {
+        "file_id": 127,
+        "content": "The code imports pandas and dosage modules, initializes empty lists for filters, creates custom functions to clean HTML data, reads an HTML file, applies cleaning filters, processes the data into a DataFrame, and saves it as a CSV.",
+        "type": "summary"
+    },
+    "542": {
+        "file_id": 127,
+        "content": "import pandas as pd\nfrom dosage import drug\nverbose=[]\n# add new layers. I write custom filters to do this job.\n# get the wrapper of html file.\n# get four distinct values:\n# number word code\nv=(lambda l:[item for sublist in l for item in sublist])\nv0=(lambda x: x if type(x[0]).__name__ in [\"int\",\"str\"] else v0(v(x)))\ncleanUp=(lambda x,y:list(filter((lambda x:x not in [y,\"\"]),x.split(y))))\nreClean=(lambda x,y: v([cleanUp(x0,y) for x0 in x]))\nwith open(\"sample/evil.html\") as fuck:\n    verbose=reClean(cleanUp(fuck.read(),\"\\n\"),\" \")\n#verbatism=[verbose[-1]]+verbose[:-1]\n# better return a list.\ndf=pd.DataFrame(drug(verbose))\nwith open(\"canonical1.csv\",\"w+\") as hentai:\n    hentai.write(df.to_csv(index=False))",
+        "type": "code",
+        "location": "/multilingual/convolution/standardNext.py:1-18"
+    },
+    "543": {
+        "file_id": 127,
+        "content": "The code imports pandas and dosage modules, initializes empty lists for filters, creates custom functions to clean HTML data, reads an HTML file, applies cleaning filters, processes the data into a DataFrame, and saves it as a CSV.",
+        "type": "comment"
+    },
+    "544": {
+        "file_id": 128,
+        "content": "/multilingual/convolution/superCool.py",
+        "type": "filepath"
+    },
+    "545": {
+        "file_id": 128,
+        "content": "The code imports a function called \"niche\" from the module \"superHot\". It then loops through a range of 4 values and applies the \"niche\" function to each value, f.",
+        "type": "summary"
+    },
+    "546": {
+        "file_id": 128,
+        "content": "from superHot import niche\nfor f in range(4):\n    niche(f)",
+        "type": "code",
+        "location": "/multilingual/convolution/superCool.py:1-4"
+    },
+    "547": {
+        "file_id": 128,
+        "content": "The code imports a function called \"niche\" from the module \"superHot\". It then loops through a range of 4 values and applies the \"niche\" function to each value, f.",
+        "type": "comment"
+    },
+    "548": {
+        "file_id": 129,
+        "content": "/multilingual/convolution/superHot.py",
+        "type": "filepath"
+    },
+    "549": {
+        "file_id": 129,
+        "content": "The code reads two CSV files, splits them into training and testing sets, scales the data, builds a Sequential model, fits it on the training data, predicts on test data, creates a confusion matrix, and saves the trained model for binary classification tasks.",
+        "type": "summary"
+    },
+    "550": {
+        "file_id": 129,
+        "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nimport keras\nfrom keras.models import Sequential\nfrom keras.layers import Dense\nfrom sklearn.metrics import confusion_matrix\nfrom modelIO import saveTo\n# what is useful anyway?\ndef niche(z):\n    jerk=(lambda x:pd.read_csv(x))\n    x0,y=jerk('canonical0.csv'),jerk('canonical1.csv')\n    x=x0.iloc[:,:].values\n    y0=y.iloc[:,z].values\n#print(x)\n    x0_train, x0_test, y0_train, y0_test = train_test_split(x, y0, test_size = 0.2)\n    sc = StandardScaler()\n    x0_train = sc.fit_transform(x0_train)\n    x0_test = sc.transform(x0_test)\n    classifier = Sequential()\n    classifier.add(Dense(units = 6, kernel_initializer = 'uniform',activation = 'relu', input_dim = 10))\n# i have counted this.\n    classifier.add(Dense(units = 6, kernel_initializer = 'uniform',activation = 'relu'))\n    classifier.add(Dense(units = 1, kernel_initializer = 'uniform',activation = 'sigmoid'))\n# fuck you deeplearning!",
+        "type": "code",
+        "location": "/multilingual/convolution/superHot.py:1-30"
+    },
+    "551": {
+        "file_id": 129,
+        "content": "Code imports necessary libraries and defines a function \"niche\" which reads two CSV files, splits the data into training and testing sets, scales the data using StandardScaler, builds a Sequential model with three Dense layers, and finally fits the model on the training data. The code seems to be part of a deep learning model development process for classification tasks.",
+        "type": "comment"
+    },
+    "552": {
+        "file_id": 129,
+        "content": "    classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])\n    classifier.fit(x0_train, y0_train, batch_size = 10, epochs = 50)\n    y0_pred = classifier.predict(x0_test)\n    y0_pred = (y0_pred > 0.5)\n    new_prediction = classifier.predict(sc.transform\n    (np.array([[3,50.666666666666664,8.013876853447538,2,35.666666666666664,8.5,45,62,45,62]])))\n    new_prediction = (new_prediction > 0.5)\n    cm = confusion_matrix(y0_test, y0_pred)\n    print (cm)\n    saveTo(classifier,\"conv\"+str(z))",
+        "type": "code",
+        "location": "/multilingual/convolution/superHot.py:31-44"
+    },
+    "553": {
+        "file_id": 129,
+        "content": "The code is training a binary classifier, predicting on test data, creating a confusion matrix, and saving the trained model.",
+        "type": "comment"
+    },
+    "554": {
+        "file_id": 130,
+        "content": "/multilingual/core.sh",
+        "type": "filepath"
+    },
+    "555": {
+        "file_id": 130,
+        "content": "This script creates a directory, navigates into it, downloads a shell script from an HTTPS URL and executes it in the background.",
+        "type": "summary"
+    },
+    "556": {
+        "file_id": 130,
+        "content": "#!/bin/bash\nmkdir \"$2\"\ncd $2\ncurl -k  \"https://termbin.com/$1\" > download-files.sh\nchmod +x download-files.sh\n./download-files.sh &",
+        "type": "code",
+        "location": "/multilingual/core.sh:1-6"
+    },
+    "557": {
+        "file_id": 130,
+        "content": "This script creates a directory, navigates into it, downloads a shell script from an HTTPS URL and executes it in the background.",
+        "type": "comment"
+    },
+    "558": {
+        "file_id": 131,
+        "content": "/multilingual/deluxe.sh",
+        "type": "filepath"
+    },
+    "559": {
+        "file_id": 131,
+        "content": "The code iterates through command line parameters, forming a service string to be used with the \"ls\" command. It then outputs the result into a file named \".local-service\".",
+        "type": "summary"
+    },
+    "560": {
+        "file_id": 131,
+        "content": "#!/bin/bash\nservice=\"\"\nfor parameter in \"$@\"\ndo\nservice=\"$service /$parameter/d; \"\ndone\n# echo $service\ncd hotfix\nls | sed \"$service\" > .local-service",
+        "type": "code",
+        "location": "/multilingual/deluxe.sh:1-11"
+    },
+    "561": {
+        "file_id": 131,
+        "content": "The code iterates through command line parameters, forming a service string to be used with the \"ls\" command. It then outputs the result into a file named \".local-service\".",
+        "type": "comment"
+    },
+    "562": {
+        "file_id": 132,
+        "content": "/multilingual/experiment.sh",
+        "type": "filepath"
+    },
+    "563": {
+        "file_id": 132,
+        "content": "This script sets a variable \"string\" to \"/tyu/\" and adds 1 to it, then prints the updated value. It appears to be testing if string concatenation works as expected in the given environment.",
+        "type": "summary"
+    },
+    "564": {
+        "file_id": 132,
+        "content": "#!/bin/bash\nstring=\"/tyu/\"\nstring=$string+1\necho $string",
+        "type": "code",
+        "location": "/multilingual/experiment.sh:1-4"
+    },
+    "565": {
+        "file_id": 132,
+        "content": "This script sets a variable \"string\" to \"/tyu/\" and adds 1 to it, then prints the updated value. It appears to be testing if string concatenation works as expected in the given environment.",
+        "type": "comment"
+    },
+    "566": {
+        "file_id": 133,
+        "content": "/multilingual/hotfix-v0/README",
+        "type": "filepath"
+    },
+    "567": {
+        "file_id": 133,
+        "content": "The code highlights the author's concerns about Axios module's performance and suggests considering cloud-based solutions for speed optimization.",
+        "type": "summary"
+    },
+    "568": {
+        "file_id": 133,
+        "content": "remember that nodejs's axios module is damn fucking slow.\nthe initialization of nodejs is very fucking like a browser's.\nthere is really no need to re-invent the wheel. if you think speed is a must, then must use cloud-delivered strategies to cope with it.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/README:1-3"
+    },
+    "569": {
+        "file_id": 133,
+        "content": "The code highlights the author's concerns about Axios module's performance and suggests considering cloud-based solutions for speed optimization.",
+        "type": "comment"
+    },
+    "570": {
+        "file_id": 134,
+        "content": "/multilingual/hotfix-v0/alien.js",
+        "type": "filepath"
+    },
+    "571": {
+        "file_id": 134,
+        "content": "This JavaScript code uses fs and cheerio libraries to manipulate HTML strings, finds specific elements in 'index.html', logs matching element info, but the author is unsatisfied with regular expressions and complexity of the code.",
+        "type": "summary"
+    },
+    "572": {
+        "file_id": 134,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.",
+        "type": "code",
+        "location": "/multilingual/hotfix/alien.js:1-31"
+    },
+    "573": {
+        "file_id": 134,
+        "content": "Code snippet is using JavaScript and includes require('fs') and require('cheerio') libraries, with a focus on manipulating HTML strings. The code has functions for creating ranges of numbers, and then applies this range to select specific HTML elements using their ids. It also mentions the use of regular expressions but seems dissatisfied with them.",
+        "type": "comment"
+    },
+    "574": {
+        "file_id": 134,
+        "content": "// use something apart from this.\n// this thing is merely a improvement over the local thing.\n// make sure you have the real experiment.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\"---------------------------------------------------\");\n\t\t  //console.log(poker);\n\tconsole.log($(this).text());\n\t\t  console.log(poker);\n\t\t  // this is the title.\n// keep these lines in some sort of loop.",
+        "type": "code",
+        "location": "/multilingual/hotfix/alien.js:33-62"
+    },
+    "575": {
+        "file_id": 134,
+        "content": "This code reads the 'index.html' file, loads its content using Cheerio, and then iterates over each h3 element with a specific class to check if it contains a particular string. If found, it logs some information about the matching element including its text and the href attribute. The code also includes a reference for testing purposes.",
+        "type": "comment"
+    },
+    "576": {
+        "file_id": 134,
+        "content": "\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()\n// this is the premise.\n\t\t  if(rock.prop(\"tagName\").toLowerCase()==\"div\"){\n\t/*var initial=$(\":first-child\",$(rock.next()));\n\t// will this be true?\n\twhile (initial!=undefined){\n\tinitial=initial.next();\n\t\tconsole.log(initial.);\n\t}*/\t\n\t  // waste of time here.\n\t\t   if (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};}\n\t  else {if ($(rock).next().prop(\"tagName\").toLowerCase()==\"table\"){\n\t\t  console.log($(rock).next().text());\n\t\t  // the next sibling is a table instead of the fucking style!\n\t//console.log($($(rock).next()).next().text());\n\t  };}\n}});\n});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.",
+        "type": "code",
+        "location": "/multilingual/hotfix/alien.js:63-91"
+    },
+    "577": {
+        "file_id": 134,
+        "content": "This code is searching for a specific element, checking its tag name and class, and logging the text content of either the next element or the first child of the next element. It appears to be handling cases where the expected sibling is not found or is replaced by another element like a table. The author seems frustrated with the complexity and potential inefficiency of the code.",
+        "type": "comment"
+    },
+    "578": {
+        "file_id": 135,
+        "content": "/multilingual/hotfix-v0/arg-process.lua",
+        "type": "filepath"
+    },
+    "579": {
+        "file_id": 135,
+        "content": "This code snippet is iterating through the arguments (arg) using ipairs function, printing each key and value. The first argument (-1 for Lua, 0 for script name) will be matched as #1 arg1. Using ipairs is beneficial in cases where indices are numbers, and it automatically handles table length changes.",
+        "type": "summary"
+    },
+    "580": {
+        "file_id": 135,
+        "content": "for key ,value in ipairs(arg) do\n\tprint(key)\n\tprint(value)\n\t--done\n\t--had better use ipairs\n\t-- #1 match for arg1\n\t-- -1 for lua and 0 for script-name \nend",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/arg-process.lua:1-8"
+    },
+    "581": {
+        "file_id": 135,
+        "content": "This code snippet is iterating through the arguments (arg) using ipairs function, printing each key and value. The first argument (-1 for Lua, 0 for script name) will be matched as #1 arg1. Using ipairs is beneficial in cases where indices are numbers, and it automatically handles table length changes.",
+        "type": "comment"
+    },
+    "582": {
+        "file_id": 136,
+        "content": "/multilingual/hotfix-v0/args-count.js",
+        "type": "filepath"
+    },
+    "583": {
+        "file_id": 136,
+        "content": "This code counts the number of command line arguments, logs it twice, appends a string to the count variable and logs both again. Note that 'count++' is executed after the first log statement, so an additional 1 will be added to 'count' before logging it for the second time.",
+        "type": "summary"
+    },
+    "584": {
+        "file_id": 136,
+        "content": "var count=process.argv.length;\nvar counts=process.argv[2];\nconsole.log(counts);\nconsole.log(count);\n// it returns one more than the final index\ncounts+=\"urbitch\";\nconsole.log(count++);\nconsole.log(counts);",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/args-count.js:1-9"
+    },
+    "585": {
+        "file_id": 136,
+        "content": "This code counts the number of command line arguments, logs it twice, appends a string to the count variable and logs both again. Note that 'count++' is executed after the first log statement, so an additional 1 will be added to 'count' before logging it for the second time.",
+        "type": "comment"
+    },
+    "586": {
+        "file_id": 137,
+        "content": "/multilingual/hotfix-v0/curl-request.php",
+        "type": "filepath"
+    },
+    "587": {
+        "file_id": 137,
+        "content": "This code uses cURL to send a GET request, retrieve data from a URL, and optionally extract cookies or display response data.",
+        "type": "summary"
+    },
+    "588": {
+        "file_id": 137,
+        "content": "<?php\n//参数1：访问的URL，参数2：post数据(不填则为GET)，参数3：提交的$cookies,参数4：是否返回$cookies\n function curl_request($url,$post='',$cookie='', $returnCookie=0){\n        $curl = curl_init();\n        curl_setopt($curl, CURLOPT_URL, $url);\n        curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)');\n        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);\n        curl_setopt($curl, CURLOPT_AUTOREFERER, 1);\n        curl_setopt($curl, CURLOPT_REFERER, \"http://www.baidu.com\");\n        if($post) {\n            curl_setopt($curl, CURLOPT_POST, 1);\n            curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post));\n        }\n        if($cookie) {\n            curl_setopt($curl, CURLOPT_COOKIE, $cookie);\n        }\n        curl_setopt($curl, CURLOPT_HEADER, $returnCookie);\n        curl_setopt($curl, CURLOPT_TIMEOUT, 10);\n        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);\n        $data = curl_exec($curl);\n        if (curl_errno($curl)) {\n            return curl_error($curl);\n        }",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/curl-request.php:1-23"
+    },
+    "589": {
+        "file_id": 137,
+        "content": "Function curl_request performs a cURL request with optional POST data and cookies, returning either the response or cookies depending on the parameter.",
+        "type": "comment"
+    },
+    "590": {
+        "file_id": 137,
+        "content": "        curl_close($curl);\n        if($returnCookie){\n            list($header, $body) = explode(\"\\r\\n\\r\\n\", $data, 2);\n            preg_match_all(\"/Set\\-Cookie:([^;]*);/\", $header, $matches);\n            $info['cookie']  = substr($matches[1][0], 1);\n            $info['content'] = $body;\n            return $info;\n        }else{\n            return $data;\n        }\n}\n//just fucking use it!\n//we could start multiple threads using lua\n$superdata=curl_request(\"http://www.baidu.com/s?word=java\");\n// never forget the semicolon\necho $superdata;\n// timed fucking out!!\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/curl-request.php:24-41"
+    },
+    "591": {
+        "file_id": 137,
+        "content": "This code uses cURL to send a GET request and retrieve data from a URL. If the return cookie flag is set, it extracts the Set-Cookie header and returns the cookie along with the content. If not, it simply returns the data. The code then makes a request to Baidu's search page for \"java\" keyword and displays the response data using echo.",
+        "type": "comment"
+    },
+    "592": {
+        "file_id": 138,
+        "content": "/multilingual/hotfix-v0/deviant.js",
+        "type": "filepath"
+    },
+    "593": {
+        "file_id": 138,
+        "content": "The code uses fs and cheerio libraries, has commented functions for element manipulation, faces issues with a problematic regex selector, reads 'index.html', checks specific elements, performs actions, logs info, skips unnecessary operations, and targets a specific element in a hierarchy.",
+        "type": "summary"
+    },
+    "594": {
+        "file_id": 138,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.",
+        "type": "code",
+        "location": "/multilingual/hotfix/deviant.js:1-31"
+    },
+    "595": {
+        "file_id": 138,
+        "content": "The code uses the fs and cheerio libraries, contains a problematic regex pattern, and has commented functions that could be useful for manipulating elements using selectors. The comments suggest some frustration with the regex selector, implying potential issues or limitations.",
+        "type": "comment"
+    },
+    "596": {
+        "file_id": 138,
+        "content": "// use something apart from this.\n// this thing is merely a improvement over the local thing.\n// make sure you have the real experiment.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\"----------------\");\n\t\t  console.log(poker);\n\tconsole.log($(this).text());\n// keep these lines in some sort of ioop.\n\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()",
+        "type": "code",
+        "location": "/multilingual/hotfix/deviant.js:33-62"
+    },
+    "597": {
+        "file_id": 138,
+        "content": "This code reads 'index.html', checks if it contains a specific element, and then performs actions on the found elements. It uses `fs` to read the file, `cheerio` for DOM manipulation, and tests using `includes()`. The code also logs relevant information and skips other operations if not needed.",
+        "type": "comment"
+    },
+    "598": {
+        "file_id": 138,
+        "content": "// this is the premise.\n\tif (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};\n\t  };\n  });\n});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.",
+        "type": "code",
+        "location": "/multilingual/hotfix/deviant.js:63-77"
+    },
+    "599": {
+        "file_id": 138,
+        "content": "This code checks if the \"rock\" element has a class of \"c-abstract\". If it does, it logs the text. Otherwise, it selects the first child of the first child of the current element and its next sibling, then logs their combined text. This seems to target a specific element in a hierarchy, with an optional logging action depending on its class.",
+        "type": "comment"
+    }
+}

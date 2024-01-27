@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a file named \"makeDatabase.py\", extracts table, constraint and column names using regular expressions, filters empty strings, transforms the extracted information into a list of column names, and prints the results for each step of the process. The code demonstrates meta-programming and utilizes string manipulation and regular expression matching in Python.",
+    "details": [
+        {
+            "comment": "This code reads a file named \"makeDatabase.py\", extracts table, constraint and column names using regular expressions, filters empty strings, transforms the extracted information into a list of column names, and prints the results for each step of the process. The code demonstrates meta-programming and utilizes string manipulation and regular expression matching in Python.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_refixed.py\":0-20",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nwith open(\"makeDatabase.py\",\"r\") as s:\n    rk=s.read().replace('\\n',' ')\n#    print(rk)\n    so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n    print(so)\n    sd=re.match(r'^\\w+',so).group(0)\n    print(sd)\n    rn=so.replace(sd,'')\n    print(rn)\n    sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n    print(sv)\n    svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n    lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n    lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n    print(svd)\n    svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n    print(svg)\n    # sample of metacoding\n    # I need transformation now!"
+        }
+    ]
+}

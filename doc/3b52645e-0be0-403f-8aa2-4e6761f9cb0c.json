@@ -1,0 +1,15 @@
+{
+    "summary": "The code imports \"re\", splits a multiline string, sorts ASCII values, creates a list of tuples with ASCII, count, and indices, and prints the original string length and occurrences of each item in superlist3.",
+    "details": [
+        {
+            "comment": "The code imports the \"re\" module and defines a string variable \"u\" containing a multiline text. The code then splits the string by newlines, converts each character in the string to its ASCII value, sorts these values, and stores them in separate lists. It then creates a list of tuples, where each tuple contains the ASCII value, count of the ASCII value in the original string, and the indices where that ASCII value appears in the string. Finally, it prints the length of the original string and iterates over the sorted list of ASCII values, creating a list of tuples containing the ASCII value, its count, and the indices where it appears in the string.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/cinders.py\":0-28",
+            "content": "import re\nu = \"\"\"\\t hello you  mother fucker     \\t     fuck you bitch      bitch      23443243234  23 42 35 23 5 26  643                        we shall split this fuck by the motherfucking newline should we?\n but you have    fucking told me that you can find that shit somewhere didn't you?\n oh calm the fuck down.          [the fucking tab is invisible here.]\n\"\"\"\n#verbose=re.compile(r'\\b')\n# print (u.split('\\n'));\n#print(set(u))\n# the most fucking efficient way of doing this fuck.\nsuperset=set(u)\n# make it numeric.\n#x=\"\u6492\"\n#print(ord(x))\n#print(chr(ord(x)))\nsuperlist0=list(map(lambda x: ord(x),superset))\nsuperlist1=sorted(superlist0)\nsuperlist2=list(map(lambda x: chr(x),superlist0))\nsuperlist3=sorted(superlist2)\n#superlist3=list(map(lambda x: chr(x),superlist1))\n# superfilter=filter(lambda x: )\n#print(superlist3)\n# better use indexes.\nprint(len(u))\nfor index0 in range(len(superlist3)):\n    item=superlist3[index0]\n    location=[pos for pos, char in enumerate(u) if char == item]\n    superlist3[index0]=[item,u.count(item),location]"
+        },
+        {
+            "comment": "This code prints the entire superlist3 list and then iterates over it, counting occurrences of each item in the list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/cinders.py\":29-36",
+            "content": "print(superlist3)\n#number is 35 here. so the max index is 35.\n#print(superlist3[34])\n#print(superlist3[35])\n# so the range function could be safe here.\n#for item in superlist3:\n#    item=[item,u.count(item)]"
+        }
+    ]
+}

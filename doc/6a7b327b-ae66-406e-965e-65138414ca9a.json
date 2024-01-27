@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports numpy and talib libraries, then converts a list of real numbers to a double array using numpy. It prints the close array, type of close array, and Bollinger Bands output. It also calculates Simple Moving Average (output0), exponential moving average (output), and Moving Average Convergence/Divergence (output1). It prints these outputs and their types. The code seems to be related to technical analysis for stock market indicators.",
+    "details": [
+        {
+            "comment": "The code imports numpy and talib libraries, then converts a list of real numbers to a double array using numpy. It prints the close array, type of close array, and Bollinger Bands output. It also calculates Simple Moving Average (output0), exponential moving average (output), and Moving Average Convergence/Divergence (output1). It prints these outputs and their types. The code seems to be related to technical analysis for stock market indicators.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/breast.py\":0-34",
+            "content": "import numpy\nimport talib\n_list=[0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,0,0,0,1,1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1]\n# real to double\nclose = numpy.array(list(map((lambda x : float(x)),_list)))\nprint(close)\nprint(\"-----spliter-----\")\nprint(type(close))\noutput0 = talib.SMA(close)\nfrom talib import MA_Type\nupper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)\n# I really don't know what is going on.\noutput = talib.MOM(close, timeperiod=5)\n# fuck me okay???\nprint(output0)\nprint(type(output0))\nprint(\"-----spliter-----\")\nprint(output)\nprint(type(output))\noutput1=talib.MAMA(close)\n# you better check the wrapper first.\nprint(\"-----spliter-----\")\nprint(output1)"
+        }
+    ]
+}

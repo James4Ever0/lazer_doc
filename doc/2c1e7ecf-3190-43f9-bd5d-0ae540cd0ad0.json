@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses the 'child_process' module to execute a Lua script, specifically 'larock.lua', with command line arguments. The stdout (standard output) and stderr (standard error) are captured and logged. The stderr is used to display progress information that is currently delayed.",
+    "details": [
+        {
+            "comment": "This code uses the 'child_process' module to execute a Lua script, specifically 'larock.lua', with command line arguments. The stdout (standard output) and stderr (standard error) are captured and logged. The stderr is used to display progress information that is currently delayed.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/node-exec.js\":0-12",
+            "content": "const { exec } = require('child_process');\nexec('lua luarock.lua \"http://www.baidu.com/s?word=java+python\" ', (err, stdout, stderr) => {\n  if (err) {\n    // node couldn't execute the command\n    return;\n  }\n  // the *entire* stdout and stderr (buffered)\n  console.log(`stdout: ${stdout}`);\n  //console.log(`stderr: ${stderr}`);\n\t//the stderr is for progress this time.\n\t//it is still predelayed.\n});"
+        }
+    ]
+}

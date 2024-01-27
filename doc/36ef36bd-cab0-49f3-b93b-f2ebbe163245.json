@@ -1,0 +1,10 @@
+{
+    "summary": "This script creates a new shell script from 'make*' files, adds the shebang (#!/bin/bash) at the beginning, and makes it executable.",
+    "details": [
+        {
+            "comment": "This script creates a new shell script from 'make*' files, adds the shebang (#!/bin/bash) at the beginning, and makes it executable.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/showMeMore.sh\":0-5",
+            "content": "#!/bin/bash\nls  -1 make* | awk '{print\"python3 \"$0}' > newShit.sh\n# this IS not GNU sed.\nsed -i '1i #!/bin/bash' newShit.sh\nchmod +x newShit.sh"
+        }
+    ]
+}

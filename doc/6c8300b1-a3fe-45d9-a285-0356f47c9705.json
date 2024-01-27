@@ -1,0 +1,10 @@
+{
+    "summary": "This code opens a file named \"core.log\" in read mode, reads its contents into the variable \"fate\", then opens another file named \"uponUs.log\" in write mode. It uses an external command (ls) to list files and directories, writes the output to \"uponUs.log\", closes both files.",
+    "details": [
+        {
+            "comment": "This code opens a file named \"core.log\" in read mode, reads its contents into the variable \"fate\", then opens another file named \"uponUs.log\" in write mode. It uses an external command (ls) to list files and directories, writes the output to \"uponUs.log\", closes both files.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/change_direction.lua\":0-7",
+            "content": "fileFuck=io.open(\"core.log\",\"r\")\n-- YOU ARE DEAD\nnothingLeft=io.open(\"uponUs.log\",\"w\")\nhandle=io.popen(\"ls \"..fileFuck:read())\nfate=handle:read(\"*a\")\nnothingLeft:write(fate)\nfileFuck:close()\nnothingLeft:close()"
+        }
+    ]
+}

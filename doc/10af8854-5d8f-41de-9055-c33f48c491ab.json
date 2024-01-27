@@ -1,0 +1,10 @@
+{
+    "summary": "This Haskell code imports necessary modules, defines a function \"myMap\" which creates a map from integers to lists of integers based on input n, and uses \"getArgs\" in the main function to retrieve command-line arguments before printing them.",
+    "details": [
+        {
+            "comment": "This Haskell code imports necessary modules, defines a function \"myMap\" which creates a map from integers to lists of integers based on input n, and uses \"getArgs\" in the main function to retrieve command-line arguments before printing them.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly_fixed.hs\":0-8",
+            "content": "import Data.Map (Map) \nimport System.Environment\nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain =  getArgs >>= print"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This script is likely a simple bash script containing four commands executed in order. The first line sets the script to be interpreted by Bash, and then it echoes the strings \"shit\", \"fuck\", and \"hell\" to the console without any newline characters, resulting in all three strings being printed on a single line.",
+    "details": [
+        {
+            "comment": "This script is likely a simple bash script containing four commands executed in order. The first line sets the script to be interpreted by Bash, and then it echoes the strings \"shit\", \"fuck\", and \"hell\" to the console without any newline characters, resulting in all three strings being printed on a single line.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/theway.sh\":0-1",
+            "content": "#!/bin/bash\necho \"shit\"\"fuck\"\"\"\"\"\"\"\"\"\"hell\""
+        }
+    ]
+}

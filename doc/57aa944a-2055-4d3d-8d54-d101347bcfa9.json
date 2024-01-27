@@ -1,0 +1,10 @@
+{
+    "summary": "The code iterates through command line parameters, forming a service string to be used with the \"ls\" command. It then outputs the result into a file named \".local-service\".",
+    "details": [
+        {
+            "comment": "The code iterates through command line parameters, forming a service string to be used with the \"ls\" command. It then outputs the result into a file named \".local-service\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/deluxe.sh\":0-10",
+            "content": "#!/bin/bash\nservice=\"\"\nfor parameter in \"$@\"\ndo\nservice=\"$service /$parameter/d; \"\ndone\n# echo $service\ncd hotfix\nls | sed \"$service\" > .local-service"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code is importing the 'inferior-shell' library and executes the 'ls' command, displaying output as a string. Finally, it quits the program.",
+    "details": [
+        {
+            "comment": "The code is importing the 'inferior-shell' library and executes the 'ls' command, displaying output as a string. Finally, it quits the program.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/character-shell.lisp\":0-2",
+            "content": "(ql:quickload :inferior-shell)\n(print (inferior-shell:run \"ls\" :output :string))\n(quit)"
+        }
+    ]
+}

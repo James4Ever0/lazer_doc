@@ -1,0 +1,10 @@
+{
+    "summary": "The code generates a Mandelbrot set image using the Mandelbrot function with NumPy and Numba. It defines two JIT-compiled functions, 'mandelbrot' and 'mandelbrot_set4', to calculate the escape time for each pixel in the specified range and returns the resulting image as a tuple of arrays. The provided timing functions measure the performance of the 'mandelbrot_set4' function with different input parameters.",
+    "details": [
+        {
+            "comment": "The code generates a Mandelbrot set image using the Mandelbrot function with NumPy and Numba. It defines two JIT-compiled functions, 'mandelbrot' and 'mandelbrot_set4', to calculate the escape time for each pixel in the specified range and returns the resulting image as a tuple of arrays. The provided timing functions measure the performance of the 'mandelbrot_set4' function with different input parameters.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/fractial/manner.py\":0-32",
+            "content": "from numba import jit\nimport numpy as np\nfrom timeit import timeit\n@jit\ndef mandelbrot(creal,cimag,maxiter):\n    real = creal\n    imag = cimag\n    for n in range(maxiter):\n        real2 = real*real\n        imag2 = imag*imag\n        if real2 + imag2 > 4.0:\n            return n\n        imag = 2* real*imag + cimag\n        real = real2 - imag2 + creal       \n    return 0\n@jit\ndef mandelbrot_set4(xmin,xmax,ymin,ymax,width,height,maxiter):\n    r1 = np.linspace(xmin, xmax, width)\n    r2 = np.linspace(ymin, ymax, height)\n    n3 = np.empty((width,height))\n    for i in range(width):\n        for j in range(height):\n            n3[i,j] = mandelbrot(r1[i],r2[j],maxiter)\n    return (r1,r2,n3)\ntimeit((lambda: mandelbrot_set4(-2.0,0.5,-1.25,1.25,1000,1000,80)),number=100)\nprint(\"-----spliter-----\")\ntimeit((lambda: mandelbrot_set4(-0.74877,-0.74872,0.06505,0.06510,1000,1000,2048)),number=100)"
+        }
+    ]
+}

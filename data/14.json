@@ -1,0 +1,534 @@
+{
+    "1400": {
+        "file_id": 246,
+        "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\ngenius()\n\"\"\"blitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]\nprint(blitz5)\"\"\"\n# sentence.\n# geniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiius()!!!\n# multithreading is not that hard.\ngenius()\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\ngenius()\nprint(it0)\ngenius()\nprint(it0[0])\ngenius()\ntoothpaste=list(filter((lambda x: x[1] in it0[1]),blitz))\n# turns out to be a list containing the same shit.\n# what is the candidate list?\n# first, unsorted.\n# then sorted.\n# you shall add another thing onto this.\n# first rule: similar things first.\n# make a variable renamer\nprint(toothpaste)\n# people you wouldn't think!\n\"\"\"\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\ngenius()\n\"\"\"\n\"\"\"\ngenius()\nheuristic0=list(filter((lambda x: x[] in it0[0]),blitz))\nprint(heuristic0)\n\"\"\"\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/pet.py:133-184"
+    },
+    "1401": {
+        "file_id": 246,
+        "content": "The code appears to be manipulating data from a database and performing various operations, such as filtering, sorting, and grouping. It seems to involve multiple lists and possibly some natural language processing. The code contains a lot of print statements but lacks proper commenting making it difficult to understand the exact functionality or purpose. Additionally, there is a mention of a function called \"genius()\", which is not defined in this section of the code, so its role is unclear. Overall, it seems like a work-in-progress with various pieces of functionality that may be part of a larger project.",
+        "type": "comment"
+    },
+    "1402": {
+        "file_id": 246,
+        "content": "# append the things onto some list.\ncctv=[]\njumpcut=(lambda fuck:cctv.append(fuck))\n# does this work?\njumpcut(toothpaste)\ngenius()\nhiphop=(lambda blitzer,blitzIndexer,item,indexer: list(filter((lambda x: x[blitzIndexer] in item[indexer]),blitzer)))\n#heuristic=list(filter((lambda x: x[1] in it0[0]),blitz))\nheuristic=hiphop(blitz,1,it0,0)\njumpcut(heuristic)\n# number 0 and 1 are for symbols.\nranger=(lambda fuckYouAsshole: range(len(fuckYouAsshole)))\n# I hate this world.\nprint(heuristic)\ngenius()\nfor f in ranger(state0):\n    state1=hiphop(blitz,1,state0,f)\n    jumpcut(state1)\n    print(state1)\n    genius()\n    # shameless.\nprint(cctv)\n#print(state2)\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.\n# use the cctv.\ngenius()\ntrycatch=len(cctv)\ncandidate=[cctv[0],cctv[1]]\nsubcan=[p for q,p in enumerate(cctv) if q>1]\n# swap the fuck!\nprint(subcan)\ngenius()\nprint(candidate)\n# first, perform a linear sort.\n# get some random stuff?\n# fuck yeah! overflow!\nsorty=(lambda x,y :2*(y-x) if y>x else 2*(x-y+0.5))",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/pet.py:186-231"
+    },
+    "1403": {
+        "file_id": 246,
+        "content": "The code appears to perform a series of operations on a list, filtering and appending elements based on specific criteria. It then prints the resulting lists and performs further processing before potentially sorting and printing them again. The purpose or context of these operations is unclear without additional information about the variables and their intended use.",
+        "type": "comment"
+    },
+    "1404": {
+        "file_id": 246,
+        "content": "# this is rather simple.\n# but it has two things inside.\n# simple.\nlogic=(lambda liskr, skr,indexer: list(sorted(liskr,key=(lambda x: sorty(x[indexer],skr)))))\n# make you body bounce.\n# name, pos, pi, si, ssi, wi\n# use separator first!\n# fuck you mother fucker!\n# U R BITCH!\ngenius()\nprint(candidate[0][0])\ngenius()\ngnu=logic(subcan[0],candidate[0][0][5],5)\nprint(gnu)\n\"\"\"\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\ngenius()\n\"\"\"\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()\n# from general to specific to general.",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/pet.py:232-263"
+    },
+    "1405": {
+        "file_id": 246,
+        "content": "The code seems to contain a mix of different functions and operations. First, it defines a sorting logic using a lambda function. Then, it performs some data manipulation on a list called \"candidate\". It also uses a nested list comprehension to create lists named \"blitz8\" and \"blitz9\", possibly for data filtering or sorting purposes. The code ends by potentially writing some data to a file named \"hello.log\".",
+        "type": "comment"
+    },
+    "1406": {
+        "file_id": 247,
+        "content": "/multilingual/rockstar/chumble/radical/beast.py",
+        "type": "filepath"
+    },
+    "1407": {
+        "file_id": 247,
+        "content": "The code imports uuid and ast modules, defines shallow, realshit, boom, and ducky functions, uses Fisher-Yates algorithm to shuffle 'arr', and prints the results of realshit and ducky.",
+        "type": "summary"
+    },
+    "1408": {
+        "file_id": 247,
+        "content": "import uuid, ast, time\nfuckme=1\ndef shallow():\n    global fuckme\n    fuckme+=0.1\n    return fuckme\ndef realshit():\n    fuck=uuid.uuid4().hex\n    meow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\n    cat=str(meow)\n#print(cat)\n#print(\"normal cat\")\n    ranger=(lambda x: range(len(x)))\n    fuckall=list(map((lambda x:int(x)+shallow()),list(cat)))\n#for m in ranger(cat):\n#    fuckall.append(\"\")\n    for k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n        vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n        init=vendetta%(k+1)\n        fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\n    return meow,fuckall\ndef boom(hexer):\n    # division by zero! you fucking genius!\n    hex0,hex1=hexer()\n    print(hex0)\n    print(\"-----spliter-----\")\n    print(hex1)\n    reminder=len(hex1)\n    for x in range(reminder//2):\n        hex0=(hex0/hex1[2*x])*hex1[2*x+1]\n    if reminder%2==1:\n        hex0=hex0/hex1[-1]\n    return hex0\nducky=boom(realshit)\nprint(\"-----spliter-----\")\nprint(ducky)",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/beast.py:1-41"
+    },
+    "1409": {
+        "file_id": 247,
+        "content": "The code imports uuid and ast modules. It defines a shallow function that updates a global variable 'fuckme', and a realshit function that converts a hex string to decimal using lambda functions and map. A boom function divides a hex number by another, and ducky stores the result of calling realshit and boom functions. Finally, it prints the results of realshit and ducky.",
+        "type": "comment"
+    },
+    "1410": {
+        "file_id": 247,
+        "content": "#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/beast.py:42-46"
+    },
+    "1411": {
+        "file_id": 247,
+        "content": "Shuffles array 'arr' using Fisher-Yates algorithm with time(NULL) as seed and swaps 'fuck' element randomly.",
+        "type": "comment"
+    },
+    "1412": {
+        "file_id": 248,
+        "content": "/multilingual/rockstar/chumble/radical/chord.py",
+        "type": "filepath"
+    },
+    "1413": {
+        "file_id": 248,
+        "content": "The code imports modules, defines functions like \"shallow\", \"realshit\" and \"boom\". It generates a hexadecimal number, shuffles its digits, applies calculations and prints results. The code snippet shuffles an array by swapping elements randomly until sorted.",
+        "type": "summary"
+    },
+    "1414": {
+        "file_id": 248,
+        "content": "import uuid, ast, time\nfuckme=1\ndef shallow():\n    global fuckme\n    fuckme+=0.13\n    fuckme=fuckme**1.01273249\n    return fuckme\ndef realshit():\n    fuck=uuid.uuid4().hex\n    meow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\n    cat=str(meow)\n#print(cat)\n#print(\"normal cat\")\n    ranger=(lambda x: range(len(x)))\n    fuckall=list(map((lambda x:int(x)+shallow()),list(cat)))\n#for m in ranger(cat):\n#    fuckall.append(\"\")\n    for k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n        vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n        init=vendetta%(k+1)\n        fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\n    return meow,fuckall\ndef boom(hexer):\n    # division by zero! you fucking genius!\n    hex0,hex1=hexer()\n    print(hex0)\n    print(\"-----spliter-----\")\n    print(hex1)\n    reminder=len(hex1)\n    for x in range(reminder//2):\n        hex0=(hex0/hex1[2*x])*hex1[2*x+1]\n    if reminder%2==1:\n        hex0=hex0/hex1[-1]\n    return hex0\nducky=boom(realshit)\nprint(\"-----spliter-----\")",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/chord.py:1-41"
+    },
+    "1415": {
+        "file_id": 248,
+        "content": "The code defines functions that perform various calculations and data manipulations. It includes importing modules for generating UUIDs, evaluating literals, and working with time. The \"shallow\" function increments a global variable by a specific value. The \"realshit\" function generates a hexadecimal number, converts it to a decimal number, and shuffles the digits of the original hex number using nested lambda functions. The \"boom\" function applies a calculation on the results of \"realshit\" and returns the final result. Finally, the code calls \"boom\" with the \"realshit\" function as an argument and prints some intermediate and final values.",
+        "type": "comment"
+    },
+    "1416": {
+        "file_id": 248,
+        "content": "print(ducky)\n#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/chord.py:42-47"
+    },
+    "1417": {
+        "file_id": 248,
+        "content": "Code snippet shuffles an array by swapping elements randomly until sorted.",
+        "type": "comment"
+    },
+    "1418": {
+        "file_id": 249,
+        "content": "/multilingual/rockstar/chumble/radical/hexeval.sh",
+        "type": "filepath"
+    },
+    "1419": {
+        "file_id": 249,
+        "content": "This code is a Bash script that installs the \"ast\" package for both Python 2 and Python 3. The shebang line (#!/bin/bash) indicates the script should be run using the Bash shell. The first comment (#ls -lt) may have been a remnant of debugging or previous commands. The second comment suggests using a parsing strategy from \"jieba\" for English word segmentation tasks. This script installs the \"ast\" package, possibly for further processing or analysis in the subsequent lines of code.",
+        "type": "summary"
+    },
+    "1420": {
+        "file_id": 249,
+        "content": "#!/bin/bash\n#ls -lt\n# you could use the parsing strategy in jieba to do english word cutting job.\npip2 install ast &\npip3 install ast &",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/hexeval.sh:1-5"
+    },
+    "1421": {
+        "file_id": 249,
+        "content": "This code is a Bash script that installs the \"ast\" package for both Python 2 and Python 3. The shebang line (#!/bin/bash) indicates the script should be run using the Bash shell. The first comment (#ls -lt) may have been a remnant of debugging or previous commands. The second comment suggests using a parsing strategy from \"jieba\" for English word segmentation tasks. This script installs the \"ast\" package, possibly for further processing or analysis in the subsequent lines of code.",
+        "type": "comment"
+    },
+    "1422": {
+        "file_id": 250,
+        "content": "/multilingual/rockstar/chumble/radical/simple.sh",
+        "type": "filepath"
+    },
+    "1423": {
+        "file_id": 250,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "summary"
+    },
+    "1424": {
+        "file_id": 250,
+        "content": "#!/bin/bash\nls -lt",
+        "type": "code",
+        "location": "/multilingual/simple.sh:1-2"
+    },
+    "1425": {
+        "file_id": 250,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "comment"
+    },
+    "1426": {
+        "file_id": 251,
+        "content": "/multilingual/rockstar/chumble/radical/tree.py",
+        "type": "filepath"
+    },
+    "1427": {
+        "file_id": 251,
+        "content": "The code defines several functions: 'shallow', 'realshit', 'boom', and 'trust'. 'Shallow' increments a global variable, 'realshit' generates a UUID, 'boom' handles division with odd cases, and 'trust' combines the previous three to perform calculations using 'ducky' and assigns result to 'taser'.",
+        "type": "summary"
+    },
+    "1428": {
+        "file_id": 251,
+        "content": "import uuid, ast, time\nfuckme=1\ndef shallow():\n    global fuckme\n    fuckme+=0.13\n    fuckme=fuckme**1.01273249\n    return fuckme\ndef realshit():\n    fuck=uuid.uuid4().hex\n    meow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\n    cat=str(meow)\n#print(cat)\n#print(\"normal cat\")\n    ranger=(lambda x: range(len(x)))\n    fuckall=list(map((lambda x:int(x)+shallow()),list(cat)))\n#for m in ranger(cat):\n#    fuckall.append(\"\")\n    for k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n        vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n        init=vendetta%(k+1)\n        fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\n    return meow,fuckall\ndef boom(hexer):\n    # division by zero! you fucking genius!\n    hex0,hex1=hexer()\n#    print(hex0)\n#    print(\"-----spliter-----\")\n#    print(hex1)\n    reminder=len(hex1)\n    for x in range(reminder//2):\n        hex0=(hex0/hex1[2*x])*hex1[2*x+1]\n    if reminder%2==1:\n        hex0=hex0/hex1[-1]\n    return hex0\ndef trust():\n    ducky=boom(realshit)",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/tree.py:1-41"
+    },
+    "1429": {
+        "file_id": 251,
+        "content": "This code defines several functions. The 'shallow' function increments a global variable, 'realshit' generates a UUID and evaluates it as a hexadecimal number, converts it to a string, and modifies the list of numbers created from the characters in the string. The 'boom' function takes a function that returns two hexadecimal numbers, performs division on them, and handles odd cases where there are an uneven number of divisors. Finally, the 'trust' function calls 'realshit' to generate hexadecimal numbers and then applies the 'boom' function to them.",
+        "type": "comment"
+    },
+    "1430": {
+        "file_id": 251,
+        "content": "#print(\"-----spliter-----\")\n#print(ducky)\n    stun=(ducky*0.13)%0.139\n    return stun\n#print(stun)\ntaser=trust()\nprint(taser)\n#for k in range(3):\n#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/tree.py:42-54"
+    },
+    "1431": {
+        "file_id": 251,
+        "content": "The code snippet appears to perform a calculation using the variable 'ducky' and stores it in 'stun'. Then, it calls a function 'trust()', which returns a value assigned to 'taser'. The commented lines indicate potential additional operations or loops that might be part of the original script.",
+        "type": "comment"
+    },
+    "1432": {
+        "file_id": 252,
+        "content": "/multilingual/rockstar/chumble/radical/usedto.py",
+        "type": "filepath"
+    },
+    "1433": {
+        "file_id": 252,
+        "content": "Imports uuid and ast modules, generates a UUID as a string in lowercase hex format, and then evaluates it as an integer literal using ast.",
+        "type": "summary"
+    },
+    "1434": {
+        "file_id": 252,
+        "content": "import uuid, ast\nfuck=uuid.uuid4().hex\nprint(ast.literal_eval(\"0x\"+fuck.lower()))",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/usedto.py:1-4"
+    },
+    "1435": {
+        "file_id": 252,
+        "content": "Imports uuid and ast modules, generates a UUID as a string in lowercase hex format, and then evaluates it as an integer literal using ast.",
+        "type": "comment"
+    },
+    "1436": {
+        "file_id": 253,
+        "content": "/multilingual/rockstar/chumble/radical/weekend.py",
+        "type": "filepath"
+    },
+    "1437": {
+        "file_id": 253,
+        "content": "The code imports necessary libraries and defines a variable \"fuck\" using UUID. It then converts the hexadecimal representation of \"fuck\" to decimal and stores it in \"meow\". The code converts \"meow\" into a string and prints it, followed by printing \"normal cat\". Next, it defines a lambda function \"ranger\" which returns a range object for the length of \"cat\". It then creates an empty list \"fuckall\" and iterates through each index in \"cat\", swapping values at certain indices to create a new order in \"fuckall\". Finally, the code prints the shuffled list \"fuckall\".",
+        "type": "summary"
+    },
+    "1438": {
+        "file_id": 253,
+        "content": "import uuid, ast, time\nfuck=uuid.uuid4().hex\nmeow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\ncat=str(meow)\nprint(cat)\nprint(\"normal cat\")\nranger=(lambda x: range(len(x)))\nfuckall=list(cat)\n#for m in ranger(cat):\n#    fuckall.append(\"\")\nfor k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n    vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n    init=vendetta%(k+1)\n    fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\nprint(fuckall)\n#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/radical/weekend.py:1-23"
+    },
+    "1439": {
+        "file_id": 253,
+        "content": "The code imports necessary libraries and defines a variable \"fuck\" using UUID. It then converts the hexadecimal representation of \"fuck\" to decimal and stores it in \"meow\". The code converts \"meow\" into a string and prints it, followed by printing \"normal cat\". Next, it defines a lambda function \"ranger\" which returns a range object for the length of \"cat\". It then creates an empty list \"fuckall\" and iterates through each index in \"cat\", swapping values at certain indices to create a new order in \"fuckall\". Finally, the code prints the shuffled list \"fuckall\".",
+        "type": "comment"
+    },
+    "1440": {
+        "file_id": 254,
+        "content": "/multilingual/rockstar/chumble/simple.sh",
+        "type": "filepath"
+    },
+    "1441": {
+        "file_id": 254,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "summary"
+    },
+    "1442": {
+        "file_id": 254,
+        "content": "#!/bin/bash\nls -lt",
+        "type": "code",
+        "location": "/multilingual/simple.sh:1-2"
+    },
+    "1443": {
+        "file_id": 254,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "comment"
+    },
+    "1444": {
+        "file_id": 255,
+        "content": "/multilingual/rockstar/chumble/tree.py",
+        "type": "filepath"
+    },
+    "1445": {
+        "file_id": 255,
+        "content": "The code defines functions for calculations involving 'fuckme', generates hexadecimal numbers, performs division, and calculates 'stun' based on 'ducky'. It appears to be part of a larger program but specific purpose is unclear.",
+        "type": "summary"
+    },
+    "1446": {
+        "file_id": 255,
+        "content": "import uuid, ast, time\nfuckme=1\ndef shallow():\n    global fuckme\n    fuckme+=0.13\n    fuckme=fuckme**1.01273249\n    return fuckme\ndef realshit():\n    fuck=uuid.uuid4().hex\n    meow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\n    cat=str(meow)\n#print(cat)\n#print(\"normal cat\")\n    ranger=(lambda x: range(len(x)))\n    fuckall=list(map((lambda x:int(x)+shallow()),list(cat)))\n#for m in ranger(cat):\n#    fuckall.append(\"\")\n    for k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n        vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n        init=vendetta%(k+1)\n        fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\n    return meow,fuckall\ndef boom(hexer):\n    # division by zero! you fucking genius!\n    hex0,hex1=hexer()\n#    print(hex0)\n#    print(\"-----spliter-----\")\n#    print(hex1)\n    reminder=len(hex1)\n    for x in range(reminder//2):\n        hex0=(hex0/hex1[2*x])*hex1[2*x+1]\n    if reminder%2==1:\n        hex0=hex0/hex1[-1]\n    return hex0\ndef trust():\n    ducky=boom(realshit)",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/tree.py:1-41"
+    },
+    "1447": {
+        "file_id": 255,
+        "content": "The code defines three functions: 'shallow', 'realshit', and 'boom'. 'shallow' updates the value of global variable 'fuckme' based on a specific formula. 'realshit' generates a hexadecimal number, converts it to decimal form, then rearranges the array using a custom sorting algorithm. The final result is a tuple containing the original hexadecimal number and the sorted array. 'boom' divides the first number from 'realshit' with another function's result, possibly leading to division by zero. 'trust' uses 'boom' and 'realshit', likely to perform further calculations on the generated numbers.",
+        "type": "comment"
+    },
+    "1448": {
+        "file_id": 255,
+        "content": "#print(\"-----spliter-----\")\n#print(ducky)\n    stun=(ducky*0.13)%0.139\n    return stun\n# import this is fine.\n#print(stun)\n#taser=trust()\n#print(taser)\n#for k in range(3):\n#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}",
+        "type": "code",
+        "location": "/multilingual/rockstar/chumble/tree.py:42-55"
+    },
+    "1449": {
+        "file_id": 255,
+        "content": "This code appears to be calculating a value named \"stun\" based on the variable \"ducky\". The stun value is calculated by multiplying ducky by 0.13 and then taking the modulus of this product with 0.139. It seems that this code is part of a larger program, but it's difficult to determine its specific purpose without more context.",
+        "type": "comment"
+    },
+    "1450": {
+        "file_id": 256,
+        "content": "/multilingual/rockstar/cinders.py",
+        "type": "filepath"
+    },
+    "1451": {
+        "file_id": 256,
+        "content": "The code imports \"re\", splits a multiline string, sorts ASCII values, creates a list of tuples with ASCII, count, and indices, and prints the original string length and occurrences of each item in superlist3.",
+        "type": "summary"
+    },
+    "1452": {
+        "file_id": 256,
+        "content": "import re\nu = \"\"\"\\t hello you  mother fucker     \\t     fuck you bitch      bitch      23443243234  23 42 35 23 5 26  643                        we shall split this fuck by the motherfucking newline should we?\n but you have    fucking told me that you can find that shit somewhere didn't you?\n oh calm the fuck down.          [the fucking tab is invisible here.]\n\"\"\"\n#verbose=re.compile(r'\\b')\n# print (u.split('\\n'));\n#print(set(u))\n# the most fucking efficient way of doing this fuck.\nsuperset=set(u)\n# make it numeric.\n#x=\"撒\"\n#print(ord(x))\n#print(chr(ord(x)))\nsuperlist0=list(map(lambda x: ord(x),superset))\nsuperlist1=sorted(superlist0)\nsuperlist2=list(map(lambda x: chr(x),superlist0))\nsuperlist3=sorted(superlist2)\n#superlist3=list(map(lambda x: chr(x),superlist1))\n# superfilter=filter(lambda x: )\n#print(superlist3)\n# better use indexes.\nprint(len(u))\nfor index0 in range(len(superlist3)):\n    item=superlist3[index0]\n    location=[pos for pos, char in enumerate(u) if char == item]\n    superlist3[index0]=[item,u.count(item),location]",
+        "type": "code",
+        "location": "/multilingual/rockstar/cinders.py:1-29"
+    },
+    "1453": {
+        "file_id": 256,
+        "content": "The code imports the \"re\" module and defines a string variable \"u\" containing a multiline text. The code then splits the string by newlines, converts each character in the string to its ASCII value, sorts these values, and stores them in separate lists. It then creates a list of tuples, where each tuple contains the ASCII value, count of the ASCII value in the original string, and the indices where that ASCII value appears in the string. Finally, it prints the length of the original string and iterates over the sorted list of ASCII values, creating a list of tuples containing the ASCII value, its count, and the indices where it appears in the string.",
+        "type": "comment"
+    },
+    "1454": {
+        "file_id": 256,
+        "content": "print(superlist3)\n#number is 35 here. so the max index is 35.\n#print(superlist3[34])\n#print(superlist3[35])\n# so the range function could be safe here.\n#for item in superlist3:\n#    item=[item,u.count(item)]",
+        "type": "code",
+        "location": "/multilingual/rockstar/cinders.py:30-37"
+    },
+    "1455": {
+        "file_id": 256,
+        "content": "This code prints the entire superlist3 list and then iterates over it, counting occurrences of each item in the list.",
+        "type": "comment"
+    },
+    "1456": {
+        "file_id": 257,
+        "content": "/multilingual/rockstar/connector/README",
+        "type": "filepath"
+    },
+    "1457": {
+        "file_id": 257,
+        "content": "This code instructs the reader to use the graphdb query, implying it is a useful tool for performing queries in this context.",
+        "type": "summary"
+    },
+    "1458": {
+        "file_id": 257,
+        "content": "use the graphdb query. it won't bite.",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/README:1-1"
+    },
+    "1459": {
+        "file_id": 257,
+        "content": "This code instructs the reader to use the graphdb query, implying it is a useful tool for performing queries in this context.",
+        "type": "comment"
+    },
+    "1460": {
+        "file_id": 258,
+        "content": "/multilingual/rockstar/connector/const.py",
+        "type": "filepath"
+    },
+    "1461": {
+        "file_id": 258,
+        "content": "This code establishes a connection to the \"tits.db\" SQLite database, performs various operations like renaming and creating tables, inserts data from an old table into a new one, drops the old table, commits the changes, and then closes the database connection.",
+        "type": "summary"
+    },
+    "1462": {
+        "file_id": 258,
+        "content": "import sqlite3\nconn=sqlite3.connect(\"tits.db\")\n# it is not good.\n# the command is not avaliable.\nconn.execute(\"PRAGMA foreign_keys=off;\")\nconn.execute(\"BEGIN TRANSACTION;\")\nconn.execute(\"ALTER TABLE subdir  RENAME TO old_subdir;\")\nconn.execute(\"\"\"CREATE TABLE subdir\n( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,name   TEXT    NOT NULL,\ntype         TINYINT     NOT NULL,  \ndepth TINYINT NOT NULL,\nparent TEXT, \nmiscellaneous TEXT NOT NULL,\n  CONSTRAINT rule  UNIQUE (name, miscellaneous)\n);\"\"\")\nconn.execute(\"INSERT INTO subdir SELECT * FROM old_subdir;\")\nconn.execute(\"DROP TABLE old_subdir;\")\n#COMMIT;\nconn.execute(\"PRAGMA foreign_keys=on;\")\n#conn.execute(\"ALTER TABLE subdir ADD CONSTRAINT chain UNIQUE (name, miscellaneous);\")\n#conn.execute(\"ALTER TABLE subdir ADD CONSTRAINT chain0 UNIQUE (id);\")\nconn.commit()\nconn.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/const.py:1-33"
+    },
+    "1463": {
+        "file_id": 258,
+        "content": "This code establishes a connection to the \"tits.db\" SQLite database, performs various operations like renaming and creating tables, inserts data from an old table into a new one, drops the old table, commits the changes, and then closes the database connection.",
+        "type": "comment"
+    },
+    "1464": {
+        "file_id": 259,
+        "content": "/multilingual/rockstar/connector/core.py",
+        "type": "filepath"
+    },
+    "1465": {
+        "file_id": 259,
+        "content": "Code searches for nodes and relationships in a Neo4j graph database using Py2neo, creating two nodes with \"Person\" label, establishing relationships, updating count properties, and explaining difference between find and find_one.",
+        "type": "summary"
+    },
+    "1466": {
+        "file_id": 259,
+        "content": "# coding: utf-8 -*-\nfrom py2neo import Graph,Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\nmatcher=NodeMatcher(graph)\ntest_node_1 = Node(label = \"Person\",name = \"test_node_1\")\ntest_node_2 = Node(label = \"Person\",name = \"test_node_2\")\ngraph.create(test_node_1)\ngraph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"\nnode_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\nnode_1_call_node_2['count'] = 1\nnode_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\nnode_2_call_node_1['count'] = 1\ngraph.create(node_1_call_node_2)\ngraph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\nnode_1_call_node_2['count']+=1\ngraph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。\nfind查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(",
+        "type": "code",
+        "location": "/metalearning/core.py:1-33"
+    },
+    "1467": {
+        "file_id": 259,
+        "content": "Establishes two nodes (test_node_1 and test_node_2) with \"Person\" label.\nCreates two relationships between the nodes, both labeled as \"CALL\".\nInitializes relationship properties and assigns count as 1 for each relationship.\nUpdates node_1_call_node_2's count property by incrementing it by 1.\nExplains the difference between find and find_one for querying nodes/relationships in Neo4j database using Py2neo library.",
+        "type": "comment"
+    },
+    "1468": {
+        "file_id": 259,
+        "content": "#  label=\"Person\",\n#  property_key=\"name\",\n  # property_value=\"test_node_1\"\n#)\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\n# match_relation = graph.match(start_node=find_code_1,bidirectional=False) #True\n# for i in match_relation:\n#     print(i)\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)\n# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
+        "type": "code",
+        "location": "/metalearning/core.py:34-61"
+    },
+    "1469": {
+        "file_id": 259,
+        "content": "This code is searching for specific nodes and relationships in a graph using the Neo4j Python driver. It uses the \"match\" and \"match_one\" functions to find nodes with labels, properties, and connections between them. The code also counts the number of matches and pushes matching nodes into a graph database for further processing.",
+        "type": "comment"
+    },
+    "1470": {
+        "file_id": 260,
+        "content": "/multilingual/rockstar/connector/core0.py",
+        "type": "filepath"
+    },
+    "1471": {
+        "file_id": 260,
+        "content": "This code sets up a Neo4j database, creates indexes, and loads CSV data to establish a linguistic/semantic graph. It initializes nodes and relationships, updates counts, and demonstrates find and find_one methods using match_one and match functions in Django's Neo4j database.",
+        "type": "summary"
+    },
+    "1472": {
+        "file_id": 260,
+        "content": "# coding: utf-8 -*-\nfrom py2neo import Graph\nimport re\n# Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\ngraph.run(\"create index on :english(name)\")\ngraph.run(\"create index on :dictionary(name)\")\ngraph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/alpha.csv' AS line CREATE (:dictionary:english {name:line[0]});\")\n#graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/gamma.csv' AS line MATCH  (a:english) WHERE a.name=line[0] WITH a,line MATCH ;\")\n#a=open(\"beta.csv\",\"r\")\n#for b in a.readlines():\n#    c=re.sub(\"\\n\",\"\",b).split(\",\")\n#    graph.run(\"MATCH (a:english) where a.name=\\\"\"+c[0]+\"\\\" with a match (b:english) where b.name=\\\"\"+c[1]+\"\\\" create (a)<-[:lemma]-(b)\")\n#a.close()\n# graph.run(\"MATCH (a:lemma),(b:derived) CREATE (a)<-[:lemma]-(b)\")\n# this is slow as hell\n# graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/beta.csv' A",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core0.py:1-21"
+    },
+    "1473": {
+        "file_id": 260,
+        "content": "This code is importing the necessary modules, setting up a connection to Neo4j database, creating indexes for English and dictionary nodes, and loading CSV data to create relationships between nodes using lemma property. The code aims to establish a network of interconnected words based on their lemmas, potentially forming a linguistic or semantic graph.",
+        "type": "comment"
+    },
+    "1474": {
+        "file_id": 260,
+        "content": "S line MERGE (a:dictionary:english:derived {name:line[0]}) WITH line MERGE  (b:dictionary:english:lemma {name:line[1]}) ;\")\n#matcher=NodeMatcher(graph)\n#test_node_1 = Node(label = \"Person\",name = \"test_node_1\")\n#test_node_2 = Node(label = \"Person\",name = \"test_node_2\")\n#graph.create(test_node_1)\n#graph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"\n#node_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\n#node_1_call_node_2['count'] = 1\n#node_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\n#node_2_call_node_1['count'] = 1\n#graph.create(node_1_call_node_2)\n#graph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\n#node_1_call_node_2['count']+=1\n#graph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。\nfind查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(\n#  label=\"Person\",",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core0.py:21-53"
+    },
+    "1475": {
+        "file_id": 260,
+        "content": "This code snippet initializes a graph and creates two nodes and two relationships between them. The relationships are of type \"CALL\" with a count property initialized to 1 for each. It also demonstrates how to update the count property of a relationship using push operation, and explains the difference between find and find_one methods for querying nodes and relationships based on their properties and types.",
+        "type": "comment"
+    },
+    "1476": {
+        "file_id": 260,
+        "content": "#  property_key=\"name\",\n  # property_value=\"test_node_1\"\n#)\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\n# match_relation = graph.match(start_node=find_code_1,bidirectional=False) #True\n# for i in match_relation:\n#     print(i)\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)\n# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core0.py:54-80"
+    },
+    "1477": {
+        "file_id": 260,
+        "content": "This code snippet demonstrates the usage of `match_one` and `match` functions in Django's Neo4j database. The program is searching for related nodes and relationships given a specific node or relationship, and then incrementing a 'count' property before pushing the result back to the graph. The code also prints various nodes and relationships for testing purposes.",
+        "type": "comment"
+    },
+    "1478": {
+        "file_id": 261,
+        "content": "/multilingual/rockstar/connector/core1.py",
+        "type": "filepath"
+    },
+    "1479": {
+        "file_id": 261,
+        "content": "The code reads lines from file \"alpha.csv\", performs English stemming on each line using the SnowballStemmer, and writes the original and stemmed words to file \"beta.csv\".",
+        "type": "summary"
+    },
+    "1480": {
+        "file_id": 261,
+        "content": "from nltk.stem.snowball import SnowballStemmer\nimport re\ndef steam(quack):\n    return SnowballStemmer(\"english\").stem(quack)\n# use readlines to create a list.\n# this time we write results into csv files.\na=open(\"alpha.csv\",\"r\")\nb=open(\"beta.csv\",\"w+\")\n#try:\nfor p in a.readlines():\n#    print (p)\n    p=re.sub(\"\\n\",\"\",p)\n    p0=steam(p)\n    if p0==p:\n        pass\n    else:\n#        print (p0)\n        try:\n            b.write(p0+\",\"+p+\"\\n\")\n        except:\n            pass\n#except:\n#    pass\nb.write(\"\\b\")\na.close()\nb.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core1.py:1-29"
+    },
+    "1481": {
+        "file_id": 261,
+        "content": "The code reads lines from file \"alpha.csv\", performs English stemming on each line using the SnowballStemmer, and writes the original and stemmed words to file \"beta.csv\".",
+        "type": "comment"
+    },
+    "1482": {
+        "file_id": 262,
+        "content": "/multilingual/rockstar/connector/core2.py",
+        "type": "filepath"
+    },
+    "1483": {
+        "file_id": 262,
+        "content": "This code reads lines from \"alpha.csv\", applies stemming using the English SnowballStemmer, and writes non-stemmed lines to \"gamma.csv\". It also handles exceptions during writing.",
+        "type": "summary"
+    },
+    "1484": {
+        "file_id": 262,
+        "content": "from nltk.stem.snowball import SnowballStemmer\nimport re\ndef steam(quack):\n    return SnowballStemmer(\"english\").stem(quack)\n# use readlines to create a list.\n# this time we write results into csv files.\na=open(\"alpha.csv\",\"r\")\nb=open(\"gamma.csv\",\"w+\")\n#try:\nfor p in a.readlines():\n#    print (p)\n    p=re.sub(\"\\n\",\"\",p)\n    p0=steam(p)\n    if p0!=p:\n        pass\n    else:\n#        print (p0)\n        try:\n            b.write(p+\"\\n\")\n        except:\n            pass\n#except:\n#    pass\nb.write(\"\\b\")\na.close()\nb.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core2.py:1-29"
+    },
+    "1485": {
+        "file_id": 262,
+        "content": "This code reads lines from \"alpha.csv\", applies stemming using the English SnowballStemmer, and writes non-stemmed lines to \"gamma.csv\". It also handles exceptions during writing.",
+        "type": "comment"
+    },
+    "1486": {
+        "file_id": 263,
+        "content": "/multilingual/rockstar/connector/core3.py",
+        "type": "filepath"
+    },
+    "1487": {
+        "file_id": 263,
+        "content": "This code utilizes Py2Neo database, creates indexes, and loads CSV data. It showcases searching nodes/relationships using find functions based on types, attributes or attribute values. The Neo4j Python API is demonstrated for query operations such as matching nodes with labels & property values, finding relationships, and incrementing a node's count by pushing it into the graph.",
+        "type": "summary"
+    },
+    "1488": {
+        "file_id": 263,
+        "content": "# coding: utf-8 -*-\nfrom py2neo import Graph\nimport re\n# Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\ngraph.run(\"create index on :english(name)\")\ngraph.run(\"create index on :dictionary(name)\")\ngraph.run(\"USING PERIODIC COMMIT LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/beta.csv' AS line WITH line  MERGE (a:dictionary:english{name:line[0]}) WITH a,line MATCH  (b:dictionary:english{name:line[1]}) WITH a,b  CREATE (a)<-[:lemma]-(b);\")\n#graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/gamma.csv' AS line MATCH  (a:english) WHERE a.name=line[0] WITH a,line MATCH ;\")\n#a=open(\"beta.csv\",\"r\")\n#for b in a.readlines():\n#    c=re.sub(\"\\n\",\"\",b).split(\",\")\n#    graph.run(\"MATCH (a:english) where a.name=\\\"\"+c[0]+\"\\\" with a match (b:english) where b.name=\\\"\"+c[1]+\"\\\" create (a)<-[:lemma]-(b)\")\n#a.close()\n# graph.run(\"MATCH (a:lemma),(b:derived) CREATE (a)<-[:lemma]-(b)\")\n# this is slow as hell\n# grap",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core3.py:1-21"
+    },
+    "1489": {
+        "file_id": 263,
+        "content": "The code connects to a Py2Neo graph database, creates indexes for 'english' and 'dictionary' nodes, and loads data from 'beta.csv' file using Cypher queries to establish lemma relationships between English words. The code also includes a comment suggesting an alternative method using 'gamma.csv', but it seems incomplete as the corresponding Cypher query is missing.",
+        "type": "comment"
+    },
+    "1490": {
+        "file_id": 263,
+        "content": "h.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/beta.csv' AS line MERGE (a:dictionary:english:derived {name:line[0]}) WITH line MERGE  (b:dictionary:english:lemma {name:line[1]}) ;\")\n#matcher=NodeMatcher(graph)\n#test_node_1 = Node(label = \"Person\",name = \"test_node_1\")\n#test_node_2 = Node(label = \"Person\",name = \"test_node_2\")\n#graph.create(test_node_1)\n#graph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"\n#node_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\n#node_1_call_node_2['count'] = 1\n#node_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\n#node_2_call_node_1['count'] = 1\n#graph.create(node_1_call_node_2)\n#graph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\n#node_1_call_node_2['count']+=1\n#graph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core3.py:21-49"
+    },
+    "1491": {
+        "file_id": 263,
+        "content": "This code initializes a graph database with two nodes and their respective relationships, both labeled as \"Person\" and having a relationship type of \"CALL\". The properties count is initialized to 1 for each relationship. It then updates the count property by incrementing it by 1 using push operation on the node_1_call_node_2 relationship. The code also demonstrates how to search for nodes/relationships using find and find_one functions based on their types, attributes, or attribute values.",
+        "type": "comment"
+    },
+    "1492": {
+        "file_id": 263,
+        "content": "find查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(\n#  label=\"Person\",\n#  property_key=\"name\",\n  # property_value=\"test_node_1\"\n#)\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\n# match_relation = graph.match(start_node=find_code_1,bidirectional=False) #True\n# for i in match_relation:\n#     print(i)\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)\n# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core3.py:50-80"
+    },
+    "1493": {
+        "file_id": 263,
+        "content": "This code demonstrates how to use the Neo4j graph database API in Python to perform various query operations. It matches nodes with specific labels and property values, finds relationships between nodes, and increments a node's count by pushing it into the graph.",
+        "type": "comment"
+    },
+    "1494": {
+        "file_id": 264,
+        "content": "/multilingual/rockstar/connector/core4.py",
+        "type": "filepath"
+    },
+    "1495": {
+        "file_id": 264,
+        "content": "The code imports modules, sets up a Neo4j database connection, creates nodes and relationships using CSV data, and utilizes indexing. It demonstrates the use of 'match' and 'match_one' functions in graph database operations, searching for nodes or relationships based on labels, properties, and values, finding related ones, incrementing a count property, and pushing changes back to the graph database.",
+        "type": "summary"
+    },
+    "1496": {
+        "file_id": 264,
+        "content": "# coding: utf-8 -*-\nfrom py2neo import Graph\nimport re\n# Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\n#graph.run(\"create index on :english(name)\")\n#graph.run(\"create index on :dictionary(name)\")\ngraph.run(\"USING PERIODIC COMMIT LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/sigma.csv' AS line WITH line  MERGE (a:dictionary:english{name:line[0]}) WITH a,line MATCH  (b:dictionary:english{name:line[1]}) WITH a,b  MERGE (a)-[:synonym]-(b);\")\n#graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/gamma.csv' AS line MATCH  (a:english) WHERE a.name=line[0] WITH a,line MATCH ;\")\n#a=open(\"beta.csv\",\"r\")\n#for b in a.readlines():\n#    c=re.sub(\"\\n\",\"\",b).split(\",\")\n#    graph.run(\"MATCH (a:english) where a.name=\\\"\"+c[0]+\"\\\" with a match (b:english) where b.name=\\\"\"+c[1]+\"\\\" create (a)<-[:lemma]-(b)\")\n#a.close()\n# graph.run(\"MATCH (a:lemma),(b:derived) CREATE (a)<-[:lemma]-(b)\")\n# this is slow as hell\n# g",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core4.py:1-21"
+    },
+    "1497": {
+        "file_id": 264,
+        "content": "The code imports required modules, sets up a Neo4j graph database connection, and executes Cypher queries to create nodes and relationships in the graph. It uses indexing and loading data from CSV files for efficient data processing. This code appears to be part of a larger program related to data manipulation or language processing within a Neo4j database.",
+        "type": "comment"
+    },
+    "1498": {
+        "file_id": 264,
+        "content": "raph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/beta.csv' AS line MERGE (a:dictionary:english:derived {name:line[0]}) WITH line MERGE  (b:dictionary:english:lemma {name:line[1]}) ;\")\n#matcher=NodeMatcher(graph)\n#test_node_1 = Node(label = \"Person\",name = \"test_node_1\")\n#test_node_2 = Node(label = \"Person\",name = \"test_node_2\")\n#graph.create(test_node_1)\n#graph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"\n#node_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\n#node_1_call_node_2['count'] = 1\n#node_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\n#node_2_call_node_1['count'] = 1\n#graph.create(node_1_call_node_2)\n#graph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\n#node_1_call_node_2['count']+=1\n#graph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。",
+        "type": "code",
+        "location": "/multilingual/rockstar/connector/core4.py:21-49"
+    },
+    "1499": {
+        "file_id": 264,
+        "content": "This code imports a CSV file and creates two nodes, \"dictionary:english:derived\" and \"dictionary:english:lemma\", using the data from the first and second columns of each line in the CSV. It then establishes relationships between these nodes with a type of \"CALL\" and sets the count property to 1 for both directions. Finally, it updates one of the relationships' count properties by incrementing it by 1 and pushes the changes to the graph.",
+        "type": "comment"
+    }
+}

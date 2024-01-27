@@ -1,0 +1,10 @@
+{
+    "summary": "This code is for converting HTML orphan symbols to their respective formatted versions, which might be helpful in deciphering abbreviations from common symbols.",
+    "details": [
+        {
+            "comment": "This code is for converting HTML orphan symbols to their respective formatted versions, which might be helpful in deciphering abbreviations from common symbols.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/README\":0-3",
+            "content": "FOR THOSE HTML ORPHANS. MAY HAVE SOME LITTLE USE WHEN CRACKING ABBREVIATIONS OVER COMMON SYMBOLS.\nFORMAT:\n\tcopy -> &copy;"
+        }
+    ]
+}

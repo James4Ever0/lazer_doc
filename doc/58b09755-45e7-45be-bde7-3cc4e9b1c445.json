@@ -1,0 +1,10 @@
+{
+    "summary": "This code counts the number of command line arguments, logs it twice, appends a string to the count variable and logs both again. Note that 'count++' is executed after the first log statement, so an additional 1 will be added to 'count' before logging it for the second time.",
+    "details": [
+        {
+            "comment": "This code counts the number of command line arguments, logs it twice, appends a string to the count variable and logs both again. Note that 'count++' is executed after the first log statement, so an additional 1 will be added to 'count' before logging it for the second time.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/args-count.js\":0-8",
+            "content": "var count=process.argv.length;\nvar counts=process.argv[2];\nconsole.log(counts);\nconsole.log(count);\n// it returns one more than the final index\ncounts+=\"urbitch\";\nconsole.log(count++);\nconsole.log(counts);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function named \"openShit\" which takes one argument 'a'. It uses the map() function to apply a lambda function to each element in 'a', splitting the string into a list of substrings and reading from the specified location. The returned value is a list.",
+    "details": [
+        {
+            "comment": "This code defines a function named \"openShit\" which takes one argument 'a'. It uses the map() function to apply a lambda function to each element in 'a', splitting the string into a list of substrings and reading from the specified location. The returned value is a list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/reTest.py\":0-1",
+            "content": "def openShit(a):\n    return list(map((lambda x:x.split(\"/\"),a.read"
+        }
+    ]
+}

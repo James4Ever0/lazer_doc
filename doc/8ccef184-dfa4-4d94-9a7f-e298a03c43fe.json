@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the necessary modules and defines a function called `returnTokens`. It takes in a file path as input, opens the file, generates tokens from its contents using `generate_tokens`, closes the file, and returns the generated token list. The function also uses a nested inner function (`decistmt`) to create the token generator and return it.",
+    "details": [
+        {
+            "comment": "This code imports the necessary modules and defines a function called `returnTokens`. It takes in a file path as input, opens the file, generates tokens from its contents using `generate_tokens`, closes the file, and returns the generated token list. The function also uses a nested inner function (`decistmt`) to create the token generator and return it.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/asshole.py\":0-10",
+            "content": "from tokenize import generate_tokens\nfrom io import BytesIO\ndef returnTokens(thousands):\n    def decistmt(s):\n        tokgen = generate_tokens(s.readline)\n        v=[x for x in tokgen]\n        s.close()\n        return v\n    h=open(thousands,\"r\")\n    return decistmt(h)"
+        }
+    ]
+}

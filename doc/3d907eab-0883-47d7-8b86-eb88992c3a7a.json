@@ -1,0 +1,10 @@
+{
+    "summary": "Code attempts to compare variable 'a' with different values using if-else statements, but it lacks proper syntax and structure. The first two if conditions require \"then\" after elseif and end is missing after the second condition. The last if condition should be a simple assertion as it always evaluates to true due to the code structure.",
+    "details": [
+        {
+            "comment": "Code attempts to compare variable 'a' with different values using if-else statements, but it lacks proper syntax and structure. The first two if conditions require \"then\" after elseif and end is missing after the second condition. The last if condition should be a simple assertion as it always evaluates to true due to the code structure.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/if.lua\":0-6",
+            "content": "a=20\nif a==30 then print(a) \n-- end is needed\n-- elseif instead of else if\n-- then is needed after elseif\nelseif a==20 then  print(a) end\nif 20 then print(a) end"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code is a Bash script that changes the current directory to 'one', executes run-parts in the current folder, and redirects its output and error messages to '../one.log0'. It seems to be related to managing parts or scripts within the 'one' directory while logging the results in 'one.log0'.",
+    "details": [
+        {
+            "comment": "The code is a Bash script that changes the current directory to 'one', executes run-parts in the current folder, and redirects its output and error messages to '../one.log0'. It seems to be related to managing parts or scripts within the 'one' directory while logging the results in 'one.log0'.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex/corefuck1.sh\":0-2",
+            "content": "#!/bin/bash\ncd one\nrun-parts . &> ../one.log0"
+        }
+    ]
+}

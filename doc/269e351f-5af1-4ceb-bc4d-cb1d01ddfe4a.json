@@ -1,0 +1,10 @@
+{
+    "summary": "Code reads a Python file, parses indentation levels to create a list of statements with their respective indentation, function name, and function notched version. The code then writes the resulting data into another file and passes it to a function that appears to save this information in a database.",
+    "details": [
+        {
+            "comment": "Code reads a Python file, parses indentation levels to create a list of statements with their respective indentation, function name, and function notched version. The code then writes the resulting data into another file and passes it to a function that appears to save this information in a database.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/twoListsHere.py\":0-23",
+            "content": "from defTester import notch, checkFunctor\nfrom niche import wroteAHaskell\nfunctorNames=[]\n# parse indentation first.\nnicetry=\"sample_strip\",\".py\"\npm=[]\nwith open(\"\".join(nicetry),\"r\") as j:\n    i1=0\n    for fuck in j.readlines():\n        i=0\n        for i0 in range(len(fuck)):\n            if fuck[i0] in [\" \",\"\\t\"]:\n                i+=1\n            else:\n                break\n        iFuck=fuck if fuck[-1]!=\"\\n\" else fuck[:-1]\n        pm.append((i,fuck[i:],notch(iFuck),checkFunctor(iFuck),i1))\n        i1+=1\n#        pm.append((i,fuck,notch(iFuck),checkFunctor(iFuck)))\nprint(pm)\nbitch=\"_fix\".join(nicetry)\nprint(bitch)\nwroteAHaskell(bitch,pm)"
+        }
+    ]
+}

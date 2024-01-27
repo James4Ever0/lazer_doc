@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a RockSpec file for the \"luacombine\" package with version \"scm-0\". It includes the URL of its GitHub repository, and specifies dependencies such as Lua >= 5.1. The build type is built-in and includes modules like \"combine.lua\".",
+    "details": [
+        {
+            "comment": "The code defines a RockSpec file for the \"luacombine\" package with version \"scm-0\". It includes the URL of its GitHub repository, and specifies dependencies such as Lua >= 5.1. The build type is built-in and includes modules like \"combine.lua\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/luacombine/luacombine-scm-0.rockspec\":0-22",
+            "content": "package = \"luacombine\"\nversion = \"scm-0\"\nsource = {\n  url = \"git://github.com/emiruz/luacombine.git\",\n}\ndescription = {\n  summary = \"Pure, performant combination and permutation library for Lua and LuaJIT.\",\n  homepage = \"https://github.com/emiruz/luacombine\",\n  license = \"MIT/X11\",\n  maintainer = \"emir@usgroupltd.uk\",\n  detailed = \"Pure, performant combination and permutation library for Lua and LuaJIT.\"\n}\ndependencies = {\n  \"lua >= 5.1\"\n}\nbuild = {\n  type = \"builtin\",\n  modules = { combine = \"combine.lua\" }\n}"
+        }
+    ]
+}

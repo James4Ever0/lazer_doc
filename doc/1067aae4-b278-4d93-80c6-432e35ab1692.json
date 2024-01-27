@@ -1,0 +1,10 @@
+{
+    "summary": "This code connects to a SQLite database, creates a table named \"typeLoad\" with columns for type and charGroup, ensures uniqueness based on alphabetical order of these values, and then closes the connection. The author is considering how to handle labels with potential relationships in this table structure.",
+    "details": [
+        {
+            "comment": "This code connects to a SQLite database, creates a table named \"typeLoad\" with columns for type and charGroup, ensures uniqueness based on alphabetical order of these values, and then closes the connection. The author is considering how to handle labels with potential relationships in this table structure.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB1.py\":0-17",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE typeLoad (type TEXT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (type ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines functions for string manipulation and uses them to detect positions of specific characters or strings, examine their existence, and split the input string based on a given delimiter. The code also contains comments expressing doubts and thoughts about the philosophy and approach used in the code.",
+    "details": [
+        {
+            "comment": "The code defines functions for string manipulation and uses them to detect positions of specific characters or strings, examine their existence, and split the input string based on a given delimiter. The code also contains comments expressing doubts and thoughts about the philosophy and approach used in the code.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/reShit.py\":0-36",
+            "content": "def sitDown(string):\n    env=list(set(string))\n    return [[pos,string.count(pos)] for pos in env]\n#    return envy\n# spread throughtout the center?\n# detect the distance?\n# yes i am afraid so.\ndef simpleExam(pos,spliterPosList):\n    return [(pos-papi) for papi in spliterPosList]\ndef reCaptcha(string,spliter):\n    return list(enumerate(string.split(spliter)))\n#    return ak\n# my philosophy is fucked.\n# what is unique anyway?\n# what is math?\ndef spliterPos(string,spliter):\n    return [pos for pos, char in enumerate(string) if char == spliter]\ndef spliterPosList(string,spliterList):\n    return [pos for pos, char in enumerate(string) if char in spliterList]\ndef examExist(string,exam):\n    return exam in string\n#def exchangePos(string,locator):\n#    return\nwritings=\"\\nhell\\nyeah\\splitThis\\n\\n\"\n# detect overlapped things should I?\nescape=sitDown(writings)\nprint(escape)\nenemy=spliterPos(writings,\"\\n\")\nprint(enemy)\nprint(simpleExam(3,enemy))\n#print(examExist(writings,\"\\n\"))\n#print(reCaptcha(writings))\nprint([writings])\n# what to do next?"
+        }
+    ]
+}

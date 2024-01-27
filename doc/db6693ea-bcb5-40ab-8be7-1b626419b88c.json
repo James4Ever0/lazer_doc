@@ -1,0 +1,10 @@
+{
+    "summary": "This script uses Bash to copy three Python files (shallowCopy.py, getCorrectList.py, and extractLinear.py) into the specified directory, which is part of a Termux environment for analysis and decryption tasks.",
+    "details": [
+        {
+            "comment": "This script uses Bash to copy three Python files (shallowCopy.py, getCorrectList.py, and extractLinear.py) into the specified directory, which is part of a Termux environment for analysis and decryption tasks.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/shallowCopy.sh\":0-3",
+            "content": "#!/bin/bash\ncp shallowCopy.py /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter &\ncp getCorrectList.py /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter &\ncp extractLinear.py /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter &"
+        }
+    ]
+}

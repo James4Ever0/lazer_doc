@@ -1,0 +1,10 @@
+{
+    "summary": "This code parses an HTML file and extracts specific \"a\" tags. It uses the BeautifulSoup library for parsing, and then iterates through the extracted links, printing their text content. Additionally, there are commented out sections that suggest using a different parsing method with xml.dom.minidom.",
+    "details": [
+        {
+            "comment": "This code parses an HTML file and extracts specific \"a\" tags. It uses the BeautifulSoup library for parsing, and then iterates through the extracted links, printing their text content. Additionally, there are commented out sections that suggest using a different parsing method with xml.dom.minidom.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/parse-xml-related.py\":0-28",
+            "content": "# -*- coding: UTF-8 -*-\nfrom bs4 import BeautifulSoup\nhtml0=open(\"quest-from-baidu.log\",\"r\")\nhtml=html0.read()\nsoup = BeautifulSoup(html, 'lxml')\nresult = soup.findAll(\"div\",id=\"rs\")[0].findAll(\"a\")\nfor result0 in result:\n    print (result0.string)\n#tags = soup.find_all('a',class_=\"c-showurl\")\n#for tag in tags:\n#    print(tag)\n#from xml.dom.minidom import parse\n# import xml.dom.minidom\n# \u4f7f\u7528minidom\u89e3\u6790\u5668\u6253\u5f00 XML \u6587\u6863\n#DOMTree = parse(\"quest-from-baidu.log\")\n#collection = DOMTree.documentElement\n#if collection.hasAttribute(\"shelf\"):\n#   print \"Root element : %s\" % collection.getAttribute(\"shelf\")\n# \u5728\u96c6\u5408\u4e2d\u83b7\u53d6\u6240\u6709\u7535\u5f71\n# movies = collection.getElementsByTagName(\"\")\n#if collection.hasAttribute(\"target\"):\n#   print (\"Root element : \" +collection.getAttribute(\"target\"))\nhtml0.close()"
+        }
+    ]
+}

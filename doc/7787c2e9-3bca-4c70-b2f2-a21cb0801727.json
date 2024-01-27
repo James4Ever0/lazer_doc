@@ -1,0 +1,10 @@
+{
+    "summary": "This script generates a random number using the `$RANDOM` variable and prints it to the console.",
+    "details": [
+        {
+            "comment": "This script generates a random number using the `$RANDOM` variable and prints it to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/random.sh\":0-1",
+            "content": "#!/bin/bash\necho $RANDOM"
+        }
+    ]
+}

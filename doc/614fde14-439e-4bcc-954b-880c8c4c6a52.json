@@ -1,0 +1,10 @@
+{
+    "summary": "This script is a bash file that echoes out the command-line arguments passed to it. The parameters start at $0, and $@ retrieves each argument individually.",
+    "details": [
+        {
+            "comment": "This script is a bash file that echoes out the command-line arguments passed to it. The parameters start at $0, and $@ retrieves each argument individually.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/super-param.sh\":0-7",
+            "content": "#!/bin/bash\necho $0\necho $1\necho $2\necho \"-S---------P--\"\necho $@\n# the prameter starts at $0.\n# $@ simply get each one out."
+        }
+    ]
+}

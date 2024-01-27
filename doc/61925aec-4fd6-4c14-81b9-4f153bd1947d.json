@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines two functions, \"forMotherRussia\" and \"toyProject\". \"forMotherRussia\" takes a number and a list of super rats as input and returns the final result using the \"finalPro\" function. It seems to be related to an unclear task or project involving numbers, lists, and possibly data processing. The code includes some comments expressing frustration but doesn't affect functionality.",
+    "details": [
+        {
+            "comment": "The code defines two functions, \"forMotherRussia\" and \"toyProject\". \"forMotherRussia\" takes a number and a list of super rats as input and returns the final result using the \"finalPro\" function. It seems to be related to an unclear task or project involving numbers, lists, and possibly data processing. The code includes some comments expressing frustration but doesn't affect functionality.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newTestR.py\":0-17",
+            "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    executeCode(forMotherRussia(numToKill,superRats))\n# fucking pricks.\nprint(forMotherRussia(0,['singapore','newYear']))\nprint(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''"
+        }
+    ]
+}

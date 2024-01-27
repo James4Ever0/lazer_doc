@@ -1,0 +1,10 @@
+{
+    "summary": "This code solves a quadratic equation using the quadratic formula in Haskell. The function `root` takes three parameters (a, b, and c) representing the coefficients of the equation ax^2 + bx + c = 0. It calculates x1 and x2, which are the two possible solutions for x. The variable 'd' stores the discriminant value, while 'e' represents half of the negative reciprocal of the coefficient B. Finally, the main function prints the calculated root values (x1,x2) as output.",
+    "details": [
+        {
+            "comment": "This code solves a quadratic equation using the quadratic formula in Haskell. The function `root` takes three parameters (a, b, and c) representing the coefficients of the equation ax^2 + bx + c = 0. It calculates x1 and x2, which are the two possible solutions for x. The variable 'd' stores the discriminant value, while 'e' represents half of the negative reciprocal of the coefficient B. Finally, the main function prints the calculated root values (x1,x2) as output.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/solveForShit.hs\":0-7",
+            "content": "main = do\n print ( root(1,-8,6))\nroot (a,b,c) = (x1,x2) where\n x1 = e + sqrt d / ( 2*a)\n x2 = e - sqrt d / ( 2*a)\n d = b**2 - 4*a*c\n e = -b /(2*a)"
+        }
+    ]
+}

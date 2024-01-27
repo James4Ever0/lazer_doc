@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads and processes a Python file to extract table and constraint information using regular expressions, returning the extracted data as a list. The function 'cockShock' takes variable 'd' from an input parameter and stores a list containing 'b', 'c', 'a', and 'd'. Print statements are commented out, suggesting debugging or testing purposes.",
+    "details": [
+        {
+            "comment": "The code performs meta-programming by reading and processing a Python file to extract table and constraint information. It uses regular expressions to identify the table name, column names, and constraints within the file. The extracted data is then returned as a list containing the table name and a list of column names.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/derive_prefixed_fixed.py\":0-27",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=['makeDB0.py','makeDB1.py','makeDB2.py','makeDB3.py']\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\nc=cockShock(dickHead[2])"
+        },
+        {
+            "comment": "The code is taking a variable 'd' from the function 'cockShock' with input parameter 'dickHead[3]', and then storing a list containing 'b', 'c', 'a', and 'd'. The print statements are commented out, suggesting they were used for debugging or testing purposes.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/derive_prefixed_fixed.py\":28-32",
+            "content": "d=cockShock(dickHead[3])\n'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([b,c,a,d])"
+        }
+    ]
+}

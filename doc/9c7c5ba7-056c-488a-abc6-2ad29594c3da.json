@@ -1,0 +1,10 @@
+{
+    "summary": "Code attempts to compile Haskell code and run it on Android, but fails due to incompatibilities. Sends pickle files to Ubuntu instead.",
+    "details": [
+        {
+            "comment": "Code attempts to compile Haskell code and run it on Android, but fails due to incompatibilities. Sends pickle files to Ubuntu instead.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/README\":0-2",
+            "content": "We can compile the shitty haskell code and check if they could be run on Android.\nthis shit cannot be run under termux.\nthus you shall ship pickle files to ubuntu."
+        }
+    ]
+}

@@ -1,0 +1,533 @@
+{
+    "2700": {
+        "file_id": 456,
+        "content": "    #print(numkill)\n    with open('scavenger.pickle', 'wb') as filehandle:\n        pickle.dump(numkill, filehandle)\n    geeks=[]\n    for geek in numkill:\n        geeks+=geek[0].split(\"\\n\")\n    with open('scavenger0.pickle', 'wb') as filehandle:\n        pickle.dump(geeks, filehandle)\n    gnome=[]\n    for geek in numkill:\n        gnome.append(souviet(geek[0]))\n    with open('scavenger1.pickle', 'wb') as filehandle:\n        pickle.dump(gnome, filehandle)\n#    geeks\n    #fuck\n    #if at the beginning or the ending, you shall say it.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/dio.py:80-96"
+    },
+    "2701": {
+        "file_id": 456,
+        "content": "This code writes data to pickle files. It first dumps \"numkill\" into \"scavenger.pickle\", then splits and dumps it into \"scavenger0.pickle\". Next, it appends the result of a function call (souviet) to \"gnome\" and dumps it into \"scavenger1.pickle\". The code ends with comments about beginning/ending statements.",
+        "type": "comment"
+    },
+    "2702": {
+        "file_id": 457,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/iNeverForget.py",
+        "type": "filepath"
+    },
+    "2703": {
+        "file_id": 457,
+        "content": "This code imports the sys module, prints the path of the current script being run (sys.argv[0]), and then prints the argument passed to the script (sys.argv[1]). The purpose could be for identification or tracking during runtime.",
+        "type": "summary"
+    },
+    "2704": {
+        "file_id": 457,
+        "content": "import sys\nprint(sys.argv[0])\nprint(sys.argv[1])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/iNeverForget.py:1-3"
+    },
+    "2705": {
+        "file_id": 457,
+        "content": "This code imports the sys module, prints the path of the current script being run (sys.argv[0]), and then prints the argument passed to the script (sys.argv[1]). The purpose could be for identification or tracking during runtime.",
+        "type": "comment"
+    },
+    "2706": {
+        "file_id": 458,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/iNeverForgive.py",
+        "type": "filepath"
+    },
+    "2707": {
+        "file_id": 458,
+        "content": "The code imports pickle library, defines a function \"virtual\" that loads data from a pickle file named \"scavengerX.pickle\", and then prints the loaded data for each value of 'v' in the list \"v0\". The code is likely used for data extraction or analysis.",
+        "type": "summary"
+    },
+    "2708": {
+        "file_id": 458,
+        "content": "#import sys\n#print(sys.argv[0])\n#print(sys.argv[1])\nimport pickle\n#1:import pickle\ndef virtual(v):\n    with open(\"scavenger\"+v+\".pickle\",\"rb\") as _file:\n        papi=pickle.load(_file)\n        print(papi)\n        print(\"--spliter--\")\nv0=[\"\",\"0\",\"1\"]\nfor v in v0:\n    virtual(v)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/iNeverForgive.py:1-14"
+    },
+    "2709": {
+        "file_id": 458,
+        "content": "The code imports pickle library, defines a function \"virtual\" that loads data from a pickle file named \"scavengerX.pickle\", and then prints the loaded data for each value of 'v' in the list \"v0\". The code is likely used for data extraction or analysis.",
+        "type": "comment"
+    },
+    "2710": {
+        "file_id": 459,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/mapper.py",
+        "type": "filepath"
+    },
+    "2711": {
+        "file_id": 459,
+        "content": "This code defines a function named \"souviet\" that takes a string as input and returns a list of marked positions within the string. The function identifies head and tail positions, as well as merging points, to determine if they are at the start, end, or inside the string. It also handles the case where no merging points are found.",
+        "type": "summary"
+    },
+    "2712": {
+        "file_id": 459,
+        "content": "#mild=[\"56\\n5738-\\ndg\",\"\\n56\\n5738-\\ndg\",\"56\\n5738-\\ndg\\n\",\"56\\n5738-\\n\",\"\\n5738-\\ndg\"]\ndef souviet(union):\n    # at head at tail\n    mark=list(map((lambda x: [x, False,False]),list(filter((lambda x:x!=\"\"),union.split(\"\\n\")))))\n    #print(mark)\n    merge=[x for x,y in enumerate(union) if y==\"\\n\"]\n    #print(merge)\n    quack=len(union)\n    # f f t t f t t f\n#    gross=[]\n#    grass=\"\"\n    if merge!=[]:\n        if merge[0]==0 and mark[0][1]==False:\n            mark[0][1]= True\n        if merge[-1]==(quack-1) and mark[-1][2]==False:\n            mark[-1][2]=True\n#        if len(merge)>=1:\n        if mark[0][2]==False:\n            mark[0][2]= True\n        if mark[-1][1]==False:\n            mark[-1][1]=True\n        for mk in range(len(mark)-2):\n                #print(mk+1)\n            mark[mk+1][1], mark[mk+1][2]=True,True\n    else:\n        pass\n    return mark\n\"\"\"for jerk in mild:\n    print(\"-----spliter-----\")\n    print(jerk)\n    print(souviet(jerk))\"\"\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mapper.py:1-31"
+    },
+    "2713": {
+        "file_id": 459,
+        "content": "This code defines a function named \"souviet\" that takes a string as input and returns a list of marked positions within the string. The function identifies head and tail positions, as well as merging points, to determine if they are at the start, end, or inside the string. It also handles the case where no merging points are found.",
+        "type": "comment"
+    },
+    "2714": {
+        "file_id": 460,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/mop.py",
+        "type": "filepath"
+    },
+    "2715": {
+        "file_id": 460,
+        "content": "The code imports libraries, defines functions, extracts information from a superstring, reads 'core.log', filters data using std threshold, and stores relevant data in separate pickle files.",
+        "type": "summary"
+    },
+    "2716": {
+        "file_id": 460,
+        "content": "import pickle\nimport sys\nimport difflib, re\nfrom mapper import souviet \n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# grouping grouping grouping\n# random random random\n# do it in another fashion?\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/mop.py:1-43"
+    },
+    "2717": {
+        "file_id": 460,
+        "content": "The code imports necessary libraries, defines a function \"fuckall\" that takes in a list and returns a sublist excluding certain elements based on specific conditions. It also includes the function \"same_fuck\" which takes a superstring as input, but the purpose is not clear from the provided code snippet. Time complexity isn't a concern for this code.",
+        "type": "comment"
+    },
+    "2718": {
+        "file_id": 460,
+        "content": "    gnu=[]\n    # standard spliter here is the space char.\n    fuck0=fuckall([pos for pos, char in enumerate(superstring) if char == \"\\n\"  and superstring[pos-1] ==\"\\n\"])\n    #print(fuck0)\n    # this ain't right.\n    if len(fuck0)>9:\n        select=int(len(fuck0)-2)//5\n        fuck=[]\n        for mk in range(5):\n            fuck.append(fuck0[int(select*(mk+0.5))])\n    #    print(fuck)\n    else:\n        fuck=fuck0\n    #fuck=filter(lambda x:fuck.index)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+2:],superstring[:k]\n#        print([a,b])\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu+=thug\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    mop=[[]]*cp\n    for x in range(cp):\n        ruby=bsd[x]\n        mop[x]=[ruby,gnu.count(ruby)]\n    #print(mop)\n    #print(\"-----spliter-----\")\n    return mop\n#shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/mop.py:44-77"
+    },
+    "2719": {
+        "file_id": 460,
+        "content": "This code appears to extract information from a superstring and return it in the form of a list. It splits the string into blocks using difflib's SequenceMatcher, filters out certain elements, and then creates a list with each unique element and its count. The code also includes checks for potential issues with the efficiency of the sequence matching process.",
+        "type": "comment"
+    },
+    "2720": {
+        "file_id": 460,
+        "content": "nope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\n#print(nope)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\nwith open(joker(nope)+sys.argv[1],\"r\") as dickhead:\n    shit=dickhead.read()\n    #print(shit)\n    #print(\"-----spliter-----\")\n    joke=list(reversed(sorted(same_fuck(shit),key=(lambda x:x[1]))))\n    #print(joke)\n    std=joke[0][1]\n    numkill=list(filter((lambda x:(std-x[1])/std<0.3),joke))\n    #print(numkill)\n    with open('scavenger.pickle', 'wb') as filehandle:\n        pickle.dump(numkill, filehandle)\n    geeks=[]\n    for geek in numkill:\n        geeks+=geek[0].split(\"\\n\")\n    with open('scavenger0.pickle', 'wb') as filehandle:\n        pickle.dump(geeks, filehandle)\n    gnome=[]\n    for geek in numkill:\n        gnome.append(souviet(geek[0]))\n    with open('scavenger1.pickle', 'wb') as filehandle:\n        pickle.dump(gnome, filehandle)\n#    geeks\n    #fuck\n    #if at the beginning or the ending, you shall say it.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/mop.py:78-107"
+    },
+    "2721": {
+        "file_id": 460,
+        "content": "Code reads \"core.log\" file, filters data based on a standard deviation threshold (std), and stores the relevant data in separate pickle files: 'scavenger.pickle', 'scavenger0.pickle', and 'scavenger1.pickle'.",
+        "type": "comment"
+    },
+    "2722": {
+        "file_id": 461,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/reShit.py",
+        "type": "filepath"
+    },
+    "2723": {
+        "file_id": 461,
+        "content": "The code defines functions for string manipulation and uses them to detect positions of specific characters or strings, examine their existence, and split the input string based on a given delimiter. The code also contains comments expressing doubts and thoughts about the philosophy and approach used in the code.",
+        "type": "summary"
+    },
+    "2724": {
+        "file_id": 461,
+        "content": "def sitDown(string):\n    env=list(set(string))\n    return [[pos,string.count(pos)] for pos in env]\n#    return envy\n# spread throughtout the center?\n# detect the distance?\n# yes i am afraid so.\ndef simpleExam(pos,spliterPosList):\n    return [(pos-papi) for papi in spliterPosList]\ndef reCaptcha(string,spliter):\n    return list(enumerate(string.split(spliter)))\n#    return ak\n# my philosophy is fucked.\n# what is unique anyway?\n# what is math?\ndef spliterPos(string,spliter):\n    return [pos for pos, char in enumerate(string) if char == spliter]\ndef spliterPosList(string,spliterList):\n    return [pos for pos, char in enumerate(string) if char in spliterList]\ndef examExist(string,exam):\n    return exam in string\n#def exchangePos(string,locator):\n#    return\nwritings=\"\\nhell\\nyeah\\splitThis\\n\\n\"\n# detect overlapped things should I?\nescape=sitDown(writings)\nprint(escape)\nenemy=spliterPos(writings,\"\\n\")\nprint(enemy)\nprint(simpleExam(3,enemy))\n#print(examExist(writings,\"\\n\"))\n#print(reCaptcha(writings))\nprint([writings])\n# what to do next?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/reShit.py:1-37"
+    },
+    "2725": {
+        "file_id": 461,
+        "content": "The code defines functions for string manipulation and uses them to detect positions of specific characters or strings, examine their existence, and split the input string based on a given delimiter. The code also contains comments expressing doubts and thoughts about the philosophy and approach used in the code.",
+        "type": "comment"
+    },
+    "2726": {
+        "file_id": 462,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/respite.py",
+        "type": "filepath"
+    },
+    "2727": {
+        "file_id": 462,
+        "content": "This code offers functions for string manipulation, such as splitting strings based on rules and finding character positions. It utilizes a range detection function in two other functions to achieve this.",
+        "type": "summary"
+    },
+    "2728": {
+        "file_id": 462,
+        "content": "def sitDown(string):\n    env=list(set(string))\n    return [[pos,string.count(pos)] for pos in env]\n#    return envy\n# spread throughtout the center?\n# detect the distance?\n# yes i am afraid so.\ndef simpleExam(pos,spliterPosList):\n    return [(pos-papi) for papi in spliterPosList]\ndef reCaptcha(string,spliter):\n    return list(enumerate(string.split(spliter)))\n#    return ak\n# my philosophy is fucked.\n# what is unique anyway?\n# what is math?\ndef spliterPos(string,spliter):\n    return [pos for pos, char in enumerate(string) if char == spliter]\ndef spliterPosList(string,spliterList):\n    return [pos for pos, char in enumerate(string) if char in spliterList]\ndef examExist(string,exam):\n    return exam in string\n#def exchangePos(string,locator):\n#    return\nwritings=\"\\nhell\\nyeah\\splitThis\\n\\n\"\n# detect overlapped things should I?\n#escape=sitDown(writings)\n#print(escape)\n#enemy=spliterPos(writings,\"\\n\")\n#print(enemy)\n#print(simpleExam(3,enemy))\n#print(examExist(writings,\"\\n\"))\n#print(reCaptcha(writings))\n#print([writings])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/respite.py:1-36"
+    },
+    "2729": {
+        "file_id": 462,
+        "content": "This code defines several functions related to string manipulation, specifically focusing on detecting positions of characters or strings within a given text. The code includes functions for finding the position of a character in a string (`sitDown`, `simpleExam`), splitting a string based on a specified separator (`reCaptcha`, `spliterPos`), and checking if a specific string exists within another (`examExist`). These functions could be used to analyze or manipulate text data in various applications.",
+        "type": "comment"
+    },
+    "2730": {
+        "file_id": 462,
+        "content": "# what to do next?\n# to detect what is in the spliter, to decide which split which.\n# the invisible spliter?\n# the pattern spliter?\n# chinese style spliter?\n# RULE SPLITER\n# FEATURE SPLITER\n# LANGUAGE SPLITER\ndef detectRange(singleChar,validRange):\n    night=ord(singleChar)\n    if night>=validRange[0] and night<=validRange[1]:\n        return True\n    else:\n        return False\nsorrow=\"A\"\nprint(sorrow)\nprint(detectRange(sorrow,[4,102]))\ninvisibleString=\"errorISimmediate\"\nsimpleTaser=(lambda x : detectRange(x,[ord(\"A\"),ord(\"Z\")]))\ndef atomicRule(string,ruleFunc):\n    row=\"\"\n    wacon=[]\n    for func in list(string):\n        if ruleFunc(func):\n            row+=func\n        else:\n            if row!=\"\":\n                wacon.append(row)\n                row=\"\"\n            else:\n                pass\n    return list(filter((lambda x: x!=\"\"),wacon))\ncancer=\"SellerNeverDie\"\ndef returnPositionRule(string,ruleFunc):\n    return [pos for pos, char in enumerate(string) if ruleFunc(char)]\ndef returnValidSplitChain(length,splitChain):\n#    k0=0",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/respite.py:37-73"
+    },
+    "2731": {
+        "file_id": 462,
+        "content": "The code defines a function to detect a character's range, checks if a given character belongs to the range and returns True/False. It then uses this function in two other functions: \"atomicRule\" to split a string into words based on a given rule, and \"returnPositionRule\" to find the positions of characters that meet a certain rule condition. The code also defines a variable \"sorrow\" with value \"A\", and a string \"invisibleString\" with a specific value.",
+        "type": "comment"
+    },
+    "2732": {
+        "file_id": 462,
+        "content": "    k1=[]\n#    print(splitChain)\n    if 0 not in splitChain:\n        splitChain.insert(0,0)\n#    if length not in splitChain:\n    splitChain.append(length)\n    # zero to length.\n    for k in range(len(splitChain)-1):\n        k1.append([splitChain[k],splitChain[k+1]])\n#        k0=splitChain[k]+1\n#    k1.append([splitChain[len(splitChain)-1],length])\n    return list(filter((lambda x: x[0]<x[1]),k1))\ndef useSplit(string,ruleFunc):\n    evil=returnValidSplitChain(len(string),returnPositionRule(string,ruleFunc))\n    nightmare=[]\n#    print(evil)\n    for eve in evil:\n        nightmare.append(string[eve[0]:eve[1]])\n    return nightmare\n#def withDepthMemoryRule(string,ruleFunc,chancellerRule):\n#    row=\"\"\n#    wacon=[]\n#    depth=[]\n#    for func in list(string):\n#        if ruleFunc(func):\n#            depth.append(True)\n#        else:\n#            depth.append(False)\n#    depth0=chacellerRule(depth)\n    # get wired.\n#    for a,b in enumerate(depth0):\n        # this is spliting the thing.\n#            if row!=\"\":\n#                wacon.append(row)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/respite.py:74-107"
+    },
+    "2733": {
+        "file_id": 462,
+        "content": "Code defines functions for splitting a string based on certain rules and conditions. One function finds valid split chains, another uses these rules to split the string into parts. There is also an incomplete section for applying a depth memory rule, but it's not implemented yet.",
+        "type": "comment"
+    },
+    "2734": {
+        "file_id": 462,
+        "content": "#                row=\"\"\n#            else:\n#                pass\n#    return list(filter((lambda x: x!=\"\"),wacon))\nprint(atomicRule(invisibleString,simpleTaser))\nprint(useSplit(cancer,simpleTaser))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/respite.py:108-114"
+    },
+    "2735": {
+        "file_id": 462,
+        "content": "The code filters out empty strings from a list and then calls two functions, atomicRule and useSplit, with their respective arguments. This might be part of a larger process involving string manipulation or data processing.",
+        "type": "comment"
+    },
+    "2736": {
+        "file_id": 463,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/trashlot.py",
+        "type": "filepath"
+    },
+    "2737": {
+        "file_id": 463,
+        "content": "This code defines a string manipulation library with functions for detecting and splitting strings, likely part of a larger text processing or data manipulation program. It includes an incomplete depth memory rule function and applies various filters and operations on input strings.",
+        "type": "summary"
+    },
+    "2738": {
+        "file_id": 463,
+        "content": "def sitDown(string):\n    env=list(set(string))\n    return [[pos,string.count(pos)] for pos in env]\n#    return envy\n# spread throughtout the center?\n# detect the distance?\n# yes i am afraid so.\ndef simpleExam(pos,spliterPosList):\n    return [abs(pos-papi) for papi in spliterPosList]\ndef reCaptcha(string,spliter):\n    return list(enumerate(string.split(spliter)))\n#    return ak\n# my philosophy is fucked.\n# what is unique anyway?\n# what is math?\ndef spliterPos(string,spliter):\n    return [pos for pos, char in enumerate(string) if char == spliter]\ndef spliterPosList(string,spliterList):\n    return [pos for pos, char in enumerate(string) if char in spliterList]\ndef examExist(string,exam):\n    return exam in string\n#def exchangePos(string,locator):\n#    return\n#writings=\"\\nhell\\nyeah\\splitThis\\n\\n\"\n# detect overlapped things should I?\n#escape=sitDown(writings)\n#print(escape)\n#enemy=spliterPos(writings,\"\\n\")\n#print(enemy)\n#print(simpleExam(3,enemy))\n#print(examExist(writings,\"\\n\"))\n#print(reCaptcha(writings))\n#print([writings])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/trashlot.py:1-36"
+    },
+    "2739": {
+        "file_id": 463,
+        "content": "The code contains various functions that deal with string manipulation and position detection. The 'sitDown' function lists the unique characters in a string, while 'simpleExam' calculates the distance of a given position from a list of splitter positions. 'reCaptcha' splits a string at specified positions, and 'spliterPos' detects the positions of a specific splitter character. The 'spliterPosList' function finds the positions of any characters in a provided list. The 'examExist' function checks if an exam exists within the given string, while the unimplemented 'exchangePos' function seems to find positions related to a locator. Some of these functions are tested on example strings and their results printed.",
+        "type": "comment"
+    },
+    "2740": {
+        "file_id": 463,
+        "content": "# what to do next?\n# to detect what is in the spliter, to decide which split which.\n# the invisible spliter?\n# the pattern spliter?\n# chinese style spliter?\n# RULE SPLITER\n# FEATURE SPLITER\n# LANGUAGE SPLITER\ndef detectRange(singleChar,validRange):\n    night=ord(singleChar)\n    if night>=validRange[0] and night<=validRange[1]:\n        return True\n    else:\n        return False\n#sorrow=\"A\"\n#print(sorrow)\n#print(detectRange(sorrow,[4,102]))\n#invisibleString=\"errorISimmediate\"\n#simpleTaser=(lambda x : detectRange(x,[ord(\"A\"),ord(\"Z\")]))\ndef atomicRule(string,ruleFunc):\n    row=\"\"\n    wacon=[]\n    for func in list(string):\n        if ruleFunc(func):\n            row+=func\n        else:\n            if row!=\"\":\n                wacon.append(row)\n                row=\"\"\n            else:\n                pass\n    return list(filter((lambda x: x!=\"\"),wacon))\n#cancer=\"SellerNeverDie\"\ndef returnPositionRule(string,ruleFunc):\n    return [pos for pos, char in enumerate(string) if ruleFunc(char)]\ndef returnValidSplitChain(length,splitChain):",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/trashlot.py:37-72"
+    },
+    "2741": {
+        "file_id": 463,
+        "content": "This code defines several functions for detecting and splitting strings based on specific criteria. It includes functions for detecting a character within a valid range, applying atomic rules to split the string, finding positions of characters that meet certain conditions, and returning a valid split chain. This is likely part of a larger program related to text processing or data manipulation.",
+        "type": "comment"
+    },
+    "2742": {
+        "file_id": 463,
+        "content": "#    k0=0\n    k1=[]\n#    print(splitChain)\n    if 0 not in splitChain:\n        splitChain.insert(0,0)\n#    if length not in splitChain:\n    splitChain.append(length)\n    # zero to length.\n    for k in range(len(splitChain)-1):\n        k1.append([splitChain[k],splitChain[k+1]])\n#        k0=splitChain[k]+1\n#    k1.append([splitChain[len(splitChain)-1],length])\n    return list(filter((lambda x: x[0]<x[1]),k1))\ndef useSplit(string,ruleFunc):\n    evil=returnValidSplitChain(len(string),returnPositionRule(string,ruleFunc))\n    nightmare=[]\n#    print(evil)\n    for eve in evil:\n        nightmare.append(string[eve[0]:eve[1]])\n    return nightmare\n#def withDepthMemoryRule(string,ruleFunc,chancellerRule):\n#    row=\"\"\n#    wacon=[]\n#    depth=[]\n#    for func in list(string):\n#        if ruleFunc(func):\n#            depth.append(True)\n#        else:\n#            depth.append(False)\n#    depth0=chacellerRule(depth)\n    # get wired.\n#    for a,b in enumerate(depth0):\n        # this is spliting the thing.\n#            if row!=\"\":\n#                wacon.append(row)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/trashlot.py:73-107"
+    },
+    "2743": {
+        "file_id": 463,
+        "content": "The code defines a function `useSplit()` that takes a string and a rule function as input, returns a list of substrings from the string based on the split positions determined by the rule function. It also includes a commented-out block for a potential function `withDepthMemoryRule()`, but it is incomplete and not used in this code.",
+        "type": "comment"
+    },
+    "2744": {
+        "file_id": 463,
+        "content": "#                row=\"\"\n#            else:\n#                pass\n#    return list(filter((lambda x: x!=\"\"),wacon))\n#print(atomicRule(invisibleString,simpleTaser))\n#print(useSplit(cancer,simpleTaser))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/trashlot.py:108-113"
+    },
+    "2745": {
+        "file_id": 463,
+        "content": "This code segment is responsible for filtering out empty elements from a list. If an element in the list is not empty, it will be retained; otherwise, it will be removed. The code then applies a lambda function to the filtered list and returns the result. Additionally, the code prints the results of two other functions: atomicRule and useSplit, with specific arguments (invisibleString and simpleTaser for atomicRule, and cancer and simpleTaser for useSplit).",
+        "type": "comment"
+    },
+    "2746": {
+        "file_id": 464,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/verifyIfGlobal.py",
+        "type": "filepath"
+    },
+    "2747": {
+        "file_id": 464,
+        "content": "The code reads a file named \"core.log\", extracts data from another file called \"holidays.txt\" using line breaks as separators, and then applies a function called \"simpleExam\" to calculate the sum at each position of these separated values. The results are printed for two separate lists, one with positions directly following the lines in \"holidays.txt\", and another after skipping every two lines in the same text file.",
+        "type": "summary"
+    },
+    "2748": {
+        "file_id": 464,
+        "content": "# single char spliter\n# multichar spliter\n# manyfold\n# invisible spliter and derivatives\n# mixed spliter\n# length, metadata, features\nfrom trashlot import simpleExam, spliterPos\n#from statistics import sum\nwith open(\"core.log\",\"r\") as fool:\n    pool=fool.read()\n    with open(pool[:-1]+\"holidays.txt\",\"r\") as April:\n        Sunny=April.read()\n        globalWarming=spliterPos(Sunny,\"\\n\")\n        s=[[],[]]\n        for k in range(len(Sunny)):\n            s[0].append(sum(simpleExam(k,globalWarming)))\n        print(s[0])\n        print(\"--spliter--\")\n        for k in range(len(Sunny)*3):\n            s[1].append(sum(simpleExam(k-2*len(Sunny)*2,globalWarming)))\n        print(s[1])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/verifyIfGlobal.py:1-21"
+    },
+    "2749": {
+        "file_id": 464,
+        "content": "The code reads a file named \"core.log\", extracts data from another file called \"holidays.txt\" using line breaks as separators, and then applies a function called \"simpleExam\" to calculate the sum at each position of these separated values. The results are printed for two separate lists, one with positions directly following the lines in \"holidays.txt\", and another after skipping every two lines in the same text file.",
+        "type": "comment"
+    },
+    "2750": {
+        "file_id": 465,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/veryInput.py",
+        "type": "filepath"
+    },
+    "2751": {
+        "file_id": 465,
+        "content": "The code defines a global variable 'Sunny' as a multi-line string containing profanity. It then calculates the positions of newline characters in the string using 'spliterPos()'. The code creates an empty list 's', and using a for loop, it appends the sum of simpleExam function results for each character index to the first sublist of 's'. Then, it calculates the sum of simpleExam function results for every third character after accounting for the newline characters, and appends these values to the second sublist of 's'. Finally, it prints both sublists.",
+        "type": "summary"
+    },
+    "2752": {
+        "file_id": 465,
+        "content": "# single char spliter\n# multichar spliter\n# manyfold\n# invisible spliter and derivatives\n# mixed spliter\n# length, metadata, features\nfrom trashlot import simpleExam, spliterPos\n#from statistics import sum\n#with open(\"core.log\",\"r\") as fool:\n#    pool=fool.read()\n#    with open(pool[:-1]+\"holidays.txt\",\"r\") as April:\n#        Sunny=April.read()\nSunny=\"\\nfuck\\nshit\\nfuck\\nshit\\n\"\nglobalWarming=spliterPos(Sunny,\"\\n\")\ns=[[],[]]\nfor k in range(len(Sunny)):\n    s[0].append(sum(simpleExam(k,globalWarming)))\nprint(s[0])\nprint(\"--spliter--\")\nfor k in range(len(Sunny)*3):\n    s[1].append(sum(simpleExam(k-2*len(Sunny)*2,globalWarming)))\nprint(s[1])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/veryInput.py:1-22"
+    },
+    "2753": {
+        "file_id": 465,
+        "content": "The code defines a global variable 'Sunny' as a multi-line string containing profanity. It then calculates the positions of newline characters in the string using 'spliterPos()'. The code creates an empty list 's', and using a for loop, it appends the sum of simpleExam function results for each character index to the first sublist of 's'. Then, it calculates the sum of simpleExam function results for every third character after accounting for the newline characters, and appends these values to the second sublist of 's'. Finally, it prints both sublists.",
+        "type": "comment"
+    },
+    "2754": {
+        "file_id": 466,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/README",
+        "type": "filepath"
+    },
+    "2755": {
+        "file_id": 466,
+        "content": "The code discusses the need for maintaining different versions, categorizing Unicode characters, and making use of various file types in a directory. It mentions the possibility of creating a new alphabet set derived from simplification forms and learning from webpages through multiple methods like graphics and code.",
+        "type": "summary"
+    },
+    "2756": {
+        "file_id": 466,
+        "content": "In order to make it easier to modify the code, we have to keep different versions at the same time.\nStatus of unicode characters: separated; categorized; chained; paired; have similar shapes\nPay for it. I just want to make use of all kinds of file in that fucking directory.\nTo make it at least avaliable in traditional database form. the simplification form should be derived later, and by then we can just create a brand new alphabet set on our own.\n learn from webpage through multiple ways. mostly it can be graphical, also it can be in code but they shall be talked as a whole.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/README:1-6"
+    },
+    "2757": {
+        "file_id": 466,
+        "content": "The code discusses the need for maintaining different versions, categorizing Unicode characters, and making use of various file types in a directory. It mentions the possibility of creating a new alphabet set derived from simplification forms and learning from webpages through multiple methods like graphics and code.",
+        "type": "comment"
+    },
+    "2758": {
+        "file_id": 467,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/alphaGel.py",
+        "type": "filepath"
+    },
+    "2759": {
+        "file_id": 467,
+        "content": "This code defines functions for data processing, such as converting strings to CSV format and checking values. It searches for differences and similarities in sorted data, returning watched items or extracted data with additional information using the `utilize` function.",
+        "type": "summary"
+    },
+    "2760": {
+        "file_id": 467,
+        "content": "# first, pattern.\n# second, utilize.\n# sorted or not\nimport os\nimport statistics\nfrom keepMeSatisfied import same_fuck\nsimilar=(lambda x,y: True if (x/y > 1/4 and x/y < 4) else False)\ndef sucker(m):\n    s=\"\"\n    for k in m:\n        s+=(str(k)+\" \")\n    return s[:-1]\ndef ash(bitchEternity):\n    init=\"lua geniusWalk.lua\"\n    for fuckall in bitchEternity:\n        init+=\" \"+str(fuckall)\n    myCmd0 = os.popen(init)\n    myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))\n   # kill=(lambda k:list(map((lambda x:int(x)),k)))\n#    dickHead=kill(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n    myCmd0.close()\n    return myCmd[1]\n#    ksn=dickhead.count(statistics.mode(dickhead))\n#    ksd=len(dickhead)\n    #return [similar(ksn,ksd),similar(ksn,ksd//2)]\nshit=(lambda x0: list(filter((lambda x:x!=\"\"),x0.split(\" \"))))\ndef amplifier(c):\n    a,b=c[0],c[1]\n    if a==True:\n        return True\n    elif b==True:\n        return True\n    else:\n        return False\n# derive=(lambda f,g: int(g/(2+(f*(1/(1-g//2))))))\nderive=(lambda f,g: int(g/(2+(f*(1/(1-g/2))))) if f%2==1 else int(g//f)*f)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:1-42"
+    },
+    "2761": {
+        "file_id": 467,
+        "content": "This code defines several functions and variables to process data. The \"sucker\" function converts a string of numbers into a comma-separated format, while the \"ash\" function executes a command and returns its second line. The \"amplifier\" function checks if either of two input values is True. The \"derive\" function calculates a value based on two input parameters. Overall, the code seems to be related to data processing and command execution.",
+        "type": "comment"
+    },
+    "2762": {
+        "file_id": 467,
+        "content": "takeTwo=(lambda v:list(map((lambda f: abs(int(f))),v)))\ndef verizon0(mode,dutch,count):\n    duck=dutch[0]\n    rubber=dutch[1]\n    if mode == True:\n        # sorted.\n        a,b=rubber[0]\n        a0,b0=len(shit(a)),len(b)\n        pushUp=similar(count[0]/2,a0)\n        if count[1]==True and b0==2:\n            return [pushUp,True]\n        else:\n            return [pushUp,False]\n    if mode == False:\n        # not sorted.\n        if statistics.mean(list(map((lambda x:statistics.mean(takeTwo(shit(x)))),[ducky[0] for ducky in duck])))>5:\n            ver2=verizon0(True,dutch,count)[0]\n            a=[int(similar(len(shit(deutsch[0]))*len(deutsch[1]),derive(len(shit(deutsch[0])),count[0]))) for deutsch in duck]\n            b=0\n            for a0 in a:\n                b+=a0\n            if similar(b,len(duck)):\n                return [True,ver2]\n            else:\n                return [False,ver2]\n        else:\n            return [False,False]\ndef verizon1(ducky,count):\n    similar0=(lambda x,y: True if (x/y > 1/4 and x/y < 4) else False)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:43-72"
+    },
+    "2763": {
+        "file_id": 467,
+        "content": "This function takes a list of inputs and checks if they are sorted. If not, it compares the means of each input with a threshold value. It also checks if the length of the input list is equal to the count provided. If both conditions are met, it returns [True/False, calculated value]. If not sorted or mean exceeds threshold, it calls itself with sorted inputs and applies additional checks before returning [True/False, False].",
+        "type": "comment"
+    },
+    "2764": {
+        "file_id": 467,
+        "content": "    # only work in sorted mode.\n    bang=ducky[0]\n    shaky=list(map((lambda x: x[1]-x[0]),bang))\n    fuckMe=ducky[1]\n    if fuckMe!=[]:\n        if similar0(len(fuckme),count[0]):\n            watchMe=same_fuck(ash(fuckme))\n            return verizon0(True,watchMe,[len(watchMe),True if len(watchMe)%2==0 else False])\n        else:\n            pass\n    else:\n        print(shaky)\n        suckMeUp=sucker(shaky)\n        print(suckMeUp)\n        watchMe=same_fuck(suckMeUp)\n        print(watchMe)\n        # use try catch.\n#        if watchMe[0]!=[] and watchMe[1]!=[]:\n        return verizon0(True,watchMe,[len(watchMe),True if len(watchMe)%2==0 else False])\n#        else:\n#            print(\"FUCKING HELL!\\nFUCKING HELL!\")\n#            return [False,False,False]\ndef utilize(result,ab,cd):\n    if result == True:\n        if ab == True:\n            return [[cd[a] for a in range(len(cd)) if a%2==0],[cd[a] for a in range(len(cd)) if a%2==1]]\n        else:\n            print(\"-- DUPLICATES FOUND --\\n-- MIGRATE TO ICU --\")\n            return [[],[]]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:73-102"
+    },
+    "2765": {
+        "file_id": 467,
+        "content": "This code appears to be searching for differences and similarities in sorted data. If the data is not empty, it checks if the length matches a specific count value. If so, it returns the watched items (watchMe) along with additional information. If the data is empty, it prints shaky values, then extracts sucked-up data (suckMeUp), finds similarities in it, and returns them along with additional information. The function `utilize` is used to process results, returning either similarity pairs or indicating duplicate issues.",
+        "type": "comment"
+    },
+    "2766": {
+        "file_id": 467,
+        "content": "    else:\n        print(\"-- I FUCKED UP --\\n-- NO FUCKS GIVEN --\")\n        return [[],[]]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:103-105"
+    },
+    "2767": {
+        "file_id": 467,
+        "content": "If the condition is not met, it prints a message and returns empty lists.",
+        "type": "comment"
+    },
+    "2768": {
+        "file_id": 468,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/constructor.py",
+        "type": "filepath"
+    },
+    "2769": {
+        "file_id": 468,
+        "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
+        "type": "summary"
+    },
+    "2770": {
+        "file_id": 468,
+        "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" );\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/constructor.py:1-31"
+    },
+    "2771": {
+        "file_id": 468,
+        "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
+        "type": "comment"
+    },
+    "2772": {
+        "file_id": 469,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive.py",
+        "type": "filepath"
+    },
+    "2773": {
+        "file_id": 469,
+        "content": "The code is importing the 're' module and opening a file named \"makeDatabase\". It uses regular expressions to find strings enclosed in triple quotes within the file, and then prints them. The author expresses frustration at the ease with which any programming language can perform this task.",
+        "type": "summary"
+    },
+    "2774": {
+        "file_id": 469,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nwith open(\"makeDatabase.\",\"r\") as s:\n    so=re.findall(r'(\"\"\").+(\"\"\")',s.read())\n    print(so)\n    # I need transformation now!",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive.py:1-6"
+    },
+    "2775": {
+        "file_id": 469,
+        "content": "The code is importing the 're' module and opening a file named \"makeDatabase\". It uses regular expressions to find strings enclosed in triple quotes within the file, and then prints them. The author expresses frustration at the ease with which any programming language can perform this task.",
+        "type": "comment"
+    },
+    "2776": {
+        "file_id": 470,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_fixed.py",
+        "type": "filepath"
+    },
+    "2777": {
+        "file_id": 470,
+        "content": "This code reads a file named \"makeDatabase.py\" and uses regular expressions to extract strings enclosed in triple quotes (\"\"\"\"). It then prints the extracted strings, but mentions needing transformation next.",
+        "type": "summary"
+    },
+    "2778": {
+        "file_id": 470,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nwith open(\"makeDatabase.py\",\"r\") as s:\n    so=re.findall(r'(\"\"\").+(\"\"\")',s.read())\n    print(so)\n    # I need transformation now!",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_fixed.py:1-6"
+    },
+    "2779": {
+        "file_id": 470,
+        "content": "This code reads a file named \"makeDatabase.py\" and uses regular expressions to extract strings enclosed in triple quotes (\"\"\"\"). It then prints the extracted strings, but mentions needing transformation next.",
+        "type": "comment"
+    },
+    "2780": {
+        "file_id": 471,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed.py",
+        "type": "filepath"
+    },
+    "2781": {
+        "file_id": 471,
+        "content": "The code imports the 're' module and defines a function called 'cockShock'. This function reads the contents of a file, performs regex operations to extract table name, constraint names, and their corresponding columns. It then prints various results related to these extracted items. The function is executed twice using different files from the 'dickHead' list.",
+        "type": "summary"
+    },
+    "2782": {
+        "file_id": 471,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n        print(sd)\n        rn=so.replace(sd,'')\n        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n        print(svg)\n    # sample of metacoding\n    # I need transformation now!\ndickHead=[\"makeDatabase.py\",\"makeFroupingDatabase.py\"]\ncockShock(dickHead[0])\ncockShock(dickHead[1])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed.py:1-25"
+    },
+    "2783": {
+        "file_id": 471,
+        "content": "The code imports the 're' module and defines a function called 'cockShock'. This function reads the contents of a file, performs regex operations to extract table name, constraint names, and their corresponding columns. It then prints various results related to these extracted items. The function is executed twice using different files from the 'dickHead' list.",
+        "type": "comment"
+    },
+    "2784": {
+        "file_id": 472,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed_fixed.py",
+        "type": "filepath"
+    },
+    "2785": {
+        "file_id": 472,
+        "content": "The code uses regular expressions to parse table creation statements from input files and extracts the table name and column constraints, then formats the results into two lists. The code processes three input files and prints variables 'a', 'b', separated by a \"---spliter---\" string before storing their values in a list using storeAList().",
+        "type": "summary"
+    },
+    "2786": {
+        "file_id": 472,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=[\"makeDatabase.py\",\"makeGroupingDatabase.py\",\"makeAnother.py\"]\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\nc=cockShock(dickHead[2])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed_fixed.py:1-28"
+    },
+    "2787": {
+        "file_id": 472,
+        "content": "This code uses regular expressions and simpleStorageR import to parse table creation statements from a given file. It extracts the table name and its column constraints, then filters and formats the results into two lists: table name and column constraint names. The code applies this process to three input files, 'makeDatabase.py', 'makeGroupingDatabase.py', and 'makeAnother.py'.",
+        "type": "comment"
+    },
+    "2788": {
+        "file_id": 472,
+        "content": "'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([a,b,c])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed_fixed.py:29-32"
+    },
+    "2789": {
+        "file_id": 472,
+        "content": "Code snippet prints two variables `a` and `b`, separated by a \"---spliter---\" string, then stores the values of all three variables in a list using storeAList().",
+        "type": "comment"
+    },
+    "2790": {
+        "file_id": 473,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_refixed.py",
+        "type": "filepath"
+    },
+    "2791": {
+        "file_id": 473,
+        "content": "This code reads a file named \"makeDatabase.py\", extracts table, constraint and column names using regular expressions, filters empty strings, transforms the extracted information into a list of column names, and prints the results for each step of the process. The code demonstrates meta-programming and utilizes string manipulation and regular expression matching in Python.",
+        "type": "summary"
+    },
+    "2792": {
+        "file_id": 473,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nwith open(\"makeDatabase.py\",\"r\") as s:\n    rk=s.read().replace('\\n',' ')\n#    print(rk)\n    so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n    print(so)\n    sd=re.match(r'^\\w+',so).group(0)\n    print(sd)\n    rn=so.replace(sd,'')\n    print(rn)\n    sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n    print(sv)\n    svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n    lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n    lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n    print(svd)\n    svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n    print(svg)\n    # sample of metacoding\n    # I need transformation now!",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_refixed.py:1-21"
+    },
+    "2793": {
+        "file_id": 473,
+        "content": "This code reads a file named \"makeDatabase.py\", extracts table, constraint and column names using regular expressions, filters empty strings, transforms the extracted information into a list of column names, and prints the results for each step of the process. The code demonstrates meta-programming and utilizes string manipulation and regular expression matching in Python.",
+        "type": "comment"
+    },
+    "2794": {
+        "file_id": 474,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/exampleLinear.py",
+        "type": "filepath"
+    },
+    "2795": {
+        "file_id": 474,
+        "content": "This code imports the `sampleIntermediate` module and calls its `nuclearBomb()` function. It also suggests a possible issue with importing something in the middle of a program. The code uses regular expressions (re module) to scan lines and may be related to alphabets or language processing.",
+        "type": "summary"
+    },
+    "2796": {
+        "file_id": 474,
+        "content": "import sampleIntermediate\n# two different shits.\n# scan these lines until nothing left.\n# use re module.\n# check if it is possible to import something in the middle of the fucking program.\nsampleIntermediate.nuclearBomb()",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/exampleLinear.py:1-8"
+    },
+    "2797": {
+        "file_id": 474,
+        "content": "This code imports the `sampleIntermediate` module and calls its `nuclearBomb()` function. It also suggests a possible issue with importing something in the middle of a program. The code uses regular expressions (re module) to scan lines and may be related to alphabets or language processing.",
+        "type": "comment"
+    },
+    "2798": {
+        "file_id": 475,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinear.py",
+        "type": "filepath"
+    },
+    "2799": {
+        "file_id": 475,
+        "content": "The code defines three functions: `open_to_return`, `parse_file`, and `toyProject`. The `open_to_return` function opens a file, removes blank lines, and returns the list of non-empty lines. The `parse_file` function takes a list of file names as input, filters out the import/from statements, identifies unique keywords after those statements, and returns them in a list. Finally, the `toyProject` function calls `parse_file` on a given file name and prints the results for two example files.",
+        "type": "summary"
+    }
+}

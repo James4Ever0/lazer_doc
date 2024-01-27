@@ -1,0 +1,10 @@
+{
+    "summary": "This script sets execute permissions on files located in the 'zero', 'one', and 'two' directories, likely preparing them for execution.",
+    "details": [
+        {
+            "comment": "This script sets execute permissions on files located in the 'zero', 'one', and 'two' directories, likely preparing them for execution.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex/authorize.sh\":0-3",
+            "content": "#!/bin/bash\nchmod +x zero/*\nchmod +x one/*\nchmod +x two/*"
+        }
+    ]
+}

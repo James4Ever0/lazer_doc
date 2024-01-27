@@ -1,0 +1,10 @@
+{
+    "summary": "This script uses wget to download the repositories of GitHub users into separate log files. It retrieves the repositories for jiaxiaogang, Brethland, commaai (pages 1-3), and opennars.",
+    "details": [
+        {
+            "comment": "This script uses wget to download the repositories of GitHub users into separate log files. It retrieves the repositories for jiaxiaogang, Brethland, commaai (pages 1-3), and opennars.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/shitAgain/buster.sh\":0-6",
+            "content": "#!/bin/bash\nwget 'https://github.com/jiaxiaogang?tab=repositories' -O 0_.log\nwget 'https://github.com/Brethland?tab=repositories' -O 1_.log\nwget 'https://github.com/commaai?page=1&tab=repositories' -O 2_.log\nwget 'https://github.com/commaai?page=2&tab=repositories' -O 3_.log\nwget 'https://github.com/commaai?page=3&tab=repositories' -O 4_.log\nwget 'https://github.com/opennars?tab=repositories' -O 5_.log"
+        }
+    ]
+}

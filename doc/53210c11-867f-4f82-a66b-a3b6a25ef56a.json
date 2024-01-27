@@ -1,0 +1,15 @@
+{
+    "summary": "This code uses cURL to send a GET request, retrieve data from a URL, and optionally extract cookies or display response data.",
+    "details": [
+        {
+            "comment": "Function curl_request performs a cURL request with optional POST data and cookies, returning either the response or cookies depending on the parameter.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/curl-request.php\":0-22",
+            "content": "<?php\n//\u53c2\u65701\uff1a\u8bbf\u95ee\u7684URL\uff0c\u53c2\u65702\uff1apost\u6570\u636e(\u4e0d\u586b\u5219\u4e3aGET)\uff0c\u53c2\u65703\uff1a\u63d0\u4ea4\u7684$cookies,\u53c2\u65704\uff1a\u662f\u5426\u8fd4\u56de$cookies\n function curl_request($url,$post='',$cookie='', $returnCookie=0){\n        $curl = curl_init();\n        curl_setopt($curl, CURLOPT_URL, $url);\n        curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)');\n        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);\n        curl_setopt($curl, CURLOPT_AUTOREFERER, 1);\n        curl_setopt($curl, CURLOPT_REFERER, \"http://www.baidu.com\");\n        if($post) {\n            curl_setopt($curl, CURLOPT_POST, 1);\n            curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post));\n        }\n        if($cookie) {\n            curl_setopt($curl, CURLOPT_COOKIE, $cookie);\n        }\n        curl_setopt($curl, CURLOPT_HEADER, $returnCookie);\n        curl_setopt($curl, CURLOPT_TIMEOUT, 10);\n        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);\n        $data = curl_exec($curl);\n        if (curl_errno($curl)) {\n            return curl_error($curl);\n        }"
+        },
+        {
+            "comment": "This code uses cURL to send a GET request and retrieve data from a URL. If the return cookie flag is set, it extracts the Set-Cookie header and returns the cookie along with the content. If not, it simply returns the data. The code then makes a request to Baidu's search page for \"java\" keyword and displays the response data using echo.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/curl-request.php\":23-40",
+            "content": "        curl_close($curl);\n        if($returnCookie){\n            list($header, $body) = explode(\"\\r\\n\\r\\n\", $data, 2);\n            preg_match_all(\"/Set\\-Cookie:([^;]*);/\", $header, $matches);\n            $info['cookie']  = substr($matches[1][0], 1);\n            $info['content'] = $body;\n            return $info;\n        }else{\n            return $data;\n        }\n}\n//just fucking use it!\n//we could start multiple threads using lua\n$superdata=curl_request(\"http://www.baidu.com/s?word=java\");\n// never forget the semicolon\necho $superdata;\n// timed fucking out!!\n?>"
+        }
+    ]
+}

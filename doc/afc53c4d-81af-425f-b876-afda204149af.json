@@ -1,0 +1,10 @@
+{
+    "summary": "This Haskell code imports a qualified module, prompts the user to enter their name, and then calls a function from the imported module with the entered name. It also defines and prints the result of a simple multiplication operation.",
+    "details": [
+        {
+            "comment": "This Haskell code imports a qualified module, prompts the user to enter their name, and then calls a function from the imported module with the entered name. It also defines and prints the result of a simple multiplication operation.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/copyAndPaste.hs\":0-10",
+            "content": "-- comment is it so?\n-- with qualified keyword the code can get convoluted like java.\nimport qualified MyFirstModule\nmain :: IO ()\nmain = do\n  putStrLn \"Enter Your Name!\"\n  name <- getLine\n  let message = MyFirstModule.myFirstFunction name\n  putStrLn message\n  let arghFuck=(\\x -> x*2) 5\n  print arghFuck"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code makes three simultaneous requests to Baidu search engine using Axios library, retrieves the search results for a specific query, and logs the results to the console. It does this by constructing URLs with encoded query parameters and utilizing Axios' all() function to perform the requests concurrently.",
+    "details": [
+        {
+            "comment": "This code makes three simultaneous requests to Baidu search engine using Axios library, retrieves the search results for a specific query, and logs the results to the console. It does this by constructing URLs with encoded query parameters and utilizing Axios' all() function to perform the requests concurrently.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/node-batch2.js\":0-16",
+            "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\n// three in a batch.\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),\naxios.get('http://www.baidu.com/s?pn='+(n+2)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2,response3) => {\n  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\n//console.log(response4.data);\n})).catch(error => {\n  console.log(error);\n});"
+        }
+    ]
+}

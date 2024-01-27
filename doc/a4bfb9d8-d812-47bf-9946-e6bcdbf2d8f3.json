@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses Expect (a scripting language for automating interactions with programs) to spawn a zsh shell, retrieve and print the current directory three times using \"pwd\" command, and then exit after receiving end-of-file signal.",
+    "details": [
+        {
+            "comment": "This code uses Expect (a scripting language for automating interactions with programs) to spawn a zsh shell, retrieve and print the current directory three times using \"pwd\" command, and then exit after receiving end-of-file signal.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/fuckOff.exp\":0-12",
+            "content": "#!/data/data/com.termux/files/usr/bin/expect\nspawn zsh\nexpect -re \".*\"\nputs $expect_out(buffer)\nsend -- \"pwd\\r\"\nexpect -re \".*\"\nputs $expect_out(buffer)\nsend -- \"pwd\\r\"\nexpect -re \".*\"\nputs $expect_out(buffer)\nsend -- \"pwd\\r\"\nexpect eof\nputs $expect_out(buffer)"
+        }
+    ]
+}

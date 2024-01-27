@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines functions to analyze and parse Python code. The `checkFunctor` function extracts function calls, the `notch` function identifies and categorizes definitions or lambda expressions, and the `smoke` function extracts the function definition from a code block. It seems to be used for tasks like parsing or formatting code without semicolons.",
+    "details": [
+        {
+            "comment": "The code defines functions to analyze and parse Python code. The `checkFunctor` function extracts function calls, the `notch` function identifies and categorizes definitions or lambda expressions, and the `smoke` function extracts the function definition from a code block. It seems to be used for tasks like parsing or formatting code without semicolons.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/defTester.py\":0-24",
+            "content": "import re\nstickGlue=(lambda x: \"\".join(list(filter((lambda y:y not in [\" \",\"\\t\"]),x))))\n# this is for those without semicolons.\n# i will do another semi parser.\n# or just code formatter.\ndef checkFunctor(s):\n    # along with the calling.\n    rape=list(map((lambda x:stickGlue(x[:-1])),re.findall(r\"[a-zA-Z0-9_]*[ \\t]*\\(\",s)))\n    return rape\ndef notch(k):\n    k0=stickGlue(k)\n    e=k0.split(\"=\",1)\n    try:    \n        if \"def\" == k0[:3]:\n            return 1, k0.split(\"(\",1)[1].split(\":\",1)[0][:-1]+\",\"\n        elif \"lambda\" == e[1][1:7]:\n            return 0,e[0]\n        else:\n            return 2,\"\"\n    except:\n        return 2,\"\"\ndef smoke(fuck):\n    a=fuck if fuck[-1]!=\"\\n\" else fuck[:-1]\n    b=stickGlue(a).split(\":\",1)[0][7:]\n    return (fuck,b,\"(\"+b+\",)\")"
+        }
+    ]
+}

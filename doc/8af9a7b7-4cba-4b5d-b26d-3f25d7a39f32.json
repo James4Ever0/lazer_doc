@@ -1,0 +1,10 @@
+{
+    "summary": "This script loads data from pickle files, reads a log file and another text file, compares the data, and stores matching index positions in a list. The output is the list of matches, which might be used for further analysis or processing.",
+    "details": [
+        {
+            "comment": "This script loads data from pickle files, reads a log file and another text file, compares the data, and stores matching index positions in a list. The output is the list of matches, which might be used for further analysis or processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/espresso.py\":0-40",
+            "content": "import pickle\nfrom lolita import fury\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    print(fuckme)\n#    print(shit0)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "summary": "The script connects to a SQLite database, inserts items into two tables and handles constraints while ensuring alphabetical order. It also includes cleanup functions for connection and commits changes.",
+    "details": [
+        {
+            "comment": "This Python script connects to a SQLite database, inserts items into two tables, and handles potential constraints and commits changes. It also includes functions for inserting an item's group, inserting a relationship between items, and cleaning up the connection upon completion.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/holdMeRightNow.py\":0-29",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\ndef insertOneItem(a,b):\n    try:\n        sql=\"INSERT INTO groupAllChars (mainId,charGroup) VALUES ({},'{}');\".format(a,b)\n        conn.execute(sql)\n    except:\n        print(\"DATABASE CONSTRAINT ERROR OR ELSE\")\n#    return\ndef insertOneRelation(a,b,c,d,e):\n    try:\n        sql=\"INSERT INTO subdue (startId,startType,endId,endType,relationType) VALUES ({},'{}',{},'{}','{}');\".format(a,b,c,d,e)\n        conn.execute(sql)\n    except:\n        print(\"DATABASE CONSTRAINT ERROR OR ELSE\")\n#    return\ndef cleanUp():\n    try:\n        conn.commit()\n    except:\n        print(\"COMMIT FAILED\")\n    conn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?"
+        },
+        {
+            "comment": "Ensuring alphabetical order while inserting random content.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/holdMeRightNow.py\":30-31",
+            "content": "# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

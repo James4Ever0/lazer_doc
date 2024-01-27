@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports a list from \"getFromPickle\" and writes unique elements from the list to a file called \"fuckLord.log\". It first removes duplicates using set() and list().",
+    "details": [
+        {
+            "comment": "This code imports a list from \"getFromPickle\" and writes unique elements from the list to a file called \"fuckLord.log\". It first removes duplicates using set() and list().",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/fuckload.py\":0-10",
+            "content": "from getFromPickle import returnList\ndef writeShit(a,b):\n    with open(a,\"w+\") as fuck:\n        for f in b:\n            fuck.write(f+\"\\n\")\n#    return f\nd=list(set([d for d in returnList()]))\nwriteShit(\"fuckLord.log\",d)"
+        }
+    ]
+}

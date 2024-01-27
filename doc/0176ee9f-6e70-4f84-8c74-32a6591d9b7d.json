@@ -1,0 +1,10 @@
+{
+    "summary": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
+    "details": [
+        {
+            "comment": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/communism/preserveOrder.py\":0-3",
+            "content": "def f7(seq):\n    seen = set()\n    seen_add = seen.add\n    return [x for x in seq if not (x in seen or seen_add(x))]"
+        }
+    ]
+}

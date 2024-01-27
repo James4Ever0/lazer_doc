@@ -1,0 +1,10 @@
+{
+    "summary": "Code defines two regex patterns `patt1` and `patt2`, and a string variable `mess`. It checks if `mess` includes the strings matching `patt1` or `patt2` using the `includes()` method. The results are then logged to the console.",
+    "details": [
+        {
+            "comment": "Code defines two regex patterns `patt1` and `patt2`, and a string variable `mess`. It checks if `mess` includes the strings matching `patt1` or `patt2` using the `includes()` method. The results are then logged to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/regex.js\":0-11",
+            "content": "//var patt0=new RegExp(\"https\\:\\/\\/www\\.baidu\\.com\\/s\\?\")\n//var patt1=new RegExp(\"https\\:\\/\\/www\\.baidu\\.com\\/s\\?url=the-best-hings-in-life-are-free\");\n//fuck you.\n//fuck.\nvar patt1=\"https://www.baidu.com/s?url=\";\nvar patt2=\"https://www.baidu.com/s?ul=\";\nvar mess=\"https://www.baidu.com/s?url=the-best-hings-in-life-are-free\";\nconsole.log(mess.includes(patt2)); \nconsole.log(mess.includes(patt1)); \n//this sucks.\n//console.log(mess.(stringObject => stringObject.includes(patt1););)"
+        }
+    ]
+}

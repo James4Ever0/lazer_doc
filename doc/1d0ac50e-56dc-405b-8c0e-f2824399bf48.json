@@ -1,0 +1,10 @@
+{
+    "summary": "Building a matrix with various test components, measuring progress and evaluating the reach of specific sections. Preloads keys for plotting while excluding special marks not in queue.",
+    "details": [
+        {
+            "comment": "Building a matrix with various test components, measuring progress and evaluating the reach of specific sections. Preloads keys for plotting while excluding special marks not in queue.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/README\":0-3",
+            "content": "WE ARE BUILDING A MATRIX HERE.\nDIFFERENT PART OF THE WORD AND DIFFERENT KIND OF TEST. SEE HOW FAR A PORTION CAN GO.\npreload all necessary keys into the plot. other special marks are not queued."
+        }
+    ]
+}

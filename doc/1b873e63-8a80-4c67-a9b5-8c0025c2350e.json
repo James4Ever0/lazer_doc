@@ -1,0 +1,10 @@
+{
+    "summary": "This code is using the 'man' command to search for keywords (in this case, '.' as a placeholder) in man page listings and outputting it into a file called \"wtf.txt\". It uses the 'cat' command to concatenate the output from 'man -k .' directly into the specified file.",
+    "details": [
+        {
+            "comment": "This code is using the 'man' command to search for keywords (in this case, '.' as a placeholder) in man page listings and outputting it into a file called \"wtf.txt\". It uses the 'cat' command to concatenate the output from 'man -k .' directly into the specified file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/main_lister.sh\":0-1",
+            "content": "#!/bin/bash\nman -k . | cat > \"wtf.txt\""
+        }
+    ]
+}

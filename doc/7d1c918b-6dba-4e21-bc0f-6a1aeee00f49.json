@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a file, generates tokens using tokenize module, and then retrieves the attributes of the first token. It prints various information such as attribute names, their types, and values (except for methods). The code seems to be part of a larger process where it fetches information from a file and processes its content in subsequent steps.",
+    "details": [
+        {
+            "comment": "This code reads a file, generates tokens using tokenize module, and then retrieves the attributes of the first token. It prints various information such as attribute names, their types, and values (except for methods). The code seems to be part of a larger process where it fetches information from a file and processes its content in subsequent steps.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/bitch.py\":0-24",
+            "content": "# paste the thing right at this spot.\nfrom tokenize import generate_tokens\nfrom io import BytesIO\n#from standardInsult import monad\ndef returnTokens(thousands):\n    def decistmt(s):\n        tokgen = generate_tokens(s.readline)\n        v=[x for x in tokgen]\n        s.close()\n        return v\n    h=open(thousands,\"r\")\n    return decistmt(h)\nname0=\"../stripOffPants.py\"\nr=returnTokens(name0)\ntheory=dir(r[0])\nprint(theory)\nhypothesis=[t for t in theory if t[0] != \"_\"]\nprint([\"r[0].\"+g for g in hypothesis])\nprint(r[0])\n# use ipynb?\nkkp=[type(eval(\"r[0].\"+bp)).__name__ for bp in hypothesis]\nprint(kkp)\nprint([eval(\"r[0].\"+hypothesis[bp]) if \"method\" not in kkp[bp] else \"blankStuff\" for bp in range(len(hypothesis))])\nprint(r[0].exact_type)"
+        }
+    ]
+}

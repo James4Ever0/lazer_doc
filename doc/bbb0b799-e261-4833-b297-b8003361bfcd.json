@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports NumPy and TA-Lib, generates random input data for various financial metrics, and applies technical indicators (Simple Moving Average, Bollinger Bands, Stochastic Oscillator) using different price types. It then prints the inputs and calculated values for slowk and slowd.",
+    "details": [
+        {
+            "comment": "The code imports NumPy and TA-Lib, generates random input data for various financial metrics, and applies technical indicators (Simple Moving Average, Bollinger Bands, Stochastic Oscillator) using different price types. It then prints the inputs and calculated values for slowk and slowd.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/nothing.py\":0-38",
+            "content": "import numpy as np\n# note that all ndarrays must be the same length!\ninputs = {\n    'open': np.random.random(100),\n    'high': np.random.random(100),\n    'low': np.random.random(100),\n    'close': np.random.random(100),\n    'volume': np.random.random(100)\n}\nfrom talib import abstract\n# directly\nSMA = abstract.SMA\n# or by name\nSMA = abstract.Function('sma')\nfrom talib.abstract import *\n# uses close prices (default)\noutput = SMA(inputs, timeperiod=25)\n# uses open prices\noutput = SMA(inputs, timeperiod=25, price='open')\n# uses close prices (default)\nupper, middle, lower = BBANDS(inputs, 20, 2, 2)\n# uses high, low, close (default)\nslowk, slowd = STOCH(inputs, 5, 3, 0, 3, 0) # uses high, low, close by default\n# uses high, low, open instead\nslowk, slowd = STOCH(inputs, 5, 3, 0, 3, 0, prices=['high', 'low', 'open'])\nprint(inputs)\nprint(slowk,slowd)"
+        }
+    ]
+}

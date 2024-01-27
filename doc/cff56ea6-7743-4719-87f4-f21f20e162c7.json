@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports pickle library, defines a function \"virtual\" that loads data from a pickle file named \"scavengerX.pickle\", and then prints the loaded data for each value of 'v' in the list \"v0\". The code is likely used for data extraction or analysis.",
+    "details": [
+        {
+            "comment": "The code imports pickle library, defines a function \"virtual\" that loads data from a pickle file named \"scavengerX.pickle\", and then prints the loaded data for each value of 'v' in the list \"v0\". The code is likely used for data extraction or analysis.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/iNeverForgive.py\":0-13",
+            "content": "#import sys\n#print(sys.argv[0])\n#print(sys.argv[1])\nimport pickle\n#1:import pickle\ndef virtual(v):\n    with open(\"scavenger\"+v+\".pickle\",\"rb\") as _file:\n        papi=pickle.load(_file)\n        print(papi)\n        print(\"--spliter--\")\nv0=[\"\",\"0\",\"1\"]\nfor v in v0:\n    virtual(v)"
+        }
+    ]
+}

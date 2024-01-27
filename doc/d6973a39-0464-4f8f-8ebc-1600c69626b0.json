@@ -1,0 +1,15 @@
+{
+    "summary": "This PHP script parses URLs and retrieves redirect locations, but contains language errors and developer frustration comments. The code seems to be an HTML file with a PHP tag, executed on a server without output or functionality.",
+    "details": [
+        {
+            "comment": "This code is a PHP script that parses the URL, opens an HTTP connection, and retrieves the redirect location by reading the response headers. It then outputs the final redirect location as a string. The code has some language errors and comments expressing frustration during development.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/dopeshit.php\":0-31",
+            "content": "<?php\n//$url = \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\";\n//save the thread or not?\n//now we do not consider nothing.\n//just use every fucking thread.\n$url=$argv[1];\n// this was the wrong fucking thing\n// $argv instead of $args!\n// fuck you! \n$info = parse_url($url);\n$fp = fsockopen($info['host'], 80,$errno, $errstr, 30);\nfputs($fp,\"GET {$info['path']}?{$info['query']} HTTP/1.1\\r\\n\");\nfputs($fp, \"Host: {$info['host']}\\r\\n\");\nfputs($fp, \"Connection: close\\r\\n\\r\\n\");\n$rewrite = '';\nwhile(!feof($fp)) {\n    $line = fgets($fp);\n    if($line != \"\\r\\n\" ) {\n        if(strpos($line,'Location:') !== false) {\n            $rewrite = str_replace(array(\"\\r\",\"\\n\",\"Location: \"),'',$line);\n        }\n    }else {\n        break;\n    }\n}\n//is this the fucking way to combine strings?\n//$rewrite=\"$rewrite\\n\";\n//shit this fucking works.\necho \"$rewrite\"; //\u7ed3\u679c\u663e\u793a\uff1astring(22) \"http://www.google.com/\"\n//this fuck is good.\n//you should not end this without a fucking return.\n//except when combined with the fucking lua."
+        },
+        {
+            "comment": "This code appears to be an HTML file with a PHP tag. The code is likely to be executed on a server, and it ends the PHP block without any output or functionality.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/dopeshit.php\":32-32",
+            "content": "?>"
+        }
+    ]
+}

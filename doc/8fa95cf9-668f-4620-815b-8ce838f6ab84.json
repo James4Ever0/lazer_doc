@@ -1,0 +1,10 @@
+{
+    "summary": "The code executes cloudnine.sh script with specified parameters and waits for 2 seconds, then copies local service file to a remote server using netcat (nc), before terminating the script.",
+    "details": [
+        {
+            "comment": "The code executes cloudnine.sh script with specified parameters and waits for 2 seconds, then copies local service file to a remote server using netcat (nc), before terminating the script.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/magic.sh\":0-6",
+            "content": "#!/bin/bash\n./cloudnine.sh \"radical\" \"fuckyou.db\" \"madeinchina.py\" \n# nonempty parameter?\nsleep 2;\ncat rockstar/chumble/.local-service-copy | nc termbin.com 9999\nkill $$"
+        }
+    ]
+}

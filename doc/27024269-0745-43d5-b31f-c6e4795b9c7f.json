@@ -1,0 +1,10 @@
+{
+    "summary": "This code uses the \"links\" tool to dump the HTML content of a specified webpage (https://www.zhihu.com/question/344613345/answer/825127485) and redirects it to a log file named \"example/3.log\".",
+    "details": [
+        {
+            "comment": "This code uses the \"links\" tool to dump the HTML content of a specified webpage (https://www.zhihu.com/question/344613345/answer/825127485) and redirects it to a log file named \"example/3.log\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/websitegrep/links-dump2.sh\":0-1",
+            "content": "#!/bin/bash\nlinks -dump https://www.zhihu.com/question/344613345/answer/825127485 | cat > example/3.log"
+        }
+    ]
+}

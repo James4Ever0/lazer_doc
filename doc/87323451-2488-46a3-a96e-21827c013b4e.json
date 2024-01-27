@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
+    "details": [
+        {
+            "comment": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newTestN.py\":0-24",
+            "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    err=forMotherRussia(numToKill,superRats)\n    print(err)\n# there is the unique constraint\n    try:\n        executeCode(err)\n        print('--ejaculation successful--')\n    except:\n        print('--testicles are stolen--')\n# fucking pricks.\n#print(forMotherRussia(0,['singapore','newYear']))\n#print(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''"
+        }
+    ]
+}

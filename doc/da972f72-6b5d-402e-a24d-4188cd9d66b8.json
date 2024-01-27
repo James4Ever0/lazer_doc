@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads an HTML file using fs and Cheerio, applies selectors to specific elements for further processing or extraction, and checks if the selected element is an H3 tag but may face issues due to prop() not being available in that context.",
+    "details": [
+        {
+            "comment": "This code reads an HTML file using fs and Cheerio libraries, then applies a selector to specific elements (\"h3[class*='c-title']\" and \"div[class*='c-abstract']\"). It seems to be parsing these elements for further processing or extraction. The comments suggest the author prefers not to rely on regex selectors and instead uses Cheerio's load function for selector operations, and recommends considering other languages if you want to focus on regex selection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/local.js\":0-33",
+            "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\n// use something apart from this.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n  $(\"h3[class*='c-title'], div[class*='c-abstract']\").each(function (i, elem) {// this fucking works"
+        },
+        {
+            "comment": "This code snippet retrieves the tag name of the selected element, checks if it's an H3 tag, and logs its inner text. However, prop() is not available in this context, and it might cause issues later on.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/local.js\":34-41",
+            "content": "\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n\t  console.log(poker);\n\t  if (poker ==\"h3\"){console.log($(\":first-child\",$(this)).attr(\"href\"));};\n\t  // prop() is not avaliable here.\n\t  console.log($(this).text());\n  });\n});"
+        }
+    ]
+}

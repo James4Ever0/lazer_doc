@@ -1,0 +1,10 @@
+{
+    "summary": "This code changes the working directory to \"/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module\" and executes the Python script \"shitsFuckedUp.py\".",
+    "details": [
+        {
+            "comment": "This code changes the working directory to \"/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module\" and executes the Python script \"shitsFuckedUp.py\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/jumpCut.sh\":0-1",
+            "content": "cd /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module\npython shitsFuckedUp.py"
+        }
+    ]
+}

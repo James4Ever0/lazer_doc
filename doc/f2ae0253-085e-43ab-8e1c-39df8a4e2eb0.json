@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports a function from \"getFromDill\" module and assigns its returned list to variable 'p'. Then, it prints the entire list followed by specific sample elements based on their name and age.",
+    "details": [
+        {
+            "comment": "Code imports a function from \"getFromDill\" module and assigns its returned list to variable 'p'. Then, it prints the entire list followed by specific sample elements based on their name and age.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/shitsFuckedUp.py\":0-4",
+            "content": "from getFromDill import returnAList\np=returnAList()\nprint(p)\nprint(\"--\",\"sample:\",p.name(5),p.age(4),\"--\")"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the py2neo library and initializes a Neo4j database connection using the provided URL, username, and password.",
+    "details": [
+        {
+            "comment": "This code imports the py2neo library and initializes a Neo4j database connection using the provided URL, username, and password.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/homework/wordnet-similar-words.py\":0-1",
+            "content": "from py2neo import Graph\ngraph=Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")"
+        }
+    ]
+}

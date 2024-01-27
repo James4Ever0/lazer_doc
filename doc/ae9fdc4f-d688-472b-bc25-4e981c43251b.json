@@ -1,0 +1,10 @@
+{
+    "summary": "The code is importing the 're' module and opening a file named \"makeDatabase\". It uses regular expressions to find strings enclosed in triple quotes within the file, and then prints them. The author expresses frustration at the ease with which any programming language can perform this task.",
+    "details": [
+        {
+            "comment": "The code is importing the 're' module and opening a file named \"makeDatabase\". It uses regular expressions to find strings enclosed in triple quotes within the file, and then prints them. The author expresses frustration at the ease with which any programming language can perform this task.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive.py\":0-5",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nwith open(\"makeDatabase.\",\"r\") as s:\n    so=re.findall(r'(\"\"\").+(\"\"\")',s.read())\n    print(so)\n    # I need transformation now!"
+        }
+    ]
+}

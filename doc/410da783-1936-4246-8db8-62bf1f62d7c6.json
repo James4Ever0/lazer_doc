@@ -1,0 +1,10 @@
+{
+    "summary": "This code file contains a comment and a print statement. The comment explains the purpose of the script, which is to print \"Hello World!\" to the console.",
+    "details": [
+        {
+            "comment": "This code file contains a comment and a print statement. The comment explains the purpose of the script, which is to print \"Hello World!\" to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/hello-world.lua\":0-5",
+            "content": "-- i am a comment\n--[[\ni am comments\ni am comments\n--]]\nprint(\"Hello World!\")"
+        }
+    ]
+}

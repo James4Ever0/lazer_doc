@@ -1,0 +1,10 @@
+{
+    "summary": "This code includes necessary standard libraries, initializes the main function, and executes a command-line command using the system() function. The command \"pwd\" returns the present working directory as output.",
+    "details": [
+        {
+            "comment": "This code includes necessary standard libraries, initializes the main function, and executes a command-line command using the system() function. The command \"pwd\" returns the present working directory as output.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/standard-shell.c\":0-5",
+            "content": "#include <stdio.h>\n#include <stdlib.h>\nint main(){\nsystem(\"pwd\");\n//it will only return numbers.\n}"
+        }
+    ]
+}

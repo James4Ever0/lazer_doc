@@ -1,0 +1,10 @@
+{
+    "summary": "This code retrieves URLs from a table and uses PHP to execute commands on them. It then reads the results, prints them, and closes the handles automatically. The code seems to be written with some frustration or expletives due to its complex nature. The comments indicate the code is handling URLs in a specific manner, using PHP and IO operations.",
+    "details": [
+        {
+            "comment": "This code retrieves URLs from a table and uses PHP to execute commands on them. It then reads the results, prints them, and closes the handles automatically. The code seems to be written with some frustration or expletives due to its complex nature. The comments indicate the code is handling URLs in a specific manner, using PHP and IO operations.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/shell-shit.lua\":0-20",
+            "content": "--command =\"node duper-get.js java\"\nthe_fucking_url={[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]],[[http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3]]}\n--this is the mother fucking table.\n--fucking shit.\n--easy you piece of shit.\nhandle={}\nfor key,value in pairs(the_fucking_url) do\ncommand =\"php dopeshit.php \"..value\n--psudocode above.\nhandle[#handle+1]= io.popen(command)\n--is it threaded?\nend\nfor key,value in pairs(handle) do\nresult = handle[key]:read(\"*a\")\nhandle[key]:close()\n-- use local instead of using some functions.\nprint (result)\nend\n--this will automatically add the fucking return.\n--another thread."
+        }
+    ]
+}

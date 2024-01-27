@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports sqlite3, creates a connection to the \"fuckyou.db\" database, defines two functions: executeCode for executing SQL statements and closing the connection with closeConnection.",
+    "details": [
+        {
+            "comment": "Code imports sqlite3, creates a connection to the \"fuckyou.db\" database, defines two functions: executeCode for executing SQL statements and closing the connection with closeConnection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term0.py\":0-9",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# initial shits\ndef executeCode(sql):\n\tconn.execute(sql)\n\tconn.commit()\ndef closeConnection():\n\tconn.close()"
+        }
+    ]
+}

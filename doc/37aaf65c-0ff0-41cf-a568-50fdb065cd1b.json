@@ -1,0 +1,10 @@
+{
+    "summary": "This script sets a variable \"string\" to \"/tyu/\" and adds 1 to it, then prints the updated value. It appears to be testing if string concatenation works as expected in the given environment.",
+    "details": [
+        {
+            "comment": "This script sets a variable \"string\" to \"/tyu/\" and adds 1 to it, then prints the updated value. It appears to be testing if string concatenation works as expected in the given environment.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/experiment.sh\":0-3",
+            "content": "#!/bin/bash\nstring=\"/tyu/\"\nstring=$string+1\necho $string"
+        }
+    ]
+}

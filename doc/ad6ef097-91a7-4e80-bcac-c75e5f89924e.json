@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports a function that returns a list and defines another function, \"awful\". It then opens a file, writes each element in the returned list on separate lines, and finally calls the function with the desired filename and the list.",
+    "details": [
+        {
+            "comment": "This code imports a function that returns a list and defines another function, \"awful\". It then opens a file, writes each element in the returned list on separate lines, and finally calls the function with the desired filename and the list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/gameTheory/simpleLauncher.py\":0-9",
+            "content": "from getFromPickle import returnAList\ndef awful(a,b):\n    with open(a,\"w+\") as fuck:\n        for k in b:\n            for k0 in k:\n                fuck.write(k0+\"\\n\")\nawful(\"whyAreYouHere.log\",returnAList())\n# 2 d"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code connects to a SQLite database, creates a table named \"codeMap\" with columns for codeId and htmlCode. It ensures uniqueness of each entry using a constraint. The comment suggests that there might be intermediate steps before putting data into the graph database, and labels can have relationships too. Alphabetical order is used for case relationship, but there is uncertainty about how to handle labels or whether to prioritize random insertion or maintaining relationships.",
+    "details": [
+        {
+            "comment": "The code connects to a SQLite database, creates a table named \"codeMap\" with columns for codeId and htmlCode. It ensures uniqueness of each entry using a constraint. The comment suggests that there might be intermediate steps before putting data into the graph database, and labels can have relationships too. Alphabetical order is used for case relationship, but there is uncertainty about how to handle labels or whether to prioritize random insertion or maintaining relationships.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/makeDB0.py\":0-18",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE codeMap (\ncodeId INT NOT NULL, \nhtmlCode TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (codeId ASC, htmlCode ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

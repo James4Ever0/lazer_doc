@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a list of URLs, executes curl command for each URL using the 'handle' table to store output. It then prints the result from each handle and closes it. The code is written in Lua language and seems to be executed within a script or program.",
+    "details": [
+        {
+            "comment": "The code reads a list of URLs, executes curl command for each URL using the 'handle' table to store output. It then prints the result from each handle and closes it. The code is written in Lua language and seems to be executed within a script or program.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/luarock.lua\":0-22",
+            "content": "-- we plan to do this at once.\nthe_fucking_url=arg\n--{[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]],[[http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3]]}\n--this is the mother fucking table.\n--fucking shit.\n--easy you piece of shit.\nhandle={}\nfor key,value in ipairs(the_fucking_url) do\ncommand =\"curl -b baidu.cookies \\\"\"..value..\"\\\" 2> /dev/null \"\n--psudocode above.\nhandle[#handle+1]= io.popen(command)\n--is it threaded?\nend\n-- this shit is only used as two\n-- you could increase it as you wish.\nfor key,value in pairs(handle) do\nresult = handle[key]:read(\"*a\")\nhandle[key]:close()\n-- use local instead of using some functions.\nprint (result)\nend"
+        }
+    ]
+}

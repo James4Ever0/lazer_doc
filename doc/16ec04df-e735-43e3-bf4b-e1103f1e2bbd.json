@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports a list, writes each item to a file, and ensures uniqueness within the list. It uses nested lists from returnAList() function, removes duplicates, then writes unique items to \"shitLord.log\".",
+    "details": [
+        {
+            "comment": "This code imports a list, writes each item to a file, and ensures uniqueness within the list. It uses nested lists from returnAList() function, removes duplicates, then writes unique items to \"shitLord.log\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/shitload.py\":0-10",
+            "content": "from getFromPickle import returnAList\ndef writeShit(a,b):\n    with open(a,\"w+\") as fuck:\n        for f in b:\n            fuck.write(f+\"\\n\")\n#    return f\nd=list(set([d for b in returnAList() for c in b for d in c]))\nwriteShit(\"shitLord.log\",d)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
+    "details": [
+        {
+            "comment": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/shallowCopy.py\":0-4",
+            "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        fuck.write('#!/bin/bash\\n')\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+' &\\n')"
+        }
+    ]
+}

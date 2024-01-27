@@ -1,0 +1,10 @@
+{
+    "summary": "This script is written in bash and starts by changing the current directory to 'two'. Then, it executes a command that runs all shell scripts found inside the current directory (two) using 'run-parts' utility and redirects both standard output and error messages to a log file named 'two.log0' located in the parent directory ('../').",
+    "details": [
+        {
+            "comment": "This script is written in bash and starts by changing the current directory to 'two'. Then, it executes a command that runs all shell scripts found inside the current directory (two) using 'run-parts' utility and redirects both standard output and error messages to a log file named 'two.log0' located in the parent directory ('../').",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex/corefuck2.sh\":0-2",
+            "content": "#!/bin/bash\ncd two\nrun-parts . &> ../two.log0"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "summary": "This Python script strips comments and docstrings from a file, tokenizes its content using `tokenize.generate_tokens`, filters out comments and docstrings, and writes the modified content to a new file with \"_strip\" suffix. Else block concatenates text, updates variables, substitutes multiple newlines, removes double newlines, and writes modified text to file.",
+    "details": [
+        {
+            "comment": "This Python script strips comments and docstrings from a given file. It reads the file, tokenizes its content using `tokenize.generate_tokens`, filters out comments and docstrings, and writes the modified content to a new file with \"_strip\" suffix.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/stripOffPants.py\":0-35",
+            "content": "\"\"\" Strip comments and docstrings from a file.\n\"\"\"\nimport sys, token, tokenize, re\ndef do_file(fname):\n    \"\"\" Run on just one file.\n    \"\"\"\n    mod0=\"\"\n    source = open(fname)\n    mod = open(fname[:-3] + \"_strip.py\", \"w\")\n    prev_toktype = token.INDENT\n    first_line = None\n    last_lineno = -1\n    last_col = 0\n    tokgen = tokenize.generate_tokens(source.readline)\n    for toktype, ttext, (slineno, scol), (elineno, ecol), ltext in tokgen:\n        if 0:   # Change to if 1 to see the tokens fly by.\n            print(\"%10s %-14s %-20r %r\" % (\n                tokenize.tok_name.get(toktype, toktype),\n                \"%d.%d-%d.%d\" % (slineno, scol, elineno, ecol),\n                ttext, ltext\n                ))\n        if slineno > last_lineno:\n            last_col = 0\n        if scol > last_col:\n            mod0+=\" \" * (scol - last_col)\n        if toktype == token.STRING and prev_toktype == token.INDENT:\n            # Docstring\n            mod0+=\"\"\n        elif toktype == tokenize.COMMENT:\n            # Comment\n            mod0+=\"\""
+        },
+        {
+            "comment": "Else block concatenates text, updates variables, substitutes multiple newlines, removes double newlines, and writes modified text to file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/stripOffPants.py\":36-47",
+            "content": "        else:\n            mod0+=ttext\n        prev_toktype = toktype\n        last_col = ecol\n        last_lineno = elineno\n    mod0=re.sub(r'[ \\t]*\\n',\"\\n\",mod0,re.MULTILINE)\n    while \"\\n\\n\" in mod0:\n        mod0=mod0.replace(\"\\n\\n\",\"\\n\")\n    mod.write(mod0 if mod0[0]!= \"\\n\" else mod0[1:])\nif __name__ == '__main__':\n    do_file(sys.argv[1])"
+        }
+    ]
+}

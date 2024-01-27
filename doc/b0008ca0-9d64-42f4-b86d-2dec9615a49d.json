@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a file named \"links.log\", filters out empty lines, and stores the remaining non-empty lines in a list called 'prt'. The list is then used to iterate through and write each line as a wget command in a bash script named \"buster.sh\". The script downloads each URL and saves it with a sequential number as \"_log_number_.log\".",
+    "details": [
+        {
+            "comment": "The code reads a file named \"links.log\", filters out empty lines, and stores the remaining non-empty lines in a list called 'prt'. The list is then used to iterate through and write each line as a wget command in a bash script named \"buster.sh\". The script downloads each URL and saves it with a sequential number as \"_log_number_.log\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/shitAgain/readLink.py\":0-18",
+            "content": "def readLinks():\n    g = []\n    with open(\"links.log\", \"r\") as fuck:\n        g = list(filter((lambda x: x != \"\" and x != \"\\n\"), fuck.read().split(\"\\n\")))\n    return g\nprt = readLinks()\n# print(prt)\n# grt=list(map((lambda y:constructLinks(y)),prt))\n# print(grt)\n# k0=0\nwith open(\"buster.sh\", \"w+\") as buster:\n    buster.write(\"#!/bin/bash\\n\")\n    k2 = 0\n    for k1 in prt:\n        buster.write(\"wget '\" + k1 + \"' -O \" + str(k2) + \"_.log\\n\")\n        k2 += 1\n#    k0+=1"
+        }
+    ]
+}

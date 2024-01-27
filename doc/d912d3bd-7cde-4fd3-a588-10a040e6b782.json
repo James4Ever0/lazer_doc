@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the sqlite3 module and connects to a SQLite database named \"shitItUp.db\". It defines two functions, `executeCode` for executing SQL queries and returning the results, and `closeConnection` for committing any changes and closing the connection.",
+    "details": [
+        {
+            "comment": "The code imports the sqlite3 module and connects to a SQLite database named \"shitItUp.db\". It defines two functions, `executeCode` for executing SQL queries and returning the results, and `closeConnection` for committing any changes and closing the connection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term1.py\":0-16",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"shitItUp.db\")\n# initial shits\ndef executeCode(sql):\n    values=[]\n    with conn:\n        cur=conn.cursor()\n        cur.execute(sql)\n        rows = cur.fetchall()\n        for element in rows:\n            values.append(element)\n    return values\ndef closeConnection():\n    conn.commit()\n    conn.close()"
+        }
+    ]
+}

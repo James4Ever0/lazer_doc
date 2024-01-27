@@ -1,0 +1,10 @@
+{
+    "summary": "This code iterates through a list of digits and words, printing their concatenation after various separators for documentation purposes. It uses the \"fury\" function from the \"lolita\" module to process the input pairs. The variable \"tik\" keeps track of the iteration number.",
+    "details": [
+        {
+            "comment": "This code iterates through a list of digits and words, printing their concatenation after various separators for documentation purposes. It uses the \"fury\" function from the \"lolita\" module to process the input pairs. The variable \"tik\" keeps track of the iteration number.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/sheep.py\":0-13",
+            "content": "from lolita import fury\ndig=[[\"lop\",True,True],[\"lop\",True,False],[\"lop\",False,True],[\"lop\",False,False]]\nwrench=[\" lop\", \"  lop   \",\"lop\",\"lop    \"]\ntik=0\nfor m in dig:\n    for k in wrench:\n        print(\"--spliter--\",tik)\n        print(m)\n        print(\"--split--\")\n        print(k)\n        print(\"--doc--\")\n        print(fury(m,k))\n        print(\"--hatred--\")\n        tik+=1"
+        }
+    ]
+}

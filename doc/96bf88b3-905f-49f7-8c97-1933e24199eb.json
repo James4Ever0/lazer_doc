@@ -1,0 +1,10 @@
+{
+    "summary": "This Lua code defines a function `ct` that counts occurrences of an element in a table and a function `verify` which checks if all elements in the table are equal. It then tests these functions with two tables, one containing only 1s and another with mixed values, printing the results.",
+    "details": [
+        {
+            "comment": "This Lua code defines a function `ct` that counts occurrences of an element in a table and a function `verify` which checks if all elements in the table are equal. It then tests these functions with two tables, one containing only 1s and another with mixed values, printing the results.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/deepNine/shortCut.lua\":0-30",
+            "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.\n-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a global variable 'Sunny' as a multi-line string containing profanity. It then calculates the positions of newline characters in the string using 'spliterPos()'. The code creates an empty list 's', and using a for loop, it appends the sum of simpleExam function results for each character index to the first sublist of 's'. Then, it calculates the sum of simpleExam function results for every third character after accounting for the newline characters, and appends these values to the second sublist of 's'. Finally, it prints both sublists.",
+    "details": [
+        {
+            "comment": "The code defines a global variable 'Sunny' as a multi-line string containing profanity. It then calculates the positions of newline characters in the string using 'spliterPos()'. The code creates an empty list 's', and using a for loop, it appends the sum of simpleExam function results for each character index to the first sublist of 's'. Then, it calculates the sum of simpleExam function results for every third character after accounting for the newline characters, and appends these values to the second sublist of 's'. Finally, it prints both sublists.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/veryInput.py\":0-21",
+            "content": "# single char spliter\n# multichar spliter\n# manyfold\n# invisible spliter and derivatives\n# mixed spliter\n# length, metadata, features\nfrom trashlot import simpleExam, spliterPos\n#from statistics import sum\n#with open(\"core.log\",\"r\") as fool:\n#    pool=fool.read()\n#    with open(pool[:-1]+\"holidays.txt\",\"r\") as April:\n#        Sunny=April.read()\nSunny=\"\\nfuck\\nshit\\nfuck\\nshit\\n\"\nglobalWarming=spliterPos(Sunny,\"\\n\")\ns=[[],[]]\nfor k in range(len(Sunny)):\n    s[0].append(sum(simpleExam(k,globalWarming)))\nprint(s[0])\nprint(\"--spliter--\")\nfor k in range(len(Sunny)*3):\n    s[1].append(sum(simpleExam(k-2*len(Sunny)*2,globalWarming)))\nprint(s[1])"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "Code initializes a list with values 0-3, then prints the last value in the list.",
+    "details": [
+        {
+            "comment": "Code initializes a list with values 0-3, then prints the last value in the list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/exam.py\":0-1",
+            "content": "_list=[0,1,2,3]\nprint(_list[-1])"
+        }
+    ]
+}

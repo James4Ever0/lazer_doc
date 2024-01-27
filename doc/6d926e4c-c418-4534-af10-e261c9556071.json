@@ -1,0 +1,10 @@
+{
+    "summary": "This script executes cloudnine.sh on index.html, waits 2 seconds, and then sends the content of hotfix/.local-service-copy to termbin.com:9999 before terminating.",
+    "details": [
+        {
+            "comment": "This script executes cloudnine.sh on index.html, waits 2 seconds, and then sends the content of hotfix/.local-service-copy to termbin.com:9999 before terminating.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/magic.sh\":0-4",
+            "content": "#!/bin/bash\n./cloudnine.sh index.html\nsleep 2;\ncat hotfix/.local-service-copy | nc termbin.com 9999\nkill $$"
+        }
+    ]
+}

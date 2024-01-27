@@ -1,0 +1,10 @@
+{
+    "summary": "This Bash script uses the 'links' command-line web browser to scrape the links from a specific page (https://www.zhihu.com/topic/19604929/hot) and then redirects the output to a file named \"example/2.log\" using the \"cat\" command for concatenation.",
+    "details": [
+        {
+            "comment": "This Bash script uses the 'links' command-line web browser to scrape the links from a specific page (https://www.zhihu.com/topic/19604929/hot) and then redirects the output to a file named \"example/2.log\" using the \"cat\" command for concatenation.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/websitegrep/links-dump1.sh\":0-1",
+            "content": "#!/bin/bash\nlinks -dump https://www.zhihu.com/topic/19604929/hot | cat > example/2.log"
+        }
+    ]
+}

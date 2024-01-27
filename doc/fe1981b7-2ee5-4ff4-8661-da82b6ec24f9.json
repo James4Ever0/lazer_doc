@@ -1,0 +1,10 @@
+{
+    "summary": "The code retrieves data from a URL, executes PHP code with the obtained URL, and prints the output. It uses `io.popen` to execute external commands and reads all available data with `handle:read(\"*a\")`. The code may have issues due to its use of hardcoded strings and lacks proper error handling or localization.",
+    "details": [
+        {
+            "comment": "The code retrieves data from a URL, executes PHP code with the obtained URL, and prints the output. It uses `io.popen` to execute external commands and reads all available data with `handle:read(\"*a\")`. The code may have issues due to its use of hardcoded strings and lacks proper error handling or localization.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/shell-fuck.lua\":0-10",
+            "content": "--command =\"node duper-get.js java\"\nthe_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]\n--fucking shit.\ncommand =\"php dopeshit.php \"..the_fucking_url\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nprint (result)\n--this will automatically add the fucking return.\n--another thread."
+        }
+    ]
+}

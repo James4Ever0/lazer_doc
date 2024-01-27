@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a file 'core.log', another related.txt file, and extracts relevant data from them. It processes the information, splits it into lists of strings, and converts these strings to integers. Finally, it passes this processed data to the toyProject function.",
+    "details": [
+        {
+            "comment": "The code reads a file 'core.log', another related.txt file, and extracts relevant data from them. It processes the information, splits it into lists of strings, and converts these strings to integers. Finally, it passes this processed data to the toyProject function.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/related/cockshock.py\":0-29",
+            "content": "from newTestN import toyProject\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \"]))\npoland=(lambda u:list(map((lambda x: greatWall2(x)),u)))\n#deutschland=(lambda u:list(map((lambda x: str(int(x,16))),u)))\nshit=''\nbitch=[]\nwith open('core.log','r') as fuck:\n    shit=fuck.read()\np=[]\nwith open(joker(shit)+'related.txt','r') as f:\n    for j in f.readlines():\n        if j[0]!='#' and len(j)>1:\n            v0=joker(j).split(':')\n            fuckFu=list(filter((lambda x: x!=''),poland(v0[1].split(','))))\n            p.append([greatWall2(v0[0]),fuckFu])\n            bitch.append(len(fuckFu))\n'''\nfor a,b in enumerate(p):\n    print(a,b)'''\nfor a in p:\n    a0=str(int(a[0],16))\n    for a1 in a[1]:\n        if a1!='':\n            toyProject(0,[a0,str(int(a1,16))])\n        else:\n            print('--shit happened--')\n#print('\\nthe extreme:',max(bitch),min(bitch))\n'''for a in p:\n    toyProject(0,[a[1],a[0]])'''"
+        }
+    ]
+}

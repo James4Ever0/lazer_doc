@@ -1,0 +1,10 @@
+{
+    "summary": "This code, located at \"lazer/multilingual/hotfix-v0/pass_argv.php\", is designed to output the value of the second argument passed to the script twice. The number 0 represents the script's name, and the number 1 refers to the second argument. It also includes a comment expressing frustration about writing semicolons, but no impact on functionality.",
+    "details": [
+        {
+            "comment": "This code, located at \"lazer/multilingual/hotfix-v0/pass_argv.php\", is designed to output the value of the second argument passed to the script twice. The number 0 represents the script's name, and the number 1 refers to the second argument. It also includes a comment expressing frustration about writing semicolons, but no impact on functionality.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/pass_argv.php\":0-7",
+            "content": "<?php\n//you should start from 1\n//the number 0 stands for the script's name.\necho \"$argv[1]\\n\";\necho \"$argv[1]\\n\";\n//what if i do not want to write the fucking semicolon?\n//now you die.\n?>"
+        }
+    ]
+}

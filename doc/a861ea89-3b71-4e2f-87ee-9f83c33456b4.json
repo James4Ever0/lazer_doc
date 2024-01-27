@@ -1,0 +1,10 @@
+{
+    "summary": "The code discusses the need for maintaining different versions, categorizing Unicode characters, and making use of various file types in a directory. It mentions the possibility of creating a new alphabet set derived from simplification forms and learning from webpages through multiple methods like graphics and code.",
+    "details": [
+        {
+            "comment": "The code discusses the need for maintaining different versions, categorizing Unicode characters, and making use of various file types in a directory. It mentions the possibility of creating a new alphabet set derived from simplification forms and learning from webpages through multiple methods like graphics and code.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/README\":0-5",
+            "content": "In order to make it easier to modify the code, we have to keep different versions at the same time.\nStatus of unicode characters: separated; categorized; chained; paired; have similar shapes\nPay for it. I just want to make use of all kinds of file in that fucking directory.\nTo make it at least avaliable in traditional database form. the simplification form should be derived later, and by then we can just create a brand new alphabet set on our own.\n learn from webpage through multiple ways. mostly it can be graphical, also it can be in code but they shall be talked as a whole."
+        }
+    ]
+}

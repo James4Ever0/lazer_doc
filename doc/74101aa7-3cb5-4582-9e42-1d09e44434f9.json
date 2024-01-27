@@ -1,0 +1,10 @@
+{
+    "summary": "This script is downloading search result logs from Github, presumably for general purpose AI repositories. It is fetching the results page by page in chunks of 5, starting from page 1 and saving each result as a separate file (1_0.log to 1_5.log).",
+    "details": [
+        {
+            "comment": "This script is downloading search result logs from Github, presumably for general purpose AI repositories. It is fetching the results page by page in chunks of 5, starting from page 1 and saving each result as a separate file (1_0.log to 1_5.log).",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/buster1.sh\":0-6",
+            "content": "#!/bin/bash\nwget 'https://github.com/search?p=1&q=general+purpose+ai&type=Repositories&utf8=\u2713' -O 1_0.log\nwget 'https://github.com/search?p=2&q=general+purpose+ai&type=Repositories&utf8=\u2713' -O 1_1.log\nwget 'https://github.com/search?p=3&q=general+purpose+ai&type=Repositories&utf8=\u2713' -O 1_2.log\nwget 'https://github.com/search?p=4&q=general+purpose+ai&type=Repositories&utf8=\u2713' -O 1_3.log\nwget 'https://github.com/search?p=5&q=general+purpose+ai&type=Repositories&utf8=\u2713' -O 1_4.log\nwget 'https://github.com/search?p=6&q=general+purpose+ai&type=Repositories&utf8=\u2713' -O 1_5.log"
+        }
+    ]
+}

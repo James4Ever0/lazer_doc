@@ -1,0 +1,10 @@
+{
+    "summary": "This script uses 'aria2c' to download the result of a Google search for \"fuck\" and saves it as 'fuckall.log'.",
+    "details": [
+        {
+            "comment": "This script uses 'aria2c' to download the result of a Google search for \"fuck\" and saves it as 'fuckall.log'.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/small-message.sh\":0-1",
+            "content": "#!/bin/bash\naria2c \"https://www.google.com/search?q=fuck\" -o fuckall.log"
+        }
+    ]
+}

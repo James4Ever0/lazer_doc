@@ -1,0 +1,10 @@
+{
+    "summary": "The code checks and prints conditions involving boolean variables \"a\" and \"b\". It demonstrates the use of logical operators (and, or) and negation (not). The first half shows when \"a and b\" is true, then \"a or b\" is true. After changing their values, it prints when \"a and b\" is false, and uses \"not( a and b)\" to achieve the same result. It's an example of basic logical operations in Lua programming.",
+    "details": [
+        {
+            "comment": "The code checks and prints conditions involving boolean variables \"a\" and \"b\". It demonstrates the use of logical operators (and, or) and negation (not). The first half shows when \"a and b\" is true, then \"a or b\" is true. After changing their values, it prints when \"a and b\" is false, and uses \"not( a and b)\" to achieve the same result. It's an example of basic logical operations in Lua programming.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/logic.lua\":0-32",
+            "content": "print(not(1==2))\na = true\nb = true\nif ( a and b )\nthen\n   print(\"a and b - \u6761\u4ef6\u4e3a true\" )\nend\nif ( a or b )\nthen\n   print(\"a or b - \u6761\u4ef6\u4e3a true\" )\nend\nprint(\"---------\u5206\u5272\u7ebf---------\" )\n-- \u4fee\u6539 a \u548c b \u7684\u503c\na = false\nb = true\nif ( a and b )\nthen\n   print(\"a and b - \u6761\u4ef6\u4e3a true\" )\nelse\n   print(\"a and b - \u6761\u4ef6\u4e3a false\" )\nend\nif ( not( a and b) )\nthen\n   print(\"not( a and b) - \u6761\u4ef6\u4e3a true\" )\nelse\n   print(\"not( a and b) - \u6761\u4ef6\u4e3a false\" )\nend"
+        }
+    ]
+}

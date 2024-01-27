@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads lines from file \"alpha.csv\", performs English stemming on each line using the SnowballStemmer, and writes the original and stemmed words to file \"beta.csv\".",
+    "details": [
+        {
+            "comment": "The code reads lines from file \"alpha.csv\", performs English stemming on each line using the SnowballStemmer, and writes the original and stemmed words to file \"beta.csv\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/connector/core1.py\":0-28",
+            "content": "from nltk.stem.snowball import SnowballStemmer\nimport re\ndef steam(quack):\n    return SnowballStemmer(\"english\").stem(quack)\n# use readlines to create a list.\n# this time we write results into csv files.\na=open(\"alpha.csv\",\"r\")\nb=open(\"beta.csv\",\"w+\")\n#try:\nfor p in a.readlines():\n#    print (p)\n    p=re.sub(\"\\n\",\"\",p)\n    p0=steam(p)\n    if p0==p:\n        pass\n    else:\n#        print (p0)\n        try:\n            b.write(p0+\",\"+p+\"\\n\")\n        except:\n            pass\n#except:\n#    pass\nb.write(\"\\b\")\na.close()\nb.close()"
+        }
+    ]
+}

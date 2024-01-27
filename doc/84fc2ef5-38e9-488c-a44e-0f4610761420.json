@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
+    "details": [
+        {
+            "comment": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/communism/discoveryChannel.py\":0-28",
+            "content": "#text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\n#print(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:"
+        }
+    ]
+}

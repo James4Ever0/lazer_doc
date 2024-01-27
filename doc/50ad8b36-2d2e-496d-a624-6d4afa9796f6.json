@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports tokenize module functions, retrieves directory contents, filters for integer variables, prints the results, and then stores the list in simpleStorage.",
+    "details": [
+        {
+            "comment": "This code imports tokenize module functions, retrieves directory contents, filters for integer variables, prints the results, and then stores the list in simpleStorage.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/mapTypes.py\":0-7",
+            "content": "from tokenize import *\nfuck=dir()\nshit={eval(h):h for h in fuck if type(eval(h)).__name__ == \"int\"}\nprint(shit)\n#jerk=list(sorted(shit,key=(lambda x:x[1])))\n# very important! do it afterwards.\nfrom simpleStorage import storeAList\nstoreAList(shit)"
+        }
+    ]
+}

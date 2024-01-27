@@ -1,0 +1,10 @@
+{
+    "summary": "This script connects to www.baidu.com on port 443 using OpenSSL, extracts the certificate from the response, and saves it as baidu.cert.pem.",
+    "details": [
+        {
+            "comment": "This script connects to www.baidu.com on port 443 using OpenSSL, extracts the certificate from the response, and saves it as baidu.cert.pem.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v1/export-cert.sh\":0-3",
+            "content": "#!/bin/bash\nserver=www.baidu.com\nport=443\necho | openssl s_client -connect $server:$port 2>&1 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > baidu.cert.pem"
+        }
+    ]
+}

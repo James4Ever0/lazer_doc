@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports BeautifulSoup and simpleStorage libraries, defines functions to open files, extract data from them, and find specific HTML elements using BeautifulSoup. It then applies these functions to retrieve a list of items from an unspecified source and stores the result in a list for further processing or display. The final part of the code seems to be incomplete and not executed.",
+    "details": [
+        {
+            "comment": "The code imports BeautifulSoup and simpleStorage libraries, defines functions to open files, extract data from them, and find specific HTML elements using BeautifulSoup. It then applies these functions to retrieve a list of items from an unspecified source and stores the result in a list for further processing or display. The final part of the code seems to be incomplete and not executed.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/fuck.py\":0-24",
+            "content": "from bs4 import BeautifulSoup\nfrom simpleStorage import storeAList\ndef soup(a):\n    return BeautifulSoup(a)\ndef openShit(b):\n    f=\"\"\n    with open(b,\"r\") as fuck:\n        f=fuck.read()\n    return f\ndef openList(b):\n    return list(filter((lambda x:x!=\"\"),openShit(b).split(\"\\n\")))\ndef shit(x):\n    s=soup(openShit(x)).find_all(name=\"ul\",attrs={\"class\":\"repo-list\"})[0].find_all(name=\"a\",attrs={\"class\":\"v-align-middle\"},recursive=True)\n    return [s0.get_text() for s0 in s]\n# fuck you.\nd=[list(filter((lambda x:x!=[]),[shit(c) for c in b])) for b in [openList(a) for a in openList(\"trauma.log\")]]\nstoreAList(d)\n#e=[[shit(c) for c ]]\n#print(len(d))"
+        }
+    ]
+}

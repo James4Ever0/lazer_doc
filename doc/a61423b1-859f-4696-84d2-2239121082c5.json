@@ -1,0 +1,10 @@
+{
+    "summary": "This code executes a command (here \"ls\") using io.popen and prints the result, using local instead of certain functions for improved efficiency.",
+    "details": [
+        {
+            "comment": "This code executes a command (here \"ls\") using io.popen and prints the result, using local instead of certain functions for improved efficiency.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/shell-execute-return.lua\":0-5",
+            "content": "command =\"ls\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nprint (result)"
+        }
+    ]
+}

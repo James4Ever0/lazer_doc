@@ -1,0 +1,10 @@
+{
+    "summary": "Function takes a list of numbers (flist), a standard value, and an indicator as parameters. If any number in the list is greater than the standard value and the indicator is True, it returns False; otherwise, it returns True.",
+    "details": [
+        {
+            "comment": "Function takes a list of numbers (flist), a standard value, and an indicator as parameters. If any number in the list is greater than the standard value and the indicator is True, it returns False; otherwise, it returns True.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/rangeDetector.py\":0-7",
+            "content": "def rkRoyal(flist,standard,indicator):\n    # this is an upsign.\n    for f in flist:\n        if f > standard and indicator:\n            return False\n        else:\n            pass\n    return True"
+        }
+    ]
+}

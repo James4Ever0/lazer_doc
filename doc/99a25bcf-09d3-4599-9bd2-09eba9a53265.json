@@ -1,0 +1,10 @@
+{
+    "summary": "Code reads a log file (base.log), filters out non-empty lines without dots in the first character, converts to a list and stores it in simpleStorage using storeAList function.",
+    "details": [
+        {
+            "comment": "Code reads a log file (base.log), filters out non-empty lines without dots in the first character, converts to a list and stores it in simpleStorage using storeAList function.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/skimmer.py\":0-3",
+            "content": "from simpleStorage import storeAList\nwith open(\"base.log\",\"r\") as f:\n    storeAList(list(filter((lambda x: x!=\"\" and ('.' not in x ) and ord(x[0])>=97),f.read().split(\"\\n\"))))\n#    print(road)"
+        }
+    ]
+}

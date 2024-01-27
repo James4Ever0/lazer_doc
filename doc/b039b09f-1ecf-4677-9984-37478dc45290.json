@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the inferior-shell package, runs a command \"node node-batch.js 'super hot'\" with output as string and exits.",
+    "details": [
+        {
+            "comment": "The code imports the inferior-shell package, runs a command \"node node-batch.js 'super hot'\" with output as string and exits.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/character-shell0.lisp\":0-2",
+            "content": "(ql:quickload :inferior-shell)\n(print (inferior-shell:run \"node node-batch.js 'super hot'\" :output :string))\n(quit)"
+        }
+    ]
+}

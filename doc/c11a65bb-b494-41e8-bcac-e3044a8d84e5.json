@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a list of links from \"links.log\", splits them by space, constructs new URLs using the constructLinks function, and then iterates through each constructed URL to write a bash script (busterX.sh) that downloads the corresponding link into a log file. The final goal is to create multiple bash scripts with each script downloading a different link and saving it as a separate log file.",
+    "details": [
+        {
+            "comment": "The code reads a list of links from \"links.log\", splits them by space, constructs new URLs using the constructLinks function, and then iterates through each constructed URL to write a bash script (busterX.sh) that downloads the corresponding link into a log file. The final goal is to create multiple bash scripts with each script downloading a different link and saving it as a separate log file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/readLink.py\":0-32",
+            "content": "vlan=\"https://github.com/search?\"\nwlan=len(vlan)\ndef constructLinks(a):\n    c,d=a\n    f=[vlan+\"p=\"]\n    g=[]\n#    if d[wlan]==\"p\":\n    f.append(d[d.index(\"&\"):])\n    if not d[wlan]==\"p\":\n        f[1]+=(\"&\"+d[len(vlan):d.index(\"&\")])\n    for e in range(int(c)):\n        g.append(str(e+1).join(f))\n    return g\ndef readLinks():\n    g=[]\n    with open(\"links.log\",\"r\") as fuck:\n        g=list(filter((lambda x:x!=\"\" and x!= \"\\n\"),fuck.read().split(\"\\n\")))\n    return g\nprt=list(map((lambda x: x.split(\" \")),readLinks()))\n#print(prt)\ngrt=list(map((lambda y:constructLinks(y)),prt))\n#print(grt)\nk0=0\nfor k in grt:\n    with open(\"buster\"+str(k0)+\".sh\",\"w+\") as buster:\n        buster.write(\"#!/bin/bash\\n\")\n        k2=0\n        for k1 in k:\n            buster.write(\"wget '\"+k1+\"' -O \"+str(k0)+\"_\"+str(k2)+\".log\\n\")\n            k2+=1\n    k0+=1"
+        }
+    ]
+}

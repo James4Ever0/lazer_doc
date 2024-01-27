@@ -1,0 +1,529 @@
+{
+    "3100": {
+        "file_id": 533,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHappens.hs",
+        "type": "filepath"
+    },
+    "3101": {
+        "file_id": 533,
+        "content": "The code imports the Map module and defines a function \"myMap\" that takes an integer, n, and creates a Map with keys from 1 to n, each mapped to a list containing only that key. The \"main\" function calls \"sing(myMap 3)\" which likely uses the created map for further processing.",
+        "type": "summary"
+    },
+    "3102": {
+        "file_id": 533,
+        "content": "import Data.Map (Map) \nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain =             sing(myMap 3)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHappens.hs:1-8"
+    },
+    "3103": {
+        "file_id": 533,
+        "content": "The code imports the Map module and defines a function \"myMap\" that takes an integer, n, and creates a Map with keys from 1 to n, each mapped to a list containing only that key. The \"main\" function calls \"sing(myMap 3)\" which likely uses the created map for further processing.",
+        "type": "comment"
+    },
+    "3104": {
+        "file_id": 534,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly.hs",
+        "type": "filepath"
+    },
+    "3105": {
+        "file_id": 534,
+        "content": "This Haskell code imports Data.Map and System.Environment modules, defines a function myMap that takes an Integer input and creates a Map of Integers to lists of Integers using map and makePair functions, and finally prints the command line arguments in main. This is likely used for data manipulation or mapping purposes.",
+        "type": "summary"
+    },
+    "3106": {
+        "file_id": 534,
+        "content": "import Data.Map (Map) \nimport System.Enviorment\nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain = print <<= getArgs",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly.hs:1-9"
+    },
+    "3107": {
+        "file_id": 534,
+        "content": "This Haskell code imports Data.Map and System.Environment modules, defines a function myMap that takes an Integer input and creates a Map of Integers to lists of Integers using map and makePair functions, and finally prints the command line arguments in main. This is likely used for data manipulation or mapping purposes.",
+        "type": "comment"
+    },
+    "3108": {
+        "file_id": 535,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly_fixed.hs",
+        "type": "filepath"
+    },
+    "3109": {
+        "file_id": 535,
+        "content": "This Haskell code imports necessary modules, defines a function \"myMap\" which creates a map from integers to lists of integers based on input n, and uses \"getArgs\" in the main function to retrieve command-line arguments before printing them.",
+        "type": "summary"
+    },
+    "3110": {
+        "file_id": 535,
+        "content": "import Data.Map (Map) \nimport System.Environment\nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain =  getArgs >>= print",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly_fixed.hs:1-9"
+    },
+    "3111": {
+        "file_id": 535,
+        "content": "This Haskell code imports necessary modules, defines a function \"myMap\" which creates a map from integers to lists of integers based on input n, and uses \"getArgs\" in the main function to retrieve command-line arguments before printing them.",
+        "type": "comment"
+    },
+    "3112": {
+        "file_id": 536,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/shitHappens.hs",
+        "type": "filepath"
+    },
+    "3113": {
+        "file_id": 536,
+        "content": "This code imports the Map module from Data.Map, creates a function myMap that takes an Integer and returns a Map of Integers to a list of Integers, and prints out the result of calling myMap with the argument 3. The printed output will show a Map with keys 1 through 3 and values as lists containing the corresponding key value.",
+        "type": "summary"
+    },
+    "3114": {
+        "file_id": 536,
+        "content": "import Data.Map (Map) \nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain = print(myMap 3)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/shitHappens.hs:1-8"
+    },
+    "3115": {
+        "file_id": 536,
+        "content": "This code imports the Map module from Data.Map, creates a function myMap that takes an Integer and returns a Map of Integers to a list of Integers, and prints out the result of calling myMap with the argument 3. The printed output will show a Map with keys 1 through 3 and values as lists containing the corresponding key value.",
+        "type": "comment"
+    },
+    "3116": {
+        "file_id": 537,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/solveForShit.hs",
+        "type": "filepath"
+    },
+    "3117": {
+        "file_id": 537,
+        "content": "This code solves a quadratic equation using the quadratic formula in Haskell. The function `root` takes three parameters (a, b, and c) representing the coefficients of the equation ax^2 + bx + c = 0. It calculates x1 and x2, which are the two possible solutions for x. The variable 'd' stores the discriminant value, while 'e' represents half of the negative reciprocal of the coefficient B. Finally, the main function prints the calculated root values (x1,x2) as output.",
+        "type": "summary"
+    },
+    "3118": {
+        "file_id": 537,
+        "content": "main = do\n print ( root(1,-8,6))\nroot (a,b,c) = (x1,x2) where\n x1 = e + sqrt d / ( 2*a)\n x2 = e - sqrt d / ( 2*a)\n d = b**2 - 4*a*c\n e = -b /(2*a)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/solveForShit.hs:1-8"
+    },
+    "3119": {
+        "file_id": 537,
+        "content": "This code solves a quadratic equation using the quadratic formula in Haskell. The function `root` takes three parameters (a, b, and c) representing the coefficients of the equation ax^2 + bx + c = 0. It calculates x1 and x2, which are the two possible solutions for x. The variable 'd' stores the discriminant value, while 'e' represents half of the negative reciprocal of the coefficient B. Finally, the main function prints the calculated root values (x1,x2) as output.",
+        "type": "comment"
+    },
+    "3120": {
+        "file_id": 538,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/testicle.hs",
+        "type": "filepath"
+    },
+    "3121": {
+        "file_id": 538,
+        "content": "This Haskell code defines a function `noto` which takes a Boolean and returns a string indicating whether the number is even or odd. The `eveno` function checks if a number is even, and `main` demonstrates using composition to test `noto` with an example input of 16.",
+        "type": "summary"
+    },
+    "3122": {
+        "file_id": 538,
+        "content": "noto  :: Bool -> String \neveno x = if x `rem` 2 == 0 \n   then True \nelse False \nnoto x = if x == True \n   then \"This is an even Number\" \nelse \"This is an ODD number\" \nmain = do \n   putStrLn \"Example of Haskell Function composition\" \n   print ((noto.eveno) 16 )",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/testicle.hs:1-12"
+    },
+    "3123": {
+        "file_id": 538,
+        "content": "This Haskell code defines a function `noto` which takes a Boolean and returns a string indicating whether the number is even or odd. The `eveno` function checks if a number is even, and `main` demonstrates using composition to test `noto` with an example input of 16.",
+        "type": "comment"
+    },
+    "3124": {
+        "file_id": 539,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py",
+        "type": "filepath"
+    },
+    "3125": {
+        "file_id": 539,
+        "content": "The code includes a Magisk function that uses regular expressions to replace specific numbers with ASCII characters and a standAlone function for filtering and replacing elements. The program processes data from \"alphabets.txt\" and has language-based functionality with mandarin tracking.",
+        "type": "summary"
+    },
+    "3126": {
+        "file_id": 539,
+        "content": "import re\ndef Magisk(erectile):\n    stringSet=[\"set:\",[\"[\",\"]\"]]\n#standAlone=(lambda x: list(filter((lambda y: y!=\"\"), list(map((lambda z: z[1] if len(z) <=3 else re.match(r\"\\d+\").group(0)),x)) )))\n#ky0=(lambda k:k if k[-1]!=\" \" else k[:-1])\n#ky=(lambda k:ky0(k) if k[0]!=\" \" else k[1:])\n    wrap=(lambda x: [ord(x0) for x0 in list(x)])\n    standAlone1=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\",\"))))\n    def standAlone2(a,b):\n        b0=b\n#        print(\"FUCK\\nFUCK\")\n#        print(a)\n        for a0 in a:\n            if a0!=\"\":\n                b0=b0.replace(a0,chr(int(re.findall(r\"\\d+\",a0)[0])))\n            else:\n                pass\n#        print(\"SHIT\\nSHIT\")\n#        print(b0)\n        return b0\n    standAlone=(lambda y: standAlone1(standAlone2(re.findall(r\"{}\\d+;?\".format(re.escape(\"&#\")),y),y)))\n#standAlone0=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\n#standAlone=(lambda x: standAlone1(x) if standAlone1(x).count(sorted(set(standAlone1(x)),key=(lambda y: standAlone1(x).count(y)))[0]) <3 else standAlone0(x))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py:1-23"
+    },
+    "3127": {
+        "file_id": 539,
+        "content": "The code defines a function Magisk that takes a string erectile and uses regular expressions to process the input. It finds patterns with \"set:\" and \"[\", and replaces specific numbers in the text with their corresponding ASCII characters. The standAlone function is used to filter and replace elements within the given string.",
+        "type": "comment"
+    },
+    "3128": {
+        "file_id": 539,
+        "content": "    wrapper=(lambda xy: ord(xy))\n#wrapper0=(lambda xy: xy)\n#    with open(\"alphabets.txt\",\"r\") as rockstar:\n#    mandarin=0\n# simply another workaround?\n        #for kn in rockstar.readlines():\n    kn=erectile\n    if stringSet[0] in kn:\n#            print(\"set only\")\n#            print(kn)\n#            ks=re.findall(r\" .(,?)| \\&#\\d*;(,?)\", kn[5:])\n        prt=standAlone(kn[5:-1])\n#            print(prt)\n        if len(prt)>1:\n            try:\n#                    print(list(map((lambda x: [x,len(x),wrap(x)]),prt)))\n                pat=list(map((lambda z: wrapper(re.findall(r\"[^ ]\",z)[0])),prt))\n#                    print(pat)\n                return pat\n            except:\n#                    print(\"FUCKED UP\\nFUCKED UP\")\n                return []\n        else:\n            return []\n#                print(\"TOO YOUNG TOO NAIVE\\nTOO YOUNG TOO NAIVE\")\n#            print(kn[-1])\n#            print(ks)\n#            print(standAlone(ks))\n    else:\n        return []\n\"\"\"            if (stringSet[1][0] in kn and stringSet[1][1] in kn):",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py:24-54"
+    },
+    "3129": {
+        "file_id": 539,
+        "content": "This code seems to be part of a larger program that reads data from a file called \"alphabets.txt\" and processes it to extract certain information. The code appears to be specifically focused on handling lines containing the first character in a predefined set, known as stringSet[0]. It then attempts to find alphanumeric characters within those lines and converts them into their corresponding ASCII values using a wrapper function. If there is more than one such value found (len(prt)>1), it returns these values; otherwise, it returns an empty list. The code also includes some error handling and a few commented-out sections that seem to be workarounds for potential issues.",
+        "type": "comment"
+    },
+    "3130": {
+        "file_id": 539,
+        "content": "                print(\"name only\")\n                print(kn)\n#        elif mandarin==1:\n            else:\n                print(\"empty line\")\n                print(kn)\"\"\"\n#        mandarin+=1\n#        if mandarin==3:\n#            mandarin=0",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py:55-63"
+    },
+    "3131": {
+        "file_id": 539,
+        "content": "Code snippet checks if the input language is Mandarin (mandarin == 1). If not, it prints \"empty line\" and displays \"kn\". It also increments mandarin and resets it to 0 after reaching 3.",
+        "type": "comment"
+    },
+    "3132": {
+        "file_id": 540,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/conPro.py",
+        "type": "filepath"
+    },
+    "3133": {
+        "file_id": 540,
+        "content": "This function creates a SQL SELECT statement based on the provided input. It can be passed in pickle format and should be implemented in Haskell.",
+        "type": "summary"
+    },
+    "3134": {
+        "file_id": 540,
+        "content": "def sqlMaker(sauce):\n    sql = \"SELECT * FROM \"+sauce+\" ;\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/conPro.py:1-5"
+    },
+    "3135": {
+        "file_id": 540,
+        "content": "This function creates a SQL SELECT statement based on the provided input. It can be passed in pickle format and should be implemented in Haskell.",
+        "type": "comment"
+    },
+    "3136": {
+        "file_id": 541,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/constructor.py",
+        "type": "filepath"
+    },
+    "3137": {
+        "file_id": 541,
+        "content": "This code defines three functions: `sqlMaker`, `pairMaker`, and `finalPro`. `sqlMaker` creates an SQL INSERT statement. `pairMaker` generates a string of paired values for SQL fields. `finalPro` uses the previous two functions to create the final SQL query.",
+        "type": "summary"
+    },
+    "3138": {
+        "file_id": 541,
+        "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" )\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/constructor.py:1-31"
+    },
+    "3139": {
+        "file_id": 541,
+        "content": "This code defines three functions: `sqlMaker`, `pairMaker`, and `finalPro`. `sqlMaker` creates an SQL INSERT statement. `pairMaker` generates a string of paired values for SQL fields. `finalPro` uses the previous two functions to create the final SQL query.",
+        "type": "comment"
+    },
+    "3140": {
+        "file_id": 542,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term0.py",
+        "type": "filepath"
+    },
+    "3141": {
+        "file_id": 542,
+        "content": "Code imports sqlite3, creates a connection to the \"fuckyou.db\" database, defines two functions: executeCode for executing SQL statements and closing the connection with closeConnection.",
+        "type": "summary"
+    },
+    "3142": {
+        "file_id": 542,
+        "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# initial shits\ndef executeCode(sql):\n\tconn.execute(sql)\n\tconn.commit()\ndef closeConnection():\n\tconn.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term0.py:1-10"
+    },
+    "3143": {
+        "file_id": 542,
+        "content": "Code imports sqlite3, creates a connection to the \"fuckyou.db\" database, defines two functions: executeCode for executing SQL statements and closing the connection with closeConnection.",
+        "type": "comment"
+    },
+    "3144": {
+        "file_id": 543,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term1.py",
+        "type": "filepath"
+    },
+    "3145": {
+        "file_id": 543,
+        "content": "The code imports the sqlite3 module and connects to a SQLite database named \"shitItUp.db\". It defines two functions, `executeCode` for executing SQL queries and returning the results, and `closeConnection` for committing any changes and closing the connection.",
+        "type": "summary"
+    },
+    "3146": {
+        "file_id": 543,
+        "content": "import sqlite3\nconn=sqlite3.connect(\"shitItUp.db\")\n# initial shits\ndef executeCode(sql):\n    values=[]\n    with conn:\n        cur=conn.cursor()\n        cur.execute(sql)\n        rows = cur.fetchall()\n        for element in rows:\n            values.append(element)\n    return values\ndef closeConnection():\n    conn.commit()\n    conn.close()",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term1.py:1-17"
+    },
+    "3147": {
+        "file_id": 543,
+        "content": "The code imports the sqlite3 module and connects to a SQLite database named \"shitItUp.db\". It defines two functions, `executeCode` for executing SQL queries and returning the results, and `closeConnection` for committing any changes and closing the connection.",
+        "type": "comment"
+    },
+    "3148": {
+        "file_id": 544,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testForPickle.py",
+        "type": "filepath"
+    },
+    "3149": {
+        "file_id": 544,
+        "content": "The code imports a function from the 'getFromPickle' module and prints the result of calling that function. It suggests that the purpose is to test the functionality of retrieving a list from pickled data.",
+        "type": "summary"
+    },
+    "3150": {
+        "file_id": 544,
+        "content": "from getFromPickle import returnAList\nprint(returnAList())",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testForPickle.py:1-2"
+    },
+    "3151": {
+        "file_id": 544,
+        "content": "The code imports a function from the 'getFromPickle' module and prints the result of calling that function. It suggests that the purpose is to test the functionality of retrieving a list from pickled data.",
+        "type": "comment"
+    },
+    "3152": {
+        "file_id": 545,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testiclePickle.py",
+        "type": "filepath"
+    },
+    "3153": {
+        "file_id": 545,
+        "content": "This code imports functions, creates a list from returned values, prints the list, then iterates through each item in the list to execute specific code and print results. Finally, it closes the database connection.",
+        "type": "summary"
+    },
+    "3154": {
+        "file_id": 545,
+        "content": "from getFromPickle import returnAList\nfrom term1 import executeCode, closeConnection\nfrom conPro import sqlMaker\nmasochist=list(map((lambda x:x[0]),returnAList()))\nprint(masochist)\n# this is a fucking list.\nfor k in masochist:\n    print(\"-- spliter for \"+k+\" --\")\n    superMan=executeCode(sqlMaker(k))\n    for superMania in superMan:\n        print(superMania)\n    print(\"-- spliter for \"+k+\" --\")\ncloseConnection()",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testiclePickle.py:1-13"
+    },
+    "3155": {
+        "file_id": 545,
+        "content": "This code imports functions, creates a list from returned values, prints the list, then iterates through each item in the list to execute specific code and print results. Finally, it closes the database connection.",
+        "type": "comment"
+    },
+    "3156": {
+        "file_id": 546,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/turnItUp.py",
+        "type": "filepath"
+    },
+    "3157": {
+        "file_id": 546,
+        "content": "The code imports functions from different modules, creates a list of unique items, and then iterates over the list. It prints information for each item, checks some conditions, and finally closes the database connection.",
+        "type": "summary"
+    },
+    "3158": {
+        "file_id": 546,
+        "content": "from getFromPickle import returnAList\nfrom term1 import executeCode, closeConnection\nfrom conPro import sqlMaker\nmasochist=list(map((lambda x:x[0]),returnAList()))\nprint(masochist)\n# this is a fucking list.\ncountOn=0\nfor k in masochist:\n    print(\"-- spliter for \"+k+\" --\")\n    superMan=executeCode(sqlMaker(k))\n    for superMania in superMan:\n        if countOn!=0:\n            print(superMania)\n        else:\n            # check the fucking shit.\n            print(superMania[0],chr(superMania[0]),superMania[1],superMania[2],chr(superMania[2]),superMania[4])\n    print(\"-- spliter for \"+k+\" --\")\n    countOn+=1\ncloseConnection()",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/turnItUp.py:1-19"
+    },
+    "3159": {
+        "file_id": 546,
+        "content": "The code imports functions from different modules, creates a list of unique items, and then iterates over the list. It prints information for each item, checks some conditions, and finally closes the database connection.",
+        "type": "comment"
+    },
+    "3160": {
+        "file_id": 547,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/term0.py",
+        "type": "filepath"
+    },
+    "3161": {
+        "file_id": 547,
+        "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
+        "type": "summary"
+    },
+    "3162": {
+        "file_id": 547,
+        "content": "import sqlite3\n# initial shits\ndef executeCode(sql):\n    conn=sqlite3.connect(\"fuckyou.db\")\n    conn.execute(sql)\n    conn.commit()\n    conn.close()\n'''\ndef closeConnection():\n\tconn.close()'''",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/term0.py:1-11"
+    },
+    "3163": {
+        "file_id": 547,
+        "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
+        "type": "comment"
+    },
+    "3164": {
+        "file_id": 548,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/README",
+        "type": "filepath"
+    },
+    "3165": {
+        "file_id": 548,
+        "content": "This code seems to be a mix of instructions and notes. It suggests making something semi-auto to fully automatic, killing zombies, needing 4 tables, potentially abandoning relationships in certain types, recording islands, considering something later on.",
+        "type": "summary"
+    },
+    "3166": {
+        "file_id": 548,
+        "content": "This is semi-auto to fully automatic.\nKill the zombies!\nI need 4 tables down here.\nabandon those without a relationship in a given type? better record these islands.\nBETTER RECORD THESE ISLANDS.\nlater. consider it later on.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/README:1-7"
+    },
+    "3167": {
+        "file_id": 548,
+        "content": "This code seems to be a mix of instructions and notes. It suggests making something semi-auto to fully automatic, killing zombies, needing 4 tables, potentially abandoning relationships in certain types, recording islands, considering something later on.",
+        "type": "comment"
+    },
+    "3168": {
+        "file_id": 549,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/constructor.py",
+        "type": "filepath"
+    },
+    "3169": {
+        "file_id": 549,
+        "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
+        "type": "summary"
+    },
+    "3170": {
+        "file_id": 549,
+        "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" );\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/constructor.py:1-31"
+    },
+    "3171": {
+        "file_id": 549,
+        "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
+        "type": "comment"
+    },
+    "3172": {
+        "file_id": 550,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/derive_prefixed_fixed.py",
+        "type": "filepath"
+    },
+    "3173": {
+        "file_id": 550,
+        "content": "The code reads and processes a Python file to extract table and constraint information using regular expressions, returning the extracted data as a list. The function 'cockShock' takes variable 'd' from an input parameter and stores a list containing 'b', 'c', 'a', and 'd'. Print statements are commented out, suggesting debugging or testing purposes.",
+        "type": "summary"
+    },
+    "3174": {
+        "file_id": 550,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=['makeDB0.py','makeDB1.py','makeDB2.py','makeDB3.py']\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\nc=cockShock(dickHead[2])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/derive_prefixed_fixed.py:1-28"
+    },
+    "3175": {
+        "file_id": 550,
+        "content": "The code performs meta-programming by reading and processing a Python file to extract table and constraint information. It uses regular expressions to identify the table name, column names, and constraints within the file. The extracted data is then returned as a list containing the table name and a list of column names.",
+        "type": "comment"
+    },
+    "3176": {
+        "file_id": 550,
+        "content": "d=cockShock(dickHead[3])\n'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([b,c,a,d])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/derive_prefixed_fixed.py:29-33"
+    },
+    "3177": {
+        "file_id": 550,
+        "content": "The code is taking a variable 'd' from the function 'cockShock' with input parameter 'dickHead[3]', and then storing a list containing 'b', 'c', 'a', and 'd'. The print statements are commented out, suggesting they were used for debugging or testing purposes.",
+        "type": "comment"
+    },
+    "3178": {
+        "file_id": 551,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/extractLinear.py",
+        "type": "filepath"
+    },
+    "3179": {
+        "file_id": 551,
+        "content": "The code uses regular expressions and lambda functions to parse files, extract information, and generate superAddresses. It adds files to the HallOfFame list, checks file locations, and includes functions seekAWrapper() and seekOn(). The final list is moved to Monad.",
+        "type": "summary"
+    },
+    "3180": {
+        "file_id": 551,
+        "content": "import re\nimport os\nfrom getCorrectList import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/decrypter/extractLinear.py:1-31"
+    },
+    "3181": {
+        "file_id": 551,
+        "content": "The code is implementing a function to parse a file, extract specific information from it, and return the desired data. It utilizes regular expressions for pattern matching and lambda functions for list manipulation. Additionally, there's a method for generating superAddresses and another for seeking on next targets in a list of files.",
+        "type": "comment"
+    },
+    "3182": {
+        "file_id": 551,
+        "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nfuckingTerm=\"extractLinear.py\"\nMonad='/data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter'\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\nmover(fuckMe,Monad)\nos.system('chmod +x shallowCopy.sh')",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/decrypter/extractLinear.py:32-59"
+    },
+    "3183": {
+        "file_id": 551,
+        "content": "The code is parsing a directory tree and adds the files found to the HallOfFame list. If there are next targets, it retrieves all sub-files of those targets and checks if they exist in the correct location (corr). The wanted files are added to the HallOfFame list. If there are no next targets, it returns the current HallOfFame list. It also includes a function seekAWrapper() that takes an initial factor as input, computes correction, and then calls another function seekOn(). The code prints some example toyProject file paths for demonstration purposes and moves the final list to a specified location, Monad.",
+        "type": "comment"
+    },
+    "3184": {
+        "file_id": 552,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/getCorrectList.py",
+        "type": "filepath"
+    },
+    "3185": {
+        "file_id": 552,
+        "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
+        "type": "summary"
+    },
+    "3186": {
+        "file_id": 552,
+        "content": "import os\ndef letIt():\n    return os.listdir(\".\")\n# this is a list.\n#print(makeIt)",
+        "type": "code",
+        "location": "/metalearning/methodBank/getCorrectDill.py:1-5"
+    },
+    "3187": {
+        "file_id": 552,
+        "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
+        "type": "comment"
+    },
+    "3188": {
+        "file_id": 553,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/lolita.py",
+        "type": "filepath"
+    },
+    "3189": {
+        "file_id": 553,
+        "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+        "type": "summary"
+    },
+    "3190": {
+        "file_id": 553,
+        "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py:1-20"
+    },
+    "3191": {
+        "file_id": 553,
+        "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+        "type": "comment"
+    },
+    "3192": {
+        "file_id": 554,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB0.py",
+        "type": "filepath"
+    },
+    "3193": {
+        "file_id": 554,
+        "content": "This code creates a SQLite database table named \"rangeMap\" with columns for firstId, lastId, and charGroup. It ensures the data is unique based on these columns in ascending order. The code also mentions considering intermediate things before putting data into a graph database, and discussing label relationships and ordering considerations.",
+        "type": "summary"
+    },
+    "3194": {
+        "file_id": 554,
+        "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE rangeMap (\nfirstId INT NOT NULL, \nlastId INT NOT NULL,\ncharGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (firstId ASC, lastId ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB0.py:1-20"
+    },
+    "3195": {
+        "file_id": 554,
+        "content": "This code creates a SQLite database table named \"rangeMap\" with columns for firstId, lastId, and charGroup. It ensures the data is unique based on these columns in ascending order. The code also mentions considering intermediate things before putting data into a graph database, and discussing label relationships and ordering considerations.",
+        "type": "comment"
+    },
+    "3196": {
+        "file_id": 555,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB1.py",
+        "type": "filepath"
+    },
+    "3197": {
+        "file_id": 555,
+        "content": "This code connects to a SQLite database, creates a table named \"typeLoad\" with columns for type and charGroup, ensures uniqueness based on alphabetical order of these values, and then closes the connection. The author is considering how to handle labels with potential relationships in this table structure.",
+        "type": "summary"
+    },
+    "3198": {
+        "file_id": 555,
+        "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE typeLoad (type TEXT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (type ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB1.py:1-18"
+    },
+    "3199": {
+        "file_id": 555,
+        "content": "This code connects to a SQLite database, creates a table named \"typeLoad\" with columns for type and charGroup, ensures uniqueness based on alphabetical order of these values, and then closes the connection. The author is considering how to handle labels with potential relationships in this table structure.",
+        "type": "comment"
+    }
+}

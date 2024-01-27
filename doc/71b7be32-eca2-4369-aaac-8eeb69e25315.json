@@ -1,0 +1,10 @@
+{
+    "summary": "The code snippet is a comment for a Python script named \"groupHierachy.py\" located in the directory \"lazer/metalearning/methodBank/analyzer/decrypter\". It suggests using a command-line option to determine the hierarchy tree for the given file.",
+    "details": [
+        {
+            "comment": "The code snippet is a comment for a Python script named \"groupHierachy.py\" located in the directory \"lazer/metalearning/methodBank/analyzer/decrypter\". It suggests using a command-line option to determine the hierarchy tree for the given file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/groupHierachy.py\":0-0",
+            "content": "# for the same file, use the command line option to figure out the hierachy tree."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "summary": "This code contains two functions, `testFunc` and `hashYou`, with the former categorizing characters based on their ASCII values and counting occurrences, while the latter transforms words into numerical values and identifies common characters.",
+    "details": [
+        {
+            "comment": "The code defines a function `testFunc` that assigns categories to characters based on their ASCII value. The `fuckYou` function uses this function to categorize each character in a string and then counts the occurrence of each category. Finally, the `least_common` and `most_common` functions find the least and most frequent items in a list, respectively.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/hashFunc.py\":0-38",
+            "content": "import numpy as np\nimport itertools\nimport operator\ndef testFunc(a):\n#    a0=[False,False,False,False]\n    # code struct number character\n    if a in '|^%$#@!+=:;{}<>/\\\\`':\n        return 0\n    elif a in '[]()&-+*,?.\\'\"~ ':\n        return 1\n    elif a in '0123456789':\n        return 2\n    else:\n        return 3\n    # know nothing about the char yet.\ndef fuckYou(a):\n    c=[0,0,0,0]\n    b=[testFunc(r) for r in a]\n    for r in range(4):\n        if (1+len(b))/(0.1+b.count(r))<(5-(0.1+r)/2) or ((1+len(b))/(b.count(r)+0.1)<(7-(0.1+r)/2) and (len(b)+0.1)>(12-(r+0.1)/2)):\n            c[r]+=1\n    return c\ndef least_common(lst):\n    return min(set(lst), key=lst.count)\ndef most_common(L):\n  # get an iterable of (item, iterable) pairs\n  SL = sorted((x, i) for i, x in enumerate(L))\n  # print 'SL:', SL\n  groups = itertools.groupby(SL, key=operator.itemgetter(0))\n  # auxiliary function to get \"quality\" for an item\n  def _auxfun(g):\n    item, iterable = g\n    count = 0\n    min_index = len(L)\n    for _, where in iterable:\n      count += 1"
+        },
+        {
+            "comment": "This code defines a function \"hashYou\" that converts words into numerical values based on their length, alphabet average, and standard deviation. It also calculates the unique characters, their average, and standard deviation. Finally, it finds the most and least common characters in the word.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/hashFunc.py\":39-62",
+            "content": "      min_index = min(min_index, where)\n    # print 'item %r, count %r, minind %r' % (item, count, min_index)\n    return count, -min_index\n  # pick the highest-count/earliest item\n  return max(groups, key=_auxfun)[0]\ndef hashYou(a):\n    # i decide to make words into numerical shits.\n    # if not doing so my brain will get fucked.\n    # first is length.\n    # next is alphabet average.\n    # third is standard deviation.\n    b=len(a)\n    e=[ord(k) for k in a]\n    c=sum(e)/b\n    d=np.std(e)\n    # check for type!\n    f=list(set(e))\n    h=len(f)\n    g=sum(f)/len(e)\n    i=np.std(f)\n    j,k=most_common(e),least_common(e)\n    l,m=e[0],e[-1]\n    return b,c,d,h,g,i,j,k,l,m"
+        }
+    ]
+}

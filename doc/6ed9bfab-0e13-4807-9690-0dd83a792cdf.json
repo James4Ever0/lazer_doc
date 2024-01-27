@@ -1,0 +1,10 @@
+{
+    "summary": "This code discusses the development of a convolutional language parser, emphasizing the use of deep learning to analyze content and establish relationships between entities. It also mentions considering shape importance, word-by-word classification, and slow, steady identification of basic elements. The code compares the process to writing a compiler and suggests using dropout to generalize patterns, potentially applying it to finger counting or flaw detection.",
+    "details": [
+        {
+            "comment": "This code discusses the development of a convolutional language parser, emphasizing the use of deep learning to analyze content and establish relationships between entities. It also mentions considering shape importance, word-by-word classification, and slow, steady identification of basic elements. The code compares the process to writing a compiler and suggests using dropout to generalize patterns, potentially applying it to finger counting or flaw detection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/README\":0-12",
+            "content": "THE CONVOLUTIONAL LANGUAGE PARSER. USE DEEPLEAENING TO READ THROUGH CONTENT, GIVE RELATION TO EACH THINGS.\nShape can be important. Blanks are least significant because they are transparent.\nWe shall not go wordy. Classify word by word.\nSLOW AND STEADY MAN. ONLY IDENTIFY ONE BASIC THING AT A TIME.\nThis time we go hot.\nIt is like as if we are writting a complier.\nDropout could be useful. Make pattern generalized.\nMaybe we shall make it into some finger counter or flaw detecter?"
+        }
+    ]
+}

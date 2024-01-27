@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports functions from three other modules and defines two functions: \"theOtherDay\" and \"jokeMeUp\". The \"theOtherDay\" function processes data from a specific directory, while the \"jokeMeUp\" function iterates through a list of directories and applies the \"theOtherDay\" function to each one. Both functions print out various pieces of information during their execution.",
+    "details": [
+        {
+            "comment": "The code imports functions from three other modules and defines two functions: \"theOtherDay\" and \"jokeMeUp\". The \"theOtherDay\" function processes data from a specific directory, while the \"jokeMeUp\" function iterates through a list of directories and applies the \"theOtherDay\" function to each one. Both functions print out various pieces of information during their execution.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/testR.py\":0-18",
+            "content": "from verifyIfWorks import to_tables, to_columns, to_sample\nfrom processList import simpleShit\nfrom getFromPickle import returnAListR\n# you simply stay put. Cannot be moved around.Right at the spot.\n# If you wanna create your own function, go source code generating.\ndef theOtherDay(p):\n    yankee='/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/'+p+'/fuckyou.db'\n    jerks=list(map((lambda x:x[0]),to_tables(yankee)))\n    print(jerks)\n    to_sample(yankee)\n    der=to_columns(jerks,yankee)\n    print(der)\n    pint=[simpleShit(dec) for dec in der]\n    print(pint)\ndef jokeMeUp():\n    for jerk in returnAListR(\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module\"):\n        theOtherDay(jerk)\n        print(\"--\",\"spliter:\",jerk,\"--\")"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "Creating a SQLite table named 'chainer0' with columns for startId, nextId, endId, and groupName. Ensuring unique constraints using the CONSTRAINT rule. Discussing the need to consider alphabetical order, case relationships, and label distinctions when inserting data into the graph database.",
+    "details": [
+        {
+            "comment": "Creating a SQLite table named 'chainer0' with columns for startId, nextId, endId, and groupName. Ensuring unique constraints using the CONSTRAINT rule. Discussing the need to consider alphabetical order, case relationships, and label distinctions when inserting data into the graph database.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/lists/make2.py\":0-17",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE chainer0 (startId INT NOT NULL, nextId INT NOT NULL,\nendId INT NOT NULL, groupName TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (startId ASC, nextId ASC, endId ASC, groupName ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

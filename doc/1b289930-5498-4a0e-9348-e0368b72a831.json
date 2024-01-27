@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports numpy and defines a function 'Method2' that takes two inputs 'a' and 'b', and uses numpy meshgrid to create 2D grids for each input, then checks if the grid values are equal, returning a list of boolean values indicating equality.",
+    "details": [
+        {
+            "comment": "This code imports numpy and defines a function 'Method2' that takes two inputs 'a' and 'b', and uses numpy meshgrid to create 2D grids for each input, then checks if the grid values are equal, returning a list of boolean values indicating equality.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/newShit/niche.py\":0-12",
+            "content": "import numpy as np\ndef Method2(a, b):\n    group1, group2= np.meshgrid([*a],[*b])\n#    print(group1)\n#    print(group2)\n#    print(type(group1))\n#    print(dir(group1))\n    return (group1 == group2).tolist()\n#v=Method2(\"group\",\"groupChar\")\n#print(type(v))\n#print(v and v)"
+        }
+    ]
+}

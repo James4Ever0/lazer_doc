@@ -1,0 +1,15 @@
+{
+    "summary": "The code uses regular expressions to parse table creation statements from input files and extracts the table name and column constraints, then formats the results into two lists. The code processes three input files and prints variables 'a', 'b', separated by a \"---spliter---\" string before storing their values in a list using storeAList().",
+    "details": [
+        {
+            "comment": "This code uses regular expressions and simpleStorageR import to parse table creation statements from a given file. It extracts the table name and its column constraints, then filters and formats the results into two lists: table name and column constraint names. The code applies this process to three input files, 'makeDatabase.py', 'makeGroupingDatabase.py', and 'makeAnother.py'.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed_fixed.py\":0-27",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=[\"makeDatabase.py\",\"makeGroupingDatabase.py\",\"makeAnother.py\"]\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\nc=cockShock(dickHead[2])"
+        },
+        {
+            "comment": "Code snippet prints two variables `a` and `b`, separated by a \"---spliter---\" string, then stores the values of all three variables in a list using storeAList().",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/derive_prefixed_fixed.py\":28-31",
+            "content": "'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([a,b,c])"
+        }
+    ]
+}

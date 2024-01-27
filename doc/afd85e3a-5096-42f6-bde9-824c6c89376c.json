@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function `panasonic` that filters an input list based on another list's range, and returns the filtered list. It then calls this function within the `aka` function, which also filters two input lists and returns them as separate lists. The code includes sample test inputs to demonstrate the usage of the functions.",
+    "details": [
+        {
+            "comment": "The code defines a function `panasonic` that filters an input list based on another list's range, and returns the filtered list. It then calls this function within the `aka` function, which also filters two input lists and returns them as separate lists. The code includes sample test inputs to demonstrate the usage of the functions.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/communism/sonyWalkman.py\":0-21",
+            "content": "def panasonic(a,b):\n#    for c in b:\n    if (len(b)==0 or len(a)==0):\n        return a\n    else:\n#        d=[]\n#        for c in a:\n#        print(b)\n#        e=list(filter((lambda x:(x>=b[0][0] and x<= b[0][1])),a))\n#        c+=e\n        return panasonic(list(filter((lambda x:(x<b[0][0] or x>b[0][1])),a)),b[1:])\ndef aka(m,s,e):\n    geek=list(filter((lambda v: v not in e),panasonic(m,s)))\n    return [list(filter((lambda y: y not in geek),m)),geek]\n\"\"\"\ntest=[1,2,4,5,6,7]\nbest=[[1,2],[6,9]]\nexception=[4]\nprint(test)\nprint(best)\nprint(aka(test,best,exception))\"\"\""
+        }
+    ]
+}

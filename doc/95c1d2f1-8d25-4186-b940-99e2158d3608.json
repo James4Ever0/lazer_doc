@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the Map module from Data.Map, creates a function myMap that takes an Integer and returns a Map of Integers to a list of Integers, and prints out the result of calling myMap with the argument 3. The printed output will show a Map with keys 1 through 3 and values as lists containing the corresponding key value.",
+    "details": [
+        {
+            "comment": "This code imports the Map module from Data.Map, creates a function myMap that takes an Integer and returns a Map of Integers to a list of Integers, and prints out the result of calling myMap with the argument 3. The printed output will show a Map with keys 1 through 3 and values as lists containing the corresponding key value.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/shitHappens.hs\":0-7",
+            "content": "import Data.Map (Map) \nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain = print(myMap 3)"
+        }
+    ]
+}

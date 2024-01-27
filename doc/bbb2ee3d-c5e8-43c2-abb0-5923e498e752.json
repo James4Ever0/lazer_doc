@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function \"same_shit\" that takes a superstring and returns a list of matching substrings in all possible orders. It uses the difflib library to find matching blocks between substrings and appends them to a list. The code then prints the resulting list for the provided example string. Time complexity is not considered important.",
+    "details": [
+        {
+            "comment": "This code defines a function \"same_shit\" that takes a superstring and returns a list of matching substrings in all possible orders. It uses the difflib library to find matching blocks between substrings and appends them to a list. The code then prints the resulting list for the provided example string. Time complexity is not considered important.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/difftool/fuckyou.py\":0-17",
+            "content": "import difflib\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef same_shit(superstring,throttle=0):\n    gnu=[]\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    for k in range(len(superstring)-2-throttle):\n        a, b = superstring[2+k:],superstring[:k+1]\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu.append(thug)\n    return gnu\nshit=\"hell yeah i am back. oh yeah i am kidding . just kkkk\"\nprint(same_shit(shit))"
+        }
+    ]
+}

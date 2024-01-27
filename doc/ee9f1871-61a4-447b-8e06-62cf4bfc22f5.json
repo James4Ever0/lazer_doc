@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function `souviet` that takes a string as input and returns a modified list of boolean values indicating the start, end, and both start and end positions in the input string. It identifies and marks the positions where newlines are encountered and applies marking rules to the positions accordingly. The code then tests the function on several test inputs.",
+    "details": [
+        {
+            "comment": "The code defines a function `souviet` that takes a string as input and returns a modified list of boolean values indicating the start, end, and both start and end positions in the input string. It identifies and marks the positions where newlines are encountered and applies marking rules to the positions accordingly. The code then tests the function on several test inputs.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/begina.py\":0-30",
+            "content": "mild=[\"56\\n5738-\\ndg\",\"\\n56\\n5738-\\ndg\",\"56\\n5738-\\ndg\\n\",\"56\\n5738-\\n\",\"\\n5738-\\ndg\"]\ndef souviet(union):\n    # at head at tail\n    mark=list(map((lambda x: [x, False,False]),list(filter((lambda x:x!=\"\"),union.split(\"\\n\")))))\n    print(mark)\n    merge=[x for x,y in enumerate(union) if y==\"\\n\"]\n    print(merge)\n    quack=len(union)\n    # f f t t f t t f\n#    gross=[]\n#    grass=\"\"\n    if merge!=[]:\n        if merge[0]==0 and mark[0][1]==False:\n            mark[0][1]= True\n        if merge[-1]==(quack-1) and mark[-1][2]==False:\n            mark[-1][2]=True\n        if len(merge)>1:\n            if mark[0][2]==False:\n                mark[0][2]= True\n            if mark[-1][1]==False:\n                mark[-1][1]=True\n            for mk in range(len(mark)-2):\n                print(mk+1)\n                mark[mk+1][1], mark[mk+1][2]=True,True\n    else:\n        pass\n    return mark\nfor jerk in mild:\n    print(\"-----spliter-----\")\n    print(jerk)\n    print(souviet(jerk))"
+        }
+    ]
+}

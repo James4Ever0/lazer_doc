@@ -1,0 +1,10 @@
+{
+    "summary": "This code initializes a string \"fuck\" with a space character and then checks for occurrences of that space in the string using list comprehension. It prints out the positions of all spaces in the string.",
+    "details": [
+        {
+            "comment": "This code initializes a string \"fuck\" with a space character and then checks for occurrences of that space in the string using list comprehension. It prints out the positions of all spaces in the string.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/difftool/test_location.py\":0-2",
+            "content": "fuck=\" this is a fucking space.\"\nc=\" \"\nprint ([pos for pos, char in enumerate(fuck) if char == c])"
+        }
+    ]
+}

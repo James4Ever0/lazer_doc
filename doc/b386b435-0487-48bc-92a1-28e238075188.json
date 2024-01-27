@@ -1,0 +1,10 @@
+{
+    "summary": "This script takes the contents of makeDatabase.py and makeGroupingDatabase.py, searches for \"CREATE TABLE\" statements using grep command, extracts table names after \"TABLE\", and saves them in simpleDeduction.txt.",
+    "details": [
+        {
+            "comment": "This script takes the contents of makeDatabase.py and makeGroupingDatabase.py, searches for \"CREATE TABLE\" statements using grep command, extracts table names after \"TABLE\", and saves them in simpleDeduction.txt.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/simpleExtract.sh\":0-1",
+            "content": "#!/bin/bash\ncat makeDatabase.py makeGroupingDatabase.py | grep -E -o \"CREATE TABLE [^ ]+\" | grep -E -o \"[^ ]+$\" > simpleDeduction.txt"
+        }
+    ]
+}

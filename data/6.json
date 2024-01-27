@@ -1,0 +1,532 @@
+{
+    "600": {
+        "file_id": 139,
+        "content": "/multilingual/hotfix-v0/dopeshit.php",
+        "type": "filepath"
+    },
+    "601": {
+        "file_id": 139,
+        "content": "This PHP script parses URLs and retrieves redirect locations, but contains language errors and developer frustration comments. The code seems to be an HTML file with a PHP tag, executed on a server without output or functionality.",
+        "type": "summary"
+    },
+    "602": {
+        "file_id": 139,
+        "content": "<?php\n//$url = \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\";\n//save the thread or not?\n//now we do not consider nothing.\n//just use every fucking thread.\n$url=$argv[1];\n// this was the wrong fucking thing\n// $argv instead of $args!\n// fuck you! \n$info = parse_url($url);\n$fp = fsockopen($info['host'], 80,$errno, $errstr, 30);\nfputs($fp,\"GET {$info['path']}?{$info['query']} HTTP/1.1\\r\\n\");\nfputs($fp, \"Host: {$info['host']}\\r\\n\");\nfputs($fp, \"Connection: close\\r\\n\\r\\n\");\n$rewrite = '';\nwhile(!feof($fp)) {\n    $line = fgets($fp);\n    if($line != \"\\r\\n\" ) {\n        if(strpos($line,'Location:') !== false) {\n            $rewrite = str_replace(array(\"\\r\",\"\\n\",\"Location: \"),'',$line);\n        }\n    }else {\n        break;\n    }\n}\n//is this the fucking way to combine strings?\n//$rewrite=\"$rewrite\\n\";\n//shit this fucking works.\necho \"$rewrite\"; //结果显示：string(22) \"http://www.google.com/\"\n//this fuck is good.\n//you should not end this without a fucking return.\n//except when combined with the fucking lua.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/dopeshit.php:1-32"
+    },
+    "603": {
+        "file_id": 139,
+        "content": "This code is a PHP script that parses the URL, opens an HTTP connection, and retrieves the redirect location by reading the response headers. It then outputs the final redirect location as a string. The code has some language errors and comments expressing frustration during development.",
+        "type": "comment"
+    },
+    "604": {
+        "file_id": 139,
+        "content": "?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/dopeshit.php:33-33"
+    },
+    "605": {
+        "file_id": 139,
+        "content": "This code appears to be an HTML file with a PHP tag. The code is likely to be executed on a server, and it ends the PHP block without any output or functionality.",
+        "type": "comment"
+    },
+    "606": {
+        "file_id": 140,
+        "content": "/multilingual/hotfix-v0/download-files.sh",
+        "type": "filepath"
+    },
+    "607": {
+        "file_id": 140,
+        "content": "The code is making HTTP GET requests using curl to download files from termbin.com and saving them with specific file names. Each request is executed concurrently using the \"&\" symbol.",
+        "type": "summary"
+    },
+    "608": {
+        "file_id": 140,
+        "content": "curl -k https://termbin.com/dznz > pass_args.php &\ncurl -k https://termbin.com/80qw > dopeshit.php &\ncurl -k https://termbin.com/4ksk > scrapy.php &\ncurl -k https://termbin.com/i0ic > fuckshit.php &\ncurl -k https://termbin.com/2pqkw > pass_argv.php &\ncurl -k https://termbin.com/kszq > shell-execute-return.lua &",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/download-files.sh:1-6"
+    },
+    "609": {
+        "file_id": 140,
+        "content": "The code is making HTTP GET requests using curl to download files from termbin.com and saving them with specific file names. Each request is executed concurrently using the \"&\" symbol.",
+        "type": "comment"
+    },
+    "610": {
+        "file_id": 141,
+        "content": "/multilingual/hotfix-v0/duper-get.js",
+        "type": "filepath"
+    },
+    "611": {
+        "file_id": 141,
+        "content": "This code fetches Baidu search results pages with Axios, extracts URLs from links using Cheerio, and logs them to the console. It handles asynchronous responses but could benefit from a more direct approach for data handling.",
+        "type": "summary"
+    },
+    "612": {
+        "file_id": 141,
+        "content": "//var fs = require('fs');\n//IT FUCKING WORKS!\n//FUCKING FUCK!\nvar cheerio = require('cheerio');\n//const axios = require('axios');  \nvar content=process.argv[2];               // remember to write things here.  \nvar p = encodeURIComponent(content);\nvar n=0;   \nvar axios = require('axios');              \n//var data0=\"\";\n//var data1=\"\";\naxios.all([                                  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),                             axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)                        ]).then(axios.spread((response1, response2) => {                              \nvar $ = cheerio.load(response1.data);\n//console.log(data0);\n  $(\"a[target|='_blank']\").each(function (i, elem) {\n    console.log($(this).attr('href'));\n  });\n $ = cheerio.load(response2.data);                                                          $(\"a[target|='_blank']\").each(function (i, elem) {                                      console.log($(this).attr('href'));       });\n\t//response1.data.pipe(data0); ",
+        "type": "code",
+        "location": "/multilingual/hotfix/duper-get.js:1-23"
+    },
+    "613": {
+        "file_id": 141,
+        "content": "Code fetches the first and second page of search results from Baidu using Axios. It then uses Cheerio to extract URLs from links with target=\"_blank\" on both pages, logging them to the console.",
+        "type": "comment"
+    },
+    "614": {
+        "file_id": 141,
+        "content": "//\tconsole.log(response1.data);\n\t//\tdid you forget that this fucking thing is async?\n//response2.data.pipe(data1);\n})).catch(error => {                         console.log(error);                      });\n/*fs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }*/\n// wow this is awesome.\n\t// but i need a direct approach.",
+        "type": "code",
+        "location": "/multilingual/hotfix/duper-get.js:24-34"
+    },
+    "615": {
+        "file_id": 141,
+        "content": "This code appears to be handling an asynchronous response and reading a file. It seems to contain some debugging comments and potential issues with async behavior. The developer may be seeking a more direct approach for handling the data.",
+        "type": "comment"
+    },
+    "616": {
+        "file_id": 142,
+        "content": "/multilingual/hotfix-v0/fuckshit.php",
+        "type": "filepath"
+    },
+    "617": {
+        "file_id": 142,
+        "content": "This code fetches the content from a URL using fsockopen and HTTP GET request, extracts the new URL from the response header's Location field, and finally echoes it. The code also demonstrates string manipulation to remove unwanted characters before displaying the result.",
+        "type": "summary"
+    },
+    "618": {
+        "file_id": 142,
+        "content": "<?php\n$url = \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\";\n$info = parse_url($url);\n$fp = fsockopen($info['host'], 80,$errno, $errstr, 30);\nfputs($fp,\"GET {$info['path']}?{$info['query']} HTTP/1.1\\r\\n\");\nfputs($fp, \"Host: {$info['host']}\\r\\n\");\nfputs($fp, \"Connection: close\\r\\n\\r\\n\");\n$rewrite = '';\nwhile(!feof($fp)) {\n    $line = fgets($fp);\n    if($line != \"\\r\\n\" ) {\n        if(strpos($line,'Location:') !== false) {\n            $rewrite = str_replace(array(\"\\r\",\"\\n\",\"Location: \"),'',$line);\n        }\n    }else {\n        break;\n    }\n}\n//is this the fucking way to combine strings?\n//$rewrite=\"$rewrite\\n\";\n//shit this fucking works.\necho \"$rewrite\\n\"; //结果显示：string(22) \"http://www.google.com/\"\n//this fuck is good.\n//you should not end this without a fucking return.\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/fuckshit.php:1-26"
+    },
+    "619": {
+        "file_id": 142,
+        "content": "This code fetches the content from a URL using fsockopen and HTTP GET request, extracts the new URL from the response header's Location field, and finally echoes it. The code also demonstrates string manipulation to remove unwanted characters before displaying the result.",
+        "type": "comment"
+    },
+    "620": {
+        "file_id": 143,
+        "content": "/multilingual/hotfix-v0/local.js",
+        "type": "filepath"
+    },
+    "621": {
+        "file_id": 143,
+        "content": "The code reads an HTML file using fs and Cheerio, applies selectors to specific elements for further processing or extraction, and checks if the selected element is an H3 tag but may face issues due to prop() not being available in that context.",
+        "type": "summary"
+    },
+    "622": {
+        "file_id": 143,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\n// use something apart from this.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n  $(\"h3[class*='c-title'], div[class*='c-abstract']\").each(function (i, elem) {// this fucking works",
+        "type": "code",
+        "location": "/multilingual/hotfix/local.js:1-34"
+    },
+    "623": {
+        "file_id": 143,
+        "content": "This code reads an HTML file using fs and Cheerio libraries, then applies a selector to specific elements (\"h3[class*='c-title']\" and \"div[class*='c-abstract']\"). It seems to be parsing these elements for further processing or extraction. The comments suggest the author prefers not to rely on regex selectors and instead uses Cheerio's load function for selector operations, and recommends considering other languages if you want to focus on regex selection.",
+        "type": "comment"
+    },
+    "624": {
+        "file_id": 143,
+        "content": "\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n\t  console.log(poker);\n\t  if (poker ==\"h3\"){console.log($(\":first-child\",$(this)).attr(\"href\"));};\n\t  // prop() is not avaliable here.\n\t  console.log($(this).text());\n  });\n});",
+        "type": "code",
+        "location": "/multilingual/hotfix/local.js:35-42"
+    },
+    "625": {
+        "file_id": 143,
+        "content": "This code snippet retrieves the tag name of the selected element, checks if it's an H3 tag, and logs its inner text. However, prop() is not available in this context, and it might cause issues later on.",
+        "type": "comment"
+    },
+    "626": {
+        "file_id": 144,
+        "content": "/multilingual/hotfix-v0/loco.js",
+        "type": "filepath"
+    },
+    "627": {
+        "file_id": 144,
+        "content": "This code uses 'fs' and 'cheerio' modules to read an HTML file, parse it using Cheerio, generate a range of numbers based on the input parameters, filter the HTML elements by their IDs, log the text content of the filtered elements, and finally, print the result. The 'mobious' function generates a selector for a range of HTML elements based on their IDs.",
+        "type": "summary"
+    },
+    "628": {
+        "file_id": 144,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}*/\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n  $(mobious(1,40)).each(function (i, elem) {// this fucking works\n    console.log($(this).text());\n  });\n});",
+        "type": "code",
+        "location": "/multilingual/hotfix/loco.js:1-35"
+    },
+    "629": {
+        "file_id": 144,
+        "content": "This code uses 'fs' and 'cheerio' modules to read an HTML file, parse it using Cheerio, generate a range of numbers based on the input parameters, filter the HTML elements by their IDs, log the text content of the filtered elements, and finally, print the result. The 'mobious' function generates a selector for a range of HTML elements based on their IDs.",
+        "type": "comment"
+    },
+    "630": {
+        "file_id": 145,
+        "content": "/multilingual/hotfix-v0/marine.lua",
+        "type": "filepath"
+    },
+    "631": {
+        "file_id": 145,
+        "content": "The code divides a string into substrings using a delimiter, executes \"supercat.js\" with node.js, but has efficiency issues and problematic variable names that need refactoring.",
+        "type": "summary"
+    },
+    "632": {
+        "file_id": 145,
+        "content": "superspliter = [[;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]]\n---------------------------------------------------\nrange = require(\"range_module.init\")\n-- fuckyeah!\n-- you bitch!\nfunction Split(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0  \n    local lastPos   \n    for part, pos in string.gmatch(str, pat) do\n\t    if part ~=\"\\n\" and part ~=\"\" then\n        nb = nb + 1  \n        result[nb] = part   \n        lastPos = pos   \n        if nb == maxNb then break end  \nend\n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then  \n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--result[1]=nil\n    return result   \nend  \nfunction Splitv(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    maxLimit=maxNb+1\n    if string.find(str, delim) == nil then  \n        return { str }  ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/marine.lua:1-39"
+    },
+    "633": {
+        "file_id": 145,
+        "content": "This function takes a string and a delimiter, and optionally a maximum number of sub-strings to split the input into. It handles various edge cases, such as no delimiters found or non-existent maxNb values, and returns a table with the resulting splits. The function also checks if the last field is missing due to a limit being reached.",
+        "type": "comment"
+    },
+    "634": {
+        "file_id": 145,
+        "content": "    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0\n    local nb0 = 0\n    local lastPos\n    local lastPos0\n    for part, pos in string.gmatch(str, pat) do  if part~=\"\\n\" and part~=\"\" then\n--string.gfind() is renamed.\n        nb0 = nb0 + 1 \n\tif nb0 <= maxLimit then\n        result[nb0] = part\nend\n\tlastPos0=pos\n        if nb0 <= maxNb then \n\t\tlastPos=lastPos0\n\t\tnb=nb0\n\tend\n        if nb0 > maxLimit then result[maxLimit]=result[maxLimit]..delim..part end  \n    end  \n    end\n    -- Handle the last field   \n    if nb ~= maxNb then \n-- this means not equal to the maxNb.\n-- better make sure that is not real.\n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--[[local fuckingnumber=#result\n    if fuckingnumber>maxLimit then\n\t    for i in range(maxLimit+1,fuckingnumber) do\n\t\t    result[i]=nil\n\t    end]]\n--result[1]=nil\n    return result   \nend  \n--command =\"node duper-get.js java\"\n--the_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/marine.lua:40-82"
+    },
+    "635": {
+        "file_id": 145,
+        "content": "The code processes a string, splitting it into parts separated by a specified delimiter and storing them in an array. It handles cases where the number of parts exceeds a maximum limit (maxNb) or a specified maximumLimit. The final part of the string is handled separately if it differs from maxNb.",
+        "type": "comment"
+    },
+    "636": {
+        "file_id": 145,
+        "content": "--fucking shit.\n--[[command =\"node supercat.js java 0\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()]]\ncommand =\"node supercat.js \"..arg[1]       for iterable in range(2,#arg) do\ncommand=command..\" \"..arg[iterable]\nend\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nsupertable=Split(result,superspliter,nil)\none_fuck_all=\"\"\n-- never fucking use minus sign in variable name and fuck you!\nfor key,value in pairs(supertable) do\n--\tif key>1 then\n--local\t\nsupertable[key]=Splitv(value,\"\\n\",2)\none_fuck_all=one_fuck_all..\" \"..supertable[key][2]\n-- you little piece of shit!\n-- forgot to add the mother fucking space!\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\t--[[for fuckingkey,fuckingvalue in pairs(nextable) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/marine.lua:83-120"
+    },
+    "637": {
+        "file_id": 145,
+        "content": "The code is running a command using node.js to execute \"supercat.js\" with arguments and capturing the output, then splitting the result and storing it in a table. The author expresses frustration with variable names and formatting.",
+        "type": "comment"
+    },
+    "638": {
+        "file_id": 145,
+        "content": "\t\t-- i always cheat myself.\n\t--\tprint(fuckingvalue)\n\t--else\n\t\tlocal command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n\t\tlocal handle=io.popen(command) \n\t\tlocal result=handle:read(\"*a\") \n\t\thandle:close() \n--\t\tprint(result) \n\t\tio.write(result)\n\t\t--the final return should be integrated.\n\telse\n\t\tprint (fuckingvalue)\n\tend\n\t\t-- wtf is the difference between the fucking colon and the period?\n\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend--]]\nend\n--end\n--one_fuck_all_table={}\nfuckyou_command = \"lua shell-args.lua \"..one_fuck_all\n--print(one_fuck_all)\n--i do not need that prick no more.\nfuckyou_handle = io.popen(fuckyou_command)\nfuckyou_result = Split(fuckyou_handle:read(\"*a\"),\"\\n\")\nfuckyou_handle:close()",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/marine.lua:122-157"
+    },
+    "639": {
+        "file_id": 145,
+        "content": "The code appears to be running a command using the 'io.popen' function and capturing its output for further processing. It seems like there is some frustration in the comments and potential issues with the code itself. The end goal might be to execute another Lua script and use its output, but it could benefit from restructuring and improved commenting for better understanding and debugging.",
+        "type": "comment"
+    },
+    "640": {
+        "file_id": 145,
+        "content": "-- the table will be returned.\n--result = Split(result0,\"\\n\")\n--[[print(fuckyou_result[1])\nfor dickkey,dickvalue in pairs(fuckyou_result) do\n\tsupertable[dickkey][2]=dickvalue\nend\n]]\n--i am gonna make it multithreaded.\n--fucking shit. you bitchs are great.\nfor key,value in pairs(supertable) do\n--\tif key>1 then\n--local\tnextable=Splitv(value,\"\\n\",2)\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\tfor fuckingkey,fuckingvalue in pairs(supertable[key]) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.\n\t\t-- i always cheat myself.\n\t\tprint(fuckyou_result[key])\nelse\n\t\t--local command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n--\t\tlocal handle=io.popen(command) \n--\t\tlocal result=handle:read(\"*a\") \n--\t\thandle:close() \n--\t\tprint(result) \n--\t\tio.write(result)\n\t\t--the final return should be integrated.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/marine.lua:158-197"
+    },
+    "641": {
+        "file_id": 145,
+        "content": "The code is attempting to split data into multithreaded tables and print their values. The developer expresses frustration with the current implementation and a desire to make it more efficient. The comments contain profanity and indicate the developer's feelings towards the current state of the code.",
+        "type": "comment"
+    },
+    "642": {
+        "file_id": 145,
+        "content": "--\telse\n\t\tprint (fuckingvalue)\n\t\t-- let's just test.\n\t\t-- if shits happen we change it later on.\nend\n\t\t-- wtf is the difference between the fucking colon and the period?\n\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend\n--end\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/marine.lua:198-217"
+    },
+    "643": {
+        "file_id": 145,
+        "content": "Code snippet is likely debugging code with unfinished or placeholder comments. The programmer seems to be experiencing difficulties with a variable called \"fuckingvalue\", and they are testing different options with print statements. The code may require further refactoring and clarification before being considered production-ready.",
+        "type": "comment"
+    },
+    "644": {
+        "file_id": 146,
+        "content": "/multilingual/hotfix-v0/node-batch.js",
+        "type": "filepath"
+    },
+    "645": {
+        "file_id": 146,
+        "content": "This code uses Axios to make parallel GET requests to Baidu search engine. It retrieves two pages of results for a given query using the `process.argv[2]` parameter, encodes it with `encodeURIComponent`, and prints the data returned by each request.",
+        "type": "summary"
+    },
+    "646": {
+        "file_id": 146,
+        "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2) => {\n  console.log(response1.data);\n  console.log(response2.data);\n})).catch(error => {\n  console.log(error);\n});",
+        "type": "code",
+        "location": "/multilingual/hotfix/node-batch.js:1-14"
+    },
+    "647": {
+        "file_id": 146,
+        "content": "This code uses Axios to make parallel GET requests to Baidu search engine. It retrieves two pages of results for a given query using the `process.argv[2]` parameter, encodes it with `encodeURIComponent`, and prints the data returned by each request.",
+        "type": "comment"
+    },
+    "648": {
+        "file_id": 147,
+        "content": "/multilingual/hotfix-v0/node-get.js",
+        "type": "filepath"
+    },
+    "649": {
+        "file_id": 147,
+        "content": "This code uses JSDOM library to parse the content of 'index.html', then logs the initial and after 5 seconds, the trimmed text content of the body element from the parsed DOM.",
+        "type": "summary"
+    },
+    "650": {
+        "file_id": 147,
+        "content": "'use strict';\nconst { JSDOM } = require('jsdom');\nconst options = {\n  resources: 'usable',\n  runScripts: 'dangerously',\n};\nJSDOM.fromFile('index.html', options).then((dom) => {\n  console.log(dom.window.document.body.textContent.trim());\n  setTimeout(() => {\n    console.log(dom.window.document.body.textContent.trim());\n  }, 5000);\n});\n // console output\n // abc\n // 123",
+        "type": "code",
+        "location": "/multilingual/hotfix/node-get.js:1-20"
+    },
+    "651": {
+        "file_id": 147,
+        "content": "This code uses JSDOM library to parse the content of 'index.html', then logs the initial and after 5 seconds, the trimmed text content of the body element from the parsed DOM.",
+        "type": "comment"
+    },
+    "652": {
+        "file_id": 148,
+        "content": "/multilingual/hotfix-v0/pass_args.php",
+        "type": "filepath"
+    },
+    "653": {
+        "file_id": 148,
+        "content": "This script takes command-line arguments, prints the first argument twice, and then loops through the remaining arguments printing them out. It also includes some explicit language and humoristic remarks in its comments.",
+        "type": "summary"
+    },
+    "654": {
+        "file_id": 148,
+        "content": "<?php\n//you should start from 1\n//the number 0 stands for the script's name.\necho \"$argv[1]\\n\";\necho \"$argv[1]\\n\";\n//what if i do not want to write the fucking semicolon?\n//now you die.\n//you should respect your fucking name.\necho \"$argc\\n\";\n//the fucking number is the index number plus one.\n//$the_fucking_final_index_fucked_numer=$argc-1;\nfor ($i = 1; $i < $argc; $i++) {\n\techo $argv[$i];\n\t//no need to put the fucking return at the fucking fucked end.\n\t//this will print #1 to #2 arg\n\t//i ain't know nothing about the $argv\n}\n//WTF R U THINKING?\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/pass_args.php:1-19"
+    },
+    "655": {
+        "file_id": 148,
+        "content": "This script takes command-line arguments, prints the first argument twice, and then loops through the remaining arguments printing them out. It also includes some explicit language and humoristic remarks in its comments.",
+        "type": "comment"
+    },
+    "656": {
+        "file_id": 149,
+        "content": "/multilingual/hotfix-v0/pass_argv.php",
+        "type": "filepath"
+    },
+    "657": {
+        "file_id": 149,
+        "content": "This code, located at \"lazer/multilingual/hotfix-v0/pass_argv.php\", is designed to output the value of the second argument passed to the script twice. The number 0 represents the script's name, and the number 1 refers to the second argument. It also includes a comment expressing frustration about writing semicolons, but no impact on functionality.",
+        "type": "summary"
+    },
+    "658": {
+        "file_id": 149,
+        "content": "<?php\n//you should start from 1\n//the number 0 stands for the script's name.\necho \"$argv[1]\\n\";\necho \"$argv[1]\\n\";\n//what if i do not want to write the fucking semicolon?\n//now you die.\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/pass_argv.php:1-8"
+    },
+    "659": {
+        "file_id": 149,
+        "content": "This code, located at \"lazer/multilingual/hotfix-v0/pass_argv.php\", is designed to output the value of the second argument passed to the script twice. The number 0 represents the script's name, and the number 1 refers to the second argument. It also includes a comment expressing frustration about writing semicolons, but no impact on functionality.",
+        "type": "comment"
+    },
+    "660": {
+        "file_id": 150,
+        "content": "/multilingual/hotfix-v0/range_module/init.lua",
+        "type": "filepath"
+    },
+    "661": {
+        "file_id": 150,
+        "content": "This Lua code defines a range iterator function that creates number or character ranges based on input parameters and returns values in either ascending or descending order.",
+        "type": "summary"
+    },
+    "662": {
+        "file_id": 150,
+        "content": "local NUMBER_EPSILON = 0.00000000000001\n-- create a table with values :from until :to\nlocal function number_range (from, to, step)\n\tlocal t = {}\n\tfor value = from, to, step do\n\t\tt[#t + 1] = value\n\tend\n\treturn t\nend\n-- create a table with values char of :from to char of :to\nlocal function string_range (from, to, step)\n\tlocal t = {}\n\tfor value = from:byte (), to:byte (), step do\n\t\tt[#t + 1] = string.char (value)\n\tend\n\treturn t\nend\n-- table holding the mapping from data type to creator function\nlocal creators = {\n\tnumber = number_range,\n\tstring = string_range\n}\n-- range function export\nreturn function (from, to, step)\n\tif not from then\n\t\terror (\"lua-range needs at least a start parameter (from)\")\n\tend\n\tlocal type_name = type (from)\n\tlocal range_creator = creators[type_name]\n\tif not range_creator then\n\t\terror (\"Unknown type \" .. type_name)\n\tend\n\t-- if no step width is specified default to 1\n\tif not step then\n\t\tstep = 1\n\tend\n\t-- if no upper bound is set, end where it started\n\tif not to then\n\t\tto = from\n\tend\n\t-- if upper bound is bigger than lower bound swap both",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/range_module/init.lua:1-52"
+    },
+    "663": {
+        "file_id": 150,
+        "content": "This Lua code defines a function that creates a range of numbers or characters based on input parameters. It includes functions for number and string ranges, with options for step size and data type. If any incorrect parameters are provided, it throws an error.",
+        "type": "comment"
+    },
+    "664": {
+        "file_id": 150,
+        "content": "\tlocal is_reversed = false\n\tif to < from then\n\t\tfrom, to = to, from\n\t\tis_reversed = true\n\tend\n\t-- create the closure/iterator\n\tlocal range = range_creator (from, to, step)\n\tlocal pos = 0\n\tlocal size = #range\n\tif is_reversed then\n\t\tlocal buffer = range\n\t\trange = {}\n\t\twhile #buffer > 0 do\n\t\t\ttable.insert (range, table.remove (buffer))\n\t\tend\n\tend\n\treturn function ()\n\t\tlocal r\n\t\tpos = pos + 1\n\t\tif pos <= size then\n\t\t\tr = range[pos]\n\t\telse\n\t\t\tr = nil\n\t\tend\n\t\treturn r\n\tend\nend",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/range_module/init.lua:53-84"
+    },
+    "665": {
+        "file_id": 150,
+        "content": "This code creates a range iterator function that returns values in either ascending or descending order based on the input \"from\" and \"to\" values. It first checks if \"from\" is less than \"to\", and if so, it reverses the order of the range. Then, it creates a closure/iterator using the \"range_creator\" function with the adjusted values. Finally, it returns a function that iterates through the range and returns values one by one.",
+        "type": "comment"
+    },
+    "666": {
+        "file_id": 151,
+        "content": "/multilingual/hotfix-v0/regex.js",
+        "type": "filepath"
+    },
+    "667": {
+        "file_id": 151,
+        "content": "Code defines two regex patterns `patt1` and `patt2`, and a string variable `mess`. It checks if `mess` includes the strings matching `patt1` or `patt2` using the `includes()` method. The results are then logged to the console.",
+        "type": "summary"
+    },
+    "668": {
+        "file_id": 151,
+        "content": "//var patt0=new RegExp(\"https\\:\\/\\/www\\.baidu\\.com\\/s\\?\")\n//var patt1=new RegExp(\"https\\:\\/\\/www\\.baidu\\.com\\/s\\?url=the-best-hings-in-life-are-free\");\n//fuck you.\n//fuck.\nvar patt1=\"https://www.baidu.com/s?url=\";\nvar patt2=\"https://www.baidu.com/s?ul=\";\nvar mess=\"https://www.baidu.com/s?url=the-best-hings-in-life-are-free\";\nconsole.log(mess.includes(patt2)); \nconsole.log(mess.includes(patt1)); \n//this sucks.\n//console.log(mess.(stringObject => stringObject.includes(patt1););)",
+        "type": "code",
+        "location": "/multilingual/hotfix/regex.js:1-12"
+    },
+    "669": {
+        "file_id": 151,
+        "content": "Code defines two regex patterns `patt1` and `patt2`, and a string variable `mess`. It checks if `mess` includes the strings matching `patt1` or `patt2` using the `includes()` method. The results are then logged to the console.",
+        "type": "comment"
+    },
+    "670": {
+        "file_id": 152,
+        "content": "/multilingual/hotfix-v0/scrapy.js",
+        "type": "filepath"
+    },
+    "671": {
+        "file_id": 152,
+        "content": "This JavaScript code imports Axios, retrieves data from a Baidu link using Axios, handles response and error cases, includes a sleep function with a deadlock implementation.",
+        "type": "summary"
+    },
+    "672": {
+        "file_id": 152,
+        "content": "var axios=require(\"axios\");\nvar link=\"https://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\"\nfunction sleep (time) {\n  return new Promise((resolve) => setTimeout(resolve, time));\n}\n//sleep well you fucking bitch!\nvar source=\"\";\naxios.get(link).then(response => (\n\tconsole.log(response.responseUrl)\n)).catch(function (error) { \n// 请求失败处理\n\t// this won't work.\n\t// this fucking works!\n\t// fucking fucked!\n//console.log(error.request.res.responseUrl);\n\t//make some fucking deadlock.\n//while (source==\"\"){\n//sleep(1).then(() => {\n    // 这里写sleep之后需要去做的事情\nconsole.log(error.request.res.responseUrl);\n//console.log(source);\n//})\n//}\n});",
+        "type": "code",
+        "location": "/multilingual/hotfix/scrapy.js:1-25"
+    },
+    "673": {
+        "file_id": 152,
+        "content": "This JavaScript code imports Axios, retrieves data from a Baidu link using Axios, handles response and error cases, includes a sleep function with a deadlock implementation.",
+        "type": "comment"
+    },
+    "674": {
+        "file_id": 153,
+        "content": "/multilingual/hotfix-v0/scrapy.php",
+        "type": "filepath"
+    },
+    "675": {
+        "file_id": 153,
+        "content": "Function curl_post_302 performs a GET request to the provided URL with custom options, ignoring SSL verification and following redirects. The function returns the final URL visited after redirection. In this case, it fetches the Baidu link and displays the URL of the final page visited.",
+        "type": "summary"
+    },
+    "676": {
+        "file_id": 153,
+        "content": "<?php\nfunction  curl_post_302($url) {\n$ch = curl_init();\ncurl_setopt($ch, CURLOPT_URL, $url);\ncurl_setopt($ch, CURLOPT_VERBOSE, true);\ncurl_setopt($ch, CURLOPT_HEADER, true);\ncurl_setopt($ch, CURLOPT_NOBODY, true);\ncurl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\ncurl_setopt($ch, CURLOPT_TIMEOUT, 20);\ncurl_setopt($ch, CURLOPT_AUTOREFERER, true);\ncurl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);\ncurl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);\ncurl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);\n$ret = curl_exec($ch);\n$info = curl_getinfo($ch);\n$retURL = $info['url'];\ncurl_close($ch);\nreturn $retURL;\n          }\n$fuckingfucker=\"http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\";\n$super_redirect=curl_post_302($fuckingfucker);\necho $super_redirect;\n// you fuck!\n// you are already there!\n// fuck just give me the fucking link!\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/scrapy.php:1-27"
+    },
+    "677": {
+        "file_id": 153,
+        "content": "Function curl_post_302 performs a GET request to the provided URL with custom options, ignoring SSL verification and following redirects. The function returns the final URL visited after redirection. In this case, it fetches the Baidu link and displays the URL of the final page visited.",
+        "type": "comment"
+    },
+    "678": {
+        "file_id": 154,
+        "content": "/multilingual/hotfix-v0/shell-args.lua",
+        "type": "filepath"
+    },
+    "679": {
+        "file_id": 154,
+        "content": "The code defines a function to execute multiple commands using PHP and stores their results. It creates a table for command handling, loops through each URL in the provided list, executes a PHP script with each URL as an argument, and saves the output of these commands. Finally, it prints the saved outputs. The code also contains some profanity-laced comments, indicating frustration or humor from the developer.",
+        "type": "summary"
+    },
+    "680": {
+        "file_id": 154,
+        "content": "--command =\"node duper-get.js java\"\n-- scriptTest.lua (in your scripts directory)\n--[[local M = {}\nlocal function testFunction()\n      print(\"Test function called\")\nend\nM.testFunction = testFunction\nreturn M\n]]\n-- hey you should call me instead of requiring me!\nthe_fucking_url=arg\n--{[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]],[[http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3]]}\n--this is the mother fucking table.\n--fucking shit.\n--easy you piece of shit.\nhandle={}\nfor key,value in ipairs(the_fucking_url) do\ncommand =\"php dopeshit.php \"..value\n--psudocode above.\nhandle[#handle+1]= io.popen(command)\n--is it threaded?\nend\nfor key,value in pairs(handle) do\nresult = handle[key]:read(\"*a\")\nhandle[key]:close()\n-- use local instead of using some functions.\nprint (result)\nend\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-args.lua:1-35"
+    },
+    "681": {
+        "file_id": 154,
+        "content": "The code defines a function to execute multiple commands using PHP and stores their results. It creates a table for command handling, loops through each URL in the provided list, executes a PHP script with each URL as an argument, and saves the output of these commands. Finally, it prints the saved outputs. The code also contains some profanity-laced comments, indicating frustration or humor from the developer.",
+        "type": "comment"
+    },
+    "682": {
+        "file_id": 155,
+        "content": "/multilingual/hotfix-v0/shell-execute-return.lua",
+        "type": "filepath"
+    },
+    "683": {
+        "file_id": 155,
+        "content": "This Lua script executes a shell command, displays its output without print(), and purpose is unclear. Code snippet adds return statement for trailing empty line in asynchronous context.",
+        "type": "summary"
+    },
+    "684": {
+        "file_id": 155,
+        "content": "command =\"lua shell-args.lua \"..\"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\"..\" http://www.baidu.com/link?url=WC6cs2jD3KDdYKkp6fqW-hL0TR6n27MYJLf5N1ue2T55tzR8uIF1ujfEz0KeaTAXW5mIufwgfQahRp6Og3EWKK http://www.baidu.com/link?url=HDHXBxioX55wod3Knq0FvCn7EnlKuVnOgTsElGLTH5SloR-UNIM_v4ikZxaqGMV8oT-s28y4I2lCAQDpwJcpRfrxWsZV6jblY6_r9IpiiJ3 http://www.baidu.com/link?url=fJKL_Eo5hdGojfBzE-Nd_e-IUuyGKhLNIlu6QbRHA4TA_gzG3Gn4cXQUCT4AfYiE_eq8zDPHa6pPLpmzXi3Uk_ http://www.baidu.com/link?url=x92AVuOFH-OYeN8mTqn-F3tjkDHdi5OP1D7n0eirOCZPn7l9ZvCeEIUv7v1p5UUScuCxsCBI3UwRrV4c4UXSia http://www.baidu.com/link?url=fJKL_Eo5hdGojfBzE-Nd_e-IUuyGKhLNIlu6QbRHA4TA_gzG3Gn4cXQUCT4AfYiE_eq8zDPHa6pPLpmzXi3Uk_ http://www.baidu.com/link?url=92nL-4ZW7UkxmgFl5n9M9MxvUjnqqFCWa-zh5HYYF9A9kIc-vJG9yvVNuz-ZPb0f http://www.baidu.com/link?url=VJsiIGgwjHxJlGxr95H_",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-execute-return.lua:1-1"
+    },
+    "685": {
+        "file_id": 155,
+        "content": "This code is constructing a command string by concatenating URLs encoded as baidu.com links. The purpose or execution context of this command remains unclear from the provided information.",
+        "type": "comment"
+    },
+    "686": {
+        "file_id": 155,
+        "content": "igWXK4-LrJsLkegFSsBs6vrF5HiZidO4DyBo5CCsXcd-DTtcezeQUnXGv0QDjQVA-K http://www.baidu.com/link?url=MZjIn3dePQfU4d_8T_Wt6e8N74vwtgdr_HbjBa7ltt-_xA-e68yPuVIk3x4iHR_K-xdYhAiZM6GoYkd5Or6xPq http://www.baidu.com/link?url=hf1TZuGR0XM80cYf5JR0alxK7qjkoNfiH0JUzA54R35IrJK-E0X2Dq9ReF7eybOhqvvzqcmPGr6-EHCF7I2Bb_ http://www.baidu.com/link?url=Hfx-FhfdpjzGHgKNLj0cwNUklbA4YxnB4saeepCciOVTW5X7TyLB-_4943hmqseqpt-qde_a3THwpTj4if4-l_ http://www.baidu.com/link?url=Th4jgRw6D5uvWgNQunM1t1xSvF8K-Pl0mjKl89IlGedkOqt4rmtFf71fnWh3QbRm http://www.baidu.com/link?url=nxtmWDgtcscw2BoAP-mG8jvnIauNroAZQmXwxwssHuiDV6e0EzxDfXsgG4_JOl0- http://www.baidu.com/link?url=J8zAN0uY-bKlasgSCR4-d1MwHbbjfcSDEEcCW6zvxINKYBS60pxTKEF_htmQv1ld\"\nhandle = io.popen(command)\n-- do we really have to read outcome from this thread?\n-- will it be empty?\nresult = handle:read(\"*a\")\nhandle:close()\n--result=result..'\\d'\n--wtf is going on?\n-- use local instead of using some functions.\n-- print (result)\nio.write(result)\n-- do not use the fucking print()\n-- use io.write() instead.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-execute-return.lua:1-13"
+    },
+    "687": {
+        "file_id": 155,
+        "content": "This Lua script executes a command in the shell and reads its output, storing it in the \"result\" variable. It then prints the result without using print() but instead using io.write(). The code also includes some comments about potential improvements and clarifications.",
+        "type": "comment"
+    },
+    "688": {
+        "file_id": 155,
+        "content": "-- this will add another return causing a trailing empty line\n-- appear as a whole while the other return asychronizedly.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-execute-return.lua:14-15"
+    },
+    "689": {
+        "file_id": 155,
+        "content": "This code snippet adds an additional return statement to create a trailing empty line, which will appear as a whole while another return statement executes asynchronously.",
+        "type": "comment"
+    },
+    "690": {
+        "file_id": 156,
+        "content": "/multilingual/hotfix-v0/shell-fuck.lua",
+        "type": "filepath"
+    },
+    "691": {
+        "file_id": 156,
+        "content": "The code retrieves data from a URL, executes PHP code with the obtained URL, and prints the output. It uses `io.popen` to execute external commands and reads all available data with `handle:read(\"*a\")`. The code may have issues due to its use of hardcoded strings and lacks proper error handling or localization.",
+        "type": "summary"
+    },
+    "692": {
+        "file_id": 156,
+        "content": "--command =\"node duper-get.js java\"\nthe_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]\n--fucking shit.\ncommand =\"php dopeshit.php \"..the_fucking_url\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nprint (result)\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-fuck.lua:1-11"
+    },
+    "693": {
+        "file_id": 156,
+        "content": "The code retrieves data from a URL, executes PHP code with the obtained URL, and prints the output. It uses `io.popen` to execute external commands and reads all available data with `handle:read(\"*a\")`. The code may have issues due to its use of hardcoded strings and lacks proper error handling or localization.",
+        "type": "comment"
+    },
+    "694": {
+        "file_id": 157,
+        "content": "/multilingual/hotfix-v0/shell-shit.lua",
+        "type": "filepath"
+    },
+    "695": {
+        "file_id": 157,
+        "content": "This code retrieves URLs from a table and uses PHP to execute commands on them. It then reads the results, prints them, and closes the handles automatically. The code seems to be written with some frustration or expletives due to its complex nature. The comments indicate the code is handling URLs in a specific manner, using PHP and IO operations.",
+        "type": "summary"
+    },
+    "696": {
+        "file_id": 157,
+        "content": "--command =\"node duper-get.js java\"\nthe_fucking_url={[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]],[[http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3]]}\n--this is the mother fucking table.\n--fucking shit.\n--easy you piece of shit.\nhandle={}\nfor key,value in pairs(the_fucking_url) do\ncommand =\"php dopeshit.php \"..value\n--psudocode above.\nhandle[#handle+1]= io.popen(command)\n--is it threaded?\nend\nfor key,value in pairs(handle) do\nresult = handle[key]:read(\"*a\")\nhandle[key]:close()\n-- use local instead of using some functions.\nprint (result)\nend\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-shit.lua:1-21"
+    },
+    "697": {
+        "file_id": 157,
+        "content": "This code retrieves URLs from a table and uses PHP to execute commands on them. It then reads the results, prints them, and closes the handles automatically. The code seems to be written with some frustration or expletives due to its complex nature. The comments indicate the code is handling URLs in a specific manner, using PHP and IO operations.",
+        "type": "comment"
+    },
+    "698": {
+        "file_id": 158,
+        "content": "/multilingual/hotfix-v0/split-return.lua",
+        "type": "filepath"
+    },
+    "699": {
+        "file_id": 158,
+        "content": "This code defines a function called Split that splits a string by a specified delimiter and, optionally, limits the number of resulting strings. The code then demonstrates the usage of this function on different inputs and prints the results using a custom function, shitshow. The code also includes some humorous variable names for added humor and personality.",
+        "type": "summary"
+    }
+}

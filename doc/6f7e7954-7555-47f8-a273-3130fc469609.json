@@ -1,0 +1,10 @@
+{
+    "summary": "This script uses Expect to automate interacting with a Python interpreter, executes 2+2 and 4+4, then exits.",
+    "details": [
+        {
+            "comment": "This script uses Expect to automate interacting with a Python interpreter, executes 2+2 and 4+4, then exits.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/shitOut.exp\":0-5",
+            "content": "#!/data/data/com.termux/files/usr/bin/expect\nspawn python\nexpect -re \".*\" {send -- \"2+2\\r\"}\nexpect -re \".*\" {send -- \"4+4\\r\"}\nexpect -re \".*\" {send -- \"exit()\\r\"}\nexpect eof"
+        }
+    ]
+}

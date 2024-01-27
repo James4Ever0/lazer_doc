@@ -1,0 +1,530 @@
+{
+    "3000": {
+        "file_id": 509,
+        "content": "                soul=bitchEternity[0]\n                print([soul,soul-1+len(bitchEternity)])\n                print(\"-- bitch sure die --\")\n            else:\n                print(\"SAME DISTANCE BUT NOT EQUAL TO IDENTITY\\nSAME DISTANCE BUT NOT EQUAL TO IDENTITY\")\n            myCmd0.close()\n            print(\"--spilter--\")\n#            counter+=1\n            for mv in myCmd:\n                print(mv)\n            print(\"--spliter--\")\n        try:\n            print(\"--mississippi--\")\n            print(bitchSureDie)\n#            print(dickHead)\n            print(\"--mississippi--\")\n            if not quickFuck:\n                print(\"ATTENTION DUPLICATES FOUND\\nATTENTION DUPLICATES FOUND\")\n#                print(list(set([[fx[1],crystal.count(fx)] for fx in crystal if crystal.count(fx)>1])))\n                nope=[pos[1] for pos in crystal]\n                nah=list(set(nope))\n                print([[happyFuck,nope.count(happyFuck)] for happyFuck in nah if nope.count(happyFuck)>1])\n                # Randall forever!",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:146-168"
+    },
+    "3001": {
+        "file_id": 509,
+        "content": "This code appears to be searching for duplicates within a list and handling various cases. It prints information related to the duplicate elements, distance from identity, and mississippi. The code also closes a command object (myCmd), increments a counter, and splits the list into multiple sections using a try/except block for potential errors when printing bitchSureDie. Overall, this seems to be a complex debugging or data validation process.",
+        "type": "comment"
+    },
+    "3002": {
+        "file_id": 509,
+        "content": "                Randall=[index for index, pos in enumerate(nope) if nope.count(pos)>1]\n                print([[nope[index-1],pos,nope[index+1]] for index, pos in enumerate(nope) if index in Randall])\n                print(\"ATTENTION DUPLICATES FOUND\\nATTENTION DUPLICATES FOUND\")\n            if takeThisBooth(list(reversed(sorted([kd[1] for kd in crystal]))))<5000 and takeThisBooth(sorted([kv[1] for kv in crystal]))<underConstruction and len(bitchSureDie)>1 and 61440 not in [svn[1] for svn in crystal]:\n                instinct=utilize(similar(nuke(bitchSureDie),len(bitchSureDie)*2),quickFuck,list(filter((lambda x:x[1]!=962),crystal)))\n                if instinct!=[[],[]]:\n                    akgAnother=semen(instinct,crystal)\n                    print(akgAnother)\n                    if honeyPot==0 and akgAnother!=[[],[]]:\n                        jerkJack0, jerkJack1 = silkRoad(akgAnother[0]),silkRoad(akgAnother[1])\n                        for landMark in range(len(jerkJack0)):\n                            try:",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:169-180"
+    },
+    "3003": {
+        "file_id": 509,
+        "content": "The code is searching for duplicate elements in a list and then printing an attention message. It also checks some conditions to decide whether to proceed further or not, and if so, it uses functions like `utilize`, `silkRoad`, etc., on the result.",
+        "type": "comment"
+    },
+    "3004": {
+        "file_id": 509,
+        "content": "                                toyProject(0,[jerkJack0[landMark],fuckingSavangers,jerkJack1[landMark],fuckingSavangers,\"toLower\"])\n                                print(\"CASE INDEXED\")\n                            except:\n                                print(\"DUPLICATE CODE 0\")\n                    print(\"-- CALL OF WILD --\\n-- CALL OF WILD --\")\n                else:\n                    pass\n            else:\n                print(\"-- TOO YOUNG TO GET FUCKED --\\n-- TOO YOUNG TO GET FUCKED --\") \n        except:\n            print(\"UNFUCKABLE\\nUNFUCKABLE\")\n    else:\n        pass\n    return crystal\n#print(neuron(shade0,9,1))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:181-196"
+    },
+    "3005": {
+        "file_id": 509,
+        "content": "This code appears to be part of a larger program, possibly related to language processing or data manipulation. The code handles cases where there may be duplicate or invalid data and prints specific error messages for each scenario. It also includes a section that checks the age of the user and prints relevant phrases depending on their eligibility. The exact purpose of this code remains unclear without the context from other parts of the program.",
+        "type": "comment"
+    },
+    "3006": {
+        "file_id": 510,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shallowCopy.py",
+        "type": "filepath"
+    },
+    "3007": {
+        "file_id": 510,
+        "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
+        "type": "summary"
+    },
+    "3008": {
+        "file_id": 510,
+        "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        fuck.write('#!/bin/bash\\n')\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+' &\\n')",
+        "type": "code",
+        "location": "/metalearning/methodBank/shallowCopy.py:1-5"
+    },
+    "3009": {
+        "file_id": 510,
+        "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
+        "type": "comment"
+    },
+    "3010": {
+        "file_id": 511,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shallowCopy.sh",
+        "type": "filepath"
+    },
+    "3011": {
+        "file_id": 511,
+        "content": "This script copies four Python files into a directory within the Termux app's home folder. The files being copied are constructor.py, term0.py, getFromPickle.py, and newTestR.py. They are being copied to the holiday subdirectory within the info_gather-v0/wizard directory. This could be related to a software development workflow where files are being moved to specific directories for organization or execution purposes.",
+        "type": "summary"
+    },
+    "3012": {
+        "file_id": 511,
+        "content": "#!/bin/bash\ncp constructor.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &\ncp term0.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &\ncp getFromPickle.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &\ncp newTestR.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holiday &",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shallowCopy.sh:1-5"
+    },
+    "3013": {
+        "file_id": 511,
+        "content": "This script copies four Python files into a directory within the Termux app's home folder. The files being copied are constructor.py, term0.py, getFromPickle.py, and newTestR.py. They are being copied to the holiday subdirectory within the info_gather-v0/wizard directory. This could be related to a software development workflow where files are being moved to specific directories for organization or execution purposes.",
+        "type": "comment"
+    },
+    "3014": {
+        "file_id": 512,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/simpleExtract.sh",
+        "type": "filepath"
+    },
+    "3015": {
+        "file_id": 512,
+        "content": "This script takes the contents of makeDatabase.py and makeGroupingDatabase.py, searches for \"CREATE TABLE\" statements using grep command, extracts table names after \"TABLE\", and saves them in simpleDeduction.txt.",
+        "type": "summary"
+    },
+    "3016": {
+        "file_id": 512,
+        "content": "#!/bin/bash\ncat makeDatabase.py makeGroupingDatabase.py | grep -E -o \"CREATE TABLE [^ ]+\" | grep -E -o \"[^ ]+$\" > simpleDeduction.txt",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/simpleExtract.sh:1-2"
+    },
+    "3017": {
+        "file_id": 512,
+        "content": "This script takes the contents of makeDatabase.py and makeGroupingDatabase.py, searches for \"CREATE TABLE\" statements using grep command, extracts table names after \"TABLE\", and saves them in simpleDeduction.txt.",
+        "type": "comment"
+    },
+    "3018": {
+        "file_id": 513,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/simpleMulti.py",
+        "type": "filepath"
+    },
+    "3019": {
+        "file_id": 513,
+        "content": "The code imports the 'snapshot' function from 'fixer' and then calls it, taking four arguments: \"derive_refixed.py\", \"derive_fixed.py\", \"s.read()\", and \"s.read(),re.MULTILINE\". The purpose seems to be replacing or fixing some content in two files (derive_refixed.py and derive_fixed.py) using the 'snapshot' function with certain readings from 's'.",
+        "type": "summary"
+    },
+    "3020": {
+        "file_id": 513,
+        "content": "from fixer import snapshot\nsnapshot(\"derive_refixed.py\",\"derive_fixed.py\",\"s.read()\",\"s.read(),re.MULTILINE\",4)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/simpleMulti.py:1-2"
+    },
+    "3021": {
+        "file_id": 513,
+        "content": "The code imports the 'snapshot' function from 'fixer' and then calls it, taking four arguments: \"derive_refixed.py\", \"derive_fixed.py\", \"s.read()\", and \"s.read(),re.MULTILINE\". The purpose seems to be replacing or fixing some content in two files (derive_refixed.py and derive_fixed.py) using the 'snapshot' function with certain readings from 's'.",
+        "type": "comment"
+    },
+    "3022": {
+        "file_id": 514,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/sonyWalkman.py",
+        "type": "filepath"
+    },
+    "3023": {
+        "file_id": 514,
+        "content": "The code defines a function `panasonic` that filters an input list based on another list's range, and returns the filtered list. It then calls this function within the `aka` function, which also filters two input lists and returns them as separate lists. The code includes sample test inputs to demonstrate the usage of the functions.",
+        "type": "summary"
+    },
+    "3024": {
+        "file_id": 514,
+        "content": "def panasonic(a,b):\n#    for c in b:\n    if (len(b)==0 or len(a)==0):\n        return a\n    else:\n#        d=[]\n#        for c in a:\n#        print(b)\n#        e=list(filter((lambda x:(x>=b[0][0] and x<= b[0][1])),a))\n#        c+=e\n        return panasonic(list(filter((lambda x:(x<b[0][0] or x>b[0][1])),a)),b[1:])\ndef aka(m,s,e):\n    geek=list(filter((lambda v: v not in e),panasonic(m,s)))\n    return [list(filter((lambda y: y not in geek),m)),geek]\n\"\"\"\ntest=[1,2,4,5,6,7]\nbest=[[1,2],[6,9]]\nexception=[4]\nprint(test)\nprint(best)\nprint(aka(test,best,exception))\"\"\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/sonyWalkman.py:1-22"
+    },
+    "3025": {
+        "file_id": 514,
+        "content": "The code defines a function `panasonic` that filters an input list based on another list's range, and returns the filtered list. It then calls this function within the `aka` function, which also filters two input lists and returns them as separate lists. The code includes sample test inputs to demonstrate the usage of the functions.",
+        "type": "comment"
+    },
+    "3026": {
+        "file_id": 515,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/spliter.py",
+        "type": "filepath"
+    },
+    "3027": {
+        "file_id": 515,
+        "content": "The code defines a function \"skimmer\" that identifies consecutive occurrences of a specific element in a given list, and another function \"notorious\" which takes a list, finds unique elements, and applies the skimmer function to those elements. It then prints the length of the input list and the output of the notorious function. The code appears to be performing data manipulation on lists with unique elements.",
+        "type": "summary"
+    },
+    "3028": {
+        "file_id": 515,
+        "content": "text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\nprint(len(text))\nprint(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/spliter.py:1-30"
+    },
+    "3029": {
+        "file_id": 515,
+        "content": "The code defines a function \"skimmer\" that identifies consecutive occurrences of a specific element in a given list, and another function \"notorious\" which takes a list, finds unique elements, and applies the skimmer function to those elements. It then prints the length of the input list and the output of the notorious function. The code appears to be performing data manipulation on lists with unique elements.",
+        "type": "comment"
+    },
+    "3030": {
+        "file_id": 516,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/MyFirstModule.hs",
+        "type": "filepath"
+    },
+    "3031": {
+        "file_id": 516,
+        "content": "This code defines a Haskell module, \"MyFirstModule\", with a constant expression and a function. The constant expression contains the string \"hello world!\" while the function takes an input string and returns a greeting by concatenating it with \"Hello\" and \"!\".",
+        "type": "summary"
+    },
+    "3032": {
+        "file_id": 516,
+        "content": "module MyFirstModule where\nmyFirstExpression::String\nmyFirstExpression=\"hello world!\"\nmyFirstFunction::String->String\nmyFirstFunction input = \"Hello \"++input++\"!\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/MyFirstModule.hs:1-5"
+    },
+    "3033": {
+        "file_id": 516,
+        "content": "This code defines a Haskell module, \"MyFirstModule\", with a constant expression and a function. The constant expression contains the string \"hello world!\" while the function takes an input string and returns a greeting by concatenating it with \"Hello\" and \"!\".",
+        "type": "comment"
+    },
+    "3034": {
+        "file_id": 517,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/README",
+        "type": "filepath"
+    },
+    "3035": {
+        "file_id": 517,
+        "content": "The author is expressing their gratitude for receiving a high-quality keyboard, despite initial doubts. They find it comfortable to use and appreciate its features, such as backlight and complete keyset. However, they face difficulty in coding Haskell due to the lack of a dedicated lambda key, so they suggest consulting the Haskell community online for potential solutions.",
+        "type": "summary"
+    },
+    "3036": {
+        "file_id": 517,
+        "content": "You guys really know your shit.\nThanks for this fucking keyboard. I ain't know where does it come from. Fuck the rii corp.\nIt sounds like shit you know the feeling? It is like holding a nintendo switch doing vim jobs. Feeling like shit but this is fucking awesome! Man this is the thing I want for a fucking long time! You simply can't imagine how fucking good it feels like to code using this fucking keyboard!\nWhat's more, this shit is fully featured. It includes every shitty key onto one single shit would you fucking believe that? Fuck me please? It even has the fucking backlight fuck me just do it now! Nothing is as good as this little piece of shit, nothing!\nBut it will still be problematic if I wanna put a lambda when coding haskell (fuck me even the fucking HHKB does not have a separate key for the fucking lambda!), and thus how do we make it happen? Just consult the haskell community online. It will do the trick.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/README:1-5"
+    },
+    "3037": {
+        "file_id": 517,
+        "content": "The author is expressing their gratitude for receiving a high-quality keyboard, despite initial doubts. They find it comfortable to use and appreciate its features, such as backlight and complete keyset. However, they face difficulty in coding Haskell due to the lack of a dedicated lambda key, so they suggest consulting the Haskell community online for potential solutions.",
+        "type": "comment"
+    },
+    "3038": {
+        "file_id": 518,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/copyAndPaste.hs",
+        "type": "filepath"
+    },
+    "3039": {
+        "file_id": 518,
+        "content": "This Haskell code imports a qualified module, prompts the user to enter their name, and then calls a function from the imported module with the entered name. It also defines and prints the result of a simple multiplication operation.",
+        "type": "summary"
+    },
+    "3040": {
+        "file_id": 518,
+        "content": "-- comment is it so?\n-- with qualified keyword the code can get convoluted like java.\nimport qualified MyFirstModule\nmain :: IO ()\nmain = do\n  putStrLn \"Enter Your Name!\"\n  name <- getLine\n  let message = MyFirstModule.myFirstFunction name\n  putStrLn message\n  let arghFuck=(\\x -> x*2) 5\n  print arghFuck",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/copyAndPaste.hs:1-11"
+    },
+    "3041": {
+        "file_id": 518,
+        "content": "This Haskell code imports a qualified module, prompts the user to enter their name, and then calls a function from the imported module with the entered name. It also defines and prints the result of a simple multiplication operation.",
+        "type": "comment"
+    },
+    "3042": {
+        "file_id": 519,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/firstScript.hs",
+        "type": "filepath"
+    },
+    "3043": {
+        "file_id": 519,
+        "content": "The code defines the \"main\" function, which is the entry point of a Haskell program. It prints the strings \"hello\" and \"world\" to the console using the \"putStrLn\" function. This simple script demonstrates a basic Haskell program that outputs two greetings.",
+        "type": "summary"
+    },
+    "3044": {
+        "file_id": 519,
+        "content": "main :: IO ()\nmain = do\n  putStrLn \"hello\"\n  putStrLn \"world\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/firstScript.hs:1-4"
+    },
+    "3045": {
+        "file_id": 519,
+        "content": "The code defines the \"main\" function, which is the entry point of a Haskell program. It prints the strings \"hello\" and \"world\" to the console using the \"putStrLn\" function. This simple script demonstrates a basic Haskell program that outputs two greetings.",
+        "type": "comment"
+    },
+    "3046": {
+        "file_id": 520,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/fuckMe.hs",
+        "type": "filepath"
+    },
+    "3047": {
+        "file_id": 520,
+        "content": "The code declares a \"greeting\" variable with the value \"Goodbye World!\". It then defines an IO action \"main\", which prints the greeting using putStrLn function.",
+        "type": "summary"
+    },
+    "3048": {
+        "file_id": 520,
+        "content": "greeting :: String\ngreeting = \"Goodbye \" ++ \"World!\"\n-- asshole :: IO ()\nmain = do\n  putStrLn greeting",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/fuckMe.hs:1-6"
+    },
+    "3049": {
+        "file_id": 520,
+        "content": "The code declares a \"greeting\" variable with the value \"Goodbye World!\". It then defines an IO action \"main\", which prints the greeting using putStrLn function.",
+        "type": "comment"
+    },
+    "3050": {
+        "file_id": 521,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/mainFunction.hs",
+        "type": "filepath"
+    },
+    "3051": {
+        "file_id": 521,
+        "content": "This Haskell code defines a 'mainFunction.hs' file, which starts with the main function. It prints \"Hello world\" using putStrLn and calls main0 twice before printing the result of fact 6. The short comments indicate the presence of additional comments, mention the importance of philosophers, and define the fact function for calculating factorials using recursion.",
+        "type": "summary"
+    },
+    "3052": {
+        "file_id": 521,
+        "content": "main =do\n putStrLn \"Hello world\"\n main0\n main0\n print ( fact 6 )\n{-short comment is it true?\n -just some short comments here\nsome short comments here\nsome short comments here\nsome short comments here\n - -}\n-- comment line here\nmain0 = print \"Hello world again!\"\n-- philosopher's favourite.\n-- fact :: Int -> Int\n--  without the definition.\nfact :: Integral a  => a->a\nfact n|n==0 =1\n      |n/=0 =n*fact(n-1)\n--fact x = x * fact ( x-1)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/mainFunction.hs:1-20"
+    },
+    "3053": {
+        "file_id": 521,
+        "content": "This Haskell code defines a 'mainFunction.hs' file, which starts with the main function. It prints \"Hello world\" using putStrLn and calls main0 twice before printing the result of fact 6. The short comments indicate the presence of additional comments, mention the importance of philosophers, and define the fact function for calculating factorials using recursion.",
+        "type": "comment"
+    },
+    "3054": {
+        "file_id": 522,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/newStone.hs",
+        "type": "filepath"
+    },
+    "3055": {
+        "file_id": 522,
+        "content": "This code tries to evaluate a division by zero, catches the exception if it occurs, and prints either the result or the caught exception.",
+        "type": "summary"
+    },
+    "3056": {
+        "file_id": 522,
+        "content": "import Control.Exception\nmain = do\n russia <- try (evaluate (div 5 0)) :: IO ( Either SomeException Int )\n case russia of\n  Left ex -> putStrLn $ \" Caught E!\"++ show ex\n  Right  v  ->   putStrLn $ \" Result: \" ++ show v",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/newStone.hs:1-6"
+    },
+    "3057": {
+        "file_id": 522,
+        "content": "This code tries to evaluate a division by zero, catches the exception if it occurs, and prints either the result or the caught exception.",
+        "type": "comment"
+    },
+    "3058": {
+        "file_id": 523,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/readAFile.hs",
+        "type": "filepath"
+    },
+    "3059": {
+        "file_id": 523,
+        "content": "The code reads the content of a file named \"README\" and prints it to the console.",
+        "type": "summary"
+    },
+    "3060": {
+        "file_id": 523,
+        "content": "main=do\n let file = \"README\"\n contents <- readFile file\n-- print contents\n print contents",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/readAFile.hs:1-5"
+    },
+    "3061": {
+        "file_id": 523,
+        "content": "The code reads the content of a file named \"README\" and prints it to the console.",
+        "type": "comment"
+    },
+    "3062": {
+        "file_id": 524,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/README",
+        "type": "filepath"
+    },
+    "3063": {
+        "file_id": 524,
+        "content": "Code attempts to compile Haskell code and run it on Android, but fails due to incompatibilities. Sends pickle files to Ubuntu instead.",
+        "type": "summary"
+    },
+    "3064": {
+        "file_id": 524,
+        "content": "We can compile the shitty haskell code and check if they could be run on Android.\nthis shit cannot be run under termux.\nthus you shall ship pickle files to ubuntu.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/README:1-3"
+    },
+    "3065": {
+        "file_id": 524,
+        "content": "Code attempts to compile Haskell code and run it on Android, but fails due to incompatibilities. Sends pickle files to Ubuntu instead.",
+        "type": "comment"
+    },
+    "3066": {
+        "file_id": 525,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fixAnotherMeta.py",
+        "type": "filepath"
+    },
+    "3067": {
+        "file_id": 525,
+        "content": "The code reads a log file, extracts specific information using regular expressions, filters out empty lines and handles local file not found errors. It then calls the snapshot function with relevant parameters. However, it seems to have issues with fake targets and unclear purposes of certain variables without further context.",
+        "type": "summary"
+    },
+    "3068": {
+        "file_id": 525,
+        "content": "import re\n#from getCorrectList import letIt\n#from diffTool import diff\nfrom fixerv0 import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"indicator.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[:3]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=re.findall(r'^[^:]+',fuckMe[0])[0]\n    print(nameOfSubject)\n    lineOfTrouble=re.findall(r\"^\\d*\",fuckMe[0].replace(nameOfSubject+\":\",\"\"))[0]\n    print(lineOfTrouble)\n    errorCode=re.findall(r\"[^ ]+$\",fuckMe[1])[0][1:-1]\n    print(errorCode)\n#    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n#    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n#    print (extractName)\n#    print (extractNumber)\n# death to all lawyers\n    extractMissingName=re.findall(r\"Perhaps you meant [^ ]+\",fuckMe[2])[0][(7+4+6+1):]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fixAnotherMeta.py:1-26"
+    },
+    "3069": {
+        "file_id": 525,
+        "content": "The code reads a log file and extracts specific information: the subject name, line number of trouble, and error code. It filters out empty lines and uses regular expressions to find the relevant data. The author expresses frustration with lawyers and mentions difflib as an alternative tool, but only solves local file not found errors.",
+        "type": "comment"
+    },
+    "3070": {
+        "file_id": 525,
+        "content": "#    print(extractMissingName)\n# conclution is simple.\n# it is nothing.\n    print (extractMissingName)\n    snapshot(nameOfSubject[:-3]+\"_fixed.hs\",nameOfSubject,errorCode,extractMissingName,int(lineOfTrouble))\n# you are hitting a fake target.\n#    print(processFuck)\n#    print(process)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fixAnotherMeta.py:27-34"
+    },
+    "3071": {
+        "file_id": 525,
+        "content": "This code appears to be printing the value of extractMissingName and then calling a function named snapshot, passing in various parameters including the nameOfSubject, errorCode, extractMissingName, and lineOfTrouble. It also seems to mention that the target is fake and possibly mentions other variables like processFuck and process, but their purpose is unclear without further context.",
+        "type": "comment"
+    },
+    "3072": {
+        "file_id": 526,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fixerv0.py",
+        "type": "filepath"
+    },
+    "3073": {
+        "file_id": 526,
+        "content": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
+        "type": "summary"
+    },
+    "3074": {
+        "file_id": 526,
+        "content": "def snapshot(a,b,c,d,e):\n    with open(a,\"w+\") as ap:\n        with open(b,\"r\") as ad:\n            shit=1\n            for abo in ad.readlines():\n                print(shit)\n                print(abo)\n                if ( (c in abo) or shit == e):\n                    #shit+=1\n                    abo = abo.replace(c,d)\n#                print(abo)\n                    ap.write(abo)\n                else:\n                    ap.write(abo)\n                shit+=1",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixerv0.py:1-15"
+    },
+    "3075": {
+        "file_id": 526,
+        "content": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
+        "type": "comment"
+    },
+    "3076": {
+        "file_id": 527,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe.hs",
+        "type": "filepath"
+    },
+    "3077": {
+        "file_id": 527,
+        "content": "This code imports the System.Enviorment module and defines two functions: greeting and asshole. The greeting function returns a list containing \"shit\" and \"happens\". The main function prints out the command line arguments using putStrLn getArgs, which is called by running the Haskell program with arguments specified from the command line.",
+        "type": "summary"
+    },
+    "3078": {
+        "file_id": 527,
+        "content": "import System.Enviorment\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\nmain = do\n  putStrLn getArgs",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe.hs:1-7"
+    },
+    "3079": {
+        "file_id": 527,
+        "content": "This code imports the System.Enviorment module and defines two functions: greeting and asshole. The greeting function returns a list containing \"shit\" and \"happens\". The main function prints out the command line arguments using putStrLn getArgs, which is called by running the Haskell program with arguments specified from the command line.",
+        "type": "comment"
+    },
+    "3080": {
+        "file_id": 528,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed.hs",
+        "type": "filepath"
+    },
+    "3081": {
+        "file_id": 528,
+        "content": "This Haskell code imports the System.Environment module and defines two functions, t and t0. The function t checks if a list consists only of digits. Function t0 takes a list, transforms it into a tuple by applying t to each element, and returns the transformed list. In the main function, it gets command-line arguments, applies t0 to them, and prints both the original list and the transformed list.",
+        "type": "summary"
+    },
+    "3082": {
+        "file_id": 528,
+        "content": "import System.Enviroment\n-- i am not afraid of forgetting.\n-- i never forget. i never forgive.\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\n-- decide whether it misses anything or not.\n-- they must be separated, if possible change it into a tuple\n-- seriously it doesn't mean shit\n-- nothing is too crazy. you are just not aware of it.\nt lst = (length (filter (\\x -> x>='0' && x<= '9') lst)) == length lst\nt0 lst = [(x,t x)|x <-lst]\nmain = do\n  a <- getArgs\n  b <- t0 a\n  print a\n  print b",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed.hs:1-18"
+    },
+    "3083": {
+        "file_id": 528,
+        "content": "This Haskell code imports the System.Environment module and defines two functions, t and t0. The function t checks if a list consists only of digits. Function t0 takes a list, transforms it into a tuple by applying t to each element, and returns the transformed list. In the main function, it gets command-line arguments, applies t0 to them, and prints both the original list and the transformed list.",
+        "type": "comment"
+    },
+    "3084": {
+        "file_id": 529,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed_fixed.hs",
+        "type": "filepath"
+    },
+    "3085": {
+        "file_id": 529,
+        "content": "The code imports the \"System.Environment\" library and defines a function \"t\" that checks if a given list consists only of numbers. It also has a \"greeting\" variable with the value [\"shit\",\"happens\"], an undefined \"asshole\" function, and a \"main\" function that takes command-line arguments, prints them, and applies the \"t0\" function to the argument list before printing the result.",
+        "type": "summary"
+    },
+    "3086": {
+        "file_id": 529,
+        "content": "import System.Environment\n-- i am not afraid of forgetting.\n-- i never forget. i never forgive.\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\n-- decide whether it misses anything or not.\n-- they must be separated, if possible change it into a tuple\n-- seriously it doesn't mean shit\n-- nothing is too crazy. you are just not aware of it.\n-- t :: [Char] -> Bool\nt lst = (length (filter (\\x -> x>='0' && x<= '9') lst)) == length lst\nt0 lst = [(x,t x)|x <-lst]\nmain = do\n  a <- getArgs\n  print a\n  print $ t0 a\n--  :t a",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed_fixed.hs:1-19"
+    },
+    "3087": {
+        "file_id": 529,
+        "content": "The code imports the \"System.Environment\" library and defines a function \"t\" that checks if a given list consists only of numbers. It also has a \"greeting\" variable with the value [\"shit\",\"happens\"], an undefined \"asshole\" function, and a \"main\" function that takes command-line arguments, prints them, and applies the \"t0\" function to the argument list before printing the result.",
+        "type": "comment"
+    },
+    "3088": {
+        "file_id": 530,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/islandMeta.py",
+        "type": "filepath"
+    },
+    "3089": {
+        "file_id": 530,
+        "content": "This code reads a log file, extracts error information, and filters out empty lines using regular expressions. It also fixes missing names in Haskell files, handles errors, and includes comments expressing frustration with lawyers.",
+        "type": "summary"
+    },
+    "3090": {
+        "file_id": 530,
+        "content": "import re\n#from getCorrectList import letIt\n#from diffTool import diff\nfrom fixerv0 import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"AnotherStory.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[:3]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=re.findall(r'^[^:]+',fuckMe[0])[0]\n    print(nameOfSubject)\n    lineOfTrouble=re.findall(r\"^\\d*\",fuckMe[0].replace(nameOfSubject+\":\",\"\"))[0]\n    print(lineOfTrouble)\n    errorCode=re.findall(r\"[^ ]+$\",fuckMe[1])[0][1:-1]\n    print(errorCode)\n#    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n#    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n#    print (extractName)\n#    print (extractNumber)\n# death to all lawyers\n    extractMissingName=re.findall(r\"Perhaps you meant [^ ]+\",fuckMe[2])[0][(7+4+6+1):]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/islandMeta.py:1-26"
+    },
+    "3091": {
+        "file_id": 530,
+        "content": "The code reads a file named \"AnotherStory.log\", filters empty lines, and retrieves the filename, line number, and error code for an error in the log. It uses regular expressions to extract this information from specific sections of each line. The code also includes some comments expressing frustration with lawyers.",
+        "type": "comment"
+    },
+    "3092": {
+        "file_id": 530,
+        "content": "#    print(extractMissingName)\n# conclution is simple.\n# it is nothing.\n    print (extractMissingName)\n    snapshot(nameOfSubject[:-3]+\"_fixed.hs\",nameOfSubject,errorCode,extractMissingName,int(lineOfTrouble))\n# you are hitting a fake target.\n#    print(processFuck)\n#    print(process)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/islandMeta.py:27-34"
+    },
+    "3093": {
+        "file_id": 530,
+        "content": "The code appears to be extracting and processing missing names, potentially for a Haskell file. It generates a fixed version of the file with the missing name included (e.g., `nameOfSubject[:-3]+\"_fixed.hs\"`). The code also seems to handle error conditions, such as line trouble indicators (`int(lineOfTrouble)`), and may involve some debugging print statements for `extractMissingName`, `processFuck`, and `process`. It concludes that there is nothing significant in the current section of code.",
+        "type": "comment"
+    },
+    "3094": {
+        "file_id": 532,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/oops.py",
+        "type": "filepath"
+    },
+    "3095": {
+        "file_id": 532,
+        "content": "The code reads a log file, filters empty lines, extracts subject name, error code, and line number of trouble using regular expressions. Additional information could be obtained but is commented out. The code checks for missing names, creates a fixed file, and expresses disdain for lawyers.",
+        "type": "summary"
+    },
+    "3096": {
+        "file_id": 532,
+        "content": "import re\n#from getCorrectList import letIt\n#from diffTool import diff\nfrom fixerv0 import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"nothing.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[:3]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=re.findall(r'^[^:]+',fuckMe[0])[0]\n    print(nameOfSubject)\n    lineOfTrouble=re.findall(r\"^\\d*\",fuckMe[0].replace(nameOfSubject+\":\",\"\"))[0]\n    print(lineOfTrouble)\n    errorCode=re.findall(r\"[^ ]+$\",fuckMe[1])[0][1:-1]\n    print(errorCode)\n#    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n#    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n#    print (extractName)\n#    print (extractNumber)\n# death to all lawyers\n    extractMissingName=re.findall(r\"Perhaps you meant [^ ]+\",fuckMe[2])[0][(7+4+6+1):]",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/oops.py:1-26"
+    },
+    "3097": {
+        "file_id": 532,
+        "content": "The code reads a log file, filters empty lines and the first three non-empty lines are processed. It extracts the subject name, line number of trouble, and error code from these lines using regular expressions. Additional information such as extracted file name and line number could be obtained but commented out, and a final statement seems to express disdain for lawyers.",
+        "type": "comment"
+    },
+    "3098": {
+        "file_id": 532,
+        "content": "#    print(extractMissingName)\n# conclution is simple.\n# it is nothing.\n    print (extractMissingName)\n    snapshot(nameOfSubject[:-3]+\"_fixed.hs\",nameOfSubject,errorCode,extractMissingName,int(lineOfTrouble))\n# you are hitting a fake target.\n#    print(processFuck)\n#    print(process)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/oops.py:27-34"
+    },
+    "3099": {
+        "file_id": 532,
+        "content": "This code seems to be checking for missing names and printing them, creating a fixed file with subject name, error code, extractMissingName, and line of trouble. It also mentions hitting a fake target but doesn't seem to do anything about it.",
+        "type": "comment"
+    }
+}

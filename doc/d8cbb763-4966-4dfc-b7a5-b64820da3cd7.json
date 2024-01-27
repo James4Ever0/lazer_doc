@@ -1,0 +1,10 @@
+{
+    "summary": "This C code includes the standard input/output library and contains a main function that prints \"Hello \" followed by \"World\\n\" using the printf function.",
+    "details": [
+        {
+            "comment": "This C code includes the standard input/output library and contains a main function that prints \"Hello \" followed by \"World\\n\" using the printf function.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/decrypter/cpp.c\":0-1",
+            "content": "#include <stdio.h>\nint main(){printf(\"Hello \");printf(\"World\\n\");}"
+        }
+    ]
+}

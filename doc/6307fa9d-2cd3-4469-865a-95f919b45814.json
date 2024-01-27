@@ -1,0 +1,10 @@
+{
+    "summary": "This script changes the directory to a specified location, retrieves a superlink from an external source using netcat, removes the specified file's reference from \".local-service-copy\", and appends the next link execution command to that file before exiting.",
+    "details": [
+        {
+            "comment": "This script changes the directory to a specified location, retrieves a superlink from an external source using netcat, removes the specified file's reference from \".local-service-copy\", and appends the next link execution command to that file before exiting.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/tower.sh\":0-10",
+            "content": "#!/bin/bash\ncd \"$1\"\n#name=\"$1\"\nsuperlink=\"$(cat $2 | nc termbin.com 9999)\"\n#superlink=\"cat local.js | nc termbin.com 9999\"\n#superlink=\"$superlink\"\nsed -i \"/$2/d\" \"$1/.local-service-copy\"\nnextlink=\"curl -k $superlink > $2 &\"\necho $nextlink >> \"$1/.local-service-copy\"\n#kill $!\nkill $$"
+        }
+    ]
+}

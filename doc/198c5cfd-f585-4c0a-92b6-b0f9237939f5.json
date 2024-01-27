@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports necessary libraries and defines a variable \"fuck\" using UUID. It then converts the hexadecimal representation of \"fuck\" to decimal and stores it in \"meow\". The code converts \"meow\" into a string and prints it, followed by printing \"normal cat\". Next, it defines a lambda function \"ranger\" which returns a range object for the length of \"cat\". It then creates an empty list \"fuckall\" and iterates through each index in \"cat\", swapping values at certain indices to create a new order in \"fuckall\". Finally, the code prints the shuffled list \"fuckall\".",
+    "details": [
+        {
+            "comment": "The code imports necessary libraries and defines a variable \"fuck\" using UUID. It then converts the hexadecimal representation of \"fuck\" to decimal and stores it in \"meow\". The code converts \"meow\" into a string and prints it, followed by printing \"normal cat\". Next, it defines a lambda function \"ranger\" which returns a range object for the length of \"cat\". It then creates an empty list \"fuckall\" and iterates through each index in \"cat\", swapping values at certain indices to create a new order in \"fuckall\". Finally, the code prints the shuffled list \"fuckall\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/chumble/radical/weekend.py\":0-22",
+            "content": "import uuid, ast, time\nfuck=uuid.uuid4().hex\nmeow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\ncat=str(meow)\nprint(cat)\nprint(\"normal cat\")\nranger=(lambda x: range(len(x)))\nfuckall=list(cat)\n#for m in ranger(cat):\n#    fuckall.append(\"\")\nfor k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n    vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n    init=vendetta%(k+1)\n    fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\nprint(fuckall)\n#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}"
+        }
+    ]
+}

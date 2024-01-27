@@ -1,0 +1,15 @@
+{
+    "summary": "The code imports uuid and ast modules, defines shallow, realshit, boom, and ducky functions, uses Fisher-Yates algorithm to shuffle 'arr', and prints the results of realshit and ducky.",
+    "details": [
+        {
+            "comment": "The code imports uuid and ast modules. It defines a shallow function that updates a global variable 'fuckme', and a realshit function that converts a hex string to decimal using lambda functions and map. A boom function divides a hex number by another, and ducky stores the result of calling realshit and boom functions. Finally, it prints the results of realshit and ducky.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/chumble/radical/beast.py\":0-40",
+            "content": "import uuid, ast, time\nfuckme=1\ndef shallow():\n    global fuckme\n    fuckme+=0.1\n    return fuckme\ndef realshit():\n    fuck=uuid.uuid4().hex\n    meow=ast.literal_eval(\"0x\"+fuck.lower())\n# this is decimal already.\n    cat=str(meow)\n#print(cat)\n#print(\"normal cat\")\n    ranger=(lambda x: range(len(x)))\n    fuckall=list(map((lambda x:int(x)+shallow()),list(cat)))\n#for m in ranger(cat):\n#    fuckall.append(\"\")\n    for k in ranger(cat):\n#(int i=arr.size()-1;i>=0;--i)\n#\t{\n        vendetta=int(((142857-k)**(time.time()%1+k*0.5)//1)+((271828+2*k)*(time.time()%1-k)//1))\n        init=vendetta%(k+1)\n        fuckall[init],fuckall[k]=fuckall[k],fuckall[init]\n    return meow,fuckall\ndef boom(hexer):\n    # division by zero! you fucking genius!\n    hex0,hex1=hexer()\n    print(hex0)\n    print(\"-----spliter-----\")\n    print(hex1)\n    reminder=len(hex1)\n    for x in range(reminder//2):\n        hex0=(hex0/hex1[2*x])*hex1[2*x+1]\n    if reminder%2==1:\n        hex0=hex0/hex1[-1]\n    return hex0\nducky=boom(realshit)\nprint(\"-----spliter-----\")\nprint(ducky)"
+        },
+        {
+            "comment": "Shuffles array 'arr' using Fisher-Yates algorithm with time(NULL) as seed and swaps 'fuck' element randomly.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/chumble/radical/beast.py\":41-45",
+            "content": "#\t\tsrand((unsigned)time(NULL));\n#\t\tswap(arr[rand()%(i+1)],fuck);\n#\t}"
+        }
+    ]
+}

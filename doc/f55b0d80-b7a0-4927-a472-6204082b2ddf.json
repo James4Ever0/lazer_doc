@@ -1,0 +1,10 @@
+{
+    "summary": "This script is downloading search result logs from GitHub for the query \"general assistant\" across multiple pages. The wget command is used to retrieve each log file, with each log file named based on the page number (3_1.log to 3_5.log).",
+    "details": [
+        {
+            "comment": "This script is downloading search result logs from GitHub for the query \"general assistant\" across multiple pages. The wget command is used to retrieve each log file, with each log file named based on the page number (3_1.log to 3_5.log).",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/buster3.sh\":0-5",
+            "content": "#!/bin/bash\nwget 'https://github.com/search?p=2&q=general+assistant&type=Repositories&utf8=\u2713' -O 3_1.log\nwget 'https://github.com/search?p=3&q=general+assistant&type=Repositories&utf8=\u2713' -O 3_2.log\nwget 'https://github.com/search?p=4&q=general+assistant&type=Repositories&utf8=\u2713' -O 3_3.log\nwget 'https://github.com/search?p=5&q=general+assistant&type=Repositories&utf8=\u2713' -O 3_4.log\nwget 'https://github.com/search?p=6&q=general+assistant&type=Repositories&utf8=\u2713' -O 3_5.log"
+        }
+    ]
+}

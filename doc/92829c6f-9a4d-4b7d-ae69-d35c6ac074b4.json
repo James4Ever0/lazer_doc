@@ -1,0 +1,10 @@
+{
+    "summary": "This script uses wget to download two files, gross0.log and gross1.log, which contain information about the repositories of the opencog GitHub page.",
+    "details": [
+        {
+            "comment": "This script uses wget to download two files, gross0.log and gross1.log, which contain information about the repositories of the opencog GitHub page.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/glossBeat.sh\":0-2",
+            "content": "#!/bin/bash\nwget \"https://github.com/opencog?tab=repositories\" -O gross0.log\nwget \"https://github.com/opencog?page=2&tab=repositories\" -O gross1.log"
+        }
+    ]
+}

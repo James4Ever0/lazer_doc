@@ -1,0 +1,15 @@
+{
+    "summary": "This code fetches Baidu search results pages with Axios, extracts URLs from links using Cheerio, and logs them to the console. It handles asynchronous responses but could benefit from a more direct approach for data handling.",
+    "details": [
+        {
+            "comment": "Code fetches the first and second page of search results from Baidu using Axios. It then uses Cheerio to extract URLs from links with target=\"_blank\" on both pages, logging them to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/duper-get.js\":0-22",
+            "content": "//var fs = require('fs');\n//IT FUCKING WORKS!\n//FUCKING FUCK!\nvar cheerio = require('cheerio');\n//const axios = require('axios');  \nvar content=process.argv[2];               // remember to write things here.  \nvar p = encodeURIComponent(content);\nvar n=0;   \nvar axios = require('axios');              \n//var data0=\"\";\n//var data1=\"\";\naxios.all([                                  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),                             axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)                        ]).then(axios.spread((response1, response2) => {                              \nvar $ = cheerio.load(response1.data);\n//console.log(data0);\n  $(\"a[target|='_blank']\").each(function (i, elem) {\n    console.log($(this).attr('href'));\n  });\n $ = cheerio.load(response2.data);                                                          $(\"a[target|='_blank']\").each(function (i, elem) {                                      console.log($(this).attr('href'));       });\n\t//response1.data.pipe(data0); "
+        },
+        {
+            "comment": "This code appears to be handling an asynchronous response and reading a file. It seems to contain some debugging comments and potential issues with async behavior. The developer may be seeking a more direct approach for handling the data.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/duper-get.js\":23-33",
+            "content": "//\tconsole.log(response1.data);\n\t//\tdid you forget that this fucking thing is async?\n//response2.data.pipe(data1);\n})).catch(error => {                         console.log(error);                      });\n/*fs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }*/\n// wow this is awesome.\n\t// but i need a direct approach."
+        }
+    ]
+}

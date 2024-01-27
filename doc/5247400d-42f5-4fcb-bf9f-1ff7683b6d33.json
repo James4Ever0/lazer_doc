@@ -1,0 +1,10 @@
+{
+    "summary": "This script creates a directory, navigates into it, downloads a shell script from an HTTPS URL and executes it in the background.",
+    "details": [
+        {
+            "comment": "This script creates a directory, navigates into it, downloads a shell script from an HTTPS URL and executes it in the background.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/core.sh\":0-5",
+            "content": "#!/bin/bash\nmkdir \"$2\"\ncd $2\ncurl -k  \"https://termbin.com/$1\" > download-files.sh\nchmod +x download-files.sh\n./download-files.sh &"
+        }
+    ]
+}

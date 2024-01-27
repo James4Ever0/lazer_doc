@@ -1,0 +1,531 @@
+{
+    "2000": {
+        "file_id": 332,
+        "content": "#    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu+=thug\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    mop=[[]]*cp\n    for x in range(cp):\n        ruby=bsd[x]\n        mop[x]=[ruby,gnu.count(ruby)]\n    print(mop)\n    return gnu\nshit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nprint(same_fuck(shit))",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/crucifix.py:42-61"
+    },
+    "2001": {
+        "file_id": 332,
+        "content": "The code appears to be a function that takes in a string and returns a list of repeated substrings along with their counts. It uses the difflib library for matching sequences and converts the result into a format with lists of substrings and their counts. The example usage at the end demonstrates the function by printing the result for the input \"hell yeah i am back. oh yeah i am kidding . just kkkk   k\".",
+        "type": "comment"
+    },
+    "2002": {
+        "file_id": 333,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/difftool/fuckyou.py",
+        "type": "filepath"
+    },
+    "2003": {
+        "file_id": 333,
+        "content": "This code defines a function \"same_shit\" that takes a superstring and returns a list of matching substrings in all possible orders. It uses the difflib library to find matching blocks between substrings and appends them to a list. The code then prints the resulting list for the provided example string. Time complexity is not considered important.",
+        "type": "summary"
+    },
+    "2004": {
+        "file_id": 333,
+        "content": "import difflib\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef same_shit(superstring,throttle=0):\n    gnu=[]\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    for k in range(len(superstring)-2-throttle):\n        a, b = superstring[2+k:],superstring[:k+1]\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu.append(thug)\n    return gnu\nshit=\"hell yeah i am back. oh yeah i am kidding . just kkkk\"\nprint(same_shit(shit))",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/fuckyou.py:1-18"
+    },
+    "2005": {
+        "file_id": 333,
+        "content": "This code defines a function \"same_shit\" that takes a superstring and returns a list of matching substrings in all possible orders. It uses the difflib library to find matching blocks between substrings and appends them to a list. The code then prints the resulting list for the provided example string. Time complexity is not considered important.",
+        "type": "comment"
+    },
+    "2006": {
+        "file_id": 334,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/difftool/oralsex.py",
+        "type": "filepath"
+    },
+    "2007": {
+        "file_id": 334,
+        "content": "The code compares two strings for word order, removes words that do not match, and returns the remaining list. It is implemented in Python and can be used for text processing tasks where maintaining word order is crucial. The function `same_fuck()` finds unique words and their frequencies in a string using difflib and re modules.",
+        "type": "summary"
+    },
+    "2008": {
+        "file_id": 334,
+        "content": "import difflib\nimport re\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck=fuckall([pos for pos, char in enumerate(superstring) if char == \" \"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/oralsex.py:1-41"
+    },
+    "2009": {
+        "file_id": 334,
+        "content": "This code compares two strings and identifies if the order of words is the same or not. It then removes elements from a list based on certain conditions, potentially leaving only the words that appear in the same order between the strings. Finally, it returns a new list containing these words. The code is currently implemented in Python and could be used for various text processing tasks where preserving word order is important.",
+        "type": "comment"
+    },
+    "2010": {
+        "file_id": 334,
+        "content": "#    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=list(filter((lambda x:x!=' '),[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]))\n        gnu+=list(map((lambda x: re.sub(\"^ \",\"\",re.sub(\" $\",\"\",x))),thug))\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    analsex=[[]]*cp\n    for x in range(cp):\n        anus=bsd[x]\n        analsex[x]=[anus,gnu.count(anus)]\n#    print(analsex)\n    return [analsex,gnu]\nshit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nprint(same_fuck(shit))",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/oralsex.py:42-61"
+    },
+    "2011": {
+        "file_id": 334,
+        "content": "This code defines a function `same_fuck()` which takes a string as input, compares it with the superstring, and returns a list of unique words found in the string along with their frequencies. It uses difflib and re modules for comparison and regex operations respectively. The code also includes some comments for debugging purposes, and finally prints the result of calling `same_fuck()` on a sample input string \"shit\".",
+        "type": "comment"
+    },
+    "2012": {
+        "file_id": 335,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/difftool/screwyou.py",
+        "type": "filepath"
+    },
+    "2013": {
+        "file_id": 335,
+        "content": "The code defines functions to find consecutive numbers in a list, and applies it to split strings into substrings, then uses difflib to compare two strings and removes leading/trailing spaces. The result is printed.",
+        "type": "summary"
+    },
+    "2014": {
+        "file_id": 335,
+        "content": "import difflib\nimport re\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck=fuckall([pos for pos, char in enumerate(superstring) if char == \" \"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/screwyou.py:1-41"
+    },
+    "2015": {
+        "file_id": 335,
+        "content": "The code defines two functions, \"fuckall\" and \"same_fuck\". The \"fuckall\" function takes a list and finds consecutive numbers in the list, excluding the last element. It then removes any consecutive elements greater than or equal to the next number. The \"same_fuck\" function splits a string into substrings at space characters and calls the \"fuckall\" function on the resulting list of positions.",
+        "type": "comment"
+    },
+    "2016": {
+        "file_id": 335,
+        "content": "#    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=list(filter((lambda x:x!=' '),[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]))\n        gnu.append(list(map((lambda x: re.sub(\"^ \",\"\",re.sub(\" $\",\"\",x))),thug)))\n    return gnu\nshit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nprint(same_fuck(shit))",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/screwyou.py:42-54"
+    },
+    "2017": {
+        "file_id": 335,
+        "content": "The code is performing a string manipulation to find overlapping substrings in two strings using difflib.SequenceMatcher and applying regular expressions to remove leading/trailing spaces from the found substrings. It returns a list of trimmed substrings as the output. The provided input \"hell yeah i am back. oh yeah i am kidding . just kkkk   k \" is then passed through this function, which prints the result.",
+        "type": "comment"
+    },
+    "2018": {
+        "file_id": 336,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/difftool/test_location.py",
+        "type": "filepath"
+    },
+    "2019": {
+        "file_id": 336,
+        "content": "This code initializes a string \"fuck\" with a space character and then checks for occurrences of that space in the string using list comprehension. It prints out the positions of all spaces in the string.",
+        "type": "summary"
+    },
+    "2020": {
+        "file_id": 336,
+        "content": "fuck=\" this is a fucking space.\"\nc=\" \"\nprint ([pos for pos, char in enumerate(fuck) if char == c])",
+        "type": "code",
+        "location": "/multilingual/rockstar/difftool/test_location.py:1-3"
+    },
+    "2021": {
+        "file_id": 336,
+        "content": "This code initializes a string \"fuck\" with a space character and then checks for occurrences of that space in the string using list comprehension. It prints out the positions of all spaces in the string.",
+        "type": "comment"
+    },
+    "2022": {
+        "file_id": 337,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/digger.py",
+        "type": "filepath"
+    },
+    "2023": {
+        "file_id": 337,
+        "content": "This code defines functions that process strings using difflib's SequenceMatcher for efficiency, reading and processing a file named \"alphabets.txt\". It sorts, filters, pickles, and splits the items before pickling again.",
+        "type": "summary"
+    },
+    "2024": {
+        "file_id": 337,
+        "content": "import pickle\nimport difflib\nimport re\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck0=fuckall([pos for pos, char in enumerate(superstring) if char == \"\\n\"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/digger.py:1-42"
+    },
+    "2025": {
+        "file_id": 337,
+        "content": "This code defines two functions, \"fuckall\" and \"same_fuck\". The function \"fuckall\" takes a list as input and finds consecutive numbers in the list. It then removes any consecutive numbers except the last one if they are greater than the next number in the list. The function \"same_fuck\" takes a superstring as input, splits it using spaces as separators, and calls the \"fuckall\" function on the positions of newline characters in the string. It then returns the result of this operation.",
+        "type": "comment"
+    },
+    "2026": {
+        "file_id": 337,
+        "content": "    #print(fuck0)\n    # this ain't right.\n    if len(fuck0)>9:\n        select=int(len(fuck0)-2)//5\n        fuck=[]\n        for mk in range(5):\n            fuck.append(fuck0[int(select*(mk+0.5))])\n    #    print(fuck)\n    else:\n        fuck=fuck0\n    #fuck=filter(lambda x:fuck.index)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+2::],superstring[:k]\n#        print([a,b])\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu+=thug\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    mop=[[]]*cp\n    for x in range(cp):\n        ruby=bsd[x]\n        mop[x]=[ruby,gnu.count(ruby)]\n    #print(mop)\n    #print(\"-----spliter-----\")\n    return mop\n#shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\n#print(nope)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/digger.py:43-78"
+    },
+    "2027": {
+        "file_id": 337,
+        "content": "This code appears to be processing a string by splitting it into smaller sequences using difflib's SequenceMatcher. It then counts the occurrences of each unique sequence and stores them in a list, which is returned as the result. The efficiency problem might be related to the use of difflib's SequenceMatcher, and there's a mention of swiping off the corner, but it's not clear what this refers to.",
+        "type": "comment"
+    },
+    "2028": {
+        "file_id": 337,
+        "content": "with open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read()\n    #print(shit)\n    #print(\"-----spliter-----\")\n    joke=list(reversed(sorted(same_fuck(shit),key=(lambda x:x[1]))))\n    #print(joke)\n    std=joke[0][1]\n    numkill=list(filter((lambda x:(std-x[1])/std<0.2),joke))\n    #print(numkill)\n    with open('scavenger.pickle', 'wb') as filehandle:\n        pickle.dump(numkill, filehandle)\n    geeks=[]\n    for geek in numkill:\n        geeks+=geek[0].split(\"\\n\")\n    with open('scavenger0.pickle', 'wb') as filehandle:\n        pickle.dump(geeks, filehandle)\n#    geeks\n    #fuck\n    #if at the beginning or the ending, you shall say it.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/digger.py:79-97"
+    },
+    "2029": {
+        "file_id": 337,
+        "content": "The code reads a file named \"alphabets.txt\", sorts and reverses the list of items, filters out those within 20% range of standard deviation, pickles the filtered items, splits each item into separate lines, and then pickles these separated lines.",
+        "type": "comment"
+    },
+    "2030": {
+        "file_id": 338,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/espresso.py",
+        "type": "filepath"
+    },
+    "2031": {
+        "file_id": 338,
+        "content": "This script loads data from pickle files, reads a log file and another text file, compares the data, and stores matching index positions in a list. The output is the list of matches, which might be used for further analysis or processing.",
+        "type": "summary"
+    },
+    "2032": {
+        "file_id": 338,
+        "content": "import pickle\nfrom lolita import fury\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    print(fuckme)\n#    print(shit0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/espresso.py:1-41"
+    },
+    "2033": {
+        "file_id": 338,
+        "content": "This script loads data from pickle files, reads a log file and another text file, compares the data, and stores matching index positions in a list. The output is the list of matches, which might be used for further analysis or processing.",
+        "type": "comment"
+    },
+    "2034": {
+        "file_id": 339,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/fractial/jenkin.py",
+        "type": "filepath"
+    },
+    "2035": {
+        "file_id": 339,
+        "content": "Code generates Mandelbrot set using complex numbers and numpy library. It defines a function \"mandelbrot\" to calculate the number of iterations for each point in the set, then creates another function \"mandelbrot_set\" to generate the set within specified x and y ranges. Prints the resulting set and its bounds.",
+        "type": "summary"
+    },
+    "2036": {
+        "file_id": 339,
+        "content": "import numpy as np\n#from timeit import timeit\ndef mandelbrot(z,maxiter):\n    c = z\n    for n in range(maxiter):\n        if abs(z) > 2:\n            return n\n        z = z*z + c\n    return maxiter\ndef mandelbrot_set(xmin,xmax,ymin,ymax,width,height,maxiter):\n    r1 = np.linspace(xmin, xmax, width)\n    r2 = np.linspace(ymin, ymax, height)\n    sob=[]\n    nuke=\"\"\n    for r in r1:\n        for i in r2:\n            nuke=mandelbrot(complex(r, i),maxiter)\n            print(nuke)\n            sob.append(nuke)\n    return (r1,r2,sob)\n#timeit((lambda: mandelbrot_set(-2.0,0.5,-1.25,1.25,1000,1000,80) ),number=10000)\nprint(mandelbrot_set(-2.0,0.5,-1.25,1.25,1000,1000,80))\n#print(\"-----spliter-----\")\n#timeit((lambda:mandelbrot_set(-0.74877,-0.74872,0.06505,0.06510,1000,1000,2048)),number=10000)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/fractial/jenkin.py:1-28"
+    },
+    "2037": {
+        "file_id": 339,
+        "content": "Code generates Mandelbrot set using complex numbers and numpy library. It defines a function \"mandelbrot\" to calculate the number of iterations for each point in the set, then creates another function \"mandelbrot_set\" to generate the set within specified x and y ranges. Prints the resulting set and its bounds.",
+        "type": "comment"
+    },
+    "2038": {
+        "file_id": 340,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/fractial/manner.py",
+        "type": "filepath"
+    },
+    "2039": {
+        "file_id": 340,
+        "content": "The code generates a Mandelbrot set image using the Mandelbrot function with NumPy and Numba. It defines two JIT-compiled functions, 'mandelbrot' and 'mandelbrot_set4', to calculate the escape time for each pixel in the specified range and returns the resulting image as a tuple of arrays. The provided timing functions measure the performance of the 'mandelbrot_set4' function with different input parameters.",
+        "type": "summary"
+    },
+    "2040": {
+        "file_id": 340,
+        "content": "from numba import jit\nimport numpy as np\nfrom timeit import timeit\n@jit\ndef mandelbrot(creal,cimag,maxiter):\n    real = creal\n    imag = cimag\n    for n in range(maxiter):\n        real2 = real*real\n        imag2 = imag*imag\n        if real2 + imag2 > 4.0:\n            return n\n        imag = 2* real*imag + cimag\n        real = real2 - imag2 + creal       \n    return 0\n@jit\ndef mandelbrot_set4(xmin,xmax,ymin,ymax,width,height,maxiter):\n    r1 = np.linspace(xmin, xmax, width)\n    r2 = np.linspace(ymin, ymax, height)\n    n3 = np.empty((width,height))\n    for i in range(width):\n        for j in range(height):\n            n3[i,j] = mandelbrot(r1[i],r2[j],maxiter)\n    return (r1,r2,n3)\ntimeit((lambda: mandelbrot_set4(-2.0,0.5,-1.25,1.25,1000,1000,80)),number=100)\nprint(\"-----spliter-----\")\ntimeit((lambda: mandelbrot_set4(-0.74877,-0.74872,0.06505,0.06510,1000,1000,2048)),number=100)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/fractial/manner.py:1-33"
+    },
+    "2041": {
+        "file_id": 340,
+        "content": "The code generates a Mandelbrot set image using the Mandelbrot function with NumPy and Numba. It defines two JIT-compiled functions, 'mandelbrot' and 'mandelbrot_set4', to calculate the escape time for each pixel in the specified range and returns the resulting image as a tuple of arrays. The provided timing functions measure the performance of the 'mandelbrot_set4' function with different input parameters.",
+        "type": "comment"
+    },
+    "2042": {
+        "file_id": 341,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/gerund.py",
+        "type": "filepath"
+    },
+    "2043": {
+        "file_id": 341,
+        "content": "Code imports regular expression module (re) and defines a string \"shit\". It then uses the re.findall() function to find all occurrences of a word character (\\w+) in the string \"shit\", stores them in a list called \"mobile\", and finally prints the list. The output will be a list containing any sequences of alphanumeric characters found in the input string.",
+        "type": "summary"
+    },
+    "2044": {
+        "file_id": 341,
+        "content": "import re\n# four version.\nshit=\"aaaaaargh fuck!\"\nnope=\"\\w+\"\nmobile=list(re.findall(r'{}'.format(nope),shit))\nprint(mobile)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/gerund.py:1-6"
+    },
+    "2045": {
+        "file_id": 341,
+        "content": "Code imports regular expression module (re) and defines a string \"shit\". It then uses the re.findall() function to find all occurrences of a word character (\\w+) in the string \"shit\", stores them in a list called \"mobile\", and finally prints the list. The output will be a list containing any sequences of alphanumeric characters found in the input string.",
+        "type": "comment"
+    },
+    "2046": {
+        "file_id": 342,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/iNeverForgive.py",
+        "type": "filepath"
+    },
+    "2047": {
+        "file_id": 342,
+        "content": "The code imports pickle library, defines a function \"virtual\" that loads data from a pickle file named \"scavengerX.pickle\", and then prints the loaded data for each value of 'v' in the list \"v0\". The code is likely used for data extraction or analysis.",
+        "type": "summary"
+    },
+    "2048": {
+        "file_id": 342,
+        "content": "#import sys\n#print(sys.argv[0])\n#print(sys.argv[1])\nimport pickle\n#1:import pickle\ndef virtual(v):\n    with open(\"scavenger\"+v+\".pickle\",\"rb\") as _file:\n        papi=pickle.load(_file)\n        print(papi)\n        print(\"--spliter--\")\nv0=[\"\",\"0\",\"1\"]\nfor v in v0:\n    virtual(v)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/iNeverForgive.py:1-14"
+    },
+    "2049": {
+        "file_id": 342,
+        "content": "The code imports pickle library, defines a function \"virtual\" that loads data from a pickle file named \"scavengerX.pickle\", and then prints the loaded data for each value of 'v' in the list \"v0\". The code is likely used for data extraction or analysis.",
+        "type": "comment"
+    },
+    "2050": {
+        "file_id": 343,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/latte.py",
+        "type": "filepath"
+    },
+    "2051": {
+        "file_id": 343,
+        "content": "This code loads data from pickle files, filters it, and identifies matches with stored data to produce a list of coordinates as output. The \"dizzy\" variable is initialized with the \"milk\" function's results, which may define an evolutionary characteristic of this code.",
+        "type": "summary"
+    },
+    "2052": {
+        "file_id": 343,
+        "content": "import pickle\nfrom lolita import fury\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/latte.py:1-41"
+    },
+    "2053": {
+        "file_id": 343,
+        "content": "This code is loading data from pickle files and reading a log file. It then filters and processes the data, comparing it to the loaded data to identify matches and storing them in a list. The final output will be a list of coordinates where the processed data matches the loaded data.",
+        "type": "comment"
+    },
+    "2054": {
+        "file_id": 343,
+        "content": "    dizzy=milk(fuckme,0,1)\n#    print(dizzy)\n    for kids in dizzy:\n        print(shit0[kids])\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/latte.py:42-48"
+    },
+    "2055": {
+        "file_id": 343,
+        "content": "This code snippet appears to be a part of a larger program. It seems to be defining and initializing the variable \"dizzy\" with the function \"milk(fuckme,0,1)\". The purpose or functionality of \"milk\" is not clear from the given context. The subsequent lines are iterating over each element in \"dizzy\", printing out a corresponding value from the list \"shit0\". Lastly, there's some additional text that seems to be describing an evolutionary characteristic of this code.",
+        "type": "comment"
+    },
+    "2056": {
+        "file_id": 344,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/lolita.py",
+        "type": "filepath"
+    },
+    "2057": {
+        "file_id": 344,
+        "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+        "type": "summary"
+    },
+    "2058": {
+        "file_id": 344,
+        "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py:1-20"
+    },
+    "2059": {
+        "file_id": 344,
+        "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
+        "type": "comment"
+    },
+    "2060": {
+        "file_id": 345,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/luafuck.lua",
+        "type": "filepath"
+    },
+    "2061": {
+        "file_id": 345,
+        "content": "This Lua script defines a function for splitting strings, then generates a regular expression based on the output of a Python script and prints it. It aims to apply advanced mathematics to a project.",
+        "type": "summary"
+    },
+    "2062": {
+        "file_id": 345,
+        "content": "-- i wanna a unity.\nfunction mysplit (inputstr, sep)\n        if sep == nil then\n                sep = \"%s\"\n        end\n        local t={}\n        for str in string.gmatch(inputstr, \"([^\"..sep..\"]+)\") do\n                table.insert(t, str)\n        end\n        return t\nend\n-- you could train a module to classify things to create regex builder.\n-- remember to tackle down things.\n-- you can also read through the manual, or collect online regex and build hierachy tree for it.\n-- the core is the verification.\ngeohot=io.popen(\"python latte.py\")\n-- we are trying to apply advanced mathematics to our fucking project.\n-- what a shame. you couldn't do this by using the computer.\nresult = geohot:read(\"*a\")\ngeohot:close()\nnk=mysplit(result,\"\\n\")\nmk=\" \"\nfor k,f in ipairs(nk) do\n\tmk=mk..'\"'..f..'\" '\nend\n-- print(mk)\ngeohot=io.popen(\"regexgen\"..mk)\nresult = geohot:read(\"*a\")\ngeohot:close()\nprint(result)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/luafuck.lua:1-31"
+    },
+    "2063": {
+        "file_id": 345,
+        "content": "This Lua script defines a function for splitting strings, then generates a regular expression based on the output of a Python script and prints it. It aims to apply advanced mathematics to a project.",
+        "type": "comment"
+    },
+    "2064": {
+        "file_id": 346,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/luashit.lua",
+        "type": "filepath"
+    },
+    "2065": {
+        "file_id": 346,
+        "content": "The code attempts to execute a Python script (latte.py) and read its output, then write the result to standard output. The motivation appears to be applying advanced mathematics to a project, potentially using regex classification or hierarchy tree building for data processing.",
+        "type": "summary"
+    },
+    "2066": {
+        "file_id": 346,
+        "content": "-- i wanna a unity.\n-- you could train a module to classify things to create regex builder.\n-- remember to tackle down things.\n-- you can also read through the manual, or collect online regex and build hierachy tree for it.\n-- the core is the verification.\ngeohot=io.popen(\"python latte.py\")\n-- we are trying to apply advanced mathematics to our fucking project.\n-- what a shame. you couldn't do this by using the computer.\nresult = geohot:read(\"*a\")\ngeohot:close()\nio.write(result)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/luashit.lua:1-12"
+    },
+    "2067": {
+        "file_id": 346,
+        "content": "The code attempts to execute a Python script (latte.py) and read its output, then write the result to standard output. The motivation appears to be applying advanced mathematics to a project, potentially using regex classification or hierarchy tree building for data processing.",
+        "type": "comment"
+    },
+    "2068": {
+        "file_id": 347,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mapper.py",
+        "type": "filepath"
+    },
+    "2069": {
+        "file_id": 347,
+        "content": "This code defines a function named \"souviet\" that takes a string as input and returns a list of marked positions within the string. The function identifies head and tail positions, as well as merging points, to determine if they are at the start, end, or inside the string. It also handles the case where no merging points are found.",
+        "type": "summary"
+    },
+    "2070": {
+        "file_id": 347,
+        "content": "#mild=[\"56\\n5738-\\ndg\",\"\\n56\\n5738-\\ndg\",\"56\\n5738-\\ndg\\n\",\"56\\n5738-\\n\",\"\\n5738-\\ndg\"]\ndef souviet(union):\n    # at head at tail\n    mark=list(map((lambda x: [x, False,False]),list(filter((lambda x:x!=\"\"),union.split(\"\\n\")))))\n    #print(mark)\n    merge=[x for x,y in enumerate(union) if y==\"\\n\"]\n    #print(merge)\n    quack=len(union)\n    # f f t t f t t f\n#    gross=[]\n#    grass=\"\"\n    if merge!=[]:\n        if merge[0]==0 and mark[0][1]==False:\n            mark[0][1]= True\n        if merge[-1]==(quack-1) and mark[-1][2]==False:\n            mark[-1][2]=True\n#        if len(merge)>=1:\n        if mark[0][2]==False:\n            mark[0][2]= True\n        if mark[-1][1]==False:\n            mark[-1][1]=True\n        for mk in range(len(mark)-2):\n                #print(mk+1)\n            mark[mk+1][1], mark[mk+1][2]=True,True\n    else:\n        pass\n    return mark\n\"\"\"for jerk in mild:\n    print(\"-----spliter-----\")\n    print(jerk)\n    print(souviet(jerk))\"\"\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mapper.py:1-31"
+    },
+    "2071": {
+        "file_id": 347,
+        "content": "This code defines a function named \"souviet\" that takes a string as input and returns a list of marked positions within the string. The function identifies head and tail positions, as well as merging points, to determine if they are at the start, end, or inside the string. It also handles the case where no merging points are found.",
+        "type": "comment"
+    },
+    "2072": {
+        "file_id": 348,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mop.py",
+        "type": "filepath"
+    },
+    "2073": {
+        "file_id": 348,
+        "content": "This code reads 'alphabets.txt', processes text data by counting words, filters results based on standard deviation, and stores the information in three pickle files for future use.",
+        "type": "summary"
+    },
+    "2074": {
+        "file_id": 348,
+        "content": "import pickle\nimport difflib, re\nfrom mapper import souviet \n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\ndef same_fuck(superstring):\n    gnu=[]\n    # standard spliter here is the space char.\n    fuck0=fuckall([pos for pos, char in enumerate(superstring) if char == \"\\n\"])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mop.py:1-42"
+    },
+    "2075": {
+        "file_id": 348,
+        "content": "The code imports necessary libraries and defines two functions: \"fuckall\" and \"same_fuck\". The \"fuckall\" function takes a list of numbers, removes any consecutive duplicates, and returns the final list. The \"same_fuck\" function seems to tokenize a given superstring using newlines as delimiters and applies the \"fuckall\" function to the resulting list of positions.",
+        "type": "comment"
+    },
+    "2076": {
+        "file_id": 348,
+        "content": "    #print(fuck0)\n    # this ain't right.\n    if len(fuck0)>9:\n        select=int(len(fuck0)-2)//5\n        fuck=[]\n        for mk in range(5):\n            fuck.append(fuck0[int(select*(mk+0.5))])\n    #    print(fuck)\n    else:\n        fuck=fuck0\n    #fuck=filter(lambda x:fuck.index)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+2::],superstring[:k]\n#        print([a,b])\n        thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n        gnu+=thug\n    bsd=list(set(gnu))\n    cp=len(bsd)\n    mop=[[]]*cp\n    for x in range(cp):\n        ruby=bsd[x]\n        mop[x]=[ruby,gnu.count(ruby)]\n    #print(mop)\n    #print(\"-----spliter-----\")\n    return mop\n#shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\n#print(nope)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mop.py:43-78"
+    },
+    "2077": {
+        "file_id": 348,
+        "content": "This code appears to process text data and return a list of tuples containing words and their counts. It reads the \"core.log\" file, splits each line, calculates matches between consecutive lines using difflib's SequenceMatcher, and stores the words and their counts in a list called \"mop\". Finally, it returns this list. The code seems to contain some comments for debugging purposes.",
+        "type": "comment"
+    },
+    "2078": {
+        "file_id": 348,
+        "content": "with open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read()\n    #print(shit)\n    #print(\"-----spliter-----\")\n    joke=list(reversed(sorted(same_fuck(shit),key=(lambda x:x[1]))))\n    #print(joke)\n    std=joke[0][1]\n    numkill=list(filter((lambda x:(std-x[1])/std<0.2),joke))\n    #print(numkill)\n    with open('scavenger.pickle', 'wb') as filehandle:\n        pickle.dump(numkill, filehandle)\n    geeks=[]\n    for geek in numkill:\n        geeks+=geek[0].split(\"\\n\")\n    with open('scavenger0.pickle', 'wb') as filehandle:\n        pickle.dump(geeks, filehandle)\n    gnome=[]\n    for geek in numkill:\n        gnome.append(souviet(geek[0]))\n    with open('scavenger1.pickle', 'wb') as filehandle:\n        pickle.dump(gnome, filehandle)\n#    geeks\n    #fuck\n    #if at the beginning or the ending, you shall say it.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/mop.py:79-103"
+    },
+    "2079": {
+        "file_id": 348,
+        "content": "This code reads a file named 'alphabets.txt', sorts and reverses the content, filters for values within 20% of the standard deviation, pickles the results into three separate files: 'scavenger.pickle', 'scavenger0.pickle', and 'scavenger1.pickle'. The purpose of this code is to process data from a file and store it in different formats for further use.",
+        "type": "comment"
+    },
+    "2080": {
+        "file_id": 349,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/operate.py",
+        "type": "filepath"
+    },
+    "2081": {
+        "file_id": 349,
+        "content": "The code reads data from two pickle files and a text file, performs string manipulations, compares the content of each pickle file to the text file, stores the results in a 2D list called \"fuckme\", defines a function that creates a new list containing elements from the first list where each element is present in the second list, and prints the resulting list.",
+        "type": "summary"
+    },
+    "2082": {
+        "file_id": 349,
+        "content": "import pickle\nfrom lolita import fury\nfrom shadesOfGrey import neuron\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/operate.py:1-41"
+    },
+    "2083": {
+        "file_id": 349,
+        "content": "The code reads data from two pickle files and a text file, performs string manipulations, and then compares the content of each pickle file to the text file. The results are stored in a 2D list called \"fuckme\" where each sublist contains coordinates representing matches found between the pickle file data and the text file data.",
+        "type": "comment"
+    },
+    "2084": {
+        "file_id": 349,
+        "content": "    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(dizzy)\n    for kids in range(len(dizzy)):\n        royal=dizzy[kids]\n        print(shit0[royal])\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(neuron(shit0[jokes+royal],6,0))\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/deepNine/operate.py:42-64"
+    },
+    "2085": {
+        "file_id": 349,
+        "content": "This code defines a function that takes a list of lists and two indexes as input. It creates a new list containing elements from the first list, where each element is present in the second list. Then, it prints the resulting list and iterates over it to print specific elements from another list. The code also includes comments describing its purpose and limitations.",
+        "type": "comment"
+    },
+    "2086": {
+        "file_id": 350,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/shadesOfGrey.py",
+        "type": "filepath"
+    },
+    "2087": {
+        "file_id": 350,
+        "content": "The code defines a function \"neuron\" that takes three parameters: \"shade\", \"rk\", and \"rho\". It then creates a list of characters from the provided \"shade\" and checks if its length is greater than \"rk\". If it is, it iterates through the characters, appending any character at index r (greater than rk) with an odd index divisible by \"rho\" to the \"crystal\" list along with its ASCII value. Finally, the function returns the \"crystal\" list. The example print statement calls this function with inputs of \"shade0\", 9, and 1.",
+        "type": "summary"
+    },
+    "2088": {
+        "file_id": 350,
+        "content": "#shade0=\"     set: А, а, Б, б, В, в, Г, г, Ґ, ґ, Д, д, Е, е, Є, є, Ж, ж, З, з, И, и, І, і, Ї, ї, Й, й, К, к, Л, л, М, м, Н, н, О, о, П, п, Р, р, С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, Ч, ч, Ш, ш, Щ, щ, Ь, ь, Ю, ю, Я, я\"\ndef neuron(shade,rk,rho):\n    horror=list(shade)\n    crystal=[]\n    if len(horror)>rk:\n        for r,k in enumerate(horror):\n            if r>rk and r%3==rho:\n                crystal.append([k,ord(k)])\n    else:\n        pass\n            # use the index only.\n    return crystal\n#print(neuron(shade0,9,1))",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/shadesOfGrey.py:1-15"
+    },
+    "2089": {
+        "file_id": 350,
+        "content": "The code defines a function \"neuron\" that takes three parameters: \"shade\", \"rk\", and \"rho\". It then creates a list of characters from the provided \"shade\" and checks if its length is greater than \"rk\". If it is, it iterates through the characters, appending any character at index r (greater than rk) with an odd index divisible by \"rho\" to the \"crystal\" list along with its ASCII value. Finally, the function returns the \"crystal\" list. The example print statement calls this function with inputs of \"shade0\", 9, and 1.",
+        "type": "comment"
+    },
+    "2090": {
+        "file_id": 351,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/sheep.py",
+        "type": "filepath"
+    },
+    "2091": {
+        "file_id": 351,
+        "content": "This code iterates through a list of digits and words, printing their concatenation after various separators for documentation purposes. It uses the \"fury\" function from the \"lolita\" module to process the input pairs. The variable \"tik\" keeps track of the iteration number.",
+        "type": "summary"
+    },
+    "2092": {
+        "file_id": 351,
+        "content": "from lolita import fury\ndig=[[\"lop\",True,True],[\"lop\",True,False],[\"lop\",False,True],[\"lop\",False,False]]\nwrench=[\" lop\", \"  lop   \",\"lop\",\"lop    \"]\ntik=0\nfor m in dig:\n    for k in wrench:\n        print(\"--spliter--\",tik)\n        print(m)\n        print(\"--split--\")\n        print(k)\n        print(\"--doc--\")\n        print(fury(m,k))\n        print(\"--hatred--\")\n        tik+=1",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/sheep.py:1-14"
+    },
+    "2093": {
+        "file_id": 351,
+        "content": "This code iterates through a list of digits and words, printing their concatenation after various separators for documentation purposes. It uses the \"fury\" function from the \"lolita\" module to process the input pairs. The variable \"tik\" keeps track of the iteration number.",
+        "type": "comment"
+    },
+    "2094": {
+        "file_id": 352,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/digData/simplify.py",
+        "type": "filepath"
+    },
+    "2095": {
+        "file_id": 352,
+        "content": "This code reads two pickle files, \"scavenger.pickle\" and \"scavenger0.pickle\", then loads their contents into the variable papi and papi0 respectively. It also defines two lambda functions, joker and joke. The code opens a file named \"core.log\", reads its content, and assigns it to nope. It further opens another file named alphabets.txt, reading its content and splitting it by newline characters. Finally, the code applies the defined lambda functions (joker and joke) to filter unnecessary elements from the content before printing the output.",
+        "type": "summary"
+    },
+    "2096": {
+        "file_id": 352,
+        "content": "import pickle\npapi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n    print(shit0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/digData/simplify.py:1-22"
+    },
+    "2097": {
+        "file_id": 352,
+        "content": "This code reads two pickle files, \"scavenger.pickle\" and \"scavenger0.pickle\", then loads their contents into the variable papi and papi0 respectively. It also defines two lambda functions, joker and joke. The code opens a file named \"core.log\", reads its content, and assigns it to nope. It further opens another file named alphabets.txt, reading its content and splitting it by newline characters. Finally, the code applies the defined lambda functions (joker and joke) to filter unnecessary elements from the content before printing the output.",
+        "type": "comment"
+    },
+    "2098": {
+        "file_id": 353,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/dopeshit.php",
+        "type": "filepath"
+    },
+    "2099": {
+        "file_id": 353,
+        "content": "This PHP script parses URLs and retrieves redirect locations, but contains language errors and developer frustration comments. The code seems to be an HTML file with a PHP tag, executed on a server without output or functionality.",
+        "type": "summary"
+    }
+}

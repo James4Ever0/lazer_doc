@@ -1,0 +1,10 @@
+{
+    "summary": "This code creates a SQLite database table for grouping characters based on their main ID and character group, with a unique constraint on the combination of both. The alphabetical order and case relationship are one-directional, and labels can have relationships as well. However, it's unclear whether all labels should be placed in an array or if they should be distinguished.",
+    "details": [
+        {
+            "comment": "This code creates a SQLite database table for grouping characters based on their main ID and character group, with a unique constraint on the combination of both. The alphabetical order and case relationship are one-directional, and labels can have relationships as well. However, it's unclear whether all labels should be placed in an array or if they should be distinguished.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeGroupingDatabase.py\":0-17",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE groupAllChars (mainId INT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (mainId ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

@@ -1,0 +1,528 @@
+{
+    "0": {
+        "file_id": 0,
+        "content": "/AuxCommandGrep.sh",
+        "type": "filepath"
+    },
+    "1": {
+        "file_id": 0,
+        "content": "This code reads \"CommandGrepMainIndex.txt\" and pipes the command output with -h or --help appended to each line, saving them in Aux0/ and Aux1/ respectively. The resulting files are then concatenated into Aux0.sh and Aux1.sh respectively.",
+        "type": "summary"
+    },
+    "2": {
+        "file_id": 0,
+        "content": "#!/bin/bash\nawk '{print $0 \" -h\" \" | cat > Aux0/\" $0 \".txt\" }' \"CommandGrepMainIndex.txt\" | cat > Aux0.sh\nawk '{print $0 \" --help\" \" | cat > Aux1/\" $0 \".txt\" }' \"CommandGrepMainIndex.txt\" | cat > Aux1.sh",
+        "type": "code",
+        "location": "/AuxCommandGrep.sh:1-3"
+    },
+    "3": {
+        "file_id": 0,
+        "content": "This code reads \"CommandGrepMainIndex.txt\" and pipes the command output with -h or --help appended to each line, saving them in Aux0/ and Aux1/ respectively. The resulting files are then concatenated into Aux0.sh and Aux1.sh respectively.",
+        "type": "comment"
+    },
+    "4": {
+        "file_id": 2,
+        "content": "/CommandGrep.sh",
+        "type": "filepath"
+    },
+    "5": {
+        "file_id": 2,
+        "content": "Function \"command-grep\" searches for executable files in the system's PATH. It saves the current IFS setting, changes it to colon separator, iterates through each path in PATH variable, and lists all files in that directory using \"ls\". After completing its task, it restores the original IFS value. The output is redirected to a file named \"CommandGrepMainIndex.txt\" for future reference or analysis.",
+        "type": "summary"
+    },
+    "6": {
+        "file_id": 2,
+        "content": "#!/bin/bash\nfunction command-grep\n{\n   oldIFS=${IFS}\n   IFS=\":\"\n   for p in ${PATH}\n   do\n      ls $p\n   done\n   export IFS=${oldIFS}\n}\ncommand-grep | cat > \"CommandGrepMainIndex.txt\"",
+        "type": "code",
+        "location": "/CommandGrep.sh:1-15"
+    },
+    "7": {
+        "file_id": 2,
+        "content": "Function \"command-grep\" searches for executable files in the system's PATH. It saves the current IFS setting, changes it to colon separator, iterates through each path in PATH variable, and lists all files in that directory using \"ls\". After completing its task, it restores the original IFS value. The output is redirected to a file named \"CommandGrepMainIndex.txt\" for future reference or analysis.",
+        "type": "comment"
+    },
+    "8": {
+        "file_id": 3,
+        "content": "/CommandSearch.sh",
+        "type": "filepath"
+    },
+    "9": {
+        "file_id": 3,
+        "content": "The code defines a function named \"command-search\" that searches for commands in the user's PATH environment variable. It uses a loop to iterate through each directory in the PATH and lists the contents of each directory using 'ls'. It then filters the listed files with 'grep', searching for the provided command name. The original Internal Field Separator (IFS) is saved, and then modified to \":\" to separate path components, and finally restored after the search is complete.",
+        "type": "summary"
+    },
+    "10": {
+        "file_id": 3,
+        "content": "#!/bin/bash\nfunction command-search\n{\n   oldIFS=${IFS}\n   IFS=\":\"\n   for p in ${PATH}\n   do\n      ls $p | grep $1\n   done\n   export IFS=${oldIFS}\n}",
+        "type": "code",
+        "location": "/CommandSearch.sh:1-13"
+    },
+    "11": {
+        "file_id": 3,
+        "content": "The code defines a function named \"command-search\" that searches for commands in the user's PATH environment variable. It uses a loop to iterate through each directory in the PATH and lists the contents of each directory using 'ls'. It then filters the listed files with 'grep', searching for the provided command name. The original Internal Field Separator (IFS) is saved, and then modified to \":\" to separate path components, and finally restored after the search is complete.",
+        "type": "comment"
+    },
+    "12": {
+        "file_id": 4,
+        "content": "/GeneralUsageLister/AuxiliaryProcessor.sh",
+        "type": "filepath"
+    },
+    "13": {
+        "file_id": 4,
+        "content": "This code reads the contents of \"MainIndexWithIdenticalKeywords.txt\", filters out lines starting with non-space, non-comma characters using grep and awk, then pipes the results to a series of man commands for documentation lookup followed by conversion to plain text format using col, and finally saves it in the \"wtf\" directory with a file name identical to the input line.",
+        "type": "summary"
+    },
+    "14": {
+        "file_id": 4,
+        "content": "#!/bin/bash\ncat \"MainIndexWithIdenticalKeywords.txt\" | grep -E \"^[^ ,]+\" | awk '{print \"man \" $0 \" | col -b | wtf/\" $0 \".txt\" }'",
+        "type": "code",
+        "location": "/GeneralUsageLister/AuxiliaryProcessor.sh:1-2"
+    },
+    "15": {
+        "file_id": 4,
+        "content": "This code reads the contents of \"MainIndexWithIdenticalKeywords.txt\", filters out lines starting with non-space, non-comma characters using grep and awk, then pipes the results to a series of man commands for documentation lookup followed by conversion to plain text format using col, and finally saves it in the \"wtf\" directory with a file name identical to the input line.",
+        "type": "comment"
+    },
+    "16": {
+        "file_id": 5,
+        "content": "/GeneralUsageLister/MainIndex.py",
+        "type": "filepath"
+    },
+    "17": {
+        "file_id": 5,
+        "content": "This Python script defines three functions `anal0`, `anal1`, and `anal2` that write bash commands to files based on input parameters. It reads a file \"MainIndexWithIdenticalKeywords.txt\", extracts unique lines less than 35 characters, and calls these functions for each line. The file is then closed.",
+        "type": "summary"
+    },
+    "18": {
+        "file_id": 5,
+        "content": "def anal0(p):\n    b=open(\"MainIndex/zero/\"+p,\"w+\")\n    b.write(\"#!/bin/bash\\n\")\n    b.write(p+\" &> ../zero-log/\"+p+\".log\")\n    b.write('\\n')\n    b.close()\ndef anal1(p):\n    b=open(\"MainIndex/one/\"+p,\"w+\")\n    b.write(\"#!/bin/bash\\n\")\n    b.write(p+\" -h &> ../one-log/\"+p+\".log\")\n    b.write('\\n')\n    b.close()\ndef anal2(p):\n    b=open(\"MainIndex/two/\"+p,\"w+\")\n    b.write(\"#!/bin/bash\\n\")\n    b.write(p+\" --help &> ../two-log/\"+p+\".log\")\n    b.write('\\n')\n    b.close()\nimport re\na=open(\"MainIndexWithIdenticalKeywords.txt\",\"r\")\ni=0\np1=[]\nwhile i!=1:\n    p=a.readline()\n    if p!=\"\":\n        p=re.findall(r'[^, ]+',p)\n#        print (p)\n        for p0 in p:\n            if len(p0)<35:\n                p1.append(p0[:-1])\n    else:\n        i=1\n        break\na.close()\np2=set(p1)\nfor p3 in p2:\n    anal0(p3)\n    anal1(p3)\n    anal2(p3)",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex.py:1-44"
+    },
+    "19": {
+        "file_id": 5,
+        "content": "This Python script defines three functions `anal0`, `anal1`, and `anal2` that write bash commands to files based on input parameters. It reads a file \"MainIndexWithIdenticalKeywords.txt\", extracts unique lines less than 35 characters, and calls these functions for each line. The file is then closed.",
+        "type": "comment"
+    },
+    "20": {
+        "file_id": 6,
+        "content": "/GeneralUsageLister/MainIndex/Fuck.sh",
+        "type": "filepath"
+    },
+    "21": {
+        "file_id": 6,
+        "content": "This script runs three different baseband scripts simultaneously using Bash.",
+        "type": "summary"
+    },
+    "22": {
+        "file_id": 6,
+        "content": "#!/bin/bash\n./Baseband0.sh &\n./Baseband1.sh &\n./Baseband2.sh &",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex/Fuck.sh:1-4"
+    },
+    "23": {
+        "file_id": 6,
+        "content": "This script runs three different baseband scripts simultaneously using Bash.",
+        "type": "comment"
+    },
+    "24": {
+        "file_id": 7,
+        "content": "/GeneralUsageLister/MainIndex/authorize.sh",
+        "type": "filepath"
+    },
+    "25": {
+        "file_id": 7,
+        "content": "This script sets execute permissions on files located in the 'zero', 'one', and 'two' directories, likely preparing them for execution.",
+        "type": "summary"
+    },
+    "26": {
+        "file_id": 7,
+        "content": "#!/bin/bash\nchmod +x zero/*\nchmod +x one/*\nchmod +x two/*",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex/authorize.sh:1-4"
+    },
+    "27": {
+        "file_id": 7,
+        "content": "This script sets execute permissions on files located in the 'zero', 'one', and 'two' directories, likely preparing them for execution.",
+        "type": "comment"
+    },
+    "28": {
+        "file_id": 8,
+        "content": "/GeneralUsageLister/MainIndex/corefuck0.sh",
+        "type": "filepath"
+    },
+    "29": {
+        "file_id": 8,
+        "content": "This script is written in Bash and is used to change the current directory to \"zero\". It then executes the \"run-parts\" command on the current directory, which runs all shell scripts inside the specified directory. The output of this command is redirected to a file named \"zero.log0\" in the parent directory using the \">&\" operator. This script seems to be part of a larger program used for executing multiple scripts from a central location and logging the results.",
+        "type": "summary"
+    },
+    "30": {
+        "file_id": 8,
+        "content": "#!/bin/bash\ncd zero\nrun-parts . &> ../zero.log0",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex/corefuck0.sh:1-3"
+    },
+    "31": {
+        "file_id": 8,
+        "content": "This script is written in Bash and is used to change the current directory to \"zero\". It then executes the \"run-parts\" command on the current directory, which runs all shell scripts inside the specified directory. The output of this command is redirected to a file named \"zero.log0\" in the parent directory using the \">&\" operator. This script seems to be part of a larger program used for executing multiple scripts from a central location and logging the results.",
+        "type": "comment"
+    },
+    "32": {
+        "file_id": 9,
+        "content": "/GeneralUsageLister/MainIndex/corefuck1.sh",
+        "type": "filepath"
+    },
+    "33": {
+        "file_id": 9,
+        "content": "The code is a Bash script that changes the current directory to 'one', executes run-parts in the current folder, and redirects its output and error messages to '../one.log0'. It seems to be related to managing parts or scripts within the 'one' directory while logging the results in 'one.log0'.",
+        "type": "summary"
+    },
+    "34": {
+        "file_id": 9,
+        "content": "#!/bin/bash\ncd one\nrun-parts . &> ../one.log0",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex/corefuck1.sh:1-3"
+    },
+    "35": {
+        "file_id": 9,
+        "content": "The code is a Bash script that changes the current directory to 'one', executes run-parts in the current folder, and redirects its output and error messages to '../one.log0'. It seems to be related to managing parts or scripts within the 'one' directory while logging the results in 'one.log0'.",
+        "type": "comment"
+    },
+    "36": {
+        "file_id": 10,
+        "content": "/GeneralUsageLister/MainIndex/corefuck2.sh",
+        "type": "filepath"
+    },
+    "37": {
+        "file_id": 10,
+        "content": "This script is written in bash and starts by changing the current directory to 'two'. Then, it executes a command that runs all shell scripts found inside the current directory (two) using 'run-parts' utility and redirects both standard output and error messages to a log file named 'two.log0' located in the parent directory ('../').",
+        "type": "summary"
+    },
+    "38": {
+        "file_id": 10,
+        "content": "#!/bin/bash\ncd two\nrun-parts . &> ../two.log0",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex/corefuck2.sh:1-3"
+    },
+    "39": {
+        "file_id": 10,
+        "content": "This script is written in bash and starts by changing the current directory to 'two'. Then, it executes a command that runs all shell scripts found inside the current directory (two) using 'run-parts' utility and redirects both standard output and error messages to a log file named 'two.log0' located in the parent directory ('../').",
+        "type": "comment"
+    },
+    "40": {
+        "file_id": 11,
+        "content": "/GeneralUsageLister/MainIndex/refresh.sh",
+        "type": "filepath"
+    },
+    "41": {
+        "file_id": 11,
+        "content": "This script deletes all files in subdirectories zero, one, and two. It might be used for regular cleaning or starting with a clean slate in these directories.",
+        "type": "summary"
+    },
+    "42": {
+        "file_id": 11,
+        "content": "#!/bin/bash\nrm zero/*\nrm one/*\nrm two/*",
+        "type": "code",
+        "location": "/GeneralUsageLister/MainIndex/refresh.sh:1-4"
+    },
+    "43": {
+        "file_id": 11,
+        "content": "This script deletes all files in subdirectories zero, one, and two. It might be used for regular cleaning or starting with a clean slate in these directories.",
+        "type": "comment"
+    },
+    "44": {
+        "file_id": 12,
+        "content": "/GeneralUsageLister/main_lister.sh",
+        "type": "filepath"
+    },
+    "45": {
+        "file_id": 12,
+        "content": "This code is using the 'man' command to search for keywords (in this case, '.' as a placeholder) in man page listings and outputting it into a file called \"wtf.txt\". It uses the 'cat' command to concatenate the output from 'man -k .' directly into the specified file.",
+        "type": "summary"
+    },
+    "46": {
+        "file_id": 12,
+        "content": "#!/bin/bash\nman -k . | cat > \"wtf.txt\"",
+        "type": "code",
+        "location": "/GeneralUsageLister/main_lister.sh:1-2"
+    },
+    "47": {
+        "file_id": 12,
+        "content": "This code is using the 'man' command to search for keywords (in this case, '.' as a placeholder) in man page listings and outputting it into a file called \"wtf.txt\". It uses the 'cat' command to concatenate the output from 'man -k .' directly into the specified file.",
+        "type": "comment"
+    },
+    "48": {
+        "file_id": 13,
+        "content": "/GeneralUsageLister/wtf.py",
+        "type": "filepath"
+    },
+    "49": {
+        "file_id": 13,
+        "content": "This code reads a text file, searches for lines starting with a keyword followed by a space, and appends the found phrases to a list. It then writes those phrases into another text file. The code uses regular expressions for searching and handles exceptions when reading the input file.",
+        "type": "summary"
+    },
+    "50": {
+        "file_id": 13,
+        "content": "import re\na=open(\"wtf.txt\",\"r\")\ni=0\np0=[]\nwhile i!=1:\n    b=a.readline()\n#    print(b)\n    try:\n        p=re.sub(r'\\(.+$','',re.search(r\"^.+( - )\",b).group(0))\n        if p!=\"\":\n            print (p)\n            p0.append(p)\n        else:\n            i=1\n            break\n    except:\n        break\na.close()\nb=open(\"MainIndexWithIdenticalKeywords.txt\",\"w+\")\nfor p1 in p0:\n    b.write(p1+\"\\n\")\nb.close()",
+        "type": "code",
+        "location": "/GeneralUsageLister/wtf.py:1-22"
+    },
+    "51": {
+        "file_id": 13,
+        "content": "This code reads a text file, searches for lines starting with a keyword followed by a space, and appends the found phrases to a list. It then writes those phrases into another text file. The code uses regular expressions for searching and handles exceptions when reading the input file.",
+        "type": "comment"
+    },
+    "52": {
+        "file_id": 14,
+        "content": "/MacCS.sh",
+        "type": "filepath"
+    },
+    "53": {
+        "file_id": 14,
+        "content": "This command searches for executable files in the directories listed in the PATH variable. It uses echo to display each directory on a new line, then xargs finds files within those directories that are executable and at most one level deep.",
+        "type": "summary"
+    },
+    "54": {
+        "file_id": 14,
+        "content": "echo $PATH | tr ':' '\\n' | xargs -I {} find {} -maxdepth 1 -type f -perm '++x'",
+        "type": "code",
+        "location": "/MacCS.sh:1-1"
+    },
+    "55": {
+        "file_id": 14,
+        "content": "This command searches for executable files in the directories listed in the PATH variable. It uses echo to display each directory on a new line, then xargs finds files within those directories that are executable and at most one level deep.",
+        "type": "comment"
+    },
+    "56": {
+        "file_id": 15,
+        "content": "/README.md",
+        "type": "filepath"
+    },
+    "57": {
+        "file_id": 15,
+        "content": "The code represents a README.md file for a project called \"lazer\". It describes an Advanced Agent AI that acts as a General Problem Solver, capable of automatic information gathering, understanding, and source code generation to make everything executable, analyzable, and controllable.",
+        "type": "summary"
+    },
+    "58": {
+        "file_id": 15,
+        "content": "# lazer\nstate-of-the-art Advanced Agent AI as a General Problem Solver, including automatic information gathering, understanding and source code generating\n```To make everything executable, analyzable, controllable.```",
+        "type": "code",
+        "location": "/README.md:1-4"
+    },
+    "59": {
+        "file_id": 15,
+        "content": "The code represents a README.md file for a project called \"lazer\". It describes an Advanced Agent AI that acts as a General Problem Solver, capable of automatic information gathering, understanding, and source code generation to make everything executable, analyzable, and controllable.",
+        "type": "comment"
+    },
+    "60": {
+        "file_id": 16,
+        "content": "/README_previous.md",
+        "type": "filepath"
+    },
+    "61": {
+        "file_id": 16,
+        "content": "The author of \"lazar\" AI project expresses frustration with repetitive tasks and nature, aims to create an advanced problem solver without considering potential misuse or respecting third-party licenses.",
+        "type": "summary"
+    },
+    "62": {
+        "file_id": 16,
+        "content": "# lazer\nstate-of-the-art Advanced Agent AI as a General Problem Solver, including but not confined to automatic information gathering, understanding and source code generating\n# DISCLAIMER\n## Actually I don't give a shit about license\nOnce upon a time, I saw some companies were forced to share part of their code due to the legal restriction of GPL, so I wanted to put mine under that too. But actually, no matter what license is put under my fucking project, no one will even give a shit about my project for the fuck sake!\nIt is when I realize how good to have WTFPL here. You might see some 3rd party code fetched from here and there inside this project, but I DON'T GIVE A SHIT ABOUT THEIR LICENSE, AND I DO NOT RESPECT THEIR COPYRIGHT. My work here is utterly clear: to try my best to make it work. Any other things are out of my consideration.\n## I don't give a shit about the consequence\nThere might be some reports saying robot riots or disadvantages of agent AIs, BUT I DON'T GIVE A SHIT ABOUT IT.",
+        "type": "code",
+        "location": "/README_previous.md:1-12"
+    },
+    "63": {
+        "file_id": 16,
+        "content": "The code is a README_previous.md file for a project called \"lazar\" that aims to be an advanced AI problem solver. The author expresses frustration with licensing requirements and does not respect third-party license or copyrights, focusing solely on making their work functional. They also do not care about potential consequences of their project.",
+        "type": "comment"
+    },
+    "64": {
+        "file_id": 16,
+        "content": " All that I can see here is a trashed lot. Piles of shits are placed everywhere, and misinformation transfers into everyone's ears.\nI AM TRYING MY BEST TO MAKE A REAL AGENT AI, A REAL GENERAL PROBLEM SOLVER TO FREE EVERY INDIVIDUAL ON EARTH FROM WORK. You may use it to do anything, including massacre if you wish to BUT I DON'T GIVE A SHIT ABOUT THAT.\n## Thinking is evil, learning is evil, working is evil\nI HATE REPETITIVE TASK. In the past, I only refer few actions as repetitive but now I have realized that EVERYTHING ON EARTH IS REPETITIVE. I then doubt why this is true and the answer is obvious. IT IS THE NATURE OF NATURE.\nMaybe someone will consider time traveling after this project is done but I have to say: NO MORE TRICKS ON US, NATURE.",
+        "type": "code",
+        "location": "/README_previous.md:12-19"
+    },
+    "65": {
+        "file_id": 16,
+        "content": "This code appears to be a passionate statement against repetitive tasks and the nature of earth. It expresses a desire to create an AI capable of solving general problems, but also emphasizes that the creator doesn't care about potential misuse. The author doubts why everything on earth is repetitive and questions nature's tricks.",
+        "type": "comment"
+    },
+    "66": {
+        "file_id": 17,
+        "content": "/XListAllCommands.sh",
+        "type": "filepath"
+    },
+    "67": {
+        "file_id": 17,
+        "content": "This Bash script defines a function called ListAllCommands, which takes the PATH as input. It uses xargs to find all executable files in the specified path and outputs them sorted uniquely.",
+        "type": "summary"
+    },
+    "68": {
+        "file_id": 17,
+        "content": "#!/bin/bash\nfunction ListAllCommands\n{\n    echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \\\n        -executable -type f -printf '%P\\n' | sort -u\n}\nListAllCommands",
+        "type": "code",
+        "location": "/XListAllCommands.sh:1-7"
+    },
+    "69": {
+        "file_id": 17,
+        "content": "This Bash script defines a function called ListAllCommands, which takes the PATH as input. It uses xargs to find all executable files in the specified path and outputs them sorted uniquely.",
+        "type": "comment"
+    },
+    "70": {
+        "file_id": 18,
+        "content": "/XListAllCommandsWithAlias.sh",
+        "type": "filepath"
+    },
+    "71": {
+        "file_id": 18,
+        "content": "Script to find all executable files in the specified PATH, then lists them alongside existing aliases for command line management.",
+        "type": "summary"
+    },
+    "72": {
+        "file_id": 18,
+        "content": "#!/bin/bash\nfunction ListAllCommandsWithAlias\n{\n    COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \\\n        -executable -type f -printf '%P\\n'`\n    ALIASES=`alias | cut -d '=' -f 1`\n    echo \"$COMMANDS\"$'\\n'\"$ALIASES\" | sort -u\n}\nListAllCommandsWithAlias",
+        "type": "code",
+        "location": "/XListAllCommandsWithAlias.sh:1-10"
+    },
+    "73": {
+        "file_id": 18,
+        "content": "Script to find all executable files in the specified PATH, then lists them alongside existing aliases for command line management.",
+        "type": "comment"
+    },
+    "74": {
+        "file_id": 19,
+        "content": "/bookgrep/wxapkg.sh",
+        "type": "filepath"
+    },
+    "75": {
+        "file_id": 19,
+        "content": "This code is changing the directory to a specific location within an app's data storage. Specifically, it navigates to the \"/MicroMsg/3ceac75ed7f4320d3847\" directory inside the \"com.tencent.mm\" app's data folder on Android.",
+        "type": "summary"
+    },
+    "76": {
+        "file_id": 19,
+        "content": "#!/bin/bash\ncd /data/data/com.tencent.mm/MicroMsg/3ceac75ed7f4320d3847",
+        "type": "code",
+        "location": "/bookgrep/wxapkg.sh:1-2"
+    },
+    "77": {
+        "file_id": 19,
+        "content": "This code is changing the directory to a specific location within an app's data storage. Specifically, it navigates to the \"/MicroMsg/3ceac75ed7f4320d3847\" directory inside the \"com.tencent.mm\" app's data folder on Android.",
+        "type": "comment"
+    },
+    "78": {
+        "file_id": 20,
+        "content": "/metalearning/FirstGrep.py",
+        "type": "filepath"
+    },
+    "79": {
+        "file_id": 20,
+        "content": "The code imports the Jieba library, reads a log file (1.log) in UTF-8 encoding, splits the content into words using Jieba's cut function, joins them back together with spaces, and then writes the result to another file called 1.summary. Finally, it closes both files.",
+        "type": "summary"
+    },
+    "80": {
+        "file_id": 20,
+        "content": "import jieba\na=open(\"WordsExample/1.log\",\"r\",encoding=\"utf-8\")\np=\" \".join(jieba.cut(a.read()))\nb=open(\"1.summary\",\"w+\")\nb.write(p)\na.close()\nb.close()",
+        "type": "code",
+        "location": "/metalearning/FirstGrep.py:1-9"
+    },
+    "81": {
+        "file_id": 20,
+        "content": "The code imports the Jieba library, reads a log file (1.log) in UTF-8 encoding, splits the content into words using Jieba's cut function, joins them back together with spaces, and then writes the result to another file called 1.summary. Finally, it closes both files.",
+        "type": "comment"
+    },
+    "82": {
+        "file_id": 21,
+        "content": "/metalearning/FirstGrep.sh",
+        "type": "filepath"
+    },
+    "83": {
+        "file_id": 21,
+        "content": "This code reads the file \"0.log\" from the directory \"WordsExample\", filters out lines starting with non-period characters followed by a period, and writes the output to the file \"0.summary\".",
+        "type": "summary"
+    },
+    "84": {
+        "file_id": 21,
+        "content": "#!/bin/bash\ncat WordsExample/0.log | grep -E -o \"^[^。]+(。)\" | cat > 0.summary",
+        "type": "code",
+        "location": "/metalearning/FirstGrep.sh:1-2"
+    },
+    "85": {
+        "file_id": 21,
+        "content": "This code reads the file \"0.log\" from the directory \"WordsExample\", filters out lines starting with non-period characters followed by a period, and writes the output to the file \"0.summary\".",
+        "type": "comment"
+    },
+    "86": {
+        "file_id": 22,
+        "content": "/metalearning/core.py",
+        "type": "filepath"
+    },
+    "87": {
+        "file_id": 22,
+        "content": "Code searches for nodes and relationships in a Neo4j graph database using Py2neo, creating two nodes with \"Person\" label, establishing relationships, updating count properties, and explaining difference between find and find_one.",
+        "type": "summary"
+    },
+    "88": {
+        "file_id": 22,
+        "content": "# coding: utf-8 -*-\nfrom py2neo import Graph,Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\nmatcher=NodeMatcher(graph)\ntest_node_1 = Node(label = \"Person\",name = \"test_node_1\")\ntest_node_2 = Node(label = \"Person\",name = \"test_node_2\")\ngraph.create(test_node_1)\ngraph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"\nnode_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\nnode_1_call_node_2['count'] = 1\nnode_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\nnode_2_call_node_1['count'] = 1\ngraph.create(node_1_call_node_2)\ngraph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\nnode_1_call_node_2['count']+=1\ngraph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。\nfind查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(",
+        "type": "code",
+        "location": "/metalearning/core.py:1-33"
+    },
+    "89": {
+        "file_id": 22,
+        "content": "Establishes two nodes (test_node_1 and test_node_2) with \"Person\" label.\nCreates two relationships between the nodes, both labeled as \"CALL\".\nInitializes relationship properties and assigns count as 1 for each relationship.\nUpdates node_1_call_node_2's count property by incrementing it by 1.\nExplains the difference between find and find_one for querying nodes/relationships in Neo4j database using Py2neo library.",
+        "type": "comment"
+    },
+    "90": {
+        "file_id": 22,
+        "content": "#  label=\"Person\",\n#  property_key=\"name\",\n  # property_value=\"test_node_1\"\n#)\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\n# match_relation = graph.match(start_node=find_code_1,bidirectional=False) #True\n# for i in match_relation:\n#     print(i)\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)\n# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
+        "type": "code",
+        "location": "/metalearning/core.py:34-61"
+    },
+    "91": {
+        "file_id": 22,
+        "content": "This code is searching for specific nodes and relationships in a graph using the Neo4j Python driver. It uses the \"match\" and \"match_one\" functions to find nodes with labels, properties, and connections between them. The code also counts the number of matches and pushes matching nodes into a graph database for further processing.",
+        "type": "comment"
+    },
+    "92": {
+        "file_id": 23,
+        "content": "/metalearning/generic/README",
+        "type": "filepath"
+    },
+    "93": {
+        "file_id": 23,
+        "content": "This code seems to describe a generic data regenerator that accepts all types of data, derives new ones based on the original input, and checks LibHDF5 for hierarchical data format support.",
+        "type": "summary"
+    },
+    "94": {
+        "file_id": 23,
+        "content": "THE GENERIC REGENERATOR. ALL FORM OF DATA ACCEPTED. DERIVE FROM ORIGINAL AND CONSTRUCT NEW ONES.\nCHECK THE LIBHDF5 FIRST. THE HIERACHICAL DATA FORMAT.",
+        "type": "code",
+        "location": "/metalearning/generic/README:1-3"
+    },
+    "95": {
+        "file_id": 23,
+        "content": "This code seems to describe a generic data regenerator that accepts all types of data, derives new ones based on the original input, and checks LibHDF5 for hierarchical data format support.",
+        "type": "comment"
+    },
+    "96": {
+        "file_id": 24,
+        "content": "/metalearning/generic/test/README",
+        "type": "filepath"
+    },
+    "97": {
+        "file_id": 24,
+        "content": "Building a matrix with various test components, measuring progress and evaluating the reach of specific sections. Preloads keys for plotting while excluding special marks not in queue.",
+        "type": "summary"
+    },
+    "98": {
+        "file_id": 24,
+        "content": "WE ARE BUILDING A MATRIX HERE.\nDIFFERENT PART OF THE WORD AND DIFFERENT KIND OF TEST. SEE HOW FAR A PORTION CAN GO.\npreload all necessary keys into the plot. other special marks are not queued.",
+        "type": "code",
+        "location": "/metalearning/generic/test/README:1-4"
+    },
+    "99": {
+        "file_id": 24,
+        "content": "Building a matrix with various test components, measuring progress and evaluating the reach of specific sections. Preloads keys for plotting while excluding special marks not in queue.",
+        "type": "comment"
+    }
+}

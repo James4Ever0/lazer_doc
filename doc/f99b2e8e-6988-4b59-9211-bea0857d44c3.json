@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the storeAList and jokeMeUp functions, creates a Person class with a name attribute but no age, initializes an instance of Person with a joke name, does not call any age function or set an age value, then prints a single joke's name and stores that joke in a list.",
+    "details": [
+        {
+            "comment": "This code imports the storeAList and jokeMeUp functions, creates a Person class with a name attribute but no age, initializes an instance of Person with a joke name, does not call any age function or set an age value, then prints a single joke's name and stores that joke in a list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/simpleClass.py\":0-10",
+            "content": "from storeADill import storeAList\nfrom testR import jokeMeUp\nclass Person:\n  def __init__(self, name):\n    self.name = name\n#    self.age = age\njoke=Person(jokeMeUp)\n#print(\"--\",\"sample:\",joke.name(5),joke.age(4),\"--\")\njoke.name()\nstoreAList(joke)"
+        }
+    ]
+}

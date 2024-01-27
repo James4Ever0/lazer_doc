@@ -1,0 +1,10 @@
+{
+    "summary": "This script prompts the user to enter their name, age, and salary using Bash command-line interface.",
+    "details": [
+        {
+            "comment": "This script prompts the user to enter their name, age, and salary using Bash command-line interface.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/shit.sh\":0-12",
+            "content": "#!/bin/bash\necho \"Enter your name\"\nread $REPLY\necho \"Enter your age\"\nread $REPLY\necho \"Enter your salary\"\nread $REPLY"
+        }
+    ]
+}

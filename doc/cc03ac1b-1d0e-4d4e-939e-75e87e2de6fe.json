@@ -1,0 +1,10 @@
+{
+    "summary": "This script runs three different baseband scripts simultaneously using Bash.",
+    "details": [
+        {
+            "comment": "This script runs three different baseband scripts simultaneously using Bash.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex/Fuck.sh\":0-3",
+            "content": "#!/bin/bash\n./Baseband0.sh &\n./Baseband1.sh &\n./Baseband2.sh &"
+        }
+    ]
+}

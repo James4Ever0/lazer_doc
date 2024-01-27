@@ -1,0 +1,15 @@
+{
+    "summary": "The code sends 10 concurrent GET requests to Baidu using Axios, retrieves search results pages with varying 'pn' values and logs the responses. It catches and logs any errors that occur.",
+    "details": [
+        {
+            "comment": "This code is making 10 concurrent GET requests to Baidu using Axios library. The requests are for different pages of search results, with the same query parameter 'word' and varying 'pn' (page number) values starting from 0. It will store the responses in variables response1 to response10.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/node-batch0.js\":0-8",
+            "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+2)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+3)+\"0\"),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+4)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+5)+\"0\"),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(6+n)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+7)+\"0\"),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(8+n)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+9)+\"0\")\n]).then(axios.spread((response1, response2,response3,response4,response5,response6,response7,response8,response9,response10) => {"
+        },
+        {
+            "comment": "The code logs the data from responses 1 to 10. If an error occurs, it catches and logs the error.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/node-batch0.js\":9-21",
+            "content": "  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\nconsole.log(response4.data);\nconsole.log(response5.data); \nconsole.log(response6.data); \nconsole.log(response7.data); \nconsole.log(response8.data);\nconsole.log(response9.data);  \nconsole.log(response10.data); \n})).catch(error => {\n  console.log(error);\n});"
+        }
+    ]
+}

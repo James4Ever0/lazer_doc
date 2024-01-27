@@ -1,0 +1,10 @@
+{
+    "summary": "This script filters and extracts specific lines from the \"POS.log\" file based on keywords (\"noun\", \"verb\", \"word\") and saves them to separate files (Kneel0.log, Kneel1.log, Kneel2.log) respectively.",
+    "details": [
+        {
+            "comment": "This script filters and extracts specific lines from the \"POS.log\" file based on keywords (\"noun\", \"verb\", \"word\") and saves them to separate files (Kneel0.log, Kneel1.log, Kneel2.log) respectively.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/coref-v2/kneelDown.sh\":0-3",
+            "content": "#!/bin/bash\ncat POS.log | grep \" noun\" | grep -E -o \"^[^ ]+\" > Kneel0.log\ncat POS.log | grep \" word\" | grep -E -o \"^[^ ]+\" > Kneel1.log\ncat POS.log | grep \" verb\" | grep -E -o \"^[^ ]+\" > Kneel2.log"
+        }
+    ]
+}

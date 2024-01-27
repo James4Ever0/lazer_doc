@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports BeautifulSoup and simpleStorage libraries, defines a function to extract hyperlinks from HTML using BeautifulSoup, opens and reads a file, filters out empty strings, and creates a list of hyperlinks from specified files. It then prints the list and stores it in simpleStorage.",
+    "details": [
+        {
+            "comment": "This code imports BeautifulSoup and simpleStorage libraries, defines a function to extract hyperlinks from HTML using BeautifulSoup, opens and reads a file, filters out empty strings, and creates a list of hyperlinks from specified files. It then prints the list and stores it in simpleStorage.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/shitAgain/fuck.py\":0-23",
+            "content": "from bs4 import BeautifulSoup\nfrom simpleStorage import storeAList\ndef soup(a):\n    return BeautifulSoup(a)\ndef openShit(b):\n    f=\"\"\n    with open(b,\"r\") as fuck:\n        f=fuck.read()\n    return f\n#def openList(b):\n#    return list(filter((lambda x:x!=\"\"),openShit(b).split(\"\\n\")))\ndef shit(x):\n    return [a[\"href\"] for a in soup(openShit(x)).find_all(name=\"a\",attrs={\"itemprop\":\"name codeRepository\"},recursive=True)]\n# fuck you.\n#d=[list(filter((lambda x:x!=[]),[shit(c) for c in b])) for b in [openList(a) for a in openList(\"trauma.log\")]]\nd=[shit(x) for x in [str(b)+\"_.log\" for b in range(6)]]\nprint(d)\nstoreAList(d)\n#e=[[shit(c) for c ]]\n#print(len(d))"
+        }
+    ]
+}

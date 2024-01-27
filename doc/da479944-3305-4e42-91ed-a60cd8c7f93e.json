@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports subprocess and executes an 'ls -l' command, captures output in stdout and error in stderr, then prints both.",
+    "details": [
+        {
+            "comment": "Code imports subprocess and executes an 'ls -l' command, captures output in stdout and error in stderr, then prints both.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/dope-process.py\":0-10",
+            "content": "import subprocess\n# import subprocess\nout = subprocess.Popen(['ls', '-l'],\n           stdout=subprocess.PIPE,\n           stderr=subprocess.STDOUT)\nstdout,stderr = out.communicate()\nprint(stdout)\nprint(stderr)"
+        }
+    ]
+}

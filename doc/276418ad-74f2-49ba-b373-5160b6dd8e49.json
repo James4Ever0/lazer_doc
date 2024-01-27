@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads Python script files, extracts table and column names from 'CREATE TABLE' and CONSTRAINT statements, and returns a list with the table name and column names. It is used on two files and prints elements 'a' and 'b', separated by \"--spliter--\".",
+    "details": [
+        {
+            "comment": "The code performs meta-programming to extract table and column names from a given Python script file. It reads the file, searches for 'CREATE TABLE' statements, extracts the table name, removes it, and then finds all CONSTRAINT statements. After filtering and processing, it returns a list containing the table name and a list of column names. The code is used on two files: \"makeGroupingDatabase.py\" and \"makeAnother.py\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/derive_prefixed_fixed.py\":0-27",
+            "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=[\"makeGroupingDatabase.py\",\"makeAnother.py\"]\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\n#c=cockShock(dickHead[2])"
+        },
+        {
+            "comment": "Code prints elements 'a' and 'b', separates with \"--spliter--\", then stores them in a list.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/derive_prefixed_fixed.py\":28-31",
+            "content": "'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([a,b])"
+        }
+    ]
+}

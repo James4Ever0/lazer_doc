@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads two pickle files, \"scavenger.pickle\" and \"scavenger0.pickle\", then loads their contents into the variable papi and papi0 respectively. It also defines two lambda functions, joker and joke. The code opens a file named \"core.log\", reads its content, and assigns it to nope. It further opens another file named alphabets.txt, reading its content and splitting it by newline characters. Finally, the code applies the defined lambda functions (joker and joke) to filter unnecessary elements from the content before printing the output.",
+    "details": [
+        {
+            "comment": "This code reads two pickle files, \"scavenger.pickle\" and \"scavenger0.pickle\", then loads their contents into the variable papi and papi0 respectively. It also defines two lambda functions, joker and joke. The code opens a file named \"core.log\", reads its content, and assigns it to nope. It further opens another file named alphabets.txt, reading its content and splitting it by newline characters. Finally, the code applies the defined lambda functions (joker and joke) to filter unnecessary elements from the content before printing the output.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/simplify.py\":0-21",
+            "content": "import pickle\npapi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n    print(shit0)"
+        }
+    ]
+}

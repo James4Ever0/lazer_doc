@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads the contents of \"MainIndexWithIdenticalKeywords.txt\", filters out lines starting with non-space, non-comma characters using grep and awk, then pipes the results to a series of man commands for documentation lookup followed by conversion to plain text format using col, and finally saves it in the \"wtf\" directory with a file name identical to the input line.",
+    "details": [
+        {
+            "comment": "This code reads the contents of \"MainIndexWithIdenticalKeywords.txt\", filters out lines starting with non-space, non-comma characters using grep and awk, then pipes the results to a series of man commands for documentation lookup followed by conversion to plain text format using col, and finally saves it in the \"wtf\" directory with a file name identical to the input line.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/AuxiliaryProcessor.sh\":0-1",
+            "content": "#!/bin/bash\ncat \"MainIndexWithIdenticalKeywords.txt\" | grep -E \"^[^ ,]+\" | awk '{print \"man \" $0 \" | col -b | wtf/\" $0 \".txt\" }'"
+        }
+    ]
+}

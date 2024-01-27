@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads the content of a file named \"README\" and prints it to the console.",
+    "details": [
+        {
+            "comment": "The code reads the content of a file named \"README\" and prints it to the console.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/readAFile.hs\":0-4",
+            "content": "main=do\n let file = \"README\"\n contents <- readFile file\n-- print contents\n print contents"
+        }
+    ]
+}

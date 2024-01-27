@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a file named \"README\", converts the content to a set (removing duplicates) and then filters out non-alphabetic characters, resulting in a new list called hotspot. This process aims to remove common patterns and prepare data for further analysis or filtering. The code then iterates through the original string, printing the linear index of each character.",
+    "details": [
+        {
+            "comment": "This code reads a file named \"README\", converts the content to a set (removing duplicates) and then filters out non-alphabetic characters, resulting in a new list called hotspot. This process aims to remove common patterns and prepare data for further analysis or filtering. The code then iterates through the original string, printing the linear index of each character.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/one.py\":0-23",
+            "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\nfor r,k in enumerate(list(mississippi)):\n    print (r,k)"
+        }
+    ]
+}

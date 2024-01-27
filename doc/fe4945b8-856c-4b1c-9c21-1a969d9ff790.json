@@ -1,0 +1,10 @@
+{
+    "summary": "The code is a Bash script that uses the \"links\" command to dump HTML content from the specified URL (https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now) and saves it into a file named \"example/0.log\" using the \"cat\" command for output redirection. This could be used to extract website data or analyze its structure.",
+    "details": [
+        {
+            "comment": "The code is a Bash script that uses the \"links\" command to dump HTML content from the specified URL (https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now) and saves it into a file named \"example/0.log\" using the \"cat\" command for output redirection. This could be used to extract website data or analyze its structure.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/websitegrep/links-dump.sh\":0-1",
+            "content": "#!/bin/bash\nlinks -dump https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now | cat > example/0.log"
+        }
+    ]
+}

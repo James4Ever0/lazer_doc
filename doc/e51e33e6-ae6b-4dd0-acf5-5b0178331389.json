@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports functions from other modules, defines a function 'forMotherRussia' that takes in arguments and prints them before returning the result of another function, then calls this function with different arguments in print statements.",
+    "details": [
+        {
+            "comment": "The code imports functions from other modules, defines a function 'forMotherRussia' that takes in arguments and prints them before returning the result of another function, then calls this function with different arguments in print statements.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/newTest.py\":0-16",
+            "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickle import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n    print(shitFuck)\n    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    executeCode(forMotherRussia(numToKill,superRats))\n# fucking pricks.\nprint(forMotherRussia(0,[1,\"asia\",2,\"fuck\",\"shit\"]))\nprint(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))"
+        }
+    ]
+}

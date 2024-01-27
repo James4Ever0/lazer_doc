@@ -1,0 +1,543 @@
+{
+    "900": {
+        "file_id": 188,
+        "content": "simple=[[hello you mot\"\"\"\"her fucker, you are now g\"\"\"\"oing to die.\nyou mother fucking whore!\nfuck you dickh\"\"\"\"\"\"ead!\nall your\"\"\"\"\" base are bel\"\"\"ong to us!]]\n-- print(simple:gsub(\"\\\"\",\"\\\\\\\"\"))\nhandle=io.popen(\"python sadomachist.py <<< \\\"\\\"\\\"\\\"\\\"\"..simple:gsub(\"\\\"\",\"\\\\\\\"\")..\"\\\"\\\"\\\"\\\"\\\"\")\nresult=handle:read(\"*a\")\nhandle:close()\nprint(result)\n-- try to let other process take this shit down!\n-- i suggest you to do this in two ways:\n-- one is to save it to some file\n-- two is use redis.\n-- but you will not give this shit up, will you?\n-- you will try to do this in stdin!",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/standard-input.lua:1-15"
+    },
+    "901": {
+        "file_id": 188,
+        "content": "The code reads a string from the \"simple\" variable, escapes double quotes with backslashes using Lua's gsub function, and then passes it to a Python script via stdin. The output of the Python script is captured in the \"result\" variable before being printed. Additionally, it suggests saving the result to a file or using Redis for future processing, but notes that the user may attempt to process it through stdin anyway.",
+        "type": "comment"
+    },
+    "902": {
+        "file_id": 189,
+        "content": "/multilingual/hotfix-v1/subroutine.lua",
+        "type": "filepath"
+    },
+    "903": {
+        "file_id": 189,
+        "content": "Code has two functions, Split and Splitv, for string splitting with delimiters; author faced implementation issues. Lua script handles user input and commands, faces challenges running shell in Node.js; potential solution may be found elsewhere.",
+        "type": "summary"
+    },
+    "904": {
+        "file_id": 189,
+        "content": "superspliter = [[;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]]\n---------------------------------------------------\nrange = require(\"range_module.init\")\n-- fuckyeah!\n-- you bitch!\nfunction Split(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    if string.find(str, delim) == nil then  \n        return { str }  \n    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0  \n    local lastPos   \n    for part, pos in string.gmatch(str, pat) do\n\t    if part ~=\"\\n\" and part ~=\"\" then\n        nb = nb + 1  \n        result[nb] = part   \n        lastPos = pos   \n        if nb == maxNb then break end  \nend\n    end  \n    -- Handle the last field   \n    if nb ~= maxNb then  \n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--result[1]=nil\n    return result   \nend  \nfunction Splitv(str, delim, maxNb)   \n    -- Eliminate bad cases...   \n    maxLimit=maxNb+1\n    if string.find(str, delim) == nil then  \n        return { str }  ",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:1-39"
+    },
+    "905": {
+        "file_id": 189,
+        "content": "This code contains two functions, Split and Splitv, which split a given string into substrings based on a specified delimiter. It handles edge cases like empty or missing delimiters, and maximum number of resulting substrings. The Splitv function also includes an additional maximum limit parameter.",
+        "type": "comment"
+    },
+    "906": {
+        "file_id": 189,
+        "content": "    end  \n    if maxNb == nil or maxNb < 1 then  \n        maxNb = 0    -- No limit   \n    end  \n    local result = {}  \n    local pat = \"(.-)\" .. delim .. \"()\"   \n    local nb = 0\n    local nb0 = 0\n    local lastPos\n    local lastPos0\n    for part, pos in string.gmatch(str, pat) do  if part~=\"\\n\" and part~=\"\" then\n--string.gfind() is renamed.\n        nb0 = nb0 + 1 \n\tif nb0 <= maxLimit then\n        result[nb0] = part\nend\n\tlastPos0=pos\n        if nb0 <= maxNb then \n\t\tlastPos=lastPos0\n\t\tnb=nb0\n\tend\n        if nb0 > maxLimit then result[maxLimit]=result[maxLimit]..delim..part end  \n    end  \n    end\n    -- Handle the last field   \n    if nb ~= maxNb then \n-- this means not equal to the maxNb.\n-- better make sure that is not real.\n        result[nb + 1] = string.sub(str, lastPos)   \n    end  \n--[[local fuckingnumber=#result\n    if fuckingnumber>maxLimit then\n\t    for i in range(maxLimit+1,fuckingnumber) do\n\t\t    result[i]=nil\n\t    end]]\n--result[1]=nil\n    return result   \nend  \n--command =\"node duper-get.js java\"\n--the_fucking_url=[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]]",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:40-82"
+    },
+    "907": {
+        "file_id": 189,
+        "content": "This function extracts lines from a string, with an optional maximum limit for the number of lines. It uses regular expressions and handles the last line separately if it exceeds the max limit. Optionally removes extra lines beyond the specified maximum.",
+        "type": "comment"
+    },
+    "908": {
+        "file_id": 189,
+        "content": "--fucking shit.\n--[[command =\"node supercat.js java 0\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()]]\ncommand =\"node dogcat.js \"..arg[1]\nfor iterable in range(2,#arg) do\ncommand=command..\" \"..arg[iterable]\nend\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nsupertable=Split(result,superspliter,nil)\none_fuck_all=\"\"\n-- never fucking use minus sign in variable name and fuck you!\nfuckall_commands={}\nfor key,value in pairs(supertable) do\n--\tif key>1 then\n--local\t\nsupertable[key]=Splitv(value,\"\\n\",2)\none_fuck_all=one_fuck_all..\" \"..supertable[key][2]\nif #supertable[key]>2 then\n\tfuckall_commands[key]=\"python sadomachist.py <<< \\\"\\\"\\\"\\\"\\\"\"..supertable[key][3]:gsub(\"\\\"\",\"\\\\\\\"\")..\"\\\"\\\"\\\"\\\"\\\"\"\nend\n-- you little piece of shit!\n-- forgot to add the mother fucking space!\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\t--[[for fuckingkey,fuckingvalue in pairs(nextable) do\n\t\t--if fuckingkey >1 then",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:83-118"
+    },
+    "909": {
+        "file_id": 189,
+        "content": "This code appears to be a part of a larger program. It executes external scripts, processes the results, and stores them in various tables. The author seems frustrated and uses profanity throughout the code, indicating potential dissatisfaction with previous implementations or debugging difficulties.",
+        "type": "comment"
+    },
+    "910": {
+        "file_id": 189,
+        "content": "\t\tprint(\"[\"..(fuckingkey-1)..\"]\")\n\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.\n\t\t-- i always cheat myself.\n\t--\tprint(fuckingvalue)\n\t--else\n\t\tlocal command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n\t\tlocal handle=io.popen(command) \n\t\tlocal result=handle:read(\"*a\") \n\t\thandle:close() \n--\t\tprint(result) \n\t\tio.write(result)\n\t\t--the final return should be integrated.\n\telse\n\t\tprint (fuckingvalue)\n\tend\n\t\t-- wtf is the difference between the fucking colon and the period?\n\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.\n--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend--]]\nend\n--end\n--one_fuck_all_table={}\nfuckyou_command = \"lua shell-args.lua \"..one_fuck_all\n--print(one_fuck_all)",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:119-157"
+    },
+    "911": {
+        "file_id": 189,
+        "content": "This code is likely part of a larger function that processes data and executes commands based on user input. It appears to have some hardcoded language and may be frustrated with the developer team (\"you pricks\"). The code takes an input value, potentially from a table or array, and uses it as a command-line argument for another Lua script (shell-args.lua). If the input key is 2, it executes this secondary script, captures its output, and returns it to the main program. Otherwise, it simply prints or returns the original value. The code also includes some comments expressing frustration with the developers and the process of removing the first item from the table (#1).",
+        "type": "comment"
+    },
+    "912": {
+        "file_id": 189,
+        "content": "--i do not need that prick no more.\nfuckyou_handle = io.popen(fuckyou_command)\nfuckyou_result = Split(fuckyou_handle:read(\"*a\"),\"\\n\")\n-- we have to realize another piece of shit locally.\nfuckyou_handle:close()\n-- the table will be returned.\n--result = Split(result0,\"\\n\")\n--[[print(fuckyou_result[1])\nfor dickkey,dickvalue in pairs(fuckyou_result) do\n\tsupertable[dickkey][2]=dickvalue\nend\n]]\nfuckall_handles={}\nfuckall_results={}\nfor bitchkey,bitchvalue in pairs(fuckall_commands) do\n\tfuckall_handles[bitchkey]=io.popen(bitchvalue)\nend\nfor shitkey,shitvalue in pairs(fuckall_handles) do\n\tfuckall_results[shitkey]=shitvalue:read(\"*a\")\n\tfuckall_handles[shitkey]:close()\nend\n--i am gonna make it multithreaded.\n--fucking shit. you bitchs are great.\nfor key,value in pairs(supertable) do\n--\tif key>1 then\n--local\tnextable=Splitv(value,\"\\n\",2)\n-- the maximum item should be 2 thereafter.\n-- fuckyou!\n--[[\tprint (nextable[2])\n\tprint (nextable[3])]]\n\tfor fuckingkey,fuckingvalue in pairs(supertable[key]) do\n\t\t--if fuckingkey >1 then\n\t\tprint(\"[\"..(fuckingkey-1)..\"]\")",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:158-191"
+    },
+    "913": {
+        "file_id": 189,
+        "content": "This code appears to execute multiple commands through different processes using the Lua programming language. It first runs a \"fuckyou_command\", reads its output, and splits it into separate lines. Then, it runs several \"fuckall_commands\" in parallel, storing their outputs as well. The final step seems to be printing out the results from these commands in a specific format. The code also includes comments indicating potential improvements such as multithreading and expresses frustration with the process.",
+        "type": "comment"
+    },
+    "914": {
+        "file_id": 189,
+        "content": "\t\t-- YOU SET ME UP YOU PRICKS!\n\t\t-- the number 1 item is a fucking link.\n\t\tif fuckingkey==2 then\n\t\t\t-- fuck you asshole, you pricks.\n\t\t-- i always cheat myself.\n\t\tprint(fuckyou_result[key])\n-- this is a fucking table.\n\telseif fuckingkey==3 and string.len(fuckingvalue)>5 then\n\t\tif fuckall_results[key]~=nil then\n\t\t--problem starts here.\n\t\tprint (fuckall_results[key])\n\tend\n\t\t--local command = \"lua shell-args.lua \"..fuckingvalue\n\t\t--let me see it first.\n--\t\tprint(command)\n--\t\tlocal handle=io.popen(command) \n--\t\tlocal result=handle:read(\"*a\") \n--\t\thandle:close() \n--\t\tprint(result) \n--\t\tio.write(result)\n\t\t--the final return should be integrated.\n\telse\n\t\tprint (fuckingvalue)\n\t\t-- let's just test.\n\t\t-- if shits happen we change it later on.\nend\n\t\t-- wtf is the difference between the fucking colon and the period?\n\t\t-- is this fucking usable?\n\t\t-- i just want the motherfucking real address!\n\t\t-- the fucking key ranges from 1 to 4, but we have removed the first one somehow.\n\t\t-- just define that shit in the original function.\n\t\t-- remove the motherfucking #1 item.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:192-225"
+    },
+    "915": {
+        "file_id": 189,
+        "content": "This code appears to be a portion of a Lua script that handles user input and printing results, possibly for a command-line interface. The code includes conditional statements based on the value of \"fuckingkey\" and checks the length of \"fuckingvalue\". It also contains comments expressing frustration or confusion with the code structure. The final else statement prints the value if no other conditions are met. Overall, the code seems to be a work in progress with some unclear aspects and potentially unnecessary steps.",
+        "type": "comment"
+    },
+    "916": {
+        "file_id": 189,
+        "content": "--\tend\n\tend\n--\tprint (value-processed)\n\tprint (\"--- this is the divide line ---\")\nend\n--end\n--[[print(#supertable)\nprint(#fuckyou_result)\n]]\n--that method is effective.\n--i have to say that nodejs is a predelayed language, so never run shell command inside to launch another predelayed nodejs program!\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v1/subroutine.lua:226-238"
+    },
+    "917": {
+        "file_id": 189,
+        "content": "This code snippet is likely part of a larger Lua script. It appears to end the execution of a subroutine, print a message indicating the end of processing, and potentially perform some cleanup or data analysis on two tables (`supertable` and `fuckyou_result`). The author mentions that Node.js is predelayed, suggesting that running shell commands within it could cause issues due to the language's nature. Additionally, another thread may be referenced for further functionality.",
+        "type": "comment"
+    },
+    "918": {
+        "file_id": 190,
+        "content": "/multilingual/hotfix-v1/supercat.js",
+        "type": "filepath"
+    },
+    "919": {
+        "file_id": 190,
+        "content": "This JavaScript function uses Axios and Cheerio to scrape web data, handle HTTP requests, manipulate HTML, and extract specified tags for Baidu search results. It may have errors or typos and could be part of a larger program with multithreading in Lua and fs module handling.",
+        "type": "summary"
+    },
+    "920": {
+        "file_id": 190,
+        "content": "/* this script can only read from page one\n * to page two\n * therefore needs modification\n * to add up more pages\n * by passing arguments\n * */\nfunction fucking_elimination(submarine,fucking_pattern){\nvar find = fucking_pattern;\nvar regular_fucking_expression = new RegExp(find, 'g');\n// don't ya put fucking minus sign into the fucking shitty variable fucking name!\n//str = str.replace(re, '');\n/*console.log(\"--- fuck you nodejs ---\");\nconsole.log(submarine);\nconsole.log(\"--- fuck you nodejs ---\");\nconsole.log(*/\n\treturn submarine.replace(regular_fucking_expression,\"\");\n};\n//var fs = require('fs');\nvar content=process.argv[3];\nvar monarchy=process.argv.length;\nif (monarchy>4){\n\tfor (var k=4;k<monarchy;k++){\n\t\tcontent+=(\" \"+process.argv[k]);};\n};\n// give a test for the thing.\n// how fucking long is it?\n// starts from #2, and now the #2 is for pages.\n// remember to write things here.  \n// needs java here!\n// fucking shit!\n// better turn into some fucking java & python!\n// motherfucking nodejs!\n// better find way to cope with blanks",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:1-33"
+    },
+    "921": {
+        "file_id": 190,
+        "content": "The code is a JavaScript function for eliminating specified patterns from input text and handling command-line arguments to process multiple pages of content. It uses regular expressions for pattern matching but may need modification to support more pages or different languages.",
+        "type": "comment"
+    },
+    "922": {
+        "file_id": 190,
+        "content": "var p = encodeURIComponent(content);\nvar n=2*process.argv[2];\n// we have multiplied this.\nvar axios = require('axios');              \nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\n// we shall use this pattern.\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:34-67"
+    },
+    "923": {
+        "file_id": 190,
+        "content": "This code snippet seems to involve a series of functions and manipulations. It uses Axios and Cheerio libraries for HTTP requests and manipulating HTML/webpage data, respectively. The code includes a regular expression pattern to search for a specific URL string within the webpage content. Additionally, there's a function named \"mobious\" which seems to generate a selector string for elements with IDs ranging from numberStart to numberEnd. Overall, this appears to be related to web scraping or data extraction tasks.",
+        "type": "comment"
+    },
+    "924": {
+        "file_id": 190,
+        "content": "// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.\n// use something apart from this.\n// this thing is merely a improvement over the local thing.\n/*/ make sure you have the real experiment.\n/\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n*/\nfunction fuckingfucked(data){\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\");",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:68-97"
+    },
+    "925": {
+        "file_id": 190,
+        "content": "This code is searching for a specific tag in an HTML file, checking if it contains a particular string. It uses the cheerio library and fs module to read the 'index.html' file and then iterates through each matching element using jQuery-like syntax. The programmer emphasizes not to consider other options and advises saving time by directly looking for the specific tag with the given criteria. They also mention that this code is an improvement over the previous method, but still suggest considering Python or Lua for more \"magical\" regex operations if needed.",
+        "type": "comment"
+    },
+    "926": {
+        "file_id": 190,
+        "content": "\t\t  //lisp forever!\n\t\t  //console.log(poker);\n\t\t  //there must be conspirscy inside.\n\tconsole.log(fucking_elimination($(this).text(),\"\\n\"));\n\t\t  //ain't need no shit.\n\t\t  console.log(poker);\n\t\t  //console.log(\"fuckyou\");\n\t\t  // this is the title.\n// keep these lines in some sort of loop.\n\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()\n// this is the premise.\n\t\t  if(rock.prop(\"tagName\").toLowerCase()==\"div\"){\n\t/*var initial=$(\":first-child\",$(rock.next()));\n\t// will this be true?\n\twhile (initial!=undefined){\n\tinitial=initial.next();\n\t\tconsole.log(initial.);\n\t}*/\t\n\t  // waste of time here.\n\t\t   if (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};}\n\t  else {if ($(rock).next().prop(\"tagName\").toLowerCase()==\"table\"){\n\t\t  console.log($(rock).next().text());\n\t\t  // the next sibling is a table instead of the fucking style!\n\t//console.log($($(rock).next()).next().text());",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:98-129"
+    },
+    "927": {
+        "file_id": 190,
+        "content": "This code appears to be searching for specific elements within a jQuery collection, extracting their text content, and logging it to the console. The code includes various conditional statements and potentially unnecessary nested loops, which may indicate that the author is experimenting with different approaches to achieve the desired outcome.",
+        "type": "comment"
+    },
+    "928": {
+        "file_id": 190,
+        "content": "\t  };}\n}\n//for the damn selector. DO NOT REMOVE.\n});\n\t//the key is those fucking brackets.\n\t//this bracket is for that filesystem module.\n//});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.\n};\n// what to do next? want to process the whole thing at once? then add those fucks together!\n//var data0=\"\";\n//var data1=\"\";\naxios.all([                                  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),                             axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)                        ]).then(axios.spread((response1, response2) => {                              \nfuckingfucked(response1.data);\n\tfuckingfucked(response2.data);\n// this will make something.\n})).catch(error => {                         console.log(error);                      });\n// no need to start more requests.\n// do multithreading in lua.\n/*fs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }*/\n// wow this is awesome.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:130-157"
+    },
+    "929": {
+        "file_id": 190,
+        "content": "The code fetches data from Baidu search results using axios, possibly for the words 'p' and 'n0'. The function 'fuckingfucked' processes the retrieved data. This may be a part of a larger program that performs multithreading in Lua and handles filesystem operations, as indicated by comments related to fs module. There are multiple errors or typos in the code which may affect its functionality.",
+        "type": "comment"
+    },
+    "930": {
+        "file_id": 190,
+        "content": "\t// but i need a direct approach.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/supercat.js:158-158"
+    },
+    "931": {
+        "file_id": 190,
+        "content": "The code snippet seems to indicate that the developer is expressing a need for a more direct approach to solving a problem or achieving a specific task within the current codebase.",
+        "type": "comment"
+    },
+    "932": {
+        "file_id": 191,
+        "content": "/multilingual/hotfix/README",
+        "type": "filepath"
+    },
+    "933": {
+        "file_id": 191,
+        "content": "The code snippet appears to be written informally and contains several profanities. It seems to suggest using a module for object recognition to help solve a problem and replacing a placeholder link with the real one for accuracy. If no argument is provided, the script will search for \"undefined\".",
+        "type": "summary"
+    },
+    "934": {
+        "file_id": 191,
+        "content": "taobao's object recognition is fucking awesome. use that to help us out.\nwe should use the fucking module to help us solve the fucking problem.\njust fuck it up.\nreplace the scribble with the real link for the fucking justice.\nwhen no fucking argument is given the script will search for \"undefined\"",
+        "type": "code",
+        "location": "/multilingual/hotfix/README:1-5"
+    },
+    "935": {
+        "file_id": 191,
+        "content": "The code snippet appears to be written informally and contains several profanities. It seems to suggest using a module for object recognition to help solve a problem and replacing a placeholder link with the real one for accuracy. If no argument is provided, the script will search for \"undefined\".",
+        "type": "comment"
+    },
+    "936": {
+        "file_id": 192,
+        "content": "/multilingual/hotfix/alien.js",
+        "type": "filepath"
+    },
+    "937": {
+        "file_id": 192,
+        "content": "This JavaScript code uses fs and cheerio libraries to manipulate HTML strings, finds specific elements in 'index.html', logs matching element info, but the author is unsatisfied with regular expressions and complexity of the code.",
+        "type": "summary"
+    },
+    "938": {
+        "file_id": 192,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.",
+        "type": "code",
+        "location": "/multilingual/hotfix/alien.js:1-31"
+    },
+    "939": {
+        "file_id": 192,
+        "content": "Code snippet is using JavaScript and includes require('fs') and require('cheerio') libraries, with a focus on manipulating HTML strings. The code has functions for creating ranges of numbers, and then applies this range to select specific HTML elements using their ids. It also mentions the use of regular expressions but seems dissatisfied with them.",
+        "type": "comment"
+    },
+    "940": {
+        "file_id": 192,
+        "content": "// use something apart from this.\n// this thing is merely a improvement over the local thing.\n// make sure you have the real experiment.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\"---------------------------------------------------\");\n\t\t  //console.log(poker);\n\tconsole.log($(this).text());\n\t\t  console.log(poker);\n\t\t  // this is the title.\n// keep these lines in some sort of loop.",
+        "type": "code",
+        "location": "/multilingual/hotfix/alien.js:33-62"
+    },
+    "941": {
+        "file_id": 192,
+        "content": "This code reads the 'index.html' file, loads its content using Cheerio, and then iterates over each h3 element with a specific class to check if it contains a particular string. If found, it logs some information about the matching element including its text and the href attribute. The code also includes a reference for testing purposes.",
+        "type": "comment"
+    },
+    "942": {
+        "file_id": 192,
+        "content": "\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()\n// this is the premise.\n\t\t  if(rock.prop(\"tagName\").toLowerCase()==\"div\"){\n\t/*var initial=$(\":first-child\",$(rock.next()));\n\t// will this be true?\n\twhile (initial!=undefined){\n\tinitial=initial.next();\n\t\tconsole.log(initial.);\n\t}*/\t\n\t  // waste of time here.\n\t\t   if (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};}\n\t  else {if ($(rock).next().prop(\"tagName\").toLowerCase()==\"table\"){\n\t\t  console.log($(rock).next().text());\n\t\t  // the next sibling is a table instead of the fucking style!\n\t//console.log($($(rock).next()).next().text());\n\t  };}\n}});\n});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.",
+        "type": "code",
+        "location": "/multilingual/hotfix/alien.js:63-91"
+    },
+    "943": {
+        "file_id": 192,
+        "content": "This code is searching for a specific element, checking its tag name and class, and logging the text content of either the next element or the first child of the next element. It appears to be handling cases where the expected sibling is not found or is replaced by another element like a table. The author seems frustrated with the complexity and potential inefficiency of the code.",
+        "type": "comment"
+    },
+    "944": {
+        "file_id": 193,
+        "content": "/multilingual/hotfix/cloudnine.sh",
+        "type": "filepath"
+    },
+    "945": {
+        "file_id": 193,
+        "content": "The code iterates over command line parameters, sets up a service variable, changes directory to 'hotfix', creates and copies local service files, then executes tower.sh with random delays for each line in the input file. Finally, it modifies .local-service-copy by removing specific lines and kills the script process.",
+        "type": "summary"
+    },
+    "946": {
+        "file_id": 193,
+        "content": "#!/bin/bash\nservice=\"\"\nfor parameter in \"$@\"\ndo\nservice=\"$service /$parameter/d; \"\ndone\ncd hotfix\n# echo $service\nif [ -f .local-service-copy ]\nthen\n\trm .local-service-copy\nfi\n#cd hotfix\nevaluate=\"$(pwd)\"\nls *.* | sed \"$service\" > \".local-service\"\ncp \".local-service\" \".local-service-copy\"\ncd ..\ninput=\"hotfix/.local-service\"\nwhile IFS= read -r line\ndo\n# as many brackets as possible.\n\t(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.0001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" ) &\n\t#(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" & sleep 7; kill $! ) &\n#\techo \"$line\"\ndone < \"$input\"\n# process the file this time.\ncd hotfix\n#sed '/termbin.com\nsleep 4.5;\nsed -i '/https:\\/\\/termbin.com/!d' .local-service-copy\nkill $$\n#& '\n#'",
+        "type": "code",
+        "location": "/multilingual/hotfix/cloudnine.sh:1-36"
+    },
+    "947": {
+        "file_id": 193,
+        "content": "The code iterates over command line parameters, sets up a service variable, changes directory to 'hotfix', creates and copies local service files, then executes tower.sh with random delays for each line in the input file. Finally, it modifies .local-service-copy by removing specific lines and kills the script process.",
+        "type": "comment"
+    },
+    "948": {
+        "file_id": 194,
+        "content": "/multilingual/hotfix/deviant.js",
+        "type": "filepath"
+    },
+    "949": {
+        "file_id": 194,
+        "content": "The code uses fs and cheerio libraries, has commented functions for element manipulation, faces issues with a problematic regex selector, reads 'index.html', checks specific elements, performs actions, logs info, skips unnecessary operations, and targets a specific element in a hierarchy.",
+        "type": "summary"
+    },
+    "950": {
+        "file_id": 194,
+        "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\n// our brand new regexp!\n// fuck you regexp!\n//var patt1=new RegExp(\"e\");\n// asshole!\nconst patt0=\"http://www.baidu.com/link?url=\";\n// we've got the brand new fucking <string_object_name>.includes(<substring_object_name>) method!\n// fuck you asshole!\n/*function range(size:number, startAt:number = 0):ReadonlyArray<number> {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\nfunction range(size, startAt) {\n    return [...Array(size).keys()].map(i => i + startAt);\n}\n// this will only make the step equal to one.\nfunction mobious(numberStart,numberEnd){\n\tvar list=range(1+numberEnd-numberStart,numberStart);\n\tlist=list.map(i => 'div[id=\"'+i+'\"], ');\n\tvar s=\"\";\n\tfor (var i = 0; i < list.length; i++) { \n  s+= list[i] ;\n}\ns = s.slice(0,-2);\nconsole.log(s);\nreturn s;\n}*/\n// you had better create a function to utilize the selector.\n// anyway don't believe in anything magical about regex selector here.\n// if you want that go for python instead or something called lua.",
+        "type": "code",
+        "location": "/multilingual/hotfix/deviant.js:1-31"
+    },
+    "951": {
+        "file_id": 194,
+        "content": "The code uses the fs and cheerio libraries, contains a problematic regex pattern, and has commented functions that could be useful for manipulating elements using selectors. The comments suggest some frustration with the regex selector, implying potential issues or limitations.",
+        "type": "comment"
+    },
+    "952": {
+        "file_id": 194,
+        "content": "// use something apart from this.\n// this thing is merely a improvement over the local thing.\n// make sure you have the real experiment.\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n// does it contain the thing?\n\t// fucking army!\n\t// i still think that little esc thing is necessary for the shit.\n  $(\"h3[class~='t']\").each(function (i, elem) {// this fucking works\n\t  // do not even think of other shits.\n\t  // save your mother fucking time.\n//\t  var poker = $(this).prop(\"tagName\").toLowerCase();\n//\t  console.log(poker);\n\t  var poker=$(\":first-child\",$(this)).attr(\"href\");\n//\t  console.log(rock);\n//\t  document.write(patt1.test(\"The best things in life are free\")); \n//this is just for reference\n\t  if (poker.includes(patt0)){\n\t// the real thing.\n\t\t  //var rock=$(this);\n\t\t  console.log(\"----------------\");\n\t\t  console.log(poker);\n\tconsole.log($(this).text());\n// keep these lines in some sort of ioop.\n\t  var rock=$(this).next();\n// jQuery got this version of nextSibling() as next()",
+        "type": "code",
+        "location": "/multilingual/hotfix/deviant.js:33-62"
+    },
+    "953": {
+        "file_id": 194,
+        "content": "This code reads 'index.html', checks if it contains a specific element, and then performs actions on the found elements. It uses `fs` to read the file, `cheerio` for DOM manipulation, and tests using `includes()`. The code also logs relevant information and skips other operations if not needed.",
+        "type": "comment"
+    },
+    "954": {
+        "file_id": 194,
+        "content": "// this is the premise.\n\tif (rock.attr(\"class\").includes(\"c-abstract\")==true)\n\t\t  {console.log(rock.text());}\n\t\t  else\n\t\t  {console.log($(\":first-child\",$(\":first-child\",$(rock)).next()).text());\n\t\t\t  //r u kidding me?\n\t//next sibling?\n};\n\t  };\n  });\n});\n// time to make it simple.\n// i do not think that you need any kind of ads.\n// simple stuff works the best.",
+        "type": "code",
+        "location": "/multilingual/hotfix/deviant.js:63-77"
+    },
+    "955": {
+        "file_id": 194,
+        "content": "This code checks if the \"rock\" element has a class of \"c-abstract\". If it does, it logs the text. Otherwise, it selects the first child of the first child of the current element and its next sibling, then logs their combined text. This seems to target a specific element in a hierarchy, with an optional logging action depending on its class.",
+        "type": "comment"
+    },
+    "956": {
+        "file_id": 195,
+        "content": "/multilingual/hotfix/duper-get.js",
+        "type": "filepath"
+    },
+    "957": {
+        "file_id": 195,
+        "content": "This code fetches Baidu search results pages with Axios, extracts URLs from links using Cheerio, and logs them to the console. It handles asynchronous responses but could benefit from a more direct approach for data handling.",
+        "type": "summary"
+    },
+    "958": {
+        "file_id": 195,
+        "content": "//var fs = require('fs');\n//IT FUCKING WORKS!\n//FUCKING FUCK!\nvar cheerio = require('cheerio');\n//const axios = require('axios');  \nvar content=process.argv[2];               // remember to write things here.  \nvar p = encodeURIComponent(content);\nvar n=0;   \nvar axios = require('axios');              \n//var data0=\"\";\n//var data1=\"\";\naxios.all([                                  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),                             axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)                        ]).then(axios.spread((response1, response2) => {                              \nvar $ = cheerio.load(response1.data);\n//console.log(data0);\n  $(\"a[target|='_blank']\").each(function (i, elem) {\n    console.log($(this).attr('href'));\n  });\n $ = cheerio.load(response2.data);                                                          $(\"a[target|='_blank']\").each(function (i, elem) {                                      console.log($(this).attr('href'));       });\n\t//response1.data.pipe(data0); ",
+        "type": "code",
+        "location": "/multilingual/hotfix/duper-get.js:1-23"
+    },
+    "959": {
+        "file_id": 195,
+        "content": "Code fetches the first and second page of search results from Baidu using Axios. It then uses Cheerio to extract URLs from links with target=\"_blank\" on both pages, logging them to the console.",
+        "type": "comment"
+    },
+    "960": {
+        "file_id": 195,
+        "content": "//\tconsole.log(response1.data);\n\t//\tdid you forget that this fucking thing is async?\n//response2.data.pipe(data1);\n})).catch(error => {                         console.log(error);                      });\n/*fs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }*/\n// wow this is awesome.\n\t// but i need a direct approach.",
+        "type": "code",
+        "location": "/multilingual/hotfix/duper-get.js:24-34"
+    },
+    "961": {
+        "file_id": 195,
+        "content": "This code appears to be handling an asynchronous response and reading a file. It seems to contain some debugging comments and potential issues with async behavior. The developer may be seeking a more direct approach for handling the data.",
+        "type": "comment"
+    },
+    "962": {
+        "file_id": 196,
+        "content": "/multilingual/hotfix/fuckshit.php",
+        "type": "filepath"
+    },
+    "963": {
+        "file_id": 196,
+        "content": "This code fetches the URL \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\" and uses HTTP GET request to retrieve its content. It then extracts the 'Location' header, which represents the redirected URL, and displays it as \"http://www.google.com/\".",
+        "type": "summary"
+    },
+    "964": {
+        "file_id": 196,
+        "content": "<?php\n$url = \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\";\n$info = parse_url($url);\n$fp = fsockopen($info['host'], 80,$errno, $errstr, 30);\nfputs($fp,\"GET {$info['path']}?{$info['query']} HTTP/1.1\\r\\n\");\nfputs($fp, \"Host: {$info['host']}\\r\\n\");\nfputs($fp, \"Connection: close\\r\\n\\r\\n\");\n$rewrite = '';\nwhile(!feof($fp)) {\n    $line = fgets($fp);\n    if($line != \"\\r\\n\" ) {\n        if(strpos($line,'Location:') !== false) {\n            $rewrite = str_replace(array(\"\\r\",\"\\n\",\"Location: \"),'',$line);\n        }\n    }else {\n        break;\n    }\n}\necho $rewrite; //结果显示：string(22) \"http://www.google.com/\"\n//this fuck is good.\n?>",
+        "type": "code",
+        "location": "/multilingual/hotfix/fuckshit.php:1-22"
+    },
+    "965": {
+        "file_id": 196,
+        "content": "This code fetches the URL \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\" and uses HTTP GET request to retrieve its content. It then extracts the 'Location' header, which represents the redirected URL, and displays it as \"http://www.google.com/\".",
+        "type": "comment"
+    },
+    "966": {
+        "file_id": 197,
+        "content": "/multilingual/hotfix/jquery-modified.js",
+        "type": "filepath"
+    },
+    "967": {
+        "file_id": 197,
+        "content": "The modified jQuery code improves performance and cross-browser compatibility with enhanced functions, data attribute manipulation, queue hooks, dequeue functions, multilingual support, and utility functions for animations and timers.",
+        "type": "summary"
+    },
+    "968": {
+        "file_id": 197,
+        "content": "/*! jQuery v3.4.1 | (c) JS Foundation and other contributors | jquery.org/license */\n// i will redefine this.\n!function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error(\"jQuery requires a window with a document\");return t(e)}:t(e)}(\"undefined\"!=typeof window?window:this,function(C,e){\"use strict\";var t=[],E=C.document,r=Object.getPrototypeOf,s=t.slice,g=t.concat,u=t.push,i=t.indexOf,n={},o=n.toString,v=n.hasOwnProperty,a=v.toString,l=a.call(Object),y={},m=function(e){return\"function\"==typeof e&&\"number\"!=typeof e.nodeType},x=function(e){return null!=e&&e===e.window},c={type:!0,src:!0,nonce:!0,noModule:!0};function b(e,t,n){var r,i,o=(n=n||E).createElement(\"script\");if(o.text=e,t)for(r in c)(i=t[r]||t.getAttribute&&t.getAttribute(r))&&o.setAttribute(r,i);n.head.appendChild(o).parentNode.removeChild(o)}function w(e){return null==e?e+\"\":\"object\"==typeof e||\"function\"==typeof e?n[o.call(e)]",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:1-3"
+    },
+    "969": {
+        "file_id": 197,
+        "content": "Code is a modified version of jQuery v3.4.1, includes a function to redefine the library for specific purposes and uses script tags to load the modified version of jQuery into the window's document.",
+        "type": "comment"
+    },
+    "970": {
+        "file_id": 197,
+        "content": "||\"object\":typeof e}var f=\"3.4.1\",k=function(e,t){return new k.fn.init(e,t)},p=/^[\\s\\uFEFF\\xA0]+|[\\s\\uFEFF\\xA0]+$/g;function d(e){var t=!!e&&\"length\"in e&&e.length,n=w(e);return!m(e)&&!x(e)&&(\"array\"===n||0===t||\"number\"==typeof t&&0<t&&t-1 in e)}k.fn=k.prototype={jquery:f,constructor:k,length:0,toArray:function(){return s.call(this)},get:function(e){return null==e?s.call(this):e<0?this[e+this.length]:this[e]},pushStack:function(e){var t=k.merge(this.constructor(),e);return t.prevObject=this,t},each:function(e){return k.each(this,e)},map:function(n){return this.pushStack(k.map(this,function(e,t){return n.call(e,t,e)}))},slice:function(){return this.pushStack(s.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(e){var t=this.length,n=+e+(e<0?t:0);return this.pushStack(0<=n&&n<t?[this[n]]:[])},end:function(){return this.prevObject||this.constructor()},push:u,sort:t.sort,splice:t.splice},k.extend=k.fn.extend=function(){var e,t,n,r,i",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "971": {
+        "file_id": 197,
+        "content": "Defines a function 'k' with version 'f', creates a prototype for 'k.fn' with properties like jquery, constructor, length, toArray, get, pushStack, each, map, slice, first, last, eq, end, push, sort, and splice. These functions are used to manipulate jQuery objects and perform various operations on them.",
+        "type": "comment"
+    },
+    "972": {
+        "file_id": 197,
+        "content": ",o,a=arguments[0]||{},s=1,u=arguments.length,l=!1;for(\"boolean\"==typeof a&&(l=a,a=arguments[s]||{},s++),\"object\"==typeof a||m(a)||(a={}),s===u&&(a=this,s--);s<u;s++)if(null!=(e=arguments[s]))for(t in e)r=e[t],\"__proto__\"!==t&&a!==r&&(l&&r&&(k.isPlainObject(r)||(i=Array.isArray(r)))?(n=a[t],o=i&&!Array.isArray(n)?[]:i||k.isPlainObject(n)?n:{},i=!1,a[t]=k.extend(l,o,r)):void 0!==r&&(a[t]=r));return a},k.extend({expando:\"jQuery\"+(f+Math.random()).replace(/\\D/g,\"\"),isReady:!0,error:function(e){throw new Error(e)},noop:function(){},isPlainObject:function(e){var t,n;return!(!e||\"[object Object]\"!==o.call(e))&&(!(t=r(e))||\"function\"==typeof(n=v.call(t,\"constructor\")&&t.constructor)&&a.call(n)===l)},isEmptyObject:function(e){var t;for(t in e)return!1;return!0},globalEval:function(e,t){b(e,{nonce:t&&t.nonce})},each:function(e,t){var n,r=0;if(d(e)){for(n=e.length;r<n;r++)if(!1===t.call(e[r],r,e[r]))break}else for(r in e)if(!1===t.call(e[r],r,e[r]))break;return e},trim:function(e){return null==e?",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "973": {
+        "file_id": 197,
+        "content": "This code defines an extend function, sets an expando property for jQuery objects, checks if the object is empty, performs global evaluation of scripts, and trims input. It also has functions for error handling, determining if an object is a plain object, and iterating over elements using each function.",
+        "type": "comment"
+    },
+    "974": {
+        "file_id": 197,
+        "content": "\"\":(e+\"\").replace(p,\"\")},makeArray:function(e,t){var n=t||[];return null!=e&&(d(Object(e))?k.merge(n,\"string\"==typeof e?[e]:e):u.call(n,e)),n},inArray:function(e,t,n){return null==t?-1:i.call(t,e,n)},merge:function(e,t){for(var n=+t.length,r=0,i=e.length;r<n;r++)e[i++]=t[r];return e.length=i,e},grep:function(e,t,n){for(var r=[],i=0,o=e.length,a=!n;i<o;i++)!t(e[i],i)!==a&&r.push(e[i]);return r},map:function(e,t,n){var r,i,o=0,a=[];if(d(e))for(r=e.length;o<r;o++)null!=(i=t(e[o],o,n))&&a.push(i);else for(o in e)null!=(i=t(e[o],o,n))&&a.push(i);return g.apply([],a)},guid:1,support:y}),\"function\"==typeof Symbol&&(k.fn[Symbol.iterator]=t[Symbol.iterator]),k.each(\"Boolean Number String Function Array Date RegExp Object Error Symbol\".split(\" \"),function(e,t){n[\"[object \"+t+\"]\"]=t.toLowerCase()});var h=function(n){var e,d,b,o,i,h,f,g,w,u,l,T,C,a,E,v,s,c,y,k=\"sizzle\"+1*new Date,m=n.document,S=0,r=0,p=ue(),x=ue(),N=ue(),A=ue(),D=function(e,t){return e===t&&(l=!0),0},j={}.hasOwnProperty,t=[],q=t.p",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "975": {
+        "file_id": 197,
+        "content": "Initializing the jQuery library with its various functions and data types, including support for different JavaScript types.\n\nThis chunk of code is initializing the jQuery library by defining functions such as `jQuery`, `fn`, `K` (jQuery function), and more. It also sets up support for various JavaScript types like Boolean, Number, String, and others. Additionally, it includes error handling and iterator functionality for Symbols if they are supported. The code also ensures that the jQuery functions work correctly with different data types by defining a selector engine (not included in this chunk).",
+        "type": "comment"
+    },
+    "976": {
+        "file_id": 197,
+        "content": "op,L=t.push,H=t.push,O=t.slice,P=function(e,t){for(var n=0,r=e.length;n<r;n++)if(e[n]===t)return n;return-1},R=\"checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped\",M=\"[\\\\x20\\\\t\\\\r\\\\n\\\\f]\",I=\"(?:\\\\\\\\.|[\\\\w-]|[^\\0-\\\\xa0])+\",W=\"\\\\[\"+M+\"*(\"+I+\")(?:\"+M+\"*([*^$|!~]?=)\"+M+\"*(?:'((?:\\\\\\\\.|[^\\\\\\\\'])*)'|\\\"((?:\\\\\\\\.|[^\\\\\\\\\\\"])*)\\\"|(\"+I+\"))|)\"+M+\"*\\\\]\",$=\":(\"+I+\")(?:\\\\((('((?:\\\\\\\\.|[^\\\\\\\\'])*)'|\\\"((?:\\\\\\\\.|[^\\\\\\\\\\\"])*)\\\")|((?:\\\\\\\\.|[^\\\\\\\\()[\\\\]]|\"+W+\")*)|.*)\\\\)|)\",F=new RegExp(M+\"+\",\"g\"),B=new RegExp(\"^\"+M+\"+|((?:^|[^\\\\\\\\])(?:\\\\\\\\.)*)\"+M+\"+$\",\"g\"),_=new RegExp(\"^\"+M+\"*,\"+M+\"*\"),z=new RegExp(\"^\"+M+\"*([>+~]|\"+M+\")\"+M+\"*\"),U=new RegExp(M+\"|>\"),X=new RegExp($),V=new RegExp(\"^\"+I+\"$\"),G={ID:new RegExp(\"^#(\"+I+\")\"),CLASS:new RegExp(\"^\\\\.(\"+I+\")\"),TAG:new RegExp(\"^(\"+I+\"|[*])\"),ATTR:new RegExp(\"^\"+W),PSEUDO:new RegExp(\"^\"+$),CHILD:new RegExp(\"^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\\\(\"+M+\"*(even|odd|(([+-]|)(\\\\d*)n|)\"+M+\"",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "977": {
+        "file_id": 197,
+        "content": "Regular expressions parsing for jQuery selector identification and matching.",
+        "type": "comment"
+    },
+    "978": {
+        "file_id": 197,
+        "content": "*(?:([+-]|)\"+M+\"*(\\\\d+)|))\"+M+\"*\\\\)|)\",\"i\"),bool:new RegExp(\"^(?:\"+R+\")$\",\"i\"),needsContext:new RegExp(\"^\"+M+\"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\\\(\"+M+\"*((?:-\\\\d)?\\\\d*)\"+M+\"*\\\\)|)(?=[^-]|$)\",\"i\")},Y=/HTML$/i,Q=/^(?:input|select|textarea|button)$/i,J=/^h\\d$/i,K=/^[^{]+\\{\\s*\\[native \\w/,Z=/^(?:#([\\w-]+)|(\\w+)|\\.([\\w-]+))$/,ee=/[+~]/,te=new RegExp(\"\\\\\\\\([\\\\da-f]{1,6}\"+M+\"?|(\"+M+\")|.)\",\"ig\"),ne=function(e,t,n){var r=\"0x\"+t-65536;return r!=r||n?t:r<0?String.fromCharCode(r+65536):String.fromCharCode(r>>10|55296,1023&r|56320)},re=/([\\0-\\x1f\\x7f]|^-?\\d)|^-$|[^\\0-\\x1f\\x7f-\\uFFFF\\w-]/g,ie=function(e,t){return t?\"\\0\"===e?\"\\ufffd\":e.slice(0,-1)+\"\\\\\"+e.charCodeAt(e.length-1).toString(16)+\" \":\"\\\\\"+e},oe=function(){T()},ae=be(function(e){return!0===e.disabled&&\"fieldset\"===e.nodeName.toLowerCase()},{dir:\"parentNode\",next:\"legend\"});try{H.apply(t=O.call(m.childNodes),m.childNodes),t[m.childNodes.length].nodeType}catch(e){H={apply:t.length?function(e,t){L.apply(e,O.call(t))}:function(e,t){va",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "979": {
+        "file_id": 197,
+        "content": "This code appears to be a complex function involving regular expressions for various selectors and manipulations. It seems to handle HTML elements, input fields, buttons, and headings as well.",
+        "type": "comment"
+    },
+    "980": {
+        "file_id": 197,
+        "content": "r n=e.length,r=0;while(e[n++]=t[r++]);e.length=n-1}}}function se(t,e,n,r){var i,o,a,s,u,l,c,f=e&&e.ownerDocument,p=e?e.nodeType:9;if(n=n||[],\"string\"!=typeof t||!t||1!==p&&9!==p&&11!==p)return n;if(!r&&((e?e.ownerDocument||e:m)!==C&&T(e),e=e||C,E)){if(11!==p&&(u=Z.exec(t)))if(i=u[1]){if(9===p){if(!(a=e.getElementById(i)))return n;if(a.id===i)return n.push(a),n}else if(f&&(a=f.getElementById(i))&&y(e,a)&&a.id===i)return n.push(a),n}else{if(u[2])return H.apply(n,e.getElementsByTagName(t)),n;if((i=u[3])&&d.getElementsByClassName&&e.getElementsByClassName)return H.apply(n,e.getElementsByClassName(i)),n}if(d.qsa&&!A[t+\" \"]&&(!v||!v.test(t))&&(1!==p||\"object\"!==e.nodeName.toLowerCase())){if(c=t,f=e,1===p&&U.test(t)){(s=e.getAttribute(\"id\"))?s=s.replace(re,ie):e.setAttribute(\"id\",s=k),o=(l=h(t)).length;while(o--)l[o]=\"#\"+s+\" \"+xe(l[o]);c=l.join(\",\"),f=ee.test(t)&&ye(e.parentNode)||e}try{return H.apply(n,f.querySelectorAll(c)),n}catch(e){A(t,!0)}finally{s===k&&e.removeAttribute(\"id\")}}}return ",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "981": {
+        "file_id": 197,
+        "content": "The code is a modified version of jQuery, performing operations such as getting elements by ID or tag name and using query selector all functionality. It handles various scenarios like getting elements by id, tag name, class name, and using the qsa method. The code also checks for specific conditions before executing and includes error handling mechanisms.",
+        "type": "comment"
+    },
+    "982": {
+        "file_id": 197,
+        "content": "g(t.replace(B,\"$1\"),e,n,r)}function ue(){var r=[];return function e(t,n){return r.push(t+\" \")>b.cacheLength&&delete e[r.shift()],e[t+\" \"]=n}}function le(e){return e[k]=!0,e}function ce(e){var t=C.createElement(\"fieldset\");try{return!!e(t)}catch(e){return!1}finally{t.parentNode&&t.parentNode.removeChild(t),t=null}}function fe(e,t){var n=e.split(\"|\"),r=n.length;while(r--)b.attrHandle[n[r]]=t}function pe(e,t){var n=t&&e,r=n&&1===e.nodeType&&1===t.nodeType&&e.sourceIndex-t.sourceIndex;if(r)return r;if(n)while(n=n.nextSibling)if(n===t)return-1;return e?1:-1}function de(t){return function(e){return\"input\"===e.nodeName.toLowerCase()&&e.type===t}}function he(n){return function(e){var t=e.nodeName.toLowerCase();return(\"input\"===t||\"button\"===t)&&e.type===n}}function ge(t){return function(e){return\"form\"in e?e.parentNode&&!1===e.disabled?\"label\"in e?\"label\"in e.parentNode?e.parentNode.disabled===t:e.disabled===t:e.isDisabled===t||e.isDisabled!==!t&&ae(e)===t:e.disabled===t:\"label\"in e&&e.disable",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "983": {
+        "file_id": 197,
+        "content": "This code contains multiple functions that manipulate and process HTML elements. It includes attribute handling, event delegation, element identification, and checks for specific node types and disabled states.",
+        "type": "comment"
+    },
+    "984": {
+        "file_id": 197,
+        "content": "d===t}}function ve(a){return le(function(o){return o=+o,le(function(e,t){var n,r=a([],e.length,o),i=r.length;while(i--)e[n=r[i]]&&(e[n]=!(t[n]=e[n]))})})}function ye(e){return e&&\"undefined\"!=typeof e.getElementsByTagName&&e}for(e in d=se.support={},i=se.isXML=function(e){var t=e.namespaceURI,n=(e.ownerDocument||e).documentElement;return!Y.test(t||n&&n.nodeName||\"HTML\")},T=se.setDocument=function(e){var t,n,r=e?e.ownerDocument||e:m;return r!==C&&9===r.nodeType&&r.documentElement&&(a=(C=r).documentElement,E=!i(C),m!==C&&(n=C.defaultView)&&n.top!==n&&(n.addEventListener?n.addEventListener(\"unload\",oe,!1):n.attachEvent&&n.attachEvent(\"onunload\",oe)),d.attributes=ce(function(e){return e.className=\"i\",!e.getAttribute(\"className\")}),d.getElementsByTagName=ce(function(e){return e.appendChild(C.createComment(\"\")),!e.getElementsByTagName(\"*\").length}),d.getElementsByClassName=K.test(C.getElementsByClassName),d.getById=ce(function(e){return a.appendChild(e).id=k,!C.getElementsByName||!C.getEleme",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "985": {
+        "file_id": 197,
+        "content": "Function definition for \"ve\" and \"ye\". Initialize variables and objects \"d\", \"e\", \"i\", \"C\", and \"m\". Set up support properties for \"se.support\". Define function \"i\" to check if an element is XML. Define function \"T\" to set the current document as \"C\". Implement various checks using functions \"ce\", \"K\", and \"E\" for attributes, tags, and class name retrieval respectively. Initialize getById functionality.",
+        "type": "comment"
+    },
+    "986": {
+        "file_id": 197,
+        "content": "ntsByName(k).length}),d.getById?(b.filter.ID=function(e){var t=e.replace(te,ne);return function(e){return e.getAttribute(\"id\")===t}},b.find.ID=function(e,t){if(\"undefined\"!=typeof t.getElementById&&E){var n=t.getElementById(e);return n?[n]:[]}}):(b.filter.ID=function(e){var n=e.replace(te,ne);return function(e){var t=\"undefined\"!=typeof e.getAttributeNode&&e.getAttributeNode(\"id\");return t&&t.value===n}},b.find.ID=function(e,t){if(\"undefined\"!=typeof t.getElementById&&E){var n,r,i,o=t.getElementById(e);if(o){if((n=o.getAttributeNode(\"id\"))&&n.value===e)return[o];i=t.getElementsByName(e),r=0;while(o=i[r++])if((n=o.getAttributeNode(\"id\"))&&n.value===e)return[o]}return[]}}),b.find.TAG=d.getElementsByTagName?function(e,t){return\"undefined\"!=typeof t.getElementsByTagName?t.getElementsByTagName(e):d.qsa?t.querySelectorAll(e):void 0}:function(e,t){var n,r=[],i=0,o=t.getElementsByTagName(e);if(\"*\"===e){while(n=o[i++])1===n.nodeType&&r.push(n);return r}return o},b.find.CLASS=d.getElementsByClas",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "987": {
+        "file_id": 197,
+        "content": "Modified jQuery code adds functionality for finding elements by ID, tag name, and class. Includes support for Internet Explorer and older browsers.",
+        "type": "comment"
+    },
+    "988": {
+        "file_id": 197,
+        "content": "sName&&function(e,t){if(\"undefined\"!=typeof t.getElementsByClassName&&E)return t.getElementsByClassName(e)},s=[],v=[],(d.qsa=K.test(C.querySelectorAll))&&(ce(function(e){a.appendChild(e).innerHTML=\"<a id='\"+k+\"'></a><select id='\"+k+\"-\\r\\\\' msallowcapture=''><option selected=''></option></select>\",e.querySelectorAll(\"[msallowcapture^='']\").length&&v.push(\"[*^$]=\"+M+\"*(?:''|\\\"\\\")\"),e.querySelectorAll(\"[selected]\").length||v.push(\"\\\\[\"+M+\"*(?:value|\"+R+\")\"),e.querySelectorAll(\"[id~=\"+k+\"-]\").length||v.push(\"~=\"),e.querySelectorAll(\":checked\").length||v.push(\":checked\"),e.querySelectorAll(\"a#\"+k+\"+*\").length||v.push(\".#.+[+~]\")}),ce(function(e){e.innerHTML=\"<a href='' disabled='disabled'></a><select disabled='disabled'><option/></select>\";var t=C.createElement(\"input\");t.setAttribute(\"type\",\"hidden\"),e.appendChild(t).setAttribute(\"name\",\"D\"),e.querySelectorAll(\"[name=d]\").length&&v.push(\"name\"+M+\"*[*^$|!~]?=\"),2!==e.querySelectorAll(\":enabled\").length&&v.push(\":enabled\",\":disabled\"),a.appe",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "989": {
+        "file_id": 197,
+        "content": "Code is modifying jquery to include support for specific CSS selectors like getElementsByClassName, and checking if certain HTML elements are working as expected with new selectors added.",
+        "type": "comment"
+    },
+    "990": {
+        "file_id": 197,
+        "content": "ndChild(e).disabled=!0,2!==e.querySelectorAll(\":disabled\").length&&v.push(\":enabled\",\":disabled\"),e.querySelectorAll(\"*,:x\"),v.push(\",.*:\")})),(d.matchesSelector=K.test(c=a.matches||a.webkitMatchesSelector||a.mozMatchesSelector||a.oMatchesSelector||a.msMatchesSelector))&&ce(function(e){d.disconnectedMatch=c.call(e,\"*\"),c.call(e,\"[s!='']:x\"),s.push(\"!=\",$)}),v=v.length&&new RegExp(v.join(\"|\")),s=s.length&&new RegExp(s.join(\"|\")),t=K.test(a.compareDocumentPosition),y=t||K.test(a.contains)?function(e,t){var n=9===e.nodeType?e.documentElement:e,r=t&&t.parentNode;return e===r||!(!r||1!==r.nodeType||!(n.contains?n.contains(r):e.compareDocumentPosition&&16&e.compareDocumentPosition(r)))}:function(e,t){if(t)while(t=t.parentNode)if(t===e)return!0;return!1},D=t?function(e,t){if(e===t)return l=!0,0;var n=!e.compareDocumentPosition-!t.compareDocumentPosition;return n||(1&(n=(e.ownerDocument||e)===(t.ownerDocument||t)?e.compareDocumentPosition(t):1)||!d.sortDetached&&t.compareDocumentPosition(e)===",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "991": {
+        "file_id": 197,
+        "content": "This code modifies the jQuery function to include additional selectors for disabled and enabled elements, as well as optimizing performance by checking if the element is disconnected from the document tree. It also handles various selector matching methods and includes a compareDocumentPosition function for cross-browser compatibility.",
+        "type": "comment"
+    },
+    "992": {
+        "file_id": 197,
+        "content": "n?e===C||e.ownerDocument===m&&y(m,e)?-1:t===C||t.ownerDocument===m&&y(m,t)?1:u?P(u,e)-P(u,t):0:4&n?-1:1)}:function(e,t){if(e===t)return l=!0,0;var n,r=0,i=e.parentNode,o=t.parentNode,a=[e],s=[t];if(!i||!o)return e===C?-1:t===C?1:i?-1:o?1:u?P(u,e)-P(u,t):0;if(i===o)return pe(e,t);n=e;while(n=n.parentNode)a.unshift(n);n=t;while(n=n.parentNode)s.unshift(n);while(a[r]===s[r])r++;return r?pe(a[r],s[r]):a[r]===m?-1:s[r]===m?1:0}),C},se.matches=function(e,t){return se(e,null,null,t)},se.matchesSelector=function(e,t){if((e.ownerDocument||e)!==C&&T(e),d.matchesSelector&&E&&!A[t+\" \"]&&(!s||!s.test(t))&&(!v||!v.test(t)))try{var n=c.call(e,t);if(n||d.disconnectedMatch||e.document&&11!==e.document.nodeType)return n}catch(e){A(t,!0)}return 0<se(t,C,null,[e]).length},se.contains=function(e,t){return(e.ownerDocument||e)!==C&&T(e),y(e,t)},se.attr=function(e,t){(e.ownerDocument||e)!==C&&T(e);var n=b.attrHandle[t.toLowerCase()],r=n&&j.call(b.attrHandle,t.toLowerCase())?n(e,t,!E):void 0;return void 0!==r?",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "993": {
+        "file_id": 197,
+        "content": "This code is part of the jQuery library. It contains functions for element matching, testing containment, and attribute retrieval. The code handles various scenarios such as comparing elements, handling document fragmentation, and dealing with mismatched arguments.",
+        "type": "comment"
+    },
+    "994": {
+        "file_id": 197,
+        "content": "r:d.attributes||!E?e.getAttribute(t):(r=e.getAttributeNode(t))&&r.specified?r.value:null},se.escape=function(e){return(e+\"\").replace(re,ie)},se.error=function(e){throw new Error(\"Syntax error, unrecognized expression: \"+e)},se.uniqueSort=function(e){var t,n=[],r=0,i=0;if(l=!d.detectDuplicates,u=!d.sortStable&&e.slice(0),e.sort(D),l){while(t=e[i++])t===e[i]&&(r=n.push(i));while(r--)e.splice(n[r],1)}return u=null,e},o=se.getText=function(e){var t,n=\"\",r=0,i=e.nodeType;if(i){if(1===i||9===i||11===i){if(\"string\"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=o(e)}else if(3===i||4===i)return e.nodeValue}else while(t=e[r++])n+=o(t);return n},(b=se.selectors={cacheLength:50,createPseudo:le,match:G,attrHandle:{},find:{},relative:{\">\":{dir:\"parentNode\",first:!0},\" \":{dir:\"parentNode\"},\"+\":{dir:\"previousSibling\",first:!0},\"~\":{dir:\"previousSibling\"}},preFilter:{ATTR:function(e){return e[1]=e[1].replace(te,ne),e[3]=(e[3]||e[4]||e[5]||\"\").replace(te,ne),\"~=\"===e",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "995": {
+        "file_id": 197,
+        "content": "This code snippet is a part of the jQuery library, specifically modified for multilingual support. It includes various functions and selectors to handle DOM elements and their attributes. The `se` object contains methods for escaping expressions, handling syntax errors, sorting unique elements, extracting text content, and defining custom pseudo-selectors. The code also sets up caches and handles attribute matching.",
+        "type": "comment"
+    },
+    "996": {
+        "file_id": 197,
+        "content": "[2]&&(e[3]=\" \"+e[3]+\" \"),e.slice(0,4)},CHILD:function(e){return e[1]=e[1].toLowerCase(),\"nth\"===e[1].slice(0,3)?(e[3]||se.error(e[0]),e[4]=+(e[4]?e[5]+(e[6]||1):2*(\"even\"===e[3]||\"odd\"===e[3])),e[5]=+(e[7]+e[8]||\"odd\"===e[3])):e[3]&&se.error(e[0]),e},PSEUDO:function(e){var t,n=!e[6]&&e[2];return G.CHILD.test(e[0])?null:(e[3]?e[2]=e[4]||e[5]||\"\":n&&X.test(n)&&(t=h(n,!0))&&(t=n.indexOf(\")\",n.length-t)-n.length)&&(e[0]=e[0].slice(0,t),e[2]=n.slice(0,t)),e.slice(0,3))}},filter:{TAG:function(e){var t=e.replace(te,ne).toLowerCase();return\"*\"===e?function(){return!0}:function(e){return e.nodeName&&e.nodeName.toLowerCase()===t}},CLASS:function(e){var t=p[e+\" \"];return t||(t=new RegExp(\"(^|\"+M+\")\"+e+\"(\"+M+\"|$)\"))&&p(e,function(e){return t.test(\"string\"==typeof e.className&&e.className||\"undefined\"!=typeof e.getAttribute&&e.getAttribute(\"class\")||\"\")})},ATTR:function(n,r,i){return function(e){var t=se.attr(e,n);return null==t?\"!=\"===r:!r||(t+=\"\",\"=\"===r?t===i:\"!=\"===r?t!==i:\"^=\"===r?i&&0===t.ind",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "997": {
+        "file_id": 197,
+        "content": "This code is part of a larger JavaScript library for selecting and filtering HTML elements using CSS selectors. It contains functions for handling ID, tag name, class, attribute, and pseudo-element selectors, as well as child and pseudo-child selectors. The code also includes error handling and string manipulation for constructing the appropriate selector patterns.",
+        "type": "comment"
+    },
+    "998": {
+        "file_id": 197,
+        "content": "exOf(i):\"*=\"===r?i&&-1<t.indexOf(i):\"$=\"===r?i&&t.slice(-i.length)===i:\"~=\"===r?-1<(\" \"+t.replace(F,\" \")+\" \").indexOf(i):\"|=\"===r&&(t===i||t.slice(0,i.length+1)===i+\"-\"))}},CHILD:function(h,e,t,g,v){var y=\"nth\"!==h.slice(0,3),m=\"last\"!==h.slice(-4),x=\"of-type\"===e;return 1===g&&0===v?function(e){return!!e.parentNode}:function(e,t,n){var r,i,o,a,s,u,l=y!==m?\"nextSibling\":\"previousSibling\",c=e.parentNode,f=x&&e.nodeName.toLowerCase(),p=!n&&!x,d=!1;if(c){if(y){while(l){a=e;while(a=a[l])if(x?a.nodeName.toLowerCase()===f:1===a.nodeType)return!1;u=l=\"only\"===h&&!u&&\"nextSibling\"}return!0}if(u=[m?c.firstChild:c.lastChild],m&&p){d=(s=(r=(i=(o=(a=c)[k]||(a[k]={}))[a.uniqueID]||(o[a.uniqueID]={}))[h]||[])[0]===S&&r[1])&&r[2],a=s&&c.childNodes[s];while(a=++s&&a&&a[l]||(d=s=0)||u.pop())if(1===a.nodeType&&++d&&a===e){i[h]=[S,s,d];break}}else if(p&&(d=s=(r=(i=(o=(a=e)[k]||(a[k]={}))[a.uniqueID]||(o[a.uniqueID]={}))[h]||[])[0]===S&&r[1]),!1===d)while(a=++s&&a&&a[l]||(d=s=0)||u.pop())if((x?a.nodeName.",
+        "type": "code",
+        "location": "/multilingual/hotfix/jquery-modified.js:3-3"
+    },
+    "999": {
+        "file_id": 197,
+        "content": "This code is defining a function for selecting elements based on their position within the DOM using various selectors such as 'nth-child', 'last', and 'of-type'. It returns a function that will be used to filter the elements based on the provided parameters.",
+        "type": "comment"
+    }
+}

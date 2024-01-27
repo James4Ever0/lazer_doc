@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a text file, searches for lines starting with a keyword followed by a space, and appends the found phrases to a list. It then writes those phrases into another text file. The code uses regular expressions for searching and handles exceptions when reading the input file.",
+    "details": [
+        {
+            "comment": "This code reads a text file, searches for lines starting with a keyword followed by a space, and appends the found phrases to a list. It then writes those phrases into another text file. The code uses regular expressions for searching and handles exceptions when reading the input file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/wtf.py\":0-21",
+            "content": "import re\na=open(\"wtf.txt\",\"r\")\ni=0\np0=[]\nwhile i!=1:\n    b=a.readline()\n#    print(b)\n    try:\n        p=re.sub(r'\\(.+$','',re.search(r\"^.+( - )\",b).group(0))\n        if p!=\"\":\n            print (p)\n            p0.append(p)\n        else:\n            i=1\n            break\n    except:\n        break\na.close()\nb=open(\"MainIndexWithIdenticalKeywords.txt\",\"w+\")\nfor p1 in p0:\n    b.write(p1+\"\\n\")\nb.close()"
+        }
+    ]
+}

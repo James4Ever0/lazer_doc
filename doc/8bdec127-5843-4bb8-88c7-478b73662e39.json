@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function to execute multiple commands using PHP and stores their results. It creates a table for command handling, loops through each URL in the provided list, executes a PHP script with each URL as an argument, and saves the output of these commands. Finally, it prints the saved outputs. The code also contains some profanity-laced comments, indicating frustration or humor from the developer.",
+    "details": [
+        {
+            "comment": "The code defines a function to execute multiple commands using PHP and stores their results. It creates a table for command handling, loops through each URL in the provided list, executes a PHP script with each URL as an argument, and saves the output of these commands. Finally, it prints the saved outputs. The code also contains some profanity-laced comments, indicating frustration or humor from the developer.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/shell-args.lua\":0-34",
+            "content": "--command =\"node duper-get.js java\"\n-- scriptTest.lua (in your scripts directory)\n--[[local M = {}\nlocal function testFunction()\n      print(\"Test function called\")\nend\nM.testFunction = testFunction\nreturn M\n]]\n-- hey you should call me instead of requiring me!\nthe_fucking_url=arg\n--{[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]],[[http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3]]}\n--this is the mother fucking table.\n--fucking shit.\n--easy you piece of shit.\nhandle={}\nfor key,value in ipairs(the_fucking_url) do\ncommand =\"php dopeshit.php \"..value\n--psudocode above.\nhandle[#handle+1]= io.popen(command)\n--is it threaded?\nend\nfor key,value in pairs(handle) do\nresult = handle[key]:read(\"*a\")\nhandle[key]:close()\n-- use local instead of using some functions.\nprint (result)\nend\n--this will automatically add the fucking return.\n--another thread."
+        }
+    ]
+}

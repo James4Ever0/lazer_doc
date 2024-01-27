@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports regular expression module (re) and defines a string \"shit\". It then uses the re.findall() function to find all occurrences of a word character (\\w+) in the string \"shit\", stores them in a list called \"mobile\", and finally prints the list. The output will be a list containing any sequences of alphanumeric characters found in the input string.",
+    "details": [
+        {
+            "comment": "Code imports regular expression module (re) and defines a string \"shit\". It then uses the re.findall() function to find all occurrences of a word character (\\w+) in the string \"shit\", stores them in a list called \"mobile\", and finally prints the list. The output will be a list containing any sequences of alphanumeric characters found in the input string.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/gerund.py\":0-5",
+            "content": "import re\n# four version.\nshit=\"aaaaaargh fuck!\"\nnope=\"\\w+\"\nmobile=list(re.findall(r'{}'.format(nope),shit))\nprint(mobile)"
+        }
+    ]
+}

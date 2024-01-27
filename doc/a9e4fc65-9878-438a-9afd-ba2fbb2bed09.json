@@ -1,0 +1,10 @@
+{
+    "summary": "This function takes a 2D array, converts its indices into a set (removing duplicates), and then maps the original array using only unique indices. It's unclear if it works for n-dimensional arrays.",
+    "details": [
+        {
+            "comment": "This function takes a 2D array, converts its indices into a set (removing duplicates), and then maps the original array using only unique indices. It's unclear if it works for n-dimensional arrays.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/newShit/reHash.py\":0-4",
+            "content": "def reHash(Grid):\n    # this is for 2d arrays.\n    # not sure about n-d arrays.\n    Grid1=list(set([Grid.index(x) for x in Grid]))\n    return [Grid[x] for x in Grid1]"
+        }
+    ]
+}

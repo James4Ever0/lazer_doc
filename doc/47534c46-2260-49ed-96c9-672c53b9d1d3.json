@@ -1,0 +1,10 @@
+{
+    "summary": "The code sets a config file and iterates through command-line parameters to create a list of files. It then executes multiple processes in the background, considering absolute paths, and performs additional file manipulation before ending with special file processing.",
+    "details": [
+        {
+            "comment": "The code sets a config file and iterates through command-line parameters to create a list of files. It then executes multiple processes in the background, considering absolute paths, and performs additional file manipulation before ending with special file processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/cloudnine.sh\":0-45",
+            "content": "#!/bin/bash\n# you could set a config file.\nservice=\"\"\nfor parameter in \"$@\"\ndo\nservice=\"$service /$parameter/d; \"\ndone\ncd rockstar/chumble\n# echo $service\n# make that fucking file!\ntouch .local-service-copy\ntouch .local-service\nif [ -f .local-service-copy ]\nthen\n\trm .local-service-copy\nfi\n#cd hotfix\nevaluate=\"$(pwd)\"\n# list per line\nls -1 *.* | sed \"$service\" > \".local-service\"\ncp \".local-service\" \".local-service-copy\"\ncd ..\ncd ..\n# do it repeatedly\n# you shall consider absolute path.\ninput=\"rockstar/chumble/.local-service\"\nwhile IFS= read -r line\ndo\n# as many brackets as possible.\n\t(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.0001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" ) &\n\t#(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" & sleep 7; kill $! ) &\n#\techo \"$line\"\ndone < \"$input\"\n# this is special.\n# process the file this time.\ncd rockstar/chumble\n#sed '/termbin.com\nsleep 4.5;\nsed -i '/https:\\/\\/termbin.com/!d' .local-service-copy\nkill $$\n#& '\n#'"
+        }
+    ]
+}

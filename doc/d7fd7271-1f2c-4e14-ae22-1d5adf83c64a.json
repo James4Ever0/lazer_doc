@@ -1,0 +1,15 @@
+{
+    "summary": "This regular expression code matches various writing systems and scripts, such as Latin, Greek, Chinese, Japanese, Arabic, Devanagari, Tamil, etc. It is likely used for text normalization or language detection purposes. The given code snippet uses regex to search for languages within a string and displays any matches in the console.",
+    "details": [
+        {
+            "comment": "This code is a regular expression that matches various writing systems and scripts, including Latin, Greek, Chinese, Japanese, Arabic, Devanagari, Tamil, and many more. It's likely used for text normalization or language detection purposes.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/backToSchuler.js\":0-0",
+            "content": "var killer=/\\[(?:unified\\-canadian\\-aboriginal\\-syllabics|(?:international\\-phonetic\\-alphab|tai\\-vi)et|linear\\-b\\-Syllabary|(?:caucasian\\-alba|ukrai)nian|(?:japanese\\-(?:katak|hirag)an|s(?:aurashtr|inhal)|t(?:agbanw|irhut)|phags\\-p|o(?:sman|ri)y|sharad|kannad|granth|thaan|lepch)a|c(?:y(?:priot\\-syllabary|rillic)|optic|ha(?:kma|m))|(?:old\\-(?:south\\-arab|north\\-arab|pers)|phoenic|b(?:elarus|ulgar)|mongol|hungar|georg|shav|ital|russ|ly[cd]|car)ian|(?:imperial\\-arama|old\\-(?:turk|perm)|old\\-ital|ethiop|manda|goth|run)ic|(?:meroitic\\-cursiv|new\\-tai\\-lu|palmyren|cheroke|tai\\-l)e|(?:m(?:ende\\-kikaku|ahajan|od)|varang\\-kshit|(?:syloti\\-nag|tak)r|k(?:harosh|ai)th|devanagar|kh(?:udawad|ojk)|ol\\-chik|gu(?:rmukh|jarat)|pahlav)i|yi\\-syllables|(?:sora\\-sompe|reja)ng|pahawh\\-hmong|(?:meetei\\-may|gre)ek|(?:pau\\-cin\\-ha|telug)u|(?:glagol|ugar)itic|(?:(?:manich|nabat)ae|(?:samari|tibe)t|elbas|germ)an|(?:esperant|hanuno|nk|mr)o|(?:malayal|(?:tai\\-t|sidd|og)h)am|(?:(?:sund|jav)a|chi)nese|b(?:a(?:s(?:sa"
+        },
+        {
+            "comment": "The code snippet uses regular expressions to search for specific languages within a string. The regular expression is designed to match various language codes and names, such as \"arab\" for Arabic, \"englis\" for English, \"turkish\", etc. It then executes the killer.exec() function on the string \"noman\" to extract any matches and displays them in the console along with a profanity.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/digData/backToSchuler.js\":0-9",
+            "content": "\\-vah|hkir)|linese|tak|mum)|opomofo|uginese|engali|rahmi|uhid)|kayah\\-li|(?:tifinag|(?:turk|span)is|englis|kazak|polis|frenc|czec)h|a(?:r(?:menian|ab)|vestan)|tagalog|deseret|pollard|(?:(?:myanm|tat)a|khme)r|h(?:ebrew|angul)|syriac|l(?:i(?:mb|s)u|ao)|tamil|latin|thai|vai)\\]/\nvar noman=\"[arab] iraq [arab]\"\n// what does this mean?\n// i hate regex.\nvar norman=killer.exec(noman)\n//var northman=killer.split(noman)\nconsole.log(norman)\nconsole.log(\"--fuck--\")\n//console.log(northman)"
+        }
+    ]
+}

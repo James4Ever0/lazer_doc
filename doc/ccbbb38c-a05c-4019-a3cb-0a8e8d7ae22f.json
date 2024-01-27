@@ -1,0 +1,10 @@
+{
+    "summary": "The script uses Bash to execute the 'links' command, fetching a webpage's HTML dump from \"blog.csdn.net/okhymok/article/details/76616892 and saves it into \"example/1.log\" file.",
+    "details": [
+        {
+            "comment": "The script uses Bash to execute the 'links' command, fetching a webpage's HTML dump from \"blog.csdn.net/okhymok/article/details/76616892 and saves it into \"example/1.log\" file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/websitegrep/links-dump0.sh\":0-1",
+            "content": "#!/bin/bash\nlinks -dump https://blog.csdn.net/okhymok/article/details/76616892 | cat > example/1.log"
+        }
+    ]
+}

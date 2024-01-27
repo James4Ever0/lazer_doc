@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads a CSV file named \"gamma.csv\", removes newline characters, and for each line in the file it gets synonyms from WordNet and writes them into another CSV file called \"sigma.csv\" excluding the original word itself. It handles exceptions during processing.",
+    "details": [
+        {
+            "comment": "This code reads a CSV file named \"gamma.csv\", removes newline characters, and for each line in the file it gets synonyms from WordNet and writes them into another CSV file called \"sigma.csv\" excluding the original word itself. It handles exceptions during processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/connector/ss.py\":0-28",
+            "content": "from nltk.corpus import wordnet as wn\nimport re\ndef groupy(k0):\n    w=wn.synsets(k0)\n    r=[]\n    for w0 in w:\n        r.append(w0.lemma_names())\n    return r\na=open(\"gamma.csv\",\"r\")\nb=open(\"sigma.csv\",\"w+\")\nfor k in a.readlines():\n    k=re.sub(\"\\n\",\"\",k)\n    try:\n        g=groupy(k)\n        for g0 in g:\n            for g1 in g0:\n                if g1==k:\n                    pass\n                else:\n                    b.write(g1+\",\"+k+\"\\n\")\n    except:\n        pass\nb.write(\"\\n\")\na.close()\nb.close()"
+        }
+    ]
+}

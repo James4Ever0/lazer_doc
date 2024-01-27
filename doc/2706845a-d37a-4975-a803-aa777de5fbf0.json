@@ -1,0 +1,15 @@
+{
+    "summary": "This code has functions for file processing and identifying import statements, finds common elements between lists, and displays toyProject() and seekAWrapper() outputs. It utilizes regular expressions and list operations extensively.",
+    "details": [
+        {
+            "comment": "This code includes functions for opening and processing files, parsing the content of files to identify import statements, generating a list of file names with .py extensions, and scanning until nothing is left. The code also uses regular expressions and list operations extensively.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinearN.py\":0-30",
+            "content": "import re\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame):\n    # scan until nothing left?\n    # it is like parsing a directory tree.\n    # in fact it is not."
+        },
+        {
+            "comment": "The code defines a function that finds the common elements between two lists, updating a HallOfFame list accordingly. It also includes examples of toyProject() and seekAWrapper(), displaying their outputs.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinearN.py\":31-48",
+            "content": "    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)))\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    return seekOn([initialFactor],[])\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nprint(seekAWrapper(\"exampleLinear.py\"))"
+        }
+    ]
+}

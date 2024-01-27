@@ -1,0 +1,15 @@
+{
+    "summary": "The code uses a Bash script to copy database files to their respective names, specifying the storage location of \"types.db\" within Termux's home directory.",
+    "details": [
+        {
+            "comment": "The code copies various database files from a specific location to their respective names (alphabets.db, blocks.db, entities.db, holidays.db, languages.db, lists.db, related.db, sets.db) by using the \"cp\" command in a Bash script.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/dbBackup/fuckme.sh\":0-9",
+            "content": "#!/bin/bash\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fuckyou.db alphabets.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/fuckyou.db blocks.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/fuckyou.db entities.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/fuckyou.db holidays.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/languages/fuckyou.db languages.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/lists/fuckyou.db lists.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/related/fuckyou.db related.db\ncp /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/fuckyou.db sets.db\ncp /d"
+        },
+        {
+            "comment": "The code specifies the storage location of a database named \"types.db\" within the Termux environment's home directory, under various nested folders.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module/dbBackup/fuckme.sh\":9-9",
+            "content": "ata/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/fuckyou.db types.db"
+        }
+    ]
+}

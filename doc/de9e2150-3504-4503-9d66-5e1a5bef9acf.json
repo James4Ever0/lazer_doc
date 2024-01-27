@@ -1,0 +1,10 @@
+{
+    "summary": "This Haskell code imports Data.Map and System.Environment modules, defines a function myMap that takes an Integer input and creates a Map of Integers to lists of Integers using map and makePair functions, and finally prints the command line arguments in main. This is likely used for data manipulation or mapping purposes.",
+    "details": [
+        {
+            "comment": "This Haskell code imports Data.Map and System.Environment modules, defines a function myMap that takes an Integer input and creates a Map of Integers to lists of Integers using map and makePair functions, and finally prints the command line arguments in main. This is likely used for data manipulation or mapping purposes.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly.hs\":0-8",
+            "content": "import Data.Map (Map) \nimport System.Enviorment\nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain = print <<= getArgs"
+        }
+    ]
+}

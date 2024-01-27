@@ -1,0 +1,10 @@
+{
+    "summary": "This Haskell code defines a 'mainFunction.hs' file, which starts with the main function. It prints \"Hello world\" using putStrLn and calls main0 twice before printing the result of fact 6. The short comments indicate the presence of additional comments, mention the importance of philosophers, and define the fact function for calculating factorials using recursion.",
+    "details": [
+        {
+            "comment": "This Haskell code defines a 'mainFunction.hs' file, which starts with the main function. It prints \"Hello world\" using putStrLn and calls main0 twice before printing the result of fact 6. The short comments indicate the presence of additional comments, mention the importance of philosophers, and define the fact function for calculating factorials using recursion.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/mainFunction.hs\":0-19",
+            "content": "main =do\n putStrLn \"Hello world\"\n main0\n main0\n print ( fact 6 )\n{-short comment is it true?\n -just some short comments here\nsome short comments here\nsome short comments here\nsome short comments here\n - -}\n-- comment line here\nmain0 = print \"Hello world again!\"\n-- philosopher's favourite.\n-- fact :: Int -> Int\n--  without the definition.\nfact :: Integral a  => a->a\nfact n|n==0 =1\n      |n/=0 =n*fact(n-1)\n--fact x = x * fact ( x-1)"
+        }
+    ]
+}

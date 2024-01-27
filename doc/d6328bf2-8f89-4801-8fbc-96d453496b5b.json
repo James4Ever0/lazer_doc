@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a Haskell module, \"MyFirstModule\", with a constant expression and a function. The constant expression contains the string \"hello world!\" while the function takes an input string and returns a greeting by concatenating it with \"Hello\" and \"!\".",
+    "details": [
+        {
+            "comment": "This code defines a Haskell module, \"MyFirstModule\", with a constant expression and a function. The constant expression contains the string \"hello world!\" while the function takes an input string and returns a greeting by concatenating it with \"Hello\" and \"!\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/MyFirstModule.hs\":0-4",
+            "content": "module MyFirstModule where\nmyFirstExpression::String\nmyFirstExpression=\"hello world!\"\nmyFirstFunction::String->String\nmyFirstFunction input = \"Hello \"++input++\"!\""
+        }
+    ]
+}

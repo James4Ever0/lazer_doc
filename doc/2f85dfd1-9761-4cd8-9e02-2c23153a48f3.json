@@ -1,0 +1,10 @@
+{
+    "summary": "This code establishes a connection to the \"tits.db\" SQLite database, performs various operations like renaming and creating tables, inserts data from an old table into a new one, drops the old table, commits the changes, and then closes the database connection.",
+    "details": [
+        {
+            "comment": "This code establishes a connection to the \"tits.db\" SQLite database, performs various operations like renaming and creating tables, inserts data from an old table into a new one, drops the old table, commits the changes, and then closes the database connection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/connector/const.py\":0-32",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"tits.db\")\n# it is not good.\n# the command is not avaliable.\nconn.execute(\"PRAGMA foreign_keys=off;\")\nconn.execute(\"BEGIN TRANSACTION;\")\nconn.execute(\"ALTER TABLE subdir  RENAME TO old_subdir;\")\nconn.execute(\"\"\"CREATE TABLE subdir\n( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,name   TEXT    NOT NULL,\ntype         TINYINT     NOT NULL,  \ndepth TINYINT NOT NULL,\nparent TEXT, \nmiscellaneous TEXT NOT NULL,\n  CONSTRAINT rule  UNIQUE (name, miscellaneous)\n);\"\"\")\nconn.execute(\"INSERT INTO subdir SELECT * FROM old_subdir;\")\nconn.execute(\"DROP TABLE old_subdir;\")\n#COMMIT;\nconn.execute(\"PRAGMA foreign_keys=on;\")\n#conn.execute(\"ALTER TABLE subdir ADD CONSTRAINT chain UNIQUE (name, miscellaneous);\")\n#conn.execute(\"ALTER TABLE subdir ADD CONSTRAINT chain0 UNIQUE (id);\")\nconn.commit()\nconn.close()"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
+    "details": [
+        {
+            "comment": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/standardParse.py\":0-29",
+            "content": "import re\n# maybe we shouldn't go further than __a__ funcs\n# use globals() locals() dictionaries.\n# no kwargs.\ndef parseDir(objectName,gloss):\n    return list(map((lambda x: objectName+\".\"+x),eval(\"dir({})\".format(objectName),gloss)))\ndef parseType(objectList,gloss):\n    return list(map((lambda x: eval(\"type({})\".format(x),gloss).__name__), objectList))\ndef recurDir(objectStruct,former,gloss):\n    joke=[list(filter((lambda x:len(re.findall(r'__.+__',x.split('.')[-1]))==0),obj)) for obj in objectStruct]\n#    print(joke)\n    if sum([len(joker) for joker in joke])==0:\n        return (objectStruct+former)\n    else:\n        a=[]\n        for obj in joke:\n            for obj0 in obj:\n                a.append(parseDir(obj0,gloss))\n        return recurDir(a,former+objectStruct,gloss)\ndef depthType(ls,gloss):\n    return list(map((lambda x: parseType(x,gloss)), ls))\ndef monad(m,gloss):\n    ml=recurDir([parseDir(m,gloss)],[],gloss)\n#    print(ml)\n    return (ml,depthType(ml,gloss))\n# That was intense."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the sqlite3 library, creates a database connection, executes SQL to create a table called \"chainer\" with columns for startId, endId, and groupName, commits the changes, and closes the connection. The author is considering sorting labels alphabetically and preserving relationships in the process, but is unsure if there are any limitations or special considerations.",
+    "details": [
+        {
+            "comment": "The code imports the sqlite3 library, creates a database connection, executes SQL to create a table called \"chainer\" with columns for startId, endId, and groupName, commits the changes, and closes the connection. The author is considering sorting labels alphabetically and preserving relationships in the process, but is unsure if there are any limitations or special considerations.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/lists/make1.py\":0-17",
+            "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE chainer (startId INT NOT NULL,\nendId INT NOT NULL, groupName TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (startId ASC, endId ASC, groupName ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?"
+        }
+    ]
+}

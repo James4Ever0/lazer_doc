@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function `scheme` that takes two arguments, where the second one is a lambda. It then prints the type of elements in a tuple and evaluates the given expression. The code also defines a superLamb lambda and a tuple (1,2), and then calls the scheme function with these inputs.",
+    "details": [
+        {
+            "comment": "The code defines a function `scheme` that takes two arguments, where the second one is a lambda. It then prints the type of elements in a tuple and evaluates the given expression. The code also defines a superLamb lambda and a tuple (1,2), and then calls the scheme function with these inputs.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/joke.py\":0-11",
+            "content": "def scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+a[0]+\"--\")\n    print([type(a0) for a0 in eval(a[1])])\n    return eval(\"b\"+a[1])\nsuperLamb=(lambda x,y: x+y)\nshit=1,2\n# this expands the tuple\nprint(superLamb(*shit))\n#print(scheme([\"superLamb\",\"(1,2)\"],superLamb))"
+        }
+    ]
+}

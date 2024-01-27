@@ -1,0 +1,10 @@
+{
+    "summary": "Code reads a Python file, \"sample_strip.py\", and identifies the number of leading whitespace characters (indentation) for each line. It then prints the indentation level, modified line without trailing newline character, notch value (0 for no whitespace, 1+ for indented), and checkFunctor result for each line. This can be useful for analyzing indentation consistency or identifying improperly formatted code sections.",
+    "details": [
+        {
+            "comment": "Code reads a Python file, \"sample_strip.py\", and identifies the number of leading whitespace characters (indentation) for each line. It then prints the indentation level, modified line without trailing newline character, notch value (0 for no whitespace, 1+ for indented), and checkFunctor result for each line. This can be useful for analyzing indentation consistency or identifying improperly formatted code sections.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/oneListHere.py\":0-16",
+            "content": "from defTester import notch, checkFunctor\nfunctorNames=[]\n# parse indentation first.\nwith open(\"sample_strip.py\",\"r\") as j:\n    i1=0\n    for fuck in j.readlines():\n        i=0\n        for i0 in range(len(fuck)):\n            if fuck[i0] in [\" \",\"\\t\"]:\n                i+=1\n            else:\n                break\n        iFuck=fuck if fuck[-1]!=\"\\n\" else fuck[:-1]\n        print(i,fuck[i:],notch(iFuck),checkFunctor(iFuck),i1)\n        i1+=1"
+        }
+    ]
+}

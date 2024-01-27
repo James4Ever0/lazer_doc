@@ -1,0 +1,10 @@
+{
+    "summary": "The code uses the \"cp\" command to copy two files, \"getFromDill.py\" and \"shitsFuckedUp.py\", to a specific location in Termux file system, likely for use within the \"Module\" directory or related application.",
+    "details": [
+        {
+            "comment": "The code uses the \"cp\" command to copy two files, \"getFromDill.py\" and \"shitsFuckedUp.py\", to a specific location in Termux file system, likely for use within the \"Module\" directory or related application.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/shallowCopy.sh\":0-2",
+            "content": "#!/bin/bash\ncp getFromDill.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module &\ncp shitsFuckedUp.py /data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module &"
+        }
+    ]
+}

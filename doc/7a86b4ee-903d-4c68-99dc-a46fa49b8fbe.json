@@ -1,0 +1,10 @@
+{
+    "summary": "This code is changing the directory to a specific location within an app's data storage. Specifically, it navigates to the \"/MicroMsg/3ceac75ed7f4320d3847\" directory inside the \"com.tencent.mm\" app's data folder on Android.",
+    "details": [
+        {
+            "comment": "This code is changing the directory to a specific location within an app's data storage. Specifically, it navigates to the \"/MicroMsg/3ceac75ed7f4320d3847\" directory inside the \"com.tencent.mm\" app's data folder on Android.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/bookgrep/wxapkg.sh\":0-1",
+            "content": "#!/bin/bash\ncd /data/data/com.tencent.mm/MicroMsg/3ceac75ed7f4320d3847"
+        }
+    ]
+}

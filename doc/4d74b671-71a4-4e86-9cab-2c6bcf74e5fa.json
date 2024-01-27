@@ -1,0 +1,10 @@
+{
+    "summary": "This script sequentially executes three Python scripts (makeDB0.py, makeDB1.py, and makeGroupingDatabase.py) to create databases, presumably for a project. The databases may be used in a larger application or system.",
+    "details": [
+        {
+            "comment": "This script sequentially executes three Python scripts (makeDB0.py, makeDB1.py, and makeGroupingDatabase.py) to create databases, presumably for a project. The databases may be used in a larger application or system.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newShit.sh\":0-3",
+            "content": "#!/bin/bash\npython3 makeDB0.py\npython3 makeDB1.py\npython3 makeGroupingDatabase.py"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This Python script defines three functions `anal0`, `anal1`, and `anal2` that write bash commands to files based on input parameters. It reads a file \"MainIndexWithIdenticalKeywords.txt\", extracts unique lines less than 35 characters, and calls these functions for each line. The file is then closed.",
+    "details": [
+        {
+            "comment": "This Python script defines three functions `anal0`, `anal1`, and `anal2` that write bash commands to files based on input parameters. It reads a file \"MainIndexWithIdenticalKeywords.txt\", extracts unique lines less than 35 characters, and calls these functions for each line. The file is then closed.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/GeneralUsageLister/MainIndex.py\":0-43",
+            "content": "def anal0(p):\n    b=open(\"MainIndex/zero/\"+p,\"w+\")\n    b.write(\"#!/bin/bash\\n\")\n    b.write(p+\" &> ../zero-log/\"+p+\".log\")\n    b.write('\\n')\n    b.close()\ndef anal1(p):\n    b=open(\"MainIndex/one/\"+p,\"w+\")\n    b.write(\"#!/bin/bash\\n\")\n    b.write(p+\" -h &> ../one-log/\"+p+\".log\")\n    b.write('\\n')\n    b.close()\ndef anal2(p):\n    b=open(\"MainIndex/two/\"+p,\"w+\")\n    b.write(\"#!/bin/bash\\n\")\n    b.write(p+\" --help &> ../two-log/\"+p+\".log\")\n    b.write('\\n')\n    b.close()\nimport re\na=open(\"MainIndexWithIdenticalKeywords.txt\",\"r\")\ni=0\np1=[]\nwhile i!=1:\n    p=a.readline()\n    if p!=\"\":\n        p=re.findall(r'[^, ]+',p)\n#        print (p)\n        for p0 in p:\n            if len(p0)<35:\n                p1.append(p0[:-1])\n    else:\n        i=1\n        break\na.close()\np2=set(p1)\nfor p3 in p2:\n    anal0(p3)\n    anal1(p3)\n    anal2(p3)"
+        }
+    ]
+}

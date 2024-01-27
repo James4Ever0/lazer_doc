@@ -1,0 +1,10 @@
+{
+    "summary": "This Bash script uses the wget utility to download search results from GitHub. It searches for repositories related to 'general purpose assistant' and saves each result in separate log files named as 2_0.log, 2_1.log, 2_2.log, etc., indicating the page number of the search result.",
+    "details": [
+        {
+            "comment": "This Bash script uses the wget utility to download search results from GitHub. It searches for repositories related to 'general purpose assistant' and saves each result in separate log files named as 2_0.log, 2_1.log, 2_2.log, etc., indicating the page number of the search result.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/buster2.sh\":0-6",
+            "content": "#!/bin/bash\nwget 'https://github.com/search?p=1&q=general+purpose+assistant&type=Repositories&utf8=\u2713' -O 2_0.log\nwget 'https://github.com/search?p=2&q=general+purpose+assistant&type=Repositories&utf8=\u2713' -O 2_1.log\nwget 'https://github.com/search?p=3&q=general+purpose+assistant&type=Repositories&utf8=\u2713' -O 2_2.log\nwget 'https://github.com/search?p=4&q=general+purpose+assistant&type=Repositories&utf8=\u2713' -O 2_3.log\nwget 'https://github.com/search?p=5&q=general+purpose+assistant&type=Repositories&utf8=\u2713' -O 2_4.log\nwget 'https://github.com/search?p=6&q=general+purpose+assistant&type=Repositories&utf8=\u2713' -O 2_5.log"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code appears to be a Bash script that launches a Lua script (shell-args.lua) with two URLs as arguments, possibly for testing purposes. The author seems dissatisfied with the execution speed and considers writing another Lua script to optimize it.",
+    "details": [
+        {
+            "comment": "This code appears to be a Bash script that launches a Lua script (shell-args.lua) with two URLs as arguments, possibly for testing purposes. The author seems dissatisfied with the execution speed and considers writing another Lua script to optimize it.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/test_lua.sh\":0-4",
+            "content": "#!/bin/bash\nfuckinglinks=\"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3\"\nlua shell-args.lua $fuckinglinks\n# this thing is way too slow.\n# how about write another lua script to wrap it around?"
+        }
+    ]
+}

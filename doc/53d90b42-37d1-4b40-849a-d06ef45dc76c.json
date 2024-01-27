@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function `testCube()` that checks if there is a pair of consecutive values in the given list differing by 1. The function `semen()` takes two lists, sorts them and checks if any of them have consecutive values differing by 1. If yes, it returns the sorted list(s), otherwise it recursively divides the unsorted list into two parts, sorts them and calls itself.",
+    "details": [
+        {
+            "comment": "The code defines a function `testCube()` that checks if there is a pair of consecutive values in the given list differing by 1. The function `semen()` takes two lists, sorts them and checks if any of them have consecutive values differing by 1. If yes, it returns the sorted list(s), otherwise it recursively divides the unsorted list into two parts, sorts them and calls itself.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/ejaculate.py\":0-35",
+            "content": "def testCube(_list):\n    v=sorted(_list)\n    vk=0\n    v2=int(len(_list)/2)\n    for i in range(len(_list)-1):\n        if abs(v[i][1]-v[i+1][1])==1:\n            vk+=1\n            if vk>v2:\n                return True\n            else:\n                pass\n        else:\n            pass\n    return False\ndef semen(sortedList,unsortedList):\n    l=int(len(unsortedList)/2)\n    l0,l1=sortedList[0],sortedList[1]\n    jam=testCube(l0) or testCube(l1)\n    print(\"-- LIB STD --\")\n    print(jam)\n    print(\"-- LIB STD --\")\n    if jam:\n        return sortedList\n    else:\n        if l*2==len(unsortedList):\n            v0,v1=unsortedList[:l-1],unsortedList[l:]\n            # need for hard code.\n#        v2=[]\n#        for k in len(v0):\n#            v2.append(v0[k])\n#            v2.append(v1[k])\n            return semen([v0,v1],unsortedList[:-1])\n        else:\n            print(\"FUCKING FUCKED\\nFUCKING FUCKED\")\n            return [[],[]]"
+        }
+    ]
+}

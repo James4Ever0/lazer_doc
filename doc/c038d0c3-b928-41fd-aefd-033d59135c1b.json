@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports the BeautifulSoup library and the storeAList function from simpleStorage. It defines a soup() function to parse HTML, an openShit() function to read file content, an openList() function to convert line-separated text into a list, and a shit() function to extract specific HTML elements. The code then uses these functions to extract data from a log file, filters out empty lists, stores the result in another list, and finally calls storeAList() to save this list of lists into storage.",
+    "details": [
+        {
+            "comment": "The code imports the BeautifulSoup library and the storeAList function from simpleStorage. It defines a soup() function to parse HTML, an openShit() function to read file content, an openList() function to convert line-separated text into a list, and a shit() function to extract specific HTML elements. The code then uses these functions to extract data from a log file, filters out empty lists, stores the result in another list, and finally calls storeAList() to save this list of lists into storage.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/gameTheory/fuck.py\":0-24",
+            "content": "from bs4 import BeautifulSoup\nfrom simpleStorage import storeAList\ndef soup(a):\n    return BeautifulSoup(a)\ndef openShit(b):\n    f=\"\"\n    with open(b,\"r\") as fuck:\n        f=fuck.read()\n    return f\ndef openList(b):\n    return list(filter((lambda x:x!=\"\"),openShit(b).split(\"\\n\")))\ndef shit(x):\n    s=soup(openShit(x)).find_all(name=\"ul\",attrs={\"class\":\"repo-list\"})[0].find_all(name=\"a\",attrs={\"class\":\"v-align-middle\"},recursive=True)\n    return [s0.get_text() for s0 in s]\n# fuck you.\nd=[list(filter((lambda x:x!=[]),shit(b))) for b in openList(\"grep.log\")]\nstoreAList(d)\n#e=[[shit(c) for c ]]\n#print(len(d))"
+        }
+    ]
+}

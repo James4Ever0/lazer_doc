@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function called \"royalty\" that simply prints the text \"hello world\" when called. It is likely used for testing or demonstration purposes, as it performs a basic action with no real functionality beyond printing this message.",
+    "details": [
+        {
+            "comment": "This code defines a function called \"royalty\" that simply prints the text \"hello world\" when called. It is likely used for testing or demonstration purposes, as it performs a basic action with no real functionality beyond printing this message.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/sampleModule.py\":0-1",
+            "content": "def royalty():\n    print(\"hello world\")"
+        }
+    ]
+}

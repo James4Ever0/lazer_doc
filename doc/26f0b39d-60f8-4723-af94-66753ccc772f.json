@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports functions, creates a list from returned values, prints the list, then iterates through each item in the list to execute specific code and print results. Finally, it closes the database connection.",
+    "details": [
+        {
+            "comment": "This code imports functions, creates a list from returned values, prints the list, then iterates through each item in the list to execute specific code and print results. Finally, it closes the database connection.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testiclePickle.py\":0-12",
+            "content": "from getFromPickle import returnAList\nfrom term1 import executeCode, closeConnection\nfrom conPro import sqlMaker\nmasochist=list(map((lambda x:x[0]),returnAList()))\nprint(masochist)\n# this is a fucking list.\nfor k in masochist:\n    print(\"-- spliter for \"+k+\" --\")\n    superMan=executeCode(sqlMaker(k))\n    for superMania in superMan:\n        print(superMania)\n    print(\"-- spliter for \"+k+\" --\")\ncloseConnection()"
+        }
+    ]
+}

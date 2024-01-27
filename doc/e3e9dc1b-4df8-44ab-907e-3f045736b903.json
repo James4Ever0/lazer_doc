@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a lambda function \"lickYouUp\" that multiplies a given number by 4, and two functions \"road\" and \"rock\". The \"road\" function applies the \"lickYouUp\" lambda to its argument. The \"rock\" function calls \"road\" with an input. The \"jerk\" function prints each line of the given text and then prints the result of calling \"rock\" with 4 as the argument. Finally, it prints the result of calling \"rock\" with 4 as the argument.",
+    "details": [
+        {
+            "comment": "The code defines a lambda function \"lickYouUp\" that multiplies a given number by 4, and two functions \"road\" and \"rock\". The \"road\" function applies the \"lickYouUp\" lambda to its argument. The \"rock\" function calls \"road\" with an input. The \"jerk\" function prints each line of the given text and then prints the result of calling \"rock\" with 4 as the argument. Finally, it prints the result of calling \"rock\" with 4 as the argument.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/sample_strip.py\":0-12",
+            "content": "lickYouUp=(lambda c:4*c)\ndef road(a):\n    return lickYouUp(a)\ndef rock(a): \n    return road(a) \ndef jerk(n):\n    print(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")\nprint(rock(4))"
+        }
+    ]
+}

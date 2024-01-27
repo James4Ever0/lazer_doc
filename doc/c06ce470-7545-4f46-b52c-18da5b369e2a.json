@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports chaos and schema modules from adidas package. It defines a function \"lickYouUp\" using lambda, which multiplies input by 4. The \"road\" function uses the chaos module to apply \"lickYouUp\" function to input, then calls \"schema95e9fe2a\" with parameters \"road\", and finally returns result of applying \"lickYouUp\". The \"rock\" function uses the \"road\" function on input. The \"jerk\" function applies schema with parameter \"jerk\", prints its argument, and a print statement is executed with rock(4).",
+    "details": [
+        {
+            "comment": "Code imports chaos and schema modules from adidas package. It defines a function \"lickYouUp\" using lambda, which multiplies input by 4. The \"road\" function uses the chaos module to apply \"lickYouUp\" function to input, then calls \"schema95e9fe2a\" with parameters \"road\", and finally returns result of applying \"lickYouUp\". The \"rock\" function uses the \"road\" function on input. The \"jerk\" function applies schema with parameter \"jerk\", prints its argument, and a print statement is executed with rock(4).",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/analyzer/sample_strip_fix.py\":0-18",
+            "content": "from adidas import chaos as chaos0aa41f45\nfrom adidas import schema as schema95e9fe2a\nlickYouUp8f9baf43=(lambda c:4*c)\nlickYouUp=(lambda c:chaos0aa41f45([\"lickYouUp\",lickYouUp8f9baf43],(c,)))\ndef road(a):\n\tschema95e9fe2a(\"road\",a,)\n\treturn lickYouUp(a)\ndef rock(a): \n\tschema95e9fe2a(\"rock\",a,)\n\treturn road(a) \ndef jerk(n):\n\tschema95e9fe2a(\"jerk\",n,)\n\tprint(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")\nprint(rock(4))"
+        }
+    ]
+}

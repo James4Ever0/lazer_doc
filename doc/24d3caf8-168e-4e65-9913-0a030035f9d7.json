@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function called Split that splits a string by a specified delimiter and, optionally, limits the number of resulting strings. The code then demonstrates the usage of this function on different inputs and prints the results using a custom function, shitshow. The code also includes some humorous variable names for added humor and personality.",
+    "details": [
+        {
+            "comment": "This code defines a function called Split that splits a string by a specified delimiter and, optionally, limits the number of resulting strings. The code then demonstrates the usage of this function on different inputs and prints the results using a custom function, shitshow. The code also includes some humorous variable names for added humor and personality.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix-v0/split-return.lua\":0-45",
+            "content": "--;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\nfunction Split(str, delim, maxNb)\n    -- Eliminate bad cases...\n    if string.find(str, delim) == nil then\n        return { str }\n    end\n    if maxNb == nil or maxNb < 1 then\n        maxNb = 0    -- No limit\n    end\n    local result = {}\n    local pat = \"(.-)\" .. delim .. \"()\"\n    local nb = 0\n    local lastPos\n    for part, pos in string.gmatch(str, pat) do\n--string.gfind() is renamed.\n        nb = nb + 1\n        result[nb] = part\n        lastPos = pos\n        if nb == maxNb then break end\n    end\n    -- Handle the last field\n    if nb ~= maxNb then\n        result[nb + 1] = string.sub(str, lastPos)\n    end\n    return result\nend\nfuck=\"shit\\nfuck\\nshitfuck\\nall your base are belong to us\"\nfuckall=Split(fuck,\"\\n\",2)\nasshole=Split(fuck,\"\\n\",1)\nbitchass=Split(fuck,\"\\n\",3)\nfunction shitshow(dicktable)\n\tfor vagina,pussy in ipairs(dicktable) do\n\t\tprint(vagina..\" --fuckyou-- \"..pussy)\n\tend\nend\nprint(\"+1 fuckall\")\nshitshow(fuckall)\nprint(\"+2 fuckall\")\nshitshow(asshole)\nprint(\"+3 fuckall\")\nshitshow(bitchass)"
+        }
+    ]
+}

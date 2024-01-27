@@ -1,0 +1,10 @@
+{
+    "summary": "This code demonstrates the usage of a key-value pair table and Lua's pairs function. It creates a table with three pairs, prints each key-value, deletes one value, re-prints, then tests accessing a value via string index.",
+    "details": [
+        {
+            "comment": "This code demonstrates the usage of a key-value pair table and Lua's pairs function. It creates a table with three pairs, prints each key-value, deletes one value, re-prints, then tests accessing a value via string index.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/pair-pair.lua\":0-14",
+            "content": "-- this <pairs> means key - value pair.\ntab1 = { key1 = \"val1\", key2 = \"val2\", \"val3\" }\nfor k, v in pairs(tab1) do\n    print(k .. \" - \" .. v)\nend\ntab1.key1 = nil\nfor k, v in pairs(tab1) do\n    print(k .. \" - \" .. v)\nend\n-- this fuck really works\ntab2={}\ntab2.locate=\"fuck\"\nprint(tab2[\"locate\"])"
+        }
+    ]
+}

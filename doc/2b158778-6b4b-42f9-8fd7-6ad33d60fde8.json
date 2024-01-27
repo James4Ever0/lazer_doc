@@ -1,0 +1,10 @@
+{
+    "summary": "This code aims to create a function that is independent of its execution place. It recognizes the difficulty in achieving this without advanced understanding and requires parsing both immutable and mutable parts.",
+    "details": [
+        {
+            "comment": "This code aims to create a function that is independent of its execution place. It recognizes the difficulty in achieving this without advanced understanding and requires parsing both immutable and mutable parts.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/methodBank/extractor/README\":0-1",
+            "content": "Make a function independent of execution place. However this is impossible without sophisticated understanding.\nMust parse immutable parts and mutable ones."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
+    "details": [
+        {
+            "comment": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/communism/frightning.py\":0-37",
+            "content": "# fully trustworthy partial trustworthy complete nonsense\n# return a list instead.\nimport re\n\"\"\"\nliteral=\"2 3 42 3 451 2 3 4 5 62 3 45 2 3 45\"\nanus0=\"2 3 4\"\n#def testStone(major,minor,jerkOff):\n\"\"\"\ndef testTube(nb,anus):\n#    fuck=re.findall(r'[0-9]{}?[0-9]|?[0-9]{}[0-9]'.format(anus,anus,anus),nb)\n    fuck=[m.start() for m in re.finditer(anus,nb)]\n    fuckme=[len(nb),len(anus)]\n    bitch=[]\n    for wifu in fuck:\n        if wifu==0:\n            if nb[wifu+fuckme[1]]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        elif wifu+fuckme[1]==fuckme[0]:\n            if nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        else:\n            if nb[wifu+fuckme[1]]==\" \" and nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n    return bitch\n    #print(fuck)\n\"\"\"\nprint(literal)\nprint(\"--spliter--\")\nprint(testTube(literal,anus0))\"\"\""
+        }
+    ]
+}

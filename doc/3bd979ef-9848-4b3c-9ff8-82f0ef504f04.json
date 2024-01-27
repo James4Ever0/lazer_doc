@@ -1,0 +1,10 @@
+{
+    "summary": "The code is making 20 GET requests to download the results of GitHub search queries for \"game theory\" from pages 1 to 20 and saving them as separate log files (0_9.log to 0_19.log).",
+    "details": [
+        {
+            "comment": "The code is making 20 GET requests to download the results of GitHub search queries for \"game theory\" from pages 1 to 20 and saving them as separate log files (0_9.log to 0_19.log).",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/gameTheory/buster1.sh\":0-11",
+            "content": "#!/bin/bash\nwget 'https://github.com/search?p=10&q=game+theory&type=&utf8=%E2%9C%93' -O 0_9.log\nwget 'https://github.com/search?p=11&q=game+theory&type=&utf8=%E2%9C%93' -O 0_10.log\nwget 'https://github.com/search?p=12&q=game+theory&type=&utf8=%E2%9C%93' -O 0_11.log\nwget 'https://github.com/search?p=13&q=game+theory&type=&utf8=%E2%9C%93' -O 0_12.log\nwget 'https://github.com/search?p=14&q=game+theory&type=&utf8=%E2%9C%93' -O 0_13.log\nwget 'https://github.com/search?p=15&q=game+theory&type=&utf8=%E2%9C%93' -O 0_14.log\nwget 'https://github.com/search?p=16&q=game+theory&type=&utf8=%E2%9C%93' -O 0_15.log\nwget 'https://github.com/search?p=17&q=game+theory&type=&utf8=%E2%9C%93' -O 0_16.log\nwget 'https://github.com/search?p=18&q=game+theory&type=&utf8=%E2%9C%93' -O 0_17.log\nwget 'https://github.com/search?p=19&q=game+theory&type=&utf8=%E2%9C%93' -O 0_18.log\nwget 'https://github.com/search?p=20&q=game+theory&type=&utf8=%E2%9C%93' -O 0_19.log"
+        }
+    ]
+}

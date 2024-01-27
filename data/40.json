@@ -1,0 +1,533 @@
+{
+    "4000": {
+        "file_id": 713,
+        "content": "from newTestN import toyProject\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \" and p !='[' and p != ']']))\nshit=''\nwith open('core.log','r') as fuck:\n    shit=fuck.read()\np=[]\nwith open(joker(shit)+'types.txt','r') as f:\n    for j in f.readlines():\n        if j[0]!='#' and len(j)>1:\n            p.append(greatWall2(joker(j)))\n'''\nfor a,b in enumerate(p):\n    print(a,[b])'''\nfor a in p:\n    toyProject(0,[a])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/cockshock.py:1-17"
+    },
+    "4001": {
+        "file_id": 713,
+        "content": "The code reads a file named 'core.log', applies some transformations to its lines, and appends the transformed lines to another file. It then opens that new file, iterates over each line, passes them to 'toyProject' function along with an index, and finally prints the index and value of each line in the transformed file.",
+        "type": "comment"
+    },
+    "4002": {
+        "file_id": 714,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/constructor.py",
+        "type": "filepath"
+    },
+    "4003": {
+        "file_id": 714,
+        "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
+        "type": "summary"
+    },
+    "4004": {
+        "file_id": 714,
+        "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" );\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/constructor.py:1-31"
+    },
+    "4005": {
+        "file_id": 714,
+        "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
+        "type": "comment"
+    },
+    "4006": {
+        "file_id": 715,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/derive_prefixed_fixed.py",
+        "type": "filepath"
+    },
+    "4007": {
+        "file_id": 715,
+        "content": "The code utilizes meta-programming to parse Python scripts, extracting table names and constraints using CREATE TABLE statements. It demonstrates this functionality on a given list of scripts. The code also prints a separator, variable \"b\", and stores list \"a\" in function storeAList.",
+        "type": "summary"
+    },
+    "4008": {
+        "file_id": 715,
+        "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=['makeDB0.py']\na=cockShock(dickHead[0])\n'''b=cockShock(dickHead[1])\nc=cockShock(dickHead[2])\nd=cockShock(dickHead[3])'''\n'''print(a)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/derive_prefixed_fixed.py:1-30"
+    },
+    "4009": {
+        "file_id": 715,
+        "content": "This code uses meta-programming to parse a Python script and extract table names and constraints from it. It reads the script, finds CREATE TABLE statements, identifies tables and their respective constraints, and returns them as output. The code then demonstrates this functionality on a provided list of Python scripts.",
+        "type": "comment"
+    },
+    "4010": {
+        "file_id": 715,
+        "content": "print(\"--spliter--\")\nprint(b)'''\nstoreAList([a])",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/derive_prefixed_fixed.py:31-33"
+    },
+    "4011": {
+        "file_id": 715,
+        "content": "This code segment is printing a separator, then a variable \"b\", followed by storing list \"a\" in a function called storeAList.",
+        "type": "comment"
+    },
+    "4012": {
+        "file_id": 716,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/makeDB0.py",
+        "type": "filepath"
+    },
+    "4013": {
+        "file_id": 716,
+        "content": "The code creates a SQLite database named \"fuckyou.db\" and sets up a table called \"languageSet\" with a unique constraint on the language name column. The developer expresses concerns about intermediate data flow before inserting it into a graph database, discussing label relationships and alphabetical order. They also consider random insertion or maintaining relationships but do not specify any conclusions.",
+        "type": "summary"
+    },
+    "4014": {
+        "file_id": 716,
+        "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE languageSet (\nlanguageName TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (languageName ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/languages/makeDB0.py:1-18"
+    },
+    "4015": {
+        "file_id": 716,
+        "content": "The code creates a SQLite database named \"fuckyou.db\" and sets up a table called \"languageSet\" with a unique constraint on the language name column. The developer expresses concerns about intermediate data flow before inserting it into a graph database, discussing label relationships and alphabetical order. They also consider random insertion or maintaining relationships but do not specify any conclusions.",
+        "type": "comment"
+    },
+    "4016": {
+        "file_id": 717,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/newTestN.py",
+        "type": "filepath"
+    },
+    "4017": {
+        "file_id": 717,
+        "content": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
+        "type": "summary"
+    },
+    "4018": {
+        "file_id": 717,
+        "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    err=forMotherRussia(numToKill,superRats)\n    print(err)\n# there is the unique constraint\n    try:\n        executeCode(err)\n        print('--ejaculation successful--')\n    except:\n        print('--testicles are stolen--')\n# fucking pricks.\n#print(forMotherRussia(0,['singapore','newYear']))\n#print(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newTestN.py:1-25"
+    },
+    "4019": {
+        "file_id": 717,
+        "content": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
+        "type": "comment"
+    },
+    "4020": {
+        "file_id": 718,
+        "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/term0.py",
+        "type": "filepath"
+    },
+    "4021": {
+        "file_id": 718,
+        "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
+        "type": "summary"
+    },
+    "4022": {
+        "file_id": 718,
+        "content": "import sqlite3\n# initial shits\ndef executeCode(sql):\n    conn=sqlite3.connect(\"fuckyou.db\")\n    conn.execute(sql)\n    conn.commit()\n    conn.close()\n'''\ndef closeConnection():\n\tconn.close()'''",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/term0.py:1-11"
+    },
+    "4023": {
+        "file_id": 718,
+        "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
+        "type": "comment"
+    },
+    "4024": {
+        "file_id": 719,
+        "content": "/multilingual/rockstar/newdawn/info_gather/CNN.lua",
+        "type": "filepath"
+    },
+    "4025": {
+        "file_id": 719,
+        "content": "The code defines a table and utilizes functions to create another table and store commands in an array for potential execution. The file is read, written to io.write(), and closed after reading.",
+        "type": "summary"
+    },
+    "4026": {
+        "file_id": 719,
+        "content": "Table={\n\t[1]={\"player A\",\"\"},\n\t[2]={\"juice\",\"\"},\n\t[3]={\"wtf\",\"\"}\n}\nTable0={}\nfunction map_all (fcn, tab, idx, ...)\n    if idx < 1 then\n\t    --count of the list.\n\t--print(\"--spliter--\")\n\t-- this is the print-them-all function.\n        fcn(...)\n\t--print(\"--spliter--\")\n\t-- it is appending the thing on the back of argument list.\n    else\n        local t = tab[idx]\n\t-- length minus one.\n        for i = 1, #t do\n\t\t--print(\"--spliter0--\")\n\t\tmap_all(fcn, tab, idx-1, t[i], ...) \n\t\t--print(\"--spliter0--\")\n\tend\n    end\nend\nfunction appendnow(...)\n\tlocal shit=\"\"\n\tfor fuck,nothing in ipairs({...}) do\n\t\tif nothing~=\"\"  then\n\t\t\tshit=shit..\" \\\"\"..nothing..\"\\\"\"\n\t\tend\n\tend\n\tif shit~=\"\" then\n\t\tTable0[#Table0+1]=shit\n\tend\nend\nmap_all(appendnow, Table, #Table)\n--[[for x ,v in ipairs(Table0) do\n\tprint(v)\nend]]\nhandle={}                                  for key,value in ipairs(Table0) do\n\tcommand =\"echo\"..value  \n--psudocode above.     \n\thandle[#handle+1]= io.popen(command)       --is it threaded?                  \nend   \nfor key,value in pairs(handle) do",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/CNN.lua:1-52"
+    },
+    "4027": {
+        "file_id": 719,
+        "content": "The code defines a table containing various items and then utilizes a function called \"map_all\" to iterate through the table and create another table, \"Table0\". The \"appendnow\" function concatenates non-empty strings from each iteration into one string, which is then appended to \"Table0\". Finally, it creates an array of commands using the \"io.popen\" function and stores them in the \"handle\" variable for potential execution.",
+        "type": "comment"
+    },
+    "4028": {
+        "file_id": 719,
+        "content": "\tresult = handle[key]:read(\"*a\")\n\thandle[key]:close()                        -- use local instead of using some functions.\n--\tprint (result)\n\tio.write(result)\nend\n--anything is global here.\n-- what is this shit all about?\n--does that mean we have to append this fuck to a candidate list?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/CNN.lua:54-62"
+    },
+    "4029": {
+        "file_id": 719,
+        "content": "This code is reading a file using the handle and key, then closing the file after reading. The result is written to io.write() for output. The comments question the purpose of appending anything to a candidate list, which seems unrelated to this specific code snippet.",
+        "type": "comment"
+    },
+    "4030": {
+        "file_id": 720,
+        "content": "/multilingual/rockstar/newdawn/info_gather/DNN.lua",
+        "type": "filepath"
+    },
+    "4031": {
+        "file_id": 720,
+        "content": "The code defines two tables and uses a recursive function to iterate through the first table, appending non-empty strings. It searches for packages using \"apt-cache search\" and stores results in an array called \"handle\". The script deals with file reading and printing related information.",
+        "type": "summary"
+    },
+    "4032": {
+        "file_id": 720,
+        "content": "Table={\n\t[1]={\"pdf\",\"\"},\n\t[2]={\"reader\",\"\"},\n\t[3]={\"txt\",\"\"}\n}\nTable0={}\nspliter=\"---------fuckyou---------\"\nfunction map_all (fcn, tab, idx, ...)\n    if idx < 1 then\n\t    --count of the list.\n\t--print(\"--spliter--\")\n\t-- this is the print-them-all function.\n        fcn(...)\n\t--print(\"--spliter--\")\n\t-- it is appending the thing on the back of argument list.\n    else\n        local t = tab[idx]\n\t-- length minus one.\n        for i = 1, #t do\n\t\t--print(\"--spliter0--\")\n\t\tmap_all(fcn, tab, idx-1, t[i], ...) \n\t\t--print(\"--spliter0--\")\n\tend\n    end\nend\nfunction appendnow(...)\n\tlocal shit=\"\"\n\tfor fuck,nothing in ipairs({...}) do\n\t\tif nothing~=\"\"  then\n\t\t\tshit=shit..\" \\\"\"..nothing..\"\\\"\"\n\t\tend\n\tend\n\tif shit~=\"\" then\n\t\tTable0[#Table0+1]=shit\n\tend\nend\nmap_all(appendnow, Table, #Table)\n--[[for x ,v in ipairs(Table0) do\n\tprint(v)\nend]]\nhandle={}                                  for key,value in ipairs(Table0) do\n\tcommand =\"apt-cache search\"..value  \n\t-- no trailing space.\n--psudocode above.     \n\thandle[#handle+1]= io.popen(command)       --is it threaded?                  ",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/DNN.lua:1-50"
+    },
+    "4033": {
+        "file_id": 720,
+        "content": "The code defines two tables, one with file formats and their corresponding empty strings, and another table that will be filled later. It then uses a recursive function to iterate through the first table and append non-empty strings from each element to the second table. Finally, it searches for packages based on the contents of the second table using the \"apt-cache search\" command and potentially stores the results in an array named \"handle\".",
+        "type": "comment"
+    },
+    "4034": {
+        "file_id": 720,
+        "content": "end   \nfor key,value in pairs(handle) do\n\tresult = handle[key]:read(\"*a\")\n\thandle[key]:close()                        -- use local instead of using some functions.\n--\tprint (result)\n\tprint(Table0[key])\n\tprint(spliter)\n\tio.write(result)\n\tprint(spliter)\nend\n--anything is global here.\n-- what is this shit all about?\n--does that mean we have to append this fuck to a candidate list?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/DNN.lua:51-66"
+    },
+    "4035": {
+        "file_id": 720,
+        "content": "The code is closing and reading files from a table, printing related information, and appending the file contents to the output. The \"what is this shit all about?\" comment seems unclear, but it appears to be part of a larger script where local variables are used instead of certain functions. The last two comments discuss potential global scope issues and whether an item needs to be added to a candidate list.",
+        "type": "comment"
+    },
+    "4036": {
+        "file_id": 721,
+        "content": "/multilingual/rockstar/newdawn/info_gather/README",
+        "type": "filepath"
+    },
+    "4037": {
+        "file_id": 721,
+        "content": "The code is a comment indicating that the module failed to retrieve data from Baidu due to attempting to do it in one shot and dealing with heavy recoil.",
+        "type": "summary"
+    },
+    "4038": {
+        "file_id": 721,
+        "content": "you know why your module fail when trying to retrieve data from baidu?\nbecause you always want to do it in one shot.\nand the fucking recoil is too damn heavy.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/README:1-3"
+    },
+    "4039": {
+        "file_id": 721,
+        "content": "The code is a comment indicating that the module failed to retrieve data from Baidu due to attempting to do it in one shot and dealing with heavy recoil.",
+        "type": "comment"
+    },
+    "4040": {
+        "file_id": 722,
+        "content": "/multilingual/rockstar/newdawn/info_gather/RNN.lua",
+        "type": "filepath"
+    },
+    "4041": {
+        "file_id": 722,
+        "content": "The code defines a table of file types with their common names, generates shorter/more common terms for each, and applies the appendnow function to create Table0. It creates a table for file handles, reads data from each handle, and uses Lua's `io.popen()` to execute external commands and combine results.",
+        "type": "summary"
+    },
+    "4042": {
+        "file_id": 722,
+        "content": "Table={\n\t[1]={\"pdf\",\"document\",\"doc\",\"\"},\n\t[2]={\"reader\",\"conver\",\"format\",\"\"},\n\t[3]={\"txt\",\"text\",\"word\",\"\"}\n}\n--shorter, and more common is better.\n--not even the whole word.\nTable0={}\nspliter=\"---------fuckyou---------\"\nfunction map_all (fcn, tab, idx, ...)\n    if idx < 1 then\n\t    --count of the list.\n\t--print(\"--spliter--\")\n\t-- this is the print-them-all function.\n        fcn(...)\n\t--print(\"--spliter--\")\n\t-- it is appending the thing on the back of argument list.\n    else\n        local t = tab[idx]\n\t-- length minus one.\n        for i = 1, #t do\n\t\t--print(\"--spliter0--\")\n\t\tmap_all(fcn, tab, idx-1, t[i], ...) \n\t\t--print(\"--spliter0--\")\n\tend\n    end\nend\nfunction appendnow(...)\n\tlocal shit=\"\"\n\tfor fuck,nothing in ipairs({...}) do\n\t\tif nothing~=\"\"  then\n\t\t\tshit=shit..\" \\\"\"..nothing..\"\\\"\"\n\t\tend\n\tend\n\tif shit~=\"\" then\n\t\tTable0[#Table0+1]=shit\n\tend\nend\nmap_all(appendnow, Table, #Table)\n--[[for x ,v in ipairs(Table0) do\n\tprint(v)\nend]]\nhandle={}                                  for key,value in ipairs(Table0) do\n\tcommand =\"apt-cache search\"..value  ",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/RNN.lua:1-48"
+    },
+    "4043": {
+        "file_id": 722,
+        "content": "The code defines a table containing various file types and their common names. It then iterates over the table to generate shorter and more common words for each file type, storing them in Table0. The function map_all applies the appendnow function to each element of the original table, appending the shorter/more common terms into a new string which is added to Table0. Finally, it can be seen that there is an intention to print out the contents of Table0 but it has been commented out.",
+        "type": "comment"
+    },
+    "4044": {
+        "file_id": 722,
+        "content": "\t-- no trailing space.\n--psudocode above.     \n\thandle[#handle+1]= io.popen(command)       --is it threaded?                  \nend   \nfor key,value in pairs(handle) do\n\tresult = handle[key]:read(\"*a\")\n\thandle[key]:close()                        -- use local instead of using some functions.\n--\tprint (result)\n\tprint(Table0[key])\n\tprint(spliter)\n\tio.write(result)\n\tprint(spliter)\nend\n--anything is global here.\n-- what is this shit all about?\n--does that mean we have to append this fuck to a candidate list?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/RNN.lua:49-67"
+    },
+    "4045": {
+        "file_id": 722,
+        "content": "This code creates a table to store file handles and reads data from each handle, then prints the results along with some additional information. It uses Lua's `io.popen()` function to execute external commands and capture their output. The purpose is to gather information by executing multiple commands and combining their results.",
+        "type": "comment"
+    },
+    "4046": {
+        "file_id": 723,
+        "content": "/multilingual/rockstar/newdawn/info_gather/convoluted.lua",
+        "type": "filepath"
+    },
+    "4047": {
+        "file_id": 723,
+        "content": "This code defines a table and uses recursive function `map_all` to apply function `appendnow` on each element of the table. `appendnow` concatenates non-empty strings, separating them with spaces and storing the result in another table `Table0`. Finally, it prints all elements of `Table0`, which appears to be a global variable used for storing appended strings. The purpose seems to involve collecting non-empty input strings from the initial table into separate entries in `Table0`.",
+        "type": "summary"
+    },
+    "4048": {
+        "file_id": 723,
+        "content": "Table={\n\t[1]={\"player A\",\"\"},\n\t[2]={\"juice\",\"\"},\n\t[3]={\"wtf\",\"\"}\n}\nTable0={}\nfunction map_all (fcn, tab, idx, ...)\n    if idx < 1 then\n\t    --count of the list.\n\t--print(\"--spliter--\")\n\t-- this is the print-them-all function.\n        fcn(...)\n\t--print(\"--spliter--\")\n\t-- it is appending the thing on the back of argument list.\n    else\n        local t = tab[idx]\n\t-- length minus one.\n        for i = 1, #t do\n\t\t--print(\"--spliter0--\")\n\t\tmap_all(fcn, tab, idx-1, t[i], ...) \n\t\t--print(\"--spliter0--\")\n\tend\n    end\nend\nfunction appendnow(...)\n\tlocal shit=\"\"\n\tfor fuck,nothing in ipairs({...}) do\n\t\tif nothing~=\"\"  then\n\t\t\tshit=shit..\" \\\"\"..nothing..\"\\\" \"\n\t\tend\n\tend\n\tTable0[#Table0+1]=shit\nend\nmap_all(appendnow, Table, #Table)\nfor x ,v in ipairs(Table0) do\n\tprint(v)\nend\n--anything is global here.\n-- what is this shit all about?\n--does that mean we have to append this fuck to a candidate list?",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/convoluted.lua:1-45"
+    },
+    "4049": {
+        "file_id": 723,
+        "content": "This code defines a table and uses recursive function `map_all` to apply function `appendnow` on each element of the table. `appendnow` concatenates non-empty strings, separating them with spaces and storing the result in another table `Table0`. Finally, it prints all elements of `Table0`, which appears to be a global variable used for storing appended strings. The purpose seems to involve collecting non-empty input strings from the initial table into separate entries in `Table0`.",
+        "type": "comment"
+    },
+    "4050": {
+        "file_id": 724,
+        "content": "/multilingual/rockstar/newdawn/info_gather/dopeshit.php",
+        "type": "filepath"
+    },
+    "4051": {
+        "file_id": 724,
+        "content": "This PHP script parses URLs and retrieves redirect locations, but contains language errors and developer frustration comments. The code seems to be an HTML file with a PHP tag, executed on a server without output or functionality.",
+        "type": "summary"
+    },
+    "4052": {
+        "file_id": 724,
+        "content": "<?php\n//$url = \"http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu\";\n//save the thread or not?\n//now we do not consider nothing.\n//just use every fucking thread.\n$url=$argv[1];\n// this was the wrong fucking thing\n// $argv instead of $args!\n// fuck you! \n$info = parse_url($url);\n$fp = fsockopen($info['host'], 80,$errno, $errstr, 30);\nfputs($fp,\"GET {$info['path']}?{$info['query']} HTTP/1.1\\r\\n\");\nfputs($fp, \"Host: {$info['host']}\\r\\n\");\nfputs($fp, \"Connection: close\\r\\n\\r\\n\");\n$rewrite = '';\nwhile(!feof($fp)) {\n    $line = fgets($fp);\n    if($line != \"\\r\\n\" ) {\n        if(strpos($line,'Location:') !== false) {\n            $rewrite = str_replace(array(\"\\r\",\"\\n\",\"Location: \"),'',$line);\n        }\n    }else {\n        break;\n    }\n}\n//is this the fucking way to combine strings?\n//$rewrite=\"$rewrite\\n\";\n//shit this fucking works.\necho \"$rewrite\"; //结果显示：string(22) \"http://www.google.com/\"\n//this fuck is good.\n//you should not end this without a fucking return.\n//except when combined with the fucking lua.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/dopeshit.php:1-32"
+    },
+    "4053": {
+        "file_id": 724,
+        "content": "This code is a PHP script that parses the URL, opens an HTTP connection, and retrieves the redirect location by reading the response headers. It then outputs the final redirect location as a string. The code has some language errors and comments expressing frustration during development.",
+        "type": "comment"
+    },
+    "4054": {
+        "file_id": 724,
+        "content": "?>",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/dopeshit.php:33-33"
+    },
+    "4055": {
+        "file_id": 724,
+        "content": "This code appears to be an HTML file with a PHP tag. The code is likely to be executed on a server, and it ends the PHP block without any output or functionality.",
+        "type": "comment"
+    },
+    "4056": {
+        "file_id": 725,
+        "content": "/multilingual/rockstar/newdawn/info_gather/fuck.sh",
+        "type": "filepath"
+    },
+    "4057": {
+        "file_id": 725,
+        "content": "The code changes the current directory to a specific location and then executes a Lua script (marine.lua) with arguments 0, \"bing search api\", and redirects its output to a file named \"supercube.txt\" in the original working directory.",
+        "type": "summary"
+    },
+    "4058": {
+        "file_id": 725,
+        "content": "#!/bin/bash\nvar=$(pwd)\ncd /data/data/com.termux/files/home/lazer/multilingual/hotfix-v1\nlua marine.lua 0 bing search api  > $var\"/supercube.txt\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/fuck.sh:1-4"
+    },
+    "4059": {
+        "file_id": 725,
+        "content": "The code changes the current directory to a specific location and then executes a Lua script (marine.lua) with arguments 0, \"bing search api\", and redirects its output to a file named \"supercube.txt\" in the original working directory.",
+        "type": "comment"
+    },
+    "4060": {
+        "file_id": 726,
+        "content": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md",
+        "type": "filepath"
+    },
+    "4061": {
+        "file_id": 726,
+        "content": "This Lua library offers efficient, memory-efficient combination and permutation functions through iterators, with 'permute', 'powerset', and 'shuffle' functions provided. Performance tests in Lua 5.1 and LuaJIT are included, and it is licensed under MIT.",
+        "type": "summary"
+    },
+    "4062": {
+        "file_id": 726,
+        "content": "# luacombine\nPure, performant combination and permutation library for Lua and LuaJIT.\n# Installation\n    luarocks install --server=http://luarocks.org/dev luacombine\n# Documentation\nAll functions operate on Lua arrays. E.g.\n    {1,2,3}\n    {'a','b','c','d'}\n    {{'a'},{1,2},{a=4,b=9},7}\n    etc...\nAll functions return an iterator which returns multiple results (instead of tables).\nIterators were used because they are more memory efficient and because they are well optimised\nfor by LuaJIT. Multiple results are returned instead of tables because creating tables is an\nexpensive operation in Lua. Returning multiple results allows the decision to create a table\nto be passed onwards so that it's only done when it's required. Further, making a table from\nmultiple results (e.g. local x = {f()}) is more efficient in Lua than making a table by\nincrementally adding to it.\nGenerally inside of each function, I've tried to use as few resources as possible and\nto minimise object creation.\n## Including in a project\n    C = require 'luacombine'",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md:1-31"
+    },
+    "4063": {
+        "file_id": 726,
+        "content": "Pure, performant Lua library for combination and permutation tasks, utilizing iterators for memory efficiency and better LuaJIT optimization. Functions operate on Lua arrays, returning multiple results instead of tables to reduce expensive table operations. Minimizing resource usage and object creation within each function is prioritized.",
+        "type": "comment"
+    },
+    "4064": {
+        "file_id": 726,
+        "content": "## combn(tbl,n) -> iterator\nProduce all combinations of *n* elements from array *tbl*. It outputs an iterator which\nreturns a new combination for every call, except for the last call which returns a nil.\nExample:\n    for a,b in C.combn({'x','y','z'}, 2) do ... end\n    -- or ...\n    local f = C.combn({'x','y','z'}, 2)\n    while true do\n        local x = {f()}\n        if #x == 0 then break end\n        ...\n    end\n## combn_many(...) -> iterator\nProduces all of the combination of drawing one element for each list provided. It outputs\nan iterator which returns a new combination for every call, except for the last call which\nreturns a nil.\nExample:\n    for a,b in C.combn_many({'x','y','z'}, {1,2,3}) do ... end\n    -- or\n    local f = C.combn_many({'x','y','z'}, {1,2,3})\n    while true do\n        local x = {f()}\n        if #x == 0 then break end\n        ...\n    end\n## permute(tbl) -> iterator\nProduces all of the permutations of the elements in *tbl*. It outputs an iterator which\nreturns a new combination for every call, except for the last call which returns a nil.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md:33-73"
+    },
+    "4065": {
+        "file_id": 726,
+        "content": "This code defines three functions: combn, combn_many, and permute. All of them produce combinations or permutations of elements in a given table and output an iterator which returns a new combination for every call, except the last one which returns nil. Examples are provided to illustrate their usage.",
+        "type": "comment"
+    },
+    "4066": {
+        "file_id": 726,
+        "content": "Example:\n    for a,b,c in C.permute({'x','y','z'}) do ... end\n    -- or\n    local f = C.permute({'x','y','z'})\n    while true do\n        local x = {f()}\n        if #x == 0 then break end\n        ...\n    end\n## powerset(tbl) -> iterator\nProduces all of the subsets of the elements in *tbl*. It outputs an iterator which\nreturns a new combination for every call, except for the last call which returns a nil.\nExample:\n    for a,b,c in C.powerset({'x','y','z'}) do ... end\n    -- or\n    local f = C.powerset({'x','y','z'})\n    while true do\n        local x = {f()}\n        if #x == 0 then break end\n        ...\n    end\n## shuffle(tbl) -> tbl\nReshuffles the order of an array in a table using the Fisher-Yates algorithm. It does not\nset the random seed. So use *math.randomseed(<value>)* if you'd like to set it. Note that this\nfunction mutates it's parameter.\nExample:\n    x = {'x','y','z'}\n    C.shuffle(x)\n# Test suite\nThere is a basic test suite at the moment which verifies that the number of items returned\nis as expected. To run it:",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md:75-122"
+    },
+    "4067": {
+        "file_id": 726,
+        "content": "This code defines three functions: 'permute', 'powerset', and 'shuffle'. The 'permute' function generates all permutations of elements in a table, the 'powerset' function produces all subsets of elements in a table, and the 'shuffle' function rearranges the order of array elements using the Fisher-Yates algorithm. The code also mentions a basic test suite for verifying the functions' outputs.",
+        "type": "comment"
+    },
+    "4068": {
+        "file_id": 726,
+        "content": "    lua test.impl.lua\n# Performance\nRun the performance tests:\n    lua perf.impl.lua\n    or\n    luajit perf.impl.lua\nWith vanilla Lua 5.1:\n| Description | Elapsed |\n| --- | --- |\n| combn, array size #500, pick 3 | 4.740285s |\n| combn_many,3 arrays #200 | 3.596942s |\n| powerset, array size #20 | 5.3622s |\n| permute, array size #10 | 3.753631s |\nWith LuaJIT:\n| Description | Elapsed |\n| --- | --- |\n| combn, array size #500, pick 3 | 1.128s |\n| combn_many,3 arrays #200 | 0.846391s | \n| powerset, array size #20 | 3.077064s |\n| permute, array size #10 | 0.830082s |\nNB: **combn({...},3)** with an array of size 500 would produce 20708500 combinations\nof length 3. **powerset({...})** with an array of size 20 would produce 1048576\npermutations of length 20.\n# License\nMIT Licensed, please see LICENSE file for more information.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md:124-162"
+    },
+    "4069": {
+        "file_id": 726,
+        "content": "This code displays the elapsed time for various performance tests executed with both vanilla Lua 5.1 and LuaJIT, highlighting the difference in efficiency between them. It also provides information on the potential number of combinations and permutations generated by specific functions at certain array sizes. The code is licensed under MIT.",
+        "type": "comment"
+    },
+    "4070": {
+        "file_id": 727,
+        "content": "/multilingual/rockstar/newdawn/info_gather/luacombine/combine.lua",
+        "type": "filepath"
+    },
+    "4071": {
+        "file_id": 727,
+        "content": "This code defines \"icombn\" and \"icombn_many\" functions for combining elements from tables, handling recursion and edge cases. It also includes \"combn\", \"combn_many\", and \"powerset\" functions for permutations and combinations in Lua with error checking. The code returns the \"combine\" function that combines and shuffles tables of elements using combination and permutation operations.",
+        "type": "summary"
+    },
+    "4072": {
+        "file_id": 727,
+        "content": "local combine = {}\nlocal function icombn(tbl,i,n,t,l)\n   t = t or {}\n   l = l or table.getn(tbl)\n   if n == 1 then\n      local j = i\n      return function()\n\t if j > l then return nil end\n\t t[n] = tbl[j]\n\t j = j+1\n\t return t[n]\n      end\n   end\n   local j = i\n   local v = icombn(tbl,j+1,n-1,t)\n   return function()\n      if j > l then return nil end\n      local x = v()\n      if x == nil then\n\t j = j+1\n\t v = icombn(tbl,j+1,n-1,t)\n\t x = v()\n      end\n      if x == nil then return nil end\n      t[n] = tbl[j]\n      return unpack(t)\n   end\nend\nlocal function icombn_many(n,params,t)\n   t = t or {}\n   if n < 1 then return nil end\n   local o = params[n]\n   local l = table.getn(o)\n   if n == 1 then\n      local i = 1\n      return function()\n\t if i > l then return nil end\n\t t[n] = o[i]\n\t i = i+1\n\t return t[n]\n      end\n   end\n   local i = 1\n   local v = icombn_many(n-1, params,t)\n   return function()\n      if i > l then return nil end\n      local x = v()\n      if x == nil then\n\t i = i+1\n\t if i > l or n < 0 then return nil end\n\t v = icombn_many(n-1,params,t)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/combine.lua:1-53"
+    },
+    "4073": {
+        "file_id": 727,
+        "content": "This code defines a function icombn that combines elements from a table into an array and icombn_many which handles multiple tables. The functions use recursion to iterate through the tables and return a combined result. It also checks for edge cases like empty or null arrays, and returns nil when appropriate.",
+        "type": "comment"
+    },
+    "4074": {
+        "file_id": 727,
+        "content": "\t x = v()\n      end\n      if x == nil then return nil end\n      t[n] = o[i]\n      return unpack(t)\n   end\nend\nlocal function factorial(n)\n   if n == 0 then return 1 end\n   return n * factorial(n-1)\nend\nlocal function combn_no(n,r)\n   return factorial(n)/(factorial(r)*factorial(n-r))\nend\nfunction ipermute(n)\n   local function gen(p,n)\n      if n == 0 then coroutine.yield(p)\n      else\n\t for i=1,n do\n\t    p[n],p[i] = p[i],p[n]\n\t    gen(p,n-1)\n\t    p[n],p[i] = p[i],p[n]\n\t end\n      end\n   end\n   local p = {}; for x=1,n do table.insert(p,x) end\n   local c = coroutine.create(function() gen(p,n) end)\n   return function()\n      local _,r = coroutine.resume(c)\n      return r\n   end\nend\nfunction combine.combn(tbl,n)\n   if n <= 0 or n > table.getn(tbl) then\n      error(\"Need 0 < n <= tbl length.\")\n   end\n   return icombn(tbl,1,n,nil,nil)\nend\nfunction combine.combn_many(...)\n   local params = {...}\n   local l = table.getn(params)\n   if l == 0 then error(\"Need at least one array.\") end\n   return icombn_many(l,params,nil)\nend\nfunction combine.powerset(tbl)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/combine.lua:54-104"
+    },
+    "4075": {
+        "file_id": 727,
+        "content": "This code defines functions for permutations and combinations in Lua, with error checking for invalid inputs. The \"combine\" module contains the functions: \"combn\" for generating combinations and \"combn_many\" for generating combinations from multiple arrays. It also includes the \"powerset\" function to generate all possible subsets of an array.",
+        "type": "comment"
+    },
+    "4076": {
+        "file_id": 727,
+        "content": "   local l,i = table.getn(tbl),1\n   local n,v = combn_no(l,i), icombn(tbl,1,i)\n   return function()\n      n = n-1\n      if n < 0 then\n\t i = i+1\n\t if i > l then return nil end\n\t n = combn_no(l,i) - 1\n\t v = icombn(tbl,1,i)\n      end\n      return v()\n   end\nend\nfunction combine.permute(tbl)\n   local l = table.getn(tbl)\n   if l == 0 then return tbl end\n   local v = ipermute(l)\n   local t = {}\n   return function()\n      local x = v()\n      if x == nil then return nil end\n      for i=1,#x do t[i] = tbl[x[i]] end\n      return unpack(t)\n   end\nend\nfunction combine.shuffle(t)\n   for i = #t, 1, -1 do\n      local j = math.random(i)\n      t[i],t[j]=t[j],t[i]\n   end\n   return t\nend\nreturn combine",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/combine.lua:105-140"
+    },
+    "4077": {
+        "file_id": 727,
+        "content": "The code defines a \"combine\" function that combines and shuffles tables of elements. It uses the \"combn_no\", \"icombn\", and \"ipermute\" functions for combination and permutation operations. The \"combine.shuffle\" function shuffles table elements randomly, while \"combine.permute\" generates combinations with repetitions allowed. Finally, the code returns the \"combine\" function.",
+        "type": "comment"
+    },
+    "4078": {
+        "file_id": 728,
+        "content": "/multilingual/rockstar/newdawn/info_gather/luacombine/luacombine-scm-0.rockspec",
+        "type": "filepath"
+    },
+    "4079": {
+        "file_id": 728,
+        "content": "The code defines a RockSpec file for the \"luacombine\" package with version \"scm-0\". It includes the URL of its GitHub repository, and specifies dependencies such as Lua >= 5.1. The build type is built-in and includes modules like \"combine.lua\".",
+        "type": "summary"
+    },
+    "4080": {
+        "file_id": 728,
+        "content": "package = \"luacombine\"\nversion = \"scm-0\"\nsource = {\n  url = \"git://github.com/emiruz/luacombine.git\",\n}\ndescription = {\n  summary = \"Pure, performant combination and permutation library for Lua and LuaJIT.\",\n  homepage = \"https://github.com/emiruz/luacombine\",\n  license = \"MIT/X11\",\n  maintainer = \"emir@usgroupltd.uk\",\n  detailed = \"Pure, performant combination and permutation library for Lua and LuaJIT.\"\n}\ndependencies = {\n  \"lua >= 5.1\"\n}\nbuild = {\n  type = \"builtin\",\n  modules = { combine = \"combine.lua\" }\n}",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/luacombine-scm-0.rockspec:1-23"
+    },
+    "4081": {
+        "file_id": 728,
+        "content": "The code defines a RockSpec file for the \"luacombine\" package with version \"scm-0\". It includes the URL of its GitHub repository, and specifies dependencies such as Lua >= 5.1. The build type is built-in and includes modules like \"combine.lua\".",
+        "type": "comment"
+    },
+    "4082": {
+        "file_id": 729,
+        "content": "/multilingual/rockstar/newdawn/info_gather/luacombine/perf.impl.lua",
+        "type": "filepath"
+    },
+    "4083": {
+        "file_id": 729,
+        "content": "This Lua script requires the 'combine' module and includes several test functions. It tests combn, combn_many, powerset, and permute functions on arrays of different sizes, measuring their execution time. The first test function (combn_test) uses combn with an array of size 500 to pick 3 elements, the second one (combn_many_test) tests combn_many with three arrays of size 200, powerset_test tests powerset on an array of size 20, and permute_test tests permute on an array of size 10. The time taken for each test is logged to the console.",
+        "type": "summary"
+    },
+    "4084": {
+        "file_id": 729,
+        "content": "C = require 'combine'\nlocal function time(f, desc)\n   s = os.clock()\n   f()\n   e = os.clock()\n   print(\"DESC: \" .. desc .. '\\t' .. e-s .. 's')\nend\nfunction combn_test()\n   local t = {}\n   for i=1,400 do t[i]=i end   \n   for a,b,c in C.combn(t,3) do\n   end\nend\nfunction combn_many_test()\n   local t = {}\n   for i=1,200 do t[i]=i end\n   for a,b,c in C.combn_many(t,t,t) do\n   end\nend\nfunction powerset_test()\n   local t = {}\n   for i=1,20 do t[i]=i end\n   local f = C.powerset(t)\n   while true do\n      local x= {f()}\n      if #x == 0 then break end\n   end\nend\nfunction permute_test()\n   local t = {}\n   for i=1,10 do t[i]=i end\n   local f = C.permute(t)\n   while true do\n      local x= {f()}\n      if #x == 0 then break end\n   end\nend\ntime(combn_test, \"combn, array size #500, pick 3\")\ntime(combn_many_test, \"combn_many,3 arrays #200\")\ntime(powerset_test, \"powerset, array size #20\")\ntime(permute_test, \"permute, array size #10\")",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/perf.impl.lua:1-47"
+    },
+    "4085": {
+        "file_id": 729,
+        "content": "This Lua script requires the 'combine' module and includes several test functions. It tests combn, combn_many, powerset, and permute functions on arrays of different sizes, measuring their execution time. The first test function (combn_test) uses combn with an array of size 500 to pick 3 elements, the second one (combn_many_test) tests combn_many with three arrays of size 200, powerset_test tests powerset on an array of size 20, and permute_test tests permute on an array of size 10. The time taken for each test is logged to the console.",
+        "type": "comment"
+    },
+    "4086": {
+        "file_id": 730,
+        "content": "/multilingual/rockstar/newdawn/info_gather/luacombine/test.impl.lua",
+        "type": "filepath"
+    },
+    "4087": {
+        "file_id": 730,
+        "content": "This code tests the 'combine' library, focusing on counting combinations using different input sizes and data types. It includes assertions for count(C.powerset) and count(C.permute), ensuring correctness in various scenarios.",
+        "type": "summary"
+    },
+    "4088": {
+        "file_id": 730,
+        "content": "C = require 'combine'\n-- Aux functions for testing.\n-- I don't know shit.\nlocal function factorial(n)\n   if n == 0 then return 1 end\n   return n * factorial(n-1)\nend\nlocal function combn_no(n,r)\n   return factorial(n)/(factorial(r)*factorial(n-r))\nend\nlocal function count(i)\n   local c = 0\n   for x in i do\n      c = c+1\n   end\n   return c\nend\n-- combn count tests\nassert(count(C.combn({1},1)) == 1)\nassert(count(C.combn({1,2,3,4,5},3)) == combn_no(5,3))\nassert(count(C.combn({1,2,3,4,5},1)) == combn_no(5,1))\nassert(count(C.combn({4,4,4},3)) == combn_no(3,3))\nassert(count(C.combn({1,{2},{a=1,b='c'},4,{d='ok'}},4)) == combn_no(5,4))\nassert(count(C.combn({1,2,3,4},1)) == combn_no(4,1))\nassert(count(C.combn({3,4,5,6,7,8,9,10,11,12},2)) == combn_no(10,2))\n-- combn_many count tests\nassert(count(C.combn_many({1})) == 1)\nassert(count(C.combn_many({3,4,5}, {1,{b=2,c=9}})) == 3*2)\nassert(count(C.combn_many({4,5}, {1,2}, {4,4,4,4})) == 2*2*4)\nassert(count(C.combn_many({3,'4',5}, {1,2},{1})) == 3*2*1)\nassert(count(C.combn_many({3,4,{a=5}}, {1,'2'},{1}, {4,5,6,7})) == 3*2*1*4)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/test.impl.lua:1-38"
+    },
+    "4089": {
+        "file_id": 730,
+        "content": "This code tests the functionality of a 'combine' library, specifically focusing on counting combinations using different input sizes and data types. The code includes various assertions to ensure that the library correctly counts combinations in various scenarios. It uses auxiliary functions such as factorial and combn_no for comparison.",
+        "type": "comment"
+    },
+    "4090": {
+        "file_id": 730,
+        "content": "-- powerset count tests\nassert(count(C.powerset({1,2,3,4,5})) == 2^5-1)\nassert(count(C.powerset({3,4,5})) == 2^3-1)\nassert(count(C.powerset({1,2})) == 2^2-1)\nassert(count(C.powerset({1})) == 1)\n-- permute count tests\nassert(count(C.permute({1,2,3,4,5})) == factorial(5))\nassert(count(C.permute({1,2,3})) == factorial(3))\nassert(count(C.permute({1,2,{3},4,{a=5,b='a'}})) == factorial(5))\nassert(count(C.permute({1})) == 1)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/luacombine/test.impl.lua:40-52"
+    },
+    "4091": {
+        "file_id": 730,
+        "content": "This code snippet contains test assertions for functions count(C.powerset) and count(C.permute). It tests the powerset function with different input sets and asserts that the output is correct based on the formula 2^n-1 for a given set's size n, and also tests permute function with different inputs and asserts that the output is equal to the factorial of the set's size. It ensures the functions are working correctly for different input scenarios.",
+        "type": "comment"
+    },
+    "4092": {
+        "file_id": 731,
+        "content": "/multilingual/rockstar/newdawn/info_gather/shell-args.lua",
+        "type": "filepath"
+    },
+    "4093": {
+        "file_id": 731,
+        "content": "The code defines a function to execute multiple commands using PHP and stores their results. It creates a table for command handling, loops through each URL in the provided list, executes a PHP script with each URL as an argument, and saves the output of these commands. Finally, it prints the saved outputs. The code also contains some profanity-laced comments, indicating frustration or humor from the developer.",
+        "type": "summary"
+    },
+    "4094": {
+        "file_id": 731,
+        "content": "--command =\"node duper-get.js java\"\n-- scriptTest.lua (in your scripts directory)\n--[[local M = {}\nlocal function testFunction()\n      print(\"Test function called\")\nend\nM.testFunction = testFunction\nreturn M\n]]\n-- hey you should call me instead of requiring me!\nthe_fucking_url=arg\n--{[[http://www.baidu.com/link?url=nS2MGJqjJ4zBBpC8yDF8xDh8vibi1lVeE7gGr9UONBu]],[[http://www.baidu.com/link?url=mQRln1LKWUncYQMSCUu01Uq09GtFVObdNqylQdFpk3ebBca2mr5AzXeNyG31ljYB3dW5Ke9vJ2nPVEZ08vicwxSK0mVBg5KQWHUMXdqZcs3]]}\n--this is the mother fucking table.\n--fucking shit.\n--easy you piece of shit.\nhandle={}\nfor key,value in ipairs(the_fucking_url) do\ncommand =\"php dopeshit.php \"..value\n--psudocode above.\nhandle[#handle+1]= io.popen(command)\n--is it threaded?\nend\nfor key,value in pairs(handle) do\nresult = handle[key]:read(\"*a\")\nhandle[key]:close()\n-- use local instead of using some functions.\nprint (result)\nend\n--this will automatically add the fucking return.\n--another thread.",
+        "type": "code",
+        "location": "/multilingual/hotfix-v0/shell-args.lua:1-35"
+    },
+    "4095": {
+        "file_id": 731,
+        "content": "The code defines a function to execute multiple commands using PHP and stores their results. It creates a table for command handling, loops through each URL in the provided list, executes a PHP script with each URL as an argument, and saves the output of these commands. Finally, it prints the saved outputs. The code also contains some profanity-laced comments, indicating frustration or humor from the developer.",
+        "type": "comment"
+    },
+    "4096": {
+        "file_id": 732,
+        "content": "/multilingual/rockstar/newdawn/info_gather/simple.sh",
+        "type": "filepath"
+    },
+    "4097": {
+        "file_id": 732,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "summary"
+    },
+    "4098": {
+        "file_id": 732,
+        "content": "#!/bin/bash\nls -lt",
+        "type": "code",
+        "location": "/multilingual/simple.sh:1-2"
+    },
+    "4099": {
+        "file_id": 732,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "comment"
+    }
+}

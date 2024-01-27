@@ -1,0 +1,10 @@
+{
+    "summary": "This code snippet is using the iconv module to encode a Chinese content string, \"\u592e\u89c6\u6682\u505cNBA\u8f6c\u64ad,\" into gb2312 encoding. It also encodes it as a URI component and logs the result. The commented out line suggests that there was previously an attempt to use iconv for encoding but it has been removed or replaced with encodeURIComponent.",
+    "details": [
+        {
+            "comment": "This code snippet is using the iconv module to encode a Chinese content string, \"\u592e\u89c6\u6682\u505cNBA\u8f6c\u64ad,\" into gb2312 encoding. It also encodes it as a URI component and logs the result. The commented out line suggests that there was previously an attempt to use iconv for encoding but it has been removed or replaced with encodeURIComponent.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/baidu-process/node-conv.js\":0-4",
+            "content": "// var iconv = require('iconv');\ncontent=\"\u592e\u89c6\u6682\u505cNBA\u8f6c\u64ad\"\nvar p = encodeURIComponent(content)\n//iconv.encode(content, 'gb2312');\nconsole.log(p);"
+        }
+    ]
+}

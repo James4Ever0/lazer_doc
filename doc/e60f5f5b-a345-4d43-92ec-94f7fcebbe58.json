@@ -1,0 +1,10 @@
+{
+    "summary": "This function takes five parameters (a, b, c, d, e) and writes the content of file b to file a. It replaces occurrence of string 'c' with 'd' in file b whenever 'e' equals to the current iteration count. The code prints the iteration count and each line of file b as it reads them.",
+    "details": [
+        {
+            "comment": "This function takes five parameters (a, b, c, d, e) and writes the content of file b to file a. It replaces occurrence of string 'c' with 'd' in file b whenever 'e' equals to the current iteration count. The code prints the iteration count and each line of file b as it reads them.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixer.py\":0-14",
+            "content": "def snapshot(a,b,c,d,e):\n    with open(a,\"w+\") as ap:\n        with open(b,\"r\") as ad:\n            shit=1\n            for abo in ad.readlines():\n                print(shit)\n                print(abo)\n                if shit == e:\n                    #shit+=1\n                    abo = abo.replace(c,d)\n#                print(abo)\n                    ap.write(abo)\n                else:\n                    ap.write(abo)\n                shit+=1"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines a function \"mover\" that takes two arguments: \"plist\", which is a list of file paths, and \"dest\", the destination folder. It creates a temporary file called \"shallowCopy.sh\" in write mode. Then it iterates through each term in the plist and writes a command to copy each file to the specified destination using the \"cp\" command. The \"&\\n\" at the end of each line ensures that commands are written on separate lines in the temporary file.",
+    "details": [
+        {
+            "comment": "This code defines a function \"mover\" that takes two arguments: \"plist\", which is a list of file paths, and \"dest\", the destination folder. It creates a temporary file called \"shallowCopy.sh\" in write mode. Then it iterates through each term in the plist and writes a command to copy each file to the specified destination using the \"cp\" command. The \"&\\n\" at the end of each line ensures that commands are written on separate lines in the temporary file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/shallowCopy.py\":0-3",
+            "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+'&\\n\")"
+        }
+    ]
+}

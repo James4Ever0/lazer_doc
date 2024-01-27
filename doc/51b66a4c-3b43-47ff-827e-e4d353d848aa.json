@@ -1,0 +1,10 @@
+{
+    "summary": "This function, named 'diff', imports the difflib library and uses SequenceMatcher to identify matching blocks between two strings (a and b). It then returns a list of the matching substrings found in both strings.",
+    "details": [
+        {
+            "comment": "This function, named 'diff', imports the difflib library and uses SequenceMatcher to identify matching blocks between two strings (a and b). It then returns a list of the matching substrings found in both strings.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/diffTool.py\":0-3",
+            "content": "import difflib\ndef diff(a,b):\n    thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n    return thug"
+        }
+    ]
+}

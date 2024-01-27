@@ -1,0 +1,10 @@
+{
+    "summary": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
+    "details": [
+        {
+            "comment": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixerv0.py\":0-14",
+            "content": "def snapshot(a,b,c,d,e):\n    with open(a,\"w+\") as ap:\n        with open(b,\"r\") as ad:\n            shit=1\n            for abo in ad.readlines():\n                print(shit)\n                print(abo)\n                if ( (c in abo) or shit == e):\n                    #shit+=1\n                    abo = abo.replace(c,d)\n#                print(abo)\n                    ap.write(abo)\n                else:\n                    ap.write(abo)\n                shit+=1"
+        }
+    ]
+}

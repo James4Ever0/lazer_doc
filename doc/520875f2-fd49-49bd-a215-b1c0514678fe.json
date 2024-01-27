@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports a function called \"niche\" from the module \"superHot\". It then loops through a range of 4 values and applies the \"niche\" function to each value, f.",
+    "details": [
+        {
+            "comment": "The code imports a function called \"niche\" from the module \"superHot\". It then loops through a range of 4 values and applies the \"niche\" function to each value, f.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/superCool.py\":0-3",
+            "content": "from superHot import niche\nfor f in range(4):\n    niche(f)"
+        }
+    ]
+}

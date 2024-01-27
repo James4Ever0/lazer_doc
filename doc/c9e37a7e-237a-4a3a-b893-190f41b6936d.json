@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports pandas and dosage modules, initializes empty lists for filters, creates custom functions to clean HTML data, reads an HTML file, applies cleaning filters, processes the data into a DataFrame, and saves it as a CSV.",
+    "details": [
+        {
+            "comment": "The code imports pandas and dosage modules, initializes empty lists for filters, creates custom functions to clean HTML data, reads an HTML file, applies cleaning filters, processes the data into a DataFrame, and saves it as a CSV.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/standardNext.py\":0-17",
+            "content": "import pandas as pd\nfrom dosage import drug\nverbose=[]\n# add new layers. I write custom filters to do this job.\n# get the wrapper of html file.\n# get four distinct values:\n# number word code\nv=(lambda l:[item for sublist in l for item in sublist])\nv0=(lambda x: x if type(x[0]).__name__ in [\"int\",\"str\"] else v0(v(x)))\ncleanUp=(lambda x,y:list(filter((lambda x:x not in [y,\"\"]),x.split(y))))\nreClean=(lambda x,y: v([cleanUp(x0,y) for x0 in x]))\nwith open(\"sample/evil.html\") as fuck:\n    verbose=reClean(cleanUp(fuck.read(),\"\\n\"),\" \")\n#verbatism=[verbose[-1]]+verbose[:-1]\n# better return a list.\ndf=pd.DataFrame(drug(verbose))\nwith open(\"canonical1.csv\",\"w+\") as hentai:\n    hentai.write(df.to_csv(index=False))"
+        }
+    ]
+}

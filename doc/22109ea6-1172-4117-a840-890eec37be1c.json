@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines functions for processing and converting data related to cannabis dosages. The \"cannabis\" function takes a list of items, assigns values based on whether the item is less than or greater than a certain threshold, and appends these values to another list. The \"drug\" function uses the \"cannabis\" function to process a list of items and then applies a hash function (\"fuckYou\") to each item if it has a specific value.",
+    "details": [
+        {
+            "comment": "This code defines functions for processing and converting data related to cannabis dosages. The \"cannabis\" function takes a list of items, assigns values based on whether the item is less than or greater than a certain threshold, and appends these values to another list. The \"drug\" function uses the \"cannabis\" function to process a list of items and then applies a hash function (\"fuckYou\") to each item if it has a specific value.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/convolution/dosage.py\":0-37",
+            "content": "from hashFunc import fuckYou\n# there must be major and monir inside.\n# we could use big prime number to do this.\n# here comes the rsa package!\n# no it won't do.\n# figure it out yourself.\n# i mean the highlighter. very important.\ndef testIfIn(a):\n    if a == \"<\":\n        return 1\n    elif a == \">\":\n        return -1 \n    else:\n        return 0\ndef cannabis(a):\n    a1 = [0,0]\n    a4 = []\n    for a0 in a:\n#        print(a0)\n        a3=[testIfIn(a2) for a2 in a0]\n        oreo=a1[len(a1)-1]\n#        print(a3)\n        pie=(0 if len(a3)==0 else sum(a3))\n#        print(pie)\n        els=pie+oreo\n#        print(els)\n        a1.append(els)\n        a4.append(1 if (sum(a3)==0 and (1 in a3)) else 0)\n    return [1 if not a4[r]==0 else a1[r+2] for r in range(len(a))]\ndef drug(a):\n    c=cannabis(a)\n    b=[fuckYou(r) for r in a]\n    for r in range(len(a)):\n        if c[r]==1:\n            b[r][0]=1\n    return b"
+        }
+    ]
+}

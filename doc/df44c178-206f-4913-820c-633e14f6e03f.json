@@ -1,0 +1,15 @@
+{
+    "summary": "This code tests the 'combine' library, focusing on counting combinations using different input sizes and data types. It includes assertions for count(C.powerset) and count(C.permute), ensuring correctness in various scenarios.",
+    "details": [
+        {
+            "comment": "This code tests the functionality of a 'combine' library, specifically focusing on counting combinations using different input sizes and data types. The code includes various assertions to ensure that the library correctly counts combinations in various scenarios. It uses auxiliary functions such as factorial and combn_no for comparison.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/luacombine/test.impl.lua\":0-37",
+            "content": "C = require 'combine'\n-- Aux functions for testing.\n-- I don't know shit.\nlocal function factorial(n)\n   if n == 0 then return 1 end\n   return n * factorial(n-1)\nend\nlocal function combn_no(n,r)\n   return factorial(n)/(factorial(r)*factorial(n-r))\nend\nlocal function count(i)\n   local c = 0\n   for x in i do\n      c = c+1\n   end\n   return c\nend\n-- combn count tests\nassert(count(C.combn({1},1)) == 1)\nassert(count(C.combn({1,2,3,4,5},3)) == combn_no(5,3))\nassert(count(C.combn({1,2,3,4,5},1)) == combn_no(5,1))\nassert(count(C.combn({4,4,4},3)) == combn_no(3,3))\nassert(count(C.combn({1,{2},{a=1,b='c'},4,{d='ok'}},4)) == combn_no(5,4))\nassert(count(C.combn({1,2,3,4},1)) == combn_no(4,1))\nassert(count(C.combn({3,4,5,6,7,8,9,10,11,12},2)) == combn_no(10,2))\n-- combn_many count tests\nassert(count(C.combn_many({1})) == 1)\nassert(count(C.combn_many({3,4,5}, {1,{b=2,c=9}})) == 3*2)\nassert(count(C.combn_many({4,5}, {1,2}, {4,4,4,4})) == 2*2*4)\nassert(count(C.combn_many({3,'4',5}, {1,2},{1})) == 3*2*1)\nassert(count(C.combn_many({3,4,{a=5}}, {1,'2'},{1}, {4,5,6,7})) == 3*2*1*4)"
+        },
+        {
+            "comment": "This code snippet contains test assertions for functions count(C.powerset) and count(C.permute). It tests the powerset function with different input sets and asserts that the output is correct based on the formula 2^n-1 for a given set's size n, and also tests permute function with different inputs and asserts that the output is equal to the factorial of the set's size. It ensures the functions are working correctly for different input scenarios.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather/luacombine/test.impl.lua\":39-51",
+            "content": "-- powerset count tests\nassert(count(C.powerset({1,2,3,4,5})) == 2^5-1)\nassert(count(C.powerset({3,4,5})) == 2^3-1)\nassert(count(C.powerset({1,2})) == 2^2-1)\nassert(count(C.powerset({1})) == 1)\n-- permute count tests\nassert(count(C.permute({1,2,3,4,5})) == factorial(5))\nassert(count(C.permute({1,2,3})) == factorial(3))\nassert(count(C.permute({1,2,{3},4,{a=5,b='a'}})) == factorial(5))\nassert(count(C.permute({1})) == 1)"
+        }
+    ]
+}

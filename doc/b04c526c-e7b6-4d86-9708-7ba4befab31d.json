@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads the 'core.log' file and appends its content to another file containing language data, then filters the lines by removing spaces and brackets. It stores the resulting lines in a list 'p', and finally passes each item in 'p' to the 'toyProject' function from 'newTestN'.",
+    "details": [
+        {
+            "comment": "The code reads the 'core.log' file and appends its content to another file containing language data, then filters the lines by removing spaces and brackets. It stores the resulting lines in a list 'p', and finally passes each item in 'p' to the 'toyProject' function from 'newTestN'.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/languages/cockshock.py\":0-16",
+            "content": "from newTestN import toyProject\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \" and p !='[' and p != ']']))\nshit=''\nwith open('core.log','r') as fuck:\n    shit=fuck.read()\np=[]\nwith open(joker(shit)+'languages.txt','r') as f:\n    for j in f.readlines():\n        if j[0]!='#' and len(j)>1:\n            p.append(greatWall2(joker(j)))\n'''\nfor a,b in enumerate(p):\n    print(a,[b])'''\nfor a in p:\n    toyProject(0,[a])"
+        }
+    ]
+}

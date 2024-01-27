@@ -1,0 +1,10 @@
+{
+    "summary": "The code iterates over command line parameters, sets up a service variable, changes directory to 'hotfix', creates and copies local service files, then executes tower.sh with random delays for each line in the input file. Finally, it modifies .local-service-copy by removing specific lines and kills the script process.",
+    "details": [
+        {
+            "comment": "The code iterates over command line parameters, sets up a service variable, changes directory to 'hotfix', creates and copies local service files, then executes tower.sh with random delays for each line in the input file. Finally, it modifies .local-service-copy by removing specific lines and kills the script process.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotfix/cloudnine.sh\":0-35",
+            "content": "#!/bin/bash\nservice=\"\"\nfor parameter in \"$@\"\ndo\nservice=\"$service /$parameter/d; \"\ndone\ncd hotfix\n# echo $service\nif [ -f .local-service-copy ]\nthen\n\trm .local-service-copy\nfi\n#cd hotfix\nevaluate=\"$(pwd)\"\nls *.* | sed \"$service\" > \".local-service\"\ncp \".local-service\" \".local-service-copy\"\ncd ..\ninput=\"hotfix/.local-service\"\nwhile IFS= read -r line\ndo\n# as many brackets as possible.\n\t(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.0001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" ) &\n\t#(x=$(($RANDOM % 1000)); sleep \"$(echo \"scale=9; $x * 0.001\" | bc )\"; ./tower.sh \"$evaluate\" \"$line\" & sleep 7; kill $! ) &\n#\techo \"$line\"\ndone < \"$input\"\n# process the file this time.\ncd hotfix\n#sed '/termbin.com\nsleep 4.5;\nsed -i '/https:\\/\\/termbin.com/!d' .local-service-copy\nkill $$\n#& '\n#'"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function \"skimmer\" that identifies consecutive occurrences of a specific element in a given list, and another function \"notorious\" which takes a list, finds unique elements, and applies the skimmer function to those elements. It then prints the length of the input list and the output of the notorious function. The code appears to be performing data manipulation on lists with unique elements.",
+    "details": [
+        {
+            "comment": "The code defines a function \"skimmer\" that identifies consecutive occurrences of a specific element in a given list, and another function \"notorious\" which takes a list, finds unique elements, and applies the skimmer function to those elements. It then prints the length of the input list and the output of the notorious function. The code appears to be performing data manipulation on lists with unique elements.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/communism/spliter.py\":0-29",
+            "content": "text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\nprint(len(text))\nprint(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:"
+        }
+    ]
+}

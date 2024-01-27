@@ -1,0 +1,10 @@
+{
+    "summary": "This Lua script performs basic arithmetic operations on variables a and b. It calculates the sum, difference, product, quotient, remainder, square, and negation of a and prints each operation's result. Finally, it checks if a is not equal to b and prints the result in boolean form.",
+    "details": [
+        {
+            "comment": "This Lua script performs basic arithmetic operations on variables a and b. It calculates the sum, difference, product, quotient, remainder, square, and negation of a and prints each operation's result. Finally, it checks if a is not equal to b and prints the result in boolean form.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/hotlinks/arithmatic.lua\":0-17",
+            "content": "a = 21\nb = 10\nc = a + b\nprint(\"Line 1 - c \u7684\u503c\u4e3a \", c )\nc = a - b\nprint(\"Line 2 - c \u7684\u503c\u4e3a \", c )\nc = a * b\nprint(\"Line 3 - c \u7684\u503c\u4e3a \", c )\nc = a / b\nprint(\"Line 4 - c \u7684\u503c\u4e3a \", c )\nc = a % b\nprint(\"Line 5 - c \u7684\u503c\u4e3a \", c )\nc = a^2\nprint(\"Line 6 - c \u7684\u503c\u4e3a \", c )\nc = -a\nprint(\"Line 7 - c \u7684\u503c\u4e3a \", c )\nprint(not(a~=b))\n-- do not do concat or add on boolean values."
+        }
+    ]
+}

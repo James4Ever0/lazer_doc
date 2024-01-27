@@ -1,0 +1,531 @@
+{
+    "4100": {
+        "file_id": 733,
+        "content": "/multilingual/rockstar/newdawn/info_gather/socket.sh",
+        "type": "filepath"
+    },
+    "4101": {
+        "file_id": 733,
+        "content": "This code is a shell script that changes directory to a specific location, executes a Lua file with command line arguments, and then searches for packages using apt-cache. The output of the search is likely related to \"supercube\" and stored in the specified file path.",
+        "type": "summary"
+    },
+    "4102": {
+        "file_id": 733,
+        "content": "#!/bin/bash\n#\n#cd /data/data/com.termux/files/home/lazer/multilingual/hotfix-v1\n#lua marine.lua 0 bing search api  > $var\"/supercube.txt\"\napt-cache search \"$@\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/socket.sh:1-5"
+    },
+    "4103": {
+        "file_id": 733,
+        "content": "This code is a shell script that changes directory to a specific location, executes a Lua file with command line arguments, and then searches for packages using apt-cache. The output of the search is likely related to \"supercube\" and stored in the specified file path.",
+        "type": "comment"
+    },
+    "4104": {
+        "file_id": 734,
+        "content": "/multilingual/rockstar/newdawn/info_gather/the-real-wheel.py",
+        "type": "filepath"
+    },
+    "4105": {
+        "file_id": 734,
+        "content": "This code utilizes Baidu search engine functions to fetch and extract data from web pages, iterating through multiple pages while handling potential exceptions. It scrapes abstracts and titles from HTML, storing in a dictionary 'data' and writing to \"data.json\" file.",
+        "type": "summary"
+    },
+    "4106": {
+        "file_id": 734,
+        "content": "import requests\nimport urllib.parse\nfrom requests.exceptions import RequestException\nfrom urllib.parse import urljoin\nfrom lxml import etree\nimport re\nimport json\n# 百度搜索接口\ndef format_url(url, params: dict=None) -> str:\n    query_str = urllib.parse.urlencode(params)\n    return f'{ url }?{ query_str }'\ndef get_url(keyword):\n    params = {\n        'wd': str(keyword)\n    }\n    url = \"https://www.baidu.com/s\"\n    url = format_url(url, params)\n    # print(url)\n    return url\ndef get_page(url):\n    try:\n        headers = {\n            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',\n            'accept-language': 'zh-CN,zh;q=0.9',\n            'cache-control': 'max-age=0',\n            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'\n        }\n        response = requests.get(url=url,headers=headers)\n        # 更改编码方式，否则会出现乱码的情况\n        response.encoding = \"utf-8\"\n        print(response.status_code)",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/the-real-wheel.py:1-40"
+    },
+    "4107": {
+        "file_id": 734,
+        "content": "This code defines three functions for interacting with Baidu search engine. The `format_url` function formats a URL and query string parameters, `get_url` generates a Baidu search URL for a given keyword, and `get_page` retrieves the HTML page content from the generated URL using proper headers.",
+        "type": "comment"
+    },
+    "4108": {
+        "file_id": 734,
+        "content": "        # print(response.text)\n        if response.status_code == 200:\n            return response.text\n        return None\n    except RequestException:\n        return None\ndef parse_page(url,page):\n    for i in range(1,int(page)+1):\n        print(\"正在爬取第{}页....\".format(i))\n        title = \"\"\n        sub_url = \"\"\n        abstract = \"\"\n        flag = 11\n        if i == 1:\n            flag = 10\n        html = get_page(url)\n        content = etree.HTML(html)\n        for j in range(1,flag):\n            data = {}\n            res_title = content.xpath('//*[@id=\"%d\"]/h3/a' % ((i - 1) * 10 + j))\n            if res_title:\n                title = res_title[0].xpath('string(.)')\n            sub_url = content.xpath('//*[@id=\"%d\"]/h3/a/@href' % ((i - 1) * 10 + j))\n            if sub_url:\n                sub_url = sub_url[0]\n            res_abstract = content.xpath('//*[@id=\"%d\"]/div[@class=\"c-abstract\"]'%((i-1)*10+j))\n            if res_abstract:\n                abstract = res_abstract[0].xpath('string(.)')\n            else:\n  ",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/the-real-wheel.py:41-74"
+    },
+    "4109": {
+        "file_id": 734,
+        "content": "The code fetches web page content and parses it to extract data. It iterates through multiple pages, extracts title, sub-url, and abstract for each item on the page, and handles potential exceptions.",
+        "type": "comment"
+    },
+    "4110": {
+        "file_id": 734,
+        "content": "              res_abstract = content.xpath('//*[@id=\"%d\"]/div/div[2]/div[@class=\"c-abstract\"]'%((i-1)*10+j))\n                if res_abstract:\n                    abstract = res_abstract[0].xpath('string(.)')\n                    # res_abstract = content.xpath('//*[@id=\"%d\"]/div/div[2]/p[1]'%((i-1)*10+j))\n            # if not abstract:\n            #     abstract = content.xpath('//*[@id=\"%d\"]/div/div[2]/p[1]'%((i-1)*10+j))[0].xpath('string(.)')\n            data['title'] = title\n            data['sub_url'] = sub_url\n            data['abstract'] = abstract\n            rel_url = content.xpath('//*[@id=\"page\"]/a[{}]/@href'.format(flag))\n            if rel_url:\n                url = urljoin(url, rel_url[0])\n            else:\n                print(\"无更多页面！～\")\n                return\n            yield data\ndef main():\n    keyword = input(\"输入关键字:\")\n    page = input(\"输入查找页数:\")\n    url = get_url(keyword)\n    results = parse_page(url,page)\n    # 写入文件\n    file = open(\"data.json\", 'w+', encoding='utf-8')\n    for result in results:",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/the-real-wheel.py:74-101"
+    },
+    "4111": {
+        "file_id": 734,
+        "content": "The code is scraping web content, extracting abstracts and titles from HTML elements. It then stores this data in a dictionary named 'data' along with the URL, sub-URL, and relative links to other pages. The results are yielded one by one and written to a file named \"data.json\".",
+        "type": "comment"
+    },
+    "4112": {
+        "file_id": 734,
+        "content": "        #print(result)\n        file.write(json.dumps(result, indent=2, ensure_ascii=False))\nif __name__ == '__main__':\n    main()",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/the-real-wheel.py:102-106"
+    },
+    "4113": {
+        "file_id": 734,
+        "content": "This code snippet prints the result (not shown) and then writes it to a file using JSON.dumps with indentation and without ensuring ASCII encoding. The if __name__ check ensures this block only runs if the script is executed directly, not imported as a module.",
+        "type": "comment"
+    },
+    "4114": {
+        "file_id": 735,
+        "content": "/multilingual/rockstar/newdawn/info_gather/theway.sh",
+        "type": "filepath"
+    },
+    "4115": {
+        "file_id": 735,
+        "content": "This script is likely a simple bash script containing four commands executed in order. The first line sets the script to be interpreted by Bash, and then it echoes the strings \"shit\", \"fuck\", and \"hell\" to the console without any newline characters, resulting in all three strings being printed on a single line.",
+        "type": "summary"
+    },
+    "4116": {
+        "file_id": 735,
+        "content": "#!/bin/bash\necho \"shit\"\"fuck\"\"\"\"\"\"\"\"\"\"hell\"",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/theway.sh:1-2"
+    },
+    "4117": {
+        "file_id": 735,
+        "content": "This script is likely a simple bash script containing four commands executed in order. The first line sets the script to be interpreted by Bash, and then it echoes the strings \"shit\", \"fuck\", and \"hell\" to the console without any newline characters, resulting in all three strings being printed on a single line.",
+        "type": "comment"
+    },
+    "4118": {
+        "file_id": 736,
+        "content": "/multilingual/rockstar/newdawn/info_gather/tough.lua",
+        "type": "filepath"
+    },
+    "4119": {
+        "file_id": 736,
+        "content": "This code is iterating through a list of enums, arg0, and printing each enum value. The loop uses ipairs to access elements by index, starting from 1. Each iteration, it prints the current enum value.",
+        "type": "summary"
+    },
+    "4120": {
+        "file_id": 736,
+        "content": "arg0=arg\nfor arg1,enum in ipairs(arg0) do\n\tprint(enum)\nend\n-- i want to know what is this.",
+        "type": "code",
+        "location": "/multilingual/rockstar/newdawn/info_gather/tough.lua:1-5"
+    },
+    "4121": {
+        "file_id": 736,
+        "content": "This code is iterating through a list of enums, arg0, and printing each enum value. The loop uses ipairs to access elements by index, starting from 1. Each iteration, it prints the current enum value.",
+        "type": "comment"
+    },
+    "4122": {
+        "file_id": 737,
+        "content": "/multilingual/rockstar/newdawn/simple.sh",
+        "type": "filepath"
+    },
+    "4123": {
+        "file_id": 737,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "summary"
+    },
+    "4124": {
+        "file_id": 737,
+        "content": "#!/bin/bash\nls -lt",
+        "type": "code",
+        "location": "/multilingual/simple.sh:1-2"
+    },
+    "4125": {
+        "file_id": 737,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "comment"
+    },
+    "4126": {
+        "file_id": 738,
+        "content": "/multilingual/rockstar/os_walk.py",
+        "type": "filepath"
+    },
+    "4127": {
+        "file_id": 738,
+        "content": "This code imports the os module and defines a function, list_files, which traverses through files and directories in a given startpath using os.walk(). It returns results in a dictionary with indentation levels for detailed analysis or processing. The code also compares file listing from paths with and without trailing slashes.",
+        "type": "summary"
+    },
+    "4128": {
+        "file_id": 738,
+        "content": "import os\n# we should make it simpler.\n# unless  you wanna die.\n# we should make things clearer.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    superdictionary={}\n    for root, dirs, files in os.walk(startpath):\n        level = root.replace(startpath, '').count(os.sep)\n        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        indent = ' ' * 4 * (level)\n        print('{}{}/'.format(indent, os.path.basename(root)))\n        print(\"first mark\")\n        subindent = ' ' * 4 * (level + 1)\n        for f in files:\n            print(\"second mark\")\n            print('{}{}'.format(subindent, f))",
+        "type": "code",
+        "location": "/multilingual/rockstar/os_walk.py:1-23"
+    },
+    "4129": {
+        "file_id": 738,
+        "content": "The code imports the os module and defines a function called list_files that takes a startpath as input. It uses os.walk() to traverse through all subdirectories and files in the given startpath, returning them in a dictionary with levels of indentation. The code may seem convoluted, but it's designed to provide a detailed file structure view for analysis or local processing.",
+        "type": "comment"
+    },
+    "4130": {
+        "file_id": 738,
+        "content": "startpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\n# when run without the trailing slash, the root directory name will simply be printed out.\n# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\nstartpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# this time we have integrated the fucking slash here.\nlist_files(startpath)\nprint(\"\\n----[the fucking divide line]----\\n\")\nlist_files(startpath0)\nprint(\"\\n----[the fucking divide line]----\\n\")\nprint(os.walk(startpath))\nprint(\"\\n----[the fucking divide line]----\\n\")\nprint(list(os.walk(startpath0)))\n# this is really useless.\n# i do not think this is necessary to print it out directly.\n# need preprocessing.",
+        "type": "code",
+        "location": "/multilingual/rockstar/os_walk.py:25-50"
+    },
+    "4131": {
+        "file_id": 738,
+        "content": "The code snippet is using the os.walk() function to list files and directories in two different paths: one with a trailing slash and one without. It then prints the results for comparison, separated by a dividing line. The code may contain some redundant or unnecessary print statements.",
+        "type": "comment"
+    },
+    "4132": {
+        "file_id": 739,
+        "content": "/multilingual/rockstar/pyramid.py",
+        "type": "filepath"
+    },
+    "4133": {
+        "file_id": 739,
+        "content": "The code imports the re module, uses regular expressions to split a string based on words, converts Unicode characters to their corresponding numeric values, and then performs various operations such as sorting and mapping. The aim is to manipulate the given text with Unicode characters in an efficient manner.",
+        "type": "summary"
+    },
+    "4134": {
+        "file_id": 739,
+        "content": "#import re\n#u = \n\"\"\"\\t hello you  mother fucker     \\t     fuck you bitch      bitch      23443243234  23 42 35 23 5 26  643                        we shall split this fuck by the motherfucking newline should we?\n but you have    fucking told me that you can find that shit somewhere didn't you?\n oh calm the fuck down.          [the fucking tab is invisible here.]\n\"\"\"\n#verbose=re.compile(r'\\b')\n# print (u.split('\\n'));\n#print(set(u))\n# the most fucking efficient way of doing this fuck.\n#superset=set(u)\n# make it numeric.\n#x=\"撒\"\n#print(ord(x))\n#print(chr(ord(x)))\n# i love unicode!\nfor x in range(500000000000):\n    try:\n        print(\"     [\",x,\"]-[\"+chr(x)+\"]\")\n    except:\n        print(\"panic at #\",x)\n        break\n#superlist0=list(map(lambda x: ord(x),superset))\n#superlist1=sorted(superlist0)\n#superlist2=list(map(lambda x: chr(x),superlist0))\n#superlist3=sorted(superlist2)\n#superlist3=list(map(lambda x: chr(x),superlist1))\n# superfilter=filter(lambda x: )\n#print(superlist3)",
+        "type": "code",
+        "location": "/multilingual/rockstar/pyramid.py:1-31"
+    },
+    "4135": {
+        "file_id": 739,
+        "content": "The code imports the re module, uses regular expressions to split a string based on words, converts Unicode characters to their corresponding numeric values, and then performs various operations such as sorting and mapping. The aim is to manipulate the given text with Unicode characters in an efficient manner.",
+        "type": "comment"
+    },
+    "4136": {
+        "file_id": 740,
+        "content": "/multilingual/rockstar/test_split.py",
+        "type": "filepath"
+    },
+    "4137": {
+        "file_id": 740,
+        "content": "The code reads input, splits into lines and words, creates two lists, filters tabs, and considers multithreading for counting newlines. Potential improvements include recursive functions and using map function to sum list elements.",
+        "type": "summary"
+    },
+    "4138": {
+        "file_id": 740,
+        "content": "import re\nu = \"\"\"\\t hello you  mother fucker     \\t     fuck you bitch      bitch      23443243234  23 42 35 23 5 26  643                        we shall split this fuck by the motherfucking newline should we?\n but you have    fucking told me that you can find that shit somewhere didn't you?\n oh calm the fuck down.          [the fucking tab is invisible here.]\n\"\"\"\n#verbose=re.compile(r'\\b')\n# print (u.split('\\n'));\nlist0 = u.split('\\n');\n\"\"\"def func(x):\n  if x == \"\":\n    return 0\n  else:\n    return 1\"\"\"\n# make sure the thing is configured.\n# hardcore forever!\nfor items in list0:\n  # let's extract the fucking sequence .let's extract the fucking sequence. let's extract the fucking sequence.\n  # simple judgement.\n  item0=items.split(\" \")\n  simulink0 = list(map(lambda x: (int)(x != \"\"), item0))\n  # this is to make numerical calculations easier.\n  item1 = list(filter(lambda x: x != \"\", item0))\n  #that link is important.\n  #print (simulink0)\n  simulink1 = list(map(lambda x: (int)(x != \"\\t\"), item1))\n  print(simulink0)",
+        "type": "code",
+        "location": "/multilingual/rockstar/test_split.py:1-28"
+    },
+    "4139": {
+        "file_id": 740,
+        "content": "The code reads a string and splits it into lines, then further splits each line by space or tab characters. It creates two lists: one containing Boolean values representing the presence of words or tabs, the other with the filtered non-empty strings. Finally, it prints the first list.",
+        "type": "comment"
+    },
+    "4140": {
+        "file_id": 740,
+        "content": "  #very damn important.\n  # you may consider other shits.\n  item2 = list(filter(lambda x: x != \"\\t\", item1))\n  # we could make it multithreaded.\n  # after counting the fucking newlines\n  # it could be better if making some recursive functions.\n# print(list(map(lambda x, y: x + y, [1, 3, 5, 7, 9], [2, 4, 6, 8, 10])))",
+        "type": "code",
+        "location": "/multilingual/rockstar/test_split.py:29-35"
+    },
+    "4141": {
+        "file_id": 740,
+        "content": "The code filters out tab characters from the list, item1. It considers using multithreading to count newlines and mentions potential improvements with recursive functions. The commented-out line uses map function to add corresponding elements from two lists and returns a new list with sums.",
+        "type": "comment"
+    },
+    "4142": {
+        "file_id": 741,
+        "content": "/multilingual/rockstar/the-real-wheel.py",
+        "type": "filepath"
+    },
+    "4143": {
+        "file_id": 741,
+        "content": "The code imports libraries, defines functions for URL formatting and webpage data fetching using XPath. It handles exceptions during requests and retrieves information from websites to store in \"data.json\".",
+        "type": "summary"
+    },
+    "4144": {
+        "file_id": 741,
+        "content": "import requests\nimport urllib.parse\nfrom requests.exceptions import RequestException\nfrom urllib.parse import urljoin\nfrom lxml import etree\nimport re\nimport json\n# 百度搜索接口\ndef format_url(url, params: dict=None) -> str:\n    query_str = urllib.parse.urlencode(params)\n    return f'{ url }?{ query_str }'\ndef get_url(keyword):\n    params = {\n        'wd': str(keyword)\n    }\n    url = \"https://www.baidu.com/s\"\n    url = format_url(url, params)\n    # print(url)\n    return url\ndef get_page(url):\n    try:\n        headers = {\n            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',\n            'accept-language': 'zh-CN,zh;q=0.9',\n            'cache-control': 'max-age=0',\n            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'\n        }\n        response = requests.get(url=url,headers=headers)\n        # 更改编码方式，否则会出现乱码的情况\n        response.encoding = \"utf-8\"\n        print(response.status_code)",
+        "type": "code",
+        "location": "/multilingual/rockstar/the-real-wheel.py:1-40"
+    },
+    "4145": {
+        "file_id": 741,
+        "content": "This code imports various libraries and defines three functions. The \"format_url\" function formats a URL with query parameters, the \"get_url\" function generates a Baidu search URL based on a keyword, and the \"get_page\" function sends an HTTP GET request to the generated URL using specified headers and encodes the response as UTF-8.",
+        "type": "comment"
+    },
+    "4146": {
+        "file_id": 741,
+        "content": "        # print(response.text)\n        if response.status_code == 200:\n            return response.text\n        return None\n    except RequestException:\n        return None\ndef parse_page(url,page):\n    for i in range(1,int(page)+1):\n        print(\"正在爬取第{}页....\".format(i))\n        title = \"\"\n        sub_url = \"\"\n        abstract = \"\"\n        flag = 11\n        if i == 1:\n            flag = 10\n        html = get_page(url)\n        content = etree.HTML(html)\n        for j in range(1,flag):\n            data = {}\n            res_title = content.xpath('//*[@id=\"%d\"]/h3/a' % ((i - 1) * 10 + j))\n            if res_title:\n                title = res_title[0].xpath('string(.)')\n            sub_url = content.xpath('//*[@id=\"%d\"]/h3/a/@href' % ((i - 1) * 10 + j))\n            if sub_url:\n                sub_url = sub_url[0]\n            res_abstract = content.xpath('//*[@id=\"%d\"]/div[@class=\"c-abstract\"]'%((i-1)*10+j))\n            if res_abstract:\n                abstract = res_abstract[0].xpath('string(.)')\n            else:\n  ",
+        "type": "code",
+        "location": "/multilingual/rockstar/the-real-wheel.py:41-74"
+    },
+    "4147": {
+        "file_id": 741,
+        "content": "The code is a function that parses the content of a website's pages. It fetches HTML from a URL, extracts specific data elements (title, sub-url, and abstract) using XPath, and handles exceptions during requests. The function is called for each page number passed to the `parse_page` function.",
+        "type": "comment"
+    },
+    "4148": {
+        "file_id": 741,
+        "content": "              res_abstract = content.xpath('//*[@id=\"%d\"]/div/div[2]/div[@class=\"c-abstract\"]'%((i-1)*10+j))\n                if res_abstract:\n                    abstract = res_abstract[0].xpath('string(.)')\n                    # res_abstract = content.xpath('//*[@id=\"%d\"]/div/div[2]/p[1]'%((i-1)*10+j))\n            # if not abstract:\n            #     abstract = content.xpath('//*[@id=\"%d\"]/div/div[2]/p[1]'%((i-1)*10+j))[0].xpath('string(.)')\n            data['title'] = title\n            data['sub_url'] = sub_url\n            data['abstract'] = abstract\n            rel_url = content.xpath('//*[@id=\"page\"]/a[{}]/@href'.format(flag))\n            if rel_url:\n                url = urljoin(url, rel_url[0])\n            else:\n                print(\"无更多页面！～\")\n                return\n            yield data\ndef main():\n    keyword = input(\"输入关键字:\")\n    page = input(\"输入查找页数:\")\n    url = get_url(keyword)\n    results = parse_page(url,page)\n    # 写入文件\n    file = open(\"data.json\", 'w+', encoding='utf-8')\n    for result in results:",
+        "type": "code",
+        "location": "/multilingual/rockstar/the-real-wheel.py:74-101"
+    },
+    "4149": {
+        "file_id": 741,
+        "content": "This code is part of a web scraper that retrieves information from a website. It takes a keyword and page number as input, then fetches the corresponding page using the `get_url` function. The `parse_page` function extracts data such as title, sub-URL, abstract, and other information from the page. If more pages exist, it continues to fetch and parse them. The scraped data is stored in a dictionary called `data`, and written to a file named \"data.json\". If there are no more pages, it prints \"无更多页面！～\" and returns.",
+        "type": "comment"
+    },
+    "4150": {
+        "file_id": 741,
+        "content": "        print(result)\n        file.write(json.dumps(result, indent=2, ensure_ascii=False))\nif __name__ == '__main__':\n    main()",
+        "type": "code",
+        "location": "/multilingual/rockstar/the-real-wheel.py:102-106"
+    },
+    "4151": {
+        "file_id": 741,
+        "content": "This code prints the \"result\" variable and writes it to a file in JSON format with indentation and non-ASCII characters preserved. The code is executed only if the script is run directly, not imported as a module.",
+        "type": "comment"
+    },
+    "4152": {
+        "file_id": 742,
+        "content": "/multilingual/rockstar/unicode-standard/swipe.sh",
+        "type": "filepath"
+    },
+    "4153": {
+        "file_id": 742,
+        "content": "This code uses awk to generate commands for wget, downloading files from the Unicode PDF charts based on the subconscious.sh file.",
+        "type": "summary"
+    },
+    "4154": {
+        "file_id": 742,
+        "content": "#!/bin/bash\nawk '{print \"wget \\\"https://unicode.org/charts/PDF/\"$0\"\\\" &\"}'  subconscious.sh",
+        "type": "code",
+        "location": "/multilingual/rockstar/unicode-standard/swipe.sh:1-2"
+    },
+    "4155": {
+        "file_id": 742,
+        "content": "This code uses awk to generate commands for wget, downloading files from the Unicode PDF charts based on the subconscious.sh file.",
+        "type": "comment"
+    },
+    "4156": {
+        "file_id": 743,
+        "content": "/multilingual/simple.sh",
+        "type": "filepath"
+    },
+    "4157": {
+        "file_id": 743,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "summary"
+    },
+    "4158": {
+        "file_id": 743,
+        "content": "#!/bin/bash\nls -lt",
+        "type": "code",
+        "location": "/multilingual/simple.sh:1-2"
+    },
+    "4159": {
+        "file_id": 743,
+        "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
+        "type": "comment"
+    },
+    "4160": {
+        "file_id": 744,
+        "content": "/multilingual/super-agent.sh",
+        "type": "filepath"
+    },
+    "4161": {
+        "file_id": 744,
+        "content": "The script navigates to the \"hotfix\" directory and lists all files, redirecting output to \".list-full\".",
+        "type": "summary"
+    },
+    "4162": {
+        "file_id": 744,
+        "content": "#!/bin/bash\ncd hotfix\nls > .list-full",
+        "type": "code",
+        "location": "/multilingual/super-agent.sh:1-3"
+    },
+    "4163": {
+        "file_id": 744,
+        "content": "The script navigates to the \"hotfix\" directory and lists all files, redirecting output to \".list-full\".",
+        "type": "comment"
+    },
+    "4164": {
+        "file_id": 745,
+        "content": "/multilingual/super-param.sh",
+        "type": "filepath"
+    },
+    "4165": {
+        "file_id": 745,
+        "content": "This script is a bash file that echoes out the command-line arguments passed to it. The parameters start at $0, and $@ retrieves each argument individually.",
+        "type": "summary"
+    },
+    "4166": {
+        "file_id": 745,
+        "content": "#!/bin/bash\necho $0\necho $1\necho $2\necho \"-S---------P--\"\necho $@\n# the prameter starts at $0.\n# $@ simply get each one out.",
+        "type": "code",
+        "location": "/multilingual/super-param.sh:1-8"
+    },
+    "4167": {
+        "file_id": 745,
+        "content": "This script is a bash file that echoes out the command-line arguments passed to it. The parameters start at $0, and $@ retrieves each argument individually.",
+        "type": "comment"
+    },
+    "4168": {
+        "file_id": 746,
+        "content": "/multilingual/tower.sh",
+        "type": "filepath"
+    },
+    "4169": {
+        "file_id": 746,
+        "content": "This script changes the directory to a specified location, retrieves a superlink from an external source using netcat, removes the specified file's reference from \".local-service-copy\", and appends the next link execution command to that file before exiting.",
+        "type": "summary"
+    },
+    "4170": {
+        "file_id": 746,
+        "content": "#!/bin/bash\ncd \"$1\"\n#name=\"$1\"\nsuperlink=\"$(cat $2 | nc termbin.com 9999)\"\n#superlink=\"cat local.js | nc termbin.com 9999\"\n#superlink=\"$superlink\"\nsed -i \"/$2/d\" \"$1/.local-service-copy\"\nnextlink=\"curl -k $superlink > $2 &\"\necho $nextlink >> \"$1/.local-service-copy\"\n#kill $!\nkill $$",
+        "type": "code",
+        "location": "/multilingual/tower.sh:1-11"
+    },
+    "4171": {
+        "file_id": 746,
+        "content": "This script changes the directory to a specified location, retrieves a superlink from an external source using netcat, removes the specified file's reference from \".local-service-copy\", and appends the next link execution command to that file before exiting.",
+        "type": "comment"
+    },
+    "4172": {
+        "file_id": 747,
+        "content": "/updateYourFuck.sh",
+        "type": "filepath"
+    },
+    "4173": {
+        "file_id": 747,
+        "content": "This script executes a Git pull command, updating the local repository with changes from the remote 'origin' and 'master' branch.",
+        "type": "summary"
+    },
+    "4174": {
+        "file_id": 747,
+        "content": "#!/bin/bash\ngit pull origin master",
+        "type": "code",
+        "location": "/updateYourFuck.sh:1-2"
+    },
+    "4175": {
+        "file_id": 747,
+        "content": "This script executes a Git pull command, updating the local repository with changes from the remote 'origin' and 'master' branch.",
+        "type": "comment"
+    },
+    "4176": {
+        "file_id": 748,
+        "content": "/websitegrep/apt-fetch.sh",
+        "type": "filepath"
+    },
+    "4177": {
+        "file_id": 748,
+        "content": "This script installs various text-based web browsers including lynx, links, w3m, elinks, and links2 using apt-get.",
+        "type": "summary"
+    },
+    "4178": {
+        "file_id": 748,
+        "content": "#!/bin/bash\napt-get install lynx\napt-get install links\napt-get install w3m\napt-get install elinks\napt-get install links2",
+        "type": "code",
+        "location": "/websitegrep/apt-fetch.sh:1-6"
+    },
+    "4179": {
+        "file_id": 748,
+        "content": "This script installs various text-based web browsers including lynx, links, w3m, elinks, and links2 using apt-get.",
+        "type": "comment"
+    },
+    "4180": {
+        "file_id": 749,
+        "content": "/websitegrep/doc-fetch.sh",
+        "type": "filepath"
+    },
+    "4181": {
+        "file_id": 749,
+        "content": "This script fetches documentation for various web browsers (lynx, links, w3m, elinks, and links2) using the 'man' command. It then removes backslashes (\\), pipes the output to a column formatter (col -b), and saves each document in separate files within the \"docs\" directory.",
+        "type": "summary"
+    },
+    "4182": {
+        "file_id": 749,
+        "content": "#!/bin/bash\nman lynx | col -b | cat > docs/lynx.log\nman links | col -b | cat > docs/links.log\nman w3m | col -b | cat > docs/w3m.log\nman elinks | col -b | cat > docs/elinks.log\nman links2 | col -b | cat > docs/links2.log",
+        "type": "code",
+        "location": "/websitegrep/doc-fetch.sh:1-6"
+    },
+    "4183": {
+        "file_id": 749,
+        "content": "This script fetches documentation for various web browsers (lynx, links, w3m, elinks, and links2) using the 'man' command. It then removes backslashes (\\), pipes the output to a column formatter (col -b), and saves each document in separate files within the \"docs\" directory.",
+        "type": "comment"
+    },
+    "4184": {
+        "file_id": 750,
+        "content": "/websitegrep/links-dump.sh",
+        "type": "filepath"
+    },
+    "4185": {
+        "file_id": 750,
+        "content": "The code is a Bash script that uses the \"links\" command to dump HTML content from the specified URL (https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now) and saves it into a file named \"example/0.log\" using the \"cat\" command for output redirection. This could be used to extract website data or analyze its structure.",
+        "type": "summary"
+    },
+    "4186": {
+        "file_id": 750,
+        "content": "#!/bin/bash\nlinks -dump https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now | cat > example/0.log",
+        "type": "code",
+        "location": "/websitegrep/links-dump.sh:1-2"
+    },
+    "4187": {
+        "file_id": 750,
+        "content": "The code is a Bash script that uses the \"links\" command to dump HTML content from the specified URL (https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now) and saves it into a file named \"example/0.log\" using the \"cat\" command for output redirection. This could be used to extract website data or analyze its structure.",
+        "type": "comment"
+    },
+    "4188": {
+        "file_id": 751,
+        "content": "/websitegrep/links-dump0.sh",
+        "type": "filepath"
+    },
+    "4189": {
+        "file_id": 751,
+        "content": "The script uses Bash to execute the 'links' command, fetching a webpage's HTML dump from \"blog.csdn.net/okhymok/article/details/76616892 and saves it into \"example/1.log\" file.",
+        "type": "summary"
+    },
+    "4190": {
+        "file_id": 751,
+        "content": "#!/bin/bash\nlinks -dump https://blog.csdn.net/okhymok/article/details/76616892 | cat > example/1.log",
+        "type": "code",
+        "location": "/websitegrep/links-dump0.sh:1-2"
+    },
+    "4191": {
+        "file_id": 751,
+        "content": "The script uses Bash to execute the 'links' command, fetching a webpage's HTML dump from \"blog.csdn.net/okhymok/article/details/76616892 and saves it into \"example/1.log\" file.",
+        "type": "comment"
+    },
+    "4192": {
+        "file_id": 752,
+        "content": "/websitegrep/links-dump1.sh",
+        "type": "filepath"
+    },
+    "4193": {
+        "file_id": 752,
+        "content": "This Bash script uses the 'links' command-line web browser to scrape the links from a specific page (https://www.zhihu.com/topic/19604929/hot) and then redirects the output to a file named \"example/2.log\" using the \"cat\" command for concatenation.",
+        "type": "summary"
+    },
+    "4194": {
+        "file_id": 752,
+        "content": "#!/bin/bash\nlinks -dump https://www.zhihu.com/topic/19604929/hot | cat > example/2.log",
+        "type": "code",
+        "location": "/websitegrep/links-dump1.sh:1-2"
+    },
+    "4195": {
+        "file_id": 752,
+        "content": "This Bash script uses the 'links' command-line web browser to scrape the links from a specific page (https://www.zhihu.com/topic/19604929/hot) and then redirects the output to a file named \"example/2.log\" using the \"cat\" command for concatenation.",
+        "type": "comment"
+    },
+    "4196": {
+        "file_id": 753,
+        "content": "/websitegrep/links-dump2.sh",
+        "type": "filepath"
+    },
+    "4197": {
+        "file_id": 753,
+        "content": "This code uses the \"links\" tool to dump the HTML content of a specified webpage (https://www.zhihu.com/question/344613345/answer/825127485) and redirects it to a log file named \"example/3.log\".",
+        "type": "summary"
+    },
+    "4198": {
+        "file_id": 753,
+        "content": "#!/bin/bash\nlinks -dump https://www.zhihu.com/question/344613345/answer/825127485 | cat > example/3.log",
+        "type": "code",
+        "location": "/websitegrep/links-dump2.sh:1-2"
+    },
+    "4199": {
+        "file_id": 753,
+        "content": "This code uses the \"links\" tool to dump the HTML content of a specified webpage (https://www.zhihu.com/question/344613345/answer/825127485) and redirects it to a log file named \"example/3.log\".",
+        "type": "comment"
+    }
+}

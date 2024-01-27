@@ -1,0 +1,529 @@
+{
+    "200": {
+        "file_id": 47,
+        "content": "import re\n# maybe we shouldn't go further than __a__ funcs\n# use globals() locals() dictionaries.\n# no kwargs.\ndef parseDir(objectName,gloss):\n    return list(map((lambda x: objectName+\".\"+x),eval(\"dir({})\".format(objectName),gloss)))\ndef parseType(objectList,gloss):\n    return list(map((lambda x: eval(\"type({})\".format(x),gloss).__name__), objectList))\ndef recurDir(objectStruct,former,gloss):\n    joke=[list(filter((lambda x:len(re.findall(r'__.+__',x.split('.')[-1]))==0),obj)) for obj in objectStruct]\n#    print(joke)\n    if sum([len(joker) for joker in joke])==0:\n        return (objectStruct+former)\n    else:\n        a=[]\n        for obj in joke:\n            for obj0 in obj:\n                a.append(parseDir(obj0,gloss))\n        return recurDir(a,former+objectStruct,gloss)\ndef depthType(ls,gloss):\n    return list(map((lambda x: parseType(x,gloss)), ls))\ndef monad(m,gloss):\n    ml=recurDir([parseDir(m,gloss)],[],gloss)\n#    print(ml)\n    return (ml,depthType(ml,gloss))\n# That was intense.",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/standardParse.py:1-30"
+    },
+    "201": {
+        "file_id": 47,
+        "content": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
+        "type": "comment"
+    },
+    "202": {
+        "file_id": 48,
+        "content": "/metalearning/methodBank/analyzer/decrypter/stickGlue.py",
+        "type": "filepath"
+    },
+    "203": {
+        "file_id": 48,
+        "content": "This code defines two functions, `k` and `k0`, which read and write files respectively. It then uses these functions to append contents of \"bitch.py\" and \"standardInsult.py\", and adds a line to print the output of a function named \"monad\" with its first argument as the file content and second argument as the global variables.",
+        "type": "summary"
+    },
+    "204": {
+        "file_id": 48,
+        "content": "def k(a):\n    with open(a,\"r\") as d:\n        return d.read()\ndef k0(a,b):\n    with open(a,\"w+\") as d:\n        d.write(b)\nk0(\"peach.py\",k(\"bitch.py\")+\"\\n\"+k(\"standardInsult.py\")+\"\\n\"+\"print(monad(r[0],globals()))\\n\")",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/decrypter/stickGlue.py:1-9"
+    },
+    "205": {
+        "file_id": 48,
+        "content": "This code defines two functions, `k` and `k0`, which read and write files respectively. It then uses these functions to append contents of \"bitch.py\" and \"standardInsult.py\", and adds a line to print the output of a function named \"monad\" with its first argument as the file content and second argument as the global variables.",
+        "type": "comment"
+    },
+    "206": {
+        "file_id": 49,
+        "content": "/metalearning/methodBank/analyzer/defTester.py",
+        "type": "filepath"
+    },
+    "207": {
+        "file_id": 49,
+        "content": "The code defines functions to analyze and parse Python code. The `checkFunctor` function extracts function calls, the `notch` function identifies and categorizes definitions or lambda expressions, and the `smoke` function extracts the function definition from a code block. It seems to be used for tasks like parsing or formatting code without semicolons.",
+        "type": "summary"
+    },
+    "208": {
+        "file_id": 49,
+        "content": "import re\nstickGlue=(lambda x: \"\".join(list(filter((lambda y:y not in [\" \",\"\\t\"]),x))))\n# this is for those without semicolons.\n# i will do another semi parser.\n# or just code formatter.\ndef checkFunctor(s):\n    # along with the calling.\n    rape=list(map((lambda x:stickGlue(x[:-1])),re.findall(r\"[a-zA-Z0-9_]*[ \\t]*\\(\",s)))\n    return rape\ndef notch(k):\n    k0=stickGlue(k)\n    e=k0.split(\"=\",1)\n    try:    \n        if \"def\" == k0[:3]:\n            return 1, k0.split(\"(\",1)[1].split(\":\",1)[0][:-1]+\",\"\n        elif \"lambda\" == e[1][1:7]:\n            return 0,e[0]\n        else:\n            return 2,\"\"\n    except:\n        return 2,\"\"\ndef smoke(fuck):\n    a=fuck if fuck[-1]!=\"\\n\" else fuck[:-1]\n    b=stickGlue(a).split(\":\",1)[0][7:]\n    return (fuck,b,\"(\"+b+\",)\")",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/defTester.py:1-25"
+    },
+    "209": {
+        "file_id": 49,
+        "content": "The code defines functions to analyze and parse Python code. The `checkFunctor` function extracts function calls, the `notch` function identifies and categorizes definitions or lambda expressions, and the `smoke` function extracts the function definition from a code block. It seems to be used for tasks like parsing or formatting code without semicolons.",
+        "type": "comment"
+    },
+    "210": {
+        "file_id": 50,
+        "content": "/metalearning/methodBank/analyzer/joke.py",
+        "type": "filepath"
+    },
+    "211": {
+        "file_id": 50,
+        "content": "The code defines a function `scheme` that takes two arguments, where the second one is a lambda. It then prints the type of elements in a tuple and evaluates the given expression. The code also defines a superLamb lambda and a tuple (1,2), and then calls the scheme function with these inputs.",
+        "type": "summary"
+    },
+    "212": {
+        "file_id": 50,
+        "content": "def scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+a[0]+\"--\")\n    print([type(a0) for a0 in eval(a[1])])\n    return eval(\"b\"+a[1])\nsuperLamb=(lambda x,y: x+y)\nshit=1,2\n# this expands the tuple\nprint(superLamb(*shit))\n#print(scheme([\"superLamb\",\"(1,2)\"],superLamb))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/joke.py:1-12"
+    },
+    "213": {
+        "file_id": 50,
+        "content": "The code defines a function `scheme` that takes two arguments, where the second one is a lambda. It then prints the type of elements in a tuple and evaluates the given expression. The code also defines a superLamb lambda and a tuple (1,2), and then calls the scheme function with these inputs.",
+        "type": "comment"
+    },
+    "214": {
+        "file_id": 51,
+        "content": "/metalearning/methodBank/analyzer/niche.py",
+        "type": "filepath"
+    },
+    "215": {
+        "file_id": 51,
+        "content": "The code generates a file, imports modules from 'adidas', and creates random strings for debugging. It separates prank definitions and lists for in-place debugging and writes out function definitions based on input, handling schema calls and writing the output to \"fuck\".",
+        "type": "summary"
+    },
+    "216": {
+        "file_id": 51,
+        "content": "import uuid\nfrom defTester import smoke\n# to create random stuff.\ndef wroteAHaskell(name,turtle):\n    holyIndent=\"\\t\"\n    with open(name,\"w+\") as fuck:\n        jerkMeUp=str(uuid.uuid4())[:8]\n        suckMeUp=str(uuid.uuid4())[:8]\n        mess=[0 in list(map((lambda x:x[2][0]),turtle)),1 in list(map((lambda x:x[2][0]),turtle))]\n        messUp=list(sorted(list(set(list(map((lambda x:x[0]),turtle))))))\n        if mess[0]==True:\n            fuck.write(\"from adidas import chaos as chaos\"+jerkMeUp+\"\\n\")\n        if mess[1]==True:\n            fuck.write(\"from adidas import schema as schema\"+suckMeUp+\"\\n\")\n        # read, and then generate prank list.\n        prankLamb=[tur[4] for tur in turtle if tur[2][0]==0]\n        hashDog=[str(uuid.uuid4())[:8] for r in range(len(prankLamb))]\n#        prankQuote=[]\n# reserved for in place debugging without def\n        prankDef=[tur[4] for tur in turtle if tur[2][0]==1]\n        devil=[]\n        for i in range(1+turtle[-1][-1]):\n            if i in prankLamb:\n                airPods=turtle[i][2][1]+hashDog[prankLamb.index(i)]",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/niche.py:1-24"
+    },
+    "217": {
+        "file_id": 51,
+        "content": "This code creates a file and imports modules from 'adidas', based on the given turtle list. It generates random strings for debugging, and separates prank definitions and prank lists for in-place debugging.",
+        "type": "comment"
+    },
+    "218": {
+        "file_id": 51,
+        "content": "                f=smoke(turtle[i][1].split(\"=\",1)[1])\n                devil.append(holyIndent*messUp.index(turtle[i][0])+turtle[i][2][1]+hashDog[prankLamb.index(i)]+\"=\"+f[0])\n                devil.append(holyIndent*messUp.index(turtle[i][0])+turtle[i][2][1]+\"=(lambda \"+f[1]+\":chaos\"+jerkMeUp+\"([\\\"\"+turtle[i][2][1]+\"\\\",\"+airPods+\"],\"+f[2]+\"))\\n\")\n            else:\n                devil.append(holyIndent*messUp.index(turtle[i][0])+turtle[i][1])\n                if i in prankDef:\n                    devil.append(holyIndent*(messUp.index(turtle[i][0])+1)+\"schema\"+suckMeUp+\"(\\\"\"+turtle[i][-2][0]+\"\\\",\"+turtle[i][-3][1]+\")\\n\")\n        for pm in devil:\n            fuck.write(pm)",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/niche.py:25-33"
+    },
+    "219": {
+        "file_id": 51,
+        "content": "This code is defining and writing out functions, where a function definition is created based on the input. If the input is a lambda expression, it writes the function with the lambda expression; otherwise, it writes the function name directly. The code also handles schema calls for certain inputs and writes the output to a file called \"fuck\".",
+        "type": "comment"
+    },
+    "220": {
+        "file_id": 52,
+        "content": "/metalearning/methodBank/analyzer/nike.py",
+        "type": "filepath"
+    },
+    "221": {
+        "file_id": 52,
+        "content": "This code imports a function retrieve_name and defines two functions, scheme and chaos. The scheme function takes a tuple (a[1]) as an argument and prints the types of elements in it. It then returns the result of applying the lambda function b to the elements of a[1]. The chaos function calls scheme with its second argument being an instance of the superLamb lambda function. Finally, it prints the result of calling chaos on the superLamb function.",
+        "type": "summary"
+    },
+    "222": {
+        "file_id": 52,
+        "content": "from returnSameVar import retrieve_name\ndef scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+str(a[0])+\"--\")\n    print([type(a0) for a0 in a[1]])\n    # what if object doesn't match?\n    # pass global and local params!\n    return b(*a[1])\ndef chaos(sb):\n    return scheme([retrieve_name(sb),(1,2)],sb)\nsuperLamb=(lambda x,y: x+y)\nprint(chaos(superLamb))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/nike.py:1-16"
+    },
+    "223": {
+        "file_id": 52,
+        "content": "This code imports a function retrieve_name and defines two functions, scheme and chaos. The scheme function takes a tuple (a[1]) as an argument and prints the types of elements in it. It then returns the result of applying the lambda function b to the elements of a[1]. The chaos function calls scheme with its second argument being an instance of the superLamb lambda function. Finally, it prints the result of calling chaos on the superLamb function.",
+        "type": "comment"
+    },
+    "224": {
+        "file_id": 53,
+        "content": "/metalearning/methodBank/analyzer/nuke.py",
+        "type": "filepath"
+    },
+    "225": {
+        "file_id": 53,
+        "content": "This code defines a function named \"scheme\" that takes two parameters, \"a\" and \"b\". The variable \"a\" is a tuple containing the name of a lambda function and its arguments. The code then prints the types of variables produced by executing the arguments of \"a\", and finally returns a new lambda function created by combining \"b\" with the second element of \"a\". In this example, it calls the \"scheme\" function with a tuple containing the name \"superLamb\" (a lambda function) and its argument \"(1,2)\" to execute and print the types of variables produced.",
+        "type": "summary"
+    },
+    "226": {
+        "file_id": 53,
+        "content": "def scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+a[0]+\"--\")\n    print([type(a0) for a0 in eval(a[1])])\n    return eval(\"b\"+a[1])\nsuperLamb=(lambda x,y: x+y)\nprint(scheme([\"superLamb\",\"(1,2)\"],superLamb))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/nuke.py:1-9"
+    },
+    "227": {
+        "file_id": 53,
+        "content": "This code defines a function named \"scheme\" that takes two parameters, \"a\" and \"b\". The variable \"a\" is a tuple containing the name of a lambda function and its arguments. The code then prints the types of variables produced by executing the arguments of \"a\", and finally returns a new lambda function created by combining \"b\" with the second element of \"a\". In this example, it calls the \"scheme\" function with a tuple containing the name \"superLamb\" (a lambda function) and its argument \"(1,2)\" to execute and print the types of variables produced.",
+        "type": "comment"
+    },
+    "228": {
+        "file_id": 54,
+        "content": "/metalearning/methodBank/analyzer/oneListHere.py",
+        "type": "filepath"
+    },
+    "229": {
+        "file_id": 54,
+        "content": "Code reads a Python file, \"sample_strip.py\", and identifies the number of leading whitespace characters (indentation) for each line. It then prints the indentation level, modified line without trailing newline character, notch value (0 for no whitespace, 1+ for indented), and checkFunctor result for each line. This can be useful for analyzing indentation consistency or identifying improperly formatted code sections.",
+        "type": "summary"
+    },
+    "230": {
+        "file_id": 54,
+        "content": "from defTester import notch, checkFunctor\nfunctorNames=[]\n# parse indentation first.\nwith open(\"sample_strip.py\",\"r\") as j:\n    i1=0\n    for fuck in j.readlines():\n        i=0\n        for i0 in range(len(fuck)):\n            if fuck[i0] in [\" \",\"\\t\"]:\n                i+=1\n            else:\n                break\n        iFuck=fuck if fuck[-1]!=\"\\n\" else fuck[:-1]\n        print(i,fuck[i:],notch(iFuck),checkFunctor(iFuck),i1)\n        i1+=1",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/oneListHere.py:1-17"
+    },
+    "231": {
+        "file_id": 54,
+        "content": "Code reads a Python file, \"sample_strip.py\", and identifies the number of leading whitespace characters (indentation) for each line. It then prints the indentation level, modified line without trailing newline character, notch value (0 for no whitespace, 1+ for indented), and checkFunctor result for each line. This can be useful for analyzing indentation consistency or identifying improperly formatted code sections.",
+        "type": "comment"
+    },
+    "232": {
+        "file_id": 55,
+        "content": "/metalearning/methodBank/analyzer/retrieveVarName.py",
+        "type": "filepath"
+    },
+    "233": {
+        "file_id": 55,
+        "content": "This code imports the inspect module, defines a function retrieve_name that returns the name of a given variable within its calling frame, and then prints the result when called with y as an argument. It also initializes several variables (x,y,z,y0,y1) and y2 as a reference to y3.",
+        "type": "summary"
+    },
+    "234": {
+        "file_id": 55,
+        "content": "import inspect\ny3=[0,1,2][2]\ny2=y3\nx,y,z = 1,y2,3\ny0=2\ny1=y\ndef retrieve_name(var):\n    callers_local_vars = inspect.currentframe().f_back.f_locals.items()\n    return [var_name for var_name, var_val in callers_local_vars if var_val is var]\nprint (retrieve_name(y))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/retrieveVarName.py:1-13"
+    },
+    "235": {
+        "file_id": 55,
+        "content": "This code imports the inspect module, defines a function retrieve_name that returns the name of a given variable within its calling frame, and then prints the result when called with y as an argument. It also initializes several variables (x,y,z,y0,y1) and y2 as a reference to y3.",
+        "type": "comment"
+    },
+    "236": {
+        "file_id": 56,
+        "content": "/metalearning/methodBank/analyzer/returnSameVar.py",
+        "type": "filepath"
+    },
+    "237": {
+        "file_id": 56,
+        "content": "This code imports inspect module and defines a function retrieve_name which takes a variable as an input. The function finds the name of the local variable that holds the given value, by checking all local variables in the current stack frame. It returns a list containing the names of such variables. In this specific example, it will return the name of the variable which holds the value of 'y'.",
+        "type": "summary"
+    },
+    "238": {
+        "file_id": 56,
+        "content": "import inspect\n\"\"\"\ny3=[0,1,2][2]\ny2=y3\nx,y,z = 1,y2,3\ny0=2\ny1=y\"\"\"\ndef retrieve_name(var):\n    callers_local_vars = inspect.currentframe().f_back.f_locals.items()\n    return [var_name for var_name, var_val in callers_local_vars if var_val is var]\n#print (retrieve_name(y))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/returnSameVar.py:1-12"
+    },
+    "239": {
+        "file_id": 56,
+        "content": "This code imports inspect module and defines a function retrieve_name which takes a variable as an input. The function finds the name of the local variable that holds the given value, by checking all local variables in the current stack frame. It returns a list containing the names of such variables. In this specific example, it will return the name of the variable which holds the value of 'y'.",
+        "type": "comment"
+    },
+    "240": {
+        "file_id": 57,
+        "content": "/metalearning/methodBank/analyzer/sample.py",
+        "type": "filepath"
+    },
+    "241": {
+        "file_id": 57,
+        "content": "Code contains multiple instances of negative language and profanity. It defines a lambda function \"lickYouUp\" and two functions, \"road\" and \"rock\", which use this lambda function to perform operations on a given input 'a'. The last function \"jerk\" prints the provided text.",
+        "type": "summary"
+    },
+    "242": {
+        "file_id": 57,
+        "content": "       #this is shit.\n       #this is shit.\n       #this is shit.\nlickYouUp=(lambda c:4*c)\n# unlike haskell, it has sequential issue.\n# so we can store funtion names into an ordered list.\n# haskell is wicked. really wicked.\ndef road(a):\n    return lickYouUp(a)\ndef rock(a): # i have told you.\n    return road(a) #bullshit.\ndef jerk(n):\n    print(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/sample.py:1-18"
+    },
+    "243": {
+        "file_id": 57,
+        "content": "Code contains multiple instances of negative language and profanity. It defines a lambda function \"lickYouUp\" and two functions, \"road\" and \"rock\", which use this lambda function to perform operations on a given input 'a'. The last function \"jerk\" prints the provided text.",
+        "type": "comment"
+    },
+    "244": {
+        "file_id": 58,
+        "content": "/metalearning/methodBank/analyzer/sampleModule/__init__.py",
+        "type": "filepath"
+    },
+    "245": {
+        "file_id": 58,
+        "content": "This line imports the module \"sample_strip\" which seems to be related to image processing or data extraction, and it is crucial for the initialization of this module. Without proper initialization, the functionality of this code may be compromised or break.",
+        "type": "summary"
+    },
+    "246": {
+        "file_id": 58,
+        "content": "# WITHOUT INIT IMPORT THIS SHIT IS FUCKED.\nimport sample_strip",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/sampleModule/__init__.py:1-2"
+    },
+    "247": {
+        "file_id": 58,
+        "content": "This line imports the module \"sample_strip\" which seems to be related to image processing or data extraction, and it is crucial for the initialization of this module. Without proper initialization, the functionality of this code may be compromised or break.",
+        "type": "comment"
+    },
+    "248": {
+        "file_id": 59,
+        "content": "/metalearning/methodBank/analyzer/sampleModule/sample_strip.py",
+        "type": "filepath"
+    },
+    "249": {
+        "file_id": 59,
+        "content": "This code defines a lambda function \"lickYouUp\" that multiplies a number by 4. The \"road\" function applies the \"lickYouUp\" function to its input. The \"rock\" function applies the \"road\" function to its input. Finally, the \"jerk\" function prints its argument, which is the string \"fuckyou\" repeated three times.",
+        "type": "summary"
+    },
+    "250": {
+        "file_id": 59,
+        "content": "lickYouUp=(lambda c:4*c)\ndef road(a):\n    return lickYouUp(a)\ndef rock(a): \n    return road(a) \ndef jerk(n):\n    print(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/sampleModule/sample_strip.py:1-12"
+    },
+    "251": {
+        "file_id": 59,
+        "content": "This code defines a lambda function \"lickYouUp\" that multiplies a number by 4. The \"road\" function applies the \"lickYouUp\" function to its input. The \"rock\" function applies the \"road\" function to its input. Finally, the \"jerk\" function prints its argument, which is the string \"fuckyou\" repeated three times.",
+        "type": "comment"
+    },
+    "252": {
+        "file_id": 60,
+        "content": "/metalearning/methodBank/analyzer/sample_strip.py",
+        "type": "filepath"
+    },
+    "253": {
+        "file_id": 60,
+        "content": "The code defines a lambda function \"lickYouUp\" that multiplies a given number by 4, and two functions \"road\" and \"rock\". The \"road\" function applies the \"lickYouUp\" lambda to its argument. The \"rock\" function calls \"road\" with an input. The \"jerk\" function prints each line of the given text and then prints the result of calling \"rock\" with 4 as the argument. Finally, it prints the result of calling \"rock\" with 4 as the argument.",
+        "type": "summary"
+    },
+    "254": {
+        "file_id": 60,
+        "content": "lickYouUp=(lambda c:4*c)\ndef road(a):\n    return lickYouUp(a)\ndef rock(a): \n    return road(a) \ndef jerk(n):\n    print(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")\nprint(rock(4))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/sample_strip.py:1-13"
+    },
+    "255": {
+        "file_id": 60,
+        "content": "The code defines a lambda function \"lickYouUp\" that multiplies a given number by 4, and two functions \"road\" and \"rock\". The \"road\" function applies the \"lickYouUp\" lambda to its argument. The \"rock\" function calls \"road\" with an input. The \"jerk\" function prints each line of the given text and then prints the result of calling \"rock\" with 4 as the argument. Finally, it prints the result of calling \"rock\" with 4 as the argument.",
+        "type": "comment"
+    },
+    "256": {
+        "file_id": 61,
+        "content": "/metalearning/methodBank/analyzer/sample_strip_fix.py",
+        "type": "filepath"
+    },
+    "257": {
+        "file_id": 61,
+        "content": "Code imports chaos and schema modules from adidas package. It defines a function \"lickYouUp\" using lambda, which multiplies input by 4. The \"road\" function uses the chaos module to apply \"lickYouUp\" function to input, then calls \"schema95e9fe2a\" with parameters \"road\", and finally returns result of applying \"lickYouUp\". The \"rock\" function uses the \"road\" function on input. The \"jerk\" function applies schema with parameter \"jerk\", prints its argument, and a print statement is executed with rock(4).",
+        "type": "summary"
+    },
+    "258": {
+        "file_id": 61,
+        "content": "from adidas import chaos as chaos0aa41f45\nfrom adidas import schema as schema95e9fe2a\nlickYouUp8f9baf43=(lambda c:4*c)\nlickYouUp=(lambda c:chaos0aa41f45([\"lickYouUp\",lickYouUp8f9baf43],(c,)))\ndef road(a):\n\tschema95e9fe2a(\"road\",a,)\n\treturn lickYouUp(a)\ndef rock(a): \n\tschema95e9fe2a(\"rock\",a,)\n\treturn road(a) \ndef jerk(n):\n\tschema95e9fe2a(\"jerk\",n,)\n\tprint(n)\njerk(\"\"\"\nfuckyou\nfuckyou\nfuckyou\n\"\"\")\nprint(rock(4))",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/sample_strip_fix.py:1-19"
+    },
+    "259": {
+        "file_id": 61,
+        "content": "Code imports chaos and schema modules from adidas package. It defines a function \"lickYouUp\" using lambda, which multiplies input by 4. The \"road\" function uses the chaos module to apply \"lickYouUp\" function to input, then calls \"schema95e9fe2a\" with parameters \"road\", and finally returns result of applying \"lickYouUp\". The \"rock\" function uses the \"road\" function on input. The \"jerk\" function applies schema with parameter \"jerk\", prints its argument, and a print statement is executed with rock(4).",
+        "type": "comment"
+    },
+    "260": {
+        "file_id": 62,
+        "content": "/metalearning/methodBank/analyzer/standardParse.py",
+        "type": "filepath"
+    },
+    "261": {
+        "file_id": 62,
+        "content": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
+        "type": "summary"
+    },
+    "262": {
+        "file_id": 62,
+        "content": "import re\n# maybe we shouldn't go further than __a__ funcs\n# use globals() locals() dictionaries.\n# no kwargs.\ndef parseDir(objectName,gloss):\n    return list(map((lambda x: objectName+\".\"+x),eval(\"dir({})\".format(objectName),gloss)))\ndef parseType(objectList,gloss):\n    return list(map((lambda x: eval(\"type({})\".format(x),gloss).__name__), objectList))\ndef recurDir(objectStruct,former,gloss):\n    joke=[list(filter((lambda x:len(re.findall(r'__.+__',x.split('.')[-1]))==0),obj)) for obj in objectStruct]\n#    print(joke)\n    if sum([len(joker) for joker in joke])==0:\n        return (objectStruct+former)\n    else:\n        a=[]\n        for obj in joke:\n            for obj0 in obj:\n                a.append(parseDir(obj0,gloss))\n        return recurDir(a,former+objectStruct,gloss)\ndef depthType(ls,gloss):\n    return list(map((lambda x: parseType(x,gloss)), ls))\ndef monad(m,gloss):\n    ml=recurDir([parseDir(m,gloss)],[],gloss)\n#    print(ml)\n    return (ml,depthType(ml,gloss))\n# That was intense.",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/standardParse.py:1-30"
+    },
+    "263": {
+        "file_id": 62,
+        "content": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
+        "type": "comment"
+    },
+    "264": {
+        "file_id": 63,
+        "content": "/metalearning/methodBank/analyzer/stripOffPants.py",
+        "type": "filepath"
+    },
+    "265": {
+        "file_id": 63,
+        "content": "This Python script strips comments and docstrings from a file, tokenizes its content using `tokenize.generate_tokens`, filters out comments and docstrings, and writes the modified content to a new file with \"_strip\" suffix. Else block concatenates text, updates variables, substitutes multiple newlines, removes double newlines, and writes modified text to file.",
+        "type": "summary"
+    },
+    "266": {
+        "file_id": 63,
+        "content": "\"\"\" Strip comments and docstrings from a file.\n\"\"\"\nimport sys, token, tokenize, re\ndef do_file(fname):\n    \"\"\" Run on just one file.\n    \"\"\"\n    mod0=\"\"\n    source = open(fname)\n    mod = open(fname[:-3] + \"_strip.py\", \"w\")\n    prev_toktype = token.INDENT\n    first_line = None\n    last_lineno = -1\n    last_col = 0\n    tokgen = tokenize.generate_tokens(source.readline)\n    for toktype, ttext, (slineno, scol), (elineno, ecol), ltext in tokgen:\n        if 0:   # Change to if 1 to see the tokens fly by.\n            print(\"%10s %-14s %-20r %r\" % (\n                tokenize.tok_name.get(toktype, toktype),\n                \"%d.%d-%d.%d\" % (slineno, scol, elineno, ecol),\n                ttext, ltext\n                ))\n        if slineno > last_lineno:\n            last_col = 0\n        if scol > last_col:\n            mod0+=\" \" * (scol - last_col)\n        if toktype == token.STRING and prev_toktype == token.INDENT:\n            # Docstring\n            mod0+=\"\"\n        elif toktype == tokenize.COMMENT:\n            # Comment\n            mod0+=\"\"",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/stripOffPants.py:1-36"
+    },
+    "267": {
+        "file_id": 63,
+        "content": "This Python script strips comments and docstrings from a given file. It reads the file, tokenizes its content using `tokenize.generate_tokens`, filters out comments and docstrings, and writes the modified content to a new file with \"_strip\" suffix.",
+        "type": "comment"
+    },
+    "268": {
+        "file_id": 63,
+        "content": "        else:\n            mod0+=ttext\n        prev_toktype = toktype\n        last_col = ecol\n        last_lineno = elineno\n    mod0=re.sub(r'[ \\t]*\\n',\"\\n\",mod0,re.MULTILINE)\n    while \"\\n\\n\" in mod0:\n        mod0=mod0.replace(\"\\n\\n\",\"\\n\")\n    mod.write(mod0 if mod0[0]!= \"\\n\" else mod0[1:])\nif __name__ == '__main__':\n    do_file(sys.argv[1])",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/stripOffPants.py:37-48"
+    },
+    "269": {
+        "file_id": 63,
+        "content": "Else block concatenates text, updates variables, substitutes multiple newlines, removes double newlines, and writes modified text to file.",
+        "type": "comment"
+    },
+    "270": {
+        "file_id": 64,
+        "content": "/metalearning/methodBank/analyzer/twoListsHere.py",
+        "type": "filepath"
+    },
+    "271": {
+        "file_id": 64,
+        "content": "Code reads a Python file, parses indentation levels to create a list of statements with their respective indentation, function name, and function notched version. The code then writes the resulting data into another file and passes it to a function that appears to save this information in a database.",
+        "type": "summary"
+    },
+    "272": {
+        "file_id": 64,
+        "content": "from defTester import notch, checkFunctor\nfrom niche import wroteAHaskell\nfunctorNames=[]\n# parse indentation first.\nnicetry=\"sample_strip\",\".py\"\npm=[]\nwith open(\"\".join(nicetry),\"r\") as j:\n    i1=0\n    for fuck in j.readlines():\n        i=0\n        for i0 in range(len(fuck)):\n            if fuck[i0] in [\" \",\"\\t\"]:\n                i+=1\n            else:\n                break\n        iFuck=fuck if fuck[-1]!=\"\\n\" else fuck[:-1]\n        pm.append((i,fuck[i:],notch(iFuck),checkFunctor(iFuck),i1))\n        i1+=1\n#        pm.append((i,fuck,notch(iFuck),checkFunctor(iFuck)))\nprint(pm)\nbitch=\"_fix\".join(nicetry)\nprint(bitch)\nwroteAHaskell(bitch,pm)",
+        "type": "code",
+        "location": "/metalearning/methodBank/analyzer/twoListsHere.py:1-24"
+    },
+    "273": {
+        "file_id": 64,
+        "content": "Code reads a Python file, parses indentation levels to create a list of statements with their respective indentation, function name, and function notched version. The code then writes the resulting data into another file and passes it to a function that appears to save this information in a database.",
+        "type": "comment"
+    },
+    "274": {
+        "file_id": 65,
+        "content": "/metalearning/methodBank/extractLinear.py",
+        "type": "filepath"
+    },
+    "275": {
+        "file_id": 65,
+        "content": "This code contains multiple parsing functions, applies corrections to file names, and returns the results in a list. It involves scanning directories and lists, with seekAWrapper function combining factors for seeking specific filenames.",
+        "type": "summary"
+    },
+    "276": {
+        "file_id": 65,
+        "content": "import re\nimport os\nfrom getCorrectDill import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
+        "type": "code",
+        "location": "/metalearning/methodBank/extractLinear.py:1-31"
+    },
+    "277": {
+        "file_id": 65,
+        "content": "This code contains several functions:\n1. `open_to_return` opens a file, reads its content, and returns it without empty lines.\n2. `parse_file` takes a list of filenames, extracts specific information from each file, and returns the result as a new list.\n3. `toyProject` applies the parsing to a single file given its name.\n4. `superAddress` adds the \".py\" extension to a list of files.\n5. `seekOn` scans through a list of files until it finds the target filenames in the HallOfFame and returns their corrected names.",
+        "type": "comment"
+    },
+    "278": {
+        "file_id": 65,
+        "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nMonad='/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/Module'\nfuckingTerm=\"shitsFuckedUp.py\"\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\nmover(fuckMe,Monad)\nos.system('chmod +x shallowCopy.sh')",
+        "type": "code",
+        "location": "/metalearning/methodBank/extractLinear.py:32-59"
+    },
+    "279": {
+        "file_id": 65,
+        "content": "The code contains multiple functions that seem to involve parsing directories and lists. The \"seekAWrapper\" function takes an initial factor, applies a correction, and returns the result of \"seekOn\". This appears to be used in combination with other lists and variables like \"corr\", \"wantedTo\", and \"HallOfFame\". There's also some print statements for testing toyProject and some file operations.",
+        "type": "comment"
+    },
+    "280": {
+        "file_id": 66,
+        "content": "/metalearning/methodBank/extractor/README",
+        "type": "filepath"
+    },
+    "281": {
+        "file_id": 66,
+        "content": "This code aims to create a function that is independent of its execution place. It recognizes the difficulty in achieving this without advanced understanding and requires parsing both immutable and mutable parts.",
+        "type": "summary"
+    },
+    "282": {
+        "file_id": 66,
+        "content": "Make a function independent of execution place. However this is impossible without sophisticated understanding.\nMust parse immutable parts and mutable ones.",
+        "type": "code",
+        "location": "/metalearning/methodBank/extractor/README:1-2"
+    },
+    "283": {
+        "file_id": 66,
+        "content": "This code aims to create a function that is independent of its execution place. It recognizes the difficulty in achieving this without advanced understanding and requires parsing both immutable and mutable parts.",
+        "type": "comment"
+    },
+    "284": {
+        "file_id": 67,
+        "content": "/metalearning/methodBank/fuckOff.exp",
+        "type": "filepath"
+    },
+    "285": {
+        "file_id": 67,
+        "content": "This code uses Expect (a scripting language for automating interactions with programs) to spawn a zsh shell, retrieve and print the current directory three times using \"pwd\" command, and then exit after receiving end-of-file signal.",
+        "type": "summary"
+    },
+    "286": {
+        "file_id": 67,
+        "content": "#!/data/data/com.termux/files/usr/bin/expect\nspawn zsh\nexpect -re \".*\"\nputs $expect_out(buffer)\nsend -- \"pwd\\r\"\nexpect -re \".*\"\nputs $expect_out(buffer)\nsend -- \"pwd\\r\"\nexpect -re \".*\"\nputs $expect_out(buffer)\nsend -- \"pwd\\r\"\nexpect eof\nputs $expect_out(buffer)",
+        "type": "code",
+        "location": "/metalearning/methodBank/fuckOff.exp:1-13"
+    },
+    "287": {
+        "file_id": 67,
+        "content": "This code uses Expect (a scripting language for automating interactions with programs) to spawn a zsh shell, retrieve and print the current directory three times using \"pwd\" command, and then exit after receiving end-of-file signal.",
+        "type": "comment"
+    },
+    "288": {
+        "file_id": 68,
+        "content": "/metalearning/methodBank/getCorrectDill.py",
+        "type": "filepath"
+    },
+    "289": {
+        "file_id": 68,
+        "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
+        "type": "summary"
+    },
+    "290": {
+        "file_id": 68,
+        "content": "import os\ndef letIt():\n    return os.listdir(\".\")\n# this is a list.\n#print(makeIt)",
+        "type": "code",
+        "location": "/metalearning/methodBank/getCorrectDill.py:1-5"
+    },
+    "291": {
+        "file_id": 68,
+        "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
+        "type": "comment"
+    },
+    "292": {
+        "file_id": 69,
+        "content": "/metalearning/methodBank/getFromDill.py",
+        "type": "filepath"
+    },
+    "293": {
+        "file_id": 69,
+        "content": "The code imports dill (Python serialization tool) and defines a function called \"returnAList\" which loads and returns a list stored in the file \"newFuckingDill.dill\" using pickle's load method. The function uses open() to open the file for reading in binary mode (\"rb\").",
+        "type": "summary"
+    },
+    "294": {
+        "file_id": 69,
+        "content": "import dill as pickle\ndef returnAList():\n    return pickle.load(open(\"newFuckingDill.dill\",\"rb\"))",
+        "type": "code",
+        "location": "/metalearning/methodBank/getFromDill.py:1-3"
+    },
+    "295": {
+        "file_id": 69,
+        "content": "The code imports dill (Python serialization tool) and defines a function called \"returnAList\" which loads and returns a list stored in the file \"newFuckingDill.dill\" using pickle's load method. The function uses open() to open the file for reading in binary mode (\"rb\").",
+        "type": "comment"
+    },
+    "296": {
+        "file_id": 70,
+        "content": "/metalearning/methodBank/jerkOff.exp",
+        "type": "filepath"
+    },
+    "297": {
+        "file_id": 70,
+        "content": "This code is used to execute a Python script within Termux environment, importing \"sampleModule\" and \"standardParse\", running monad analysis on \"sampleModule\", and then exiting.",
+        "type": "summary"
+    },
+    "298": {
+        "file_id": 70,
+        "content": "#!/data/data/com.termux/files/usr/bin/expect\ncd /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer\nspawn python\nexpect -re \".*\" {send -- \"import sampleModule\\r\"}\nexpect -re \".*\" {send -- \"from standardParse import *\\r\"}\nexpect -re \".*\" {send -- \"monad(\\\"sampleModule\\\",globals())\\r\"}\nexpect -re \".*\" {send -- \"exit()\\r\"}\nexpect eof",
+        "type": "code",
+        "location": "/metalearning/methodBank/jerkOff.exp:1-8"
+    },
+    "299": {
+        "file_id": 70,
+        "content": "This code is used to execute a Python script within Termux environment, importing \"sampleModule\" and \"standardParse\", running monad analysis on \"sampleModule\", and then exiting.",
+        "type": "comment"
+    }
+}

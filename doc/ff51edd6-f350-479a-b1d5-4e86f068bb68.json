@@ -1,0 +1,10 @@
+{
+    "summary": "This function creates a SQL SELECT statement based on the provided input. It can be passed in pickle format and should be implemented in Haskell.",
+    "details": [
+        {
+            "comment": "This function creates a SQL SELECT statement based on the provided input. It can be passed in pickle format and should be implemented in Haskell.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/conPro.py\":0-4",
+            "content": "def sqlMaker(sauce):\n    sql = \"SELECT * FROM \"+sauce+\" ;\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql"
+        }
+    ]
+}

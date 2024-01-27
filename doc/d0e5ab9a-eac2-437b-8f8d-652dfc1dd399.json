@@ -1,0 +1,10 @@
+{
+    "summary": "This Python function, `confusionMatrix`, takes two arguments (a and b) and returns a confusion matrix in the form of a 2D list. The inner list contains boolean values representing whether each element in the first argument matches with the corresponding element in the second argument.",
+    "details": [
+        {
+            "comment": "This Python function, `confusionMatrix`, takes two arguments (a and b) and returns a confusion matrix in the form of a 2D list. The inner list contains boolean values representing whether each element in the first argument matches with the corresponding element in the second argument.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/chainedTest.py\":0-17",
+            "content": "# if passed the test, then onward to next\n# if not passed, slice and move to next test.\n# return the sum of all successful test.\n# the integrity is defined as the biggest clogged group found in test.\n# better use keyboard tolerance mechanism.\n# straight line mechanism, nearst neighbor mechanism.\n#group groupChar\n# group -> g_roup <delay>\n# group -> gloup <replace>\n# group -> ggroup <repeat>\n# if it isn't the end, do not stop.\n# group -> roupg <swap>\n#group groupCharGroup\n# WARNING WE HAVEN'T BEEN USING A STENOTYPE SO BE CAREFUL OF ARRANGEMENTS.\ndef confusionMatrix(a,b):\n    return [[a0 == b0 for a0 in a] for b0 in b]\nprint(confusionMatrix(\"group\",\"groupChar\"))"
+        }
+    ]
+}

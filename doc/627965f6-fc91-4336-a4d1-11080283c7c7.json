@@ -1,0 +1,15 @@
+{
+    "summary": "The code processes a grid, removes duplicates, and stores it as 'Grid0'. It then converts the elements to indices and prints the resulting grid along with its length.",
+    "details": [
+        {
+            "comment": "The code is filtering and splitting filenames, creating two lists of file names and their lowercase versions. It then removes duplicates from the first list and stores them in Grid. Finally, it filters out matrices with a sum less than 2 and converts remaining elements to indices, resulting in a list of lists representing the matrix.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/newShit/shitMe.py\":0-19",
+            "content": "# exclude the 'binrapt/ail' through search engine interface\n# it is an empty repo. should figure that out in log file if exists\nfrom niche import Method2\n#from simpleStorage import storeAList\ndef tabNine(x0):\n    v=[[],[]]\n    with open(x0,\"r\") as fuck:\n        fucked=fuck.read()\n        v=[list(map((lambda x:x.split('/')[1]),list(filter((lambda x: x!=\"\"),fucked.split('\\n'))))),list(filter((lambda x: x!=\"\"),fucked.split('\\n')))]\n    return [v[0],list(map((lambda x: x.lower()),v[0])),v[1]]\nm=list(map((lambda x:tabNine(x)),['shitLord.log','fuckLord.log']))\n#print(m[1][2])\nm0=m[0][1]+[m[1][1][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nm1=m[0][2]+[m[1][2][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nGrid=Method2(m0,m0)\n# now we can mark these things.\n# we must have same elements, unique elements.\n# the matrix.\nGrid=list(filter((lambda x: sum(x)>1),list(map((lambda x: list(map((lambda x: int(x)),x))),Grid))))\nGrid=[[i0 for i0, x0 in enumerate(g) if x0 == 1] for g in Grid]"
+        },
+        {
+            "comment": "This code appears to be processing a grid and storing it as 'Grid0'. It first removes duplicates in the grid by converting it into a set of indices. Then, it maps each element of the original grid to another list where each element is obtained from a lambda function that accesses the m1 array using its index. The resulting grid is printed along with its length before storing it.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/newShit/shitMe.py\":20-27",
+            "content": "#print(Grid)\n# you need to rehash.\nGrid1=list(set([Grid.index(x) for x in Grid]))\n#print(Grid1)\nGrid0=list(map((lambda x:list(map((lambda x:m1[x]),x))),[Grid[x] for x in Grid1]))\nfor GridX in Grid0:\n    print(GridX,len(GridX))\n#storeAList(Grid0)"
+        }
+    ]
+}

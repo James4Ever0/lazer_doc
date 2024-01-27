@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads lines from \"exampleToBeFixed.log\", replaces occurrences of \"need\" with \"need not\" if the count variable (shit) is 1, and writes the modified or original lines to \"fixedExample.log\".",
+    "details": [
+        {
+            "comment": "This code reads lines from \"exampleToBeFixed.log\", replaces occurrences of \"need\" with \"need not\" if the count variable (shit) is 1, and writes the modified or original lines to \"fixedExample.log\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixYourHead/fixer.py\":0-13",
+            "content": "with open(\"fixedExample.log\",\"w+\") as ap:\n    with open(\"exampleToBeFixed.log\",\"r\") as ad:\n        shit=0\n        for abo in ad.readlines():\n            print (shit)\n            print(abo)\n            if shit == 1:\n                #shit+=1\n                abo = abo.replace(\"need\", \"need not\")\n#                print(abo)\n                ap.write(abo)\n            else:\n                ap.write(abo)\n            shit+=1"
+        }
+    ]
+}

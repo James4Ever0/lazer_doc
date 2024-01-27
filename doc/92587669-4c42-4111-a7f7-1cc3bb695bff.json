@@ -1,0 +1,15 @@
+{
+    "summary": "The code reads two log files, creates a unique list of elements, applies a method to form a grid structure, generates a new list of indices, and replaces values with corresponding values from m1. The Grid0 object is printed and stored in a list for further analysis or processing.",
+    "details": [
+        {
+            "comment": "This code reads two log files and creates a list of unique elements from them. It then applies a method (Method2) to the unique elements, resulting in a grid-like structure with all elements present at least once. The code then generates a new list (Grid1) containing only indices where each element appears, removes duplicate rows, and finally creates Grid0 by replacing the existing elements with corresponding values from m1. This process appears to be related to marking items in a matrix and potentially rehashing data for further processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/newShit/fuckMe.py\":0-22",
+            "content": "from niche import Method2\nfrom simpleStorage import storeAList\ndef tabNine(x0):\n    v=[[],[]]\n    with open(x0,\"r\") as fuck:\n        fucked=fuck.read()\n        v=[list(map((lambda x:x.split('/')[1]),list(filter((lambda x: x!=\"\"),fucked.split('\\n'))))),list(filter((lambda x: x!=\"\"),fucked.split('\\n')))]\n    return [v[0],list(map((lambda x: x.lower()),v[0])),v[1]]\nm=list(map((lambda x:tabNine(x)),['shitLord.log','fuckLord.log']))\n#print(m[1][2])\nm0=m[0][1]+[m[1][1][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nm1=m[0][2]+[m[1][2][v0] for v0 in range(len(m[1][1])) if m[1][0][v0] not in m[0][0]]\nGrid=Method2(m0,m0)\n# now we can mark these things.\n# we must have same elements, unique elements.\n# the matrix.\nGrid=list(filter((lambda x: sum(x)>1),list(map((lambda x: list(map((lambda x: int(x)),x))),Grid))))\nGrid=[[i0 for i0, x0 in enumerate(g) if x0 == 1] for g in Grid]\n#print(Grid)\n# you need to rehash.\nGrid1=list(set([Grid.index(x) for x in Grid]))\n#print(Grid1)\nGrid0=list(map((lambda x:list(map((lambda x:m1[x]),x))),[Grid[x] for x in Grid1]))"
+        },
+        {
+            "comment": "The code is printing a Grid0 object and then storing it in a list using the storeAList function. The purpose might be to keep track of the Grid0 object for further analysis or processing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/shit/generalAI/newShit/fuckMe.py\":23-24",
+            "content": "#print(Grid0)\nstoreAList(Grid0)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports functions from other files and defines two functions. 'forMotherRussia' takes a number of kills and super rats as input, retrieves data from the 'fuckYou' list using the input number, and returns the final result after executing it with the super rats. 'toyProject' attempts to execute the 'forMotherRussia' function and provides success or failure messages. The code includes comments expressing frustration but no explicit error handling or printing statements within the functions.",
+    "details": [
+        {
+            "comment": "The code imports functions from other files and defines two functions. 'forMotherRussia' takes a number of kills and super rats as input, retrieves data from the 'fuckYou' list using the input number, and returns the final result after executing it with the super rats. 'toyProject' attempts to execute the 'forMotherRussia' function and provides success or failure messages. The code includes comments expressing frustration but no explicit error handling or printing statements within the functions.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/newTestR.py\":0-20",
+            "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    try:\n        executeCode(forMotherRussia(numToKill,superRats))\n        print(\"--ejaculation successful--\")\n    except:\n        print(\"--stuck in testicles--\")\n# fucking pricks.\n'''print(forMotherRussia(0,[1,\"asia\",2,\"fuck\",\"shit\"]))\nprint(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''"
+        }
+    ]
+}

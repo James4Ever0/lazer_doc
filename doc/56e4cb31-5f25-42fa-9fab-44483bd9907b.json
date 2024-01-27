@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines two functions: `testCube()` and `semen()`. The first function takes a list, sorts it, and then checks if the adjacent elements differ by 1. If so, it returns True; otherwise, it returns False. The second function splits the sorted list in half and tests each half using the `testCube()` function. If either half passes, it returns the original sorted list; otherwise, it creates a new list combining two unsorted lists and returns it.",
+    "details": [
+        {
+            "comment": "The code defines two functions: `testCube()` and `semen()`. The first function takes a list, sorts it, and then checks if the adjacent elements differ by 1. If so, it returns True; otherwise, it returns False. The second function splits the sorted list in half and tests each half using the `testCube()` function. If either half passes, it returns the original sorted list; otherwise, it creates a new list combining two unsorted lists and returns it.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/superHot/ejaculate.py\":0-20",
+            "content": "def testCube(_list):\n    v=sorted(list)\n    for i in range(len(_list)-1):\n        if abs(v[i]-v[i+1])==1:\n            return True\n        else:\n            pass\n    return False\ndef semen(sortedList,unsortedList):\n    l=len(sortedList)/2\n    l0,l1=sortedList[:l-1],sortedList[l:]\n    if (testTube(l0) or testTube(l1)):\n        return sortedList\n    else:\n        v0,v1=unsortedList[:l-1],unsortedList[l:]\n        v2=[]\n        for k in len(v0):\n            v2.append(v0[k])\n            v2.append(v1[k])\n        return v2"
+        }
+    ]
+}

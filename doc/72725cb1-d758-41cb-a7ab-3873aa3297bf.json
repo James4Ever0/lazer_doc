@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the System.Enviorment module and defines two functions: greeting and asshole. The greeting function returns a list containing \"shit\" and \"happens\". The main function prints out the command line arguments using putStrLn getArgs, which is called by running the Haskell program with arguments specified from the command line.",
+    "details": [
+        {
+            "comment": "This code imports the System.Enviorment module and defines two functions: greeting and asshole. The greeting function returns a list containing \"shit\" and \"happens\". The main function prints out the command line arguments using putStrLn getArgs, which is called by running the Haskell program with arguments specified from the command line.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe.hs\":0-6",
+            "content": "import System.Enviorment\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\nmain = do\n  putStrLn getArgs"
+        }
+    ]
+}

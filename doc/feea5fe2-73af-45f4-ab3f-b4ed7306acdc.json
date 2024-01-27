@@ -1,0 +1,10 @@
+{
+    "summary": "This code is copying three python files into a specified directory using the Termux environment. The files are getCorrectList.py, shallowCopy.py, and extractLinear.py, which seem to be part of a larger project related to metalearning methodBank.",
+    "details": [
+        {
+            "comment": "This code is copying three python files into a specified directory using the Termux environment. The files are getCorrectList.py, shallowCopy.py, and extractLinear.py, which seem to be part of a larger project related to metalearning methodBank.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/shallowCopy.sh\":0-3",
+            "content": "#!/bin/bash\ncp getCorrectList.py /data/data/com.termux/files/home/lazer/metalearning/methodBank &\ncp shallowCopy.py /data/data/com.termux/files/home/lazer/metalearning/methodBank &\ncp extractLinear.py /data/data/com.termux/files/home/lazer/metalearning/methodBank &"
+        }
+    ]
+}

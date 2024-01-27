@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a file named \"core.log\", extracts data from another file called \"holidays.txt\" using line breaks as separators, and then applies a function called \"simpleExam\" to calculate the sum at each position of these separated values. The results are printed for two separate lists, one with positions directly following the lines in \"holidays.txt\", and another after skipping every two lines in the same text file.",
+    "details": [
+        {
+            "comment": "The code reads a file named \"core.log\", extracts data from another file called \"holidays.txt\" using line breaks as separators, and then applies a function called \"simpleExam\" to calculate the sum at each position of these separated values. The results are printed for two separate lists, one with positions directly following the lines in \"holidays.txt\", and another after skipping every two lines in the same text file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/Separation/verifyIfGlobal.py\":0-20",
+            "content": "# single char spliter\n# multichar spliter\n# manyfold\n# invisible spliter and derivatives\n# mixed spliter\n# length, metadata, features\nfrom trashlot import simpleExam, spliterPos\n#from statistics import sum\nwith open(\"core.log\",\"r\") as fool:\n    pool=fool.read()\n    with open(pool[:-1]+\"holidays.txt\",\"r\") as April:\n        Sunny=April.read()\n        globalWarming=spliterPos(Sunny,\"\\n\")\n        s=[[],[]]\n        for k in range(len(Sunny)):\n            s[0].append(sum(simpleExam(k,globalWarming)))\n        print(s[0])\n        print(\"--spliter--\")\n        for k in range(len(Sunny)*3):\n            s[1].append(sum(simpleExam(k-2*len(Sunny)*2,globalWarming)))\n        print(s[1])"
+        }
+    ]
+}

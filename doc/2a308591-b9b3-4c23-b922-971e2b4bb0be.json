@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports necessary libraries, generates random close values, and calculates Simple Moving Average (SMA) using the talib library. It also applies Bollinger Bands with a specified MA type and calculates the Moving Average (MOM). The output is then printed and checked for its data type.",
+    "details": [
+        {
+            "comment": "The code imports necessary libraries, generates random close values, and calculates Simple Moving Average (SMA) using the talib library. It also applies Bollinger Bands with a specified MA type and calculates the Moving Average (MOM). The output is then printed and checked for its data type.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/megalovania.py\":0-27",
+            "content": "import numpy\nimport talib\nclose = numpy.random.random(100)\nprint(close)\nprint(\"-----spliter-----\")\nprint(type(close))\noutput0 = talib.SMA(close)\nfrom talib import MA_Type\nupper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)\n# I really don't know what is going on.\noutput = talib.MOM(close, timeperiod=5)\n# fuck me okay???\nprint(output0)\nprint(type(output0))\nprint(\"-----spliter-----\")\nprint(output)\nprint(type(output))"
+        }
+    ]
+}

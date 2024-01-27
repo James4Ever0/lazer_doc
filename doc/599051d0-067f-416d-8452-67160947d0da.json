@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads lines from \"alpha.csv\", applies stemming using the English SnowballStemmer, and writes non-stemmed lines to \"gamma.csv\". It also handles exceptions during writing.",
+    "details": [
+        {
+            "comment": "This code reads lines from \"alpha.csv\", applies stemming using the English SnowballStemmer, and writes non-stemmed lines to \"gamma.csv\". It also handles exceptions during writing.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/connector/core2.py\":0-28",
+            "content": "from nltk.stem.snowball import SnowballStemmer\nimport re\ndef steam(quack):\n    return SnowballStemmer(\"english\").stem(quack)\n# use readlines to create a list.\n# this time we write results into csv files.\na=open(\"alpha.csv\",\"r\")\nb=open(\"gamma.csv\",\"w+\")\n#try:\nfor p in a.readlines():\n#    print (p)\n    p=re.sub(\"\\n\",\"\",p)\n    p0=steam(p)\n    if p0!=p:\n        pass\n    else:\n#        print (p0)\n        try:\n            b.write(p+\"\\n\")\n        except:\n            pass\n#except:\n#    pass\nb.write(\"\\b\")\na.close()\nb.close()"
+        }
+    ]
+}

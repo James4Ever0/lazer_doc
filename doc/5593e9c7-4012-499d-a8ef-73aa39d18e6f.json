@@ -1,0 +1,10 @@
+{
+    "summary": "Code imports functions from \"core4\" and \"simpleStorage\", creates a local database with key-value pairs of characters to matchNeighbor results, and then stores it in the \"simpleStorage\".",
+    "details": [
+        {
+            "comment": "Code imports functions from \"core4\" and \"simpleStorage\", creates a local database with key-value pairs of characters to matchNeighbor results, and then stores it in the \"simpleStorage\".",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/metalearning/generic/test/jerk.py\":0-6",
+            "content": "from core4 import matchNeighbor\nfrom simpleStorage import storeAList\n# now you can make a local database.\n#    k=chr(k0)\nv={chr(k0):matchNeighbor(chr(k0)) for k0 in range(ord(\"a\"),1+ord(\"z\"))}\nprint(v)\nstoreAList(v)"
+        }
+    ]
+}

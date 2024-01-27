@@ -1,0 +1,10 @@
+{
+    "summary": "The code reads a file named 'core.log', applies some transformations to its lines, and appends the transformed lines to another file. It then opens that new file, iterates over each line, passes them to 'toyProject' function along with an index, and finally prints the index and value of each line in the transformed file.",
+    "details": [
+        {
+            "comment": "The code reads a file named 'core.log', applies some transformations to its lines, and appends the transformed lines to another file. It then opens that new file, iterates over each line, passes them to 'toyProject' function along with an index, and finally prints the index and value of each line in the transformed file.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/cockshock.py\":0-16",
+            "content": "from newTestN import toyProject\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \" and p !='[' and p != ']']))\nshit=''\nwith open('core.log','r') as fuck:\n    shit=fuck.read()\np=[]\nwith open(joker(shit)+'types.txt','r') as f:\n    for j in f.readlines():\n        if j[0]!='#' and len(j)>1:\n            p.append(greatWall2(joker(j)))\n'''\nfor a,b in enumerate(p):\n    print(a,[b])'''\nfor a in p:\n    toyProject(0,[a])"
+        }
+    ]
+}
