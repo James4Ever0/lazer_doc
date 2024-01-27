@@ -1,536 +1,536 @@
 {
     "2300": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/taiChi.py",
         "type": "filepath"
     },
     "2301": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "This code defines a function `Magisk` that processes text data using regular expressions and extracts character codes from \"alphabets.txt\". It also prints the name and value of variable \"kn\" based on mandarin, with a cycling counter.",
         "type": "summary"
     },
     "2302": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "import re\ndef Magisk(erectile):\n    stringSet=[\"set:\",[\"[\",\"]\"]]\n#standAlone=(lambda x: list(filter((lambda y: y!=\"\"), list(map((lambda z: z[1] if len(z) <=3 else re.match(r\"\\d+\").group(0)),x)) )))\n#ky0=(lambda k:k if k[-1]!=\" \" else k[:-1])\n#ky=(lambda k:ky0(k) if k[0]!=\" \" else k[1:])\n    wrap=(lambda x: [ord(x0) for x0 in list(x)])\n    standAlone1=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\",\"))))\n    def standAlone2(a,b):\n        b0=b\n#        print(\"FUCK\\nFUCK\")\n#        print(a)\n        for a0 in a:\n            if a0!=\"\":\n                b0=b0.replace(a0,chr(int(re.findall(r\"\\d+\",a0)[0])))\n            else:\n                pass\n#        print(\"SHIT\\nSHIT\")\n#        print(b0)\n        return b0\n    standAlone=(lambda y: standAlone1(standAlone2(re.findall(r\"{}\\d+;\".format(re.escape(\"&#\")),y),y)))\n#standAlone0=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\n#standAlone=(lambda x: standAlone1(x) if standAlone1(x).count(sorted(set(standAlone1(x)),key=(lambda y: standAlone1(x).count(y)))[0]) <3 else standAlone0(x))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py:1-23"
     },
     "2303": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "The code defines a function `Magisk` that takes a string and performs some transformations on it. It uses regular expressions, list manipulations, and character encoding/decoding operations. The purpose seems to be related to text processing or data manipulation in a specific context.",
         "type": "comment"
     },
     "2304": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "    wrapper=(lambda xy: ord(xy))\n#wrapper0=(lambda xy: xy)\n#    with open(\"alphabets.txt\",\"r\") as rockstar:\n#    mandarin=0\n# simply another workaround?\n        #for kn in rockstar.readlines():\n    kn=erectile\n    if stringSet[0] in kn:\n#            print(\"set only\")\n#            print(kn)\n#            ks=re.findall(r\" .(,?)| \\&#\\d*;(,?)\", kn[5:])\n        prt=standAlone(kn[5:-1])\n#            print(prt)\n        if len(prt)>1:\n            try:\n#                    print(list(map((lambda x: [x,len(x),wrap(x)]),prt)))\n                pat=list(map((lambda z: wrapper(re.findall(r\"[^ ]\",z)[0])),prt))\n#                    print(pat)\n                return pat\n            except:\n#                    print(\"FUCKED UP\\nFUCKED UP\")\n                return []\n        else:\n            return []\n#                print(\"TOO YOUNG TOO NAIVE\\nTOO YOUNG TOO NAIVE\")\n#            print(kn[-1])\n#            print(ks)\n#            print(standAlone(ks))\n    else:\n        return []\n\"\"\"            if (stringSet[1][0] in kn and stringSet[1][1] in kn):",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py:24-54"
     },
     "2305": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "This code seems to be part of a larger program that deals with processing text data from a file called \"alphabets.txt\". It uses lambda functions and regular expressions (re) to extract characters from each line in the file, checks if a certain string is present in each line, and returns a list of character codes for lines that contain this string. The code also handles cases where there are no matching lines or where the extracted characters are too few.",
         "type": "comment"
     },
     "2306": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "                print(\"name only\")\n                print(kn)\n#        elif mandarin==1:\n            else:\n                print(\"empty line\")\n                print(kn)\"\"\"\n#        mandarin+=1\n#        if mandarin==3:\n#            mandarin=0",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py:55-63"
     },
     "2307": {
-        "file_id": 389,
+        "file_id": 388,
         "content": "This code prints the name and value of variable \"kn\" if mandarin is not equal to 1, otherwise it prints an empty line followed by the value of \"kn\". The code also includes a counter for mandarin with a cycling behavior.",
         "type": "comment"
     },
     "2308": {
-        "file_id": 390,
+        "file_id": 389,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/README",
         "type": "filepath"
     },
     "2309": {
-        "file_id": 390,
+        "file_id": 389,
         "content": "This code provides instructions for a user to perform basic operations and group ingredients based on inclusion or exclusion methods. It emphasizes the importance of understanding punctuation and considering time-space distance for relevancy when separating items into different groups.",
         "type": "summary"
     },
     "2310": {
-        "file_id": 390,
+        "file_id": 389,
         "content": "what do you want to do in this fucking lab?\nonly hand-crafted shits. I ain't got nothing with the fucking shit.\nalright then. i just want to make sure that my standard spliters get out.\n--------TO UNDERSTAND THE SITUATION--------\nyou need to know that you are not genius. thses functions are for experts, and all you have got is shit.\nno need to do the comprehension. we do the most basic machine learning from here.\nyou, must start with some basic operations:\n1. shift\n2. tweak\n3. switch\nAlso, you need not only to fine grain the ibgredents, but also to separate, categorize them. You must group something together when in need.\ntwo grouping methods:\n1. inclusion\n2. exclusion or encapsule.\n--------- REMEMBER THE RULE HERE ---------\nnever ignore the content. if you do, then you will never get the idea of the punctuation.\nconsider the time-space distance. when the space is large, or the relevancy is low, then you shall put each of them into different group.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/README:1-22"
     },
     "2311": {
-        "file_id": 390,
+        "file_id": 389,
         "content": "This code provides instructions for a user to perform basic operations and group ingredients based on inclusion or exclusion methods. It emphasizes the importance of understanding punctuation and considering time-space distance for relevancy when separating items into different groups.",
         "type": "comment"
     },
     "2312": {
-        "file_id": 391,
+        "file_id": 390,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README",
         "type": "filepath"
     },
     "2313": {
-        "file_id": 391,
+        "file_id": 390,
         "content": "This code seems to be a README file discussing information gathering and processing, using recursion, punctuation handling, ranking, and an inclusion algorithm called \"The Inclusion Algorithm\". However, the text appears chaotic and difficult to comprehend.",
         "type": "summary"
     },
     "2314": {
-        "file_id": 391,
+        "file_id": 390,
         "content": "this is the standard file which waiting for you to split.\nyou come on, yeah you better bring your crew with you.\nnow i just want to wait and see. what do you have here actually?\ni can split anything recursively, and i ain't got no mercy.\nthe final shit could be done in the end (the wormhole mark or by regex or some other shits).\ni guess the punctuations are not inside the word list, or at least not even a common thing inside a dictionary (i mean index). So we can get them out pretty easily.\nmark them up and put a rank over them. i wanna see the shit.\nhey! give you this thing, you may consider it as some thing good. THE INCLUSION ALGORITHM.\nSimply, if something is inside the interval of another thing's interval, then the other thing is considered superior than the former. also, if it appears to be less frequent  than the former (by this i mean the period, or just some local period i think).\nalso you need to teach the computer to consider brackets as another thing which needs to be concluded, appears as a group and cannot be simply parsed as something normal.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:1-10"
     },
     "2315": {
-        "file_id": 391,
+        "file_id": 390,
         "content": "This code appears to be a README file for a project involving information gathering and processing. It discusses the use of recursion, punctuation handling, ranking, and an inclusion algorithm. The reader is encouraged to bring their crew and utilize an algorithm called \"The Inclusion Algorithm\" to solve the problem at hand.",
         "type": "comment"
     },
     "2316": {
-        "file_id": 391,
+        "file_id": 390,
         "content": "RANK IT. the word could be a mess if without the thing.\nfind out local pattern.  when local pattern extends, then it becomes global pattern.\nDO NOT EXECUTE TXT FILES OR YOU WILL DIE. UNKNOWN TEXT PATTERNS COULD BE LETHAL.\nnow we are gonna apply financial methods into natural language processing! what a joke! but this is true. nevertheless financial methods are great when including the historical data to fool investers, but text files are history and we can never fool anyone when it is all set and done (Hilbert Space Integrated).\nBe in the army is just another reason to die.\nI had better keep my fucking choice.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:11-18"
     },
     "2317": {
-        "file_id": 391,
+        "file_id": 390,
         "content": "The code seems to be a combination of disjointed thoughts, potential warnings against executing text files, and criticism towards using financial methods in natural language processing. The text appears chaotic and difficult to comprehend, making it hard to derive any meaningful information or comments from it.",
         "type": "comment"
     },
     "2318": {
-        "file_id": 392,
+        "file_id": 391,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/another.py",
         "type": "filepath"
     },
     "2319": {
-        "file_id": 392,
+        "file_id": 391,
         "content": "Code converts a list of real numbers to double, calculates simple moving average (SMA) and Moving Average Convergence/Divergence (MACD) using the TA-Lib library, and prints the results.",
         "type": "summary"
     },
     "2320": {
-        "file_id": 392,
+        "file_id": 391,
         "content": "import numpy\nimport talib\n_list=[0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,0,0,0,1,1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1]\n# real to double\nclose = numpy.array(list(map((lambda x : float(x)),_list)))\nprint(close)\nprint(\"-----spliter-----\")\nprint(type(close))\noutput0 = talib.SMA(close)\nfrom talib import MA_Type\nupper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)\n# I really don't know what is going on.\noutput = talib.MOM(close, timeperiod=5)\n# fuck me okay???\nprint(output0)\nprint(type(output0))\nprint(\"-----spliter-----\")\nprint(output)\nprint(type(output))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/another.py:1-30"
     },
     "2321": {
-        "file_id": 392,
+        "file_id": 391,
         "content": "Code converts a list of real numbers to double, calculates simple moving average (SMA) and Moving Average Convergence/Divergence (MACD) using the TA-Lib library, and prints the results.",
         "type": "comment"
     },
     "2322": {
-        "file_id": 393,
+        "file_id": 392,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/breast.py",
         "type": "filepath"
     },
     "2323": {
-        "file_id": 393,
+        "file_id": 392,
         "content": "The code imports numpy and talib libraries, then converts a list of real numbers to a double array using numpy. It prints the close array, type of close array, and Bollinger Bands output. It also calculates Simple Moving Average (output0), exponential moving average (output), and Moving Average Convergence/Divergence (output1). It prints these outputs and their types. The code seems to be related to technical analysis for stock market indicators.",
         "type": "summary"
     },
     "2324": {
-        "file_id": 393,
+        "file_id": 392,
         "content": "import numpy\nimport talib\n_list=[0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,0,0,0,1,1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1]\n# real to double\nclose = numpy.array(list(map((lambda x : float(x)),_list)))\nprint(close)\nprint(\"-----spliter-----\")\nprint(type(close))\noutput0 = talib.SMA(close)\nfrom talib import MA_Type\nupper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)\n# I really don't know what is going on.\noutput = talib.MOM(close, timeperiod=5)\n# fuck me okay???\nprint(output0)\nprint(type(output0))\nprint(\"-----spliter-----\")\nprint(output)\nprint(type(output))\noutput1=talib.MAMA(close)\n# you better check the wrapper first.\nprint(\"-----spliter-----\")\nprint(output1)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/breast.py:1-35"
     },
     "2325": {
-        "file_id": 393,
+        "file_id": 392,
         "content": "The code imports numpy and talib libraries, then converts a list of real numbers to a double array using numpy. It prints the close array, type of close array, and Bollinger Bands output. It also calculates Simple Moving Average (output0), exponential moving average (output), and Moving Average Convergence/Divergence (output1). It prints these outputs and their types. The code seems to be related to technical analysis for stock market indicators.",
         "type": "comment"
     },
     "2326": {
-        "file_id": 394,
+        "file_id": 393,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/exam.py",
         "type": "filepath"
     },
     "2327": {
-        "file_id": 394,
+        "file_id": 393,
         "content": "Code initializes a list with values 0-3, then prints the last value in the list.",
         "type": "summary"
     },
     "2328": {
-        "file_id": 394,
+        "file_id": 393,
         "content": "_list=[0,1,2,3]\nprint(_list[-1])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/exam.py:1-2"
     },
     "2329": {
-        "file_id": 394,
+        "file_id": 393,
         "content": "Code initializes a list with values 0-3, then prints the last value in the list.",
         "type": "comment"
     },
     "2330": {
-        "file_id": 395,
+        "file_id": 394,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/megalovania.py",
         "type": "filepath"
     },
     "2331": {
-        "file_id": 395,
+        "file_id": 394,
         "content": "The code imports necessary libraries, generates random close values, and calculates Simple Moving Average (SMA) using the talib library. It also applies Bollinger Bands with a specified MA type and calculates the Moving Average (MOM). The output is then printed and checked for its data type.",
         "type": "summary"
     },
     "2332": {
-        "file_id": 395,
+        "file_id": 394,
         "content": "import numpy\nimport talib\nclose = numpy.random.random(100)\nprint(close)\nprint(\"-----spliter-----\")\nprint(type(close))\noutput0 = talib.SMA(close)\nfrom talib import MA_Type\nupper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)\n# I really don't know what is going on.\noutput = talib.MOM(close, timeperiod=5)\n# fuck me okay???\nprint(output0)\nprint(type(output0))\nprint(\"-----spliter-----\")\nprint(output)\nprint(type(output))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/megalovania.py:1-28"
     },
     "2333": {
-        "file_id": 395,
+        "file_id": 394,
         "content": "The code imports necessary libraries, generates random close values, and calculates Simple Moving Average (SMA) using the talib library. It also applies Bollinger Bands with a specified MA type and calculates the Moving Average (MOM). The output is then printed and checked for its data type.",
         "type": "comment"
     },
     "2334": {
-        "file_id": 396,
+        "file_id": 395,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/nothing.py",
         "type": "filepath"
     },
     "2335": {
-        "file_id": 396,
+        "file_id": 395,
         "content": "The code imports NumPy and TA-Lib, generates random input data for various financial metrics, and applies technical indicators (Simple Moving Average, Bollinger Bands, Stochastic Oscillator) using different price types. It then prints the inputs and calculated values for slowk and slowd.",
         "type": "summary"
     },
     "2336": {
-        "file_id": 396,
+        "file_id": 395,
         "content": "import numpy as np\n# note that all ndarrays must be the same length!\ninputs = {\n    'open': np.random.random(100),\n    'high': np.random.random(100),\n    'low': np.random.random(100),\n    'close': np.random.random(100),\n    'volume': np.random.random(100)\n}\nfrom talib import abstract\n# directly\nSMA = abstract.SMA\n# or by name\nSMA = abstract.Function('sma')\nfrom talib.abstract import *\n# uses close prices (default)\noutput = SMA(inputs, timeperiod=25)\n# uses open prices\noutput = SMA(inputs, timeperiod=25, price='open')\n# uses close prices (default)\nupper, middle, lower = BBANDS(inputs, 20, 2, 2)\n# uses high, low, close (default)\nslowk, slowd = STOCH(inputs, 5, 3, 0, 3, 0) # uses high, low, close by default\n# uses high, low, open instead\nslowk, slowd = STOCH(inputs, 5, 3, 0, 3, 0, prices=['high', 'low', 'open'])\nprint(inputs)\nprint(slowk,slowd)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/nothing.py:1-39"
     },
     "2337": {
-        "file_id": 396,
+        "file_id": 395,
         "content": "The code imports NumPy and TA-Lib, generates random input data for various financial metrics, and applies technical indicators (Simple Moving Average, Bollinger Bands, Stochastic Oscillator) using different price types. It then prints the inputs and calculated values for slowk and slowd.",
         "type": "comment"
     },
     "2338": {
-        "file_id": 397,
+        "file_id": 396,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/one.py",
         "type": "filepath"
     },
     "2339": {
-        "file_id": 397,
+        "file_id": 396,
         "content": "This code reads a file named \"README\", converts the content to a set (removing duplicates) and then filters out non-alphabetic characters, resulting in a new list called hotspot. This process aims to remove common patterns and prepare data for further analysis or filtering. The code then iterates through the original string, printing the linear index of each character.",
         "type": "summary"
     },
     "2340": {
-        "file_id": 397,
+        "file_id": 396,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\nfor r,k in enumerate(list(mississippi)):\n    print (r,k)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/one.py:1-24"
     },
     "2341": {
-        "file_id": 397,
+        "file_id": 396,
         "content": "This code reads a file named \"README\", converts the content to a set (removing duplicates) and then filters out non-alphabetic characters, resulting in a new list called hotspot. This process aims to remove common patterns and prepare data for further analysis or filtering. The code then iterates through the original string, printing the linear index of each character.",
         "type": "comment"
     },
     "2342": {
-        "file_id": 398,
+        "file_id": 397,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py",
         "type": "filepath"
     },
     "2343": {
-        "file_id": 398,
+        "file_id": 397,
         "content": "The code reads the \"README\" file, extracts unique characters, filters out letters, and creates an empty list 'nothing'. It then loops through each character in the 'mississippi' string, appending index values ('hotspot') to 'nothing' list using MACD, PSY, KDJ finance methods. The loop prints index and corresponding list element.",
         "type": "summary"
     },
     "2344": {
-        "file_id": 398,
+        "file_id": 397,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:1-35"
     },
     "2345": {
-        "file_id": 398,
+        "file_id": 397,
         "content": "Code reads \"README\" file, extracts unique characters (ascii values), filters out letters, creates an empty list 'nothing', and loops through each character in the 'mississippi' string. If a character is present in the filtered list ('hotspot'), it appends the index (r) to the corresponding position in the 'nothing' list.",
         "type": "comment"
     },
     "2346": {
-        "file_id": 398,
+        "file_id": 397,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nfor r,k in enumerate(nothing):\n    print(r,k)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:36-43"
     },
     "2347": {
-        "file_id": 398,
+        "file_id": 397,
         "content": "This code adds the index to a list using finance method, specifically MACD, PSY, KDJ. The \"r\" represents the index and is appended to the corresponding hotspot index in the list. This loop prints the index and corresponding element of the list.",
         "type": "comment"
     },
     "2348": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py",
         "type": "filepath"
     },
     "2349": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "The code creates a GUI using Tkinter and Matplotlib to visualize technical indicators on stock price charts, allowing users to select statistical methods and update plots accordingly.",
         "type": "summary"
     },
     "2350": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "import tkinter as tk\nfrom tkinter import ttk\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport talib as ta\nseries = np.random.choice([1, -1], size=200)\nclose = np.cumsum(series).astype(float)\n# 重叠指标\ndef overlap_process(event):\n    print(event.widget.get())\n    overlap = event.widget.get()\n    upperband, middleband, lowerband = ta.BBANDS(close, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)\n    fig, axes = plt.subplots(2, 1, sharex=True)\n    ax1, ax2 = axes[0], axes[1]\n    axes[0].plot(close, 'rd-', markersize=3)\n    axes[0].plot(upperband, 'y-')\n    axes[0].plot(middleband, 'b-')\n    axes[0].plot(lowerband, 'y-')\n    axes[0].set_title(overlap, fontproperties=\"SimHei\")\n    if overlap == '布林线':\n        pass\n    elif overlap == '双指数移动平均线':\n        real = ta.DEMA(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif overlap == '指数移动平均线 ':\n        real = ta.EMA(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif overlap == '希尔伯特变换——瞬时趋势线':\n        real = ta.HT_TRENDLINE(close)\n        axes[1].plot(real, 'r-')",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:1-35"
     },
     "2351": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code uses the Tkinter and Matplotlib libraries to create a graph with overlapping technical indicators based on user input. It plots close prices, Bollinger Bands, Double Exponential Moving Average (DEMA), Exponential Moving Average (EMA), and Hilbert Transform Instantaneous Trendline (HT_TRENDLINE) depending on the selected indicator.",
         "type": "comment"
     },
     "2352": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "    elif overlap == '考夫曼自适应移动平均线':\n        real = ta.KAMA(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif overlap == '移动平均线':\n        real = ta.MA(close, timeperiod=30, matype=0)\n        axes[1].plot(real, 'r-')\n    elif overlap == 'MESA自适应移动平均':\n        mama, fama = ta.MAMA(close, fastlimit=0, slowlimit=0)\n        axes[1].plot(mama, 'r-')\n        axes[1].plot(fama, 'g-')\n    elif overlap == '变周期移动平均线':\n        real = ta.MAVP(close, periods, minperiod=2, maxperiod=30, matype=0)\n        axes[1].plot(real, 'r-')\n    elif overlap == '简单移动平均线':\n        real = ta.SMA(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif overlap == '三指数移动平均线(T3)':\n        real = ta.T3(close, timeperiod=5, vfactor=0)\n        axes[1].plot(real, 'r-')\n    elif overlap == '三指数移动平均线':\n        real = ta.TEMA(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif overlap == '三角形加权法 ':\n        real = ta.TRIMA(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif overlap == '加权移动平均数':\n        real = ta.WMA(close, timeperiod=30)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:36-62"
     },
     "2353": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code is checking different overlapping indicator names and applying the corresponding technical analysis function based on the input. It plots various moving average lines, such as KAMA, MESA-Adaptive MAM, MAVP, SMA, T3, TEMA, TRIMA, and WMA, with red color for the real values. The time period is set to 30 in all cases except for MAVP where it uses user-defined periods value.",
         "type": "comment"
     },
     "2354": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "        axes[1].plot(real, 'r-')\n    plt.show()\n# 动量指标\ndef momentum_process(event):\n    print(event.widget.get())\n    momentum = event.widget.get()\n    upperband, middleband, lowerband = ta.BBANDS(close, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)\n    fig, axes = plt.subplots(2, 1, sharex=True)\n    ax1, ax2 = axes[0], axes[1]\n    axes[0].plot(close, 'rd-', markersize=3)\n    axes[0].plot(upperband, 'y-')\n    axes[0].plot(middleband, 'b-')\n    axes[0].plot(lowerband, 'y-')\n    axes[0].set_title(momentum, fontproperties=\"SimHei\")\n    if momentum == '绝对价格振荡器':\n        real = ta.APO(close, fastperiod=12, slowperiod=26, matype=0)\n        axes[1].plot(real, 'r-')\n    elif momentum == '钱德动量摆动指标':\n        real = ta.CMO(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif momentum == '移动平均收敛/散度':\n        macd, macdsignal, macdhist = ta.MACD(close, fastperiod=12, slowperiod=26, signalperiod=9)\n        axes[1].plot(macd, 'r-')\n        axes[1].plot(macdsignal, 'g-')\n        axes[1].plot(macdhist, 'b-')\n    elif momentum == '带可控MA类型的MACD':",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:63-91"
     },
     "2355": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code plots various technical indicators on a stock's price chart based on user input. It uses the TA-Lib library to calculate and plot different momentum indicators, such as APO, CMO, MACD, and Controlled MACD. The code takes an event parameter in the function, which contains the selected indicator name, and plots the corresponding indicator on the chart.",
         "type": "comment"
     },
     "2356": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "        macd, macdsignal, macdhist = ta.MACDEXT(close, fastperiod=12, fastmatype=0, slowperiod=26, slowmatype=0, signalperiod=9, signalmatype=0)\n        axes[1].plot(macd, 'r-')\n        axes[1].plot(macdsignal, 'g-')\n        axes[1].plot(macdhist, 'b-')\n    elif momentum == '移动平均收敛/散度 固定 12/26':\n        macd, macdsignal, macdhist = ta.MACDFIX(close, signalperiod=9)\n        axes[1].plot(macd, 'r-')\n        axes[1].plot(macdsignal, 'g-')\n        axes[1].plot(macdhist, 'b-')\n    elif momentum == '动量':\n        real = ta.MOM(close, timeperiod=10)\n        axes[1].plot(real, 'r-')\n    elif momentum == '比例价格振荡器':\n        real = ta.PPO(close, fastperiod=12, slowperiod=26, matype=0)\n        axes[1].plot(real, 'r-')\n    elif momentum == '变化率':\n        real = ta.ROC(close, timeperiod=10)\n        axes[1].plot(real, 'r-')\n    elif momentum == '变化率百分比':\n        real = ta.ROCP(close, timeperiod=10)\n        axes[1].plot(real, 'r-')\n    elif momentum == '变化率的比率':\n        real = ta.ROCR(close, timeperiod=10)\n        axes[1].plot(real, 'r-')",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:92-115"
     },
     "2357": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "Code snippet calculates and plots different technical indicators based on the selected momentum. It supports MACD, Momentum, PPO, ROC, ROCP, and ROR indicators with customizable parameters for MACD and PPO. The data is plotted on an axes object with distinct colors for each indicator.",
         "type": "comment"
     },
     "2358": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "    elif momentum == '变化率的比率100倍':\n        real = ta.ROCR100(close, timeperiod=10)\n        axes[1].plot(real, 'r-')\n    elif momentum == '相对强弱指数':\n        real = ta.RSI(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif momentum == '随机相对强弱指标':\n        fastk, fastd = ta.STOCHRSI(close, timeperiod=14, fastk_period=5, fastd_period=3, fastd_matype=0)\n        axes[1].plot(fastk, 'r-')\n        axes[1].plot(fastd, 'r-')\n    elif momentum == '三重光滑EMA的日变化率':\n        real = ta.TRIX(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    plt.show()\n# 周期指标\ndef cycle_process(event):\n    print(event.widget.get())\n    cycle = event.widget.get()\n    upperband, middleband, lowerband = ta.BBANDS(close, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)\n    fig, axes = plt.subplots(2, 1, sharex=True)\n    ax1, ax2 = axes[0], axes[1]\n    axes[0].plot(close, 'rd-', markersize=3)\n    axes[0].plot(upperband, 'y-')\n    axes[0].plot(middleband, 'b-')\n    axes[0].plot(lowerband, 'y-')\n    axes[0].set_title(cycle, fontproperties=\"SimHei\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:116-144"
     },
     "2359": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code calculates various technical indicators and plots them on a chart for stock analysis. It uses the \"ta\" library to calculate moving averages, relative strength index (RSI), stochastic RSI, and Bollinger Bands (BBANDS). The user can select different technical indicators to plot from a dropdown menu event.",
         "type": "comment"
     },
     "2360": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "    if cycle == '希尔伯特变换——主要的循环周期':\n        real = ta.HT_DCPERIOD(close)\n        axes[1].plot(real, 'r-')\n    elif cycle == '希尔伯特变换,占主导地位的周期阶段':\n        real = ta.HT_DCPHASE(close)\n        axes[1].plot(real, 'r-')\n    elif cycle == '希尔伯特变换——相量组件':\n        inphase, quadrature = ta.HT_PHASOR(close)\n        axes[1].plot(inphase, 'r-')\n        axes[1].plot(quadrature, 'g-')\n    elif cycle == '希尔伯特变换——正弦曲线':\n        sine, leadsine = ta.HT_SINE(close)\n        axes[1].plot(sine, 'r-')\n        axes[1].plot(leadsine, 'g-')\n    elif cycle == '希尔伯特变换——趋势和周期模式':\n        integer = ta.HT_TRENDMODE(close)\n        axes[1].plot(integer, 'r-')\n    plt.show()\n# 统计功能\ndef statistic_process(event):\n    print(event.widget.get())\n    statistic = event.widget.get()\n    upperband, middleband, lowerband = ta.BBANDS(close, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)\n    fig, axes = plt.subplots(2, 1, sharex=True)\n    ax1, ax2 = axes[0], axes[1]\n    axes[0].plot(close, 'rd-', markersize=3)\n    axes[0].plot(upperband, 'y-')\n    axes[0].plot(middleband, 'b-')",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:146-177"
     },
     "2361": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code is related to financial analysis and utilizes the Technical Analysis (TA) library. It plots different components of the Hilbert Transform for a given cycle on a graph. The 'statistic_process' function calculates Bollinger Bands using close data, and then plots them along with the original data.",
         "type": "comment"
     },
     "2362": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "    axes[0].plot(lowerband, 'y-')\n    axes[0].set_title(statistic, fontproperties=\"SimHei\")\n    if statistic == '线性回归':\n        real = ta.LINEARREG(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif statistic == '线性回归角度':\n        real = ta.LINEARREG_ANGLE(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif statistic == '线性回归截距':\n        real = ta.LINEARREG_INTERCEPT(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif statistic == '线性回归斜率':\n        real = ta.LINEARREG_SLOPE(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif statistic == '标准差':\n        real = ta.STDDEV(close, timeperiod=5, nbdev=1)\n        axes[1].plot(real, 'r-')\n    elif statistic == '时间序列预测':\n        real = ta.TSF(close, timeperiod=14)\n        axes[1].plot(real, 'r-')\n    elif statistic == '方差':\n        real = ta.VAR(close, timeperiod=5, nbdev=1)\n        axes[1].plot(real, 'r-')\n    plt.show()\n# 数学变换\ndef math_transform_process(event):\n    print(event.widget.get())\n    math_transform = event.widget.get()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:178-209"
     },
     "2363": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code is plotting various statistical measures on a graph. It uses the TA-Lib library to calculate metrics like linear regression, standard deviation, and time series forecasting. The user can select different statistics through an event widget.",
         "type": "comment"
     },
     "2364": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "    upperband, middleband, lowerband = ta.BBANDS(close, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)\n    fig, axes = plt.subplots(2, 1, sharex=True)\n    ax1, ax2 = axes[0], axes[1]\n    axes[0].plot(close, 'rd-', markersize=3)\n    axes[0].plot(upperband, 'y-')\n    axes[0].plot(middleband, 'b-')\n    axes[0].plot(lowerband, 'y-')\n    axes[0].set_title(math_transform, fontproperties=\"SimHei\")\n    if math_transform == '反余弦':\n        real = ta.ACOS(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '反正弦':\n        real = ta.ASIN(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '反正切':\n        real = ta.ATAN(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '向上取整':\n        real = ta.CEIL(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '余弦':\n        real = ta.COS(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '双曲余弦':\n        real = ta.COSH(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '指数':\n        real = ta.EXP(close)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:211-240"
     },
     "2365": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code plots Bollinger Bands and applies different mathematical transformations to the 'close' data. It uses pandas DataFrame column 'close', and matplotlib for plotting. The transformation type is determined by the 'math_transform' variable, which can be '反余弦', '反正弦', '反正切', '向上取整', '余弦', '双曲余弦', or '指数'.",
         "type": "comment"
     },
     "2366": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "        axes[1].plot(real, 'r-')\n    elif math_transform == '向下取整':\n        real = ta.FLOOR(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '自然对数':\n        real = ta.LN(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '常用对数':\n        real = ta.LOG10(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '正弦':\n        real = ta.SIN(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '双曲正弦':\n        real = ta.SINH(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '平方根':\n        real = ta.SQRT(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '正切':\n        real = ta.TAN(close)\n        axes[1].plot(real, 'r-')\n    elif math_transform == '双曲正切':\n        real = ta.TANH(close)\n        axes[1].plot(real, 'r-')\n    plt.show()\n# 数学操作\ndef math_operator_process(event):\n    print(event.widget.get())\n    math_operator = event.widget.get()\n    upperband, middleband, lowerband = ta.BBANDS(close, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:241-275"
     },
     "2367": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "Code plots different mathematical transformations of 'close' variable on the chart and shows the result using matplotlib. The code includes functions for floor, natural logarithm, common logarithm, sine, hyperbolic sine, square root, tangent, hyperbolic tangent, etc., as per the selected math_transform string.",
         "type": "comment"
     },
     "2368": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "    fig, axes = plt.subplots(2, 1, sharex=True)\n    ax1, ax2 = axes[0], axes[1]\n    axes[0].plot(close, 'rd-', markersize=3)\n    axes[0].plot(upperband, 'y-')\n    axes[0].plot(middleband, 'b-')\n    axes[0].plot(lowerband, 'y-')\n    axes[0].set_title(math_operator, fontproperties=\"SimHei\")\n    if math_operator == '指定的期间的最大值':\n        real = ta.MAX(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif math_operator == '指定的期间的最大值的索引':\n        integer = ta.MAXINDEX(close, timeperiod=30)\n        axes[1].plot(integer, 'r-')\n    elif math_operator == '指定的期间的最小值':\n        real = ta.MIN(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    elif math_operator == '指定的期间的最小值的索引':\n        integer = ta.MININDEX(close, timeperiod=30)\n        axes[1].plot(integer, 'r-')\n    elif math_operator == '指定的期间的最小和最大值':\n        min, max = ta.MINMAX(close, timeperiod=30)\n        axes[1].plot(min, 'r-')\n        axes[1].plot(max, 'r-')\n    elif math_operator == '指定的期间的最小和最大值的索引':\n        minidx, maxidx = ta.MINMAXINDEX(close, timeperiod=30)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:276-302"
     },
     "2369": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code generates a plot using matplotlib, and based on the value of 'math_operator', it plots different types of data: maximum or minimum values, or their respective indices. It uses technical analysis functions from the ta library to calculate the required values for the specified time period (30 in this case).",
         "type": "comment"
     },
     "2370": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "        axes[1].plot(minidx, 'r-')\n        axes[1].plot(maxidx, 'r-')\n    elif math_operator == '合计':\n        real = ta.SUM(close, timeperiod=30)\n        axes[1].plot(real, 'r-')\n    plt.show()\nroot = tk.Tk()\n# 第一行：重叠指标\nrowframe1 = tk.Frame(root)\nrowframe1.pack(side=tk.TOP, ipadx=3, ipady=3)\ntk.Label(rowframe1, text=\"重叠指标\").pack(side=tk.LEFT)\noverlap_indicator = tk.StringVar() # 重叠指标\ncombobox1 = ttk.Combobox(rowframe1, textvariable=overlap_indicator)\ncombobox1['values'] = ['布林线','双指数移动平均线','指数移动平均线 ','希尔伯特变换——瞬时趋势线',\n                       '考夫曼自适应移动平均线','移动平均线','MESA自适应移动平均','变周期移动平均线',\n                       '简单移动平均线','三指数移动平均线(T3)','三指数移动平均线','三角形加权法 ','加权移动平均数']\ncombobox1.current(0)\ncombobox1.pack(side=tk.LEFT)\ncombobox1.bind('<<ComboboxSelected>>', overlap_process)\n# 第二行：动量指标\nrowframe2 = tk.Frame(root)\nrowframe2.pack(side=tk.TOP, ipadx=3, ipady=3)\ntk.Label(rowframe2, text=\"动量指标\").pack(side=tk.LEFT)\nmomentum_indicator = tk.StringVar() # 动量指标\ncombobox2 = ttk.Combobox(rowframe2, textvariable=momentum_indicator)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:303-336"
     },
     "2371": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code is creating a GUI with tkinter for selecting and plotting technical indicators. The first row is for choosing an overlapping indicator, the second row for choosing a momentum indicator. It binds these comboboxes to the overlap_process function, which likely handles the selected values and generates the plots accordingly.",
         "type": "comment"
     },
     "2372": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "combobox2['values'] = ['绝对价格振荡器','钱德动量摆动指标','移动平均收敛/散度','带可控MA类型的MACD',\n                       '移动平均收敛/散度 固定 12/26','动量','比例价格振荡器','变化率','变化率百分比',\n                       '变化率的比率','变化率的比率100倍','相对强弱指数','随机相对强弱指标','三重光滑EMA的日变化率']\ncombobox2.current(0)\ncombobox2.pack(side=tk.LEFT)\ncombobox2.bind('<<ComboboxSelected>>', momentum_process)\n# 第三行：周期指标\nrowframe3 = tk.Frame(root)\nrowframe3.pack(side=tk.TOP, ipadx=3, ipady=3)\ntk.Label(rowframe3, text=\"周期指标\").pack(side=tk.LEFT)\ncycle_indicator = tk.StringVar() # 周期指标\ncombobox3 = ttk.Combobox(rowframe3, textvariable=cycle_indicator)\ncombobox3['values'] = ['希尔伯特变换——主要的循环周期','希尔伯特变换——主要的周期阶段','希尔伯特变换——相量组件',\n                       '希尔伯特变换——正弦曲线','希尔伯特变换——趋势和周期模式']\ncombobox3.current(0)\ncombobox3.pack(side=tk.LEFT)\ncombobox3.bind('<<ComboboxSelected>>', cycle_process)\n# 第四行：统计功能\nrowframe4 = tk.Frame(root)\nrowframe4.pack(side=tk.TOP, ipadx=3, ipady=3)\ntk.Label(rowframe4, text=\"统计功能\").pack(side=tk.LEFT)\nstatistic_indicator = tk.StringVar() # 统计功能\ncombobox4 = ttk.Combobox(rowframe4, textvariable=statistic_indicator)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:337-370"
     },
     "2373": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code creates a user interface with various options for technical indicators using the Tkinter library. The UI consists of multiple frames, each containing a dropdown combobox to select different indicator types. When a new option is selected from any combobox, the corresponding event handler function will be called (either `momentum_process` or `cycle_process`).",
         "type": "comment"
     },
     "2374": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "combobox4['values'] = ['贝塔系数；投资风险与股市风险系数','皮尔逊相关系数','线性回归','线性回归角度',\n                       '线性回归截距','线性回归斜率','标准差','时间序列预测','方差']\ncombobox4.current(0)\ncombobox4.pack(side=tk.LEFT)\ncombobox4.bind('<<ComboboxSelected>>', statistic_process)\n# 第五行：数学变换\nrowframe5 = tk.Frame(root)\nrowframe5.pack(side=tk.TOP, ipadx=3, ipady=3)\ntk.Label(rowframe5, text=\"数学变换\").pack(side=tk.LEFT)\nmath_transform = tk.StringVar() # 数学变换\ncombobox5 = ttk.Combobox(rowframe5, textvariable=math_transform_process)\ncombobox5['values'] = ['反余弦','反正弦','反正切','向上取整','余弦','双曲余弦','指数','向下取整',\n                       '自然对数','常用对数','正弦','双曲正弦','平方根','正切','双曲正切']\ncombobox5.current(0)\ncombobox5.pack(side=tk.LEFT)\ncombobox5.bind('<<ComboboxSelected>>', math_transform_process)\n# 第六行：数学操作\nrowframe6 = tk.Frame(root)\nrowframe6.pack(side=tk.TOP, ipadx=3, ipady=3)\ntk.Label(rowframe6, text=\"数学操作\").pack(side=tk.LEFT)\nmath_operator = tk.StringVar() # 数学操作\ncombobox6 = ttk.Combobox(rowframe6, textvariable=math_operator_process)\ncombobox6['values'] = ['指定期间的最大值','指定期间的最大值的索引','指定期间的最小值','指定期间的最小值的索引',",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:371-403"
     },
     "2375": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "This code sets up a GUI interface using Tkinter, allowing the user to select statistical methods and mathematical operations for data analysis. The combobox widgets (combobox4, combobox5, and combobox6) offer options for different statistics and math functions, such as Pearson correlation coefficient, linear regression, and various transformations or operators. When the selection changes in each combobox, the corresponding process function is called to perform the selected operation.",
         "type": "comment"
     },
     "2376": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "                       '指定期间的最小和最大值','指定期间的最小和最大值的索引','合计']\ncombobox6.current(0)\ncombobox6.pack(side=tk.LEFT)\ncombobox6.bind('<<ComboboxSelected>>', math_operator_process)\nroot.mainloop()\n# pretty damn simple.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/workOnPC.py:404-416"
     },
     "2377": {
-        "file_id": 399,
+        "file_id": 398,
         "content": "Code initializes a combobox with options: '指定期间的最小和最大值', '指定期间的最小和最大值的索引', and '合计'. Sets the current option to the first one, packs it on the left side, and binds a \"ComboboxSelected\" event to the function math_operator_process. The GUI's mainloop starts, handling user interactions with the combobox.",
         "type": "comment"
     },
     "2378": {
-        "file_id": 400,
+        "file_id": 399,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/zero.py",
         "type": "filepath"
     },
     "2379": {
-        "file_id": 400,
+        "file_id": 399,
         "content": "The code reads a file named \"README\", stores its contents in a set called hotpot, filters out non-alphabetic characters, and finally prints the filtered list of alphabets. The code aims to extract research information by removing common patterns and considers applying a \"lone-wolf\" filter to further refine the results.",
         "type": "summary"
     },
     "2380": {
-        "file_id": 400,
+        "file_id": 399,
         "content": "hotpot={}\nwith open(\"README\",\"r\") as fortnight:\n    hotpot=set(fortnight.read())\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/zero.py:1-16"
     },
     "2381": {
-        "file_id": 400,
+        "file_id": 399,
         "content": "The code reads a file named \"README\", stores its contents in a set called hotpot, filters out non-alphabetic characters, and finally prints the filtered list of alphabets. The code aims to extract research information by removing common patterns and considers applying a \"lone-wolf\" filter to further refine the results.",
         "type": "comment"
     },
     "2382": {
-        "file_id": 401,
+        "file_id": 400,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/README",
         "type": "filepath"
     },
     "2383": {
-        "file_id": 401,
+        "file_id": 400,
         "content": "This code seems to be a README file discussing information gathering and processing, using recursion, punctuation handling, ranking, and an inclusion algorithm called \"The Inclusion Algorithm\". However, the text appears chaotic and difficult to comprehend.",
         "type": "summary"
     },
     "2384": {
-        "file_id": 401,
+        "file_id": 400,
         "content": "this is the standard file which waiting for you to split.\nyou come on, yeah you better bring your crew with you.\nnow i just want to wait and see. what do you have here actually?\ni can split anything recursively, and i ain't got no mercy.\nthe final shit could be done in the end (the wormhole mark or by regex or some other shits).\ni guess the punctuations are not inside the word list, or at least not even a common thing inside a dictionary (i mean index). So we can get them out pretty easily.\nmark them up and put a rank over them. i wanna see the shit.\nhey! give you this thing, you may consider it as some thing good. THE INCLUSION ALGORITHM.\nSimply, if something is inside the interval of another thing's interval, then the other thing is considered superior than the former. also, if it appears to be less frequent  than the former (by this i mean the period, or just some local period i think).\nalso you need to teach the computer to consider brackets as another thing which needs to be concluded, appears as a group and cannot be simply parsed as something normal.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:1-10"
     },
     "2385": {
-        "file_id": 401,
+        "file_id": 400,
         "content": "This code appears to be a README file for a project involving information gathering and processing. It discusses the use of recursion, punctuation handling, ranking, and an inclusion algorithm. The reader is encouraged to bring their crew and utilize an algorithm called \"The Inclusion Algorithm\" to solve the problem at hand.",
         "type": "comment"
     },
     "2386": {
-        "file_id": 401,
+        "file_id": 400,
         "content": "RANK IT. the word could be a mess if without the thing.\nfind out local pattern.  when local pattern extends, then it becomes global pattern.\nDO NOT EXECUTE TXT FILES OR YOU WILL DIE. UNKNOWN TEXT PATTERNS COULD BE LETHAL.\nnow we are gonna apply financial methods into natural language processing! what a joke! but this is true. nevertheless financial methods are great when including the historical data to fool investers, but text files are history and we can never fool anyone when it is all set and done (Hilbert Space Integrated).\nBe in the army is just another reason to die.\nI had better keep my fucking choice.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:11-18"
     },
     "2387": {
-        "file_id": 401,
+        "file_id": 400,
         "content": "The code seems to be a combination of disjointed thoughts, potential warnings against executing text files, and criticism towards using financial methods in natural language processing. The text appears chaotic and difficult to comprehend, making it hard to derive any meaningful information or comments from it.",
         "type": "comment"
     },
     "2388": {
-        "file_id": 402,
+        "file_id": 401,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/doubleDerivative.py",
         "type": "filepath"
     },
     "2389": {
-        "file_id": 402,
+        "file_id": 401,
         "content": "The code reads a file, extracts unique characters, filters out common letters, and uses linear algorithms to analyze the information. It initializes a list 'nothing', checks for missing elements, creates another list 'anything', appends it to 'vim', and prints index, 'vim' list, and the difference of consecutive elements.",
         "type": "summary"
     },
     "2390": {
-        "file_id": 402,
+        "file_id": 401,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/doubleDerivative.py:1-35"
     },
     "2391": {
-        "file_id": 402,
+        "file_id": 401,
         "content": "This code reads a file, extracts unique characters, filters out common letters (a-z and A-Z), prints the remaining characters, and then creates an empty list for each index in the input string. It suggests filtering out commonly occurring patterns, adding attributes to letters, and using linear algorithms to analyze the information.",
         "type": "comment"
     },
     "2392": {
-        "file_id": 402,
+        "file_id": 401,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        #starts from zero.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nvim=[]\nfor k in range(len(nothing)):\n    anything=[]\n    if nothing[k][-1]!=(len(mississippi)-1):\n        nothing[k].append(len(mississippi)-1)\n    if nothing[k][0]!=0:\n        nothing[k].insert(0,0)\n    for m in range(len(nothing[k])-1):\n        anything.append(nothing[k][m+1]-nothing[k][m])\n    vim.append(anything)\nfor r,k in enumerate(vim):\n    print(r,k)\n    print(\"--spliter--\")\n    print([(k[m+1]-k[m]) for m in range(len(k)-1)])\n#    print(nothing[r])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/doubleDerivative.py:36-57"
     },
     "2393": {
-        "file_id": 402,
+        "file_id": 401,
         "content": "The code initializes a list 'nothing' and iterates through its elements using hotspot index. It checks if the last element is not equal to the length of 'mississippi', appends the length of 'mississippi' to the list if necessary, and inserts 0 as the first element if it doesn't already exist. Then, it creates another list 'anything' by subtracting consecutive elements from 'nothing' list, appends 'anything' to a list 'vim', and finally prints index, 'vim' list, and the difference of consecutive elements for each element in 'vim'.",
         "type": "comment"
     },
     "2394": {
-        "file_id": 403,
+        "file_id": 402,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/hilbertCycle.py",
         "type": "filepath"
     },
     "2395": {
-        "file_id": 403,
+        "file_id": 402,
         "content": "The code imports libraries, reads a file, filters non-alphabetic characters, and prepares data for processing. It then loops through a list, compares values to hotspot indexes, applies Talib functions, and generates lists.",
         "type": "summary"
     },
     "2396": {
-        "file_id": 403,
+        "file_id": 402,
         "content": "import talib, numpy\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nsuperagent=list(mississippi)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/hilbertCycle.py:1-35"
     },
     "2397": {
-        "file_id": 403,
+        "file_id": 402,
         "content": "The code imports the necessary libraries, reads a file, filters out non-alphabetic characters, creates an empty list, iterates over the filtered words, and prepares the data for further processing.",
         "type": "comment"
     },
     "2398": {
-        "file_id": 403,
+        "file_id": 402,
         "content": "for k in range(len(nothing)):\n    nothing[k]=list(map((lambda x: int(x == hotspot[k])),superagent))\n# the r is the index.\n# to illustrate this:\nfor r,k in enumerate(nothing):\n#    print(r,k)\n    print(\"-----[\",r,\"]-----\")\n    vm=wrap(k)\n    print(list(talib.HT_DCPERIOD(vm)))\n    print(list(talib.HT_DCPHASE(vm)))\n    print(list(talib.HT_PHASOR(vm)))\n    print(list(talib.HT_SINE(vm)))\n    print(list(talib.HT_TRENDMODE(vm)))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/hilbertCycle.py:36-49"
     },
     "2399": {
-        "file_id": 403,
+        "file_id": 402,
         "content": "This code is looping through a list \"nothing\" and for each element, it's comparing that value to a hotspot index. The result of this comparison is stored in the same index position in \"nothing\". It then iterates over the modified \"nothing\", wraps its values into a different format using \"wrap\" function, and applies several Trading Assistant Library (Talib) functions like HT_DCPERIOD, HT_DCPHASE etc. on each element of wrapped data to generate lists.",
         "type": "comment"
     }

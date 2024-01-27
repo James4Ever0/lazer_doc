@@ -1,534 +1,534 @@
 {
     "2400": {
-        "file_id": 404,
+        "file_id": 403,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/makeDifference.py",
         "type": "filepath"
     },
     "2401": {
-        "file_id": 404,
+        "file_id": 403,
         "content": "This code reads a file, filters alphabets, creates indices for a given string, and calculates differences using MACD method.",
         "type": "summary"
     },
     "2402": {
-        "file_id": 404,
+        "file_id": 403,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/makeDifference.py:1-35"
     },
     "2403": {
-        "file_id": 404,
+        "file_id": 403,
         "content": "The code reads a file called \"README\", creates a set of unique characters from its content, filters out non-alphabetic characters (ASCII values 97-122 and 65-90), prints the resulting set of alphabets, and then iterates through each character in a given string to create a list of indices corresponding to characters found in the filtered set.",
         "type": "comment"
     },
     "2404": {
-        "file_id": 404,
+        "file_id": 403,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        #starts from zero.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nvim=[]\nfor k in range(len(nothing)):\n    anything=[]\n    if nothing[k][-1]!=(len(mississippi)-1):\n        nothing[k].append(len(mississippi)-1)\n    if nothing[k][0]!=0:\n        nothing[k].insert(0,0)\n    for m in range(len(nothing[k])-1):\n        anything.append(nothing[k][m+1]-nothing[k][m])\n    vim.append(anything)\nfor r,k in enumerate(vim):\n    print(r,k)\n#    print(nothing[r])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/makeDifference.py:36-55"
     },
     "2405": {
-        "file_id": 404,
+        "file_id": 403,
         "content": "This code calculates the differences between elements in a list, using the MACD finance method. It starts with initializing an empty list and then iterates over each element of 'nothing'. For each element, it checks if the last index is not equal to 'len(mississippi)-1' and appends 'len(mississippi)-1' if necessary. Then, it checks if the first index is not zero, and inserts 0 if necessary. After that, it calculates the differences between consecutive elements and appends them to a new list. Finally, it prints each difference list along with its respective index using 'enumerate'.",
         "type": "comment"
     },
     "2406": {
-        "file_id": 405,
+        "file_id": 404,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/nextAnalysis.py",
         "type": "filepath"
     },
     "2407": {
-        "file_id": 405,
+        "file_id": 404,
         "content": "This code reads a file, removes common English letters, and processes data for potential pattern analysis or data cleaning. It uses the Talib library to perform technical analysis on financial data and prints results from technical indicators.",
         "type": "summary"
     },
     "2408": {
-        "file_id": 405,
+        "file_id": 404,
         "content": "import talib, numpy\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/nextAnalysis.py:1-35"
     },
     "2409": {
-        "file_id": 405,
+        "file_id": 404,
         "content": "Code reads a file, removes common English letters (a-z and A-Z), possibly for pattern analysis or data cleaning purposes. It then creates an empty list for each element in the cleaned hotspot list, potentially for further analysis or processing.",
         "type": "comment"
     },
     "2410": {
-        "file_id": 405,
+        "file_id": 404,
         "content": "    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?\n        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        #starts from zero.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nvim=[]\nfor k in range(len(nothing)):\n    anything=[]\n    if nothing[k][-1]!=(len(mississippi)-1):\n        nothing[k].append(len(mississippi)-1)\n    if nothing[k][0]!=0:\n        nothing[k].insert(0,0)\n    for m in range(len(nothing[k])-1):\n        anything.append(nothing[k][m+1]-nothing[k][m])\n    vim.append(anything)\nfor r,k in enumerate(vim):\n    print(\"-----spliter-----\")\n    print(r,k)\n    vm=wrap(k)\n    print(list(talib.HT_DCPERIOD(vm)))\n    print(list(talib.HT_DCPHASE(vm)))\n    print(list(talib.HT_PHASOR(vm)))\n    print(list(talib.HT_SINE(vm)))\n    print(list(talib.HT_TRENDMODE(vm)))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/nextAnalysis.py:36-65"
     },
     "2411": {
-        "file_id": 405,
+        "file_id": 404,
         "content": "This code appears to be performing some technical analysis using the Talib library on financial data. It seems to iterate through a list of lists (nothing), and for each element, it calculates and appends values based on certain conditions. Finally, it prints out results from various technical indicators provided by the Talib library.",
         "type": "comment"
     },
     "2412": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py",
         "type": "filepath"
     },
     "2413": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "This code filters a file, creates lists for each letter, calculates differences between consecutive elements, and uses functions 'sexy' and 'wrap' in an iterative process.",
         "type": "summary"
     },
     "2414": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "import talib, numpy\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\ndef sexy(k):\n    if len(k)>3:\n        vm=wrap(k)\n        print(\"--talib--\")\n        print(list(talib.HT_DCPERIOD(vm)))\n        print(list(talib.HT_DCPHASE(vm)))\n        print(list(talib.HT_PHASOR(vm)))\n        print(list(talib.HT_SINE(vm)))\n        print(list(talib.HT_TRENDMODE(vm)))\n        print(\"--talib--\")\n    else:\n        pass\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py:1-35"
     },
     "2415": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "This code reads a file named \"README\" and stores its contents in the 'mississippi' variable. It then creates an empty dictionary called 'hotpot'. The code checks for characters that are not lowercase or uppercase alphabets and stores these non-alphabetical characters into another list called 'hotspot'. Finally, it prints out both lists. The purpose of this exercise seems to be filtering out common patterns from the text using ASCII values, possibly as part of a larger program involving other functions like 'sexy' and 'wrap'.",
         "type": "comment"
     },
     "2416": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?\n        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        #starts from zero.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nvim=[]\nfor k in range(len(nothing)):\n    anything=[]\n    if nothing[k][-1]!=(len(mississippi)-1):\n        nothing[k].append(len(mississippi)-1)\n    if nothing[k][0]!=0:\n        nothing[k].insert(0,0)\n    for m in range(len(nothing[k])-1):\n        anything.append(nothing[k][m+1]-nothing[k][m])\n    vim.append(anything)\nderivative=(lambda k0: [(k0[m+1]-k0[m]) for m in range(len(k0)-1)])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py:36-71"
     },
     "2417": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "This code initializes a list for each letter in the string, then iterates over each character and adds its linear index to the corresponding letter's list if it is also present in hotspot. Finally, it creates a list of differences between consecutive elements in the lists for each letter and stores them in vim, potentially using a lambda function.",
         "type": "comment"
     },
     "2418": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "for r,k in enumerate(vim):\n    print(\"---the original---\")\n    print(r,k)\n#    print(\"--spliter--\")\n    geek0=derivative(k)\n    print(\"--spliter--\")\n    print(geek0)\n    sexy(geek0)\n    print(\"--spliter--\")\n    geek=derivative(geek0)\n#    print(nothing[r])\n    print(geek)\n    sexy(geek)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py:73-85"
     },
     "2419": {
-        "file_id": 406,
+        "file_id": 405,
         "content": "Iterating through a list, printing the original item and its derived value, then applying a function 'sexy' to it.",
         "type": "comment"
     },
     "2420": {
-        "file_id": 407,
+        "file_id": 406,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/two.py",
         "type": "filepath"
     },
     "2421": {
-        "file_id": 407,
+        "file_id": 406,
         "content": "The code reads the \"README\" file, extracts unique characters, filters out letters, and creates an empty list 'nothing'. It then loops through each character in the 'mississippi' string, appending index values ('hotspot') to 'nothing' list using MACD, PSY, KDJ finance methods. The loop prints index and corresponding list element.",
         "type": "summary"
     },
     "2422": {
-        "file_id": 407,
+        "file_id": 406,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:1-35"
     },
     "2423": {
-        "file_id": 407,
+        "file_id": 406,
         "content": "Code reads \"README\" file, extracts unique characters (ascii values), filters out letters, creates an empty list 'nothing', and loops through each character in the 'mississippi' string. If a character is present in the filtered list ('hotspot'), it appends the index (r) to the corresponding position in the 'nothing' list.",
         "type": "comment"
     },
     "2424": {
-        "file_id": 407,
+        "file_id": 406,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nfor r,k in enumerate(nothing):\n    print(r,k)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:36-43"
     },
     "2425": {
-        "file_id": 407,
+        "file_id": 406,
         "content": "This code adds the index to a list using finance method, specifically MACD, PSY, KDJ. The \"r\" represents the index and is appended to the corresponding hotspot index in the list. This loop prints the index and corresponding element of the list.",
         "type": "comment"
     },
     "2426": {
-        "file_id": 408,
+        "file_id": 407,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/README",
         "type": "filepath"
     },
     "2427": {
-        "file_id": 408,
+        "file_id": 407,
         "content": "This code seems to be a README file discussing information gathering and processing, using recursion, punctuation handling, ranking, and an inclusion algorithm called \"The Inclusion Algorithm\". However, the text appears chaotic and difficult to comprehend.",
         "type": "summary"
     },
     "2428": {
-        "file_id": 408,
+        "file_id": 407,
         "content": "this is the standard file which waiting for you to split.\nyou come on, yeah you better bring your crew with you.\nnow i just want to wait and see. what do you have here actually?\ni can split anything recursively, and i ain't got no mercy.\nthe final shit could be done in the end (the wormhole mark or by regex or some other shits).\ni guess the punctuations are not inside the word list, or at least not even a common thing inside a dictionary (i mean index). So we can get them out pretty easily.\nmark them up and put a rank over them. i wanna see the shit.\nhey! give you this thing, you may consider it as some thing good. THE INCLUSION ALGORITHM.\nSimply, if something is inside the interval of another thing's interval, then the other thing is considered superior than the former. also, if it appears to be less frequent  than the former (by this i mean the period, or just some local period i think).\nalso you need to teach the computer to consider brackets as another thing which needs to be concluded, appears as a group and cannot be simply parsed as something normal.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:1-10"
     },
     "2429": {
-        "file_id": 408,
+        "file_id": 407,
         "content": "This code appears to be a README file for a project involving information gathering and processing. It discusses the use of recursion, punctuation handling, ranking, and an inclusion algorithm. The reader is encouraged to bring their crew and utilize an algorithm called \"The Inclusion Algorithm\" to solve the problem at hand.",
         "type": "comment"
     },
     "2430": {
-        "file_id": 408,
+        "file_id": 407,
         "content": "RANK IT. the word could be a mess if without the thing.\nfind out local pattern.  when local pattern extends, then it becomes global pattern.\nDO NOT EXECUTE TXT FILES OR YOU WILL DIE. UNKNOWN TEXT PATTERNS COULD BE LETHAL.\nnow we are gonna apply financial methods into natural language processing! what a joke! but this is true. nevertheless financial methods are great when including the historical data to fool investers, but text files are history and we can never fool anyone when it is all set and done (Hilbert Space Integrated).\nBe in the army is just another reason to die.\nI had better keep my fucking choice.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:11-18"
     },
     "2431": {
-        "file_id": 408,
+        "file_id": 407,
         "content": "The code seems to be a combination of disjointed thoughts, potential warnings against executing text files, and criticism towards using financial methods in natural language processing. The text appears chaotic and difficult to comprehend, making it hard to derive any meaningful information or comments from it.",
         "type": "comment"
     },
     "2432": {
-        "file_id": 409,
+        "file_id": 408,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/makeDifference.py",
         "type": "filepath"
     },
     "2433": {
-        "file_id": 409,
+        "file_id": 408,
         "content": "This code reads a file, filters alphabets, creates indices for a given string, and calculates differences using MACD method.",
         "type": "summary"
     },
     "2434": {
-        "file_id": 409,
+        "file_id": 408,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/makeDifference.py:1-35"
     },
     "2435": {
-        "file_id": 409,
+        "file_id": 408,
         "content": "The code reads a file called \"README\", creates a set of unique characters from its content, filters out non-alphabetic characters (ASCII values 97-122 and 65-90), prints the resulting set of alphabets, and then iterates through each character in a given string to create a list of indices corresponding to characters found in the filtered set.",
         "type": "comment"
     },
     "2436": {
-        "file_id": 409,
+        "file_id": 408,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        #starts from zero.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nvim=[]\nfor k in range(len(nothing)):\n    anything=[]\n    if nothing[k][-1]!=(len(mississippi)-1):\n        nothing[k].append(len(mississippi)-1)\n    if nothing[k][0]!=0:\n        nothing[k].insert(0,0)\n    for m in range(len(nothing[k])-1):\n        anything.append(nothing[k][m+1]-nothing[k][m])\n    vim.append(anything)\nfor r,k in enumerate(vim):\n    print(r,k)\n#    print(nothing[r])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/makeDifference.py:36-55"
     },
     "2437": {
-        "file_id": 409,
+        "file_id": 408,
         "content": "This code calculates the differences between elements in a list, using the MACD finance method. It starts with initializing an empty list and then iterates over each element of 'nothing'. For each element, it checks if the last index is not equal to 'len(mississippi)-1' and appends 'len(mississippi)-1' if necessary. Then, it checks if the first index is not zero, and inserts 0 if necessary. After that, it calculates the differences between consecutive elements and appends them to a new list. Finally, it prints each difference list along with its respective index using 'enumerate'.",
         "type": "comment"
     },
     "2438": {
-        "file_id": 410,
+        "file_id": 409,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/mathOperation.py",
         "type": "filepath"
     },
     "2439": {
-        "file_id": 410,
+        "file_id": 409,
         "content": "The code reads a \"README\" file, extracts non-alphabetic words, filters out non-alphabetic characters, and prepares data for further processing using TradingView's TA-Lib functions.",
         "type": "summary"
     },
     "2440": {
-        "file_id": 410,
+        "file_id": 409,
         "content": "import talib, numpy\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nsuperagent=list(mississippi)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/mathOperation.py:1-35"
     },
     "2441": {
-        "file_id": 410,
+        "file_id": 409,
         "content": "This code reads a file named \"README\", extracts words (excluding alphabets), stores them in a set called hotpot, filters out non-alphabetic characters to create a new list called hotspot, and then creates an empty 2D list nothing. It seems to be preparing data for further processing.",
         "type": "comment"
     },
     "2442": {
-        "file_id": 410,
+        "file_id": 409,
         "content": "for k in range(len(nothing)):\n    nothing[k]=list(map((lambda x: int(x == hotspot[k])),superagent))\n# the r is the index.\n# to illustrate this:\nnothing0=[]\nfor r,k in enumerate(nothing):\n    print(r,k)\n    print(\"-----[\",r,\"]-----\")\n    vm=wrap(k)\n    # you could use hex representation.\n    # also the prime multiply notation.\n    sob=talib.SUM(vm,timeperiod=30)\n    print(sob)\n    nothing0.append(sob)\n    print(list(talib.MINMAXINDEX(vm, timeperiod=30)))\n    print(list(talib.MINMAX(vm, timeperiod=30)))\nprint(\"--finalshow--\")\nnothing2=[]\nfor tape in range(len(nothing0)-1):\n    nude=talib.MULT(nothing0[tape],nothing0[tape+1])\n    nothing2.append(nude)\n    print(list(nude))\n    print(\"--blitz--\")\nfor cake in range(len(nothing2)-1):\n    nuke=talib.SUB(nothing2[cake],nothing2[cake+1])\n    print(list(nuke))\n    print(\"--freak--\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/mathOperation.py:36-63"
     },
     "2443": {
-        "file_id": 410,
+        "file_id": 409,
         "content": "Iterates over a list 'nothing' and assigns integer values based on equality with 'hotspot' elements. It then performs various operations using TradingView's TA-Lib functions like SUM, MINMAXINDEX, MINMAX, MULT, SUB, to create lists for further calculations.",
         "type": "comment"
     },
     "2444": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/overlapFunction.py",
         "type": "filepath"
     },
     "2445": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "This code applies Talib library functions to calculate technical indicators like moving averages, KAMA, HT_TRENDLINE, EMA, DEMA, SAR, and mid-price for data analysis in finance.",
         "type": "summary"
     },
     "2446": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "import talib, numpy\n# finance functions are the best.\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\n# this is taichi.\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/overlapFunction.py:1-34"
     },
     "2447": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "The code imports talib and numpy libraries, defines a wrapper function for working with financial data, reads the contents of \"README\" file, filters out non-alphabetic characters, creates a list without numbers, and starts creating an indexed list using a for loop.",
         "type": "comment"
     },
     "2448": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?\n        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# i cannot say no word.\n# use double derivative instead.\nderivative=(lambda k0: [(k0[m+1]-k0[m]) for m in range(len(k0)-1)])\n# to illustrate this:\nfor r,k in enumerate(nothing):\n    print(r,k)\n    vm=wrap(k)\n    upperband, middleband, lowerband = talib.BBANDS(vm, timeperiod=5, nbdevup=2, nbdevdn=2, matype=0)\n    print(upperband,middleband,lowerband)\n    print(\"-----jigsaw-----\")\n    print(list(talib.WMA(vm, timeperiod=30)))\n    print(list(talib.TRIMA(vm, timeperiod=30)))\n    print(list(talib.TEMA(vm, timeperiod=30)))\n    print(list(talib.T3(vm, timeperiod=5, vfactor=0)))\n    print(list(talib.SMA(vm, timeperiod=30)))\n    print(list(talib.MIDPOINT(vm, timeperiod=14)))\n#    print(list(talib.MAMA(vm, fastlimit=0, slowlimit=0)))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/overlapFunction.py:35-63"
     },
     "2449": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "This code is implementing a method to identify overlaps in a list and applying technical analysis algorithms from the Talib library for financial data. It uses the \"mississippi\" list, hotspot, and double derivative to find overlaps and then applies various technical indicators such as Bollinger Bands, Weighted Moving Average, Triangular Moving Average, and more to analyze the data.",
         "type": "comment"
     },
     "2450": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "    print(list(talib.MA(vm, timeperiod=30, matype=0)))\n    print(list(talib.KAMA(vm, timeperiod=30)))\n    print(list(talib.HT_TRENDLINE(vm)))\n    # you have the trend here?\n    print(list(talib.EMA(vm, timeperiod=30)))\n    print(list(talib.DEMA(vm, timeperiod=30)))\n    # reading is like a survey, so as the stock market.\n    if len(k)>3:\n        # we have got some variable periods here, how do we see this?\n        # only if we can conclude.\n        high0=derivative(k)\n        high=wrap(high0[:-1])\n        low=wrap(derivative(high0))\n        print(list(talib.SAREXT(high,low, startvalue=0, offsetonreverse=0, accelerationinitlong=0, accelerationlong=0, accelerationmaxlong=0, accelerationinitshort=0, accelerationshort=0, accelerationmaxshort=0)))\n        print(list(talib.SAR(high, low, acceleration=0, maximum=0)))\n        print(list(talib.MIDPRICE(high, low, timeperiod=14)))\n        # put it all over here.\n        # i use finance functions to shoot your head off!\n    else:\n        pass",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/overlapFunction.py:64-83"
     },
     "2451": {
-        "file_id": 411,
+        "file_id": 410,
         "content": "This code uses technical analysis functions from the talib library to calculate moving averages, KAMA, HT_TRENDLINE, EMA, and DEMA. It then checks for a minimum number of data points, and if so, calculates SAR (Stop And Reverse) values using the SAREXT function and also calculates the mid-price. These technical indicators are commonly used in finance to inform investment decisions.",
         "type": "comment"
     },
     "2452": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/relational.py",
         "type": "filepath"
     },
     "2453": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "This code imports libraries, filters English letters from a file, processes the content with technical analysis functions, and prints correlations between adjacent pairs of values in a 30-period timeframe.",
         "type": "summary"
     },
     "2454": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "import talib, numpy\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nsuperagent=list(mississippi)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/relational.py:1-35"
     },
     "2455": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "This code is likely part of a larger program. It imports talib and numpy libraries, defines a function to wrap input data into a numpy array, reads the contents of a \"README\" file, filters out common English letters from the content, and then creates an empty list for each element in the filtered content. The purpose seems to involve text processing and pattern recognition using numerical analysis tools.",
         "type": "comment"
     },
     "2456": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "for k in range(len(nothing)):\n    nothing[k]=list(map((lambda x: int(x == hotspot[k])),superagent))\n# the r is the index.\n# to illustrate this:\nnothing0=[]\nfor r,k in enumerate(nothing):\n    print(r,k)\n    print(\"-----[\",r,\"]-----\")\n    vm=wrap(k)\n    # you could use hex representation.\n    # also the prime multiply notation.\n    sob=talib.SUM(vm,timeperiod=30)\n    if len(list(sob))>20:\n        print(list(talib.LINEARREG(sob, timeperiod=14)))\n        print(\"_____hellfire_____\")\n        print(list(talib.LINEARREG_ANGLE(sob, timeperiod=14)))\n        print(\"_____fuck_____\")\n        print(list(talib.VAR(sob, timeperiod=5, nbdev=1)))\n        print(\"_____fuck everyone_____\")\n        # if you could really forcast the thing i could live forever.\n        print(list(talib.TSF(sob, timeperiod=14)))\n        print(list(talib.STDDEV(sob, timeperiod=5, nbdev=1)))\n        print(list(talib.LINEARREG_SLOPE(sob, timeperiod=14)))\n        print(list(talib.LINEARREG_INTERCEPT(sob, timeperiod=14)))\n    print(sob)\n    nothing0.append(sob)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/relational.py:36-62"
     },
     "2457": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "Iterates through 'nothing' list, converts each element to 0 or 1 based on matching with hotspot, and then processes the resulting list using various technical analysis functions from talib library. If a list length is greater than 20, it prints selected analyses for that list. Finally, appends the processed lists to 'nothing0'.",
         "type": "comment"
     },
     "2458": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "print(\"---final show---\")\nfor k in range(len(nothing0)-1):\n    shutup=talib.CORREL(nothing0[k],nothing0[k+1], timeperiod=30)\n    print(list(shutup))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/relational.py:63-66"
     },
     "2459": {
-        "file_id": 412,
+        "file_id": 411,
         "content": "This code prints the correlation between each adjacent pair of values in the 'nothing0' list, using a 30-period timeframe from the TA-Lib library. The loop iterates over all pairs except the last one, and outputs their correlation values.",
         "type": "comment"
     },
     "2460": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/trinity.py",
         "type": "filepath"
     },
     "2461": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "This code filters a file, creates lists for each letter, calculates differences between consecutive elements, and uses functions 'sexy' and 'wrap' in an iterative process.",
         "type": "summary"
     },
     "2462": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "import talib, numpy\ndef wrap(_list):\n    close = numpy.array(list(map((lambda x : float(x)),_list)))\n    return close\ndef sexy(k):\n    if len(k)>3:\n        vm=wrap(k)\n        print(\"--talib--\")\n        print(list(talib.HT_DCPERIOD(vm)))\n        print(list(talib.HT_DCPHASE(vm)))\n        print(list(talib.HT_PHASOR(vm)))\n        print(list(talib.HT_SINE(vm)))\n        print(list(talib.HT_TRENDMODE(vm)))\n        print(\"--talib--\")\n    else:\n        pass\nhotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py:1-35"
     },
     "2463": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "This code reads a file named \"README\" and stores its contents in the 'mississippi' variable. It then creates an empty dictionary called 'hotpot'. The code checks for characters that are not lowercase or uppercase alphabets and stores these non-alphabetical characters into another list called 'hotspot'. Finally, it prints out both lists. The purpose of this exercise seems to be filtering out common patterns from the text using ASCII values, possibly as part of a larger program involving other functions like 'sexy' and 'wrap'.",
         "type": "comment"
     },
     "2464": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?\n        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        #starts from zero.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nvim=[]\nfor k in range(len(nothing)):\n    anything=[]\n    if nothing[k][-1]!=(len(mississippi)-1):\n        nothing[k].append(len(mississippi)-1)\n    if nothing[k][0]!=0:\n        nothing[k].insert(0,0)\n    for m in range(len(nothing[k])-1):\n        anything.append(nothing[k][m+1]-nothing[k][m])\n    vim.append(anything)\nderivative=(lambda k0: [(k0[m+1]-k0[m]) for m in range(len(k0)-1)])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py:36-71"
     },
     "2465": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "This code initializes a list for each letter in the string, then iterates over each character and adds its linear index to the corresponding letter's list if it is also present in hotspot. Finally, it creates a list of differences between consecutive elements in the lists for each letter and stores them in vim, potentially using a lambda function.",
         "type": "comment"
     },
     "2466": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "for r,k in enumerate(vim):\n    print(\"---the original---\")\n    print(r,k)\n#    print(\"--spliter--\")\n    geek0=derivative(k)\n    print(\"--spliter--\")\n    print(geek0)\n    sexy(geek0)\n    print(\"--spliter--\")\n    geek=derivative(geek0)\n#    print(nothing[r])\n    print(geek)\n    sexy(geek)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v0/trinity.py:73-85"
     },
     "2467": {
-        "file_id": 413,
+        "file_id": 412,
         "content": "Iterating through a list, printing the original item and its derived value, then applying a function 'sexy' to it.",
         "type": "comment"
     },
     "2468": {
-        "file_id": 414,
+        "file_id": 413,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v1/two.py",
         "type": "filepath"
     },
     "2469": {
-        "file_id": 414,
+        "file_id": 413,
         "content": "The code reads the \"README\" file, extracts unique characters, filters out letters, and creates an empty list 'nothing'. It then loops through each character in the 'mississippi' string, appending index values ('hotspot') to 'nothing' list using MACD, PSY, KDJ finance methods. The loop prints index and corresponding list element.",
         "type": "summary"
     },
     "2470": {
-        "file_id": 414,
+        "file_id": 413,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:1-35"
     },
     "2471": {
-        "file_id": 414,
+        "file_id": 413,
         "content": "Code reads \"README\" file, extracts unique characters (ascii values), filters out letters, creates an empty list 'nothing', and loops through each character in the 'mississippi' string. If a character is present in the filtered list ('hotspot'), it appends the index (r) to the corresponding position in the 'nothing' list.",
         "type": "comment"
     },
     "2472": {
-        "file_id": 414,
+        "file_id": 413,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nfor r,k in enumerate(nothing):\n    print(r,k)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:36-43"
     },
     "2473": {
-        "file_id": 414,
+        "file_id": 413,
         "content": "This code adds the index to a list using finance method, specifically MACD, PSY, KDJ. The \"r\" represents the index and is appended to the corresponding hotspot index in the list. This loop prints the index and corresponding element of the list.",
         "type": "comment"
     },
     "2474": {
-        "file_id": 415,
+        "file_id": 414,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v2/README",
         "type": "filepath"
     },
     "2475": {
-        "file_id": 415,
+        "file_id": 414,
         "content": "This code seems to be a README file discussing information gathering and processing, using recursion, punctuation handling, ranking, and an inclusion algorithm called \"The Inclusion Algorithm\". However, the text appears chaotic and difficult to comprehend.",
         "type": "summary"
     },
     "2476": {
-        "file_id": 415,
+        "file_id": 414,
         "content": "this is the standard file which waiting for you to split.\nyou come on, yeah you better bring your crew with you.\nnow i just want to wait and see. what do you have here actually?\ni can split anything recursively, and i ain't got no mercy.\nthe final shit could be done in the end (the wormhole mark or by regex or some other shits).\ni guess the punctuations are not inside the word list, or at least not even a common thing inside a dictionary (i mean index). So we can get them out pretty easily.\nmark them up and put a rank over them. i wanna see the shit.\nhey! give you this thing, you may consider it as some thing good. THE INCLUSION ALGORITHM.\nSimply, if something is inside the interval of another thing's interval, then the other thing is considered superior than the former. also, if it appears to be less frequent  than the former (by this i mean the period, or just some local period i think).\nalso you need to teach the computer to consider brackets as another thing which needs to be concluded, appears as a group and cannot be simply parsed as something normal.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:1-10"
     },
     "2477": {
-        "file_id": 415,
+        "file_id": 414,
         "content": "This code appears to be a README file for a project involving information gathering and processing. It discusses the use of recursion, punctuation handling, ranking, and an inclusion algorithm. The reader is encouraged to bring their crew and utilize an algorithm called \"The Inclusion Algorithm\" to solve the problem at hand.",
         "type": "comment"
     },
     "2478": {
-        "file_id": 415,
+        "file_id": 414,
         "content": "RANK IT. the word could be a mess if without the thing.\nfind out local pattern.  when local pattern extends, then it becomes global pattern.\nDO NOT EXECUTE TXT FILES OR YOU WILL DIE. UNKNOWN TEXT PATTERNS COULD BE LETHAL.\nnow we are gonna apply financial methods into natural language processing! what a joke! but this is true. nevertheless financial methods are great when including the historical data to fool investers, but text files are history and we can never fool anyone when it is all set and done (Hilbert Space Integrated).\nBe in the army is just another reason to die.\nI had better keep my fucking choice.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/README:11-18"
     },
     "2479": {
-        "file_id": 415,
+        "file_id": 414,
         "content": "The code seems to be a combination of disjointed thoughts, potential warnings against executing text files, and criticism towards using financial methods in natural language processing. The text appears chaotic and difficult to comprehend, making it hard to derive any meaningful information or comments from it.",
         "type": "comment"
     },
     "2480": {
-        "file_id": 416,
+        "file_id": 415,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/spliter-v2/two.py",
         "type": "filepath"
     },
     "2481": {
-        "file_id": 416,
+        "file_id": 415,
         "content": "The code reads the \"README\" file, extracts unique characters, filters out letters, and creates an empty list 'nothing'. It then loops through each character in the 'mississippi' string, appending index values ('hotspot') to 'nothing' list using MACD, PSY, KDJ finance methods. The loop prints index and corresponding list element.",
         "type": "summary"
     },
     "2482": {
-        "file_id": 416,
+        "file_id": 415,
         "content": "hotpot={}\nmississippi=\"\"\nwith open(\"README\",\"r\") as fortnight:\n    mississippi=fortnight.read()\n    hotpot=set(mississippi)\nprint(hotpot)\n# use ascii values!\n# this is one of our main purpose here!\n# i may vomit.\n# fuck me! just get the fucking research out!\n# not inside those common patterns.\nhotspot=list(filter((lambda x:not ((ord(x)>=97 and ord(x)<=122 )or (ord(x)>=65 and ord(x)<=90)) ),hotpot ) )\n# derandom\nprint(hotspot)\n# you didn't add numbers to it.\n# i need my spliter!\n# you can also consider the lone-wolf filter.\n# filter out those things that shall always appear in a group.\n# this can be achieved by adding some attributes to each letter.\n# LOCAL! LOCAL! LOCAL!\n# the second step is to get the basic information: linear index.\n# create the thing?\n#nothing=list(enumerate(hotspot))\n# you must be a list.\n#print(nothing)\nnothing=[]\nfor k in range(len(hotspot)):\n    nothing.append([])\nfor r,k in enumerate(list(mississippi)):\n    if k in hotspot:\n#        print (r,k)\n        # and append the shit.\n        # consider some linear algorithm?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:1-35"
     },
     "2483": {
-        "file_id": 416,
+        "file_id": 415,
         "content": "Code reads \"README\" file, extracts unique characters (ascii values), filters out letters, creates an empty list 'nothing', and loops through each character in the 'mississippi' string. If a character is present in the filtered list ('hotspot'), it appends the index (r) to the corresponding position in the 'nothing' list.",
         "type": "comment"
     },
     "2484": {
-        "file_id": 416,
+        "file_id": 415,
         "content": "        # you want to use finance method to do this task? perfect. MACD, PSY, KDJ and more.\n        nothing[hotspot.index(k)].append(r)\n    # the r is the index.\n# to illustrate this:\nfor r,k in enumerate(nothing):\n    print(r,k)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/laboratory/lab_spliter/two.py:36-43"
     },
     "2485": {
-        "file_id": 416,
+        "file_id": 415,
         "content": "This code adds the index to a list using finance method, specifically MACD, PSY, KDJ. The \"r\" represents the index and is appended to the corresponding hotspot index in the list. This loop prints the index and corresponding element of the list.",
         "type": "comment"
     },
     "2486": {
-        "file_id": 417,
+        "file_id": 416,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/pileOfPuke/README",
         "type": "filepath"
     },
     "2487": {
-        "file_id": 417,
+        "file_id": 416,
         "content": "Code is filtering and categorizing data, using the \"know thyself, know thy enemies\" rule, repeating until complete.",
         "type": "summary"
     },
     "2488": {
-        "file_id": 417,
+        "file_id": 416,
         "content": "FIRST: FIND THE CORRESPONDING SMALLEST CATEGORY AND FILTER OUT THINGS\n[[[ RULE OF THUMB: KNOW THYSELF, KNOW THY ENEMIES ]]]\nNEXT: REPEAT THE PROCESS UNTIL NOTHING LEFT.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/pileOfPuke/README:1-5"
     },
     "2489": {
-        "file_id": 417,
+        "file_id": 416,
         "content": "Code is filtering and categorizing data, using the \"know thyself, know thy enemies\" rule, repeating until complete.",
         "type": "comment"
     },
     "2490": {
-        "file_id": 418,
+        "file_id": 417,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/pileOfPuke/discoveryChannel.py",
         "type": "filepath"
     },
     "2491": {
-        "file_id": 418,
+        "file_id": 417,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "summary"
     },
     "2492": {
-        "file_id": 418,
+        "file_id": 417,
         "content": "#text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\n#print(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/discoveryChannel.py:1-29"
     },
     "2493": {
-        "file_id": 418,
+        "file_id": 417,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "comment"
     },
     "2494": {
-        "file_id": 419,
+        "file_id": 418,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/pileOfPuke/eneloop.py",
         "type": "filepath"
     },
     "2495": {
-        "file_id": 419,
+        "file_id": 418,
         "content": "The function `panasonic` uses recursion to filter a list (a) based on the range given by another list (b), returning either the filtered result or the original list depending on if either list is empty. The function `aka` filters a list (m) removing elements present in another list (e), and then divides it into two lists: one with remaining elements after filtering, and one containing elements removed from (m). Finally, it prints the test case lists, best, and exception, and calls the function `aka` on them.",
         "type": "summary"
     },
     "2496": {
-        "file_id": 419,
+        "file_id": 418,
         "content": "def panasonic(a,b):\n#    for c in b:\n    if (len(b)==0 or len(a)==0):\n        return a\n    else:\n#        d=[]\n#        for c in a:\n#        print(b)\n#        e=list(filter((lambda x:(x>=b[0][0] and x<= b[0][1])),a))\n#        c+=e\n        return panasonic(list(filter((lambda x:(x<b[0][0] or x>b[0][1])),a)),b[1:])\ndef aka(m,s,e):\n    geek=list(filter((lambda v: v not in e),panasonic(m,s)))\n    return [list(filter((lambda y: y not in geek),m)),geek]\ntest=[1,2,4,5,6,7]\nbest=[[1,2],[6,9]]\nexception=[4]\nprint(test)\nprint(best)\nprint(exception)\nprint(aka(test,best,exception))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/pileOfPuke/eneloop.py:1-23"
     },
     "2497": {
-        "file_id": 419,
+        "file_id": 418,
         "content": "The function `panasonic` uses recursion to filter a list (a) based on the range given by another list (b), returning either the filtered result or the original list depending on if either list is empty. The function `aka` filters a list (m) removing elements present in another list (e), and then divides it into two lists: one with remaining elements after filtering, and one containing elements removed from (m). Finally, it prints the test case lists, best, and exception, and calls the function `aka` on them.",
         "type": "comment"
     },
     "2498": {
-        "file_id": 420,
+        "file_id": 419,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/pileOfPuke/frightning.py",
         "type": "filepath"
     },
     "2499": {
-        "file_id": 420,
+        "file_id": 419,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "summary"
     }

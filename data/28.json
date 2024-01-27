@@ -1,531 +1,531 @@
 {
     "2800": {
-        "file_id": 475,
+        "file_id": 474,
         "content": "import re\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n    print(flist)\n    cold=lamb[1](flist)\n    print(cold)\n    bless=lamb[0](cold)\n    print(bless)\n    angle=lamb[2](flist,bless)\n    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\nprint(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinear.py:1-25"
     },
     "2801": {
-        "file_id": 475,
+        "file_id": 474,
         "content": "The code defines three functions: `open_to_return`, `parse_file`, and `toyProject`. The `open_to_return` function opens a file, removes blank lines, and returns the list of non-empty lines. The `parse_file` function takes a list of file names as input, filters out the import/from statements, identifies unique keywords after those statements, and returns them in a list. Finally, the `toyProject` function calls `parse_file` on a given file name and prints the results for two example files.",
         "type": "comment"
     },
     "2802": {
-        "file_id": 476,
+        "file_id": 475,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinearN.py",
         "type": "filepath"
     },
     "2803": {
-        "file_id": 476,
+        "file_id": 475,
         "content": "This code has functions for file processing and identifying import statements, finds common elements between lists, and displays toyProject() and seekAWrapper() outputs. It utilizes regular expressions and list operations extensively.",
         "type": "summary"
     },
     "2804": {
-        "file_id": 476,
+        "file_id": 475,
         "content": "import re\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame):\n    # scan until nothing left?\n    # it is like parsing a directory tree.\n    # in fact it is not.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinearN.py:1-31"
     },
     "2805": {
-        "file_id": 476,
+        "file_id": 475,
         "content": "This code includes functions for opening and processing files, parsing the content of files to identify import statements, generating a list of file names with .py extensions, and scanning until nothing is left. The code also uses regular expressions and list operations extensively.",
         "type": "comment"
     },
     "2806": {
-        "file_id": 476,
+        "file_id": 475,
         "content": "    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)))\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    return seekOn([initialFactor],[])\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nprint(seekAWrapper(\"exampleLinear.py\"))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/extractLinearN.py:32-49"
     },
     "2807": {
-        "file_id": 476,
+        "file_id": 475,
         "content": "The code defines a function that finds the common elements between two lists, updating a HallOfFame list accordingly. It also includes examples of toyProject() and seekAWrapper(), displaying their outputs.",
         "type": "comment"
     },
     "2808": {
-        "file_id": 477,
+        "file_id": 476,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/sampleIntermediate.py",
         "type": "filepath"
     },
     "2809": {
-        "file_id": 477,
+        "file_id": 476,
         "content": "This code imports the royalty function from sampleModule and defines a nuclearBomb function that returns the result of calling the royalty function.",
         "type": "summary"
     },
     "2810": {
-        "file_id": 477,
+        "file_id": 476,
         "content": "from sampleModule import royalty\ndef nuclearBomb():\n    return royalty()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/sampleIntermediate.py:1-3"
     },
     "2811": {
-        "file_id": 477,
+        "file_id": 476,
         "content": "This code imports the royalty function from sampleModule and defines a nuclearBomb function that returns the result of calling the royalty function.",
         "type": "comment"
     },
     "2812": {
-        "file_id": 478,
+        "file_id": 477,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/sampleModule.py",
         "type": "filepath"
     },
     "2813": {
-        "file_id": 478,
+        "file_id": 477,
         "content": "This code defines a function called \"royalty\" that simply prints the text \"hello world\" when called. It is likely used for testing or demonstration purposes, as it performs a basic action with no real functionality beyond printing this message.",
         "type": "summary"
     },
     "2814": {
-        "file_id": 478,
+        "file_id": 477,
         "content": "def royalty():\n    print(\"hello world\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/sampleModule.py:1-2"
     },
     "2815": {
-        "file_id": 478,
+        "file_id": 477,
         "content": "This code defines a function called \"royalty\" that simply prints the text \"hello world\" when called. It is likely used for testing or demonstration purposes, as it performs a basic action with no real functionality beyond printing this message.",
         "type": "comment"
     },
     "2816": {
-        "file_id": 479,
+        "file_id": 478,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/shallowCopy.py",
         "type": "filepath"
     },
     "2817": {
-        "file_id": 479,
+        "file_id": 478,
         "content": "This code defines a function \"mover\" that takes two arguments: \"plist\", which is a list of file paths, and \"dest\", the destination folder. It creates a temporary file called \"shallowCopy.sh\" in write mode. Then it iterates through each term in the plist and writes a command to copy each file to the specified destination using the \"cp\" command. The \"&\\n\" at the end of each line ensures that commands are written on separate lines in the temporary file.",
         "type": "summary"
     },
     "2818": {
-        "file_id": 479,
+        "file_id": 478,
         "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+'&\\n\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/destination/shallowCopy.py:1-4"
     },
     "2819": {
-        "file_id": 479,
+        "file_id": 478,
         "content": "This code defines a function \"mover\" that takes two arguments: \"plist\", which is a list of file paths, and \"dest\", the destination folder. It creates a temporary file called \"shallowCopy.sh\" in write mode. Then it iterates through each term in the plist and writes a command to copy each file to the specified destination using the \"cp\" command. The \"&\\n\" at the end of each line ensures that commands are written on separate lines in the temporary file.",
         "type": "comment"
     },
     "2820": {
-        "file_id": 480,
+        "file_id": 479,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/diffTool.py",
         "type": "filepath"
     },
     "2821": {
-        "file_id": 480,
+        "file_id": 479,
         "content": "This function, named 'diff', imports the difflib library and uses SequenceMatcher to identify matching blocks between two strings (a and b). It then returns a list of the matching substrings found in both strings.",
         "type": "summary"
     },
     "2822": {
-        "file_id": 480,
+        "file_id": 479,
         "content": "import difflib\ndef diff(a,b):\n    thug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\n    return thug",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/diffTool.py:1-4"
     },
     "2823": {
-        "file_id": 480,
+        "file_id": 479,
         "content": "This function, named 'diff', imports the difflib library and uses SequenceMatcher to identify matching blocks between two strings (a and b). It then returns a list of the matching substrings found in both strings.",
         "type": "comment"
     },
     "2824": {
-        "file_id": 481,
+        "file_id": 480,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/discoveryChannel.py",
         "type": "filepath"
     },
     "2825": {
-        "file_id": 481,
+        "file_id": 480,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "summary"
     },
     "2826": {
-        "file_id": 481,
+        "file_id": 480,
         "content": "#text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\n#print(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/discoveryChannel.py:1-29"
     },
     "2827": {
-        "file_id": 481,
+        "file_id": 480,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "comment"
     },
     "2828": {
-        "file_id": 482,
+        "file_id": 481,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/ejaculate.py",
         "type": "filepath"
     },
     "2829": {
-        "file_id": 482,
+        "file_id": 481,
         "content": "The code defines a function `testCube()` that checks if there is a pair of consecutive values in the given list differing by 1. The function `semen()` takes two lists, sorts them and checks if any of them have consecutive values differing by 1. If yes, it returns the sorted list(s), otherwise it recursively divides the unsorted list into two parts, sorts them and calls itself.",
         "type": "summary"
     },
     "2830": {
-        "file_id": 482,
+        "file_id": 481,
         "content": "def testCube(_list):\n    v=sorted(_list)\n    vk=0\n    v2=int(len(_list)/2)\n    for i in range(len(_list)-1):\n        if abs(v[i][1]-v[i+1][1])==1:\n            vk+=1\n            if vk>v2:\n                return True\n            else:\n                pass\n        else:\n            pass\n    return False\ndef semen(sortedList,unsortedList):\n    l=int(len(unsortedList)/2)\n    l0,l1=sortedList[0],sortedList[1]\n    jam=testCube(l0) or testCube(l1)\n    print(\"-- LIB STD --\")\n    print(jam)\n    print(\"-- LIB STD --\")\n    if jam:\n        return sortedList\n    else:\n        if l*2==len(unsortedList):\n            v0,v1=unsortedList[:l-1],unsortedList[l:]\n            # need for hard code.\n#        v2=[]\n#        for k in len(v0):\n#            v2.append(v0[k])\n#            v2.append(v1[k])\n            return semen([v0,v1],unsortedList[:-1])\n        else:\n            print(\"FUCKING FUCKED\\nFUCKING FUCKED\")\n            return [[],[]]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/ejaculate.py:1-36"
     },
     "2831": {
-        "file_id": 482,
+        "file_id": 481,
         "content": "The code defines a function `testCube()` that checks if there is a pair of consecutive values in the given list differing by 1. The function `semen()` takes two lists, sorts them and checks if any of them have consecutive values differing by 1. If yes, it returns the sorted list(s), otherwise it recursively divides the unsorted list into two parts, sorts them and calls itself.",
         "type": "comment"
     },
     "2832": {
-        "file_id": 483,
+        "file_id": 482,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/executeAnError.sh",
         "type": "filepath"
     },
     "2833": {
-        "file_id": 483,
+        "file_id": 482,
         "content": "The code is a Bash script that executes a Python file named \"derive.py\" and redirects both standard output and standard error to a log file called \"errorLog.log\". This could be used for logging and tracking errors during the execution of derive.py.",
         "type": "summary"
     },
     "2834": {
-        "file_id": 483,
+        "file_id": 482,
         "content": "#!/bin/bash\npython derive.py &> errorLog.log",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/executeAnError.sh:1-2"
     },
     "2835": {
-        "file_id": 483,
+        "file_id": 482,
         "content": "The code is a Bash script that executes a Python file named \"derive.py\" and redirects both standard output and standard error to a log file called \"errorLog.log\". This could be used for logging and tracking errors during the execution of derive.py.",
         "type": "comment"
     },
     "2836": {
-        "file_id": 484,
+        "file_id": 483,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/extractLinear.py",
         "type": "filepath"
     },
     "2837": {
-        "file_id": 484,
+        "file_id": 483,
         "content": "The code imports modules, defines functions to open and process files, creates a toy project function, adds desired items into the HallOfFame list, uses seekAWrapper for correction, demonstrates usage with examples, and moves results to specified directory.",
         "type": "summary"
     },
     "2838": {
-        "file_id": 484,
+        "file_id": 483,
         "content": "import re\nimport os\nfrom getCorrectList import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/extractLinear.py:1-31"
     },
     "2839": {
-        "file_id": 484,
+        "file_id": 483,
         "content": "Code imports necessary modules, defines a function to open and process files, parses the file's contents, creates a toy project function that uses these parsed data, creates superAddress to append '.py' extension, and defines seekOn for scanning operations.",
         "type": "comment"
     },
     "2840": {
-        "file_id": 484,
+        "file_id": 483,
         "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nMonad='/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays'\nfuckingTerm=\"newTestR.py\"\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\nmover(fuckMe,Monad)\nos.system('chmod +x shallowCopy.sh')",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/extractLinear.py:32-59"
     },
     "2841": {
-        "file_id": 484,
+        "file_id": 483,
         "content": "Code snippet seems to parse a list of directories and files, adding wanted items into the HallOfFame list. The seekAWrapper function takes an initial factor and returns sought values after some correction. The code then demonstrates usage with toy examples and finally moves the results to a specified directory.",
         "type": "comment"
     },
     "2842": {
-        "file_id": 485,
+        "file_id": 484,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/extractLinearN.py",
         "type": "filepath"
     },
     "2843": {
-        "file_id": 485,
+        "file_id": 484,
         "content": "The code defines functions for opening files, parsing file content, converting file paths, and scanning lists for targets with corrections. It also includes a function `seekAWrapper` that applies corrections to an initial factor and returns the result, as well as calls to `toyProject` for file path conversion and prints various file paths and phrases. The code ends without specifying any further action for a created list containing a term and some function results.",
         "type": "summary"
     },
     "2844": {
-        "file_id": 485,
+        "file_id": 484,
         "content": "import re\nfrom getCorrectList import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/extractLinearN.py:1-30"
     },
     "2845": {
-        "file_id": 485,
+        "file_id": 484,
         "content": "The code contains several functions. 'open_to_return' opens a file and returns its content as a list of non-empty strings. 'parse_file' filters out the lines starting with \"import\" or \"from\", then extracts and returns a list of strings after those lines. 'toyProject' reads the content of a specified file, parses it using 'parse_file', and returns the result. 'superAddress' appends '.py' to each string in a list. Lastly, 'seekOn' scans a list for specific targets while taking corrections into account.",
         "type": "comment"
     },
     "2846": {
-        "file_id": 485,
+        "file_id": 484,
         "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\n#Monad='/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays'\nfuckingTerm=\"extractLinearN.py\"\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\n#mover(fuckMe,Monad)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/extractLinearN.py:31-57"
     },
     "2847": {
-        "file_id": 485,
+        "file_id": 484,
         "content": "The code defines a function `seekAWrapper` that takes an initial factor, applies corrections, and returns the result. It also includes calls to `toyProject`, which seems to convert file paths to something else, and a print statement displaying various file paths and phrases. The code ends with creating a list containing a term and some function results, but does not specify any further action for that list.",
         "type": "comment"
     },
     "2848": {
-        "file_id": 486,
+        "file_id": 485,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixAnotherMeta.py",
         "type": "filepath"
     },
     "2849": {
-        "file_id": 486,
+        "file_id": 485,
         "content": "This code reads a log file, extracts relevant information such as filenames and error messages, generates candidate names using functions `letIt()` and `diff()`, and saves the final output in a modified file. It involves data processing and manipulation.",
         "type": "summary"
     },
     "2850": {
-        "file_id": 486,
+        "file_id": 485,
         "content": "import re\nfrom getCorrectList import letIt\nfrom diffTool import diff\nfrom fixerv0 import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"ErrorAlien.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[-4:]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=fuckMe[1]\n    lineOfTrouble=fuckMe[2]\n    errorCode=fuckMe[3]\n    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n    print (extractName)\n    print (extractNumber)\n    extractMissingName=re.findall(r\"[^']+'$\",errorCode)[0][:-1]\n    print (extractMissingName)\n    candidateList=letIt()\n    print(candidateList)\n    consult=(lambda x:list(enumerate(x)))\n    processFuck=list(map((lambda x: diff(x,extractMissingName)),candidateList))\n    process=list(map((lambda x : max(list(map((lambda y:len(y)),x)))/len(x) ),processFuck))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixAnotherMeta.py:1-28"
     },
     "2851": {
-        "file_id": 486,
+        "file_id": 485,
         "content": "The code reads a log file, filters out empty lines, and extracts relevant information such as the filename, line number, and error message. It then generates a candidate list using a function `letIt()` and compares each candidate to the missing filename using another function `diff()`. The process calculates the ratio of the length of the longest match to the total length of the file name in order to determine the best match.",
         "type": "comment"
     },
     "2852": {
-        "file_id": 486,
+        "file_id": 485,
         "content": "    sortOfShit=list(map((lambda x:consult(x)),[processFuck,process]))\n    print(sortOfShit[0])\n    print(sortOfShit[1])\n    getCandidateRank=list(sorted(sortOfShit[1],key=(lambda x:x[1])))\n    print(getCandidateRank)\n    getLastTwo=list(reversed(list(map((lambda x:x[0]),getCandidateRank[-2:]))))\n    print(getLastTwo)\n    getCandidate=list(map((lambda x:candidateList[x]),getLastTwo))\n    print(getCandidate)\n    snapshot(extractName[:-3]+\"_fixed.py\",extractName,extractMissingName,getCandidate[0],int(extractNumber))\n#    print(processFuck)\n#    print(process)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixAnotherMeta.py:29-40"
     },
     "2853": {
-        "file_id": 486,
+        "file_id": 485,
         "content": "Code snippet sorts and extracts information from two processed strings, retrieves the last two elements based on a specific key, creates a list of candidates using candidateList, then saves the final output in a file with a modified name. It seems to be involved in data processing and manipulation.",
         "type": "comment"
     },
     "2854": {
-        "file_id": 487,
+        "file_id": 486,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixWithMeta.py",
         "type": "filepath"
     },
     "2855": {
-        "file_id": 487,
+        "file_id": 486,
         "content": "This code reads a log file, filters out empty lines, and extracts relevant information. It generates potential corrections using external functions and applies diffTool for comparison. The average length ratio of differences is stored in the process variable. Additionally, it applies a function to two lists, sorts, maps items, and takes snapshots with names and numbers. Debugging print statements are included but can be removed.",
         "type": "summary"
     },
     "2856": {
-        "file_id": 487,
+        "file_id": 486,
         "content": "import re\nfrom getCorrectList import letIt\nfrom diffTool import diff\nfrom fixer import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"errorLog.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[-4:]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=fuckMe[1]\n    lineOfTrouble=fuckMe[2]\n    errorCode=fuckMe[3]\n    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n    print (extractName)\n    print (extractNumber)\n    extractMissingName=re.findall(r\"[^']+'$\",errorCode)[0][:-1]\n    print (extractMissingName)\n    candidateList=letIt()\n    print(candidateList)\n    consult=(lambda x:list(enumerate(x)))\n    processFuck=list(map((lambda x: diff(x,extractMissingName)),candidateList))\n    process=list(map((lambda x : max(list(map((lambda y:len(y)),x)))/len(x) ),processFuck))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixWithMeta.py:1-28"
     },
     "2857": {
-        "file_id": 487,
+        "file_id": 486,
         "content": "This code reads a log file, filters out empty lines, and extracts relevant information such as the file name, line number, and error message. It then generates a candidate list of potential corrections using external functions (letIt) and applies the diffTool to each candidate for comparison with the extracted missing name. Finally, it calculates the average length ratio of the differences and stores them in the process variable.",
         "type": "comment"
     },
     "2858": {
-        "file_id": 487,
+        "file_id": 486,
         "content": "    sortOfShit=list(map((lambda x:consult(x)),[processFuck,process]))\n    print(sortOfShit[0])\n    print(sortOfShit[1])\n    getCandidateRank=list(sorted(sortOfShit[1],key=(lambda x:x[1])))\n    print(getCandidateRank)\n    getLastTwo=list(reversed(list(map((lambda x:x[0]),getCandidateRank[-2:]))))\n    print(getLastTwo)\n    getCandidate=list(map((lambda x:candidateList[x]),getLastTwo))\n    print(getCandidate)\n    snapshot(extractName[:-3]+\"_fixed.py\",extractName,extractMissingName,getCandidate[0],int(extractNumber))\n#    print(processFuck)\n#    print(process)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixWithMeta.py:29-40"
     },
     "2859": {
-        "file_id": 487,
+        "file_id": 486,
         "content": "This code applies a function to two lists, sorts the second list based on a key, extracts last two items, maps those items to another list, and finally takes a snapshot with extracted names and numbers. The print statements are for debugging purposes, but comments indicate they can be removed.",
         "type": "comment"
     },
     "2860": {
-        "file_id": 488,
+        "file_id": 487,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixYourHead/fixer.py",
         "type": "filepath"
     },
     "2861": {
-        "file_id": 488,
+        "file_id": 487,
         "content": "This code reads lines from \"exampleToBeFixed.log\", replaces occurrences of \"need\" with \"need not\" if the count variable (shit) is 1, and writes the modified or original lines to \"fixedExample.log\".",
         "type": "summary"
     },
     "2862": {
-        "file_id": 488,
+        "file_id": 487,
         "content": "with open(\"fixedExample.log\",\"w+\") as ap:\n    with open(\"exampleToBeFixed.log\",\"r\") as ad:\n        shit=0\n        for abo in ad.readlines():\n            print (shit)\n            print(abo)\n            if shit == 1:\n                #shit+=1\n                abo = abo.replace(\"need\", \"need not\")\n#                print(abo)\n                ap.write(abo)\n            else:\n                ap.write(abo)\n            shit+=1",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixYourHead/fixer.py:1-14"
     },
     "2863": {
-        "file_id": 488,
+        "file_id": 487,
         "content": "This code reads lines from \"exampleToBeFixed.log\", replaces occurrences of \"need\" with \"need not\" if the count variable (shit) is 1, and writes the modified or original lines to \"fixedExample.log\".",
         "type": "comment"
     },
     "2864": {
-        "file_id": 489,
+        "file_id": 488,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixer.py",
         "type": "filepath"
     },
     "2865": {
-        "file_id": 489,
+        "file_id": 488,
         "content": "This function takes five parameters (a, b, c, d, e) and writes the content of file b to file a. It replaces occurrence of string 'c' with 'd' in file b whenever 'e' equals to the current iteration count. The code prints the iteration count and each line of file b as it reads them.",
         "type": "summary"
     },
     "2866": {
-        "file_id": 489,
+        "file_id": 488,
         "content": "def snapshot(a,b,c,d,e):\n    with open(a,\"w+\") as ap:\n        with open(b,\"r\") as ad:\n            shit=1\n            for abo in ad.readlines():\n                print(shit)\n                print(abo)\n                if shit == e:\n                    #shit+=1\n                    abo = abo.replace(c,d)\n#                print(abo)\n                    ap.write(abo)\n                else:\n                    ap.write(abo)\n                shit+=1",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixer.py:1-15"
     },
     "2867": {
-        "file_id": 489,
+        "file_id": 488,
         "content": "This function takes five parameters (a, b, c, d, e) and writes the content of file b to file a. It replaces occurrence of string 'c' with 'd' in file b whenever 'e' equals to the current iteration count. The code prints the iteration count and each line of file b as it reads them.",
         "type": "comment"
     },
     "2868": {
-        "file_id": 490,
+        "file_id": 489,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixerv0.py",
         "type": "filepath"
     },
     "2869": {
-        "file_id": 490,
+        "file_id": 489,
         "content": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
         "type": "summary"
     },
     "2870": {
-        "file_id": 490,
+        "file_id": 489,
         "content": "def snapshot(a,b,c,d,e):\n    with open(a,\"w+\") as ap:\n        with open(b,\"r\") as ad:\n            shit=1\n            for abo in ad.readlines():\n                print(shit)\n                print(abo)\n                if ( (c in abo) or shit == e):\n                    #shit+=1\n                    abo = abo.replace(c,d)\n#                print(abo)\n                    ap.write(abo)\n                else:\n                    ap.write(abo)\n                shit+=1",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixerv0.py:1-15"
     },
     "2871": {
-        "file_id": 490,
+        "file_id": 489,
         "content": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
         "type": "comment"
     },
     "2872": {
-        "file_id": 491,
+        "file_id": 490,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/frightning.py",
         "type": "filepath"
     },
     "2873": {
-        "file_id": 491,
+        "file_id": 490,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "summary"
     },
     "2874": {
-        "file_id": 491,
+        "file_id": 490,
         "content": "# fully trustworthy partial trustworthy complete nonsense\n# return a list instead.\nimport re\n\"\"\"\nliteral=\"2 3 42 3 451 2 3 4 5 62 3 45 2 3 45\"\nanus0=\"2 3 4\"\n#def testStone(major,minor,jerkOff):\n\"\"\"\ndef testTube(nb,anus):\n#    fuck=re.findall(r'[0-9]{}?[0-9]|?[0-9]{}[0-9]'.format(anus,anus,anus),nb)\n    fuck=[m.start() for m in re.finditer(anus,nb)]\n    fuckme=[len(nb),len(anus)]\n    bitch=[]\n    for wifu in fuck:\n        if wifu==0:\n            if nb[wifu+fuckme[1]]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        elif wifu+fuckme[1]==fuckme[0]:\n            if nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        else:\n            if nb[wifu+fuckme[1]]==\" \" and nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n    return bitch\n    #print(fuck)\n\"\"\"\nprint(literal)\nprint(\"--spliter--\")\nprint(testTube(literal,anus0))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/frightning.py:1-38"
     },
     "2875": {
-        "file_id": 491,
+        "file_id": 490,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "comment"
     },
     "2876": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/geniusWalk.lua",
         "type": "filepath"
     },
     "2877": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "This code contains Lua functions for list processing, likely used in a game or simulation, with potential conditional logic and array manipulation. The output implies possible hostile intent or malicious behavior by printing a threatening message and executing 'verify(rape0)' function.",
         "type": "summary"
     },
     "2878": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction round(float)\n    return math.floor(float + .5)\nend\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nfunction takeOver(list0,stacks)\n\tlocal blowJob = false\n\tif #list0>1 and verify(list0) == true then\n\t\tblowJob = true\n--\t\tprint(\"mark I\")\n--\t\tprint(blowJob)\n--[[\t\tprint(stacks)\n\t\tfor np,mp in ipairs(stacks) do",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua:1-58"
     },
     "2879": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "This code defines several Lua functions related to range, counting, and manipulating lists. It uses mathematical concepts such as rounding, range iteration, and list verification. The main purpose appears to involve processing a list of values, potentially for sorting or filtering purposes.",
         "type": "comment"
     },
     "2880": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "\t\t\tprint(mp)\n\t\t\tfor nvk, mvk in ipairs(mp) do\n\t\t\t\tprint(mvk)\n\t\t\tend\n\t\tend]]\n--\t\tfury={blowJob,stacks}\n\t\treturn blowJob,stacks\n--\t\tprint(blowjob)\n\telseif #stacks ==1 then\n--\t\tprint(\"mark II\")\n\t\treturn blowJob,stacks\n\telse\n\t\tmvp = takeAct(list0)\n\t\tstacks[#stacks+1]=mvp\n--[[\t\tfor np,mp in ipairs(mvp) do\n\t\t\tprint(mp)\n\t\tend]]\n\t\treturn takeOver(mvp,stacks)\n\tend\nend\nnuke={}\nfor vm,argv in ipairs(arg) do\n\tnuke[#nuke+1]=round(argv)\nend\n--bank=takeOver(nuke,{})\nprt,wrt=takeOver(nuke,{})\nprint(prt)\n--print(wrt)\nfor rk,rn in ipairs(wrt) do\n--\tprint(rk,rn)\n--\tprint(\"--spliter--\")\n\tfor rad, run in ipairs(rn) do\n\t\tif rad<#rn then\n\t\t\tio.write(run..\" \")\n\t\telse\n\t\t\tprint(run)\n\t\tend\n\tend\nend\n-- greater than two.\n--[[for so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend]]\n-- stop it. do it in python.\n-- yeah.\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua:59-109"
     },
     "2881": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "The code appears to contain several functions with conditional logic and array manipulation, likely for a game or simulation. It utilizes loops, conditional statements, and function calls to perform actions based on various inputs and conditions. The comments within the code provide some insight into its functionality but are sparse and could benefit from more clarity and context.",
         "type": "comment"
     },
     "2882": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]\n-- hell",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua:110-113"
     },
     "2883": {
-        "file_id": 492,
+        "file_id": 491,
         "content": "This code appears to print a threatening message, followed by the output of a function 'verify(rape0)'. The code suggests a potential hostile intent or malicious behavior.",
         "type": "comment"
     },
     "2884": {
-        "file_id": 493,
+        "file_id": 492,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/getCorrectList.py",
         "type": "filepath"
     },
     "2885": {
-        "file_id": 493,
+        "file_id": 492,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "summary"
     },
     "2886": {
-        "file_id": 493,
+        "file_id": 492,
         "content": "import os\ndef letIt():\n    return os.listdir(\".\")\n# this is a list.\n#print(makeIt)",
         "type": "code",
         "location": "/metalearning/methodBank/getCorrectDill.py:1-5"
     },
     "2887": {
-        "file_id": 493,
+        "file_id": 492,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "comment"
     },
     "2888": {
-        "file_id": 494,
+        "file_id": 493,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/holdMeRightNow.py",
         "type": "filepath"
     },
     "2889": {
-        "file_id": 494,
+        "file_id": 493,
         "content": "The script connects to a SQLite database, inserts items into two tables and handles constraints while ensuring alphabetical order. It also includes cleanup functions for connection and commits changes.",
         "type": "summary"
     },
     "2890": {
-        "file_id": 494,
+        "file_id": 493,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\ndef insertOneItem(a,b):\n    try:\n        sql=\"INSERT INTO groupAllChars (mainId,charGroup) VALUES ({},'{}');\".format(a,b)\n        conn.execute(sql)\n    except:\n        print(\"DATABASE CONSTRAINT ERROR OR ELSE\")\n#    return\ndef insertOneRelation(a,b,c,d,e):\n    try:\n        sql=\"INSERT INTO subdue (startId,startType,endId,endType,relationType) VALUES ({},'{}',{},'{}','{}');\".format(a,b,c,d,e)\n        conn.execute(sql)\n    except:\n        print(\"DATABASE CONSTRAINT ERROR OR ELSE\")\n#    return\ndef cleanUp():\n    try:\n        conn.commit()\n    except:\n        print(\"COMMIT FAILED\")\n    conn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/holdMeRightNow.py:1-30"
     },
     "2891": {
-        "file_id": 494,
+        "file_id": 493,
         "content": "This Python script connects to a SQLite database, inserts items into two tables, and handles potential constraints and commits changes. It also includes functions for inserting an item's group, inserting a relationship between items, and cleaning up the connection upon completion.",
         "type": "comment"
     },
     "2892": {
-        "file_id": 494,
+        "file_id": 493,
         "content": "# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/holdMeRightNow.py:31-32"
     },
     "2893": {
-        "file_id": 494,
+        "file_id": 493,
         "content": "Ensuring alphabetical order while inserting random content.",
         "type": "comment"
     },
     "2894": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/keepMeSatisfied.py",
         "type": "filepath"
     },
     "2895": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "The code uses difflib to find similar words and filters a list based on specific patterns. It splits the string, compares them, processes blocks, and creates a list of unique words with patience values. The function `same_fuck` is defined and likely serves as a placeholder or joke.",
         "type": "summary"
     },
     "2896": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "import difflib\nimport re\nfrom frightning import testTube\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\n\"\"\"\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\n\"\"\"\ndef same_fuck(superstring):\n    gnu=[]\n#    print(superstring)\n    # standard spliter here is the space char.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:1-44"
     },
     "2897": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "This code is using the difflib module to find words that appear in the same order but not necessarily at the same index between two strings. It also includes a function \"fuckall\" which filters a list, removing elements unless they are consecutive and follow a specific pattern. The \"same_fuck\" function takes a superstring as input and processes it further.",
         "type": "comment"
     },
     "2898": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "    fuck=[pos for pos, char in enumerate(superstring) if (char == \" \" and (superstring[(pos+1 if (pos<len(superstring)-1) else pos-1)]!=\"1\" or superstring[(pos-1 if (pos>0) else pos+1)]!=\"1\")) ]\n#    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=list(filter((lambda x:x!=' '),[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]))\n        gnu+=list(map((lambda x: re.sub(\"^ \",\"\",re.sub(\" $\",\"\",x))),thug))\n#    bsd=list(set(gnu))\n#    cp=len(bsd)\n#    analsex=[[]]*cp\n#    for x in range(cp):\n#        anus=bsd[x]\n#        analsex[x]=[anus,gnu.count(anus)]\n#    print(analsex)\n    patience=list(filter((lambda x:len(x[1])>1),list(map((lambda x:[x,testTube(superstring,x)]),sorted(list(set(gnu)),key=(lambda x:-len(x)))))))\n    aladin=[sorted(patience,key=(lambda x:-len(x[1]))),patience]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:45-64"
     },
     "2899": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "The code defines a list called \"fuck\" that contains positions in the string where there are consecutive spaces without \"1\" before or after them. It then splits the original string into two parts at these positions, compares them using difflib's SequenceMatcher and filters the matching blocks to only include non-space characters. These blocks are further processed by removing leading/trailing spaces and adding to a list called \"gnu\". The code then calculates the patience value for each unique word in \"gnu\" by counting occurrences and filtering out short words, resulting in a final list called \"patience\".",
         "type": "comment"
     }

@@ -1,528 +1,528 @@
 {
     "100": {
-        "file_id": 25,
+        "file_id": 24,
         "content": "/metalearning/generic/test/buster.py",
         "type": "filepath"
     },
     "101": {
-        "file_id": 25,
+        "file_id": 24,
         "content": "This code defines a keyboard layout and creates a function to return the next key, as well as generates a list of keys and their adjacent keys, writing them to a CSV file.",
         "type": "summary"
     },
     "102": {
-        "file_id": 25,
+        "file_id": 24,
         "content": "keyboard=[['q','w','e','r','t','y','u','i','o','p'],['a','s','d','f','g','h','j','k','l'],['z','x','c','v','b','n','m']]\ndef returnNear(a):\n    b=[]\n    for x in range(3):\n        if a in keyboard[x]:\n            b=[x,keyboard[x].index(a),len(keyboard[x])-1]\n            break\n    if x==0:\n        if b[1]!=b[2]:\n            return (keyboard[0][b[1]+1],)\n        else:\n            return False\n    if x==1:\n        if b[1]!=b[2]:\n            return (keyboard[1][b[1]+1],*keyboard[0][b[1]:b[1]+2])\n        else:\n            return (*keyboard[0][b[1]:b[1]+2],)\n    if x==2:\n            if b[1]!=b[2]:\n                return (keyboard[1][b[1]+1],*keyboard[1][b[1]:b[1]+3])\n            else:\n                return (*keyboard[0][b[1]:b[1]+3],)\ndef curse():\n    r0=[]\n    for k0 in range(ord(\"a\"),ord(\"z\")+1):\n        r=returnNear(chr(k0))\n        if r!= False:\n            for r1 in r:\n                r0.append([chr(k0),r1])\n    return r0\ndef writeCSV(x):\n    with open(\"fuck.csv\",\"w+\") as fuck:\n        for x1 in x:\n            x2=\"\"\n            for x0 in x1:",
         "type": "code",
         "location": "/metalearning/generic/test/buster.py:1-37"
     },
     "103": {
-        "file_id": 25,
+        "file_id": 24,
         "content": "The code defines a keyboard layout and provides a function to return the next key based on a given input. The 'curse' function generates a list of all keys on the keyboard and their corresponding adjacent keys. Then, it writes the list to a CSV file named \"fuck.csv\".",
         "type": "comment"
     },
     "104": {
-        "file_id": 25,
+        "file_id": 24,
         "content": "                x2+=x0+\",\"\n            fuck.write(x2[:-1])\n            fuck.write(\"\\n\")\nwriteCSV(curse())",
         "type": "code",
         "location": "/metalearning/generic/test/buster.py:38-42"
     },
     "105": {
-        "file_id": 25,
+        "file_id": 24,
         "content": "Writes x0 value concatenated with a comma to file, appends a newline character, and calls writeCSV function on curse result.",
         "type": "comment"
     },
     "106": {
-        "file_id": 26,
+        "file_id": 25,
         "content": "/metalearning/generic/test/chainedBase.py",
         "type": "filepath"
     },
     "107": {
-        "file_id": 26,
+        "file_id": 25,
         "content": "The code imports a function to return a list, performs confusion matrix boosting with specific parameters, and returns the result of applying these parameters to an input. This could be used for classification or prediction tasks with some specific constraints.",
         "type": "summary"
     },
     "108": {
-        "file_id": 26,
+        "file_id": 25,
         "content": "from getFromPickle import returnAList\n# if passed the test, then onward to next\n# if not passed, slice and move to next test.\n# return the sum of all successful test.\n# the integrity is defined as the biggest clogged group found in test.\n# better use keyboard tolerance mechanism.\n# straight line mechanism, nearst neighbor mechanism.\n#group groupChar\n# group -> g_roup <delay>\n# group -> gloup <replace>\n# group -> ggroup <repeat>\n# if it isn't the end, do not stop.\n# group -> roupg <swap>\n#group groupCharGroup\n# WARNING WE HAVEN'T BEEN USING A STENOTYPE SO BE CAREFUL OF ARRANGEMENTS.\n# better use the real keyboard to do this job.\ndef confusionMatrixBoost(a,b,c):\n    return [[c(a0,b0) for a0 in a] for b0 in b]\nd=(lambda x:[f for g in x for f in g])\nf=returnAList() # actually a dict\nvr=confusionMatrixBoost(\"group\",\"groupChar\",(lambda x,y: [x==y, y in f[x],y in [f1 for f1 in d([f[f0] for f0 in f[x]]) if f1 not in f[x]+[x]]]))\nprint(vr)",
         "type": "code",
         "location": "/metalearning/generic/test/chainedBase.py:1-25"
     },
     "109": {
-        "file_id": 26,
+        "file_id": 25,
         "content": "The code imports a function to return a list, performs confusion matrix boosting with specific parameters, and returns the result of applying these parameters to an input. This could be used for classification or prediction tasks with some specific constraints.",
         "type": "comment"
     },
     "110": {
-        "file_id": 27,
+        "file_id": 26,
         "content": "/metalearning/generic/test/chainedTest.py",
         "type": "filepath"
     },
     "111": {
-        "file_id": 27,
+        "file_id": 26,
         "content": "This Python function, `confusionMatrix`, takes two arguments (a and b) and returns a confusion matrix in the form of a 2D list. The inner list contains boolean values representing whether each element in the first argument matches with the corresponding element in the second argument.",
         "type": "summary"
     },
     "112": {
-        "file_id": 27,
+        "file_id": 26,
         "content": "# if passed the test, then onward to next\n# if not passed, slice and move to next test.\n# return the sum of all successful test.\n# the integrity is defined as the biggest clogged group found in test.\n# better use keyboard tolerance mechanism.\n# straight line mechanism, nearst neighbor mechanism.\n#group groupChar\n# group -> g_roup <delay>\n# group -> gloup <replace>\n# group -> ggroup <repeat>\n# if it isn't the end, do not stop.\n# group -> roupg <swap>\n#group groupCharGroup\n# WARNING WE HAVEN'T BEEN USING A STENOTYPE SO BE CAREFUL OF ARRANGEMENTS.\ndef confusionMatrix(a,b):\n    return [[a0 == b0 for a0 in a] for b0 in b]\nprint(confusionMatrix(\"group\",\"groupChar\"))",
         "type": "code",
         "location": "/metalearning/generic/test/chainedTest.py:1-18"
     },
     "113": {
-        "file_id": 27,
+        "file_id": 26,
         "content": "This Python function, `confusionMatrix`, takes two arguments (a and b) and returns a confusion matrix in the form of a 2D list. The inner list contains boolean values representing whether each element in the first argument matches with the corresponding element in the second argument.",
         "type": "comment"
     },
     "114": {
-        "file_id": 28,
+        "file_id": 27,
         "content": "/metalearning/generic/test/chainer.py",
         "type": "filepath"
     },
     "115": {
-        "file_id": 28,
+        "file_id": 27,
         "content": "The code defines a \"keyboard\" list, which represents the QWERTY keyboard layout. The function \"returnNear(a)\" takes a character and returns the next character in the same row or column. The function \"curse()\" iterates over all lowercase letters, calls \"returnNear()\", and prints the letter along with its returned value if it's not False (indicating no valid result).",
         "type": "summary"
     },
     "116": {
-        "file_id": 28,
+        "file_id": 27,
         "content": "keyboard=[['q','w','e','r','t','y','u','i','o','p'],['a','s','d','f','g','h','j','k','l'],['z','x','c','v','b','n','m']]\ndef returnNear(a):\n    b=[]\n    for x in range(3):\n        if a in keyboard[x]:\n            b=[x,keyboard[x].index(a),len(keyboard[x])-1]\n            break\n    if x==0:\n        if b[1]!=b[2]:\n            return (keyboard[0][b[1]+1],)\n        else:\n            return False\n    if x==1:\n        if b[1]!=b[2]:\n            return (keyboard[1][b[1]+1],*keyboard[0][b[1]:b[1]+2])\n        else:\n            return (*keyboard[0][b[1]:b[1]+2],)\n    if x==2:\n            if b[1]!=b[2]:\n                return (keyboard[1][b[1]+1],*keyboard[1][b[1]:b[1]+3])\n            else:\n                return (*keyboard[0][b[1]:b[1]+3],)\ndef curse():\n    for k0 in range(ord(\"a\"),ord(\"z\")+1):\n        r=returnNear(chr(k0))\n        print(chr(k0),r if r!= False else \"nothing\")\ncurse()",
         "type": "code",
         "location": "/metalearning/generic/test/chainer.py:1-29"
     },
     "117": {
-        "file_id": 28,
+        "file_id": 27,
         "content": "The code defines a \"keyboard\" list, which represents the QWERTY keyboard layout. The function \"returnNear(a)\" takes a character and returns the next character in the same row or column. The function \"curse()\" iterates over all lowercase letters, calls \"returnNear()\", and prints the letter along with its returned value if it's not False (indicating no valid result).",
         "type": "comment"
     },
     "118": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "/metalearning/generic/test/core4.py",
         "type": "filepath"
     },
     "119": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "This code interacts with Neo4j database, defines regular expressions, loads data from CSV files, creates nodes and relationships, updates properties, finds nodes and relationships. Performance improvements are suggested. The `matchNeighbor(k)` function uses Cypher queries to find related nodes of a given node (`k`) while debugging print statements display test node values.",
         "type": "summary"
     },
     "120": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "# coding: utf-8 -*-\nfrom py2neo import Graph\nimport re\n# Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\n#graph.run(\"create index on :key(name)\")\n#graph.run(\"create index on :dictionary(name)\")\n#graph.run(\"USING PERIODIC COMMIT LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/keyboardMap/fuck.csv' AS line WITH line MERGE (a:key{name:line[0]}) WITH a,line MATCH (b:key{name:line[1]}) WITH a,b MERGE (a)-[:nextTo]-(b);\")\n#graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/gamma.csv' AS line MATCH  (a:english) WHERE a.name=line[0] WITH a,line MATCH ;\")\n#a=open(\"beta.csv\",\"r\")\n#for b in a.readlines():\n#    c=re.sub(\"\\n\",\"\",b).split(\",\")\n#    graph.run(\"MATCH (a:english) where a.name=\\\"\"+c[0]+\"\\\" with a match (b:english) where b.name=\\\"\"+c[1]+\"\\\" create (a)<-[:lemma]-(b)\")\n#a.close()\n# graph.run(\"MATCH (a:lemma),(b:derived) CREATE (a)<-[:lemma]-(b)\")\n# this is slow as hell\n# graph.run(\"USING PERIODIC C",
         "type": "code",
         "location": "/metalearning/generic/test/core4.py:1-21"
     },
     "121": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "The code imports necessary libraries, creates a Py2Neo graph object to interact with a Neo4j database, and includes comments for various operations like creating indices and loading data from CSV files. It then defines regular expressions, iterates over lines in a CSV file, and executes multiple queries to create relationships between nodes using lemma and nextTo labels. Finally, it suggests that the code is slow and could benefit from performance improvements.",
         "type": "comment"
     },
     "122": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "OMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/beta.csv' AS line MERGE (a:dictionary:english:derived {name:line[0]}) WITH line MERGE  (b:dictionary:english:lemma {name:line[1]}) ;\")\n#matcher=NodeMatcher(graph)\n#test_node_1 = Node(label = \"Person\",name = \"test_node_1\")\n#test_node_2 = Node(label = \"Person\",name = \"test_node_2\")\n#graph.create(test_node_1)\n#graph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"\n#node_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\n#node_1_call_node_2['count'] = 1\n#node_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\n#node_2_call_node_1['count'] = 1\n#graph.create(node_1_call_node_2)\n#graph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\n#node_1_call_node_2['count']+=1\n#graph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。",
         "type": "code",
         "location": "/metalearning/generic/test/core4.py:21-49"
     },
     "123": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "This code creates nodes and relationships in a graph, assigns initial property values to them, updates properties, and demonstrates how to find nodes and relationships using find and find_one functions.",
         "type": "comment"
     },
     "124": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "find查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(label=\"key\",property_key=\"name\",property_value=\"k\")\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\ndef matchNeighbor(k):\n    k0=[]\n    match_relation =graph.run(\"\"\"MATCH (n:key{name:'\"\"\"+k+\"\"\"'})--(r) RETURN r;\"\"\")\n            #graph.run(\"\"\"MATCH (n:key{name:'\"\"\"+k+\"\"\"'})<--(r) RETURN r;\"\"\")]\n#    for m in match_relation:\n    for i in match_relation:\n#         print(i)\n#     print(dir(i))\n#     print(type(i))\n        g=i.values()[0]\n#     print(g)\n#     print(type(g))\n#     print(dir(g))\n        g0=g.values()\n#     print(g0)\n#     print(type(g0))\n        k0.append([g1 for g1 in g0][0])\n    return k0\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)",
         "type": "code",
         "location": "/metalearning/generic/test/core4.py:50-86"
     },
     "125": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "This code snippet defines a function `matchNeighbor(k)` that finds the relationships of a node labeled 'key' with a given name (`k`) and returns a list of related nodes. It uses Cypher queries to match the desired node and its relationships, then iterates over the results to extract the required information. The code can be used to explore the connections between specific nodes in a graph database.",
         "type": "comment"
     },
     "126": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
         "type": "code",
         "location": "/metalearning/generic/test/core4.py:87-90"
     },
     "127": {
-        "file_id": 29,
+        "file_id": 28,
         "content": "The code snippet contains print statements to display the values of test_node_1, test_node_2, node_2_call_node_1, and node_1_call_node_2. These print statements are likely used for debugging or logging purposes, allowing the developer to inspect the values at that point in the code execution.",
         "type": "comment"
     },
     "128": {
-        "file_id": 30,
+        "file_id": 29,
         "content": "/metalearning/generic/test/jerk.py",
         "type": "filepath"
     },
     "129": {
-        "file_id": 30,
+        "file_id": 29,
         "content": "Code imports functions from \"core4\" and \"simpleStorage\", creates a local database with key-value pairs of characters to matchNeighbor results, and then stores it in the \"simpleStorage\".",
         "type": "summary"
     },
     "130": {
-        "file_id": 30,
+        "file_id": 29,
         "content": "from core4 import matchNeighbor\nfrom simpleStorage import storeAList\n# now you can make a local database.\n#    k=chr(k0)\nv={chr(k0):matchNeighbor(chr(k0)) for k0 in range(ord(\"a\"),1+ord(\"z\"))}\nprint(v)\nstoreAList(v)",
         "type": "code",
         "location": "/metalearning/generic/test/jerk.py:1-7"
     },
     "131": {
-        "file_id": 30,
+        "file_id": 29,
         "content": "Code imports functions from \"core4\" and \"simpleStorage\", creates a local database with key-value pairs of characters to matchNeighbor results, and then stores it in the \"simpleStorage\".",
         "type": "comment"
     },
     "132": {
-        "file_id": 31,
+        "file_id": 30,
         "content": "/metalearning/generic/test/niche.py",
         "type": "filepath"
     },
     "133": {
-        "file_id": 31,
+        "file_id": 30,
         "content": "This code imports the numpy library and defines a function, Method2. It takes two inputs, 'a' and 'b', and uses np.meshgrid to create 2D coordinate grids for each input. Then it prints the coordinates of group1 and group2, their types, and available methods using dir(). Finally, it checks if group1 is equal to group2 and returns the result. The function is then called with inputs \"group\" and \"groupChar\", and the returned value is printed along with the type of v.",
         "type": "summary"
     },
     "134": {
-        "file_id": 31,
+        "file_id": 30,
         "content": "import numpy as np\ndef Method2(a, b):\n    group1, group2= np.meshgrid([*a],[*b])\n    print(group1)\n    print(group2)\n    print(type(group1))\n    print(dir(group1))\n    return group1 == group2\nv=Method2(\"group\",\"groupChar\")\nprint(type(v))\n$print(v and v)",
         "type": "code",
         "location": "/metalearning/generic/test/niche.py:1-13"
     },
     "135": {
-        "file_id": 31,
+        "file_id": 30,
         "content": "This code imports the numpy library and defines a function, Method2. It takes two inputs, 'a' and 'b', and uses np.meshgrid to create 2D coordinate grids for each input. Then it prints the coordinates of group1 and group2, their types, and available methods using dir(). Finally, it checks if group1 is equal to group2 and returns the result. The function is then called with inputs \"group\" and \"groupChar\", and the returned value is printed along with the type of v.",
         "type": "comment"
     },
     "136": {
-        "file_id": 32,
+        "file_id": 31,
         "content": "/metalearning/homework/wordnet-similar-words.py",
         "type": "filepath"
     },
     "137": {
-        "file_id": 32,
+        "file_id": 31,
         "content": "This code imports the py2neo library and initializes a Neo4j database connection using the provided URL, username, and password.",
         "type": "summary"
     },
     "138": {
-        "file_id": 32,
+        "file_id": 31,
         "content": "from py2neo import Graph\ngraph=Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")",
         "type": "code",
         "location": "/metalearning/homework/wordnet-similar-words.py:1-2"
     },
     "139": {
-        "file_id": 32,
+        "file_id": 31,
         "content": "This code imports the py2neo library and initializes a Neo4j database connection using the provided URL, username, and password.",
         "type": "comment"
     },
     "140": {
-        "file_id": 33,
+        "file_id": 32,
         "content": "/metalearning/methodBank/README",
         "type": "filepath"
     },
     "141": {
-        "file_id": 33,
+        "file_id": 32,
         "content": "This code discusses the need for a solution to manage a complex codebase, suggesting the creation of a discrete class with definitions, tags, and methods. It also mentions the importance of storage (database or pickle) and emphasizes the need for a pure form with arbitrary variable names for better communication. The use of uuid module for unique objects is mentioned, along with the suggestion to control experiments using AUTOEXPECT for logging purposes.",
         "type": "summary"
     },
     "142": {
-        "file_id": 33,
+        "file_id": 32,
         "content": "I THINK HOOGLE IS ENOUGH FOR THOSE HARDCORE DEVS BUT NOW I HAVE ENCOUNTERED SERIOUS PROBLEM WHEN DEALING WITH THE ENTIRE CODEBASE OF UNICODE TABLE. I NEED A SOLUTION. I NEED TO WORK IT OUT ON MY OWN.\nBased on my philosophy just make definition, tags and methods shall be enough. You need to crrate a discrete class for it.\nAnd in order to make it indexable, I need to either store it into database or simply some pickle or other methods whatever can deal with the storage of classes.\nIt could be multilingual, but that's another story.\nIt has to be in its puriest form. the variables can have arbitrary name to make methods communicative.\nWe will make use of the uuid module, to create unique dill class objects and modified source code right at the spot. mention the origin beforehand.\nHow to make our experiment controllable?\nI'm sorry but AUTOEXPECT IS AWESOME!\nThe log file of expect can log anything.\nwe only log usable hints. Use uuid as token.",
         "type": "code",
         "location": "/metalearning/methodBank/README:1-17"
     },
     "143": {
-        "file_id": 33,
+        "file_id": 32,
         "content": "This code discusses the need for a solution to manage a complex codebase, suggesting the creation of a discrete class with definitions, tags, and methods. It also mentions the importance of storage (database or pickle) and emphasizes the need for a pure form with arbitrary variable names for better communication. The use of uuid module for unique objects is mentioned, along with the suggestion to control experiments using AUTOEXPECT for logging purposes.",
         "type": "comment"
     },
     "144": {
-        "file_id": 34,
+        "file_id": 33,
         "content": "/metalearning/methodBank/analyzer/README",
         "type": "filepath"
     },
     "145": {
-        "file_id": 34,
+        "file_id": 33,
         "content": "Code is analyzing the need for importing specific modules or using standalone functions, listing all callable functions and related components such as other functions or global constants. The author mentions a need for Vim script automation with a GUI controller, as Autoexpect won't suffice. They also discuss the importance of understanding tokenization and suggest using highlighters or tokenizers for detecting source file types rather than relying on syntax checking alone.",
         "type": "summary"
     },
     "146": {
-        "file_id": 34,
+        "file_id": 33,
         "content": "DECIDE WHETHER THE FUNCTION IS STANDALONE OR NEEDED TO IMPORT SPECIFIC MODULE.\nLIST ALL CALLABLE FUNCTION IF IMPORTED.\nLIST ALL RELATED STUFF INCLUDING OTHER FUNCTIOB OR GLOBAL CONSTANT OR OTHER THINGS.\nHoly shit I have met my savior. THE DIR FUNCTION!\nWe need vim script or GUI controller to do vim automation. Autoexpect won't do.\ndef func(x):\n# add this line\n\tprint(type(x))\nMaybe we shall understand the tokenization more deeply.\nUse tokenize. Use xml parser.\nTHE TYPE DETECTER OF SOURCE FILE CANNOT BE AS NAIVE AS EXECUTING IT USING EXPECT AND SEE IF THERE IS SYNTAX ERROR. better use highlighter or some tokenizer. deeplearning is the best.",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/README:1-15"
     },
     "147": {
-        "file_id": 34,
+        "file_id": 33,
         "content": "Code is analyzing the need for importing specific modules or using standalone functions, listing all callable functions and related components such as other functions or global constants. The author mentions a need for Vim script automation with a GUI controller, as Autoexpect won't suffice. They also discuss the importance of understanding tokenization and suggest using highlighters or tokenizers for detecting source file types rather than relying on syntax checking alone.",
         "type": "comment"
     },
     "148": {
-        "file_id": 35,
+        "file_id": 34,
         "content": "/metalearning/methodBank/analyzer/adidas.py",
         "type": "filepath"
     },
     "149": {
-        "file_id": 35,
+        "file_id": 34,
         "content": "The code defines three functions: `schema`, `scheme`, and `chaos`. The `schema` function prints the arguments, their types, and a message. The `scheme` function takes an argument list (a[1]) as a tuple and uses a lambda to return the result of calling the second function in the argument list on the tuple. The `chaos` function calls `scheme` with the first and second arguments from another list, passing them as a single argument.",
         "type": "summary"
     },
     "150": {
-        "file_id": 35,
+        "file_id": 34,
         "content": "#from returnSameVar import retrieve_name\ndef schema(name,*args):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+name+\"--\")\n    print(args)\n    print([type(a0) for a0 in args])\n    # what if object doesn't match?\n    # pass global and local params!\ndef scheme(a,b):\n    # b is a lambda.\n    # a[1] IS A TUPLE.\n    print(\"--Function \"+str(a[0])+\"--\")\n    print(a[1])\n    print([type(a0) for a0 in a[1]])\n    # what if object doesn't match?\n    # pass global and local params!\n    return b(*a[1])\ndef chaos(sb,sc):\n    return scheme([sb[0],sc],sb[1])\n\"\"\"superLamb=(lambda x,y: x+y)\nprint(chaos([\"superLamb\",superLamb],(1,2)))\"\"\"",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/adidas.py:1-27"
     },
     "151": {
-        "file_id": 35,
+        "file_id": 34,
         "content": "The code defines three functions: `schema`, `scheme`, and `chaos`. The `schema` function prints the arguments, their types, and a message. The `scheme` function takes an argument list (a[1]) as a tuple and uses a lambda to return the result of calling the second function in the argument list on the tuple. The `chaos` function calls `scheme` with the first and second arguments from another list, passing them as a single argument.",
         "type": "comment"
     },
     "152": {
-        "file_id": 36,
+        "file_id": 35,
         "content": "/metalearning/methodBank/analyzer/decrypter/asshole.py",
         "type": "filepath"
     },
     "153": {
-        "file_id": 36,
+        "file_id": 35,
         "content": "This code imports the necessary modules and defines a function called `returnTokens`. It takes in a file path as input, opens the file, generates tokens from its contents using `generate_tokens`, closes the file, and returns the generated token list. The function also uses a nested inner function (`decistmt`) to create the token generator and return it.",
         "type": "summary"
     },
     "154": {
-        "file_id": 36,
+        "file_id": 35,
         "content": "from tokenize import generate_tokens\nfrom io import BytesIO\ndef returnTokens(thousands):\n    def decistmt(s):\n        tokgen = generate_tokens(s.readline)\n        v=[x for x in tokgen]\n        s.close()\n        return v\n    h=open(thousands,\"r\")\n    return decistmt(h)",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/asshole.py:1-11"
     },
     "155": {
-        "file_id": 36,
+        "file_id": 35,
         "content": "This code imports the necessary modules and defines a function called `returnTokens`. It takes in a file path as input, opens the file, generates tokens from its contents using `generate_tokens`, closes the file, and returns the generated token list. The function also uses a nested inner function (`decistmt`) to create the token generator and return it.",
         "type": "comment"
     },
     "156": {
-        "file_id": 37,
+        "file_id": 36,
         "content": "/metalearning/methodBank/analyzer/decrypter/bitch.py",
         "type": "filepath"
     },
     "157": {
-        "file_id": 37,
+        "file_id": 36,
         "content": "This code reads a file, generates tokens using tokenize module, and then retrieves the attributes of the first token. It prints various information such as attribute names, their types, and values (except for methods). The code seems to be part of a larger process where it fetches information from a file and processes its content in subsequent steps.",
         "type": "summary"
     },
     "158": {
-        "file_id": 37,
+        "file_id": 36,
         "content": "# paste the thing right at this spot.\nfrom tokenize import generate_tokens\nfrom io import BytesIO\n#from standardInsult import monad\ndef returnTokens(thousands):\n    def decistmt(s):\n        tokgen = generate_tokens(s.readline)\n        v=[x for x in tokgen]\n        s.close()\n        return v\n    h=open(thousands,\"r\")\n    return decistmt(h)\nname0=\"../stripOffPants.py\"\nr=returnTokens(name0)\ntheory=dir(r[0])\nprint(theory)\nhypothesis=[t for t in theory if t[0] != \"_\"]\nprint([\"r[0].\"+g for g in hypothesis])\nprint(r[0])\n# use ipynb?\nkkp=[type(eval(\"r[0].\"+bp)).__name__ for bp in hypothesis]\nprint(kkp)\nprint([eval(\"r[0].\"+hypothesis[bp]) if \"method\" not in kkp[bp] else \"blankStuff\" for bp in range(len(hypothesis))])\nprint(r[0].exact_type)",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/bitch.py:1-25"
     },
     "159": {
-        "file_id": 37,
+        "file_id": 36,
         "content": "This code reads a file, generates tokens using tokenize module, and then retrieves the attributes of the first token. It prints various information such as attribute names, their types, and values (except for methods). The code seems to be part of a larger process where it fetches information from a file and processes its content in subsequent steps.",
         "type": "comment"
     },
     "160": {
-        "file_id": 38,
+        "file_id": 37,
         "content": "/metalearning/methodBank/analyzer/decrypter/cpp.c",
         "type": "filepath"
     },
     "161": {
-        "file_id": 38,
+        "file_id": 37,
         "content": "This C code includes the standard input/output library and contains a main function that prints \"Hello \" followed by \"World\\n\" using the printf function.",
         "type": "summary"
     },
     "162": {
-        "file_id": 38,
+        "file_id": 37,
         "content": "#include <stdio.h>\nint main(){printf(\"Hello \");printf(\"World\\n\");}",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/cpp.c:1-2"
     },
     "163": {
-        "file_id": 38,
+        "file_id": 37,
         "content": "This C code includes the standard input/output library and contains a main function that prints \"Hello \" followed by \"World\\n\" using the printf function.",
         "type": "comment"
     },
     "164": {
-        "file_id": 39,
+        "file_id": 38,
         "content": "/metalearning/methodBank/analyzer/decrypter/extractLinear.py",
         "type": "filepath"
     },
     "165": {
-        "file_id": 39,
+        "file_id": 38,
         "content": "The code uses regular expressions and lambda functions to parse files, extract information, and generate superAddresses. It adds files to the HallOfFame list, checks file locations, and includes functions seekAWrapper() and seekOn(). The final list is moved to Monad.",
         "type": "summary"
     },
     "166": {
-        "file_id": 39,
+        "file_id": 38,
         "content": "import re\nimport os\nfrom getCorrectList import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/extractLinear.py:1-31"
     },
     "167": {
-        "file_id": 39,
+        "file_id": 38,
         "content": "The code is implementing a function to parse a file, extract specific information from it, and return the desired data. It utilizes regular expressions for pattern matching and lambda functions for list manipulation. Additionally, there's a method for generating superAddresses and another for seeking on next targets in a list of files.",
         "type": "comment"
     },
     "168": {
-        "file_id": 39,
+        "file_id": 38,
         "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nfuckingTerm=\"extractLinear.py\"\nMonad='/data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter'\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\nmover(fuckMe,Monad)\nos.system('chmod +x shallowCopy.sh')",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/extractLinear.py:32-59"
     },
     "169": {
-        "file_id": 39,
+        "file_id": 38,
         "content": "The code is parsing a directory tree and adds the files found to the HallOfFame list. If there are next targets, it retrieves all sub-files of those targets and checks if they exist in the correct location (corr). The wanted files are added to the HallOfFame list. If there are no next targets, it returns the current HallOfFame list. It also includes a function seekAWrapper() that takes an initial factor as input, computes correction, and then calls another function seekOn(). The code prints some example toyProject file paths for demonstration purposes and moves the final list to a specified location, Monad.",
         "type": "comment"
     },
     "170": {
-        "file_id": 40,
+        "file_id": 39,
         "content": "/metalearning/methodBank/analyzer/decrypter/fuck.sh",
         "type": "filepath"
     },
     "171": {
-        "file_id": 40,
+        "file_id": 39,
         "content": "This script is using Python's tokenize module to analyze a file, likely for debugging or profiling purposes. It executes the specified Python script (stripOffPants.py) and redirects the output to offShow.log for further analysis or review.",
         "type": "summary"
     },
     "172": {
-        "file_id": 40,
+        "file_id": 39,
         "content": "#!/bin/bash\npython -m tokenize -e ../stripOffPants.py > offShow.log",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/fuck.sh:1-2"
     },
     "173": {
-        "file_id": 40,
+        "file_id": 39,
         "content": "This script is using Python's tokenize module to analyze a file, likely for debugging or profiling purposes. It executes the specified Python script (stripOffPants.py) and redirects the output to offShow.log for further analysis or review.",
         "type": "comment"
     },
     "174": {
-        "file_id": 41,
+        "file_id": 40,
         "content": "/metalearning/methodBank/analyzer/decrypter/getCorrectList.py",
         "type": "filepath"
     },
     "175": {
-        "file_id": 41,
+        "file_id": 40,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "summary"
     },
     "176": {
-        "file_id": 41,
+        "file_id": 40,
         "content": "import os\ndef letIt():\n    return os.listdir(\".\")\n# this is a list.\n#print(makeIt)",
         "type": "code",
         "location": "/metalearning/methodBank/getCorrectDill.py:1-5"
     },
     "177": {
-        "file_id": 41,
+        "file_id": 40,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "comment"
     },
     "178": {
-        "file_id": 42,
+        "file_id": 41,
         "content": "/metalearning/methodBank/analyzer/decrypter/groupHierachy.py",
         "type": "filepath"
     },
     "179": {
-        "file_id": 42,
+        "file_id": 41,
         "content": "The code snippet is a comment for a Python script named \"groupHierachy.py\" located in the directory \"lazer/metalearning/methodBank/analyzer/decrypter\". It suggests using a command-line option to determine the hierarchy tree for the given file.",
         "type": "summary"
     },
     "180": {
-        "file_id": 42,
+        "file_id": 41,
         "content": "# for the same file, use the command line option to figure out the hierachy tree.",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/groupHierachy.py:1-1"
     },
     "181": {
-        "file_id": 42,
+        "file_id": 41,
         "content": "The code snippet is a comment for a Python script named \"groupHierachy.py\" located in the directory \"lazer/metalearning/methodBank/analyzer/decrypter\". It suggests using a command-line option to determine the hierarchy tree for the given file.",
         "type": "comment"
     },
     "182": {
-        "file_id": 43,
+        "file_id": 42,
         "content": "/metalearning/methodBank/analyzer/decrypter/groupTypes.py",
         "type": "filepath"
     },
     "183": {
-        "file_id": 43,
+        "file_id": 42,
         "content": "This code imports the tokenize module, retrieves all variable names from the current scope, filters out those with integer type values, and sorts them based on their corresponding values. Finally, it stores the sorted list in simpleStorage for future reference.",
         "type": "summary"
     },
     "184": {
-        "file_id": 43,
+        "file_id": 42,
         "content": "from tokenize import *\nfuck=dir()\nshit=[(h,eval(h)) for h in fuck if type(eval(h)).__name__ == \"int\"]\n#print(shit)\njerk=list(sorted(shit,key=(lambda x:x[1])))\n# very important! do it afterwards.\nfrom simpleStorage import storeAList\nstoreAList(jerk)",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/groupTypes.py:1-8"
     },
     "185": {
-        "file_id": 43,
+        "file_id": 42,
         "content": "This code imports the tokenize module, retrieves all variable names from the current scope, filters out those with integer type values, and sorts them based on their corresponding values. Finally, it stores the sorted list in simpleStorage for future reference.",
         "type": "comment"
     },
     "186": {
-        "file_id": 44,
+        "file_id": 43,
         "content": "/metalearning/methodBank/analyzer/decrypter/mapTypes.py",
         "type": "filepath"
     },
     "187": {
-        "file_id": 44,
+        "file_id": 43,
         "content": "This code imports tokenize module functions, retrieves directory contents, filters for integer variables, prints the results, and then stores the list in simpleStorage.",
         "type": "summary"
     },
     "188": {
-        "file_id": 44,
+        "file_id": 43,
         "content": "from tokenize import *\nfuck=dir()\nshit={eval(h):h for h in fuck if type(eval(h)).__name__ == \"int\"}\nprint(shit)\n#jerk=list(sorted(shit,key=(lambda x:x[1])))\n# very important! do it afterwards.\nfrom simpleStorage import storeAList\nstoreAList(shit)",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/decrypter/mapTypes.py:1-8"
     },
     "189": {
-        "file_id": 44,
+        "file_id": 43,
         "content": "This code imports tokenize module functions, retrieves directory contents, filters for integer variables, prints the results, and then stores the list in simpleStorage.",
         "type": "comment"
     },
     "190": {
-        "file_id": 45,
+        "file_id": 44,
         "content": "/metalearning/methodBank/analyzer/decrypter/shallowCopy.py",
         "type": "filepath"
     },
     "191": {
-        "file_id": 45,
+        "file_id": 44,
         "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
         "type": "summary"
     },
     "192": {
-        "file_id": 45,
+        "file_id": 44,
         "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        fuck.write('#!/bin/bash\\n')\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+' &\\n')",
         "type": "code",
         "location": "/metalearning/methodBank/shallowCopy.py:1-5"
     },
     "193": {
-        "file_id": 45,
+        "file_id": 44,
         "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
         "type": "comment"
     },
     "194": {
-        "file_id": 46,
+        "file_id": 45,
         "content": "/metalearning/methodBank/analyzer/decrypter/standardInsult.py",
         "type": "filepath"
     },
     "195": {
-        "file_id": 46,
+        "file_id": 45,
         "content": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
         "type": "summary"
     },
     "196": {
-        "file_id": 46,
+        "file_id": 45,
         "content": "import re\n# maybe we shouldn't go further than __a__ funcs\n# use globals() locals() dictionaries.\n# no kwargs.\ndef parseDir(objectName,gloss):\n    return list(map((lambda x: objectName+\".\"+x),eval(\"dir({})\".format(objectName),gloss)))\ndef parseType(objectList,gloss):\n    return list(map((lambda x: eval(\"type({})\".format(x),gloss).__name__), objectList))\ndef recurDir(objectStruct,former,gloss):\n    joke=[list(filter((lambda x:len(re.findall(r'__.+__',x.split('.')[-1]))==0),obj)) for obj in objectStruct]\n#    print(joke)\n    if sum([len(joker) for joker in joke])==0:\n        return (objectStruct+former)\n    else:\n        a=[]\n        for obj in joke:\n            for obj0 in obj:\n                a.append(parseDir(obj0,gloss))\n        return recurDir(a,former+objectStruct,gloss)\ndef depthType(ls,gloss):\n    return list(map((lambda x: parseType(x,gloss)), ls))\ndef monad(m,gloss):\n    ml=recurDir([parseDir(m,gloss)],[],gloss)\n#    print(ml)\n    return (ml,depthType(ml,gloss))\n# That was intense.",
         "type": "code",
         "location": "/metalearning/methodBank/analyzer/standardParse.py:1-30"
     },
     "197": {
-        "file_id": 46,
+        "file_id": 45,
         "content": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
         "type": "comment"
     },
     "198": {
-        "file_id": 47,
+        "file_id": 46,
         "content": "/metalearning/methodBank/analyzer/decrypter/standardParse.py",
         "type": "filepath"
     },
     "199": {
-        "file_id": 47,
+        "file_id": 46,
         "content": "This code defines functions to analyze the structure and types of an object recursively. It uses directory listing, type checking, and regular expressions. The \"monad\" function takes an object name, searches for its attributes recursively, and returns a list of attribute names and their corresponding types.",
         "type": "summary"
     }

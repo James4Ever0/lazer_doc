@@ -1,530 +1,530 @@
 {
     "3300": {
-        "file_id": 574,
+        "file_id": 572,
         "content": "import sqlite3\n# initial shits\ndef executeCode(sql):\n    conn=sqlite3.connect(\"fuckyou.db\")\n    conn.execute(sql)\n    conn.commit()\n    conn.close()\n'''\ndef closeConnection():\n\tconn.close()'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/term0.py:1-11"
     },
     "3301": {
-        "file_id": 574,
+        "file_id": 572,
         "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
         "type": "comment"
     },
     "3302": {
-        "file_id": 575,
+        "file_id": 573,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/README",
         "type": "filepath"
     },
     "3303": {
-        "file_id": 575,
+        "file_id": 573,
         "content": "This code discusses the focus on three features (country, symbol, name) and mentions unicode-16 support being necessary. The discovery of a pattern where two unicode characters can be combined is highlighted as amazing. Some issues during chr() ord() conversion are mentioned but not considered a problem here. The need to separate combinations in case of a loop is emphasized.",
         "type": "summary"
     },
     "3304": {
-        "file_id": 575,
+        "file_id": 573,
         "content": "only three features are focused: country, symbol, name.\ninternal relationship could be derived later.\nnow we shall concern about the basic shits.\nthe problem is: unicode-16 support is needed.\nMaybe I have seen that? Did I? In the alphabet processing?\nI have discovered a new pattern here. Two fucking unicode can just be one. It is amazing.\nthere are some grey areas during chr() ord() conversion. But it is not the problem here.\nWHAT IF THERE IS A LOOP? MUST SEPARATE THESE COMBINATIONS NOW!",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/README:1-11"
     },
     "3305": {
-        "file_id": 575,
+        "file_id": 573,
         "content": "This code discusses the focus on three features (country, symbol, name) and mentions unicode-16 support being necessary. The discovery of a pattern where two unicode characters can be combined is highlighted as amazing. Some issues during chr() ord() conversion are mentioned but not considered a problem here. The need to separate combinations in case of a loop is emphasized.",
         "type": "comment"
     },
     "3306": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/alphaGel.py",
         "type": "filepath"
     },
     "3307": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "This code defines functions for data processing, such as converting strings to CSV format and checking values. It searches for differences and similarities in sorted data, returning watched items or extracted data with additional information using the `utilize` function.",
         "type": "summary"
     },
     "3308": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "# first, pattern.\n# second, utilize.\n# sorted or not\nimport os\nimport statistics\nfrom keepMeSatisfied import same_fuck\nsimilar=(lambda x,y: True if (x/y > 1/4 and x/y < 4) else False)\ndef sucker(m):\n    s=\"\"\n    for k in m:\n        s+=(str(k)+\" \")\n    return s[:-1]\ndef ash(bitchEternity):\n    init=\"lua geniusWalk.lua\"\n    for fuckall in bitchEternity:\n        init+=\" \"+str(fuckall)\n    myCmd0 = os.popen(init)\n    myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))\n   # kill=(lambda k:list(map((lambda x:int(x)),k)))\n#    dickHead=kill(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n    myCmd0.close()\n    return myCmd[1]\n#    ksn=dickhead.count(statistics.mode(dickhead))\n#    ksd=len(dickhead)\n    #return [similar(ksn,ksd),similar(ksn,ksd//2)]\nshit=(lambda x0: list(filter((lambda x:x!=\"\"),x0.split(\" \"))))\ndef amplifier(c):\n    a,b=c[0],c[1]\n    if a==True:\n        return True\n    elif b==True:\n        return True\n    else:\n        return False\n# derive=(lambda f,g: int(g/(2+(f*(1/(1-g//2))))))\nderive=(lambda f,g: int(g/(2+(f*(1/(1-g/2))))) if f%2==1 else int(g//f)*f)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:1-42"
     },
     "3309": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "This code defines several functions and variables to process data. The \"sucker\" function converts a string of numbers into a comma-separated format, while the \"ash\" function executes a command and returns its second line. The \"amplifier\" function checks if either of two input values is True. The \"derive\" function calculates a value based on two input parameters. Overall, the code seems to be related to data processing and command execution.",
         "type": "comment"
     },
     "3310": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "takeTwo=(lambda v:list(map((lambda f: abs(int(f))),v)))\ndef verizon0(mode,dutch,count):\n    duck=dutch[0]\n    rubber=dutch[1]\n    if mode == True:\n        # sorted.\n        a,b=rubber[0]\n        a0,b0=len(shit(a)),len(b)\n        pushUp=similar(count[0]/2,a0)\n        if count[1]==True and b0==2:\n            return [pushUp,True]\n        else:\n            return [pushUp,False]\n    if mode == False:\n        # not sorted.\n        if statistics.mean(list(map((lambda x:statistics.mean(takeTwo(shit(x)))),[ducky[0] for ducky in duck])))>5:\n            ver2=verizon0(True,dutch,count)[0]\n            a=[int(similar(len(shit(deutsch[0]))*len(deutsch[1]),derive(len(shit(deutsch[0])),count[0]))) for deutsch in duck]\n            b=0\n            for a0 in a:\n                b+=a0\n            if similar(b,len(duck)):\n                return [True,ver2]\n            else:\n                return [False,ver2]\n        else:\n            return [False,False]\ndef verizon1(ducky,count):\n    similar0=(lambda x,y: True if (x/y > 1/4 and x/y < 4) else False)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:43-72"
     },
     "3311": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "This function takes a list of inputs and checks if they are sorted. If not, it compares the means of each input with a threshold value. It also checks if the length of the input list is equal to the count provided. If both conditions are met, it returns [True/False, calculated value]. If not sorted or mean exceeds threshold, it calls itself with sorted inputs and applies additional checks before returning [True/False, False].",
         "type": "comment"
     },
     "3312": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "    # only work in sorted mode.\n    bang=ducky[0]\n    shaky=list(map((lambda x: x[1]-x[0]),bang))\n    fuckMe=ducky[1]\n    if fuckMe!=[]:\n        if similar0(len(fuckme),count[0]):\n            watchMe=same_fuck(ash(fuckme))\n            return verizon0(True,watchMe,[len(watchMe),True if len(watchMe)%2==0 else False])\n        else:\n            pass\n    else:\n        print(shaky)\n        suckMeUp=sucker(shaky)\n        print(suckMeUp)\n        watchMe=same_fuck(suckMeUp)\n        print(watchMe)\n        # use try catch.\n#        if watchMe[0]!=[] and watchMe[1]!=[]:\n        return verizon0(True,watchMe,[len(watchMe),True if len(watchMe)%2==0 else False])\n#        else:\n#            print(\"FUCKING HELL!\\nFUCKING HELL!\")\n#            return [False,False,False]\ndef utilize(result,ab,cd):\n    if result == True:\n        if ab == True:\n            return [[cd[a] for a in range(len(cd)) if a%2==0],[cd[a] for a in range(len(cd)) if a%2==1]]\n        else:\n            print(\"-- DUPLICATES FOUND --\\n-- MIGRATE TO ICU --\")\n            return [[],[]]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:73-102"
     },
     "3313": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "This code appears to be searching for differences and similarities in sorted data. If the data is not empty, it checks if the length matches a specific count value. If so, it returns the watched items (watchMe) along with additional information. If the data is empty, it prints shaky values, then extracts sucked-up data (suckMeUp), finds similarities in it, and returns them along with additional information. The function `utilize` is used to process results, returning either similarity pairs or indicating duplicate issues.",
         "type": "comment"
     },
     "3314": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "    else:\n        print(\"-- I FUCKED UP --\\n-- NO FUCKS GIVEN --\")\n        return [[],[]]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/alphaGel.py:103-105"
     },
     "3315": {
-        "file_id": 576,
+        "file_id": 574,
         "content": "If the condition is not met, it prints a message and returns empty lists.",
         "type": "comment"
     },
     "3316": {
-        "file_id": 577,
+        "file_id": 575,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/bruce.sh",
         "type": "filepath"
     },
     "3317": {
-        "file_id": 577,
+        "file_id": 575,
         "content": "This code executes three scripts in order: newShit.sh, derive_prefixed_fixed.py, and scientologyN.py, with the output of the last script being redirected to zen.log.",
         "type": "summary"
     },
     "3318": {
-        "file_id": 577,
+        "file_id": 575,
         "content": "#!/bin/bash\n./newShit.sh\npython derive_prefixed_fixed.py\npython scientologyN.py > zen.log",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/bruce.sh:1-4"
     },
     "3319": {
-        "file_id": 577,
+        "file_id": 575,
         "content": "This code executes three scripts in order: newShit.sh, derive_prefixed_fixed.py, and scientologyN.py, with the output of the last script being redirected to zen.log.",
         "type": "comment"
     },
     "3320": {
-        "file_id": 578,
+        "file_id": 576,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/constructor.py",
         "type": "filepath"
     },
     "3321": {
-        "file_id": 578,
+        "file_id": 576,
         "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
         "type": "summary"
     },
     "3322": {
-        "file_id": 578,
+        "file_id": 576,
         "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" );\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/constructor.py:1-31"
     },
     "3323": {
-        "file_id": 578,
+        "file_id": 576,
         "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
         "type": "comment"
     },
     "3324": {
-        "file_id": 579,
+        "file_id": 577,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/derive_prefixed_fixed.py",
         "type": "filepath"
     },
     "3325": {
-        "file_id": 579,
+        "file_id": 577,
         "content": "The code reads Python files, extracts table and constraint details, and returns table names and constraint lists. It uses regular expressions for pattern matching and list operations. Applied to 3 files: makeDB0.py, makeDB1.py, makeGroupingDatabase.py. The code also prints variables, stores a list [b, c, a] in storeAList.",
         "type": "summary"
     },
     "3326": {
-        "file_id": 579,
+        "file_id": 577,
         "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=['makeDB0.py','makeDB1.py','makeGroupingDatabase.py']\na=cockShock(dickHead[0])\nb=cockShock(dickHead[1])\nc=cockShock(dickHead[2])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/derive_prefixed_fixed.py:1-28"
     },
     "3327": {
-        "file_id": 579,
+        "file_id": 577,
         "content": "This code performs meta-programming by reading a Python file, extracting table and constraint details, and returning the table name and constraint names in a list. The code uses regular expressions for pattern matching and list operations to process the extracted information. It is applied to three different files: 'makeDB0.py', 'makeDB1.py', and 'makeGroupingDatabase.py'.",
         "type": "comment"
     },
     "3328": {
-        "file_id": 579,
+        "file_id": 577,
         "content": "'''print(a)\nprint(\"--spliter--\")\nprint(b)'''\nstoreAList([b,c,a])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/derive_prefixed_fixed.py:29-32"
     },
     "3329": {
-        "file_id": 579,
+        "file_id": 577,
         "content": "The code prints a variable 'a', displays a spliter, and then prints another variable 'b' before storing the list [b, c, a] in a list called storeAList.",
         "type": "comment"
     },
     "3330": {
-        "file_id": 580,
+        "file_id": 578,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/discoveryChannel.py",
         "type": "filepath"
     },
     "3331": {
-        "file_id": 580,
+        "file_id": 578,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "summary"
     },
     "3332": {
-        "file_id": 580,
+        "file_id": 578,
         "content": "#text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\n#print(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/discoveryChannel.py:1-29"
     },
     "3333": {
-        "file_id": 580,
+        "file_id": 578,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "comment"
     },
     "3334": {
-        "file_id": 581,
+        "file_id": 579,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/ejaculate.py",
         "type": "filepath"
     },
     "3335": {
-        "file_id": 581,
+        "file_id": 579,
         "content": "The code defines a function `testCube()` that checks if there is a pair of consecutive values in the given list differing by 1. The function `semen()` takes two lists, sorts them and checks if any of them have consecutive values differing by 1. If yes, it returns the sorted list(s), otherwise it recursively divides the unsorted list into two parts, sorts them and calls itself.",
         "type": "summary"
     },
     "3336": {
-        "file_id": 581,
+        "file_id": 579,
         "content": "def testCube(_list):\n    v=sorted(_list)\n    vk=0\n    v2=int(len(_list)/2)\n    for i in range(len(_list)-1):\n        if abs(v[i][1]-v[i+1][1])==1:\n            vk+=1\n            if vk>v2:\n                return True\n            else:\n                pass\n        else:\n            pass\n    return False\ndef semen(sortedList,unsortedList):\n    l=int(len(unsortedList)/2)\n    l0,l1=sortedList[0],sortedList[1]\n    jam=testCube(l0) or testCube(l1)\n    print(\"-- LIB STD --\")\n    print(jam)\n    print(\"-- LIB STD --\")\n    if jam:\n        return sortedList\n    else:\n        if l*2==len(unsortedList):\n            v0,v1=unsortedList[:l-1],unsortedList[l:]\n            # need for hard code.\n#        v2=[]\n#        for k in len(v0):\n#            v2.append(v0[k])\n#            v2.append(v1[k])\n            return semen([v0,v1],unsortedList[:-1])\n        else:\n            print(\"FUCKING FUCKED\\nFUCKING FUCKED\")\n            return [[],[]]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/jerkMeOffTheGround/ejaculate.py:1-36"
     },
     "3337": {
-        "file_id": 581,
+        "file_id": 579,
         "content": "The code defines a function `testCube()` that checks if there is a pair of consecutive values in the given list differing by 1. The function `semen()` takes two lists, sorts them and checks if any of them have consecutive values differing by 1. If yes, it returns the sorted list(s), otherwise it recursively divides the unsorted list into two parts, sorts them and calls itself.",
         "type": "comment"
     },
     "3338": {
-        "file_id": 582,
+        "file_id": 580,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/extractLinear.py",
         "type": "filepath"
     },
     "3339": {
-        "file_id": 582,
+        "file_id": 580,
         "content": "This code includes file manipulation functions, such as 'open_to_return' and 'parse_file', and defines 'seekAWrapper' which utilizes other functions to seek files, change permissions, and move them to a directory.",
         "type": "summary"
     },
     "3340": {
-        "file_id": 582,
+        "file_id": 580,
         "content": "import re\nimport os\nfrom getCorrectList import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/extractLinear.py:1-31"
     },
     "3341": {
-        "file_id": 582,
+        "file_id": 580,
         "content": "This code contains various functions that read, parse, and manipulate files. The 'open_to_return' function reads a file, removing empty lines, and returns the contents as a list. 'parse_file' applies several operations to the file list, such as filtering, mapping, and finding specific patterns using regular expressions. The 'superAddress' function appends '.py' to each file name in a list, while 'seekOn' scans through a list of targets.",
         "type": "comment"
     },
     "3342": {
-        "file_id": 582,
+        "file_id": 580,
         "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nMonad='/data/data/com.termux/files/home/lazer/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks'\nfuckingTerm=\"derive_prefixed_fixed.py\"\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\nmover(fuckMe,Monad)\nos.system('chmod +x shallowCopy.sh')",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/extractLinear.py:32-59"
     },
     "3343": {
-        "file_id": 582,
+        "file_id": 580,
         "content": "This code defines a function called `seekAWrapper` that takes an initial factor as input and returns the result of the `seekOn` function with specific arguments. The function also prints some example outputs using the `toyProject` function and calls `mover` to move the list of files to a specified directory, after changing file permissions with `os.system('chmod +x shallowCopy.sh')`.",
         "type": "comment"
     },
     "3344": {
-        "file_id": 583,
+        "file_id": 581,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/frightning.py",
         "type": "filepath"
     },
     "3345": {
-        "file_id": 583,
+        "file_id": 581,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "summary"
     },
     "3346": {
-        "file_id": 583,
+        "file_id": 581,
         "content": "# fully trustworthy partial trustworthy complete nonsense\n# return a list instead.\nimport re\n\"\"\"\nliteral=\"2 3 42 3 451 2 3 4 5 62 3 45 2 3 45\"\nanus0=\"2 3 4\"\n#def testStone(major,minor,jerkOff):\n\"\"\"\ndef testTube(nb,anus):\n#    fuck=re.findall(r'[0-9]{}?[0-9]|?[0-9]{}[0-9]'.format(anus,anus,anus),nb)\n    fuck=[m.start() for m in re.finditer(anus,nb)]\n    fuckme=[len(nb),len(anus)]\n    bitch=[]\n    for wifu in fuck:\n        if wifu==0:\n            if nb[wifu+fuckme[1]]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        elif wifu+fuckme[1]==fuckme[0]:\n            if nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        else:\n            if nb[wifu+fuckme[1]]==\" \" and nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n    return bitch\n    #print(fuck)\n\"\"\"\nprint(literal)\nprint(\"--spliter--\")\nprint(testTube(literal,anus0))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/frightning.py:1-38"
     },
     "3347": {
-        "file_id": 583,
+        "file_id": 581,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "comment"
     },
     "3348": {
-        "file_id": 584,
+        "file_id": 582,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/getCorrectList.py",
         "type": "filepath"
     },
     "3349": {
-        "file_id": 584,
+        "file_id": 582,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "summary"
     },
     "3350": {
-        "file_id": 584,
+        "file_id": 582,
         "content": "import os\ndef letIt():\n    return os.listdir(\".\")\n# this is a list.\n#print(makeIt)",
         "type": "code",
         "location": "/metalearning/methodBank/getCorrectDill.py:1-5"
     },
     "3351": {
-        "file_id": 584,
+        "file_id": 582,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "comment"
     },
     "3352": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/keepMeSatisfied.py",
         "type": "filepath"
     },
     "3353": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "The code uses difflib to find similar words and filters a list based on specific patterns. It splits the string, compares them, processes blocks, and creates a list of unique words with patience values. The function `same_fuck` is defined and likely serves as a placeholder or joke.",
         "type": "summary"
     },
     "3354": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "import difflib\nimport re\nfrom frightning import testTube\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\n\"\"\"\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\n\"\"\"\ndef same_fuck(superstring):\n    gnu=[]\n#    print(superstring)\n    # standard spliter here is the space char.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:1-44"
     },
     "3355": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "This code is using the difflib module to find words that appear in the same order but not necessarily at the same index between two strings. It also includes a function \"fuckall\" which filters a list, removing elements unless they are consecutive and follow a specific pattern. The \"same_fuck\" function takes a superstring as input and processes it further.",
         "type": "comment"
     },
     "3356": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "    fuck=[pos for pos, char in enumerate(superstring) if (char == \" \" and (superstring[(pos+1 if (pos<len(superstring)-1) else pos-1)]!=\"1\" or superstring[(pos-1 if (pos>0) else pos+1)]!=\"1\")) ]\n#    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=list(filter((lambda x:x!=' '),[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]))\n        gnu+=list(map((lambda x: re.sub(\"^ \",\"\",re.sub(\" $\",\"\",x))),thug))\n#    bsd=list(set(gnu))\n#    cp=len(bsd)\n#    analsex=[[]]*cp\n#    for x in range(cp):\n#        anus=bsd[x]\n#        analsex[x]=[anus,gnu.count(anus)]\n#    print(analsex)\n    patience=list(filter((lambda x:len(x[1])>1),list(map((lambda x:[x,testTube(superstring,x)]),sorted(list(set(gnu)),key=(lambda x:-len(x)))))))\n    aladin=[sorted(patience,key=(lambda x:-len(x[1]))),patience]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:45-64"
     },
     "3357": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "The code defines a list called \"fuck\" that contains positions in the string where there are consecutive spaces without \"1\" before or after them. It then splits the original string into two parts at these positions, compares them using difflib's SequenceMatcher and filters the matching blocks to only include non-space characters. These blocks are further processed by removing leading/trailing spaces and adding to a list called \"gnu\". The code then calculates the patience value for each unique word in \"gnu\" by counting occurrences and filtering out short words, resulting in a final list called \"patience\".",
         "type": "comment"
     },
     "3358": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "    return aladin\n\"\"\"shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nprint(same_fuck(shit))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:65-67"
     },
     "3359": {
-        "file_id": 585,
+        "file_id": 583,
         "content": "This code snippet defines a function `same_fuck` which takes an argument and returns it. It also includes a print statement that calls this function with the string \"hell yeah i am back\" and then prints its return value. The code is likely a placeholder or a joke, as there seems to be no meaningful computational operation happening in the given code snippet.",
         "type": "comment"
     },
     "3360": {
-        "file_id": 586,
+        "file_id": 584,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/lolita.py",
         "type": "filepath"
     },
     "3361": {
-        "file_id": 586,
+        "file_id": 584,
         "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
         "type": "summary"
     },
     "3362": {
-        "file_id": 586,
+        "file_id": 584,
         "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py:1-20"
     },
     "3363": {
-        "file_id": 586,
+        "file_id": 584,
         "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
         "type": "comment"
     },
     "3364": {
-        "file_id": 587,
+        "file_id": 585,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/makeDB0.py",
         "type": "filepath"
     },
     "3365": {
-        "file_id": 587,
+        "file_id": 585,
         "content": "The code connects to a SQLite database, creates a table named 'chainer' with columns for startId, endId, and dayName. It ensures the uniqueness of each entry by setting a constraint on these columns in ascending order. The code then commits the changes and closes the connection. The comment suggests that intermediate things should be processed before entering data into the graph database, with alphabetical order, case relationships being one-directional. Labels can have relationships too, but it is unclear if certain labels are not usable or if they should be distinguished. The code does not specify how to handle this situation.",
         "type": "summary"
     },
     "3366": {
-        "file_id": 587,
+        "file_id": 585,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE chainer (startId INT NOT NULL,\nendId INT NOT NULL, dayName TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (startId ASC, endId ASC, dayName ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/makeDB0.py:1-18"
     },
     "3367": {
-        "file_id": 587,
+        "file_id": 585,
         "content": "The code connects to a SQLite database, creates a table named 'chainer' with columns for startId, endId, and dayName. It ensures the uniqueness of each entry by setting a constraint on these columns in ascending order. The code then commits the changes and closes the connection. The comment suggests that intermediate things should be processed before entering data into the graph database, with alphabetical order, case relationships being one-directional. Labels can have relationships too, but it is unclear if certain labels are not usable or if they should be distinguished. The code does not specify how to handle this situation.",
         "type": "comment"
     },
     "3368": {
-        "file_id": 588,
+        "file_id": 586,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/makeDB1.py",
         "type": "filepath"
     },
     "3369": {
-        "file_id": 588,
+        "file_id": 586,
         "content": "The code imports sqlite3 and establishes a connection to the \"fuckyou.db\" database. It creates a table called \"groupAll\" with countryCode and charGroup columns, enforcing uniqueness based on their combined values. The alphabetical order and case relationships of labels are noted as one-directional, but it's unclear if they can have relationships or if they should be distinguished further.",
         "type": "summary"
     },
     "3370": {
-        "file_id": 588,
+        "file_id": 586,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE groupAll (countryCode TEXT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (countryCode ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/makeDB1.py:1-18"
     },
     "3371": {
-        "file_id": 588,
+        "file_id": 586,
         "content": "The code imports sqlite3 and establishes a connection to the \"fuckyou.db\" database. It creates a table called \"groupAll\" with countryCode and charGroup columns, enforcing uniqueness based on their combined values. The alphabetical order and case relationships of labels are noted as one-directional, but it's unclear if they can have relationships or if they should be distinguished further.",
         "type": "comment"
     },
     "3372": {
-        "file_id": 589,
+        "file_id": 587,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/makeGroupingDatabase.py",
         "type": "filepath"
     },
     "3373": {
-        "file_id": 589,
+        "file_id": 587,
         "content": "The code creates a SQLite database named \"fuckyou.db\" and then executes a CREATE TABLE statement to define the table structure for groupAllChars0. It ensures uniqueness based on mainId and charGroup using a UNIQUE constraint. The code also mentions considering alphabetical order, case relationship, and label relationships in the database. It briefly discusses whether to insert random stuff first or prioritize maintaining the relationship while populating the database.",
         "type": "summary"
     },
     "3374": {
-        "file_id": 589,
+        "file_id": 587,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE groupAllChars0 (mainId INT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (mainId ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/makeGroupingDatabase.py:1-18"
     },
     "3375": {
-        "file_id": 589,
+        "file_id": 587,
         "content": "The code creates a SQLite database named \"fuckyou.db\" and then executes a CREATE TABLE statement to define the table structure for groupAllChars0. It ensures uniqueness based on mainId and charGroup using a UNIQUE constraint. The code also mentions considering alphabetical order, case relationship, and label relationships in the database. It briefly discusses whether to insert random stuff first or prioritize maintaining the relationship while populating the database.",
         "type": "comment"
     },
     "3376": {
-        "file_id": 590,
+        "file_id": 588,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newShit.sh",
         "type": "filepath"
     },
     "3377": {
-        "file_id": 590,
+        "file_id": 588,
         "content": "This script sequentially executes three Python scripts (makeDB0.py, makeDB1.py, and makeGroupingDatabase.py) to create databases, presumably for a project. The databases may be used in a larger application or system.",
         "type": "summary"
     },
     "3378": {
-        "file_id": 590,
+        "file_id": 588,
         "content": "#!/bin/bash\npython3 makeDB0.py\npython3 makeDB1.py\npython3 makeGroupingDatabase.py",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newShit.sh:1-4"
     },
     "3379": {
-        "file_id": 590,
+        "file_id": 588,
         "content": "This script sequentially executes three Python scripts (makeDB0.py, makeDB1.py, and makeGroupingDatabase.py) to create databases, presumably for a project. The databases may be used in a larger application or system.",
         "type": "comment"
     },
     "3380": {
-        "file_id": 591,
+        "file_id": 589,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newTestN.py",
         "type": "filepath"
     },
     "3381": {
-        "file_id": 591,
+        "file_id": 589,
         "content": "This code imports functions from other modules and defines two functions, 'forMotherRussia' and 'toyProject'. The purpose of the code is to manipulate data from a list using 'returnAList' function and perform an operation based on 'numToKill' and 'superRats', then return the final result for further processing. The code also includes some comments expressing frustration or sarcastic remarks, possibly related to the development process.",
         "type": "summary"
     },
     "3382": {
-        "file_id": 591,
+        "file_id": 589,
         "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    err=forMotherRussia(numToKill,superRats)\n    print(err)\n# there is the unique constraint\n    executeCode(err)\n# fucking pricks.\n#print(forMotherRussia(0,['singapore','newYear']))\n#print(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newTestN.py:1-21"
     },
     "3383": {
-        "file_id": 591,
+        "file_id": 589,
         "content": "This code imports functions from other modules and defines two functions, 'forMotherRussia' and 'toyProject'. The purpose of the code is to manipulate data from a list using 'returnAList' function and perform an operation based on 'numToKill' and 'superRats', then return the final result for further processing. The code also includes some comments expressing frustration or sarcastic remarks, possibly related to the development process.",
         "type": "comment"
     },
     "3384": {
-        "file_id": 592,
+        "file_id": 590,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newTestR.py",
         "type": "filepath"
     },
     "3385": {
-        "file_id": 592,
+        "file_id": 590,
         "content": "The code defines two functions, \"forMotherRussia\" and \"toyProject\". \"forMotherRussia\" takes a number and a list of super rats as input and returns the final result using the \"finalPro\" function. It seems to be related to an unclear task or project involving numbers, lists, and possibly data processing. The code includes some comments expressing frustration but doesn't affect functionality.",
         "type": "summary"
     },
     "3386": {
-        "file_id": 592,
+        "file_id": 590,
         "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    executeCode(forMotherRussia(numToKill,superRats))\n# fucking pricks.\nprint(forMotherRussia(0,['singapore','newYear']))\nprint(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/newTestR.py:1-18"
     },
     "3387": {
-        "file_id": 592,
+        "file_id": 590,
         "content": "The code defines two functions, \"forMotherRussia\" and \"toyProject\". \"forMotherRussia\" takes a number and a list of super rats as input and returns the final result using the \"finalPro\" function. It seems to be related to an unclear task or project involving numbers, lists, and possibly data processing. The code includes some comments expressing frustration but doesn't affect functionality.",
         "type": "comment"
     },
     "3388": {
-        "file_id": 593,
+        "file_id": 591,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/preserveOrder.py",
         "type": "filepath"
     },
     "3389": {
-        "file_id": 593,
+        "file_id": 591,
         "content": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
         "type": "summary"
     },
     "3390": {
-        "file_id": 593,
+        "file_id": 591,
         "content": "def f7(seq):\n    seen = set()\n    seen_add = seen.add\n    return [x for x in seq if not (x in seen or seen_add(x))]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/preserveOrder.py:1-4"
     },
     "3391": {
-        "file_id": 593,
+        "file_id": 591,
         "content": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
         "type": "comment"
     },
     "3392": {
-        "file_id": 594,
+        "file_id": 592,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/rangeDetector.py",
         "type": "filepath"
     },
     "3393": {
-        "file_id": 594,
+        "file_id": 592,
         "content": "Function takes a list of numbers (flist), a standard value, and an indicator as parameters. If any number in the list is greater than the standard value and the indicator is True, it returns False; otherwise, it returns True.",
         "type": "summary"
     },
     "3394": {
-        "file_id": 594,
+        "file_id": 592,
         "content": "def rkRoyal(flist,standard,indicator):\n    # this is an upsign.\n    for f in flist:\n        if f > standard and indicator:\n            return False\n        else:\n            pass\n    return True",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/rangeDetector.py:1-8"
     },
     "3395": {
-        "file_id": 594,
+        "file_id": 592,
         "content": "Function takes a list of numbers (flist), a standard value, and an indicator as parameters. If any number in the list is greater than the standard value and the indicator is True, it returns False; otherwise, it returns True.",
         "type": "comment"
     },
     "3396": {
-        "file_id": 595,
+        "file_id": 593,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/scientologyN.py",
         "type": "filepath"
     },
     "3397": {
-        "file_id": 595,
+        "file_id": 593,
         "content": "The code imports modules, processes log files, identifies matching lines' coordinates, extracts data from \"dizzy\" and \"shit0\", prevents duplicates, builds a checklist, prints \"finalblow\", and may remove duplicates; it is part of a larger program involving functions like \"jokeBook\" and \"toyProject\".",
         "type": "summary"
     },
     "3398": {
-        "file_id": 595,
+        "file_id": 593,
         "content": "import pickle\nfrom lolita import fury\nimport re\nfrom getFromPickle import returnAList\n#from simpleStorage import storeAList\n#from shakeThatBootyR import neuron\nfrom newTestN import toyProject\n# pause it a little bit.\nuselessPrick=[0,4,5]\ncoreLoop=returnAList()\ncoreCount=len(coreLoop)\njokeBook=[]\nfor k in range(coreCount+1):\n    jokeBook.append([])\n# what is idle all about?\nsimpleFunc=(lambda x: x.split(':'))\ndef simpleDerive(x):\n    shitOut=simpleFunc(x)\n    return [re.findall(r'\\w+',shitOut[0])[0],re.findall(r'[^ ].+$',shitOut[1])[0]]\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x[:-1] if x[-1]==\"\\n\" else x)\n#greatWall0=(lambda x: x[:-1] if x[-1]==\" \" else x)\n#greatWall1=(lambda x: x[1:] if x[1]==\" \" else x)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \"]))\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/holidays/scientologyN.py:1-36"
     },
     "3399": {
-        "file_id": 595,
+        "file_id": 593,
         "content": "The code imports several modules, defines a few variables and functions, and loads data from pickle files. It appears to be preparing for further processing of stored information. The commented-out sections suggest there were previous versions or attempts that have been removed.",
         "type": "comment"
     }

@@ -1,532 +1,532 @@
 {
     "3200": {
-        "file_id": 556,
+        "file_id": 554,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB2.py",
         "type": "filepath"
     },
     "3201": {
-        "file_id": 556,
+        "file_id": 554,
         "content": "This code creates a SQLite database table called \"countryMap\" with columns for countryName and charGroup, ensuring uniqueness based on ascending alphabetical order of both fields. The code then closes the connection to the database. It seems to be organizing labels in an array, considering alphabetical order as the sorting mechanism, and mentioning relationships between labels but not specifying further details.",
         "type": "summary"
     },
     "3202": {
-        "file_id": 556,
+        "file_id": 554,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE countryMap (\ncountryName TEXT NOT NULL,\ncharGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (countryName ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB2.py:1-19"
     },
     "3203": {
-        "file_id": 556,
+        "file_id": 554,
         "content": "This code creates a SQLite database table called \"countryMap\" with columns for countryName and charGroup, ensuring uniqueness based on ascending alphabetical order of both fields. The code then closes the connection to the database. It seems to be organizing labels in an array, considering alphabetical order as the sorting mechanism, and mentioning relationships between labels but not specifying further details.",
         "type": "comment"
     },
     "3204": {
-        "file_id": 557,
+        "file_id": 555,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB3.py",
         "type": "filepath"
     },
     "3205": {
-        "file_id": 557,
+        "file_id": 555,
         "content": "The code creates a SQLite database table, 'languageMap', with columns for languageName and charGroup. It enforces uniqueness based on these two columns in ascending order. The code also mentions the need to consider alphabetical order, case relationships, labels having relationships, potential distinctions among labels, and maintaining the relationship while inserting data.",
         "type": "summary"
     },
     "3206": {
-        "file_id": 557,
+        "file_id": 555,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE languageMap (languageName TEXT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (languageName ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/makeDB3.py:1-18"
     },
     "3207": {
-        "file_id": 557,
+        "file_id": 555,
         "content": "The code creates a SQLite database table, 'languageMap', with columns for languageName and charGroup. It enforces uniqueness based on these two columns in ascending order. The code also mentions the need to consider alphabetical order, case relationships, labels having relationships, potential distinctions among labels, and maintaining the relationship while inserting data.",
         "type": "comment"
     },
     "3208": {
-        "file_id": 558,
+        "file_id": 556,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newShit.sh",
         "type": "filepath"
     },
     "3209": {
-        "file_id": 558,
+        "file_id": 556,
         "content": "This code is executing four Python scripts sequentially, named makeDB0.py through makeDB3.py. Each script likely creates or modifies a database component. The bash script ensures that the Python scripts are executed in order.",
         "type": "summary"
     },
     "3210": {
-        "file_id": 558,
+        "file_id": 556,
         "content": "#!/bin/bash\npython3 makeDB0.py\npython3 makeDB1.py\npython3 makeDB2.py\npython3 makeDB3.py",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newShit.sh:1-5"
     },
     "3211": {
-        "file_id": 558,
+        "file_id": 556,
         "content": "This code is executing four Python scripts sequentially, named makeDB0.py through makeDB3.py. Each script likely creates or modifies a database component. The bash script ensures that the Python scripts are executed in order.",
         "type": "comment"
     },
     "3212": {
-        "file_id": 559,
+        "file_id": 557,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newTestN.py",
         "type": "filepath"
     },
     "3213": {
-        "file_id": 559,
+        "file_id": 557,
         "content": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
         "type": "summary"
     },
     "3214": {
-        "file_id": 559,
+        "file_id": 557,
         "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    err=forMotherRussia(numToKill,superRats)\n    print(err)\n# there is the unique constraint\n    try:\n        executeCode(err)\n        print('--ejaculation successful--')\n    except:\n        print('--testicles are stolen--')\n# fucking pricks.\n#print(forMotherRussia(0,['singapore','newYear']))\n#print(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newTestN.py:1-25"
     },
     "3215": {
-        "file_id": 559,
+        "file_id": 557,
         "content": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
         "type": "comment"
     },
     "3216": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyD.py",
         "type": "filepath"
     },
     "3217": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "The code imports necessary modules, processes data from pickle files and a log file, filters positions based on comparisons, extracts relevant information for further processing, handles multiple titles, and discusses self-similarity in information gathering.",
         "type": "summary"
     },
     "3218": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "import pickle\nfrom lolita import fury\nimport re\nfrom simpleStorage import storeAList\n#from shakeThatBootyR import neuron\n#from newTestR import toyProject\n# pause it a little bit.\ncoreLoop=[]\nsimpleFunc=(lambda x: x.split(':',1))\ndef simpleDerive(x):\n    shitOut=simpleFunc(x)\n    print(\"--you are dead--\")\n    print(shitOut)\n    print(\"--you are dead--\")\n    stopFuck=[re.findall(r'\\w+',shitOut[0])[0]]\n    try:\n        stopFuck.append(re.findall(r'[^ ].+$',shitOut[1])[0])\n    except:\n        return (stopFuck)\n    # now we have a list which length is 1, so we can tell this apart from len 2.\n    return stopFuck\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x[:-1] if x[-1]==\"\\n\" else x)\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyD.py:1-40"
     },
     "3219": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "This code imports several modules and defines functions for data processing. It reads pickle files containing lists, prints their contents, and potentially performs further operations on the data. Some commented lines may indicate previous attempts or alternative approaches.",
         "type": "comment"
     },
     "3220": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "nope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"blocks.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    print(\"GIBBRISH\")\n    print(fuckme)\n    print(\"GIBBRISH\")\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(\"--spliter a--\")\n    print(dizzy)\n    print(\"--spliter b--\")\n    for kids in range(len(dizzy)):\n        #first round.\n        jokeBook=[]\n        royal=dizzy[kids]\n        print(\"--spliter c--\")\n        royalty=shit0[royal][1:-1]\n        print(royalty)\n#        try:\n#            toyProject(2,[royalty])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyD.py:42-78"
     },
     "3221": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "The code reads the \"core.log\" file, then opens another file named based on the content of \"core.log\". It splits the contents of the second file and compares them with a list called \"pap\". It then stores matching positions in the \"fuckme\" list. The \"milk\" function filters the positions where one position appears in both lists. The code prints various parts of this process, such as the filtered positions. Finally, it loops over the filtered positions and extracts some data for further processing.",
         "type": "comment"
     },
     "3222": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "#            print(\"TITLE INTEGRATED\")\n#        except:\n#            print(\"DUPLICATE CODE 2\")\n        # fucking savangers.\n        # this is the main title.\n        print(\"--spliter d--\")\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(\"--spliter e--\")\n            shakeItOff=greatWall(shit0[jokes+royal])\n            # to create a function which is usable.\n            director=simpleDerive(shakeItOff)\n            jokeBook.append(director[0])\n            print(shakeItOff)\n            print(\"--spliter FBI--\")\n            print(director)\n            # collect stuff from here?\n            print(\"--spliter f--\")\n        print(\"--asshole is here--\")\n        print(jokeBook)\n        coreLoop+=jokeBook\n        print(\"--asshole is here--\")\nprint(\"--finalblow--\")\ncoreLoop=list(set(coreLoop))\nprint(coreLoop)\nstoreAList(coreLoop)\nprint(\"--finalblow--\")\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyD.py:79-111"
     },
     "3223": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "The code seems to handle multiple titles and extract unique content from a list. It creates a function, derives simple words from it, appends to a list, prints some spliter markers, and stores the final output in a list before printing.",
         "type": "comment"
     },
     "3224": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyD.py:112-118"
     },
     "3225": {
-        "file_id": 560,
+        "file_id": 558,
         "content": "This code is discussing the concept of self-similarity in information gathering, where a word can be an article or an article can be a word. It also mentions that evolving at a slower pace allows for harder-to-break systems and the use of matrices with potential loss.",
         "type": "comment"
     },
     "3226": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py",
         "type": "filepath"
     },
     "3227": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "The code imports, defines functions, and performs transformations using regex. It prints \"you are dead\" multiple times and handles exceptions in a larger program with poor readability.",
         "type": "summary"
     },
     "3228": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "import pickle\nfrom lolita import fury\nimport re\nfrom getFromPickle import returnAList\n#from simpleStorage import storeAList\n#from shakeThatBootyR import neuron\nfrom newTestN import toyProject\n# pause it a little bit.\nuselessPrick=[0,1]\n# what is this fuck?\n# write those splitable items into it.\ncoreLoop=returnAList()\ncoreCount=len(coreLoop)\njokeBook=[]\nfor k in range(coreCount+1):\n    jokeBook.append([])\n# what is idle all about?\nsimpleFunc=(lambda x: x.split(':',1))\ndef simpleDerive(x):\n    shitOut=simpleFunc(x)\n    print(\"--you are dead--\")\n    print(shitOut)\n    print(\"--you are dead--\")\n    stopFuck=[re.findall(r'\\w+',shitOut[0])[0]]\n    try:\n        stopFuck.append(re.findall(r'[^ ].+$',shitOut[1])[0])\n    except:\n        return (stopFuck+[''])\n    # now we have a list which length is 1, so we can tell this apart from len 2.\n    return stopFuck\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:1-40"
     },
     "3229": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "This code imports various modules, defines a few functions, and loads data from pickle files. It uses regular expressions to split input strings, stores the results in lists, and attempts to find specific patterns in the string. The code also prints \"you are dead\" multiple times.",
         "type": "comment"
     },
     "3230": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x[:-1] if x[-1]==\"\\n\" else x)\n#greatWall0=(lambda x: x[:-1] if x[-1]==\" \" else x)\n#greatWall1=(lambda x: x[1:] if x[1]==\" \" else x)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \"]))\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\ngreatWall3=(lambda x:list(map((lambda y:greatWall2(y)),joker(x.split(\",\")))))\ngfw=(lambda x:list(map((lambda y:chr(int(y[2:],16)) if len(y)>1  and y[:2]==\"U+\" else y ),greatWall3(x))))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"blocks.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:41-70"
     },
     "3231": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "This code reads data from \"scavenger1.pickle\" and \"core.log\" files, applies various transformations to the data using lambda functions, and stores the final output in an empty list called 'fuckme'. The goal seems to be processing the log file's content based on information stored in 'pap'. The resulting data will be stored in the 'fuckme' list.",
         "type": "comment"
     },
     "3232": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    print(\"GIBBRISH\")\n    print(fuckme)\n    print(\"GIBBRISH\")\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(\"--spliter a--\")\n    print(dizzy)\n    print(\"--spliter b--\")\n    for kids in range(len(dizzy)):\n        #first round.\n#        jokeBook=[]\n        discJokey=[list(range(coreCount)),[]]\n#        for j in range(coreCount):\n#            discJokey.append(False)\n#        discJokey=list(enumerate(discJokey))\n        royal=dizzy[kids]\n        print(\"--spliter c--\")\n        royalty=shit0[royal][1:-1]\n        print(royalty)\n        jokeBook[coreCount].append(royalty)\n#        try:\n#            toyProject(2,[royalty])\n#            print(\"TITLE INTEGRATED\")\n#        except:\n#            print(\"DUPLICATE CODE 2\")\n        # fucking savangers.\n        # this is the main title.\n        print(\"--spliter d--\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:71-103"
     },
     "3233": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "The code appears to be a part of a larger program and performs the following operations:\n1. Checks if 'redis' is true, and if so, appends 'r' and 'r1' into the list 'fuckme[r0]'.\n2. Prints \"GIBBRISH\" twice, presumably for debugging purposes.\n3. Defines a lambda function named 'milk' that takes in two arguments and returns a list of items from 'fuckme[a]' if they exist in 'fuckme[b]'.\n4. Assigns the result of calling 'milk' with arguments (0, 1) to 'dizzy'.\n5. Prints \"GIBBRISH\", then prints 'dizzy', and finally prints another \"GIBBRISH\" for debugging.\n6. Enters a loop that iterates through the elements in 'dizzy'. For each iteration:\n    - Initializes 'discJokey' as a list containing two elements: a list of numbers (0 to coreCount-1) and an empty list.\n    - Assigns the current element in 'dizzy' to 'royal'.\n    - Assigns a slice of 'shit0[royal]', excluding the first and last character, to 'royalty'.\n    - Appends 'royalty' to 'jokeBook[coreCount]'.\n7. Displays \"GIBBRISH\" for debugging purposes.",
         "type": "comment"
     },
     "3234": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal):\n            try:\n                wolf=shit0[jokes+royal]\n                if ':' in wolf:\n                    print(\"--spliter e--\")\n                    # you shall build a checklist.\n                    shakeItOff=greatWall(wolf)\n                    # to create a function which is usable.\n                    director=simpleDerive(shakeItOff)\n#                    jokeBook.append(director[0])\n                    print(shakeItOff)\n                    print(\"--spliter FBI--\")\n                    print(director)\n                    cookYourFood=coreLoop.index(director[0])\n                    discJokey[1].append(cookYourFood)\n                    #jokeBook[cookYourFood].append(gfw(director[1]) if cookYourFood in uselessPrick else director[1])\n                    if cookYourFood not in [0,1,3]:\n                        jokeBook[cookYourFood].append(director[1])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:104-126"
     },
     "3235": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "This code is part of a function that iterates through an array (`shit0`) and checks if each element contains a colon. If it does, the code extracts the elements after the colon and processes them further. It then appends the extracted information to a `jokeBook` dictionary based on a specific index.",
         "type": "comment"
     },
     "3236": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "                    elif cookYourFood == 3:\n                        jokeBook[cookYourFood].append(list(map((lambda x:str(int('0x'+x,0))), director[1].split(':'))))\n                    else:\n                        jokeBook[cookYourFood].append(list(map((lambda x: greatWall2(x)), director[1].split(','))) if len(director[1]) > 1 else [])\n                    print(\"--spliter f--\")\n                else:\n                    pass\n            except:\n                pass\n        for i0 in [p for p in discJokey[0] if p not in discJokey[1]]:\n            if i0 not in [0,1,3]:\n                jokeBook[i0].append('')\n            else:\n                jokeBook[i0].append([])\n#        print(\"--asshole is here--\")\n#        print(jokeBook)\n#        coreLoop+=jokeBook\n#        print(\"--asshole is here--\")\nprint(\"--finalblow--\")\n# do that thing.\n'''\nfor svn, jokeBookN in enumerate(jokeBook):\n    print(svn,len(jokeBookN),jokeBookN)'''\nfor jb in range(len(jokeBook[2])):\n    # this is the type.\n    a0,b0,c0,d0,e0=jokeBook[0][jb],jokeBook[1][jb],jokeBook[2][jb],jokeBook[3][jb],jokeBook[4][jb]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:127-152"
     },
     "3237": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "The code is iterating through a list of discJokey elements and appending to the jokeBook based on the cookYourFood variable. It also handles exceptions and ensures that certain elements are not empty in the jokeBook. Finally, it prints some information for verification purposes.",
         "type": "comment"
     },
     "3238": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "    if c0!='':\n        toyProject(0,[c0,e0])\n    else:\n        pass\n    toyProject(2,[d0[0],d0[1],e0])\n    if a0!=[]:\n        for a1 in a0:\n            toyProject(3,[a1,e0])\n    else:\n        pass\n    if b0!=[]:\n        for b1 in b0:\n            toyProject(1,[b1,e0])\n    else:\n        pass\n#coreLoop=list(set(coreLoop))\n#for indexOf,coreInIt in enumerate(jokeBook):\n#    print(indexOf,len(coreInIt),coreInIt.count([]),coreInIt)\n'''\nfor i1 in range(len(jokeBook[0])):\n    kv2,kv3=jokeBook[6][i1],jokeBook[0][i1]\n    if kv3!=[]:\n        for kv0 in kv3:\n            try:\n                toyProject(0,[kv0,kv2])\n                print(\"--remember me--\")\n            except:\n                print(\"--fuckup 0--\")\n    kentuckyFried=[]\n    for i0 in [2,4]:\n        kv4=jokeBook[i0][i1]\n        if kv4!=[]:\n            kentuckyFried+=kv4\n    for kv1 in list(set(kentuckyFried)):\n        try:\n            print(kv1[0])\n            print(ord(kv1[0]))\n            toyProject(1,[ord(kv1[0]),kv2])\n            print(\"--remember your char--\")\n            if len(kv1)>1:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:153-192"
     },
     "3239": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "This code appears to be part of a larger program and is responsible for iterating through elements in a list and calling different functions based on the element's content. It seems to handle various types of data, including empty lists and single characters, performing different actions depending on the type. The toyProject function is called multiple times with varying parameters, suggesting it is a central function used for various purposes within the program. However, without more context, it's difficult to fully understand the purpose or functionality of the code.",
         "type": "comment"
     },
     "3240": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "                for r0 in range(len(kv1)-1):\n                    try:\n                        print(kv1[1+r0])\n                        print(ord(kv1[1+r0]))\n                        toyProject(2,[ord(kv1[r0]),ord(kv1[1+r0]),kv2])\n                        print(\"--break your fucking neck bitch--\")\n                    except:\n                        print(\"--fuckup 2--\")\n            else:\n                pass\n        except:\n            print(\"--fuckup 1--\")\n            '''\n#storeAList(coreLoop)\nprint(\"--finalblow--\")\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyN.py:193-215"
     },
     "3241": {
-        "file_id": 561,
+        "file_id": 559,
         "content": "The code appears to be part of a larger program and seems to handle data processing. It uses loops and tries/except blocks for error handling. The code aims to print values from a list, perform an action with the toyProject function, and handle potential failures gracefully. However, the code is poorly written, contains unnecessary print statements, and lacks proper variable or function names, making it difficult to understand its purpose and functionality.",
         "type": "comment"
     },
     "3242": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyR.py",
         "type": "filepath"
     },
     "3243": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "This code processes data by using pickle, splitting strings, removing elements, and filtering lists. It reads a log file, searches for patterns, filters information, and prints results. The code is part of a larger program that handles main title integration, processes text blocks, identifies long words, removes duplicates, and prints the final jokeBook.",
         "type": "summary"
     },
     "3244": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "import pickle\nfrom lolita import fury\nimport re\nfrom simpleStorage import storeAList\n#from shakeThatBootyR import neuron\n#from newTestR import toyProject\n# pause it a little bit.\ncoreLoop=[]\nsimpleFunc=(lambda x: x.split(':',1))\ndef simpleDerive(x):\n    shitOut=simpleFunc(x)\n    print(\"--you are dead--\")\n    print(shitOut)\n    print(\"--you are dead--\")\n    stopFuck=[re.findall(r'\\w+',shitOut[0])[0]]\n    try:\n        stopFuck.append(re.findall(r'[^ ].+$',shitOut[1])[0])\n    except:\n        return (stopFuck)\n    # now we have a list which length is 1, so we can tell this apart from len 2.\n    return stopFuck\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x[:-1] if x[-1]==\"\\n\" else x)\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyR.py:1-40"
     },
     "3245": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "The code imports several libraries and defines functions for data processing. It uses pickle to load data from three different files and performs operations on the loaded data, which includes splitting strings, removing specific elements, filtering lists, and printing output. The purpose of this code appears to be handling and manipulating picked data for further analysis or use in another module.",
         "type": "comment"
     },
     "3246": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "nope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"blocks.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    print(\"GIBBRISH\")\n    print(fuckme)\n    print(\"GIBBRISH\")\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(\"--spliter a--\")\n    print(dizzy)\n    print(\"--spliter b--\")\n    for kids in range(len(dizzy)):\n        #first round.\n        jokeBook=[]\n        royal=dizzy[kids]\n        print(\"--spliter c--\")\n        royalty=shit0[royal][1:-1]\n        print(royalty)\n#        try:\n#            toyProject(2,[royalty])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyR.py:42-78"
     },
     "3247": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "This code reads a log file, searches for matching patterns, and organizes the results into lists. It then uses a lambda function to filter and extract specific information, finally printing the filtered data and other split sections.",
         "type": "comment"
     },
     "3248": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "#            print(\"TITLE INTEGRATED\")\n#        except:\n#            print(\"DUPLICATE CODE 2\")\n        # fucking savangers.\n        # this is the main title.\n        print(\"--spliter d--\")\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal):\n            wolf=shit0[jokes+royal]\n            if len(wolf)>4:\n                print(\"--spliter e--\")\n                shakeItOff=greatWall(wolf)\n                # to create a function which is usable.\n                director=simpleDerive(shakeItOff)\n                jokeBook.append(director[0])\n                print(shakeItOff)\n                print(\"--spliter FBI--\")\n                print(director)\n                # collect stuff from here?\n                print(\"--spliter f--\")\n            else:\n                print(\"--dick is too small--\")\n        print(\"--asshole is here--\")\n        print(jokeBook)\n        coreLoop+=jokeBook\n        print(\"--asshole is here--\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyR.py:79-108"
     },
     "3249": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "The code seems to be part of a larger program, where it handles the main title integration and processes text blocks. It checks for duplicate code, identifies words longer than 4 characters, derives the simple form of these words, appends them to a list called \"jokeBook\", and prints the shakeItOff result and director. The final jokeBook is added to \"coreLoop\". The code also prints certain markers as it executes and prints the final jokeBook at the end.",
         "type": "comment"
     },
     "3250": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "print(\"--finalblow--\")\ncoreLoop=list(set(coreLoop))\nprint(coreLoop)\nstoreAList(coreLoop)\nprint(\"--finalblow--\")\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/scientologyR.py:109-122"
     },
     "3251": {
-        "file_id": 562,
+        "file_id": 560,
         "content": "This code seems to be a part of a larger program that involves iterating over a loop called \"coreLoop\". It removes any duplicates from the loop and prints the updated list, then stores this list using a function \"storeAList\". The author mentions the method is about self-similarity where one word can represent an article and vice versa. The code also includes comments suggesting the method evolves slower and is hard to break, possibly indicating its stability.",
         "type": "comment"
     },
     "3252": {
-        "file_id": 563,
+        "file_id": 561,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/shallowCopy.py",
         "type": "filepath"
     },
     "3253": {
-        "file_id": 563,
+        "file_id": 561,
         "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
         "type": "summary"
     },
     "3254": {
-        "file_id": 563,
+        "file_id": 561,
         "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        fuck.write('#!/bin/bash\\n')\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+' &\\n')",
         "type": "code",
         "location": "/metalearning/methodBank/shallowCopy.py:1-5"
     },
     "3255": {
-        "file_id": 563,
+        "file_id": 561,
         "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
         "type": "comment"
     },
     "3256": {
-        "file_id": 564,
+        "file_id": 562,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/shallowCopy.sh",
         "type": "filepath"
     },
     "3257": {
-        "file_id": 564,
+        "file_id": 562,
         "content": "This script uses Bash to copy three Python files (shallowCopy.py, getCorrectList.py, and extractLinear.py) into the specified directory, which is part of a Termux environment for analysis and decryption tasks.",
         "type": "summary"
     },
     "3258": {
-        "file_id": 564,
+        "file_id": 562,
         "content": "#!/bin/bash\ncp shallowCopy.py /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter &\ncp getCorrectList.py /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter &\ncp extractLinear.py /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer/decrypter &",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/shallowCopy.sh:1-4"
     },
     "3259": {
-        "file_id": 564,
+        "file_id": 562,
         "content": "This script uses Bash to copy three Python files (shallowCopy.py, getCorrectList.py, and extractLinear.py) into the specified directory, which is part of a Termux environment for analysis and decryption tasks.",
         "type": "comment"
     },
     "3260": {
-        "file_id": 565,
+        "file_id": 563,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/showMeMore.sh",
         "type": "filepath"
     },
     "3261": {
-        "file_id": 565,
+        "file_id": 563,
         "content": "This script creates a new shell script from 'make*' files, adds the shebang (#!/bin/bash) at the beginning, and makes it executable.",
         "type": "summary"
     },
     "3262": {
-        "file_id": 565,
+        "file_id": 563,
         "content": "#!/bin/bash\nls  -1 make* | awk '{print\"python3 \"$0}' > newShit.sh\n# this IS not GNU sed.\nsed -i '1i #!/bin/bash' newShit.sh\nchmod +x newShit.sh",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/showMeMore.sh:1-6"
     },
     "3263": {
-        "file_id": 565,
+        "file_id": 563,
         "content": "This script creates a new shell script from 'make*' files, adds the shebang (#!/bin/bash) at the beginning, and makes it executable.",
         "type": "comment"
     },
     "3264": {
-        "file_id": 566,
+        "file_id": 564,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/term0.py",
         "type": "filepath"
     },
     "3265": {
-        "file_id": 566,
+        "file_id": 564,
         "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
         "type": "summary"
     },
     "3266": {
-        "file_id": 566,
+        "file_id": 564,
         "content": "import sqlite3\n# initial shits\ndef executeCode(sql):\n    conn=sqlite3.connect(\"fuckyou.db\")\n    conn.execute(sql)\n    conn.commit()\n    conn.close()\n'''\ndef closeConnection():\n\tconn.close()'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/term0.py:1-11"
     },
     "3267": {
-        "file_id": 566,
+        "file_id": 564,
         "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
         "type": "comment"
     },
     "3268": {
-        "file_id": 567,
+        "file_id": 565,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/change_direction.lua",
         "type": "filepath"
     },
     "3269": {
-        "file_id": 567,
+        "file_id": 565,
         "content": "This code opens a file named \"core.log\" in read mode, reads its contents into the variable \"fate\", then opens another file named \"uponUs.log\" in write mode. It uses an external command (ls) to list files and directories, writes the output to \"uponUs.log\", closes both files.",
         "type": "summary"
     },
     "3270": {
-        "file_id": 567,
+        "file_id": 565,
         "content": "fileFuck=io.open(\"core.log\",\"r\")\n-- YOU ARE DEAD\nnothingLeft=io.open(\"uponUs.log\",\"w\")\nhandle=io.popen(\"ls \"..fileFuck:read())\nfate=handle:read(\"*a\")\nnothingLeft:write(fate)\nfileFuck:close()\nnothingLeft:close()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/change_direction.lua:1-8"
     },
     "3271": {
-        "file_id": 567,
+        "file_id": 565,
         "content": "This code opens a file named \"core.log\" in read mode, reads its contents into the variable \"fate\", then opens another file named \"uponUs.log\" in write mode. It uses an external command (ls) to list files and directories, writes the output to \"uponUs.log\", closes both files.",
         "type": "comment"
     },
     "3272": {
-        "file_id": 568,
+        "file_id": 566,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/README",
         "type": "filepath"
     },
     "3273": {
-        "file_id": 568,
+        "file_id": 566,
         "content": "This code is for converting HTML orphan symbols to their respective formatted versions, which might be helpful in deciphering abbreviations from common symbols.",
         "type": "summary"
     },
     "3274": {
-        "file_id": 568,
+        "file_id": 566,
         "content": "FOR THOSE HTML ORPHANS. MAY HAVE SOME LITTLE USE WHEN CRACKING ABBREVIATIONS OVER COMMON SYMBOLS.\nFORMAT:\n\tcopy -> &copy;",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/README:1-4"
     },
     "3275": {
-        "file_id": 568,
+        "file_id": 566,
         "content": "This code is for converting HTML orphan symbols to their respective formatted versions, which might be helpful in deciphering abbreviations from common symbols.",
         "type": "comment"
     },
     "3276": {
-        "file_id": 569,
+        "file_id": 567,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/cockshock.py",
         "type": "filepath"
     },
     "3277": {
-        "file_id": 569,
+        "file_id": 567,
         "content": "This code reads a file named 'core.log', filters and processes data from the file, then passes the processed data to a function called toyProject in newTestN module. The lambda functions joker and greatWall2 are used for filtering and processing.",
         "type": "summary"
     },
     "3278": {
-        "file_id": 569,
+        "file_id": 567,
         "content": "from newTestN import toyProject\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\ngreatWall2=(lambda x: \"\".join([p for p in x if p !=\" \"]))\nshit=''\nwith open('core.log','r') as fuck:\n    shit=fuck.read()\np=[]\nwith open(joker(shit)+'entities.txt','r') as f:\n    for j in f.readlines():\n        if j[0]!='#' and len(j)>1:\n            p.append(list(map((lambda x: greatWall2(x)),joker(j).split(':'))))\n'''for a,b in enumerate(p):\n    print(a,b)'''\nfor a in p:\n    toyProject(0,[a[1],a[0]])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/cockshock.py:1-15"
     },
     "3279": {
-        "file_id": 569,
+        "file_id": 567,
         "content": "This code reads a file named 'core.log', filters and processes data from the file, then passes the processed data to a function called toyProject in newTestN module. The lambda functions joker and greatWall2 are used for filtering and processing.",
         "type": "comment"
     },
     "3280": {
-        "file_id": 570,
+        "file_id": 568,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/constructor.py",
         "type": "filepath"
     },
     "3281": {
-        "file_id": 570,
+        "file_id": 568,
         "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
         "type": "summary"
     },
     "3282": {
-        "file_id": 570,
+        "file_id": 568,
         "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" );\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/constructor.py:1-31"
     },
     "3283": {
-        "file_id": 570,
+        "file_id": 568,
         "content": "This code defines functions for creating SQL statements. `sqlMaker` creates an INSERT statement from table and column names, `pairMaker` constructs a pair of strings representing values to be inserted, and `finalPro` combines the table name and value pairs to create the final SQL statement.",
         "type": "comment"
     },
     "3284": {
-        "file_id": 571,
+        "file_id": 569,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/derive_prefixed_fixed.py",
         "type": "filepath"
     },
     "3285": {
-        "file_id": 571,
+        "file_id": 569,
         "content": "The code utilizes meta-programming to parse Python scripts, extracting table names and constraints using CREATE TABLE statements. It demonstrates this functionality on a given list of scripts. The code also prints a separator, variable \"b\", and stores list \"a\" in function storeAList.",
         "type": "summary"
     },
     "3286": {
-        "file_id": 571,
+        "file_id": 569,
         "content": "# This is called the metaProgramming and basically any fucking prog lang can do this fuck!\nimport re\nfrom simpleStorageR import storeAList\ndef cockShock(fuckMe):\n    with open(fuckMe,\"r\") as s:\n        rk=s.read().replace('\\n',' ')\n#    print(rk)\n        so=re.findall(r\"'''CREATE TABLE[^']+\",rk,re.MULTILINE)[0][3+6+7:]\n#        print(so)\n        sd=re.match(r'^\\w+',so).group(0)\n#        print(sd)\n        rn=so.replace(sd,'')\n#        print(rn)\n        sv=re.findall(r'^.+CONSTRAINT',rn)[0].replace(\"CONSTRAINT\",\"\")\n#        print(sv)\n        svd=list(filter((lambda x : x!=\"\"),sv.split(',')))\n        lamb=(lambda x: re.findall(r\"\\w+\",x)[0])\n        lambs=(lambda x: re.findall(r\"\\w+\",x) !=[])\n#        print(svd)\n        svg=list(map((lambda x: lamb(x)),list(filter((lambda x:lambs(x)),svd))))\n#        print(svg)\n    return [sd,svg]\n    # sample of metacoding\n    # I need transformation now!\ndickHead=['makeDB0.py']\na=cockShock(dickHead[0])\n'''b=cockShock(dickHead[1])\nc=cockShock(dickHead[2])\nd=cockShock(dickHead[3])'''\n'''print(a)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/derive_prefixed_fixed.py:1-30"
     },
     "3287": {
-        "file_id": 571,
+        "file_id": 569,
         "content": "This code uses meta-programming to parse a Python script and extract table names and constraints from it. It reads the script, finds CREATE TABLE statements, identifies tables and their respective constraints, and returns them as output. The code then demonstrates this functionality on a provided list of Python scripts.",
         "type": "comment"
     },
     "3288": {
-        "file_id": 571,
+        "file_id": 569,
         "content": "print(\"--spliter--\")\nprint(b)'''\nstoreAList([a])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/derive_prefixed_fixed.py:31-33"
     },
     "3289": {
-        "file_id": 571,
+        "file_id": 569,
         "content": "This code segment is printing a separator, then a variable \"b\", followed by storing list \"a\" in a function called storeAList.",
         "type": "comment"
     },
     "3290": {
-        "file_id": 572,
+        "file_id": 570,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/makeDB0.py",
         "type": "filepath"
     },
     "3291": {
-        "file_id": 572,
+        "file_id": 570,
         "content": "The code connects to a SQLite database, creates a table named \"codeMap\" with columns for codeId and htmlCode. It ensures uniqueness of each entry using a constraint. The comment suggests that there might be intermediate steps before putting data into the graph database, and labels can have relationships too. Alphabetical order is used for case relationship, but there is uncertainty about how to handle labels or whether to prioritize random insertion or maintaining relationships.",
         "type": "summary"
     },
     "3292": {
-        "file_id": 572,
+        "file_id": 570,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE codeMap (\ncodeId INT NOT NULL, \nhtmlCode TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (codeId ASC, htmlCode ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/makeDB0.py:1-19"
     },
     "3293": {
-        "file_id": 572,
+        "file_id": 570,
         "content": "The code connects to a SQLite database, creates a table named \"codeMap\" with columns for codeId and htmlCode. It ensures uniqueness of each entry using a constraint. The comment suggests that there might be intermediate steps before putting data into the graph database, and labels can have relationships too. Alphabetical order is used for case relationship, but there is uncertainty about how to handle labels or whether to prioritize random insertion or maintaining relationships.",
         "type": "comment"
     },
     "3294": {
-        "file_id": 573,
+        "file_id": 571,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/newTestN.py",
         "type": "filepath"
     },
     "3295": {
-        "file_id": 573,
+        "file_id": 571,
         "content": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
         "type": "summary"
     },
     "3296": {
-        "file_id": 573,
+        "file_id": 571,
         "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickleR import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    err=forMotherRussia(numToKill,superRats)\n    print(err)\n# there is the unique constraint\n    try:\n        executeCode(err)\n        print('--ejaculation successful--')\n    except:\n        print('--testicles are stolen--')\n# fucking pricks.\n#print(forMotherRussia(0,['singapore','newYear']))\n#print(forMotherRussia(1,[233233,'newYear']))\n'''print(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/blocks/newTestN.py:1-25"
     },
     "3297": {
-        "file_id": 573,
+        "file_id": 571,
         "content": "The code defines a function `forMotherRussia` that takes in two arguments and returns the result of calling another function `toyProject`. This project appears to be testing an object's properties, and if execution is successful, it prints \"ejaculation successful\"; otherwise, it prints \"testicles are stolen\". The code also includes some commented example calls to these functions.",
         "type": "comment"
     },
     "3298": {
-        "file_id": 574,
+        "file_id": 572,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/entities/term0.py",
         "type": "filepath"
     },
     "3299": {
-        "file_id": 574,
+        "file_id": 572,
         "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
         "type": "summary"
     }

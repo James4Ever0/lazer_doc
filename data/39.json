@@ -1,528 +1,528 @@
 {
     "3900": {
-        "file_id": 689,
+        "file_id": 687,
         "content": "def snapshot(a,b,c,d,e):\n    with open(a,\"w+\") as ap:\n        with open(b,\"r\") as ad:\n            shit=1\n            for abo in ad.readlines():\n                print(shit)\n                print(abo)\n                if ( (c in abo) or shit == e):\n                    #shit+=1\n                    abo = abo.replace(c,d)\n#                print(abo)\n                    ap.write(abo)\n                else:\n                    ap.write(abo)\n                shit+=1",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/fixerv0.py:1-15"
     },
     "3901": {
-        "file_id": 689,
+        "file_id": 687,
         "content": "Function `snapshot` reads lines from file B, replaces occurrences of variable C with D in each line if certain conditions are met, and writes the modified or unmodified line to file A. Variable E controls when to stop replacing.",
         "type": "comment"
     },
     "3902": {
-        "file_id": 690,
+        "file_id": 688,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/fuckMe.hs",
         "type": "filepath"
     },
     "3903": {
-        "file_id": 690,
+        "file_id": 688,
         "content": "This code imports the System.Enviorment module and defines two functions: greeting and asshole. The greeting function returns a list containing \"shit\" and \"happens\". The main function prints out the command line arguments using putStrLn getArgs, which is called by running the Haskell program with arguments specified from the command line.",
         "type": "summary"
     },
     "3904": {
-        "file_id": 690,
+        "file_id": 688,
         "content": "import System.Enviorment\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\nmain = do\n  putStrLn getArgs",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe.hs:1-7"
     },
     "3905": {
-        "file_id": 690,
+        "file_id": 688,
         "content": "This code imports the System.Enviorment module and defines two functions: greeting and asshole. The greeting function returns a list containing \"shit\" and \"happens\". The main function prints out the command line arguments using putStrLn getArgs, which is called by running the Haskell program with arguments specified from the command line.",
         "type": "comment"
     },
     "3906": {
-        "file_id": 691,
+        "file_id": 689,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/fuckMe_fixed.hs",
         "type": "filepath"
     },
     "3907": {
-        "file_id": 691,
+        "file_id": 689,
         "content": "This Haskell code imports the System.Environment module and defines two functions, t and t0. The function t checks if a list consists only of digits. Function t0 takes a list, transforms it into a tuple by applying t to each element, and returns the transformed list. In the main function, it gets command-line arguments, applies t0 to them, and prints both the original list and the transformed list.",
         "type": "summary"
     },
     "3908": {
-        "file_id": 691,
+        "file_id": 689,
         "content": "import System.Enviroment\n-- i am not afraid of forgetting.\n-- i never forget. i never forgive.\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\n-- decide whether it misses anything or not.\n-- they must be separated, if possible change it into a tuple\n-- seriously it doesn't mean shit\n-- nothing is too crazy. you are just not aware of it.\nt lst = (length (filter (\\x -> x>='0' && x<= '9') lst)) == length lst\nt0 lst = [(x,t x)|x <-lst]\nmain = do\n  a <- getArgs\n  b <- t0 a\n  print a\n  print b",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed.hs:1-18"
     },
     "3909": {
-        "file_id": 691,
+        "file_id": 689,
         "content": "This Haskell code imports the System.Environment module and defines two functions, t and t0. The function t checks if a list consists only of digits. Function t0 takes a list, transforms it into a tuple by applying t to each element, and returns the transformed list. In the main function, it gets command-line arguments, applies t0 to them, and prints both the original list and the transformed list.",
         "type": "comment"
     },
     "3910": {
-        "file_id": 692,
+        "file_id": 690,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/fuckMe_fixed_fixed.hs",
         "type": "filepath"
     },
     "3911": {
-        "file_id": 692,
+        "file_id": 690,
         "content": "The code imports the \"System.Environment\" library and defines a function \"t\" that checks if a given list consists only of numbers. It also has a \"greeting\" variable with the value [\"shit\",\"happens\"], an undefined \"asshole\" function, and a \"main\" function that takes command-line arguments, prints them, and applies the \"t0\" function to the argument list before printing the result.",
         "type": "summary"
     },
     "3912": {
-        "file_id": 692,
+        "file_id": 690,
         "content": "import System.Environment\n-- i am not afraid of forgetting.\n-- i never forget. i never forgive.\n-- greeting :: String\n-- greeting = [\"shit\",\"happens\"]\n-- check the thing\n-- asshole :: IO ()\n-- decide whether it misses anything or not.\n-- they must be separated, if possible change it into a tuple\n-- seriously it doesn't mean shit\n-- nothing is too crazy. you are just not aware of it.\n-- t :: [Char] -> Bool\nt lst = (length (filter (\\x -> x>='0' && x<= '9') lst)) == length lst\nt0 lst = [(x,t x)|x <-lst]\nmain = do\n  a <- getArgs\n  print a\n  print $ t0 a\n--  :t a",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/fuckMe_fixed_fixed.hs:1-19"
     },
     "3913": {
-        "file_id": 692,
+        "file_id": 690,
         "content": "The code imports the \"System.Environment\" library and defines a function \"t\" that checks if a given list consists only of numbers. It also has a \"greeting\" variable with the value [\"shit\",\"happens\"], an undefined \"asshole\" function, and a \"main\" function that takes command-line arguments, prints them, and applies the \"t0\" function to the argument list before printing the result.",
         "type": "comment"
     },
     "3914": {
-        "file_id": 693,
+        "file_id": 691,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/islandMeta.py",
         "type": "filepath"
     },
     "3915": {
-        "file_id": 693,
+        "file_id": 691,
         "content": "This code reads a log file, extracts error information, and filters out empty lines using regular expressions. It also fixes missing names in Haskell files, handles errors, and includes comments expressing frustration with lawyers.",
         "type": "summary"
     },
     "3916": {
-        "file_id": 693,
+        "file_id": 691,
         "content": "import re\n#from getCorrectList import letIt\n#from diffTool import diff\nfrom fixerv0 import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"AnotherStory.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[:3]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=re.findall(r'^[^:]+',fuckMe[0])[0]\n    print(nameOfSubject)\n    lineOfTrouble=re.findall(r\"^\\d*\",fuckMe[0].replace(nameOfSubject+\":\",\"\"))[0]\n    print(lineOfTrouble)\n    errorCode=re.findall(r\"[^ ]+$\",fuckMe[1])[0][1:-1]\n    print(errorCode)\n#    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n#    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n#    print (extractName)\n#    print (extractNumber)\n# death to all lawyers\n    extractMissingName=re.findall(r\"Perhaps you meant [^ ]+\",fuckMe[2])[0][(7+4+6+1):]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/islandMeta.py:1-26"
     },
     "3917": {
-        "file_id": 693,
+        "file_id": 691,
         "content": "The code reads a file named \"AnotherStory.log\", filters empty lines, and retrieves the filename, line number, and error code for an error in the log. It uses regular expressions to extract this information from specific sections of each line. The code also includes some comments expressing frustration with lawyers.",
         "type": "comment"
     },
     "3918": {
-        "file_id": 693,
+        "file_id": 691,
         "content": "#    print(extractMissingName)\n# conclution is simple.\n# it is nothing.\n    print (extractMissingName)\n    snapshot(nameOfSubject[:-3]+\"_fixed.hs\",nameOfSubject,errorCode,extractMissingName,int(lineOfTrouble))\n# you are hitting a fake target.\n#    print(processFuck)\n#    print(process)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/islandMeta.py:27-34"
     },
     "3919": {
-        "file_id": 693,
+        "file_id": 691,
         "content": "The code appears to be extracting and processing missing names, potentially for a Haskell file. It generates a fixed version of the file with the missing name included (e.g., `nameOfSubject[:-3]+\"_fixed.hs\"`). The code also seems to handle error conditions, such as line trouble indicators (`int(lineOfTrouble)`), and may involve some debugging print statements for `extractMissingName`, `processFuck`, and `process`. It concludes that there is nothing significant in the current section of code.",
         "type": "comment"
     },
     "3920": {
-        "file_id": 695,
+        "file_id": 692,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/oops.py",
         "type": "filepath"
     },
     "3921": {
-        "file_id": 695,
+        "file_id": 692,
         "content": "The code reads a log file, filters empty lines, extracts subject name, error code, and line number of trouble using regular expressions. Additional information could be obtained but is commented out. The code checks for missing names, creates a fixed file, and expresses disdain for lawyers.",
         "type": "summary"
     },
     "3922": {
-        "file_id": 695,
+        "file_id": 692,
         "content": "import re\n#from getCorrectList import letIt\n#from diffTool import diff\nfrom fixerv0 import snapshot\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"nothing.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[:3]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=re.findall(r'^[^:]+',fuckMe[0])[0]\n    print(nameOfSubject)\n    lineOfTrouble=re.findall(r\"^\\d*\",fuckMe[0].replace(nameOfSubject+\":\",\"\"))[0]\n    print(lineOfTrouble)\n    errorCode=re.findall(r\"[^ ]+$\",fuckMe[1])[0][1:-1]\n    print(errorCode)\n#    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n#    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n#    print (extractName)\n#    print (extractNumber)\n# death to all lawyers\n    extractMissingName=re.findall(r\"Perhaps you meant [^ ]+\",fuckMe[2])[0][(7+4+6+1):]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/oops.py:1-26"
     },
     "3923": {
-        "file_id": 695,
+        "file_id": 692,
         "content": "The code reads a log file, filters empty lines and the first three non-empty lines are processed. It extracts the subject name, line number of trouble, and error code from these lines using regular expressions. Additional information such as extracted file name and line number could be obtained but commented out, and a final statement seems to express disdain for lawyers.",
         "type": "comment"
     },
     "3924": {
-        "file_id": 695,
+        "file_id": 692,
         "content": "#    print(extractMissingName)\n# conclution is simple.\n# it is nothing.\n    print (extractMissingName)\n    snapshot(nameOfSubject[:-3]+\"_fixed.hs\",nameOfSubject,errorCode,extractMissingName,int(lineOfTrouble))\n# you are hitting a fake target.\n#    print(processFuck)\n#    print(process)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/oops.py:27-34"
     },
     "3925": {
-        "file_id": 695,
+        "file_id": 692,
         "content": "This code seems to be checking for missing names and printing them, creating a fixed file with subject name, error code, extractMissingName, and line of trouble. It also mentions hitting a fake target but doesn't seem to do anything about it.",
         "type": "comment"
     },
     "3926": {
-        "file_id": 696,
+        "file_id": 693,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/shitHappens.hs",
         "type": "filepath"
     },
     "3927": {
-        "file_id": 696,
+        "file_id": 693,
         "content": "The code imports the Map module and defines a function \"myMap\" that takes an integer, n, and creates a Map with keys from 1 to n, each mapped to a list containing only that key. The \"main\" function calls \"sing(myMap 3)\" which likely uses the created map for further processing.",
         "type": "summary"
     },
     "3928": {
-        "file_id": 696,
+        "file_id": 693,
         "content": "import Data.Map (Map) \nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain =             sing(myMap 3)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHappens.hs:1-8"
     },
     "3929": {
-        "file_id": 696,
+        "file_id": 693,
         "content": "The code imports the Map module and defines a function \"myMap\" that takes an integer, n, and creates a Map with keys from 1 to n, each mapped to a list containing only that key. The \"main\" function calls \"sing(myMap 3)\" which likely uses the created map for further processing.",
         "type": "comment"
     },
     "3930": {
-        "file_id": 697,
+        "file_id": 694,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/shitHoly.hs",
         "type": "filepath"
     },
     "3931": {
-        "file_id": 697,
+        "file_id": 694,
         "content": "This Haskell code imports Data.Map and System.Environment modules, defines a function myMap that takes an Integer input and creates a Map of Integers to lists of Integers using map and makePair functions, and finally prints the command line arguments in main. This is likely used for data manipulation or mapping purposes.",
         "type": "summary"
     },
     "3932": {
-        "file_id": 697,
+        "file_id": 694,
         "content": "import Data.Map (Map) \nimport System.Enviorment\nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain = print <<= getArgs",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly.hs:1-9"
     },
     "3933": {
-        "file_id": 697,
+        "file_id": 694,
         "content": "This Haskell code imports Data.Map and System.Environment modules, defines a function myMap that takes an Integer input and creates a Map of Integers to lists of Integers using map and makePair functions, and finally prints the command line arguments in main. This is likely used for data manipulation or mapping purposes.",
         "type": "comment"
     },
     "3934": {
-        "file_id": 698,
+        "file_id": 695,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/secretSupply/shitHoly_fixed.hs",
         "type": "filepath"
     },
     "3935": {
-        "file_id": 698,
+        "file_id": 695,
         "content": "This Haskell code imports necessary modules, defines a function \"myMap\" which creates a map from integers to lists of integers based on input n, and uses \"getArgs\" in the main function to retrieve command-line arguments before printing them.",
         "type": "summary"
     },
     "3936": {
-        "file_id": 698,
+        "file_id": 695,
         "content": "import Data.Map (Map) \nimport System.Environment\nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain =  getArgs >>= print",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/secretSupply/shitHoly_fixed.hs:1-9"
     },
     "3937": {
-        "file_id": 698,
+        "file_id": 695,
         "content": "This Haskell code imports necessary modules, defines a function \"myMap\" which creates a map from integers to lists of integers based on input n, and uses \"getArgs\" in the main function to retrieve command-line arguments before printing them.",
         "type": "comment"
     },
     "3938": {
-        "file_id": 699,
+        "file_id": 696,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/shitHappens.hs",
         "type": "filepath"
     },
     "3939": {
-        "file_id": 699,
+        "file_id": 696,
         "content": "This code imports the Map module from Data.Map, creates a function myMap that takes an Integer and returns a Map of Integers to a list of Integers, and prints out the result of calling myMap with the argument 3. The printed output will show a Map with keys 1 through 3 and values as lists containing the corresponding key value.",
         "type": "summary"
     },
     "3940": {
-        "file_id": 699,
+        "file_id": 696,
         "content": "import Data.Map (Map) \nimport qualified Data.Map as Map  --required for GHCI  \nmyMap :: Integer -> Map Integer [Integer] \nmyMap n = Map.fromList (map makePair [1..n])\n   where makePair x = (x, [x])  \nmain = print(myMap 3)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/shitHappens.hs:1-8"
     },
     "3941": {
-        "file_id": 699,
+        "file_id": 696,
         "content": "This code imports the Map module from Data.Map, creates a function myMap that takes an Integer and returns a Map of Integers to a list of Integers, and prints out the result of calling myMap with the argument 3. The printed output will show a Map with keys 1 through 3 and values as lists containing the corresponding key value.",
         "type": "comment"
     },
     "3942": {
-        "file_id": 700,
+        "file_id": 697,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/solveForShit.hs",
         "type": "filepath"
     },
     "3943": {
-        "file_id": 700,
+        "file_id": 697,
         "content": "This code solves a quadratic equation using the quadratic formula in Haskell. The function `root` takes three parameters (a, b, and c) representing the coefficients of the equation ax^2 + bx + c = 0. It calculates x1 and x2, which are the two possible solutions for x. The variable 'd' stores the discriminant value, while 'e' represents half of the negative reciprocal of the coefficient B. Finally, the main function prints the calculated root values (x1,x2) as output.",
         "type": "summary"
     },
     "3944": {
-        "file_id": 700,
+        "file_id": 697,
         "content": "main = do\n print ( root(1,-8,6))\nroot (a,b,c) = (x1,x2) where\n x1 = e + sqrt d / ( 2*a)\n x2 = e - sqrt d / ( 2*a)\n d = b**2 - 4*a*c\n e = -b /(2*a)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/solveForShit.hs:1-8"
     },
     "3945": {
-        "file_id": 700,
+        "file_id": 697,
         "content": "This code solves a quadratic equation using the quadratic formula in Haskell. The function `root` takes three parameters (a, b, and c) representing the coefficients of the equation ax^2 + bx + c = 0. It calculates x1 and x2, which are the two possible solutions for x. The variable 'd' stores the discriminant value, while 'e' represents half of the negative reciprocal of the coefficient B. Finally, the main function prints the calculated root values (x1,x2) as output.",
         "type": "comment"
     },
     "3946": {
-        "file_id": 701,
+        "file_id": 698,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/swan/Haskell_101/testicle.hs",
         "type": "filepath"
     },
     "3947": {
-        "file_id": 701,
+        "file_id": 698,
         "content": "This Haskell code defines a function `noto` which takes a Boolean and returns a string indicating whether the number is even or odd. The `eveno` function checks if a number is even, and `main` demonstrates using composition to test `noto` with an example input of 16.",
         "type": "summary"
     },
     "3948": {
-        "file_id": 701,
+        "file_id": 698,
         "content": "noto  :: Bool -> String \neveno x = if x `rem` 2 == 0 \n   then True \nelse False \nnoto x = if x == True \n   then \"This is an even Number\" \nelse \"This is an ODD number\" \nmain = do \n   putStrLn \"Example of Haskell Function composition\" \n   print ((noto.eveno) 16 )",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/swan/Haskell_101/testicle.hs:1-12"
     },
     "3949": {
-        "file_id": 701,
+        "file_id": 698,
         "content": "This Haskell code defines a function `noto` which takes a Boolean and returns a string indicating whether the number is even or odd. The `eveno` function checks if a number is even, and `main` demonstrates using composition to test `noto` with an example input of 16.",
         "type": "comment"
     },
     "3950": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/taiChi.py",
         "type": "filepath"
     },
     "3951": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "The code includes a Magisk function that uses regular expressions to replace specific numbers with ASCII characters and a standAlone function for filtering and replacing elements. The program processes data from \"alphabets.txt\" and has language-based functionality with mandarin tracking.",
         "type": "summary"
     },
     "3952": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "import re\ndef Magisk(erectile):\n    stringSet=[\"set:\",[\"[\",\"]\"]]\n#standAlone=(lambda x: list(filter((lambda y: y!=\"\"), list(map((lambda z: z[1] if len(z) <=3 else re.match(r\"\\d+\").group(0)),x)) )))\n#ky0=(lambda k:k if k[-1]!=\" \" else k[:-1])\n#ky=(lambda k:ky0(k) if k[0]!=\" \" else k[1:])\n    wrap=(lambda x: [ord(x0) for x0 in list(x)])\n    standAlone1=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\",\"))))\n    def standAlone2(a,b):\n        b0=b\n#        print(\"FUCK\\nFUCK\")\n#        print(a)\n        for a0 in a:\n            if a0!=\"\":\n                b0=b0.replace(a0,chr(int(re.findall(r\"\\d+\",a0)[0])))\n            else:\n                pass\n#        print(\"SHIT\\nSHIT\")\n#        print(b0)\n        return b0\n    standAlone=(lambda y: standAlone1(standAlone2(re.findall(r\"{}\\d+;?\".format(re.escape(\"&#\")),y),y)))\n#standAlone0=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\n#standAlone=(lambda x: standAlone1(x) if standAlone1(x).count(sorted(set(standAlone1(x)),key=(lambda y: standAlone1(x).count(y)))[0]) <3 else standAlone0(x))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py:1-23"
     },
     "3953": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "The code defines a function Magisk that takes a string erectile and uses regular expressions to process the input. It finds patterns with \"set:\" and \"[\", and replaces specific numbers in the text with their corresponding ASCII characters. The standAlone function is used to filter and replace elements within the given string.",
         "type": "comment"
     },
     "3954": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "    wrapper=(lambda xy: ord(xy))\n#wrapper0=(lambda xy: xy)\n#    with open(\"alphabets.txt\",\"r\") as rockstar:\n#    mandarin=0\n# simply another workaround?\n        #for kn in rockstar.readlines():\n    kn=erectile\n    if stringSet[0] in kn:\n#            print(\"set only\")\n#            print(kn)\n#            ks=re.findall(r\" .(,?)| \\&#\\d*;(,?)\", kn[5:])\n        prt=standAlone(kn[5:-1])\n#            print(prt)\n        if len(prt)>1:\n            try:\n#                    print(list(map((lambda x: [x,len(x),wrap(x)]),prt)))\n                pat=list(map((lambda z: wrapper(re.findall(r\"[^ ]\",z)[0])),prt))\n#                    print(pat)\n                return pat\n            except:\n#                    print(\"FUCKED UP\\nFUCKED UP\")\n                return []\n        else:\n            return []\n#                print(\"TOO YOUNG TOO NAIVE\\nTOO YOUNG TOO NAIVE\")\n#            print(kn[-1])\n#            print(ks)\n#            print(standAlone(ks))\n    else:\n        return []\n\"\"\"            if (stringSet[1][0] in kn and stringSet[1][1] in kn):",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py:24-54"
     },
     "3955": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "This code seems to be part of a larger program that reads data from a file called \"alphabets.txt\" and processes it to extract certain information. The code appears to be specifically focused on handling lines containing the first character in a predefined set, known as stringSet[0]. It then attempts to find alphanumeric characters within those lines and converts them into their corresponding ASCII values using a wrapper function. If there is more than one such value found (len(prt)>1), it returns these values; otherwise, it returns an empty list. The code also includes some error handling and a few commented-out sections that seem to be workarounds for potential issues.",
         "type": "comment"
     },
     "3956": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "                print(\"name only\")\n                print(kn)\n#        elif mandarin==1:\n            else:\n                print(\"empty line\")\n                print(kn)\"\"\"\n#        mandarin+=1\n#        if mandarin==3:\n#            mandarin=0",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/taiChi.py:55-63"
     },
     "3957": {
-        "file_id": 702,
+        "file_id": 699,
         "content": "Code snippet checks if the input language is Mandarin (mandarin == 1). If not, it prints \"empty line\" and displays \"kn\". It also increments mandarin and resets it to 0 after reaching 3.",
         "type": "comment"
     },
     "3958": {
-        "file_id": 703,
+        "file_id": 700,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/conPro.py",
         "type": "filepath"
     },
     "3959": {
-        "file_id": 703,
+        "file_id": 700,
         "content": "This function creates a SQL SELECT statement based on the provided input. It can be passed in pickle format and should be implemented in Haskell.",
         "type": "summary"
     },
     "3960": {
-        "file_id": 703,
+        "file_id": 700,
         "content": "def sqlMaker(sauce):\n    sql = \"SELECT * FROM \"+sauce+\" ;\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/conPro.py:1-5"
     },
     "3961": {
-        "file_id": 703,
+        "file_id": 700,
         "content": "This function creates a SQL SELECT statement based on the provided input. It can be passed in pickle format and should be implemented in Haskell.",
         "type": "comment"
     },
     "3962": {
-        "file_id": 704,
+        "file_id": 701,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/constructor.py",
         "type": "filepath"
     },
     "3963": {
-        "file_id": 704,
+        "file_id": 701,
         "content": "This code defines three functions: `sqlMaker`, `pairMaker`, and `finalPro`. `sqlMaker` creates an SQL INSERT statement. `pairMaker` generates a string of paired values for SQL fields. `finalPro` uses the previous two functions to create the final SQL query.",
         "type": "summary"
     },
     "3964": {
-        "file_id": 704,
+        "file_id": 701,
         "content": "def sqlMaker(sauce,plist):\n    sql = \"INSERT INTO \"+sauce[0]+\" ( \" + sauce[1] +\" ) VALUES ( \"+plist+\" )\"\n    # you can pass it in pickle format.\n    # do it in haskell.\n    return sql\ndef pairMaker(a,b):\n    # a and b are both lists\n    k=\"\"\n    k0=[]\n    for a0 in a:\n        k += \" \" + a0 + \",\"\n        if \"Id\" in a0:\n            k0.append(True)\n        else:\n            k0.append(False)\n    k= k[:-1]\n    c=\"\"\n    # wait then. test.\n    for b0 in range(len(b)):\n        if k0[b0]== True:\n            c+= \" \"+str(b[b0])+\",\"\n        else:\n            c+= \"'\"+b[b0]+\"',\"\n    c =c[:-1]\n    return [k,c]\ndef finalPro(a,c):\n    b=pairMaker(a[1],c)\n    d=sqlMaker([a[0],b[0]],b[1])\n    return d",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/constructor.py:1-31"
     },
     "3965": {
-        "file_id": 704,
+        "file_id": 701,
         "content": "This code defines three functions: `sqlMaker`, `pairMaker`, and `finalPro`. `sqlMaker` creates an SQL INSERT statement. `pairMaker` generates a string of paired values for SQL fields. `finalPro` uses the previous two functions to create the final SQL query.",
         "type": "comment"
     },
     "3966": {
-        "file_id": 705,
+        "file_id": 702,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/term0.py",
         "type": "filepath"
     },
     "3967": {
-        "file_id": 705,
+        "file_id": 702,
         "content": "Code imports sqlite3, creates a connection to the \"fuckyou.db\" database, defines two functions: executeCode for executing SQL statements and closing the connection with closeConnection.",
         "type": "summary"
     },
     "3968": {
-        "file_id": 705,
+        "file_id": 702,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# initial shits\ndef executeCode(sql):\n\tconn.execute(sql)\n\tconn.commit()\ndef closeConnection():\n\tconn.close()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term0.py:1-10"
     },
     "3969": {
-        "file_id": 705,
+        "file_id": 702,
         "content": "Code imports sqlite3, creates a connection to the \"fuckyou.db\" database, defines two functions: executeCode for executing SQL statements and closing the connection with closeConnection.",
         "type": "comment"
     },
     "3970": {
-        "file_id": 706,
+        "file_id": 703,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/term1.py",
         "type": "filepath"
     },
     "3971": {
-        "file_id": 706,
+        "file_id": 703,
         "content": "The code imports the sqlite3 module and connects to a SQLite database named \"shitItUp.db\". It defines two functions, `executeCode` for executing SQL queries and returning the results, and `closeConnection` for committing any changes and closing the connection.",
         "type": "summary"
     },
     "3972": {
-        "file_id": 706,
+        "file_id": 703,
         "content": "import sqlite3\nconn=sqlite3.connect(\"shitItUp.db\")\n# initial shits\ndef executeCode(sql):\n    values=[]\n    with conn:\n        cur=conn.cursor()\n        cur.execute(sql)\n        rows = cur.fetchall()\n        for element in rows:\n            values.append(element)\n    return values\ndef closeConnection():\n    conn.commit()\n    conn.close()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/term1.py:1-17"
     },
     "3973": {
-        "file_id": 706,
+        "file_id": 703,
         "content": "The code imports the sqlite3 module and connects to a SQLite database named \"shitItUp.db\". It defines two functions, `executeCode` for executing SQL queries and returning the results, and `closeConnection` for committing any changes and closing the connection.",
         "type": "comment"
     },
     "3974": {
-        "file_id": 707,
+        "file_id": 704,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/testForPickle.py",
         "type": "filepath"
     },
     "3975": {
-        "file_id": 707,
+        "file_id": 704,
         "content": "The code imports a function from the 'getFromPickle' module and prints the result of calling that function. It suggests that the purpose is to test the functionality of retrieving a list from pickled data.",
         "type": "summary"
     },
     "3976": {
-        "file_id": 707,
+        "file_id": 704,
         "content": "from getFromPickle import returnAList\nprint(returnAList())",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testForPickle.py:1-2"
     },
     "3977": {
-        "file_id": 707,
+        "file_id": 704,
         "content": "The code imports a function from the 'getFromPickle' module and prints the result of calling that function. It suggests that the purpose is to test the functionality of retrieving a list from pickled data.",
         "type": "comment"
     },
     "3978": {
-        "file_id": 708,
+        "file_id": 705,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/testiclePickle.py",
         "type": "filepath"
     },
     "3979": {
-        "file_id": 708,
+        "file_id": 705,
         "content": "This code imports functions, creates a list from returned values, prints the list, then iterates through each item in the list to execute specific code and print results. Finally, it closes the database connection.",
         "type": "summary"
     },
     "3980": {
-        "file_id": 708,
+        "file_id": 705,
         "content": "from getFromPickle import returnAList\nfrom term1 import executeCode, closeConnection\nfrom conPro import sqlMaker\nmasochist=list(map((lambda x:x[0]),returnAList()))\nprint(masochist)\n# this is a fucking list.\nfor k in masochist:\n    print(\"-- spliter for \"+k+\" --\")\n    superMan=executeCode(sqlMaker(k))\n    for superMania in superMan:\n        print(superMania)\n    print(\"-- spliter for \"+k+\" --\")\ncloseConnection()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/testiclePickle.py:1-13"
     },
     "3981": {
-        "file_id": 708,
+        "file_id": 705,
         "content": "This code imports functions, creates a list from returned values, prints the list, then iterates through each item in the list to execute specific code and print results. Finally, it closes the database connection.",
         "type": "comment"
     },
     "3982": {
-        "file_id": 709,
+        "file_id": 706,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/template/turnItUp.py",
         "type": "filepath"
     },
     "3983": {
-        "file_id": 709,
+        "file_id": 706,
         "content": "The code imports functions from different modules, creates a list of unique items, and then iterates over the list. It prints information for each item, checks some conditions, and finally closes the database connection.",
         "type": "summary"
     },
     "3984": {
-        "file_id": 709,
+        "file_id": 706,
         "content": "from getFromPickle import returnAList\nfrom term1 import executeCode, closeConnection\nfrom conPro import sqlMaker\nmasochist=list(map((lambda x:x[0]),returnAList()))\nprint(masochist)\n# this is a fucking list.\ncountOn=0\nfor k in masochist:\n    print(\"-- spliter for \"+k+\" --\")\n    superMan=executeCode(sqlMaker(k))\n    for superMania in superMan:\n        if countOn!=0:\n            print(superMania)\n        else:\n            # check the fucking shit.\n            print(superMania[0],chr(superMania[0]),superMania[1],superMania[2],chr(superMania[2]),superMania[4])\n    print(\"-- spliter for \"+k+\" --\")\n    countOn+=1\ncloseConnection()",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/template/turnItUp.py:1-19"
     },
     "3985": {
-        "file_id": 709,
+        "file_id": 706,
         "content": "The code imports functions from different modules, creates a list of unique items, and then iterates over the list. It prints information for each item, checks some conditions, and finally closes the database connection.",
         "type": "comment"
     },
     "3986": {
-        "file_id": 710,
+        "file_id": 707,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/term0.py",
         "type": "filepath"
     },
     "3987": {
-        "file_id": 710,
+        "file_id": 707,
         "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
         "type": "summary"
     },
     "3988": {
-        "file_id": 710,
+        "file_id": 707,
         "content": "import sqlite3\n# initial shits\ndef executeCode(sql):\n    conn=sqlite3.connect(\"fuckyou.db\")\n    conn.execute(sql)\n    conn.commit()\n    conn.close()\n'''\ndef closeConnection():\n\tconn.close()'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/term0.py:1-11"
     },
     "3989": {
-        "file_id": 710,
+        "file_id": 707,
         "content": "This code imports the sqlite3 library, defines a function executeCode that establishes a connection to a SQLite database named \"fuckyou.db\", executes a given SQL statement, commits changes, and closes the connection. Additionally, there is a commented-out closeConnection function that would also close the connection when called.",
         "type": "comment"
     },
     "3990": {
-        "file_id": 711,
+        "file_id": 708,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/tripleTest.py",
         "type": "filepath"
     },
     "3991": {
-        "file_id": 711,
+        "file_id": 708,
         "content": "The function `trinity` takes an argument `arb` and returns a value based on three possible conditions: if `arb` is a single character, it returns the ASCII value of that character; if `arb` starts with \"&#\", it converts the remaining characters to an integer; if `arb` contains a hyphen, it splits the string, converts each half from hexadecimal to integers, and returns a list of numbers within that range. If none of these conditions are met, it prints an error message and returns an empty string.",
         "type": "summary"
     },
     "3992": {
-        "file_id": 711,
+        "file_id": 708,
         "content": "def trinity(arb):\n    if len(arb)==1:\n        return ord(arb)\n    elif arb[:2]==\"&#\":\n        return int(arb[2:-1])\n    elif '-' in arb:\n        a=list(map((lambda x:int(x,16)),arb.split('-')))\n        return list(range(a[0],a[1]+1))\n    else:\n        print(\"--\",len(arb),\"brainfucked:\",arb,\"--\")\n        return \"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/sets/tripleTest.py:1-11"
     },
     "3993": {
-        "file_id": 711,
+        "file_id": 708,
         "content": "The function `trinity` takes an argument `arb` and returns a value based on three possible conditions: if `arb` is a single character, it returns the ASCII value of that character; if `arb` starts with \"&#\", it converts the remaining characters to an integer; if `arb` contains a hyphen, it splits the string, converts each half from hexadecimal to integers, and returns a list of numbers within that range. If none of these conditions are met, it prints an error message and returns an empty string.",
         "type": "comment"
     },
     "3994": {
-        "file_id": 712,
+        "file_id": 709,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/README",
         "type": "filepath"
     },
     "3995": {
-        "file_id": 712,
+        "file_id": 709,
         "content": "This code represents a dictionary containing Unicode characters. It serves as a reference for working with different languages and character sets in the codebase.",
         "type": "summary"
     },
     "3996": {
-        "file_id": 712,
+        "file_id": 709,
         "content": "this is the dictionary of unicode!",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/languages/README:1-1"
     },
     "3997": {
-        "file_id": 712,
+        "file_id": 709,
         "content": "This code represents a dictionary containing Unicode characters. It serves as a reference for working with different languages and character sets in the codebase.",
         "type": "comment"
     },
     "3998": {
-        "file_id": 713,
+        "file_id": 710,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/types/cockshock.py",
         "type": "filepath"
     },
     "3999": {
-        "file_id": 713,
+        "file_id": 710,
         "content": "The code reads a file named 'core.log', applies some transformations to its lines, and appends the transformed lines to another file. It then opens that new file, iterates over each line, passes them to 'toyProject' function along with an index, and finally prints the index and value of each line in the transformed file.",
         "type": "summary"
     }

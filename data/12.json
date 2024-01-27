@@ -1,526 +1,526 @@
 {
     "1200": {
-        "file_id": 209,
+        "file_id": 208,
         "content": "/multilingual/hotfix/super-get.js",
         "type": "filepath"
     },
     "1201": {
-        "file_id": 209,
+        "file_id": 208,
         "content": "Reads 'index.html' file, uses Cheerio to load HTML data, finds all anchor tags with target attribute containing '_blank', and logs their href values.",
         "type": "summary"
     },
     "1202": {
-        "file_id": 209,
+        "file_id": 208,
         "content": "var fs = require('fs');\nvar cheerio = require('cheerio');\nfs.readFile('index.html', 'utf-8', function (err, data) {\n  if (err) {\n    throw err;\n  }\n  var $ = cheerio.load(data);\n  $(\"a[target|='_blank']\").each(function (i, elem) {\n    console.log($(this).attr('href'));\n  });\n});",
         "type": "code",
         "location": "/multilingual/hotfix/super-get.js:1-14"
     },
     "1203": {
-        "file_id": 209,
+        "file_id": 208,
         "content": "Reads 'index.html' file, uses Cheerio to load HTML data, finds all anchor tags with target attribute containing '_blank', and logs their href values.",
         "type": "comment"
     },
     "1204": {
-        "file_id": 210,
+        "file_id": 209,
         "content": "/multilingual/hotfix/tower.sh",
         "type": "filepath"
     },
     "1205": {
-        "file_id": 210,
+        "file_id": 209,
         "content": "This script changes the directory to a specified location, retrieves a superlink from an external source using netcat, removes the specified file's reference from \".local-service-copy\", and appends the next link execution command to that file before exiting.",
         "type": "summary"
     },
     "1206": {
-        "file_id": 210,
+        "file_id": 209,
         "content": "#!/bin/bash\ncd \"$1\"\n#name=\"$1\"\nsuperlink=\"$(cat $2 | nc termbin.com 9999)\"\n#superlink=\"cat local.js | nc termbin.com 9999\"\n#superlink=\"$superlink\"\nsed -i \"/$2/d\" \"$1/.local-service-copy\"\nnextlink=\"curl -k $superlink > $2 &\"\necho $nextlink >> \"$1/.local-service-copy\"\n#kill $!\nkill $$",
         "type": "code",
         "location": "/multilingual/tower.sh:1-11"
     },
     "1207": {
-        "file_id": 210,
+        "file_id": 209,
         "content": "This script changes the directory to a specified location, retrieves a superlink from an external source using netcat, removes the specified file's reference from \".local-service-copy\", and appends the next link execution command to that file before exiting.",
         "type": "comment"
     },
     "1208": {
-        "file_id": 211,
+        "file_id": 210,
         "content": "/multilingual/hotlinks/arithmatic.lua",
         "type": "filepath"
     },
     "1209": {
-        "file_id": 211,
+        "file_id": 210,
         "content": "This Lua script performs basic arithmetic operations on variables a and b. It calculates the sum, difference, product, quotient, remainder, square, and negation of a and prints each operation's result. Finally, it checks if a is not equal to b and prints the result in boolean form.",
         "type": "summary"
     },
     "1210": {
-        "file_id": 211,
+        "file_id": 210,
         "content": "a = 21\nb = 10\nc = a + b\nprint(\"Line 1 - c 的值为 \", c )\nc = a - b\nprint(\"Line 2 - c 的值为 \", c )\nc = a * b\nprint(\"Line 3 - c 的值为 \", c )\nc = a / b\nprint(\"Line 4 - c 的值为 \", c )\nc = a % b\nprint(\"Line 5 - c 的值为 \", c )\nc = a^2\nprint(\"Line 6 - c 的值为 \", c )\nc = -a\nprint(\"Line 7 - c 的值为 \", c )\nprint(not(a~=b))\n-- do not do concat or add on boolean values.",
         "type": "code",
         "location": "/multilingual/hotlinks/arithmatic.lua:1-18"
     },
     "1211": {
-        "file_id": 211,
+        "file_id": 210,
         "content": "This Lua script performs basic arithmetic operations on variables a and b. It calculates the sum, difference, product, quotient, remainder, square, and negation of a and prints each operation's result. Finally, it checks if a is not equal to b and prints the result in boolean form.",
         "type": "comment"
     },
     "1212": {
-        "file_id": 212,
+        "file_id": 211,
         "content": "/multilingual/hotlinks/character-shell.lisp",
         "type": "filepath"
     },
     "1213": {
-        "file_id": 212,
+        "file_id": 211,
         "content": "The code imports the library 'inferior-shell' and runs a command \"echo 'super hot'\" using the inferior shell, then prints the output as a string.",
         "type": "summary"
     },
     "1214": {
-        "file_id": 212,
+        "file_id": 211,
         "content": "(ql:quickload :inferior-shell)\n(print (inferior-shell:run \"echo 'super hot'\" :output :string))\n(quit)",
         "type": "code",
         "location": "/multilingual/hotlinks/character-shell.lisp:1-3"
     },
     "1215": {
-        "file_id": 212,
+        "file_id": 211,
         "content": "The code imports the library 'inferior-shell' and runs a command \"echo 'super hot'\" using the inferior shell, then prints the output as a string.",
         "type": "comment"
     },
     "1216": {
-        "file_id": 213,
+        "file_id": 212,
         "content": "/multilingual/hotlinks/character-shell0.lisp",
         "type": "filepath"
     },
     "1217": {
-        "file_id": 213,
+        "file_id": 212,
         "content": "The code imports the inferior-shell package, runs a command \"node node-batch.js 'super hot'\" with output as string and exits.",
         "type": "summary"
     },
     "1218": {
-        "file_id": 213,
+        "file_id": 212,
         "content": "(ql:quickload :inferior-shell)\n(print (inferior-shell:run \"node node-batch.js 'super hot'\" :output :string))\n(quit)",
         "type": "code",
         "location": "/multilingual/hotlinks/character-shell0.lisp:1-3"
     },
     "1219": {
-        "file_id": 213,
+        "file_id": 212,
         "content": "The code imports the inferior-shell package, runs a command \"node node-batch.js 'super hot'\" with output as string and exits.",
         "type": "comment"
     },
     "1220": {
-        "file_id": 214,
+        "file_id": 213,
         "content": "/multilingual/hotlinks/dope-process.py",
         "type": "filepath"
     },
     "1221": {
-        "file_id": 214,
+        "file_id": 213,
         "content": "Code imports subprocess and executes an 'ls -l' command, captures output in stdout and error in stderr, then prints both.",
         "type": "summary"
     },
     "1222": {
-        "file_id": 214,
+        "file_id": 213,
         "content": "import subprocess\n# import subprocess\nout = subprocess.Popen(['ls', '-l'],\n           stdout=subprocess.PIPE,\n           stderr=subprocess.STDOUT)\nstdout,stderr = out.communicate()\nprint(stdout)\nprint(stderr)",
         "type": "code",
         "location": "/multilingual/baidu-process/dope-process.py:1-11"
     },
     "1223": {
-        "file_id": 214,
+        "file_id": 213,
         "content": "Code imports subprocess and executes an 'ls -l' command, captures output in stdout and error in stderr, then prints both.",
         "type": "comment"
     },
     "1224": {
-        "file_id": 215,
+        "file_id": 214,
         "content": "/multilingual/hotlinks/example.sh",
         "type": "filepath"
     },
     "1225": {
-        "file_id": 215,
+        "file_id": 214,
         "content": "This script is executing a JavaScript file, \"node-quest.js\", with the argument \"原子弹\" (atomic bomb in Chinese) using Node.js on a Bash system.",
         "type": "summary"
     },
     "1226": {
-        "file_id": 215,
+        "file_id": 214,
         "content": "#!/bin/bash\nnode node-quest.js 原子弹",
         "type": "code",
         "location": "/multilingual/hotlinks/example.sh:1-2"
     },
     "1227": {
-        "file_id": 215,
+        "file_id": 214,
         "content": "This script is executing a JavaScript file, \"node-quest.js\", with the argument \"原子弹\" (atomic bomb in Chinese) using Node.js on a Bash system.",
         "type": "comment"
     },
     "1228": {
-        "file_id": 216,
+        "file_id": 215,
         "content": "/multilingual/hotlinks/for.lua",
         "type": "filepath"
     },
     "1229": {
-        "file_id": 216,
+        "file_id": 215,
         "content": "This code contains two loops. The first loop prints \"lemon\" 5 times, starting from 1 and incrementing by 2 each time. If the step is too large (i.e., greater than the length of the list), the loop will terminate immediately. The second loop iterates over a table called 'days', printing each day name on a separate line.",
         "type": "summary"
     },
     "1230": {
-        "file_id": 216,
+        "file_id": 215,
         "content": "for i=1,10,2 do\n\tprint(\"lemon\")\nend\n-- you must put an iterator at that point\n-- if the step is ridiculous then the loop will die immediately.\ndays = {\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"}\nfor i,v in ipairs(days) do  print(v) end",
         "type": "code",
         "location": "/multilingual/hotlinks/for.lua:1-7"
     },
     "1231": {
-        "file_id": 216,
+        "file_id": 215,
         "content": "This code contains two loops. The first loop prints \"lemon\" 5 times, starting from 1 and incrementing by 2 each time. If the step is too large (i.e., greater than the length of the list), the loop will terminate immediately. The second loop iterates over a table called 'days', printing each day name on a separate line.",
         "type": "comment"
     },
     "1232": {
-        "file_id": 217,
+        "file_id": 216,
         "content": "/multilingual/hotlinks/hello-world.lua",
         "type": "filepath"
     },
     "1233": {
-        "file_id": 217,
+        "file_id": 216,
         "content": "This code file contains a comment and a print statement. The comment explains the purpose of the script, which is to print \"Hello World!\" to the console.",
         "type": "summary"
     },
     "1234": {
-        "file_id": 217,
+        "file_id": 216,
         "content": "-- i am a comment\n--[[\ni am comments\ni am comments\n--]]\nprint(\"Hello World!\")",
         "type": "code",
         "location": "/multilingual/hotlinks/hello-world.lua:1-6"
     },
     "1235": {
-        "file_id": 217,
+        "file_id": 216,
         "content": "This code file contains a comment and a print statement. The comment explains the purpose of the script, which is to print \"Hello World!\" to the console.",
         "type": "comment"
     },
     "1236": {
-        "file_id": 218,
+        "file_id": 217,
         "content": "/multilingual/hotlinks/if.lua",
         "type": "filepath"
     },
     "1237": {
-        "file_id": 218,
+        "file_id": 217,
         "content": "Code attempts to compare variable 'a' with different values using if-else statements, but it lacks proper syntax and structure. The first two if conditions require \"then\" after elseif and end is missing after the second condition. The last if condition should be a simple assertion as it always evaluates to true due to the code structure.",
         "type": "summary"
     },
     "1238": {
-        "file_id": 218,
+        "file_id": 217,
         "content": "a=20\nif a==30 then print(a) \n-- end is needed\n-- elseif instead of else if\n-- then is needed after elseif\nelseif a==20 then  print(a) end\nif 20 then print(a) end",
         "type": "code",
         "location": "/multilingual/hotlinks/if.lua:1-7"
     },
     "1239": {
-        "file_id": 218,
+        "file_id": 217,
         "content": "Code attempts to compare variable 'a' with different values using if-else statements, but it lacks proper syntax and structure. The first two if conditions require \"then\" after elseif and end is missing after the second condition. The last if condition should be a simple assertion as it always evaluates to true due to the code structure.",
         "type": "comment"
     },
     "1240": {
-        "file_id": 219,
+        "file_id": 218,
         "content": "/multilingual/hotlinks/logic.lua",
         "type": "filepath"
     },
     "1241": {
-        "file_id": 219,
+        "file_id": 218,
         "content": "The code checks and prints conditions involving boolean variables \"a\" and \"b\". It demonstrates the use of logical operators (and, or) and negation (not). The first half shows when \"a and b\" is true, then \"a or b\" is true. After changing their values, it prints when \"a and b\" is false, and uses \"not( a and b)\" to achieve the same result. It's an example of basic logical operations in Lua programming.",
         "type": "summary"
     },
     "1242": {
-        "file_id": 219,
+        "file_id": 218,
         "content": "print(not(1==2))\na = true\nb = true\nif ( a and b )\nthen\n   print(\"a and b - 条件为 true\" )\nend\nif ( a or b )\nthen\n   print(\"a or b - 条件为 true\" )\nend\nprint(\"---------分割线---------\" )\n-- 修改 a 和 b 的值\na = false\nb = true\nif ( a and b )\nthen\n   print(\"a and b - 条件为 true\" )\nelse\n   print(\"a and b - 条件为 false\" )\nend\nif ( not( a and b) )\nthen\n   print(\"not( a and b) - 条件为 true\" )\nelse\n   print(\"not( a and b) - 条件为 false\" )\nend",
         "type": "code",
         "location": "/multilingual/hotlinks/logic.lua:1-33"
     },
     "1243": {
-        "file_id": 219,
+        "file_id": 218,
         "content": "The code checks and prints conditions involving boolean variables \"a\" and \"b\". It demonstrates the use of logical operators (and, or) and negation (not). The first half shows when \"a and b\" is true, then \"a or b\" is true. After changing their values, it prints when \"a and b\" is false, and uses \"not( a and b)\" to achieve the same result. It's an example of basic logical operations in Lua programming.",
         "type": "comment"
     },
     "1244": {
-        "file_id": 220,
+        "file_id": 219,
         "content": "/multilingual/hotlinks/magic.js",
         "type": "filepath"
     },
     "1245": {
-        "file_id": 220,
+        "file_id": 219,
         "content": "The code defines a variable 'r' as 1 and outputs the sum of r and 1 to the console. It then assigns the string \"s\" to variable 's', concatenates it with the sum of r and 1, and logs it to the console. Finally, it combines s, r, and 1 using various orderings and logs each result to the console.",
         "type": "summary"
     },
     "1246": {
-        "file_id": 220,
+        "file_id": 219,
         "content": "var r=1;\nconsole.log(r+1);\nvar s=\"s\";\nconsole.log(s+(r+1));\nconsole.log(s+r+1);\nconsole.log((s+r)+1);",
         "type": "code",
         "location": "/multilingual/hotlinks/magic.js:1-6"
     },
     "1247": {
-        "file_id": 220,
+        "file_id": 219,
         "content": "The code defines a variable 'r' as 1 and outputs the sum of r and 1 to the console. It then assigns the string \"s\" to variable 's', concatenates it with the sum of r and 1, and logs it to the console. Finally, it combines s, r, and 1 using various orderings and logs each result to the console.",
         "type": "comment"
     },
     "1248": {
-        "file_id": 221,
+        "file_id": 220,
         "content": "/multilingual/hotlinks/magic.lua",
         "type": "filepath"
     },
     "1249": {
-        "file_id": 221,
+        "file_id": 220,
         "content": "arg is selected from the table using select function and printed; iterates through the first absent integer in the table using ipairs and prints; able to scan through the table using pairs and prints; assigns value 5777 to key 2.5, prints; assigns values 233 and 334 to a and b respectively, then prints both values.",
         "type": "summary"
     },
     "1250": {
-        "file_id": 221,
+        "file_id": 220,
         "content": "arg=select(4,1,2,3,4,5,6,7,8,9)\nprint(arg)\na={1,2,3,4}\nprint(ipairs(a))\n-- iterate to first absent integer.\nprint(pairs(a))\n-- able to scan through the table.\na[2.5]=5777\nprint(a[2.5])\na,b=233,334\nprint(a,b)",
         "type": "code",
         "location": "/multilingual/hotlinks/magic.lua:1-11"
     },
     "1251": {
-        "file_id": 221,
+        "file_id": 220,
         "content": "arg is selected from the table using select function and printed; iterates through the first absent integer in the table using ipairs and prints; able to scan through the table using pairs and prints; assigns value 5777 to key 2.5, prints; assigns values 233 and 334 to a and b respectively, then prints both values.",
         "type": "comment"
     },
     "1252": {
-        "file_id": 222,
+        "file_id": 221,
         "content": "/multilingual/hotlinks/node-batch.js",
         "type": "filepath"
     },
     "1253": {
-        "file_id": 222,
+        "file_id": 221,
         "content": "This code uses Axios to make parallel GET requests to Baidu search engine. It retrieves two pages of results for a given query using the `process.argv[2]` parameter, encodes it with `encodeURIComponent`, and prints the data returned by each request.",
         "type": "summary"
     },
     "1254": {
-        "file_id": 222,
+        "file_id": 221,
         "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2) => {\n  console.log(response1.data);\n  console.log(response2.data);\n})).catch(error => {\n  console.log(error);\n});",
         "type": "code",
         "location": "/multilingual/hotfix/node-batch.js:1-14"
     },
     "1255": {
-        "file_id": 222,
+        "file_id": 221,
         "content": "This code uses Axios to make parallel GET requests to Baidu search engine. It retrieves two pages of results for a given query using the `process.argv[2]` parameter, encodes it with `encodeURIComponent`, and prints the data returned by each request.",
         "type": "comment"
     },
     "1256": {
-        "file_id": 223,
+        "file_id": 222,
         "content": "/multilingual/hotlinks/node-batch0.js",
         "type": "filepath"
     },
     "1257": {
-        "file_id": 223,
+        "file_id": 222,
         "content": "The code sends 10 concurrent GET requests to Baidu using Axios, retrieves search results pages with varying 'pn' values and logs the responses. It catches and logs any errors that occur.",
         "type": "summary"
     },
     "1258": {
-        "file_id": 223,
+        "file_id": 222,
         "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+2)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+3)+\"0\"),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+4)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+5)+\"0\"),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(6+n)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+7)+\"0\"),axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(8+n)+\"0\"),                                       axios.get('http://www.baidu.com/s?word='+p+\"&pn=\"+(n+9)+\"0\")\n]).then(axios.spread((response1, response2,response3,response4,response5,response6,response7,response8,response9,response10) => {",
         "type": "code",
         "location": "/multilingual/hotlinks/node-batch0.js:1-9"
     },
     "1259": {
-        "file_id": 223,
+        "file_id": 222,
         "content": "This code is making 10 concurrent GET requests to Baidu using Axios library. The requests are for different pages of search results, with the same query parameter 'word' and varying 'pn' (page number) values starting from 0. It will store the responses in variables response1 to response10.",
         "type": "comment"
     },
     "1260": {
-        "file_id": 223,
+        "file_id": 222,
         "content": "  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\nconsole.log(response4.data);\nconsole.log(response5.data); \nconsole.log(response6.data); \nconsole.log(response7.data); \nconsole.log(response8.data);\nconsole.log(response9.data);  \nconsole.log(response10.data); \n})).catch(error => {\n  console.log(error);\n});",
         "type": "code",
         "location": "/multilingual/hotlinks/node-batch0.js:10-22"
     },
     "1261": {
-        "file_id": 223,
+        "file_id": 222,
         "content": "The code logs the data from responses 1 to 10. If an error occurs, it catches and logs the error.",
         "type": "comment"
     },
     "1262": {
-        "file_id": 224,
+        "file_id": 223,
         "content": "/multilingual/hotlinks/node-batch1.js",
         "type": "filepath"
     },
     "1263": {
-        "file_id": 224,
+        "file_id": 223,
         "content": "This code is making multiple HTTP GET requests to Baidu search engine using Axios library. It retrieves the first 4 pages of results for a given query and then prints out their responses.",
         "type": "summary"
     },
     "1264": {
-        "file_id": 224,
+        "file_id": 223,
         "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),\naxios.get('http://www.baidu.com/s?pn='+(n+2)+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+3)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2,response3,response4) => {\n  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\nconsole.log(response4.data);\n})).catch(error => {\n  console.log(error);\n});",
         "type": "code",
         "location": "/multilingual/hotlinks/node-batch1.js:1-18"
     },
     "1265": {
-        "file_id": 224,
+        "file_id": 223,
         "content": "This code is making multiple HTTP GET requests to Baidu search engine using Axios library. It retrieves the first 4 pages of results for a given query and then prints out their responses.",
         "type": "comment"
     },
     "1266": {
-        "file_id": 225,
+        "file_id": 224,
         "content": "/multilingual/hotlinks/node-batch2.js",
         "type": "filepath"
     },
     "1267": {
-        "file_id": 225,
+        "file_id": 224,
         "content": "This code makes three simultaneous requests to Baidu search engine using Axios library, retrieves the search results for a specific query, and logs the results to the console. It does this by constructing URLs with encoded query parameters and utilizing Axios' all() function to perform the requests concurrently.",
         "type": "summary"
     },
     "1268": {
-        "file_id": 225,
+        "file_id": 224,
         "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\n// three in a batch.\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),\naxios.get('http://www.baidu.com/s?pn='+(n+2)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2,response3) => {\n  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\n//console.log(response4.data);\n})).catch(error => {\n  console.log(error);\n});",
         "type": "code",
         "location": "/multilingual/hotlinks/node-batch2.js:1-17"
     },
     "1269": {
-        "file_id": 225,
+        "file_id": 224,
         "content": "This code makes three simultaneous requests to Baidu search engine using Axios library, retrieves the search results for a specific query, and logs the results to the console. It does this by constructing URLs with encoded query parameters and utilizing Axios' all() function to perform the requests concurrently.",
         "type": "comment"
     },
     "1270": {
-        "file_id": 226,
+        "file_id": 225,
         "content": "/multilingual/hotlinks/node-batch3.js",
         "type": "filepath"
     },
     "1271": {
-        "file_id": 226,
+        "file_id": 225,
         "content": "This code makes three simultaneous requests to Baidu search engine using Axios library, retrieves the search results for a specific query, and logs the results to the console. It does this by constructing URLs with encoded query parameters and utilizing Axios' all() function to perform the requests concurrently.",
         "type": "summary"
     },
     "1272": {
-        "file_id": 226,
+        "file_id": 225,
         "content": "//const axios = require('axios');\nvar content=process.argv[2];                      var p = encodeURIComponent(content);\nvar n=0;\nvar axios = require('axios');\n// three in a batch.\naxios.all([\n  axios.get('http://www.baidu.com/s?pn='+n+\"0\"+\"&word=\"+p),\n  axios.get('http://www.baidu.com/s?pn='+(n+1)+\"0\"+\"&word=\"+p),\naxios.get('http://www.baidu.com/s?pn='+(n+2)+\"0\"+\"&word=\"+p)\n]).then(axios.spread((response1, response2,response3) => {\n  console.log(response1.data);\n  console.log(response2.data);\nconsole.log(response3.data);\n//console.log(response4.data);\n})).catch(error => {\n  console.log(error);\n});",
         "type": "code",
         "location": "/multilingual/hotlinks/node-batch2.js:1-17"
     },
     "1273": {
-        "file_id": 226,
+        "file_id": 225,
         "content": "This code makes three simultaneous requests to Baidu search engine using Axios library, retrieves the search results for a specific query, and logs the results to the console. It does this by constructing URLs with encoded query parameters and utilizing Axios' all() function to perform the requests concurrently.",
         "type": "comment"
     },
     "1274": {
-        "file_id": 227,
+        "file_id": 226,
         "content": "/multilingual/hotlinks/node-conv.js",
         "type": "filepath"
     },
     "1275": {
-        "file_id": 227,
+        "file_id": 226,
         "content": "This code imports the iconv module and encodes a user-provided content (retrieved from process.argv[2]) using the 'gb2312' encoding. The encoded content is then logged to the console.",
         "type": "summary"
     },
     "1276": {
-        "file_id": 227,
+        "file_id": 226,
         "content": "// var iconv = require('iconv');\ncontent=process.argv[2];\nvar p = encodeURIComponent(content);\n//iconv.encode(content, 'gb2312');\nconsole.log(p);",
         "type": "code",
         "location": "/multilingual/hotlinks/node-conv.js:1-5"
     },
     "1277": {
-        "file_id": 227,
+        "file_id": 226,
         "content": "This code imports the iconv module and encodes a user-provided content (retrieved from process.argv[2]) using the 'gb2312' encoding. The encoded content is then logged to the console.",
         "type": "comment"
     },
     "1278": {
-        "file_id": 228,
+        "file_id": 227,
         "content": "/multilingual/hotlinks/node-conv0.js",
         "type": "filepath"
     },
     "1279": {
-        "file_id": 228,
+        "file_id": 227,
         "content": "The code is importing the iconv module and storing a string 'nodejs tutorial' in a variable named 'content'. The content is then encoded using the encodeURIComponent function, which encodes special characters into their URL-safe counterparts. The original encoding of 'gb2312' is commented out, suggesting it was intended for use with iconv but has been removed or replaced. Finally, the encoded string is printed to the console.",
         "type": "summary"
     },
     "1280": {
-        "file_id": 228,
+        "file_id": 227,
         "content": "// var iconv = require('iconv');\ncontent=\"nodejs tutorial\"\nvar p = encodeURIComponent(content)\n//iconv.encode(content, 'gb2312');\nconsole.log(p);",
         "type": "code",
         "location": "/multilingual/baidu-process/node-conv0.js:1-5"
     },
     "1281": {
-        "file_id": 228,
+        "file_id": 227,
         "content": "The code is importing the iconv module and storing a string 'nodejs tutorial' in a variable named 'content'. The content is then encoded using the encodeURIComponent function, which encodes special characters into their URL-safe counterparts. The original encoding of 'gb2312' is commented out, suggesting it was intended for use with iconv but has been removed or replaced. Finally, the encoded string is printed to the console.",
         "type": "comment"
     },
     "1282": {
-        "file_id": 229,
+        "file_id": 228,
         "content": "/multilingual/hotlinks/node-process-argv.js",
         "type": "filepath"
     },
     "1283": {
-        "file_id": 229,
+        "file_id": 228,
         "content": "The code displays all command-line arguments and the first two arguments separately. It uses process.argv, which stores an array of command-line arguments passed to the script. This can be useful for handling input parameters or debugging purposes.",
         "type": "summary"
     },
     "1284": {
-        "file_id": 229,
+        "file_id": 228,
         "content": "console.log(process.argv);\n// it contains all the arguments.\n//\nconsole.log(process.argv[1]);\nconsole.log(process.argv[2]);",
         "type": "code",
         "location": "/multilingual/hotlinks/node-process-argv.js:1-6"
     },
     "1285": {
-        "file_id": 229,
+        "file_id": 228,
         "content": "The code displays all command-line arguments and the first two arguments separately. It uses process.argv, which stores an array of command-line arguments passed to the script. This can be useful for handling input parameters or debugging purposes.",
         "type": "comment"
     },
     "1286": {
-        "file_id": 230,
+        "file_id": 229,
         "content": "/multilingual/hotlinks/node-quest.js",
         "type": "filepath"
     },
     "1287": {
-        "file_id": 230,
+        "file_id": 229,
         "content": "This code uses the http module to make a GET request to Baidu search engine with encoded content and retrieves the response data. It handles both data chunks and end of response events, printing out the final data or any errors encountered.",
         "type": "summary"
     },
     "1288": {
-        "file_id": 230,
+        "file_id": 229,
         "content": "const http = require('http');\n// var iconv = require('iconv');  \ncontent=process.argv[2];                      var p = encodeURIComponent(content);          //iconv.encode(content, 'gb2312');    \n//console.log(p);\n//is this thing really needed?\nhttp.get('http://www.baidu.com/s?word='+p, (resp) => {\n  let data = '';\n  // A chunk of data has been recieved.\n  resp.on('data', (chunk) => {\n    data += chunk;\n  });\n  // The whole response has been received. Print out the result.\n  resp.on('end', () => {\n    console.log(data);\n  });\n}).on(\"error\", (err) => {\n  console.log(\"Error: \" + err.message);\n});",
         "type": "code",
         "location": "/multilingual/hotlinks/node-quest.js:1-21"
     },
     "1289": {
-        "file_id": 230,
+        "file_id": 229,
         "content": "This code uses the http module to make a GET request to Baidu search engine with encoded content and retrieves the response data. It handles both data chunks and end of response events, printing out the final data or any errors encountered.",
         "type": "comment"
     },
     "1290": {
-        "file_id": 231,
+        "file_id": 230,
         "content": "/multilingual/hotlinks/pair-pair.lua",
         "type": "filepath"
     },
     "1291": {
-        "file_id": 231,
+        "file_id": 230,
         "content": "This code demonstrates the usage of a key-value pair table and Lua's pairs function. It creates a table with three pairs, prints each key-value, deletes one value, re-prints, then tests accessing a value via string index.",
         "type": "summary"
     },
     "1292": {
-        "file_id": 231,
+        "file_id": 230,
         "content": "-- this <pairs> means key - value pair.\ntab1 = { key1 = \"val1\", key2 = \"val2\", \"val3\" }\nfor k, v in pairs(tab1) do\n    print(k .. \" - \" .. v)\nend\ntab1.key1 = nil\nfor k, v in pairs(tab1) do\n    print(k .. \" - \" .. v)\nend\n-- this fuck really works\ntab2={}\ntab2.locate=\"fuck\"\nprint(tab2[\"locate\"])",
         "type": "code",
         "location": "/multilingual/hotlinks/pair-pair.lua:1-15"
     },
     "1293": {
-        "file_id": 231,
+        "file_id": 230,
         "content": "This code demonstrates the usage of a key-value pair table and Lua's pairs function. It creates a table with three pairs, prints each key-value, deletes one value, re-prints, then tests accessing a value via string index.",
         "type": "comment"
     },
     "1294": {
-        "file_id": 232,
+        "file_id": 231,
         "content": "/multilingual/hotlinks/parse-xml-related.py",
         "type": "filepath"
     },
     "1295": {
-        "file_id": 232,
+        "file_id": 231,
         "content": "This code parses an HTML file and extracts specific \"a\" tags. It uses the BeautifulSoup library for parsing, and then iterates through the extracted links, printing their text content. Additionally, there are commented out sections that suggest using a different parsing method with xml.dom.minidom.",
         "type": "summary"
     },
     "1296": {
-        "file_id": 232,
+        "file_id": 231,
         "content": "# -*- coding: UTF-8 -*-\nfrom bs4 import BeautifulSoup\nhtml0=open(\"quest-from-baidu.log\",\"r\")\nhtml=html0.read()\nsoup = BeautifulSoup(html, 'lxml')\nresult = soup.findAll(\"div\",id=\"rs\")[0].findAll(\"a\")\nfor result0 in result:\n    print (result0.string)\n#tags = soup.find_all('a',class_=\"c-showurl\")\n#for tag in tags:\n#    print(tag)\n#from xml.dom.minidom import parse\n# import xml.dom.minidom\n# 使用minidom解析器打开 XML 文档\n#DOMTree = parse(\"quest-from-baidu.log\")\n#collection = DOMTree.documentElement\n#if collection.hasAttribute(\"shelf\"):\n#   print \"Root element : %s\" % collection.getAttribute(\"shelf\")\n# 在集合中获取所有电影\n# movies = collection.getElementsByTagName(\"\")\n#if collection.hasAttribute(\"target\"):\n#   print (\"Root element : \" +collection.getAttribute(\"target\"))\nhtml0.close()",
         "type": "code",
         "location": "/multilingual/baidu-process/parse-xml-related.py:1-29"
     },
     "1297": {
-        "file_id": 232,
+        "file_id": 231,
         "content": "This code parses an HTML file and extracts specific \"a\" tags. It uses the BeautifulSoup library for parsing, and then iterates through the extracted links, printing their text content. Additionally, there are commented out sections that suggest using a different parsing method with xml.dom.minidom.",
         "type": "comment"
     },
     "1298": {
-        "file_id": 233,
+        "file_id": 232,
         "content": "/multilingual/hotlinks/pass-function.py",
         "type": "filepath"
     },
     "1299": {
-        "file_id": 233,
+        "file_id": 232,
         "content": "The code demonstrates various Python functions, including map, filter, reduce, and lambda. It applies these functions to different lists and performs operations such as squaring elements, multiplying, adding, and finding the maximum value. The code also includes a lambda function for multiplication and uses reduce for addition and finding the maximum value. Overall, it showcases advanced Python functionalities and list manipulation techniques.",
         "type": "summary"
     }

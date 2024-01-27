@@ -1,22 +1,22 @@
 {
     "4200": {
-        "file_id": 754,
+        "file_id": 751,
         "content": "/websitegrep/webinar.sh",
         "type": "filepath"
     },
     "4201": {
-        "file_id": 754,
+        "file_id": 751,
         "content": "This code sets the necessary environment variables for the ABCL Lisp interpreter. It then checks if any command line arguments are passed and executes either an interactive shell or runs the provided commands with the ABCL interpreter.",
         "type": "summary"
     },
     "4202": {
-        "file_id": 754,
+        "file_id": 751,
         "content": "#!/bin/sh\nABCL_JAR=/opt/abcl/abcl.jar\t# Use your own path here.\nJAVA=$(which java)\nABCL=\"$JAVA -server -Xrs -cp $ABCL_JAR org.armedbear.lisp.Main\"\nif [ $# -eq 0 ]; then\n\texec rlwrap -b \"[]()'\\\" \" --remember -c -f ~/.abcl_completions \\\n\t\t\t\t  -H ~/.abcl_history -s 1000000 $ABCL\nelse\n\texec $ABCL \"$@\"\nfi",
         "type": "code",
         "location": "/websitegrep/webinar.sh:1-10"
     },
     "4203": {
-        "file_id": 754,
+        "file_id": 751,
         "content": "This code sets the necessary environment variables for the ABCL Lisp interpreter. It then checks if any command line arguments are passed and executes either an interactive shell or runs the provided commands with the ABCL interpreter.",
         "type": "comment"
     }

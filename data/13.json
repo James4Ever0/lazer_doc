@@ -1,538 +1,538 @@
 {
     "1300": {
-        "file_id": 233,
+        "file_id": 232,
         "content": "# very fucking important while using python3\nfrom functools import reduce\ndef hello():\n    print (\"hello\")\n    return 1\ndef k(m):\n    s=m()\n    print(s)\nk(hello)\n# this is as easy as fuck.\ns=list(map((lambda x:x**2),[2]))\nprint (s)\nse=[1,2,3]\nsm=list(map((lambda x:x**2),se))\nprint (sm)\nsd=list(map((lambda v,vo:v*vo+hello()),se,sm))*3\n# this is adding combining multiple copies of the same list as one\n# you had better pass lambda to filter and map?\n# i saw map in process before.\n#sd=list(filter(hello,se))\nprint(sd)\n# return true and that item survives\n# filter out those false things\nsd=list(map((lambda v,v0,v1:v*v0*v1),se,sm,sd))\nprint(sd)\nvk=reduce(lambda x,y:x+y,sd)\nprint(vk)\n# i don't know how to accomplish this.\nvm=reduce(lambda x,y:x if x>y else y,sd)\nprint(vm)\nskr=lambda d,f:d*f\nprint(skr(3,4))\n# lambda can only have one expression\n# when the list is called, the lambda function will be evaluated.\n# what if we do not pass lambda to it?",
         "type": "code",
         "location": "/multilingual/hotlinks/pass-function.py:1-37"
     },
     "1301": {
-        "file_id": 233,
+        "file_id": 232,
         "content": "The code demonstrates various Python functions, including map, filter, reduce, and lambda. It applies these functions to different lists and performs operations such as squaring elements, multiplying, adding, and finding the maximum value. The code also includes a lambda function for multiplication and uses reduce for addition and finding the maximum value. Overall, it showcases advanced Python functionalities and list manipulation techniques.",
         "type": "comment"
     },
     "1302": {
-        "file_id": 234,
+        "file_id": 233,
         "content": "/multilingual/hotlinks/shell-execute-return.lua",
         "type": "filepath"
     },
     "1303": {
-        "file_id": 234,
+        "file_id": 233,
         "content": "This code executes a command (here \"ls\") using io.popen and prints the result, using local instead of certain functions for improved efficiency.",
         "type": "summary"
     },
     "1304": {
-        "file_id": 234,
+        "file_id": 233,
         "content": "command =\"ls\"\nhandle = io.popen(command)\nresult = handle:read(\"*a\")\nhandle:close()\n-- use local instead of using some functions.\nprint (result)",
         "type": "code",
         "location": "/multilingual/hotlinks/shell-execute-return.lua:1-6"
     },
     "1305": {
-        "file_id": 234,
+        "file_id": 233,
         "content": "This code executes a command (here \"ls\") using io.popen and prints the result, using local instead of certain functions for improved efficiency.",
         "type": "comment"
     },
     "1306": {
-        "file_id": 235,
+        "file_id": 234,
         "content": "/multilingual/hotlinks/simple-regex-filter.lua",
         "type": "filepath"
     },
     "1307": {
-        "file_id": 235,
+        "file_id": 234,
         "content": "This Lua script reads a file named \"unbash6.log\" and extracts specific URL patterns using regular expressions, printing them one by one. It continues reading the file line by line until reaching the end, then closes the file.",
         "type": "summary"
     },
     "1308": {
-        "file_id": 235,
+        "file_id": 234,
         "content": "file=io.open(\"unbash6.log\",\"r\")\nfunction resolve (n)\n\t-- print(n)\n\tfor word in string.gmatch(n, 'http://www%.baidu%.com/link%?url=[^%\"\"]+') do\n\t\tprint(word)\n\tend\nend\n-- print(file:read())\nvariable=\"\"\nwhile true  do\n\tvariable=file:read()\n\t-- print(variable)\n\tif variable ~=nil\n\tthen\n\t\tresolve(variable)\n\t\t-- name with variable\n\telse\n\t\tbreak\n\tend\n\t-- to make sure there isn't any silly nil\nend\n-- it will only return one line at a time\n-- print(file:flush())\n-- does this work?\n-- no it does not work\n-- use colon to transfer the file object to the method.\nfile:close()",
         "type": "code",
         "location": "/multilingual/hotfix/simple-regex-filter.lua:1-27"
     },
     "1309": {
-        "file_id": 235,
+        "file_id": 234,
         "content": "This Lua script reads a file named \"unbash6.log\" and extracts specific URL patterns using regular expressions, printing them one by one. It continues reading the file line by line until reaching the end, then closes the file.",
         "type": "comment"
     },
     "1310": {
-        "file_id": 236,
+        "file_id": 235,
         "content": "/multilingual/hotlinks/simple.sh",
         "type": "filepath"
     },
     "1311": {
-        "file_id": 236,
+        "file_id": 235,
         "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
         "type": "summary"
     },
     "1312": {
-        "file_id": 236,
+        "file_id": 235,
         "content": "#!/bin/bash\nls -lt",
         "type": "code",
         "location": "/multilingual/simple.sh:1-2"
     },
     "1313": {
-        "file_id": 236,
+        "file_id": 235,
         "content": "This script is a basic Bash shell script that lists all files and directories in the current directory using the 'ls' command with long format (-lt) option.",
         "type": "comment"
     },
     "1314": {
-        "file_id": 237,
+        "file_id": 236,
         "content": "/multilingual/island.sh",
         "type": "filepath"
     },
     "1315": {
-        "file_id": 237,
+        "file_id": 236,
         "content": "The script changes the directory to 'hotfix', retrieves a value from 'local.js' using an external service, and assigns it to the 'superlink' variable before echoing it in the background.",
         "type": "summary"
     },
     "1316": {
-        "file_id": 237,
+        "file_id": 236,
         "content": "#!/bin/bash\ncd hotfix\nsuperlink=\"$(cat local.js | nc termbin.com 9999)\"\necho $superlink &",
         "type": "code",
         "location": "/multilingual/island.sh:1-4"
     },
     "1317": {
-        "file_id": 237,
+        "file_id": 236,
         "content": "The script changes the directory to 'hotfix', retrieves a value from 'local.js' using an external service, and assigns it to the 'superlink' variable before echoing it in the background.",
         "type": "comment"
     },
     "1318": {
-        "file_id": 238,
+        "file_id": 237,
         "content": "/multilingual/magic.sh",
         "type": "filepath"
     },
     "1319": {
-        "file_id": 238,
+        "file_id": 237,
         "content": "The code executes cloudnine.sh script with specified parameters and waits for 2 seconds, then copies local service file to a remote server using netcat (nc), before terminating the script.",
         "type": "summary"
     },
     "1320": {
-        "file_id": 238,
+        "file_id": 237,
         "content": "#!/bin/bash\n./cloudnine.sh \"radical\" \"fuckyou.db\" \"madeinchina.py\" \n# nonempty parameter?\nsleep 2;\ncat rockstar/chumble/.local-service-copy | nc termbin.com 9999\nkill $$",
         "type": "code",
         "location": "/multilingual/magic.sh:1-7"
     },
     "1321": {
-        "file_id": 238,
+        "file_id": 237,
         "content": "The code executes cloudnine.sh script with specified parameters and waits for 2 seconds, then copies local service file to a remote server using netcat (nc), before terminating the script.",
         "type": "comment"
     },
     "1322": {
-        "file_id": 239,
+        "file_id": 238,
         "content": "/multilingual/random.sh",
         "type": "filepath"
     },
     "1323": {
-        "file_id": 239,
+        "file_id": 238,
         "content": "This script generates a random number using the `$RANDOM` variable and prints it to the console.",
         "type": "summary"
     },
     "1324": {
-        "file_id": 239,
+        "file_id": 238,
         "content": "#!/bin/bash\necho $RANDOM",
         "type": "code",
         "location": "/multilingual/random.sh:1-2"
     },
     "1325": {
-        "file_id": 239,
+        "file_id": 238,
         "content": "This script generates a random number using the `$RANDOM` variable and prints it to the console.",
         "type": "comment"
     },
     "1326": {
-        "file_id": 240,
+        "file_id": 239,
         "content": "/multilingual/rockstar/README",
         "type": "filepath"
     },
     "1327": {
-        "file_id": 240,
+        "file_id": 239,
         "content": "The code discusses handling multilingual data using domain determination, translation tools, and a hierarchical graph database like Neo4j. It also covers creating databases with deep learning, using fonts for different languages, and multithreading with typo correction options.",
         "type": "summary"
     },
     "1328": {
-        "file_id": 240,
+        "file_id": 239,
         "content": "i think i need to know unicode-8 very fucking well.\nbut what is unicode-16?\nI need a solution here.\nFirst, decide the domain of a specific language.\nNext filter out those with distinct domains.\nFor those with mixed domains, use google translate or just use wordnet.\nAnd decide those remaining.\nI want you to use your mother-fucking theory directly applied to these unicode data files.\nI want the hierachy remained.\nFirst, we might need to store all filesystem data to some supershitty list.\nHumanity will never understand nature for the next billion years.\nThe hierachy tree stored in the neo4j is intended for better file management.\nIf the file were moved from here to there, then for sure that it's better to log this in cypher.\nI suggest you to store something hedious inside the graphdb.\nAnalyse these files, and store the corresponding shit by utilizing id.\nNow we are trying to find connection between different things.\nIf you want to fill in the blanks, it's just fine. But what we want to do here is to make connections. So we shall use our graphdb sometimes.",
         "type": "code",
         "location": "/multilingual/rockstar/README:1-28"
     },
     "1329": {
-        "file_id": 240,
+        "file_id": 239,
         "content": "This code appears to outline a process for handling multilingual data by determining the domain of specific languages, filtering out distinct domains, and utilizing translation tools or pre-existing knowledge. The code suggests storing relevant information in a hierarchical manner using a graph database like Neo4j for better file management and making connections between different elements.",
         "type": "comment"
     },
     "1330": {
-        "file_id": 240,
+        "file_id": 239,
         "content": "Maybe we should make it clear. We shall make the traditional db in use here.\nbesides, if you wanna find something that is similar to words looks in common, use deeeplearning. Train the module with most common characters, and then simply perform the work. You can also do this using other OCR tools. Fetch multiple fonts over different languages and if possible, the handwriting.\nwe need a list of all scannable files.\nwe need a list of all scannable names.\nusually do not judge the thing by its name, because it will be very fucking wrong.\nconclude the directory by the files under it, and we usually need a exhaustive list.\nremember the conclusion is important because we need to find something in common here.\nfind the similar patterns.\nalso, multithreading can be applied using lua, system native support or just pure python.\nI think grammarly could be used as text corrector here. BUT I NEED MY OWN TYPO CORRECTOR.",
         "type": "code",
         "location": "/multilingual/rockstar/README:30-45"
     },
     "1331": {
-        "file_id": 240,
+        "file_id": 239,
         "content": "This code discusses creating a traditional database, using deep learning for common character recognition, and the importance of comprehensive lists. It suggests using multiple fonts across languages and handwriting, multithreading with Lua or Python, and developing an own typo corrector, potentially using Grammarly.",
         "type": "comment"
     },
     "1332": {
-        "file_id": 241,
+        "file_id": 240,
         "content": "/multilingual/rockstar/chumble/README",
         "type": "filepath"
     },
     "1333": {
-        "file_id": 241,
+        "file_id": 240,
         "content": "This code appears to be a README file for a project focused on ontology, semantic analysis, and more. The algorithm is excellent with potential for further splitting or merging within subsentences if necessary. The author encourages readers to think about the possibilities.",
         "type": "summary"
     },
     "1334": {
-        "file_id": 241,
+        "file_id": 240,
         "content": "Memory In Exchange Of Time\nfew things matter to our project, including ontology, sematic analysis and more.\nthe algorithm is actually excellent, and i cannot think about any modification over it right now.\nno. in fact, you can even split more things than ever even if inside the subsentence, only if it is too long. and you can also merge something into a group, bringing them close if they are talking about the same thing.\nthink about it!",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/README:1-6"
     },
     "1335": {
-        "file_id": 241,
+        "file_id": 240,
         "content": "This code appears to be a README file for a project focused on ontology, semantic analysis, and more. The algorithm is excellent with potential for further splitting or merging within subsentences if necessary. The author encourages readers to think about the possibilities.",
         "type": "comment"
     },
     "1336": {
-        "file_id": 242,
+        "file_id": 241,
         "content": "/multilingual/rockstar/chumble/demo.py",
         "type": "filepath"
     },
     "1337": {
-        "file_id": 242,
+        "file_id": 241,
         "content": "This code imports a function called 'trust' from the 'tree' module and assigns its result to variable 'tbug'. Then it prints the value of 'tbug' to the console.",
         "type": "summary"
     },
     "1338": {
-        "file_id": 242,
+        "file_id": 241,
         "content": "from tree import trust\ntbug=trust()\nprint(tbug)",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/demo.py:1-3"
     },
     "1339": {
-        "file_id": 242,
+        "file_id": 241,
         "content": "This code imports a function called 'trust' from the 'tree' module and assigns its result to variable 'tbug'. Then it prints the value of 'tbug' to the console.",
         "type": "comment"
     },
     "1340": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "/multilingual/rockstar/chumble/house.py",
         "type": "filepath"
     },
     "1341": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "The code imports sqlite3, defines functions for database interaction and performance improvement. It uses list comprehensions, filters data, creates candidate lists and processes language. Unseen functions are essential for data processing; multithreading is mentioned as not difficult.",
         "type": "summary"
     },
     "1342": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "import sqlite3\n# just for trust.\n#from tree import trust\n#it0, it=None, None\n# render all things in vain\nsupertemp=(lambda fstring,strings,spliter: list(filter((lambda x:x!=fstring),strings.split(spliter))))\n#wrapper=(lambda fstring,string0,spliter0: [[y for y in supertemp(fstring,k,spliter0)] for k in string0])\n# this is not really recursive.\n# you shall test the DEPTH first.\n# use something like format and eval will do this task?\n# the variable name could be weird and distinct.\n# want to be recursive? check the repetitive things first.\ndef serious(battle):\n    with open(battle,\"r\") as sadist:\n#    global it\n#    global it0\n        it = supertemp(\"\", sadist.read(),\"\\n\")\n        it0=[[y for y in supertemp(\"\",k,\" \")] for k in it]\n    return it, it0\n# check if this works.\nit,it0 = serious(\"SOB.log\")\n    # global already.\n   # it =list(filter((lambda x:x!=\"\"), sadist.read().split(\"\\n\")))\n   # it0 =[[y for y in list(filter((lambda x:x!=\"\"),k.split(\" \")))] for k in it]\n    # two dimentional.\nstate, state0=serious(\"faith.log\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:1-28"
     },
     "1343": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "The code imports the sqlite3 module and defines a function named \"serious.\" This function reads data from a specified file and returns two lists, one containing non-empty lines (two-dimensional if depth is specified) and another with space-separated words from each line. The code also includes a nested lambda function and an attempt to test the recursive nature of the function.",
         "type": "comment"
     },
     "1344": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "# bullshit.\n#with open(\"faith.log\",\"r\") as violence:\n#    state=supertemp\nprint(\"initial commit\")\nprint(it0)\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\",\"fuck\",\"fuck\",\"vice\",\"versa\"]\nfor k in range(4):\n    strong+=strong\n    # R U SERIOUS?\n    # this is explosive.\n    # set it to 99 may shock you damn system.\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also make UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:29-60"
     },
     "1345": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "The code appears to be a mix of comments and a function definition, with no clear purpose or logic. The function \"genius()\" increments a counter and prints the current value along with a separator from a list of strong words. There are also SQL statements commented out for creating indexes on a table named subdir. The overall code seems disorganized and difficult to comprehend its intended functionality.",
         "type": "comment"
     },
     "1346": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\n#genius()\n# normal summarization.\n# useless prank.\npranker=(lambda number,blitzer: set([ blitzer[i][number] for i in range(len(blitzer))]))\n#blitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )\nblitz0=pranker(2,blitz)\n#genius()\n#blitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nblitz1=pranker(1,blitz)\n#print(blitz1)\n#genius()\nblitz2=pranker(3,blitz)\n#blitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\n#print(blitz2)\n#genius()\n#blitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nblitz3=pranker(4,blitz)",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:62-103"
     },
     "1347": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "This code connects to a SQLite database, executes a SELECT query, and then iterates over the returned rows. It creates sets of values for specific column indices (POS, pi, si, ssi, wi) from each row using lambda functions. The code commits the changes to the database and closes the connection.",
         "type": "comment"
     },
     "1348": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "#print(blitz3)\n#genius()\nblitz4=pranker(5,blitz)\n#blitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:104-131"
     },
     "1349": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "This code is creating indexes on a SQLite database named \"fuckyou.db\" for a table called \"subdir\". The indexes are being created based on the attributes \"pos\", \"uuid\", and \"depth\". This will help improve search performance when querying these specific fields in the table.",
         "type": "comment"
     },
     "1350": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\ngenius()\n\"\"\"blitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]\nprint(blitz5)\"\"\"\n# sentence.\n# geniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiius()!!!\n# multithreading is not that hard.\ngenius()\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\ngenius()\nprint(it0)\ngenius()\nprint(it0[0])\ngenius()\ntoothpaste=list(filter((lambda x: x[1] in it0[1]),blitz))\n# turns out to be a list containing the same shit.\n# what is the candidate list?\n# first, unsorted.\n# then sorted.\n# you shall add another thing onto this.\n# first rule: similar things first.\n# make a variable renamer\nprint(toothpaste)\n# people you wouldn't think!\n\"\"\"\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\ngenius()\n\"\"\"\n\"\"\"\ngenius()\nheuristic0=list(filter((lambda x: x[] in it0[0]),blitz))\nprint(heuristic0)\n\"\"\"\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:133-184"
     },
     "1351": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "This code connects to a SQLite database, manipulates and prints data from various lists using list comprehensions and filtering functions. It also sorts the candidate list by similarity and possibly applies further heuristics based on the existing lists. The code contains references to other unseen functions or variables like \"blitz\", \"genius()\", and \"it0\". The purpose of these functions is not clear from this snippet, but they seem to be crucial for data processing and manipulation. Lastly, there seems to be a comment stating that multithreading is not that hard.",
         "type": "comment"
     },
     "1352": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "# append the things onto some list.\ncctv=[]\njumpcut=(lambda fuck:cctv.append(fuck))\n# does this work?\njumpcut(toothpaste)\ngenius()\nhiphop=(lambda blitzer,blitzIndexer,item,indexer: list(filter((lambda x: x[blitzIndexer] in item[indexer]),blitzer)))\n#heuristic=list(filter((lambda x: x[1] in it0[0]),blitz))\nheuristic=hiphop(blitz,1,it0,0)\njumpcut(heuristic)\n# number 0 and 1 are for symbols.\nranger=(lambda fuckYouAsshole: range(len(fuckYouAsshole)))\n# I hate this world.\nprint(heuristic)\ngenius()\nfor f in ranger(state0):\n    state1=hiphop(blitz,1,state0,f)\n    jumpcut(state1)\n    print(state1)\n    genius()\n    # shameless.\nprint(cctv)\n#print(state2)\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.\n# use the cctv.\ngenius()\ntrycatch=len(cctv)\ncandidate=[cctv[0],cctv[1]]\nsubcan=[p for q,p in enumerate(cctv) if q>1]\n# swap the fuck!\nprint(subcan)\ngenius()\nprint(candidate)\n# first, perform a linear sort.\n# get some random stuff?\n# fuck yeah! overflow!\nsorty=(lambda x,y :2*(y-x) if y>x else 2*(x-y+0.5))",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:186-231"
     },
     "1353": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "1. Creates an empty list 'cctv'.\n2. Defines a lambda function 'jumpcut' to append elements to 'cctv'.\n3. Uses 'jumpcut' to append 'toothpaste'.\n4. Calls the 'genius()' function.\n5. Defines a lambda function 'hiphop' for filtering list items based on certain conditions.\n6. Creates a filtered list 'heuristic' using 'hiphop'.\n7. Appends 'heuristic' to 'cctv' using 'jumpcut'.\n8. Prints the 'heuristic' list and calls 'genius()'.\n9. Iterates over a range of indices from 0 to length of 'state0' using 'ranger'.\n10. For each index, applies 'hiphop' on 'blitz', 'state0', and index, appends result to 'cctv' with 'jumpcut'.\n11. Prints the state list and calls 'genius()'.\n12. Prints the final 'cctv' list.\n13. Creates a candidate list from the first two elements of 'cctv'.\n14. Defines 'subcan' as a list containing items from 'cctv' that are not the first two elements.\n15. Prints the 'subcan' list and calls 'genius()'.\n16. Prints the 'candidate' list.\n17. Defines a lambda function 'sorty' for performing linear sorting on lists.\n18. Calls 'sorty' on two lists and uses the result to perform a linear sort.",
         "type": "comment"
     },
     "1354": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "# this is rather simple.\n# but it has two things inside.\n# simple.\nlogic=(lambda liskr, skr,indexer: list(sorted(liskr,key=(lambda x: sorty(x[indexer],skr)))))\nsumologic=(lambda fuck0,fuck1:logic(logic(logic(logic(fuck0,fuck1[5],5),fuck1[4],4),fuck1[3],3),fuck1[2],2))\n# make you body bounce.\n# name, pos, pi, si, ssi, wi\n# use separator first!\n# fuck you mother fucker!\n# U R BITCH!\nfor k2 in ranger(subcan):\n    for k1 in ranger(candidate):\n        for k0 in ranger(candidate[k1]):\n            genius()\n            print(candidate[k1][k0])\n            genius()\n            gnu=sumologic(subcan[k2],candidate[k1][k0])\n            print(gnu)\n\"\"\"\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\ngenius()\n\"\"\"\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:232-265"
     },
     "1355": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "Code contains nested lambda functions for sorting and a loop iterating over ranges of variables. It prints values, performs calculations using the sumologic function, and potentially writes to a file. The code seems to be manipulating data structures, possibly for language processing or analysis purposes.",
         "type": "comment"
     },
     "1356": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "# from general to specific to general.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:267-267"
     },
     "1357": {
-        "file_id": 243,
+        "file_id": 242,
         "content": "The code appears to be a comment rather than executable code, and it suggests a process where general information is transformed into specific information and then combined back with general information. This could be a method for categorizing or filtering data.",
         "type": "comment"
     },
     "1358": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "/multilingual/rockstar/chumble/kitty.py",
         "type": "filepath"
     },
     "1359": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "The code creates 'serious' and 'genius' functions to improve SQLite database search performance by reading, splitting, indexing files, performing operations on lists using list comprehension and lambda functions, printing results, writing data to a file, and verifying rule.",
         "type": "summary"
     },
     "1360": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "import sqlite3\n# just for trust.\n#from tree import trust\n#it0, it=None, None\n# render all things in vain\nsupertemp=(lambda fstring,strings,spliter: list(filter((lambda x:x!=fstring),strings.split(spliter))))\n#wrapper=(lambda fstring,string0,spliter0: [[y for y in supertemp(fstring,k,spliter0)] for k in string0])\n# this is not really recursive.\n# you shall test the DEPTH first.\n# use something like format and eval will do this task?\n# the variable name could be weird and distinct.\n# want to be recursive? check the repetitive things first.\ndef serious(battle):\n    with open(battle,\"r\") as sadist:\n#    global it\n#    global it0\n        it = supertemp(\"\", sadist.read(),\"\\n\")\n        it0=[[y for y in supertemp(\"\",k,\" \")] for k in it]\n    return it, it0\n# check if this works.\nit,it0 = serious(\"SOB.log\")\n    # global already.\n   # it =list(filter((lambda x:x!=\"\"), sadist.read().split(\"\\n\")))\n   # it0 =[[y for y in list(filter((lambda x:x!=\"\"),k.split(\" \")))] for k in it]\n    # two dimentional.\nstate, state0=serious(\"faith.log\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:1-28"
     },
     "1361": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "Code imports sqlite3 and defines a function 'serious' that reads a file, splits its content into separate lines (stored in variable 'it') and each word of these lines (stored in variable 'it0'). The code also demonstrates usage by calling the 'serious' function on two different files.",
         "type": "comment"
     },
     "1362": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "# bullshit.\n#with open(\"faith.log\",\"r\") as violence:\n#    state=supertemp\nprint(\"initial commit\")\nprint(it0)\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\",\"fuck\",\"fuck\",\"vice\",\"versa\"]\nfor k in range(4):\n    strong+=strong\n    # R U SERIOUS?\n    # this is explosive.\n    # set it to 99 may shock you damn system.\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also make UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:29-60"
     },
     "1363": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "This code snippet seems to contain a function called \"genius\" that iterates over a list of strong words and prints them, incrementing a counter for separators. It also mentions creating indexes on a table named \"subdir\", possibly for later searching or relation creation. The author uses a lot of capital letters and seems to emphasize certain phrases with multiple occurrences of the same word.",
         "type": "comment"
     },
     "1364": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\n#genius()\n# normal summarization.\n# useless prank.\npranker=(lambda number,blitzer: set([ blitzer[i][number] for i in range(len(blitzer))]))\n#blitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )\nblitz0=pranker(2,blitz)\n#genius()\n#blitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nblitz1=pranker(1,blitz)\n#print(blitz1)\n#genius()\nblitz2=pranker(3,blitz)\n#blitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\n#print(blitz2)\n#genius()\n#blitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nblitz3=pranker(4,blitz)",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:62-103"
     },
     "1365": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "Code connects to a SQLite database, retrieves data from \"subdir\" table, and creates sets of values based on specific indices. It then commits the changes and closes the connection. The code performs some operations with the retrieved data but appears to be incomplete as it doesn't execute the necessary SQL statements or fully utilize lambda functions for set creation.",
         "type": "comment"
     },
     "1366": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "#print(blitz3)\n#genius()\nblitz4=pranker(5,blitz)\n#blitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:104-131"
     },
     "1367": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "The code aims to create SQLite indexes for a database called \"fuckyou.db\" within the subdir table. It focuses on indexing by position, UUID, and depth. These indexes are meant to enhance search performance by making it independent from content, useful for repeated or general content like menus or indices.",
         "type": "comment"
     },
     "1368": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\ngenius()\n\"\"\"blitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]\nprint(blitz5)\"\"\"\n# sentence.\n# geniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiius()!!!\n# multithreading is not that hard.\ngenius()\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\ngenius()\nprint(it0)\ngenius()\nprint(it0[0])\ngenius()\ntoothpaste=list(filter((lambda x: x[1] in it0[1]),blitz))\n# turns out to be a list containing the same shit.\n# what is the candidate list?\n# first, unsorted.\n# then sorted.\n# you shall add another thing onto this.\n# first rule: similar things first.\n# make a variable renamer\nprint(toothpaste)\n# people you wouldn't think!\n\"\"\"\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\ngenius()\n\"\"\"\n\"\"\"\ngenius()\nheuristic0=list(filter((lambda x: x[] in it0[0]),blitz))\nprint(heuristic0)\n\"\"\"\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:133-184"
     },
     "1369": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "The code connects to a SQLite database, performs various operations on lists (blitz0, blitz1, etc.), and prints the results. It uses list comprehension, filtering, and lambda functions for manipulation. The code also includes references to other functions like genius() but does not include their definitions. Some parts of the code are commented out or contain placeholders for other commands, indicating possible alternate routes in development.",
         "type": "comment"
     },
     "1370": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "# append the things onto some list.\ncctv=[]\njumpcut=(lambda fuck:cctv.append(fuck))\n# does this work?\njumpcut(toothpaste)\ngenius()\nhiphop=(lambda blitzer,blitzIndexer,item,indexer: list(filter((lambda x: x[blitzIndexer] in item[indexer]),blitzer)))\n#heuristic=list(filter((lambda x: x[1] in it0[0]),blitz))\nheuristic=hiphop(blitz,1,it0,0)\njumpcut(heuristic)\n# number 0 and 1 are for symbols.\nranger=(lambda fuckYouAsshole: range(len(fuckYouAsshole)))\n# I hate this world.\nprint(heuristic)\ngenius()\nfor f in ranger(state0):\n    state1=hiphop(blitz,1,state0,f)\n    jumpcut(state1)\n    print(state1)\n    genius()\n    # shameless.\nprint(cctv)\n#print(state2)\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.\n# use the cctv.\ngenius()\ntrycatch=len(cctv)\ncandidate=[cctv[0],cctv[1]]\nsubcan=[p for q,p in enumerate(cctv) if q>1]\n# swap the fuck!\nprint(subcan)\ngenius()\nprint(candidate)\n# first, perform a linear sort.\n# get some random stuff?\n# fuck yeah! overflow!\nsorty=(lambda x,y :2*(y-x) if y>x else 2*(x-y+0.5))",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:186-231"
     },
     "1371": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "This code appears to be performing a series of operations on a list called 'blitz' and filtering the results using various functions such as 'hiphop', 'heuristic', and 'range'. It then prints the resulting lists and appends them to another list, 'cctv'. Finally, it creates a candidate list based on the contents of 'cctv', sorts it using a custom sorting function, and prints both the original list and the sorted candidate list.",
         "type": "comment"
     },
     "1372": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "# this is rather simple.\n# but it has two things inside.\n# simple.\nlogic=(lambda liskr, skr,indexer: list(sorted(liskr,key=(lambda x: sorty(x[indexer],skr)))))\n# make you body bounce.\n# name, pos, pi, si, ssi, wi\n# use separator first!\n# fuck you mother fucker!\n# U R BITCH!\nfor k2 in ranger(subcan):\n    for k1 in ranger(candidate):\n        for k0 in ranger(candidate[k1]):\n            genius()\n            print(candidate[k1][k0])\n            genius()\n            gnu=logic(subcan[k2],candidate[k1][k0][5],5)\n            print(gnu)\n\"\"\"\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\ngenius()\n\"\"\"\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()\n# from general to specific to general.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/kitty.py:232-266"
     },
     "1373": {
-        "file_id": 244,
+        "file_id": 243,
         "content": "The code defines a function, uses nested loops to iterate over lists, and performs some operations. It also prints certain elements from the lists and writes them into a file. The final part checks if a rule works and exports a UUID in case it is forgotten. The code seems to have multiple purposes, including sorting and printing data, writing to a file, and verifying a rule.",
         "type": "comment"
     },
     "1374": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "/multilingual/rockstar/chumble/madeinchina.py",
         "type": "filepath"
     },
     "1375": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "The code connects to an SQLite database, processes data from \"subdir\", groups it by POS, creates 'blitz8' and 'blitz9', but requires refactoring for clarity.",
         "type": "summary"
     },
     "1376": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "import sqlite3\n#it0, it=None, None\n# render all things in vain\nsupertemp=(lambda fstring,strings,spliter: list(filter((lambda x:x!=fstring),strings.split(spliter))))\n#wrapper=(lambda fstring,string0,spliter0: [[y for y in supertemp(fstring,k,spliter0)] for k in string0])\n# this is not really recursive.\n# you shall test the DEPTH first.\n# use something like format and eval will do this task?\n# the variable name could be weird and distinct.\n# want to be recursive? check the repetitive things first.\ndef serious(battle):\n    with open(battle,\"r\") as sadist:\n#    global it\n#    global it0\n        it = supertemp(\"\", sadist.read(),\"\\n\")\n        it0=[[y for y in supertemp(\"\",k,\" \")] for k in it]\n    return it, it0\n# check if this works.\nit,it0 = serious(\"SOB.log\")\n    # global already.\n   # it =list(filter((lambda x:x!=\"\"), sadist.read().split(\"\\n\")))\n   # it0 =[[y for y in list(filter((lambda x:x!=\"\"),k.split(\" \")))] for k in it]\n    # two dimentional.\nstate, state0=serious(\"faith.log\")\n# bullshit.\n#with open(\"faith.log\",\"r\") as violence:",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:1-29"
     },
     "1377": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "This code defines a function `serious()` that reads a log file and returns two lists: one containing the lines of the file, and another containing words in each line. The code uses list comprehensions and lambda functions to filter out empty strings and split the lines/words by newline characters or spaces respectively. After defining these helper functions, the `serious()` function is called with two log files as arguments, but only one pair of results (`state`, `state0`) is assigned.",
         "type": "comment"
     },
     "1378": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "#    state=supertemp\nprint(\"initial commit\")\nprint(it0)\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\",\"fuck\",\"fuck\",\"vice\",\"versa\"]\nfor k in range(2):\n    strong+=strong\n    # R U SERIOUS?\n    # this is explosive.\n    # set it to 99 may shock you damn system.\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:30-61"
     },
     "1379": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "The code defines a function `genius()` that prints statements related to strong words and increments a counter. It also creates SQLite indexes on columns pos, uuid, and depth for the \"subdir\" table in the database \"fuckyou.db\".",
         "type": "comment"
     },
     "1380": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\n#genius()\n# normal summarization.\n# useless prank.\npranker=(lambda number,blitzer: set([ blitzer[i][number] for i in range(len(blitzer))]))\n#blitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )\nblitz0=pranker(2,blitz)\n#genius()\n#blitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nblitz1=pranker(1,blitz)\n#print(blitz1)\n#genius()\nblitz2=pranker(3,blitz)\n#blitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\n#print(blitz2)\n#genius()\n#blitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nblitz3=pranker(4,blitz)\n#print(blitz3)\n#genius()",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:63-104"
     },
     "1381": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "The code connects to a database, executes a SQL query to fetch data from \"subdir\", processes the fetched data into a list called \"blitz\". It then applies lambda functions to extract specific elements (e.g., POS symbols) from each item in the \"blitz\" list and stores them in separate sets: \"blitz0\", \"blitz1\", etc. Finally, it closes the database connection.",
         "type": "comment"
     },
     "1382": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "blitz4=pranker(5,blitz)\n#blitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:105-130"
     },
     "1383": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "This code creates and connects to a SQLite database named \"fuckyou.db\". It also contains SQL statements for creating three indexes: index0 on the \"subdir\" table based on \"pos\", index1 on \"uuid\", and index2 on \"depth\". These indexes are intended to improve search efficiency by separating content from identifiers, likely for repeated or general elements like menus or indices.",
         "type": "comment"
     },
     "1384": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\nprint(blitz4)\n#this is something.\ngenius()\n\"\"\"blitz5=[[[y[0], y[2]] for y in blitz if y[2]==x] for x in blitz0]\nprint(blitz5)\"\"\"\n# sentence.\n# geniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiius()!!!\n# multithreading is not that hard.\ngenius()\nblitz6=[[[y[0], y[1]] for y in blitz if y[1]==x] for x in blitz1]\nprint(blitz6)\n# group by POS.\ngenius()\nprint(it0)\ngenius()\nprint(it0[0])\ngenius()\ntoothpaste=list(filter((lambda x: x[1] in it0[1]),blitz))\n# turns out to be a list containing the same shit.\n# what is the candidate list?\n# first, unsorted.\n# then sorted.\n# you shall add another thing onto this.\n# first rule: similar things first.\n# make a variable renamer\nprint(toothpaste)\n# people you wouldn't think!\n\"\"\"\nblitz7=[[[y[0], y[3]] for y in blitz if y[3]==x] for x in blitz2]\nprint(blitz7)\ngenius()\n\"\"\"\n\"\"\"\ngenius()\nheuristic0=list(filter((lambda x: x[] in it0[0]),blitz))\nprint(heuristic0)\n\"\"\"\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:132-183"
     },
     "1385": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "This code seems to be part of a larger program that connects to an SQLite database, performs various operations on different lists (blitz0, blitz1, etc.), and prints their results. It also involves filtering a list using a lambda function, grouping data by POS, and creating candidate lists based on certain conditions. The code appears to be written in a disorganized manner with comments that are not clear or informative. It may require refactoring for better understanding and maintainability.",
         "type": "comment"
     },
     "1386": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "# append the things onto some list.\ncctv=[]\njumpcut=(lambda fuck:cctv.append(fuck))\n# does this work?\njumpcut(toothpaste)\ngenius()\nhiphop=(lambda blitzer,blitzIndexer,item,indexer: list(filter((lambda x: x[blitzIndexer] in item[indexer]),blitzer)))\n#heuristic=list(filter((lambda x: x[1] in it0[0]),blitz))\nheuristic=hiphop(blitz,1,it0,0)\njumpcut(heuristic)\n# number 0 and 1 are for symbols.\nranger=(lambda fuckYouAsshole: range(len(fuckYouAsshole)))\n# I hate this world.\nprint(heuristic)\ngenius()\nfor f in ranger(state0):\n    state1=hiphop(blitz,1,state0,f)\n    jumpcut(state1)\n    print(state1)\n    genius()\n    # shameless.\nprint(cctv)\n#print(state2)\n# make a candidate list.\n# special function: sorted by a silghtly modified algorithm\n# non-symmetrical.\n# use the cctv.\ngenius()\ntrycatch=len(cctv)\ncandidate=[cctv[0],cctv[1]]\nsubcan=[p for q,p in enumerate(cctv) if q>1]\n# swap the fuck!\nprint(subcan)\ngenius()\nprint(candidate)\n\"\"\"\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:185-230"
     },
     "1387": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "Code snippet is working on a list comprehension and filtering operations. It's appending elements to the 'cctv' list, using lambda functions for specific tasks. It then prints out the results and creates sub-lists based on conditions. Lastly, it generates two lists 'blitz8' and 'blitz9' based on conditions in 'blitz3' and 'blitz4', respectively.",
         "type": "comment"
     },
     "1388": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "print(blitz9)\ngenius()\n\"\"\"\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()\n# from general to specific to general.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/madeinchina.py:231-243"
     },
     "1389": {
-        "file_id": 245,
+        "file_id": 244,
         "content": "This code snippet appears to be a combination of comments and potentially unused or incomplete instructions. It seems the author intended to print the value of blitz9, call a function named genius(), check if a rule is working, and export a UUID (Universally Unique Identifier) in case it is forgotten. Additionally, there are comments suggesting opening and writing to a log file, but these lines have not been implemented or may be unfinished. The code then proceeds to suggest an approach of going from general to specific before returning to the general level. However, without further context, it's difficult to determine the exact purpose or functionality of this code.",
         "type": "comment"
     },
     "1390": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "/multilingual/rockstar/chumble/pet.py",
         "type": "filepath"
     },
     "1391": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "This code processes log files using SQLite databases and lambda functions, with unclear purpose \"genius\" function, lacks proper commenting, performs filtering and sorting operations.",
         "type": "summary"
     },
     "1392": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "import sqlite3\n# just for trust.\n#from tree import trust\n#it0, it=None, None\n# render all things in vain\nsupertemp=(lambda fstring,strings,spliter: list(filter((lambda x:x!=fstring),strings.split(spliter))))\n#wrapper=(lambda fstring,string0,spliter0: [[y for y in supertemp(fstring,k,spliter0)] for k in string0])\n# this is not really recursive.\n# you shall test the DEPTH first.\n# use something like format and eval will do this task?\n# the variable name could be weird and distinct.\n# want to be recursive? check the repetitive things first.\ndef serious(battle):\n    with open(battle,\"r\") as sadist:\n#    global it\n#    global it0\n        it = supertemp(\"\", sadist.read(),\"\\n\")\n        it0=[[y for y in supertemp(\"\",k,\" \")] for k in it]\n    return it, it0\n# check if this works.\nit,it0 = serious(\"SOB.log\")\n    # global already.\n   # it =list(filter((lambda x:x!=\"\"), sadist.read().split(\"\\n\")))\n   # it0 =[[y for y in list(filter((lambda x:x!=\"\"),k.split(\" \")))] for k in it]\n    # two dimentional.\nstate, state0=serious(\"faith.log\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/pet.py:1-28"
     },
     "1393": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "This code reads a log file, processes it using the 'serious' function, and returns two lists - one containing lines from the file (two-dimensional) and another with words from each line. The 'supertemp' function splits strings based on provided delimiters, while the code uses lambda functions for filtering and list comprehension to create the final lists.",
         "type": "comment"
     },
     "1394": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "# bullshit.\n#with open(\"faith.log\",\"r\") as violence:\n#    state=supertemp\nprint(\"initial commit\")\nprint(it0)\n# remember that the utmost understanding starts with the same thing.\n# this is authority.\nthe_counter=0\nstrong=[\"racist\",\"nazi\",\"communism\",\"hall\",\"xargs\",\"zen\",\"xray\",\"superman\",\"bitch\",\"fuck\",\"fuck\",\"vice\",\"versa\"]\nfor k in range(2):\n    strong+=strong\n    # R U SERIOUS?\n    # this is explosive.\n    # set it to 99 may shock you damn system.\ndef genius():\n    global the_counter\n    print(\"......nothing matters......\")\n    print(\"the separator\",strong[the_counter],\"----\")\n    the_counter+=1\n    # no return.\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also make UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/pet.py:29-60"
     },
     "1395": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "The code appears to contain unfinished or placeholders with irrelevant comments, and it defines a function called \"genius\" that doesn't return any value. It also mentions creating indexes for a SQL table named \"subdir\", but no actual table creation or database operations are performed. The code seems incomplete and lacks clear purpose or functionality.",
         "type": "comment"
     },
     "1396": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "conn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n#conn.execute(sql)\n# the constraints works well.\n# you could use another identifier instead of POS symbols, but that's another story.\ncursor=conn.execute(\"SELECT * FROM subdir;\")\nblitz=[]\nfor a in cursor:\n    print(\"-----separator-----\")\n    print(a)\n    blitz.append(a[1:])\n    # uuid name pos pi si ssi wi\n    # it is actually a tuple.\n\"\"\"    for b in a:\n        print(b)\"\"\"\n# just about everything here.\n# rape people off and get paid for it.\nconn.commit()\nconn.close()\n#genius()\n# normal summarization.\n# useless prank.\npranker=(lambda number,blitzer: set([ blitzer[i][number] for i in range(len(blitzer))]))\n#blitz0=set( [blitz[i][2] for i in range(len(blitz))  ] )\nblitz0=pranker(2,blitz)\n#genius()\n#blitz1=set( [blitz[i][1] for i in range(len(blitz))  ] )\nblitz1=pranker(1,blitz)\n#print(blitz1)\n#genius()\nblitz2=pranker(3,blitz)\n#blitz2=set( [blitz[i][3] for i in range(len(blitz))  ] )\n#print(blitz2)\n#genius()\n#blitz3=set( [blitz[i][4] for i in range(len(blitz))  ] )\nblitz3=pranker(4,blitz)",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/pet.py:62-103"
     },
     "1397": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "This code establishes a connection to an SQLite database, executes a SELECT query, processes the results into a list, and then creates sets from specific elements in each item of the list. The code concludes by committing changes (if any), closing the database connection, and defining various lambda functions that return sets based on specified indices from the list of items.",
         "type": "comment"
     },
     "1398": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "#print(blitz3)\n#genius()\nblitz4=pranker(5,blitz)\n#blitz4=set( [blitz[i][5] for i in range(len(blitz))  ] )\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")\nconn=sqlite3.connect(\"fuckyou.db\")\n#conn.execute(sql0)\n# remember that similar objects could be detected.\n# you can use different UUIDs to identify objects and create relations.\n# you can also makr UUID shorter.\n# something that needed to be searched separately, independent from contents (usually repeated content or something general like menu or index)\n#sql = (\"CREATE INDEX index0 ON subdir (pos);\")\n#sql0 = (\"CREATE INDEX index1 ON subdir (uuid);\")\n#sql1 = (\"CREATE INDEX index2 ON subdir (depth);\")",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/pet.py:104-131"
     },
     "1399": {
-        "file_id": 246,
+        "file_id": 245,
         "content": "Creates an SQLite connection and indexes for \"fuckyou.db\", using UUIDs to identify objects and create relations, with indexing by position, UUID, and depth.",
         "type": "comment"
     }

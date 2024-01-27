@@ -1,541 +1,541 @@
 {
     "1500": {
-        "file_id": 264,
+        "file_id": 263,
         "content": "find查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(\n#  label=\"Person\",\n#  property_key=\"name\",\n  # property_value=\"test_node_1\"\n#)\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\n# match_relation = graph.match(start_node=find_code_1,bidirectional=False) #True\n# for i in match_relation:\n#     print(i)\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)\n# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/core4.py:50-80"
     },
     "1501": {
-        "file_id": 264,
+        "file_id": 263,
         "content": "The code snippet demonstrates how to use the 'match' and 'match_one' functions in graph database operations. It first searches for nodes or relationships based on specific labels, properties, and values. Then, it finds related relationships and nodes by specifying a starting node or relationship. The code also shows the usage of bidirectional parameter, looping over matching results, incrementing a 'count' property, and pushing changes back to the graph database.",
         "type": "comment"
     },
     "1502": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "/multilingual/rockstar/connector/core5.py",
         "type": "filepath"
     },
     "1503": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "The code imports necessary modules, initializes a Neo4j Graph object, creates indexes, processes CSV files to create nodes and relationships, optimizing storage and retrieval. It utilizes match functions, queries graph database, updates attributes, and prints nodes.",
         "type": "summary"
     },
     "1504": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "# coding: utf-8 -*-\nfrom py2neo import Graph\nimport re\n# Node,Relationship,NodeMatcher\ngraph = Graph(\"http://localhost:7474\", username=\"neo4j\", password=\"termux\")\ngraph.run(\"create index on :synset(name)\")\n#graph.run(\"create index on :dictionary(name)\")\n# graph.run(\"USING PERIODIC COMMIT LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/delta.csv' AS line WITH line  MERGE (a:synset:english:dictionary{name:line[0]}) WITH a,line MERGE  (b:dictionary:english{name:line[1]}) WITH a,b  MERGE (a)-[:definition]->(b);\")\ngraph.run(\"USING PERIODIC COMMIT LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/psi.csv' AS line WITH line  MERGE (a:synset:english:dictionary{name:line[0]}) WITH a,line MERGE  (b:dictionary:english{name:line[1]}) WITH a,b  MERGE (a)-[:example]->(b);\")\n# graph.run(\"USING PERIODIC COMMIT LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/epsilon.csv' AS line WITH line  MERGE (a:synset:english:dictionary{name:line[0]}) WITH a,line MERGE  (b:dictionary:english{name:line[1]}) WITH a,b  MERGE (a)-[:definition]->(b);\")",
         "type": "code",
         "location": "/multilingual/rockstar/connector/core5.py:1-15"
     },
     "1505": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "The code imports necessary modules, initializes a Graph object for Neo4j database connection, creates an index on synset nodes, and executes periodic commit loads from CSV files to create or merge nodes and relationships in the database. The script processes three different CSV files to establish definitions or examples between synset and dictionary nodes.",
         "type": "comment"
     },
     "1506": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "#graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/gamma.csv' AS line MATCH  (a:english) WHERE a.name=line[0] WITH a,line MATCH ;\")\n#a=open(\"beta.csv\",\"r\")\n#for b in a.readlines():\n#    c=re.sub(\"\\n\",\"\",b).split(\",\")\n#    graph.run(\"MATCH (a:english) where a.name=\\\"\"+c[0]+\"\\\" with a match (b:english) where b.name=\\\"\"+c[1]+\"\\\" create (a)<-[:lemma]-(b)\")\n#a.close()\n# graph.run(\"MATCH (a:lemma),(b:derived) CREATE (a)<-[:lemma]-(b)\")\n# this is slow as hell\n# graph.run(\"USING PERIODIC COMMIT  LOAD CSV FROM 'file:///root/lazer-ubuntu/metalearning/net/beta.csv' AS line MERGE (a:dictionary:english:derived {name:line[0]}) WITH line MERGE  (b:dictionary:english:lemma {name:line[1]}) ;\")\n#matcher=NodeMatcher(graph)\n#test_node_1 = Node(label = \"Person\",name = \"test_node_1\")\n#test_node_2 = Node(label = \"Person\",name = \"test_node_2\")\n#graph.create(test_node_1)\n#graph.create(test_node_2)\n\"\"\"分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，\n关系的类型为\"CALL\"，两条关系都有属性count，且值为1。\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/connector/core5.py:17-36"
     },
     "1507": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "This code reads data from 'gamma.csv' and 'beta.csv', creates nodes and relationships in a graph database, and performs periodic commits for efficient storage and retrieval of data. The script also contains code for creating test nodes and their corresponding relationships with count property set to 1.",
         "type": "comment"
     },
     "1508": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "#node_1_call_node_2 = Relationship(test_node_1,'CALL',test_node_2)\n#node_1_call_node_2['count'] = 1\n#node_2_call_node_1 = Relationship(test_node_2,'CALL',test_node_1)\n#node_2_call_node_1['count'] = 1\n#graph.create(node_1_call_node_2)\n#graph.create(node_2_call_node_1)\n\"\"\"节点和关系的属性初始赋值在前面节点和关系的建立\n的时候已经有了相应的代码，在这里主要讲述一下怎么更新一个节点/关系的属性值。\"\"\"\n#node_1_call_node_2['count']+=1\n#graph.push(node_1_call_node_2)\n\"\"\"通过find和find_one函数，可以根据类型和属性、属性值来查找节点和关系。\"\"\"\n\"\"\"find和find_one的区别在于：\nfind_one的返回结果是一个具体的节点/关系，可以直接查看它的属性和值。如果没有这个节点/关系，返回None。\nfind查找的结果是一个游标，可以通过循环取到所找到的所有节点/关系。\"\"\"\n#find_code_1 = graph.match(\n#  label=\"Person\",\n#  property_key=\"name\",\n  # property_value=\"test_node_1\"\n#)\n# print(find_code_1['name'])\n#find_code_3 = graph.match_one(  label=\"Person\",  property_key=\"name\", # property_value=\"test_node_2\")\n\"\"\"如果已经确定了一个节点或者关系，想找到和它相关的关系和节点，\n就可以使用match和match_one\"\"\"\n#\n# find_relationship = graph.match_one(start_node=find_code_1,end_node=find_code_3,bidirectional=False)\n# print(find_relationship)\n# match_relation = graph.match(start_node=find_code_1,bidirectional=False) #True",
         "type": "code",
         "location": "/multilingual/rockstar/connector/core5.py:37-73"
     },
     "1509": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "This code initializes relationships and nodes, updates node/relationship attributes, and demonstrates the usage of find and find_one functions for querying graph database. The find function returns a cursor, while find_one returns a specific node or relationship. Match functions are used to search for related nodes and relationships given a starting node.",
         "type": "comment"
     },
     "1510": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "# for i in match_relation:\n#     print(i)\n#     i['count']+=1\n#     graph.push(i)\n# print(\"1111111111111111\")\n# # print(graph)\n# print(test_node_1)\n# print(test_node_2)\n# print(node_2_call_node_1)\n# print(node_1_call_node_2)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/core5.py:74-85"
     },
     "1511": {
-        "file_id": 265,
+        "file_id": 264,
         "content": "Iterating over match_relation, printing each relation, incrementing 'count' by 1, and pushing the updated relation to the graph. Then printing various nodes.",
         "type": "comment"
     },
     "1512": {
-        "file_id": 266,
+        "file_id": 265,
         "content": "/multilingual/rockstar/connector/cute_pandas.py",
         "type": "filepath"
     },
     "1513": {
-        "file_id": 266,
+        "file_id": 265,
         "content": "The code imports pandas and discusses graph databases, type checking, naming conventions, and efficient CSV creation. The author urges for distinct treatment of items and emphasizes using the correct format.",
         "type": "summary"
     },
     "1514": {
-        "file_id": 266,
+        "file_id": 265,
         "content": "# i oculd not process the hierachy data, therefore i can only do this by only one fucking way: to store it into some graph database.\nimport pandas as pd\n# the way to another fucking space!\n# to another dimension!\n# if using other shits, then you probably don't have to work in this way.\n# do not omit anything.\n# maybe you want to have some kind of type checking at this time, but when scanning those archives, you might want to turn this off.\n# the type checking tool is another ultimate fucking killer equipment, which does not judge the file only by its fucking extension but actually by its fucking content!\n# this dictionary could be created through another function.\n# i don't give a shit about the fucking name.\n# just a fucking freaky name and nothing else.\n# hey you freak! what if we have the same subdirectory name for the fucking sake?\n# things could get messy here!\n# this should never be happening!\n# i was a fool, and now still i am.\n# you must make distinct things for distinct shits.\n# otherwise your balls will be melted into one.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/cute_pandas.py:1-19"
     },
     "1515": {
-        "file_id": 266,
+        "file_id": 265,
         "content": "The code seems to be expressing frustration and using strong language. It imports pandas library, discusses the need for a graph database, and mentions potential type checking during archive scanning but may want to turn it off. The code also discusses naming conventions for subdirectories and warns against potential issues if same names are used. The author expresses regret about their previous actions and urges for distinct treatment of different items.",
         "type": "comment"
     },
     "1516": {
-        "file_id": 266,
+        "file_id": 265,
         "content": "# i have a final solution.\n# the tracedown link.\n# right after the fucking list2.\n# you could make maximum shit for it, and of the fucking course you shall make it empty to keep the format.\n# keep the fucking format.\n# i don't wanna tell shit about this at all.\n# load csv is freaking evil, but it is blasting fast.\n# you shall always use something like that.\nlist0=[\"superfool\",\"superfool\"]\nlist1=[\"fuckingshit,\",\"fuckingshit\"]\nlist2=[\"hellyeah!\\\"\",\"fuckingshityeah!,\\\"\"]\ndf = pd.DataFrame({'sadist': list0,'masochist': list1,'type': list2})\nthe_real_shit=df.to_csv(index=False)\nprint(the_real_shit)\n# really fascinating. ecaped the fucking shit for fucking damn good reason.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/cute_pandas.py:20-36"
     },
     "1517": {
-        "file_id": 266,
+        "file_id": 265,
         "content": "The code creates a DataFrame using lists of values and converts it to CSV format, which is then printed. The author emphasizes the importance of keeping the format and using efficient methods like pandas' `to_csv` function.",
         "type": "comment"
     },
     "1518": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "/multilingual/rockstar/connector/diamond.py",
         "type": "filepath"
     },
     "1519": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "The Python script handles file and directory management using CSV storage, `os.walk()`, and max depth to traverse directories, maintain a database, and adhere to Unicode standards. It sorts files by depth, creates pandas DataFrame, and deals with indexing or root directory operations in a phone-related context, considering performance.",
         "type": "summary"
     },
     "1520": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "import os\nimport re\nimport pandas as pd\n# ALL YOUR BASE ARE BELONG TO US!\n# WHO YOU ARE! NOT WHERE YOU CAME FROM!\n# hey! generate some fucking csv file!\n# and then load it with the fucking mechanism.\n# i want to know about it.\n# the structure could be rather simple.\n# each line starts with the fucking directory name.\n# and then the following subdirectory or other shits.\n# or simply doing this, make a simple distinction over shits.\n# store the fucking category along with the fucking shit.\n# we would make it even.\n# when the number is 0, it means directory.\n# when it is 1, it is a fucking file!\n# but how do we escape the fucking shit?\n# i mean if we use the delimiter as content inside the csv file!\n# we should make it simpler.\n# unless  you wanna die.\n# export it using profressional tools.\n# we should make things clearer\n##################################################################################\n#                                                                                #\n# EACH LINE IS SIMPLY A ONE_LINER REPRESENTING ONE SINGLE DIRETORY_FILE HIERACHY #",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:1-25"
     },
     "1521": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "This code appears to be a documentation or comment for a Python script, likely involved in file management and handling directory-file hierarchies. It uses CSV files for data storage and seems to handle differentiating between directories and files based on the number associated with each entry. The author suggests exporting the final output using professional tools.",
         "type": "comment"
     },
     "1522": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "#                                                                                #\n##################################################################################\n# which make things much simpler.\n# you could use pandas to make this happen.\n# remember that it could be trinary or binary here.\n# if you want binary, then you should export two files.\n# if you want trinary, then you should export only one single file but with an extra column.\n# anyway, you decice which one to be stored.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    #superdictionary={}\n    # at the beginning of the fucking thing we wanna to make things absolutely clear.\n    maximum_depth=2\n    depth_list=[]\n    superlist=[2,[]]\n    name_of_root=os.path.basename(startpath)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:26-43"
     },
     "1523": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "This code defines a function `list_files` that takes a start path as input and returns a list of files present at the specified location. The function uses `os.walk()` to iterate over the directory tree, keeping track of file names and depths in a superlist. A maximum depth is set (defaulting to 2), and the name of the root folder is extracted using `os.path.basename`.",
         "type": "comment"
     },
     "1524": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "    # this is the list that we are gonna to return.\n    # to change this into some fucking csv file is as easy as shit.\n    for root, dirs, files in os.walk(startpath):\n        #level = root.replace(startpath, '').count(os.sep)\n        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        #indent = ' ' * 4 * (level)\n#       print(level)\n#        print(\"-----first mark-----\")\n        #print(os.path.basename(root))\n        #print(root)\n        # it seems to be a string.\n        # oh never forget the locate database.\n        # the base is presumed.\n        # if you want to expand the filesystem tree, remember to do something called the root-finding.\n        # you need to make sure which level is the first common place for all.\n        # usually this can be done by checking the pwd link.\n        # and it is fucking damn easy.\n        # but what should be done after this?",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:44-64"
     },
     "1525": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "The code is walking through the directory structure starting from the `startpath`, and for each root, dirs, and files in the walk, it seems to be processing or analyzing them. The code mentions levels and indentation, but their purpose isn't clear. It also refers to a 'locate database' which could be related to searching or indexing directories. However, the overall intent of this code remains unclear.",
         "type": "comment"
     },
     "1526": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "        # how could you do this then?\n        # i suggest you to use the full fucing path.\n        # though it will be tedious, you can always get the joy out of shit.\n        # and it could be reusable.\n        # never fucking mind.\n        # i can drop database every fucking day.\n        # i will deal with it later on.\n        # the first priority is this fucking unicode standard.\n        rhino=root.split(\"/\")[1:]\n#        rhino[0]=name_of_root\n        crakn=[os.path.basename(root),0]+rhino[:-1]\n        superlist.append(crakn)\n        depth_list.append(len(crakn))\n        # you can decide the comma values by the maximum depth.\n        # to make it way simpler than anything, we append the directory after the type identifier..\n        #print(\"0\")\n        # first we make sure our base directory is connected.\n        # next we make the files under it get connected.\n        #print('{}{}/ {}'.format(indent, os.path.basename(root),level+1))\n#        print(\"-----first mark-----\")\n        #subindent = ' ' * 4 * (level + 1)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:65-85"
     },
     "1527": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "The code is dealing with file and directory connections, specifically handling the connection of files under a base directory. The developer suggests using full paths for better organization and future reusability. They mention they might fix database issues later, focusing on unicode standard priority. The code appends superlist and depth_list while considering comma values based on maximum depth.",
         "type": "comment"
     },
     "1528": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "        for f in files:\n#            print(\"-----second mark-----\")\n            grakn=[f,1]+rhino\n            superlist.append(grakn)\n            depth_list.append(len(grakn))\n    superlist[0]=sorted(depth_list,reverse=True)[0]\n    superlist[1]=depth_list\n    return superlist\n#            print(\"-----second mark-----\")\n            #print('{}{} {}'.format(subindent, f,level+1))\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\n# when run without the trailing slash, the root directory name will simply be printed out.\n# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\n# startpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# Keep It Simple Stupid.\n# Never Overestimate the Understanding Ability of Computer.\n# Never Ever Think that Computer May Get Tired of Repetitive Tasks.\n# this time we have integrated the fucking slash here.\nomega=list_files(startpath)\n#print(omega)\n#sadist=[]\n#masochist=[]",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:86-114"
     },
     "1529": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "This code sorts a list of files in descending order based on their depth, then returns the deepest file, its depth, and the entire list. It uses a for loop to iterate through the files, appends their depths to a separate list, and finally sorts and returns the lists. The trailing slash is important to preserve directory structure and indentation.",
         "type": "comment"
     },
     "1530": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "alpha=omega[0]\n#print(alpha)\ngamma=omega[1]\n#print(gamma)\n# things are now getting funny.\n# i wrote shits.\n# my code sucks, and it is fucking perfect.\ndelta=set(gamma)\n#print(delta)\n#for m in range(alpha):\n#    masochist.append([\"\"]*(len(omega)-2))\nultidick={}\nfor k in delta:\n    ultidick[k]=[]\nfor r in range(len(omega)-2):\n    beta=omega[r+2]\n    ultidick[len(beta)].append(beta)\nprint(ultidick)\n    # you get the list here.\n#    sigma=alpha-gamma[r]\n#    if sigma!=0:\n#        for d in range(sigma):\n#            beta+=[\"\"]\n#    sadist.append(beta)\nfor k in delta:\n    sick={}\n    sadist=ultidick[k]\n#    print(sadist)\n    masochist=[]\n    for m in range(k):\n        masochist.append([\"\"]*len(sadist))\n    for l in range(len(sadist)):\n        for j in range(k):\n            masochist[j][l]=sadist[l][j]\n#    finaldick={}\n#    for k in range(len(sadist)):\n#        masochist[l][k]=sadist[k][l]\n    for l in range(k):\n        sick[\"{}{}\".format(\"key\",l)]=masochist[l]\n#print (sick)\n#numeric value preserved. don't even look.\n    df = pd.DataFrame(sick)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:116-158"
     },
     "1531": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "This code creates a dictionary called ultidick with lists of strings, where the length of each string corresponds to the length of an input word. The code then generates another nested list called masochist using the elements from ultidick and assigns it to a dictionary called sick. Finally, the code converts sick into a pandas DataFrame (df).",
         "type": "comment"
     },
     "1532": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "# pandas is way fucking slow.\n# keep it as a fucking habit?\n# any alternatives?\n    the_real_shit=df.to_csv(index=False)\n#    print(the_real_shit)\n    fuckyou=open(\"{}{}{}\".format(\"gotcha\",k-2,\".csv\"),\"w+\")\n    fuckyou.write(the_real_shit)\n    fuckyou.close()\n    # you wanna to do this in pandas?\n    # better convert this!\n# print(\"\\n----[the fucking divide line]----\\n\")\n# list_files(startpath0)\n#print(\"\\n----[the fucking divide line]----\\n\")\n# make index on those that change the most.\n#print(os.walk(startpath))\n#print(\"\\n----[the fucking divide line]----\\n\")\n# print(list(os.walk(startpath)))\n# maybe the representation sucks so i cannot take care of simplification and efficiency at the same time.\n# if exists, my machine will integrate it.\n# you could integrate the root directory finding process into the cypher text.\n# tuples inside.\n# this is really useless.\n# i do not think this is necessary to print it out directly.\n# need preprocessing.\n# always remember that the name of our very fucking phone is of the root directory.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/diamond.py:159-188"
     },
     "1533": {
-        "file_id": 267,
+        "file_id": 266,
         "content": "The code appears to contain comments discussing potential performance issues, alternative methods, and optimization considerations. The author seems to be working with pandas, handling CSV files, and potentially dealing with indexing or root directory operations in a phone-related context. However, the code itself is not included in the provided text.",
         "type": "comment"
     },
     "1534": {
-        "file_id": 268,
+        "file_id": 267,
         "content": "/multilingual/rockstar/connector/extractLinear.py",
         "type": "filepath"
     },
     "1535": {
-        "file_id": 268,
+        "file_id": 267,
         "content": "This code includes functions for parsing and manipulating files, filtering lines based on criteria, and adding relevant positions to a HallOfFame. The seekAWrapper function provides fixes and calls seekOn with initial factors, while the toyProject results are printed and a file is added to HallOfFame before moving it to a specified directory and changing permissions.",
         "type": "summary"
     },
     "1536": {
-        "file_id": 268,
+        "file_id": 267,
         "content": "import re\nimport os\nfrom getCorrectList import letIt\nfrom shallowCopy import mover\ndef open_to_return(file_name):\n    hardcore=[]\n    with open(file_name,\"r\") as fuck:\n        hardcore=list(filter((lambda x: x!=\"\"),fuck.read().split('\\n')))\n    return hardcore\ndef parse_file(flist):\n    lamb=[(lambda v: list(map((lambda x:True if x!=[] else False),v))),(lambda x: list(map((lambda y: re.findall(r'^(import|from)',y)),x))),(lambda x,y:list(filter((lambda g: g!=\"\"),list(map((lambda v: re.findall(r'[^ ]+',v[0])[1] if v[1] == True else \"\" ),[[x[r],y[r]]for r in range(len(x))])))))]\n#    print(flist)\n    cold=lamb[1](flist)\n#    print(cold)\n    bless=lamb[0](cold)\n#    print(bless)\n    angle=lamb[2](flist,bless)\n#    print(angle)\n    return angle\ndef toyProject(file_name):\n    return parse_file(open_to_return(file_name))\ndef superAddress(listOfFame):\n    # better not to make things loopy.\n    # loop detection is needed.\n    return list(map((lambda x: x+'.py'),listOfFame))\ndef seekOn(nextTargets,HallOfFame,corr):\n    # scan until nothing left?",
         "type": "code",
         "location": "/multilingual/rockstar/connector/extractLinear.py:1-31"
     },
     "1537": {
-        "file_id": 268,
+        "file_id": 267,
         "content": "The code contains several functions for reading and parsing files, filtering lines of a file based on non-empty criteria, and manipulating file names. The 'parse_file' function extracts import statements, checks if they are empty, and finds other statements or keywords by scanning the file line by line. The 'toyProject' function calls 'parse_file' with the open file name returned by 'open_to_return'. Finally, the 'superAddress' function adds '.py' to a list of filenames and 'seekOn' scans files until there is nothing left in the nextTargets list.",
         "type": "comment"
     },
     "1538": {
-        "file_id": 268,
+        "file_id": 267,
         "content": "    # it is like parsing a directory tree.\n    # in fact it is not.\n    # HallOfFame is a list\n    if nextTargets!=[]:\n        wantedTo=[]\n        for nextTarget in nextTargets:\n            wantedTo+=superAddress(toyProject(nextTarget))\n        wantedTo=[pos for pos in wantedTo if pos in corr]\n        HallOfFame+=wantedTo\n        return seekOn(list(set(wantedTo)),list(set(HallOfFame)),corr)\n    else:\n        return HallOfFame\ndef seekAWrapper(initialFactor):\n    correction=letIt()\n    # maybe need another fix if wanted to parse file under subdirectory\n    return seekOn([initialFactor],[],correction)\n\"\"\"print(toyProject(\"exampleLinear.py\"))\nprint(\"--popular shot--\")\nprint(toyProject(\"sampleIntermediate.py\"))\nprint(\"--blowjob--\")\"\"\"\nfuckingTerm=\"extractLinear.py\"\nMonad='/data/data/com.termux/files/home/lazer/multilingual/rockstar/connector'\nfuckMe=seekAWrapper(fuckingTerm)+[fuckingTerm]\nprint(fuckMe)\nmover(fuckMe,Monad)\nos.system('chmod +x shallowCopy.sh')",
         "type": "code",
         "location": "/multilingual/rockstar/connector/extractLinear.py:32-59"
     },
     "1539": {
-        "file_id": 268,
+        "file_id": 267,
         "content": "The code is parsing a list of directories, adding relevant positions to the HallOfFame if they exist in the correlation list. It then returns the updated HallOfFame or the previous one if there are no new targets. The seekAWrapper function provides corrections for potential fixes and calls seekOn with initial factors and empty lists. Lastly, it prints some toyProject results, adds a file to HallOfFame, moves the list to a specified directory, and changes file permissions.",
         "type": "comment"
     },
     "1540": {
-        "file_id": 269,
+        "file_id": 268,
         "content": "/multilingual/rockstar/connector/getCorrectList.py",
         "type": "filepath"
     },
     "1541": {
-        "file_id": 269,
+        "file_id": 268,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "summary"
     },
     "1542": {
-        "file_id": 269,
+        "file_id": 268,
         "content": "import os\ndef letIt():\n    return os.listdir(\".\")\n# this is a list.\n#print(makeIt)",
         "type": "code",
         "location": "/metalearning/methodBank/getCorrectDill.py:1-5"
     },
     "1543": {
-        "file_id": 269,
+        "file_id": 268,
         "content": "This code imports the os module and defines a function called letIt(). The function uses os.listdir(\".\") to return a list of files and folders in the current directory. This list is then assigned to the variable makeIt, which is not used or printed in the provided code.",
         "type": "comment"
     },
     "1544": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "/multilingual/rockstar/connector/gold.py",
         "type": "filepath"
     },
     "1545": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "The code uses Pandas to simplify directory file hierarchies, includes a \"list_files\" function that iterates through directories using os.walk() and connects to an SQLite database. It creates lists 'masochist' and 'sadist', with 'sadist' appending a slice of 'omega'.",
         "type": "summary"
     },
     "1546": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "import os, re, sqlite3\nimport pandas as pd\n#import sqlite3\n# remember that we need to merge relative path to absolute path once we find it.\n# you could keep something like UUID here.\ndef superskimmer(path):\n    path0=list(filter((lambda x:x!=\"\"),path.split(\"/\")))[:-1]  \n    p0=\"\" \n    for p in path0: \n        p0+=(\"/\"+p) \n    return p0\n# anything called DROP DATABASE here?\n# ALL YOUR BASE ARE BELONG TO US!\n# WHO YOU ARE! NOT WHERE YOU CAME FROM!\n# I DON'T GIVE A FUCK WHO YOU ARE!\n# hey! generate some fucking csv file!\n# and then load it with the fucking mechanism.\n# i want to know about it.\n# the structure could be rather simple.\n# each line starts with the fucking directory name.\n# and then the following subdirectory or other shits.\n# or simply doing this, make a simple distinction over shits.\n# store the fucking category along with the fucking shit.\n# we would make it even.\n# when the number is 0, it means directory.\n# when it is 1, it is a fucking file!\n# but how do we escape the fucking shit?\n# i mean if we use the delimiter as content inside the csv file!",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:1-29"
     },
     "1547": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code imports necessary libraries and defines a function `superskimmer` that takes a path as input. It converts the path into an absolute path, removes the last directory from it, and returns the new absolute path excluding the last directory. The comments indicate a potential database operation, CSV file generation, and a specific file structure for the CSV.",
         "type": "comment"
     },
     "1548": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "# we should make it simpler.\n# unless  you wanna die.\n# export it using profressional tools.\n# we should make things clearer\n##################################################################################\n#                                                                                #\n# EACH LINE IS SIMPLY A ONE_LINER REPRESENTING ONE SINGLE DIRETORY_FILE HIERACHY #\n#                                                                                #\n##################################################################################\n# which make things much simpler.\n# you could use pandas to make this happen.\n# remember that it could be trinary or binary here.\n# if you want binary, then you should export two files.\n# if you want trinary, then you should export only one single file but with an extra column.\n# anyway, you decice which one to be stored.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:30-46"
     },
     "1549": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code is describing a method to organize directory file hierarchies in a simpler way, using professional tools like Pandas. The user has the option to store data as binary or trinary files, with different storage methods for directories and files (stored as dictionary objects and lists respectively). Numeric and alphabetical differentiation or metatable constraints can be used for easier organization and management of these files.",
         "type": "comment"
     },
     "1550": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "\"\"\"\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    #superdictionary={}\n    # at the beginning of the fucking thing we wanna to make things absolutely clear.\n#    maximum_depth=2\n#    depth_list=[]\n    superlist=[]\n    name_of_root=os.path.basename(startpath)\n    # this is the list that we are gonna to return.\n    # to change this into some fucking csv file is as easy as shit.\n    for root, dirs, files in os.walk(startpath):\n        #level = root.replace(startpath, '').count(os.sep)\n        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        #indent = ' ' * 4 * (level)\n#       print(level)\n#        print(\"-----first mark-----\")\n        #print(os.path.basename(root))\n        #print(root)\n        # it seems to be a string.\n        # oh never forget the locate database.\n        # the base is presumed.\n        # if you want to expand the filesystem tree, remember to do something called the root-finding.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:47-72"
     },
     "1551": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code defines a function called \"list_files\" that uses the os.walk() function to iterate through directories starting from a given startpath. It creates a superlist by traversing each directory level, with no specific use mentioned for a potential dictionary or depth analysis. The code also mentions converting this list into a CSV file but provides no further details on that process.",
         "type": "comment"
     },
     "1552": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "        # you need to make sure which level is the first common place for all.\n        # usually this can be done by checking the pwd link.\n        # and it is fucking damn easy.\n        # but what should be done after this?\n        # how could you do this then?\n        # i suggest you to use the full fucing path.\n        # though it will be tedious, you can always get the joy out of shit.\n        # and it could be reusable.\n        # never fucking mind.\n        # i can drop database every fucking day.\n        # i will deal with it later on.\n        # the first priority is this fucking unicode standard.\n        rhino=re.sub(startpath,\"\",root).split(\"/\")\n        rhino[0]=name_of_root\n        crakn=[os.path.basename(root),0,len(rhino[:-1])]\n        try:\n            crakn.append(rhino[:-1][-1])\n        except:\n#            pass\n# this is the root dir.\n            crakn.append(\"\")\n        superlist.append(crakn)\n#        depth_list.append(len(crakn)-1)\n        # you can decide the comma values by the maximum depth.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:73-96"
     },
     "1553": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code is attempting to extract a root directory and its subdirectories into a list called \"crakn\". It first removes the start path from the root, then splits it by \"/\", replacing the first element with the \"name_of_root\" provided. The code then appends additional information like basename of the root, an index, and the length of the rhino list minus one. If there is an error, it appends an empty string instead. Finally, it adds the resulting crakn list to a superlist.",
         "type": "comment"
     },
     "1554": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "        # to make it way simpler than anything, we append the directory after the type identifier..\n        #print(\"0\")\n        # first we make sure our base directory is connected.\n        # next we make the files under it get connected.\n        #print('{}{}/ {}'.format(indent, os.path.basename(root),level+1))\n#        print(\"-----first mark-----\")\n        #subindent = ' ' * 4 * (level + 1)\n        for f in files:\n#            print(\"-----second mark-----\")\n            grakn=[f,1,len(rhino),rhino[-1]]\n            superlist.append(grakn)\n#            depth_list.append(len(grakn))\n#    superlist[0]=sorted(depth_list,reverse=True)[0]\n#    superlist[1]=depth_list\n    return superlist\n\"\"\"\n#            print(\"-----second mark-----\")\n            #print('{}{} {}'.format(subindent, f,level+1))\n#startpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/unicode-table-data\"\n# when run without the trailing slash, the root directory name will simply be printed out.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:97-119"
     },
     "1555": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code is iterating through files in a directory, creating a list of tuples with each file's name, its depth level, and the length of another list. The code also contains comments for debugging purposes, such as printing specific marks to track execution progress. The start path is provided, and without a trailing slash, it will print out the root directory name.",
         "type": "comment"
     },
     "1556": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\n# startpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# Keep It Simple Stupid.\n# Never Overestimate the Understanding Ability of Computer.\n# Never Ever Think that Computer May Get Tired of Repetitive Tasks.\n# this time we have integrated the fucking slash here.\n\"\"\"\nomega=list_files(startpath)\n#print(omega)\nfor nintendo in range(len(omega)):\n    omega[nintendo].insert(0,nintendo)\n\"\"\"\n#sadist=[[],[],[],[]]\n\"\"\"\nmasochist=[]\n\"\"\"\nconn = sqlite3.connect('tits.db')\ncursor = conn.execute(\"SELECT id, name, type,miscellaneous FROM subdir WHERE type=1\")\n#terminator=[]\n# the id starts from zero.\nfor list0 in cursor:\n#    sugar=list(list0[:3])\n    newbie=list0[0]\n    honker=list0[1]\n    dreado=list0[2]\n    fuck=list0[3]\n    if dreado==1:\n        print([newbie,fuck+\"/\"+honker])\n#conn.commit()\nconn.close()\n\"\"\"\nalpha=omega[0]\nprint(alpha)\ngamma=omega[1]\nprint(gamma)\"\"\"\n# things are now getting funny.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:120-159"
     },
     "1557": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code is connecting to an SQLite database, retrieving data from a table with specific conditions (type=1), and then printing the newbie and corresponding file path for each record found. The code also defines lists and manipulates them, but their purpose is not clear in this context.",
         "type": "comment"
     },
     "1558": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "# i wrote shits.\n# my code sucks, and it is fucking perfect.\n#\n#for m in range(alpha):\n#    masochist.append([\"\"]*(len(omega)-2))\n#for r in range(len(omega)-2):\n#    beta=omega[r+2]\n#    sigma=len(beta)\n#    if sigma!=0:\n#        for d in range(sigma):\n#            beta+=[\"\"]\n#    sadist.append(beta)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/gold.py:160-172"
     },
     "1559": {
-        "file_id": 270,
+        "file_id": 269,
         "content": "This code creates two empty lists, 'masochist' and 'sadist', with 'masochist' having the same length as the 'alpha' list. Then, it iterates over the range of 'len(omega)-2', appends an empty string to each element in 'masochist', and appends 'beta' (a slice of 'omega' starting from index 2) to 'sadist'. If the length of 'beta' is not zero, it appends empty strings until it reaches the length of 'beta'.",
         "type": "comment"
     },
     "1560": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "/multilingual/rockstar/connector/nicetry.py",
         "type": "filepath"
     },
     "1561": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "The code imports libraries, defines CSV structure and creates a function list_files using os.walk() to generate a superlist of directories and files up to 2 levels deep, but the author faces file path handling issues, Unicode standard, and database problems while discussing efficiency concerns and potential improvements.",
         "type": "summary"
     },
     "1562": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "import os\nimport re\nimport pandas as pd\n# ALL YOUR BASE ARE BELONG TO US!\n# WHO YOU ARE! NOT WHERE YOU CAME FROM!\n# hey! generate some fucking csv file!\n# and then load it with the fucking mechanism.\n# i want to know about it.\n# the structure could be rather simple.\n# each line starts with the fucking directory name.\n# and then the following subdirectory or other shits.\n# or simply doing this, make a simple distinction over shits.\n# store the fucking category along with the fucking shit.\n# we would make it even.\n# when the number is 0, it means directory.\n# when it is 1, it is a fucking file!\n# but how do we escape the fucking shit?\n# i mean if we use the delimiter as content inside the csv file!\n# we should make it simpler.\n# unless  you wanna die.\n# export it using profressional tools.\n# we should make things clearer\n##################################################################################\n#                                                                                #\n# EACH LINE IS SIMPLY A ONE_LINER REPRESENTING ONE SINGLE DIRETORY_FILE HIERACHY #",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:1-25"
     },
     "1563": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "This code imports several libraries, has a few comments expressing frustration or urgency, and then defines the structure of a CSV file with directory hierarchies where each line represents one entry and contains the category (0 for directory, 1 for file) to distinguish content from delimiters.",
         "type": "comment"
     },
     "1564": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "#                                                                                #\n##################################################################################\n# which make things much simpler.\n# you could use pandas to make this happen.\n# remember that it could be trinary or binary here.\n# if you want binary, then you should export two files.\n# if you want trinary, then you should export only one single file but with an extra column.\n# anyway, you decice which one to be stored.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    #superdictionary={}\n    # at the beginning of the fucking thing we wanna to make things absolutely clear.\n    maximum_depth=2\n    depth_list=[]\n    superlist=[2,[]]\n    name_of_root=os.path.basename(startpath)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:26-43"
     },
     "1565": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "The code defines a function list_files that takes a start path as input and returns a superlist, which is a dictionary of directories and a list of file paths. The depth of the files and directories is limited to a maximum of 2 levels. It uses os.walk() to iterate through the directory structure and creates a clear representation of the file/directory hierarchy.",
         "type": "comment"
     },
     "1566": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "    # this is the list that we are gonna to return.\n    # to change this into some fucking csv file is as easy as shit.\n    for root, dirs, files in os.walk(startpath):\n        #level = root.replace(startpath, '').count(os.sep)\n        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        #indent = ' ' * 4 * (level)\n#       print(level)\n#        print(\"-----first mark-----\")\n        #print(os.path.basename(root))\n        #print(root)\n        # it seems to be a string.\n        # oh never forget the locate database.\n        # the base is presumed.\n        # if you want to expand the filesystem tree, remember to do something called the root-finding.\n        # you need to make sure which level is the first common place for all.\n        # usually this can be done by checking the pwd link.\n        # and it is fucking damn easy.\n        # but what should be done after this?",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:44-64"
     },
     "1567": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "This code is walking through a directory structure using `os.walk` and iterating over each file and directory within the specified start path. It seems the author is expressing frustration or annoyance with certain aspects of the code, such as levels, indentation, or locating the database. The code appears to be analyzing a directory tree and possibly outputting it in a CSV format. However, the author's tone indicates some dissatisfaction or irritation, which might not be related to the functionality of the code itself.",
         "type": "comment"
     },
     "1568": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "        # how could you do this then?\n        # i suggest you to use the full fucing path.\n        # though it will be tedious, you can always get the joy out of shit.\n        # and it could be reusable.\n        # never fucking mind.\n        # i can drop database every fucking day.\n        # i will deal with it later on.\n        # the first priority is this fucking unicode standard.\n        rhino=re.sub(startpath,\"\",root).split(\"/\")\n        rhino[0]=name_of_root\n        crakn=[os.path.basename(root),0]+rhino[:-1]\n        superlist.append(crakn)\n        depth_list.append(len(crakn))\n        # you can decide the comma values by the maximum depth.\n        # to make it way simpler than anything, we append the directory after the type identifier..\n        #print(\"0\")\n        # first we make sure our base directory is connected.\n        # next we make the files under it get connected.\n        #print('{}{}/ {}'.format(indent, os.path.basename(root),level+1))\n#        print(\"-----first mark-----\")\n        #subindent = ' ' * 4 * (level + 1)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:65-85"
     },
     "1569": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "The code appears to involve handling file paths and directories. The programmer suggests using full paths and dealing with a database issue later, focusing on the Unicode standard first. It also appends directory names and depth values into lists, ensuring base directories are connected and files under them are linked as well.",
         "type": "comment"
     },
     "1570": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "        for f in files:\n#            print(\"-----second mark-----\")\n            grakn=[f,1]+rhino\n            superlist.append(grakn)\n            depth_list.append(len(grakn))\n    superlist[0]=sorted(depth_list,reverse=True)[0]\n    superlist[1]=depth_list\n    return superlist\n#            print(\"-----second mark-----\")\n            #print('{}{} {}'.format(subindent, f,level+1))\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\n# when run without the trailing slash, the root directory name will simply be printed out.\n# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\n# startpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# Keep It Simple Stupid.\n# Never Overestimate the Understanding Ability of Computer.\n# Never Ever Think that Computer May Get Tired of Repetitive Tasks.\n# this time we have integrated the fucking slash here.\nomega=list_files(startpath)\n#print(omega)\nsadist=[]\nmasochist=[]\nalpha=omega[0]",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:86-116"
     },
     "1571": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "This code iterates through files, sorts them based on depth, and appends to superlist. It compares root directory names with a trailing slash and initializes two lists, sadist and masochist, to process the files. It also uses list_files function to get the files in the startpath.",
         "type": "comment"
     },
     "1572": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "#print(alpha)\ngamma=omega[1]\n#print(gamma)\n# things are now getting funny.\n# i wrote shits.\n# my code sucks, and it is fucking perfect.\nfor m in range(alpha):\n    masochist.append([\"\"]*(len(omega)-2))\nfor r in range(len(omega)-2):\n    beta=omega[r+2]\n    sigma=alpha-gamma[r]\n    if sigma!=0:\n        for d in range(sigma):\n            beta+=[\"\"]\n    sadist.append(beta)\nsick={}\nfor l in range(alpha):\n    for k in range(len(sadist)):\n        masochist[l][k]=sadist[k][l]\n    sick[\"{}{}\".format(\"key\",l)]=masochist[l]\n#print (sick)\n#numeric value preserved. don't even look.\ndf = pd.DataFrame(sick)\n# pandas is way fucking slow.\n# keep it as a fucking habit?\n# any alternatives?\nthe_real_shit=df.to_csv(index=False)\n#print(the_real_shit)\nfuckyou=open(\"gotcha.csv\",\"w+\")\nfuckyou.write(the_real_shit)\nfuckyou.close()\n    # you wanna to do this in pandas?\n    # better convert this!\n# print(\"\\n----[the fucking divide line]----\\n\")\n# list_files(startpath0)\n#print(\"\\n----[the fucking divide line]----\\n\")\n# make index on those that change the most.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:117-158"
     },
     "1573": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "The code creates a 2D list masochist, then fills it with another list sadist in a transposed manner. It then converts the combined list to a pandas DataFrame and saves it as a CSV file \"gotcha.csv\". The code seems to have some frustration and self-deprecation in its comments but serves the purpose of organizing data into a 2D structure and saving it as a CSV file.",
         "type": "comment"
     },
     "1574": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "#print(os.walk(startpath))\n#print(\"\\n----[the fucking divide line]----\\n\")\n# print(list(os.walk(startpath)))\n# maybe the representation sucks so i cannot take care of simplification and efficiency at the same time.\n# if exists, my machine will integrate it.\n# you could integrate the root directory finding process into the cypher text.\n# tuples inside.\n# this is really useless.\n# i do not think this is necessary to print it out directly.\n# need preprocessing.\n# always remember that the name of our very fucking phone is of the root directory.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/nicetry.py:159-171"
     },
     "1575": {
-        "file_id": 271,
+        "file_id": 270,
         "content": "This code block contains comments discussing potential improvements and concerns about the code's efficiency, representation, and unnecessary output. The author mentions integrating root directory finding into cypher text and notes that certain print statements may be useless or require preprocessing.",
         "type": "comment"
     },
     "1576": {
-        "file_id": 272,
+        "file_id": 271,
         "content": "/multilingual/rockstar/connector/records.py",
         "type": "filepath"
     },
     "1577": {
-        "file_id": 272,
+        "file_id": 271,
         "content": "The code imports necessary modules, defines a function to extract path up to origin using os.walk, establishes an SQLite database connection, creates and inserts data into a \"subdir\" table, then commits changes and closes the connection.",
         "type": "summary"
     },
     "1578": {
-        "file_id": 272,
+        "file_id": 271,
         "content": "import os, re, sqlite3\n#import pandas as pd\n#import sqlite3\n# to trace back and forth, using the full path if you want to.\n# if it is absolute path, we use origin as \"\" or something like that.\n# if it is relative, we make a header for the topmost, marked as origin.\n#startpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/unicode-table-data\"\ndef superskimmer(path):\n    path0=list(filter((lambda x:x!=\"\"),path.split(\"/\")))[:-1]\n    p0=\"\"\n    for p in path0:\n        p0+=(\"/\"+p)\n    return p0\nporn=list(os.walk(startpath))\n#print(porn)\n# I still prefer the full path.\n# give it a try.\nbase=os.path.basename(startpath)\n#_id=0\nshit=[[base,0,startpath.count(\"/\")-1,\"\",superskimmer(startpath)]]\nfor fuck in porn:\n    pussy=fuck[0]\n    for bitch in fuck[1]:\n#        _id+=1\n        shit.append([bitch,0,pussy.count(\"/\"),os.path.basename(pussy),pussy])\n    for jerk in fuck[2]:\n#        _id+=1\n        shit.append([jerk,1,pussy.count(\"/\"),os.path.basename(pussy),pussy])",
         "type": "code",
         "location": "/multilingual/rockstar/connector/records.py:1-31"
     },
     "1579": {
-        "file_id": 272,
+        "file_id": 271,
         "content": "Code imports required modules and defines a function `superskimmer` to extract the path up to the origin. It uses `os.walk` to iterate through directories in the given `startpath`, creating a list of records with file/directory name, type (0 for files, 1 for folders), path level, base name, and full path.",
         "type": "comment"
     },
     "1580": {
-        "file_id": 272,
+        "file_id": 271,
         "content": "#print(shit)\nconn = sqlite3.connect('tits.db')             \n# you shall not execute it every time.  \nconn.execute('''CREATE TABLE subdir \n (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n name           TEXT    NOT NULL,\n type         TINYINT     NOT NULL,\n depth TINYINT NOT NULL,\n parent TEXT ,\n miscellaneous TEXT NOT NULL,\nCONSTRAINT rule  UNIQUE (name ASC, miscellaneous ASC )\n );''')\nsql = (\"CREATE INDEX index0 ON subdir (name);\")  \n# sql0 = (\"CREATE INDEX index1 ON subdir (id);\")  \nsql1 = (\"CREATE INDEX index2 ON subdir (depth);\") \nconn.execute(sql)\nconn.execute(sql1)\nfor a,b,c,d,e in shit:                  \n    if e!=\"\": \n#        print([a,b,c,d,e])\n        conn.execute(\"INSERT INTO subdir (name,type,depth,parent,miscellaneous)  VALUES ( '{}',{},{},'{}','{}');\".format(a,b,c,d,e))            \n    else: \n#        print([a,b,c,d,e])\n        conn.execute(\"INSERT INTO subdir (name,type,depth,miscellaneous)  VALUES ( '{}',{},{},'{}');\".format(a,b,c,e))\nconn.commit()\nconn.close()",
         "type": "code",
         "location": "/multilingual/rockstar/connector/records.py:33-67"
     },
     "1581": {
-        "file_id": 272,
+        "file_id": 271,
         "content": "This code establishes a connection to an SQLite database, creates a table named \"subdir\" with specified columns and constraints, creates indices on the \"name\", \"id\", and \"depth\" columns, and inserts data into the table from the \"shit\" list. It then commits the changes and closes the database connection.",
         "type": "comment"
     },
     "1582": {
-        "file_id": 273,
+        "file_id": 272,
         "content": "/multilingual/rockstar/connector/shallowCopy.py",
         "type": "filepath"
     },
     "1583": {
-        "file_id": 273,
+        "file_id": 272,
         "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
         "type": "summary"
     },
     "1584": {
-        "file_id": 273,
+        "file_id": 272,
         "content": "def mover(plist,dest):\n    with open(\"shallowCopy.sh\",\"w+\") as fuck:\n        fuck.write('#!/bin/bash\\n')\n        for term in plist:\n            fuck.write('cp '+term+' '+dest+' &\\n')",
         "type": "code",
         "location": "/metalearning/methodBank/shallowCopy.py:1-5"
     },
     "1585": {
-        "file_id": 273,
+        "file_id": 272,
         "content": "This code defines a function called \"mover\" that takes two arguments: plist and dest. It creates a new file named \"shallowCopy.sh\" in write mode, writes shell script commands to it, and then closes the file. The for loop iterates through each term in plist, writing 'cp' (copy) command followed by each term and the destination directory to the file.",
         "type": "comment"
     },
     "1586": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "/multilingual/rockstar/connector/showtime.py",
         "type": "filepath"
     },
     "1587": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "The code uses os and re libraries to create CSV files with directory-file hierarchies, including a function for listing files/directories and organizing them for analysis. It sorts files by depth, provides paths and their depths, and requires phone root directory preprocessing.",
         "type": "summary"
     },
     "1588": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "import os\nimport re\n# ALL YOUR BASE ARE BELONG TO US!\n# WHO YOU ARE! NOT WHERE YOU CAME FROM!\n# hey! generate some fucking csv file!\n# and then load it with the fucking mechanism.\n# i want to know about it.\n# the structure could be rather simple.\n# each line starts with the fucking directory name.\n# and then the following subdirectory or other shits.\n# or simply doing this, make a simple distinction over shits.\n# store the fucking category along with the fucking shit.\n# we would make it even.\n# when the number is 0, it means directory.\n# when it is 1, it is a fucking file!\n# but how do we escape the fucking shit?\n# i mean if we use the delimiter as content inside the csv file!\n# we should make it simpler.\n# unless  you wanna die.\n# export it using profressional tools.\n# we should make things clearer\n##################################################################################\n#                                                                                #\n# EACH LINE IS SIMPLY A ONE_LINER REPRESENTING ONE SINGLE DIRETORY_FILE HIERACHY #",
         "type": "code",
         "location": "/multilingual/rockstar/connector/showtime.py:1-24"
     },
     "1589": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "This code imports os and re libraries, contains a series of comments discussing the generation and loading of CSV files with directory-file hierarchies. It uses a simple structure where each line starts with the directory name, followed by subdirectories or other items. The code also discusses escaping special characters in the CSV file and using professional tools for exporting.",
         "type": "comment"
     },
     "1590": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "#                                                                                #\n##################################################################################\n# which make things much simpler.\n# you could use pandas to make this happen.\n# remember that it could be trinary or binary here.\n# if you want binary, then you should export two files.\n# if you want trinary, then you should export only one single file but with an extra column.\n# anyway, you decice which one to be stored.\n# directory-like object must be stored as a dictionary object, while files are stored inside a list. \n# while you can achieve this by something called numric and alphabetical differenciation, or some special prefix, even some metatable constrains\ndef list_files(startpath):\n# what does this fucking os.walk() return\n    #superdictionary={}\n    # at the beginning of the fucking thing we wanna to make things absolutely clear.\n    maximum_depth=2\n    depth_list=[]\n    superlist=[2,[]]\n    name_of_root=os.path.basename(startpath)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/showtime.py:25-42"
     },
     "1591": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "The code defines a function called \"list_files\" that takes a starting path as input. It uses the os.walk() function to iterate through directories and files in the startpath, storing them as a dictionary for directory-like objects and a list for regular files. The maximum depth of directories to be traversed is set to 2, and the name of the root directory is recorded. This function could be used to generate lists of files or directories in a given path with specific formatting options like binary or trinary representation.",
         "type": "comment"
     },
     "1592": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "    # this is the list that we are gonna to return.\n    # to change this into some fucking csv file is as easy as shit.\n    for root, dirs, files in os.walk(startpath):\n        #level = root.replace(startpath, '').count(os.sep)\n        # all you've got is this fucking freaky levels.\n        # do you really need this dictionary?\n        # you wanna analyze it locally?\n        # my instinct tells me that you shall never be doing this.\n        #indent = ' ' * 4 * (level)\n#       print(level)\n#        print(\"-----first mark-----\")\n        #print(os.path.basename(root))\n        #print(root)\n        # it seems to be a string.\n        # oh never forget the locate database.\n        # the base is presumed.\n        # if you want to expand the filesystem tree, remember to do something called the root-finding.\n        # you need to make sure which level is the first common place for all.\n        # usually this can be done by checking the pwd link.\n        # and it is fucking damn easy.\n        # but what should be done after this?",
         "type": "code",
         "location": "/multilingual/rockstar/connector/showtime.py:43-63"
     },
     "1593": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "This code is iterating over the file system using `os.walk()` to find files in a specified directory. The goal appears to be organizing these files into a CSV format, possibly for analysis. The code includes comments suggesting that this process may involve dealing with levels and potentially modifying the formatting or structure of the output.",
         "type": "comment"
     },
     "1594": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "        # how could you do this then?\n        # i suggest you to use the full fucing path.\n        # though it will be tedious, you can always get the joy out of shit.\n        # and it could be reusable.\n        # never fucking mind.\n        # i can drop database every fucking day.\n        # i will deal with it later on.\n        # the first priority is this fucking unicode standard.\n        rhino=re.sub(startpath,\"\",root).split(\"/\")\n        rhino[0]=name_of_root\n        crakn=[os.path.basename(root),0]+rhino[:-1]\n        superlist.append(crakn)\n        depth_list.append(len(crakn))\n        # you can decide the comma values by the maximum depth.\n        # to make it way simpler than anything, we append the directory after the type identifier..\n        #print(\"0\")\n        # first we make sure our base directory is connected.\n        # next we make the files under it get connected.\n        #print('{}{}/ {}'.format(indent, os.path.basename(root),level+1))\n#        print(\"-----first mark-----\")\n        #subindent = ' ' * 4 * (level + 1)",
         "type": "code",
         "location": "/multilingual/rockstar/connector/showtime.py:64-84"
     },
     "1595": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "The code appears to be working with file paths and organizing them into a list. It removes the start path, sets the first element of the resulting list to the name of the root, and appends this list along with its length to two separate lists. The code then proceeds to print formatted strings representing each directory level, potentially for debugging purposes. The purpose of this specific section seems to be ensuring that all directories are connected properly within the file structure.",
         "type": "comment"
     },
     "1596": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "        for f in files:\n#            print(\"-----second mark-----\")\n            grakn=[f,1]+rhino\n            superlist.append(grakn)\n            depth_list.append(len(grakn))\n    superlist[0]=sorted(depth_list,reverse=True)[0]\n    superlist[1]=depth_list\n    return superlist\n#            print(\"-----second mark-----\")\n            #print('{}{} {}'.format(subindent, f,level+1))\nstartpath=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir\"\n# when run without the trailing slash, the root directory name will simply be printed out.\n# we should make a comparation here.\n# i think the former is better because it has the indentation preserved.\n# startpath0=\"/data/data/com.termux/files/home/lazer/multilingual/rockstar/superdir/\"\n# Keep It Simple Stupid.\n# Never Overestimate the Understanding Ability of Computer.\n# Never Ever Think that Computer May Get Tired of Repetitive Tasks.\n# this time we have integrated the fucking slash here.\nomega=list_files(startpath)\nprint(omega)\nsadist=[]\nmasochist=[]\nalpha=omega[0]",
         "type": "code",
         "location": "/multilingual/rockstar/connector/showtime.py:85-115"
     },
     "1597": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "This code iterates over a list of files, sorts them based on depth, and appends them to two lists. It then returns the sorted list of file paths and their respective depths. The code also defines a starting path for listing files and uses a function called \"list_files\" to retrieve the files in the specified directory.",
         "type": "comment"
     },
     "1598": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "print(alpha)\ngamma=omega[1]\nprint(gamma)\nfor m in range(alpha):\n    masochist.append([\"\"]*(len(omega)-2))\nfor r in range(len(omega)-2):\n    beta=omega[r+2]\n    sigma=alpha-gamma[r]\n    if sigma!=0:\n        for d in range(sigma):\n            beta+=[\"\"]\n    sadist.append(beta)\nfor l in range(alpha):\n    for k in range(len(sadist)):\n        masochist[l][k]=sadist[k][l]\nprint (masochist)\n    # you wanna to do this in pandas?\n    # better convert this!\n# print(\"\\n----[the fucking divide line]----\\n\")\n# list_files(startpath0)\n#print(\"\\n----[the fucking divide line]----\\n\")\n# make index on those that change the most.\n#print(os.walk(startpath))\n#print(\"\\n----[the fucking divide line]----\\n\")\n# print(list(os.walk(startpath)))\n# maybe the representation sucks so i cannot take care of simplification and efficiency at the same time.\n# if exists, my machine will integrate it.\n# you could integrate the root directory finding process into the cypher text.\n# tuples inside.\n# this is really useless.\n# i do not think this is necessary to print it out directly.",
         "type": "code",
         "location": "/multilingual/rockstar/connector/showtime.py:116-154"
     },
     "1599": {
-        "file_id": 274,
+        "file_id": 273,
         "content": "Code snippet is manipulating lists 'masochist' and 'sadist', iterating through 'omega' to populate 'sadist' with empty strings and then rearranging the contents of 'sadist' into 'masochist'. The code also includes some debugging print statements and references to other functions that seem unrelated to this specific functionality. It could potentially benefit from using a more efficient data structure or pandas for easier manipulation, but currently operates solely with vanilla Python lists.",
         "type": "comment"
     }

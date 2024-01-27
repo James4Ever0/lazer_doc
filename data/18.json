@@ -1,535 +1,535 @@
 {
     "1800": {
-        "file_id": 298,
+        "file_id": 297,
         "content": "# this is rather simple.\n# but it has two things inside.\n# simple.\nlogic=(lambda liskr, skr,indexer: list(sorted(liskr,key=(lambda x: sorty(x[indexer],skr)))))\nsumologic=(lambda fuck0,fuck1:logic(logic(logic(logic(fuck0,fuck1[5],5),fuck1[4],4),fuck1[3],3),fuck1[2],2))\n# make you body bounce.\n# name, pos, pi, si, ssi, wi\n# use separator first!\n# fuck you mother fucker!\n# U R BITCH!\nfor k2 in ranger(subcan):\n    for k1 in ranger(candidate):\n        for k0 in ranger(candidate[k1]):\n            genius()\n            print(candidate[k1][k0])\n            genius()\n            gnu=sumologic(subcan[k2],candidate[k1][k0])\n            print(gnu)\n\"\"\"\nblitz8=[[[y[0], y[4]] for y in blitz if y[4]==x] for x in blitz3]\nprint(blitz8)\ngenius()\nblitz9=[[[y[0], y[5]] for y in blitz if y[5]==x] for x in blitz4]\nprint(blitz9)\ngenius()\n\"\"\"\n# fuck them.\n# check if the rule works.\n# export the uuid in case of forgotten.\n#font=open(\"hello.log\",\"w+\")\n# this will not be the problem, isn't it?\n#struct=a0+\"\\n\"+a+\"\\n\"\n#font.write(struct)\n#font.close()",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:232-265"
     },
     "1801": {
-        "file_id": 298,
+        "file_id": 297,
         "content": "Code contains nested lambda functions for sorting and a loop iterating over ranges of variables. It prints values, performs calculations using the sumologic function, and potentially writes to a file. The code seems to be manipulating data structures, possibly for language processing or analysis purposes.",
         "type": "comment"
     },
     "1802": {
-        "file_id": 298,
+        "file_id": 297,
         "content": "# from general to specific to general.",
         "type": "code",
         "location": "/multilingual/rockstar/chumble/house.py:267-267"
     },
     "1803": {
-        "file_id": 298,
+        "file_id": 297,
         "content": "The code appears to be a comment rather than executable code, and it suggests a process where general information is transformed into specific information and then combined back with general information. This could be a method for categorizing or filtering data.",
         "type": "comment"
     },
     "1804": {
-        "file_id": 299,
+        "file_id": 298,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/README",
         "type": "filepath"
     },
     "1805": {
-        "file_id": 299,
+        "file_id": 298,
         "content": "This code is providing instructions to consider deep learning, be inspired by the tabnine project (chess-related), and focus on semantic analysis over symbols.",
         "type": "summary"
     },
     "1806": {
-        "file_id": 299,
+        "file_id": 298,
         "content": "you shall consider deep learning.\nthe tabnine project was inspired by chess, and you shall clone at least one of these projects.\nConsider semantic analysis over symbols.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/README:1-4"
     },
     "1807": {
-        "file_id": 299,
+        "file_id": 298,
         "content": "This code is providing instructions to consider deep learning, be inspired by the tabnine project (chess-related), and focus on semantic analysis over symbols.",
         "type": "comment"
     },
     "1808": {
-        "file_id": 300,
+        "file_id": 299,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/RNN.lua",
         "type": "filepath"
     },
     "1809": {
-        "file_id": 300,
+        "file_id": 299,
         "content": "The code defines functions to iterate over a table of strings, applying a function to each sub-table and concatenating non-empty elements into a single string for further processing or analysis. It also reads data from multiple commands using io.popen and writes it into a candidate list.",
         "type": "summary"
     },
     "1810": {
-        "file_id": 300,
+        "file_id": 299,
         "content": "Table={\n\t[1]={\"pdf\",\"document\",\"doc\",\"\"},\n\t[2]={\"reader\",\"conver\",\"format\",\"\"},\n\t[3]={\"txt\",\"text\",\"word\",\"\"}\n}\n--shorter, and more common is better.\n--not even the whole word.\nTable0={}\nspliter=\"---------fuckyou---------\"\nfunction map_all (fcn, tab, idx, ...)\n    if idx < 1 then\n\t    --count of the list.\n\t--print(\"--spliter--\")\n\t-- this is the print-them-all function.\n        fcn(...)\n\t--print(\"--spliter--\")\n\t-- it is appending the thing on the back of argument list.\n    else\n        local t = tab[idx]\n\t-- length minus one.\n        for i = 1, #t do\n\t\t--print(\"--spliter0--\")\n\t\tmap_all(fcn, tab, idx-1, t[i], ...) \n\t\t--print(\"--spliter0--\")\n\tend\n    end\nend\nfunction appendnow(...)\n\tlocal shit=\"\"\n\tfor fuck,nothing in ipairs({...}) do\n\t\tif nothing~=\"\"  then\n\t\t\tshit=shit..\" \\\"\"..nothing..\"\\\"\"\n\t\tend\n\tend\n\tif shit~=\"\" then\n\t\tTable0[#Table0+1]=shit\n\tend\nend\nmap_all(appendnow, Table, #Table)\n--[[for x ,v in ipairs(Table0) do\n\tprint(v)\nend]]\nhandle={}                                  for key,value in ipairs(Table0) do\n\tcommand =\"apt-cache search\"..value  ",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/RNN.lua:1-48"
     },
     "1811": {
-        "file_id": 300,
+        "file_id": 299,
         "content": "This code defines two functions, \"map_all\" and \"appendnow\", which iterate over a table of strings. The map_all function applies a given function to each sub-table within the main table, and the appendnow function concatenates non-empty string elements from each sub-table into a single string. These appended strings are then added to another table called Table0. The code concludes by demonstrating an example usage of these functions on the original Table.",
         "type": "comment"
     },
     "1812": {
-        "file_id": 300,
+        "file_id": 299,
         "content": "\t-- no trailing space.\n--psudocode above.     \n\thandle[#handle+1]= io.popen(command)       --is it threaded?                  \nend   \nfor key,value in pairs(handle) do\n\tresult = handle[key]:read(\"*a\")\n\thandle[key]:close()                        -- use local instead of using some functions.\n--\tprint (result)\n\tprint(Table0[key])\n\tprint(spliter)\n\tio.write(result)\n\tprint(spliter)\nend\n--anything is global here.\n-- what is this shit all about?\n--does that mean we have to append this fucc to a candidate list?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/RNN.lua:49-67"
     },
     "1813": {
-        "file_id": 300,
+        "file_id": 299,
         "content": "The code opens and reads a command using io.popen, adds it to the handle table, and then iterates through the handle table to read the content, close the file handles, and write the result. The purpose seems to be reading data from multiple commands and writing it into a candidate list, potentially for further processing or analysis.",
         "type": "comment"
     },
     "1814": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/alphaGel.py",
         "type": "filepath"
     },
     "1815": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "This code analyzes data with functions reading from files, filtering, performing statistics, and returning results based on conditions. The function checks sorting status using a sorted list of pairs, identifying differences if needed, and includes error messages for incorrect or duplicate elements.",
         "type": "summary"
     },
     "1816": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "# first, pattern.\n# second, utilize.\n# sorted or not\nimport os\nimport statistics\nfrom keepMeSatisfied import same_fuck\nsimilar=(lambda x,y: True if (x/y > 1/4 and x/y < 4) else False)\ndef sucker(m):\n    s=\"\"\n    for k in m:\n        s+=(str(k)+\" \")\n    return s[:-1]\ndef ash(bitchEternity):\n    init=\"lua geniusWalk.lua\"\n    for fuckall in bitchEternity:\n        init+=\" \"+str(fuckall)\n    myCmd0 = os.popen(init)\n    myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))\n   # kill=(lambda k:list(map((lambda x:int(x)),k)))\n#    dickHead=kill(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n    myCmd0.close()\n    return myCmd[1]\n#    ksn=dickhead.count(statistics.mode(dickhead))\n#    ksd=len(dickhead)\n    #return [similar(ksn,ksd),similar(ksn,ksd//2)]\nshit=(lambda x0: list(filter((lambda x:x!=\"\"),x0.split(\" \"))))\ndef amplifier(c):\n    a,b=c[0],c[1]\n    if a==True:\n        return True\n    elif b==True:\n        return True\n    else:\n        return False\n# derive=(lambda f,g: int(g/(2+(f*(1/(1-g//2))))))\nderive=(lambda f,g: int(g/(2+(f*(1/(1-g/2))))) if f%2==1 else int(g//f)*f)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/alphaGel.py:1-42"
     },
     "1817": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "This code defines a series of functions to analyze and manipulate data. It reads data from a file, filters out unnecessary information, performs statistical operations, and returns the results based on specific conditions. The code also includes a lambda function for deriving values and converts data into a standard format before processing it further.",
         "type": "comment"
     },
     "1818": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "takeTwo=(lambda v:list(map((lambda f: abs(int(f))),v)))\ndef verizon0(mode,dutch,count):\n    duck=dutch[0]\n    rubber=dutch[1]\n    if mode == True:\n        # sorted.\n        a,b=rubber[0]\n        a0,b0=len(shit(a)),len(b)\n        pushUp=similar(count[0]/2,a0)\n        if count[1]==True and b0==2:\n            return [pushUp,True]\n        else:\n            return [pushUp,False]\n    if mode == False:\n        # not sorted.\n        if statistics.mean(list(map((lambda x:statistics.mean(takeTwo(shit(x)))),[ducky[0] for ducky in duck])))>5:\n            ver2=verizon0(True,dutch,count)[0]\n            a=[int(similar(len(shit(deutsch[0]))*len(deutsch[1]),derive(len(shit(deutsch[0])),count[0]))) for deutsch in duck]\n            b=0\n            for a0 in a:\n                b+=a0\n            if similar(b,len(duck)):\n                return [True,ver2]\n            else:\n                return [False,ver2]\n        else:\n            return [False,False]\ndef verizon1(ducky,count):\n    similar0=(lambda x,y: True if (x/y > 1/4 and x/y < 4) else False)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/alphaGel.py:43-72"
     },
     "1819": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "The code defines two functions, `verizon0` and `verizon1`. The first function checks if the input is sorted. If it's not sorted, it calculates the mean of a list of means from individual elements and compares it to 5. Based on this comparison, it returns a boolean value for sorting status and a potential value. The second function takes in ducky (a list) and count, and uses some calculations to return two booleans. If the average length ratio is within a certain range, it also includes a potential value.",
         "type": "comment"
     },
     "1820": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "    # only work in sorted mode.\n    bang=ducky[0]\n    shaky=list(map((lambda x: x[1]-x[0]),bang))\n    fuckMe=ducky[1]\n    if fuckMe!=[]:\n        if similar0(len(fuckme),count[0]):\n            watchMe=same_fuck(ash(fuckme))\n            return verizon0(True,watchMe,[len(watchMe),True if len(watchMe)%2==0 else False])\n        else:\n            pass\n    else:\n        print(shaky)\n        suckMeUp=sucker(shaky)\n        print(suckMeUp)\n        watchMe=same_fuck(suckMeUp)\n        print(watchMe)\n        # use try catch.\n#        if watchMe[0]!=[] and watchMe[1]!=[]:\n        return verizon0(True,watchMe,[len(watchMe),True if len(watchMe)%2==0 else False])\n#        else:\n#            print(\"FUCKING HELL!\\nFUCKING HELL!\")\n#            return [False,False,False]\ndef utilize(result,ab,cd):\n    if result == True:\n        if ab == True:\n            return [[cd[a] for a in range(len(cd)) if a%2==0],[cd[a] for a in range(len(cd)) if a%2==1]]\n        else:\n            print(\"-- DUPLICATES FOUND --\\n-- MIGRATE TO ICU --\")\n    else:\n        print(\"-- I FUCKED UP --\\n-- NO FUCKS GIVEN --\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/alphaGel.py:73-103"
     },
     "1821": {
-        "file_id": 301,
+        "file_id": 300,
         "content": "This function utilizes a sorted list of pairs, checking if the second elements are similar to another sorted list. If so, it returns the pair list with length and parity. If not, it prints the differences between the pairs and returns the pair list with length and parity. It also includes error messages for incorrect results or duplicate elements.",
         "type": "comment"
     },
     "1822": {
-        "file_id": 302,
+        "file_id": 301,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/discoveryChannel.py",
         "type": "filepath"
     },
     "1823": {
-        "file_id": 302,
+        "file_id": 301,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "summary"
     },
     "1824": {
-        "file_id": 302,
+        "file_id": 301,
         "content": "#text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\n#print(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/discoveryChannel.py:1-29"
     },
     "1825": {
-        "file_id": 302,
+        "file_id": 301,
         "content": "This code defines a function skimmer that finds the position of an element in a list and appends its start and end index to another list. The notorious function takes a list, converts unique elements into pairs (start and end index) using the skimmer function, and returns the resulting list. It then prints the result of calling notorious on a given text.",
         "type": "comment"
     },
     "1826": {
-        "file_id": 303,
+        "file_id": 302,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/alphaGo.py",
         "type": "filepath"
     },
     "1827": {
-        "file_id": 303,
+        "file_id": 302,
         "content": "The code imports 're', defines string manipulation functions, and reads from a file to process lines containing 'set:'. It applies wrapper or wrapper0 functions, stores results in pat list, and handles different input cases. The code includes unfinished sections and unused print statements.",
         "type": "summary"
     },
     "1828": {
-        "file_id": 303,
+        "file_id": 302,
         "content": "import re\nstringSet=[\"set:\",[\"[\",\"]\"]]\n#standAlone=(lambda x: list(filter((lambda y: y!=\"\"), list(map((lambda z: z[1] if len(z) <=3 else re.match(r\"\\d+\").group(0)),x)) )))\nstandAlone1=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\nstandAlone0=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\nstandAlone=(lambda x: standAlone1(x) if standAlone1(x).count(sorted(set(standAlone1(x)),key=(lambda y: standAlone1(x).count(y)))[0]) <3 else standAlone0(x))\nwrapper=(lambda xy: [xy,ord(xy)])\nwrapper0=(lambda xy: [chr(xy),xy])\nwith open(\"alphabets.txt\",\"r\") as rockstar:\n#    mandarin=0\n    for kn in rockstar.readlines():\n        if stringSet[0] in kn:\n            print(\"set only\")\n            print(kn)\n#            ks=re.findall(r\" .(,?)| \\&#\\d*;(,?)\", kn[5:])\n            prt=standAlone(kn[5:-1])\n            prt[0]=prt[0][1:]\n#            print(prt)\n            if len(prt)>1:\n                try:\n                    pat=list(map((lambda z: wrapper(z) if len(z)==1 else wrapper0(int(re.findall(r\"\\d+\",z)[0]))),prt))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/alphaGo.py:1-21"
     },
     "1829": {
-        "file_id": 303,
+        "file_id": 302,
         "content": "The code imports the 're' module, defines several functions related to string manipulation, and reads from a file named \"alphabets.txt\". It iterates over each line, checks for the presence of 'set:' in the line, performs string processing using standAlone function, and then applies wrapper or wrapper0 function to each element in the resulting list. If the resulting list has more than one item, it converts them into a specific format (wrapper/wrapper0) and stores them in pat list. The code also includes commented sections that seem unfinished or not yet implemented.",
         "type": "comment"
     },
     "1830": {
-        "file_id": 303,
+        "file_id": 302,
         "content": "                    print(pat)\n                except:\n                    print(\"FUCKED UP\\nFUCKED UP\")\n            else:\n                print(\"TOO YOUNG TOO NAIVE\\nTOO YOUNG TOO NAIVE\")\n#            print(kn[-1])\n#            print(ks)\n#            print(standAlone(ks))\n        else:\n            if (stringSet[1][0] in kn and stringSet[1][1] in kn):\n                print(\"name only\")\n                print(kn)\n#        elif mandarin==1:\n            else:\n                print(\"empty line\")\n                print(kn)\n#        mandarin+=1\n#        if mandarin==3:\n#            mandarin=0",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/alphaGo.py:22-40"
     },
     "1831": {
-        "file_id": 303,
+        "file_id": 302,
         "content": "Code segment handles different cases based on the input. It prints specific messages depending on whether the input contains certain strings or if it is an empty line. If any exception occurs, it prints \"FUCKED UP\". The code also includes unused print statements commented out.",
         "type": "comment"
     },
     "1832": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/taiChi.py",
         "type": "filepath"
     },
     "1833": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "The code imports \"re\", defines functions, and reads lines from a file, processing strings, counting lengths, wrapping them, applying functions as necessary, and handles errors with a \"FUCKED UP\" message. The variable 'mandarin' is set to 0 if it equals 3 for potential state control or resetting within the program.",
         "type": "summary"
     },
     "1834": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "import re\nstringSet=[\"set:\",[\"[\",\"]\"]]\n#standAlone=(lambda x: list(filter((lambda y: y!=\"\"), list(map((lambda z: z[1] if len(z) <=3 else re.match(r\"\\d+\").group(0)),x)) )))\n#ky0=(lambda k:k if k[-1]!=\" \" else k[:-1])\n#ky=(lambda k:ky0(k) if k[0]!=\" \" else k[1:])\nwrap=(lambda x: [ord(x0) for x0 in list(x)])\nstandAlone1=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\",\"))))\ndef standAlone2(a,b):\n    b0=b\n    print(\"FUCK\\nFUCK\")\n    print(a)\n    for a0 in a:\n        if a0!=\"\":\n            b0=b0.replace(a0,chr(int(re.findall(r\"\\d+\",a0)[0])))\n        else:\n            pass\n    print(\"SHIT\\nSHIT\")\n    print(b0)\n    return b0\nstandAlone=(lambda y: standAlone1(standAlone2(re.findall(r\"{}\\d+;\".format(re.escape(\"&#\")),y),y)))\n#standAlone0=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\n#standAlone=(lambda x: standAlone1(x) if standAlone1(x).count(sorted(set(standAlone1(x)),key=(lambda y: standAlone1(x).count(y)))[0]) <3 else standAlone0(x))\nwrapper=(lambda xy: ord(xy))\n#wrapper0=(lambda xy: xy)\nwith open(\"alphabets.txt\",\"r\") as rockstar:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/taiChi.py:1-25"
     },
     "1835": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "This code imports the \"re\" module, defines a list called \"stringSet\", and then includes several lambda functions. It also defines a function \"standAlone2\" that takes two arguments, performs some operations on them, and returns the result. The main function is \"standAlone\", which uses regular expressions to find certain patterns in a string and replace them with specific characters. Finally, it opens a file called \"alphabets.txt\" for reading.",
         "type": "comment"
     },
     "1836": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "#    mandarin=0\n# simply another workaround?\n    for kn in rockstar.readlines():\n        if stringSet[0] in kn:\n            print(\"set only\")\n            print(kn)\n#            ks=re.findall(r\" .(,?)| \\&#\\d*;(,?)\", kn[5:])\n            prt=standAlone(kn[5:-1])\n#            print(prt)\n            if len(prt)>1:\n                try:\n                    print(list(map((lambda x: [x,len(x),wrap(x)]),prt)))\n                    pat=list(map((lambda z: wrapper(re.findall(r\"[^ ]\",z)[0])),prt))\n                    print(pat)\n                except:\n                    print(\"FUCKED UP\\nFUCKED UP\")\n            else:\n                print(\"TOO YOUNG TOO NAIVE\\nTOO YOUNG TOO NAIVE\")\n#            print(kn[-1])\n#            print(ks)\n#            print(standAlone(ks))\n        else:\n            if (stringSet[1][0] in kn and stringSet[1][1] in kn):\n                print(\"name only\")\n                print(kn)\n#        elif mandarin==1:\n            else:\n                print(\"empty line\")\n                print(kn)\n#        mandarin+=1",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/taiChi.py:26-55"
     },
     "1837": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "The code reads lines from a file, checks if a certain string is present in each line, and then performs actions based on the result. If the string is found, it prints \"set only\" and the line, then processes the line by extracting standalone words, counting their length, and wrapping them using a wrapper function. If the resulting list of processed words has more than one element, it prints that list and applies another function to each word. If the string is not found in the line, it checks for other specific strings and performs different actions based on those. It also includes error handling with a \"FUCKED UP\" message.",
         "type": "comment"
     },
     "1838": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "#        if mandarin==3:\n#            mandarin=0",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/dropThatBass/taiChi.py:56-57"
     },
     "1839": {
-        "file_id": 304,
+        "file_id": 303,
         "content": "This code sets the value of 'mandarin' to 0 if it is equal to 3, possibly for resetting or controlling its state within the program.",
         "type": "comment"
     },
     "1840": {
-        "file_id": 305,
+        "file_id": 304,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/frightning.py",
         "type": "filepath"
     },
     "1841": {
-        "file_id": 305,
+        "file_id": 304,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "summary"
     },
     "1842": {
-        "file_id": 305,
+        "file_id": 304,
         "content": "# fully trustworthy partial trustworthy complete nonsense\n# return a list instead.\nimport re\n\"\"\"\nliteral=\"2 3 42 3 451 2 3 4 5 62 3 45 2 3 45\"\nanus0=\"2 3 4\"\n#def testStone(major,minor,jerkOff):\n\"\"\"\ndef testTube(nb,anus):\n#    fuck=re.findall(r'[0-9]{}?[0-9]|?[0-9]{}[0-9]'.format(anus,anus,anus),nb)\n    fuck=[m.start() for m in re.finditer(anus,nb)]\n    fuckme=[len(nb),len(anus)]\n    bitch=[]\n    for wifu in fuck:\n        if wifu==0:\n            if nb[wifu+fuckme[1]]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        elif wifu+fuckme[1]==fuckme[0]:\n            if nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n        else:\n            if nb[wifu+fuckme[1]]==\" \" and nb[wifu-1]==\" \":\n                bitch.append(wifu)\n            else:\n                pass\n    return bitch\n    #print(fuck)\n\"\"\"\nprint(literal)\nprint(\"--spliter--\")\nprint(testTube(literal,anus0))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/frightning.py:1-38"
     },
     "1843": {
-        "file_id": 305,
+        "file_id": 304,
         "content": "The code is defining a function `testTube()` that takes a string `nb` and an integer `anus` as input. It uses regular expressions (re module) to find the positions where the number `anus` appears in the string, and then checks if it is surrounded by spaces. If it is, the position is added to a list which is returned as the output. The code also includes some comments and example usage with hardcoded values.",
         "type": "comment"
     },
     "1844": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua",
         "type": "filepath"
     },
     "1845": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "This code contains Lua functions for list processing, likely used in a game or simulation, with potential conditional logic and array manipulation. The output implies possible hostile intent or malicious behavior by printing a threatening message and executing 'verify(rape0)' function.",
         "type": "summary"
     },
     "1846": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "-- cutting method: check with differential?\n-- check with integral?\n-- hope you like math haha...\nfunction round(float)\n    return math.floor(float + .5)\nend\nfunction range(from, to, step)\n  step = step or 1\n  return function(_, lastvalue)\n    local nextvalue = lastvalue + step\n    if step > 0 and nextvalue <= to or step < 0 and nextvalue >= to or\n       step == 0\n    then\n      return nextvalue\n    end\n  end, nil, from - step\nend\nfunction ct(ax,b)\n\tlocal s=0\n\tfor a,k in ipairs(ax) do\n\t\tif k == b then\n\t\t\ts=s+1\n\t\tend\n\tend\n\treturn s\nend\nfunction verify(list0)\n\tlocal t2 = list0[1]\n\tlocal Count = ct(list0,t2)\n\tif Count == #list0 then\n\t\treturn true\n\telse\n\t\treturn false\n\tend\nend\nfunction takeAct(list0)\n\tlocal mk = {}\n\tlocal mv = #list0-1\n\t-- greater than one\n\tfor vk in range(1, mv,1) do\n\t\tmk[#mk+1]=list0[vk+1]-list0[vk]\n\tend\n\treturn mk\nend\nfunction takeOver(list0,stacks)\n\tlocal blowJob = false\n\tif #list0>1 and verify(list0) == true then\n\t\tblowJob = true\n--\t\tprint(\"mark I\")\n--\t\tprint(blowJob)\n--[[\t\tprint(stacks)\n\t\tfor np,mp in ipairs(stacks) do",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua:1-58"
     },
     "1847": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "This code defines several Lua functions related to range, counting, and manipulating lists. It uses mathematical concepts such as rounding, range iteration, and list verification. The main purpose appears to involve processing a list of values, potentially for sorting or filtering purposes.",
         "type": "comment"
     },
     "1848": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "\t\t\tprint(mp)\n\t\t\tfor nvk, mvk in ipairs(mp) do\n\t\t\t\tprint(mvk)\n\t\t\tend\n\t\tend]]\n--\t\tfury={blowJob,stacks}\n\t\treturn blowJob,stacks\n--\t\tprint(blowjob)\n\telseif #stacks ==1 then\n--\t\tprint(\"mark II\")\n\t\treturn blowJob,stacks\n\telse\n\t\tmvp = takeAct(list0)\n\t\tstacks[#stacks+1]=mvp\n--[[\t\tfor np,mp in ipairs(mvp) do\n\t\t\tprint(mp)\n\t\tend]]\n\t\treturn takeOver(mvp,stacks)\n\tend\nend\nnuke={}\nfor vm,argv in ipairs(arg) do\n\tnuke[#nuke+1]=round(argv)\nend\n--bank=takeOver(nuke,{})\nprt,wrt=takeOver(nuke,{})\nprint(prt)\n--print(wrt)\nfor rk,rn in ipairs(wrt) do\n--\tprint(rk,rn)\n--\tprint(\"--spliter--\")\n\tfor rad, run in ipairs(rn) do\n\t\tif rad<#rn then\n\t\t\tio.write(run..\" \")\n\t\telse\n\t\t\tprint(run)\n\t\tend\n\tend\nend\n-- greater than two.\n--[[for so,sive in ipairs(takeAct(nuke)) do\n\tprint(so,sive)\nend]]\n-- stop it. do it in python.\n-- yeah.\n--[[\nrape={1,1,1,1,1}\nprint(verify(rape))\nrape0={1,2,1,1,1,1}\n-- no direct approach.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua:59-109"
     },
     "1849": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "The code appears to contain several functions with conditional logic and array manipulation, likely for a game or simulation. It utilizes loops, conditional statements, and function calls to perform actions based on various inputs and conditions. The comments within the code provide some insight into its functionality but are sparse and could benefit from more clarity and context.",
         "type": "comment"
     },
     "1850": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "-- consider partial or grouping or putting into a range\nprint('-i will rape you-')\nprint(verify(rape0))]]\n-- hell",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/geniusWalk.lua:110-113"
     },
     "1851": {
-        "file_id": 306,
+        "file_id": 305,
         "content": "This code appears to print a threatening message, followed by the output of a function 'verify(rape0)'. The code suggests a potential hostile intent or malicious behavior.",
         "type": "comment"
     },
     "1852": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py",
         "type": "filepath"
     },
     "1853": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "The code uses difflib to find similar words and filters a list based on specific patterns. It splits the string, compares them, processes blocks, and creates a list of unique words with patience values. The function `same_fuck` is defined and likely serves as a placeholder or joke.",
         "type": "summary"
     },
     "1854": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "import difflib\nimport re\nfrom frightning import testTube\n\"\"\"\na, b = \"same order words\", \"not same but order words matched\"\nthug=[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]\nprint(thug)\"\"\"\n# i don't give a shit about time complexity.\n\"\"\"\ndef fuckall(list0):\n    asshole=list0[:-1]\n    bitch=[]\n    for dick in range(len(list0)-1):\n        jerk=list0[dick]\n        if asshole[dick]!=(jerk+1):\n            bitch.append(jerk)\n        else:\n            pass\n    marker=list0[-1]\n    #print(bitch)\n    if marker!=(bitch[-1]+1):\n        bitch.append(marker)\n    else:\n        pass\n#    for x in range(2):\n        #masochist=bitch[-(2-x)]\n    for x in range(2):\n        # loop it twice\n        if not bitch[-1]<len(list0):\n#            if x==0:\n                del bitch[-1]\n        else:\n            pass\n    if (bitch[-2]+1)==bitch[-1]:\n        del bitch[-1]\n    else:\n        pass\n    return bitch\n\"\"\"\ndef same_fuck(superstring):\n    gnu=[]\n#    print(superstring)\n    # standard spliter here is the space char.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:1-44"
     },
     "1855": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "This code is using the difflib module to find words that appear in the same order but not necessarily at the same index between two strings. It also includes a function \"fuckall\" which filters a list, removing elements unless they are consecutive and follow a specific pattern. The \"same_fuck\" function takes a superstring as input and processes it further.",
         "type": "comment"
     },
     "1856": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "    fuck=[pos for pos, char in enumerate(superstring) if (char == \" \" and (superstring[(pos+1 if (pos<len(superstring)-1) else pos-1)]!=\"1\" or superstring[(pos-1 if (pos>0) else pos+1)]!=\"1\")) ]\n#    print(fuck)\n    # you could make something overlappy.\n    # no dude you are kidding me.\n    # swipe off the corner!\n    # this might be the source of the efficiency problem.\n    for k in fuck:\n        a, b = superstring[k+1:],superstring[:k]\n#        print([a,b])\n        thug=list(filter((lambda x:x!=' '),[a[i:i+n] for i, _, n in difflib.SequenceMatcher(None, a, b).get_matching_blocks() if n]))\n        gnu+=list(map((lambda x: re.sub(\"^ \",\"\",re.sub(\" $\",\"\",x))),thug))\n#    bsd=list(set(gnu))\n#    cp=len(bsd)\n#    analsex=[[]]*cp\n#    for x in range(cp):\n#        anus=bsd[x]\n#        analsex[x]=[anus,gnu.count(anus)]\n#    print(analsex)\n    patience=list(filter((lambda x:len(x[1])>1),list(map((lambda x:[x,testTube(superstring,x)]),sorted(list(set(gnu)),key=(lambda x:-len(x)))))))\n    aladin=[sorted(patience,key=(lambda x:-len(x[1]))),patience]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:45-64"
     },
     "1857": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "The code defines a list called \"fuck\" that contains positions in the string where there are consecutive spaces without \"1\" before or after them. It then splits the original string into two parts at these positions, compares them using difflib's SequenceMatcher and filters the matching blocks to only include non-space characters. These blocks are further processed by removing leading/trailing spaces and adding to a list called \"gnu\". The code then calculates the patience value for each unique word in \"gnu\" by counting occurrences and filtering out short words, resulting in a final list called \"patience\".",
         "type": "comment"
     },
     "1858": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "    return aladin\n\"\"\"shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nprint(same_fuck(shit))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:65-67"
     },
     "1859": {
-        "file_id": 307,
+        "file_id": 306,
         "content": "This code snippet defines a function `same_fuck` which takes an argument and returns it. It also includes a print statement that calls this function with the string \"hell yeah i am back\" and then prints its return value. The code is likely a placeholder or a joke, as there seems to be no meaningful computational operation happening in the given code snippet.",
         "type": "comment"
     },
     "1860": {
-        "file_id": 308,
+        "file_id": 307,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py",
         "type": "filepath"
     },
     "1861": {
-        "file_id": 308,
+        "file_id": 307,
         "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
         "type": "summary"
     },
     "1862": {
-        "file_id": 308,
+        "file_id": 307,
         "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py:1-20"
     },
     "1863": {
-        "file_id": 308,
+        "file_id": 307,
         "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
         "type": "comment"
     },
     "1864": {
-        "file_id": 309,
+        "file_id": 308,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/preserveOrder.py",
         "type": "filepath"
     },
     "1865": {
-        "file_id": 309,
+        "file_id": 308,
         "content": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
         "type": "summary"
     },
     "1866": {
-        "file_id": 309,
+        "file_id": 308,
         "content": "def f7(seq):\n    seen = set()\n    seen_add = seen.add\n    return [x for x in seq if not (x in seen or seen_add(x))]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/preserveOrder.py:1-4"
     },
     "1867": {
-        "file_id": 309,
+        "file_id": 308,
         "content": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
         "type": "comment"
     },
     "1868": {
-        "file_id": 310,
+        "file_id": 309,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/scientology.py",
         "type": "filepath"
     },
     "1869": {
-        "file_id": 310,
+        "file_id": 309,
         "content": "The code loads data from pickle files, compares it with a text file and appends coordinates to a list. It gathers information from a dictionary called 'fuckme' based on shared values and prints self-similarity analysis results. Improper naming and indentation make understanding the code difficult.",
         "type": "summary"
     },
     "1870": {
-        "file_id": 310,
+        "file_id": 309,
         "content": "import pickle\nfrom lolita import fury\nfrom shakeThatBooty import neuron\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x if x[-1]==\"\\n\" else x+\"\\n\")\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/scientology.py:1-40"
     },
     "1871": {
-        "file_id": 310,
+        "file_id": 309,
         "content": "This code loads data from multiple pickle files and performs a comparison between the contents of a text file and a list. It then appends coordinates to a list of lists based on matching elements, potentially for further processing or analysis.",
         "type": "comment"
     },
     "1872": {
-        "file_id": 310,
+        "file_id": 309,
         "content": "                else:\n                    pass\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(dizzy)\n    for kids in range(len(dizzy)):\n        royal=dizzy[kids]\n        print(shit0[royal])\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(neuron(greatWall(shit0[jokes+royal])))\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/scientology.py:41-65"
     },
     "1873": {
-        "file_id": 310,
+        "file_id": 309,
         "content": "The code appears to gather information from a dictionary called 'fuckme' based on shared values in its keys 0 and 1. It then prints the information related to each shared value, and uses a nested loop to print additional information for each pair of consecutive shared values. The code seems focused on self-similarity, possibly for data analysis or exploration purposes. However, it lacks proper variable naming and indentation, making it difficult to understand without prior context.",
         "type": "comment"
     },
     "1874": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py",
         "type": "filepath"
     },
     "1875": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "The code imports functions, defines lambdas, and processes data. It filters messages based on age, performs actions, generates 'crystal' from conditions, compares sorted lists, handles errors, and appends results to 'bitchSureDie'.",
         "type": "summary"
     },
     "1876": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "#shade0=\"     set: А, а, Б, б, В, в, Г, г, Ґ, ґ, Д, д, Е, е, Є, є, Ж, ж, З, з, И, и, І, і, Ї, ї, Й, й, К, к, Л, л, М, м, Н, н, О, о, П, п, Р, р, С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, Ч, ч, Ш, ш, Щ, щ, Ь, ь, Ю, ю, Я, я\"\nimport os\nfrom keepMeSatisfied import same_fuck\nfrom discoveryChannel import notorious\nfrom sonyWalkman import panasonic\nfrom preserveOrder import f7\nfrom alphaGel import amplifier, verizon0, verizon1, utilize\nfrom taiChi import Magisk\n#from statistics import mean\nsimilar=(lambda x,y: True if (x/y > 1/2 and x/y < 2) else False)\nbadAss=(lambda y:list(map((lambda x:int(x)),y)))\nshaver=(lambda z: True if z==0 else False)\ndef nuke(s):\n    v=0\n    v2=0\n    for v0 in s:\n#        for v1 in range(2):\n        k0=1+0.5*(-1)**v2\n        if v0[0]==True:\n            v+=1.5*k0\n            if v0[1]==True and v2<=1:\n                return 2*len(s)\n        elif v0[1]==True:\n            v+=0.5*k0\n        v2+=1\n#            else:\n#                pass\n    return v\ndef neuron(shade):\n#    horror=list(shade)\n    crystal=[]\n    dishFish=Magisk(shade)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py:1-36"
     },
     "1877": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "The code imports several functions and libraries, defines a lambda function for similarity comparison, and two lambda functions for boolean evaluation. It also includes a nuke function that iterates over a sequence of True/False pairs, calculating a value based on the input, and a neuron function that processes a given \"shade\" (a list of characters). The specific functionality or purpose is not clear without further context.",
         "type": "comment"
     },
     "1878": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "#    if len(horror)>rk:\n#        for r,k in enumerate(horror):\n    for k in dishFish:\n#            if r>rk and r%3==rho:\n        crystal.append([chr(k),k])\n#    else:\n#        pass\n            # use the index only.\n    jerkMeOff=list(map((lambda x:x[1]),crystal))\n    fuckme0=f7(jerkMeOff)\n    quickFuck=(True if fuckme0==jerkMeOff else False)\n    pureApk=[len(fuckme0)]\n    pureApk.append(shaver(pureApk[0]%2))\n    print(\"-- fuckme --\")\n    print(fuckme0)\n    print(\"-- fuckme --\")\n    # to purify the input.\n    fuckme=[fuckme0]\n    if len(fuckme[0])>2:\n        incline=sorted(fuckme[0])\n        decline=[True,False]\n        CykaBlyat=0\n        for decease in range(len(incline)):\n            if incline[decease]==fuckme[0][decease]:\n                pass\n            else:\n                decline[0]=False\n                break\n        if decline[0]==False:\n            fuckme.append(incline)\n            print(\"NOT THE SAME\\nNOT THE SAME\")\n        else:\n            CykaBlyat+=1\n            print(\"THE SAME\\nTHE SAME\")\n        print(\"\\n---reality---\\n---reality---\\n---reality---\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py:37-71"
     },
     "1879": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "This code appears to be performing data processing and comparison operations. It's generating a list called 'crystal' which contains character and index pairs based on certain conditions. Then it filters the list 'crystal' to only include the indices, creates another list 'jerkMeOff', performs some calculations on 'jerkMeOff' to create 'quickFuck', and purifies the input data in 'fuckme'. The code then checks if the length of 'fuckme[0]' is greater than 2 and compares it with another sorted list of values. If they are different, it appends the sorted list to 'fuckme' and prints \"NOT THE SAME\". If they are the same, it increments a counter called 'CykaBlyat' and prints \"THE SAME\". Finally, it prints three lines with \"- reality -\" for clarity.",
         "type": "comment"
     },
     "1880": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "        bitchSureDie=[]\n        for bitchEternity in fuckme:\n            init=\"lua geniusWalk.lua\"\n#            CykaBlyat=0\n            for fuckall in bitchEternity:\n                init+=\" \"+str(fuckall)\n#        print(init)\n#    print(fuckme)\n            myCmd0 = os.popen(init)\n            myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))\n        #myCmd[1]=list(map((lambda x:int(x)),myCmd[1]))\n            dickHead=badAss(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n            if myCmd[0]=='false':\n#                decline[1]=False\n                absoluteDuo=amplifier(decline)\n                print(\"--suck my dick--\")\n        #for knob in myCmd:\n                fake=same_fuck(myCmd[1])\n                print(fake)\n                try:\n                    jk=verizon0(absoluteDuo,fake,pureApk)\n                    print(\"HOLY SHIT\\nHOLY SHIT\")\n                    print(jk)\n                    bitchSureDie.append(jk)\n                except:\n                    print(\"SECOND FUCK\\nSECOND FUCK\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py:72-98"
     },
     "1881": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "The code appears to be processing information from a file, 'geniusWalk.lua', for each element in the 'fuckme' list. It executes commands and filters the output. If the first command result is 'false', it declines, otherwise it appends some information to 'bitchSureDie'. The code seems to have error handling and prints various messages throughout execution.",
         "type": "comment"
     },
     "1882": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "                print(\"--people eater--\")\n                KarlMarx=notorious(dickHead)\n                print(KarlMarx)\n                decline[1]=True\n                if CykaBlyat==1:\n                    print(\"-- cyka blyat --\")\n                    Souviet=list(filter((lambda x: x[0]==1),KarlMarx))[0][1]\n                    Moscow=list(range(len(bitchEternity)))\n                    navyTight=panasonic(Moscow,Souviet)\n#                    wavyTight=aka(Moscow,Souviet,navyTight)\n# related to the exact shit.\n                    Bruises=(lambda x: bitchEternity[x])\n                    Tokyo=(lambda x: [Bruises(x[0]),Bruises(x[1])])\n                    shakeThatBooty0=[list(map(Tokyo,Souviet)),list(map(Bruises,navyTight))]\n                    print(shakeThatBooty0)\n                    try:\n                        shakeIt=verizon1(shakeThatBooty0,pureApk)\n                        bitchSureDie.append(shakeIt)\n                        print(\"NAVY TIGHT\\nNAVY TIGHT\")\n                        print(shakeIt)\n                    except:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py:99-119"
     },
     "1883": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "The code appears to be filtering and processing data related to a list called 'bitchEternity'. It applies various functions to the data, including lambda functions. The result is stored in 'shakeThatBooty0' and then passed into 'verizon1' function to generate 'shakeIt', which is appended to 'bitchSureDie'. If an exception occurs during this process, it prints \"NAVY TIGHT\\nNAVY TIGHT\" and the exception itself.",
         "type": "comment"
     },
     "1884": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "                        print(\"FIRST FUCK\\nFIRST FUCK\")\n                    print(\"-- cyka blyat --\")\n                else:\n                    CykaBlyat+=1\n            elif len(list(filter((lambda x: x==1),dickHead)))>=1:\n                # for those with simple alignments.\n                # check if difference is one\n                print(\"-- bitch sure die --\")\n                soul=bitchEternity[0]\n                print([soul,soul-1+len(bitchEternity)])\n                print(\"-- bitch sure die --\")\n            else:\n                print(\"SAME DISTANCE BUT NOT EWUAL TO IDENTITY\\nSAME DISTANCE BUT NOT EQUAL TO IDENTITY\")\n            myCmd0.close()\n            print(\"--spilter--\")\n#            counter+=1\n            for mv in myCmd:\n                print(mv)\n            print(\"--spliter--\")\n        try:\n            print(\"--mississippi--\")\n            print(bitchSureDie)\n#            print(dickHead)\n            print(\"--mississippi--\")\n            if len(bitchSureDie)>1:\n                instinct=utilize(similar(nuke(bitchSureDie),len(bitchSureDie)*2),quickFuck,crystal)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py:120-145"
     },
     "1885": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "This code checks for different conditions and prints relevant messages. It uses filter functions, lambda expressions, and other operations to determine the output. If a specific condition is met, it will print a message and continue with further actions such as looping through other variables or trying another block of code.",
         "type": "comment"
     },
     "1886": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "                print(instinct)\n                print(\"-- CALL OF WILD --\\n-- CALL OF WILD --\")\n            else:\n                print(\"-- TOO YOUNG TO GET FUCKED --\\n-- TOO YOUNG TO GET FUCKED --\") \n        except:\n            print(\"UNFUCKABLE\\nUNFUCKABLE\")\n    else:\n        pass\n    return crystal\n#print(neuron(shade0,9,1))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/shakeThatBooty.py:146-156"
     },
     "1887": {
-        "file_id": 311,
+        "file_id": 310,
         "content": "This code checks the age of a user and provides different messages based on that. If the user is old enough, it prints \"CALL OF WILD\". If the user is too young, it prints \"TOO YOUNG TO GET FUCKED\". If an error occurs, it prints \"UNFUCKABLE\". Otherwise, it does nothing and returns a variable called crystal.",
         "type": "comment"
     },
     "1888": {
-        "file_id": 312,
+        "file_id": 311,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/sonyWalkman.py",
         "type": "filepath"
     },
     "1889": {
-        "file_id": 312,
+        "file_id": 311,
         "content": "The code defines a function `panasonic` that filters an input list based on another list's range, and returns the filtered list. It then calls this function within the `aka` function, which also filters two input lists and returns them as separate lists. The code includes sample test inputs to demonstrate the usage of the functions.",
         "type": "summary"
     },
     "1890": {
-        "file_id": 312,
+        "file_id": 311,
         "content": "def panasonic(a,b):\n#    for c in b:\n    if (len(b)==0 or len(a)==0):\n        return a\n    else:\n#        d=[]\n#        for c in a:\n#        print(b)\n#        e=list(filter((lambda x:(x>=b[0][0] and x<= b[0][1])),a))\n#        c+=e\n        return panasonic(list(filter((lambda x:(x<b[0][0] or x>b[0][1])),a)),b[1:])\ndef aka(m,s,e):\n    geek=list(filter((lambda v: v not in e),panasonic(m,s)))\n    return [list(filter((lambda y: y not in geek),m)),geek]\n\"\"\"\ntest=[1,2,4,5,6,7]\nbest=[[1,2],[6,9]]\nexception=[4]\nprint(test)\nprint(best)\nprint(aka(test,best,exception))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/sonyWalkman.py:1-22"
     },
     "1891": {
-        "file_id": 312,
+        "file_id": 311,
         "content": "The code defines a function `panasonic` that filters an input list based on another list's range, and returns the filtered list. It then calls this function within the `aka` function, which also filters two input lists and returns them as separate lists. The code includes sample test inputs to demonstrate the usage of the functions.",
         "type": "comment"
     },
     "1892": {
-        "file_id": 313,
+        "file_id": 312,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/spliter.py",
         "type": "filepath"
     },
     "1893": {
-        "file_id": 313,
+        "file_id": 312,
         "content": "The code defines a function \"skimmer\" that identifies consecutive occurrences of a specific element in a given list, and another function \"notorious\" which takes a list, finds unique elements, and applies the skimmer function to those elements. It then prints the length of the input list and the output of the notorious function. The code appears to be performing data manipulation on lists with unique elements.",
         "type": "summary"
     },
     "1894": {
-        "file_id": 313,
+        "file_id": 312,
         "content": "text=[1,1,1,2,2,2,3,2,3,3,2,2,2,1,1,1]\ndef skimmer(a,b):\n    signal=False\n    c=[]\n    for diss in range(len(a)):\n        if a[diss]==b:\n            if signal==False:\n                c.append([diss,diss+1])\n                signal=True\n            else:\n                c[-1][1]=diss+1\n        else:\n            signal=False\n    return c\ndef notorious(exam):\n    exam0=list(set(exam))\n    exam1=[]\n    for k in exam0:\n        exam1.append([k,skimmer(exam,k)])\n    return exam1\nprint(len(text))\nprint(notorious(text))\n#print(\"--spliter--\")\n#print(exam1)\n#for k in range(len(exam)):\n#    if k!=len(exam)-1:\n#        if exam[k]==exam[k+1]:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/spliter.py:1-30"
     },
     "1895": {
-        "file_id": 313,
+        "file_id": 312,
         "content": "The code defines a function \"skimmer\" that identifies consecutive occurrences of a specific element in a given list, and another function \"notorious\" which takes a list, finds unique elements, and applies the skimmer function to those elements. It then prints the length of the input list and the output of the notorious function. The code appears to be performing data manipulation on lists with unique elements.",
         "type": "comment"
     },
     "1896": {
-        "file_id": 314,
+        "file_id": 313,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py",
         "type": "filepath"
     },
     "1897": {
-        "file_id": 314,
+        "file_id": 313,
         "content": "This code defines a function `Magisk` that processes text data using regular expressions and extracts character codes from \"alphabets.txt\". It also prints the name and value of variable \"kn\" based on mandarin, with a cycling counter.",
         "type": "summary"
     },
     "1898": {
-        "file_id": 314,
+        "file_id": 313,
         "content": "import re\ndef Magisk(erectile):\n    stringSet=[\"set:\",[\"[\",\"]\"]]\n#standAlone=(lambda x: list(filter((lambda y: y!=\"\"), list(map((lambda z: z[1] if len(z) <=3 else re.match(r\"\\d+\").group(0)),x)) )))\n#ky0=(lambda k:k if k[-1]!=\" \" else k[:-1])\n#ky=(lambda k:ky0(k) if k[0]!=\" \" else k[1:])\n    wrap=(lambda x: [ord(x0) for x0 in list(x)])\n    standAlone1=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\",\"))))\n    def standAlone2(a,b):\n        b0=b\n#        print(\"FUCK\\nFUCK\")\n#        print(a)\n        for a0 in a:\n            if a0!=\"\":\n                b0=b0.replace(a0,chr(int(re.findall(r\"\\d+\",a0)[0])))\n            else:\n                pass\n#        print(\"SHIT\\nSHIT\")\n#        print(b0)\n        return b0\n    standAlone=(lambda y: standAlone1(standAlone2(re.findall(r\"{}\\d+;\".format(re.escape(\"&#\")),y),y)))\n#standAlone0=(lambda x: list(filter((lambda y:y!=\"\"),x.split(\", \"))))\n#standAlone=(lambda x: standAlone1(x) if standAlone1(x).count(sorted(set(standAlone1(x)),key=(lambda y: standAlone1(x).count(y)))[0]) <3 else standAlone0(x))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/taiChi.py:1-23"
     },
     "1899": {
-        "file_id": 314,
+        "file_id": 313,
         "content": "The code defines a function `Magisk` that takes a string and performs some transformations on it. It uses regular expressions, list manipulations, and character encoding/decoding operations. The purpose seems to be related to text processing or data manipulation in a specific context.",
         "type": "comment"
     }

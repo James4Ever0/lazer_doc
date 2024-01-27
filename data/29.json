@@ -1,537 +1,537 @@
 {
     "2900": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "    return aladin\n\"\"\"shit=\"hell yeah i am back. oh yeah i am kidding . just kkkk   k \"\nprint(same_fuck(shit))\"\"\"",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/keepMeSatisfied.py:65-67"
     },
     "2901": {
-        "file_id": 495,
+        "file_id": 494,
         "content": "This code snippet defines a function `same_fuck` which takes an argument and returns it. It also includes a print statement that calls this function with the string \"hell yeah i am back\" and then prints its return value. The code is likely a placeholder or a joke, as there seems to be no meaningful computational operation happening in the given code snippet.",
         "type": "comment"
     },
     "2902": {
-        "file_id": 496,
+        "file_id": 495,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/lolita.py",
         "type": "filepath"
     },
     "2903": {
-        "file_id": 496,
+        "file_id": 495,
         "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
         "type": "summary"
     },
     "2904": {
-        "file_id": 496,
+        "file_id": 495,
         "content": "import re\n# four version.\n#shit=\"Aaaaaaargh fuck!\"\n# shall use multiline support.\n# shall escape things.\ndef fury(numb,shit):\n#    numb0=numb\n    shake=(lambda x: re.escape(x))\n    nope0=[\"^\",\"$\",\".{1,}\"]\n    mobile=(lambda nope,shit0: list(re.findall(r'{}'.format(nope),shit0)))\n    joke=(lambda y: True if len(y)>0 else False)\n    font=nope0[0]\n    font0=nope0[1]\n    if numb[1]==False:\n        font+=nope0[2]\n    if numb[2]==False:\n        font0=(nope0[2]+font0)\n    fake=mobile(font+shake(numb[0])+font0,shit)\n    return joke(fake)\n#print(mobile)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/lolita.py:1-20"
     },
     "2905": {
-        "file_id": 496,
+        "file_id": 495,
         "content": "The code imports the 're' module and defines a function called 'fury'. This function takes two arguments, 'numb' and 'shit', which are likely to be used in regular expression matching. It also uses a lambda function to escape certain characters and applies multiline support. The function then checks if certain conditions are met before applying the regular expression matching logic using the 'mobile' and 'joke' functions, finally returning either True or False based on the result of the search.",
         "type": "comment"
     },
     "2906": {
-        "file_id": 497,
+        "file_id": 496,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeAnother.py",
         "type": "filepath"
     },
     "2907": {
-        "file_id": 497,
+        "file_id": 496,
         "content": "The code creates a SQLite database with a table for storing character groups, ensuring uniqueness by constraint on the charGroup column. The code also mentions the need to handle intermediate data before inserting it into a graph database and discussing label relationships in one-directional order. It questions whether labels should be placed in an array or distinguished based on alphabetical order.",
         "type": "summary"
     },
     "2908": {
-        "file_id": 497,
+        "file_id": 496,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE firstAssignment (\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeAnother.py:1-18"
     },
     "2909": {
-        "file_id": 497,
+        "file_id": 496,
         "content": "The code creates a SQLite database with a table for storing character groups, ensuring uniqueness by constraint on the charGroup column. The code also mentions the need to handle intermediate data before inserting it into a graph database and discussing label relationships in one-directional order. It questions whether labels should be placed in an array or distinguished based on alphabetical order.",
         "type": "comment"
     },
     "2910": {
-        "file_id": 498,
+        "file_id": 497,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeDatabase.py",
         "type": "filepath"
     },
     "2911": {
-        "file_id": 498,
+        "file_id": 497,
         "content": "The code connects to a SQLite database, creates a table named \"subdue\", and executes the necessary commands to establish a unique constraint based on column values. The purpose of this table seems related to handling alphabetical order and case relationships in an undetermined context. It suggests that labels can have relationships too but doesn't elaborate on it. The code raises questions about label distinction, inserting random stuff first or maintaining the relationship, without providing clear directions or solutions.",
         "type": "summary"
     },
     "2912": {
-        "file_id": 498,
+        "file_id": 497,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE subdue (startId INT NOT NULL,\n startType TEXT NOT NULL,\n endId INT NOT NULL,\n endType TEXT NOT NULL,\n relationType TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (startId ASC, startType ASC, endId ASC, endType ASC, relationType ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeDatabase.py:1-21"
     },
     "2913": {
-        "file_id": 498,
+        "file_id": 497,
         "content": "The code connects to a SQLite database, creates a table named \"subdue\", and executes the necessary commands to establish a unique constraint based on column values. The purpose of this table seems related to handling alphabetical order and case relationships in an undetermined context. It suggests that labels can have relationships too but doesn't elaborate on it. The code raises questions about label distinction, inserting random stuff first or maintaining the relationship, without providing clear directions or solutions.",
         "type": "comment"
     },
     "2914": {
-        "file_id": 499,
+        "file_id": 498,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeGroupingDatabase.py",
         "type": "filepath"
     },
     "2915": {
-        "file_id": 499,
+        "file_id": 498,
         "content": "This code creates a SQLite database table for grouping characters based on their main ID and character group, with a unique constraint on the combination of both. The alphabetical order and case relationship are one-directional, and labels can have relationships as well. However, it's unclear whether all labels should be placed in an array or if they should be distinguished.",
         "type": "summary"
     },
     "2916": {
-        "file_id": 499,
+        "file_id": 498,
         "content": "import sqlite3\nconn=sqlite3.connect(\"fuckyou.db\")\n# R U SURE IT IS GOOD TO HAVE SUCH A JOB?\n# FUCK IT.\nsql='''CREATE TABLE groupAllChars (mainId INT NOT NULL,\n charGroup TEXT NOT NULL,\nCONSTRAINT rule UNIQUE (mainId ASC, charGroup ASC)\n );'''\nconn.execute(sql)\nconn.commit()\nconn.close()\n# you have to let some intermediate things going through before putting the data into the fucking graph database.\n# alphabetical order, case relationship are all one-directional.\n# the lables can have relationships too.\n# but what is the difference here? shall we check something as not usable?\n# just by putting all labels into an array? shall we distinguish them?\n# i mean at least wee have the alphabetical order.\n# insert random stuff first? or just make sure the relationship is kept?",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/makeGroupingDatabase.py:1-18"
     },
     "2917": {
-        "file_id": 499,
+        "file_id": 498,
         "content": "This code creates a SQLite database table for grouping characters based on their main ID and character group, with a unique constraint on the combination of both. The alphabetical order and case relationship are one-directional, and labels can have relationships as well. However, it's unclear whether all labels should be placed in an array or if they should be distinguished.",
         "type": "comment"
     },
     "2918": {
-        "file_id": 500,
+        "file_id": 499,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/newTest.py",
         "type": "filepath"
     },
     "2919": {
-        "file_id": 500,
+        "file_id": 499,
         "content": "The code imports functions from other modules, defines a function 'forMotherRussia' that takes in arguments and prints them before returning the result of another function, then calls this function with different arguments in print statements.",
         "type": "summary"
     },
     "2920": {
-        "file_id": 500,
+        "file_id": 499,
         "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickle import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n    print(shitFuck)\n    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    executeCode(forMotherRussia(numToKill,superRats))\n# fucking pricks.\nprint(forMotherRussia(0,[1,\"asia\",2,\"fuck\",\"shit\"]))\nprint(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/newTest.py:1-17"
     },
     "2921": {
-        "file_id": 500,
+        "file_id": 499,
         "content": "The code imports functions from other modules, defines a function 'forMotherRussia' that takes in arguments and prints them before returning the result of another function, then calls this function with different arguments in print statements.",
         "type": "comment"
     },
     "2922": {
-        "file_id": 501,
+        "file_id": 500,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/newTestR.py",
         "type": "filepath"
     },
     "2923": {
-        "file_id": 501,
+        "file_id": 500,
         "content": "This code imports functions from other modules, defines a function `forMotherRussia` that takes input and returns the result of `finalPro`, and then executes `forMotherRussia` using `executeCode`. The code includes comments expressing frustration and uncommented print statements for testing.",
         "type": "summary"
     },
     "2924": {
-        "file_id": 501,
+        "file_id": 500,
         "content": "# fucking shit.\n# [['subdue', ['startId', 'startType', 'endId', 'endType', 'relationType']], ['groupAllChars', ['mainId', 'charGroup']], ['firstAssignment', ['charGroup']]]\nfrom getFromPickle import returnAList\nfrom term0 import executeCode\nfrom constructor import finalPro\nfuckYou = returnAList()\ndef forMotherRussia(numToKill,superRats):\n    shitFuck=fuckYou[numToKill]\n#    print(shitFuck)\n#    print(superRats)\n    return finalPro(shitFuck,superRats)\ndef toyProject(numToKill,superRats):\n    executeCode(forMotherRussia(numToKill,superRats))\n# fucking pricks.\n'''print(forMotherRussia(0,[1,\"asia\",2,\"fuck\",\"shit\"]))\nprint(forMotherRussia(1,[23,\"fuck\"]))\nprint(forMotherRussia(2,[\"fuckA_SUV\"]))'''",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/newTestR.py:1-17"
     },
     "2925": {
-        "file_id": 501,
+        "file_id": 500,
         "content": "This code imports functions from other modules, defines a function `forMotherRussia` that takes input and returns the result of `finalPro`, and then executes `forMotherRussia` using `executeCode`. The code includes comments expressing frustration and uncommented print statements for testing.",
         "type": "comment"
     },
     "2926": {
-        "file_id": 502,
+        "file_id": 501,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/preserveOrder.py",
         "type": "filepath"
     },
     "2927": {
-        "file_id": 502,
+        "file_id": 501,
         "content": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
         "type": "summary"
     },
     "2928": {
-        "file_id": 502,
+        "file_id": 501,
         "content": "def f7(seq):\n    seen = set()\n    seen_add = seen.add\n    return [x for x in seq if not (x in seen or seen_add(x))]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/communism/preserveOrder.py:1-4"
     },
     "2929": {
-        "file_id": 502,
+        "file_id": 501,
         "content": "Function `f7` takes a sequence, stores its elements in a set for checking duplicates, then returns the elements not previously seen. Uses set's `add` method to avoid time-consuming checks and optimizes lookup time for duplicate detection.",
         "type": "comment"
     },
     "2930": {
-        "file_id": 503,
+        "file_id": 502,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/readMeta.py",
         "type": "filepath"
     },
     "2931": {
-        "file_id": 503,
+        "file_id": 502,
         "content": "The code reads an error log, identifies a missing file using regex, generates candidate files, applies diffTool to compare with the extracted file name, sorts and prints the top candidates.",
         "type": "summary"
     },
     "2932": {
-        "file_id": 503,
+        "file_id": 502,
         "content": "import re\nfrom getCorrectList import letIt\nfrom diffTool import diff\n# the so-called functional programming is like a fancy shit for me.\n# but that's another story.\n# with presumption\n# only solve local file notfound error.\n# you can use difflib if you wish\n# also the set, order, keyboard group theory\nwith open(\"errorLog.log\",\"r\") as fuck:\n    fuckMe=list(filter((lambda x : x!= \"\") , fuck.read().split(\"\\n\")))[-4:]\n    bird=list(enumerate(fuckMe))\n    print(bird)\n    nameOfSubject=fuckMe[1]\n    lineOfTrouble=fuckMe[2]\n    errorCode=fuckMe[3]\n    extractName=re.findall(r'File \"[^\"]+',nameOfSubject)[0][6:]\n    extractNumber=re.findall(r'\", line \\d*',nameOfSubject)[0][8:]\n    print (extractName)\n    print (extractNumber)\n    extractMissingName=re.findall(r\"[^']+'$\",errorCode)[0][:-1]\n    print (extractMissingName)\n    candidateList=letIt()\n    print(candidateList)\n    consult=(lambda x:list(enumerate(x)))\n    processFuck=list(map((lambda x: diff(x,extractMissingName)),candidateList))\n    process=list(map((lambda x : max(list(map((lambda y:len(y)),x)))/len(x) ),processFuck))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/readMeta.py:1-27"
     },
     "2933": {
-        "file_id": 503,
+        "file_id": 502,
         "content": "The code reads an error log file, extracts relevant information from the last four lines, and then uses regular expressions to identify a missing file name. It then generates a candidate list for the missing file using a separate function, letIt(). The code applies diffTool() to each candidate in the list to compare them with the extracted file name, calculates the difference ratio, and finally stores these ratios in processFuck.",
         "type": "comment"
     },
     "2934": {
-        "file_id": 503,
+        "file_id": 502,
         "content": "    sortOfShit=list(map((lambda x:consult(x)),[processFuck,process]))\n    print(sortOfShit[0])\n    print(sortOfShit[1])\n    getCandidateRank=list(sorted(sortOfShit[1],key=(lambda x:x[1])))\n    print(getCandidateRank)\n    getLastTwo=list(reversed(list(map((lambda x:x[0]),getCandidateRank[-2:]))))\n    print(getLastTwo)\n    getCandidate=list(map((lambda x:candidateList[x]),getLastTwo))\n    print(getCandidate)\n#    print(processFuck)\n#    print(process)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/readMeta.py:28-38"
     },
     "2935": {
-        "file_id": 503,
+        "file_id": 502,
         "content": "This code sorts a list of processed data, retrieves the last two items, maps them to candidate list indices, and prints the resulting candidates. It seems to be a part of an information gathering process that involves consulting data and ranking candidates.",
         "type": "comment"
     },
     "2936": {
-        "file_id": 504,
+        "file_id": 503,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientology.py",
         "type": "filepath"
     },
     "2937": {
-        "file_id": 504,
+        "file_id": 503,
         "content": "This code loads pickle files, reads a log file, and compares their contents to populate a 2D list using functions from external modules \"fury\" and \"lolita\". It's part of a larger program for information gathering and manipulation, involving data filtering and printing at various stages, along with a zoom-in/zoom-out approach for analyzing textual data.",
         "type": "summary"
     },
     "2938": {
-        "file_id": 504,
+        "file_id": 503,
         "content": "import pickle\nfrom lolita import fury\nfrom shakeThatBooty import neuron\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x if x[-1]==\"\\n\" else x+\"\\n\")\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientology.py:1-40"
     },
     "2939": {
-        "file_id": 504,
+        "file_id": 503,
         "content": "This code loads pickle files, reads a log file, and then compares the contents of the log file with a list to populate a 2D list. It uses functions from external modules \"fury\" and \"lolita\". The pickle files contain data that is printed, while the core.log file is read, processed, and compared to populate the 2D list.",
         "type": "comment"
     },
     "2940": {
-        "file_id": 504,
+        "file_id": 503,
         "content": "                else:\n                    pass\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(\"--spliter a--\")\n    print(dizzy)\n    print(\"--spliter b--\")\n    for kids in range(len(dizzy)):\n        royal=dizzy[kids]\n        print(\"--spliter c--\")\n        print(shit0[royal])\n        print(\"--spliter d--\")\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(\"--spliter e--\")\n            print(neuron(greatWall(shit0[jokes+royal])))\n            print(\"--spliter f--\")\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientology.py:41-71"
     },
     "2941": {
-        "file_id": 504,
+        "file_id": 503,
         "content": "This code seems to be a part of a larger program, likely involved in information gathering and manipulation. It defines a function \"milk\" using lambda that filters specific data based on conditions from two separate lists. The filtered data is then printed at various stages of processing for debugging purposes. Additionally, the code appears to implement a zoom-in/zoom-out approach with self-similarity, suggesting its use in analyzing textual data at different levels of granularity or abstraction.",
         "type": "comment"
     },
     "2942": {
-        "file_id": 505,
+        "file_id": 504,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientology0.py",
         "type": "filepath"
     },
     "2943": {
-        "file_id": 505,
+        "file_id": 504,
         "content": "This code loads \"scavenger1.pickle\", reads log and text files, processes contents for comparison using 'fury' from 'lolita', storing results in 'fuckme'. It then filters and extracts values with a lambda function 'milk' before further processing with nested loops to print additional data.",
         "type": "summary"
     },
     "2944": {
-        "file_id": 505,
+        "file_id": 504,
         "content": "import pickle\nfrom lolita import fury\nfrom shakeThatBooty0 import neuron\n# WTF IS GOING ON WITH MY FUCKING CODE?\n# I CAN'T STAND IT!\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x if x[-1]==\"\\n\" else x+\"\\n\")\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core0.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientology0.py:1-40"
     },
     "2945": {
-        "file_id": 505,
+        "file_id": 504,
         "content": "This code is loading pickle files, reading log files, and processing strings. It first loads the \"scavenger1.pickle\" file into the variable 'pap'. Then, it reads a log file, followed by another text file named \"alphabets.txt\". It processes the contents of these files to compare them with the 'pap' string using the 'fury' function from the 'lolita' module and stores the results in the 'fuckme' list. The code then proceeds with further processing, but the next section is commented out.",
         "type": "comment"
     },
     "2946": {
-        "file_id": 505,
+        "file_id": 504,
         "content": "                    fuckme[r0].append([r,r1])\n                else:\n                    pass\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]])\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(dizzy)\n    for kids in range(len(dizzy)):\n        royal=dizzy[kids]\n        print(shit0[royal])\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(neuron(greatWall(shit0[jokes+royal])))\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.\n# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientology0.py:41-66"
     },
     "2947": {
-        "file_id": 505,
+        "file_id": 504,
         "content": "This code seems to involve manipulating data stored in the 'fuckme' list. It uses a lambda function 'milk' to filter and extract specific values from this list. The filtered results are then printed and processed further using nested loops to print additional data. The code appears complex, possibly due to its unconventional naming choices and structure.",
         "type": "comment"
     },
     "2948": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientologyR.py",
         "type": "filepath"
     },
     "2949": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "The code imports libraries, loads data, compares strings, appends matching indices, and defines functions for extracting values, checking duplicates, and performing tasks on the list of dictionaries. It discusses self-similarity, matrix usage with data loss, and zooming in/out for analysis.",
         "type": "summary"
     },
     "2950": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "import pickle\nfrom lolita import fury\nfrom shakeThatBootyR import neuron\nfrom newTestR import toyProject\n\"\"\"papi=\"\"\nwith open(\"scavenger.pickle\",\"rb\") as _file:\n    papi=pickle.load(_file)\n    print (papi)\n#fuck\npapi0=\"\"\nwith open(\"scavenger0.pickle\",\"rb\") as _file:\n    papi0=pickle.load(_file)\n    print (papi0)\n\"\"\"\npap=\"\"\ngreatWall=(lambda x: x if x[-1]==\"\\n\" else x+\"\\n\")\nwith open(\"scavenger1.pickle\",\"rb\") as _file:\n    pap=pickle.load(_file)\n#    print (pap)\njoker=(lambda nope0:nope0[:-1] if nope0[-1]==\"\\n\" else nope0)\njoke=(lambda nope0: list(filter((lambda x:x!=\"\"),nope0)))\nnope=\"\"\nwith open(\"core.log\",\"r\") as tits:\n    nope=tits.read()\nwith open(joker(nope)+\"alphabets.txt\",\"r\") as dickhead:\n    shit=dickhead.read().split(\"\\n\")\n    shit0=joker(joke(shit))\n#    print(shit0)\n    fuckme=[]\n    for m in range(len(pap)):\n        fuckme.append([])\n    for r,k in enumerate(shit0):\n        for r0,k0 in enumerate(pap):\n            for r1,k1 in enumerate(k0):\n                redis=fury(k1,k)\n                if redis==True:\n                    fuckme[r0].append([r,r1])",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientologyR.py:1-41"
     },
     "2951": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "The code imports necessary libraries and functions, loads pickle files, reads a log file, reads another text file, iterates through the loaded data, compares strings from both sources using fury function, and appends matching indices to a list.",
         "type": "comment"
     },
     "2952": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "                else:\n                    pass\n    milk=(lambda fuckme0,a,b: [r[0] for r in fuckme0[a] if r[0] in [r0[0] for r0 in fuckme0[b]]] )\n#    print(fuckme)\n    dizzy=milk(fuckme,0,1)\n    print(\"--spliter a--\")\n    print(dizzy)\n    print(\"--spliter b--\")\n    for kids in range(len(dizzy)):\n        royal=dizzy[kids]\n        print(\"--spliter c--\")\n        royalty=shit0[royal][1:-1]\n        print(royalty)\n        try:\n            toyProject(2,[royalty])\n            print(\"TITLE INTEGRATED\")\n        except:\n            print(\"DUPLICATE CODE 2\")\n        # fucking savangers.\n        # this is the main title.\n        print(\"--spliter d--\")\n        if kids<(len(dizzy)-1):\n            royal0=dizzy[kids+1]\n        else:\n            royal0=len(shit0)\n        royal+=1\n        for jokes in range(royal0-royal-1):\n            print(\"--spliter e--\")\n            print(neuron(royalty,greatWall(shit0[jokes+royal])))\n            print(\"--spliter f--\")\n#    print(shit0[-1],len(shit0)-1)\n    # do other shit.\n#    print(shit0)\n# notice that this is a superior leveler.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientologyR.py:42-75"
     },
     "2953": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "The code defines a function that takes a list of dictionaries, extracts specific values from the first two dictionaries, and then iterates over those extracted values. It checks for duplicate titles and prints the integrated title. Additionally, it performs further operations on each extracted value by calling other functions \"neuron\" and \"greatWall\". Finally, it may perform additional tasks on the entire list of dictionaries.",
         "type": "comment"
     },
     "2954": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "# it evolves slower. sure. it takes more time. hard to break.\n# yes you can make things into matricies but it is with loss.\n# the method is zoom in and zoom out.\n# self similarity. one word can be one article, and one article can also be one word.",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/scientologyR.py:76-80"
     },
     "2955": {
-        "file_id": 506,
+        "file_id": 505,
         "content": "The code discusses the concept of self-similarity, where a word can represent an article and vice versa; it also mentions the use of matrices with some loss in data, and the importance of zooming in and out for analysis.",
         "type": "comment"
     },
     "2956": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py",
         "type": "filepath"
     },
     "2957": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "The code imports functions, defines \"nuke\" and \"neuron,\" manipulates data with lambda and other operations, checks for duplicates, performs string comparisons, prints \"bitchSureDie,\" filters lists, handles errors, and returns \"crystal.\"",
         "type": "summary"
     },
     "2958": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "#shade0=\"     set: А, а, Б, б, В, в, Г, г, Ґ, ґ, Д, д, Е, е, Є, є, Ж, ж, З, з, И, и, І, і, Ї, ї, Й, й, К, к, Л, л, М, м, Н, н, О, о, П, п, Р, р, С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, Ч, ч, Ш, ш, Щ, щ, Ь, ь, Ю, ю, Я, я\"\nimport os\nfrom keepMeSatisfied import same_fuck\nfrom discoveryChannel import notorious\nfrom sonyWalkman import panasonic\nfrom preserveOrder import f7\nfrom alphaGel import amplifier, verizon0, verizon1, utilize\nfrom taiChi import Magisk\nfrom ejaculate import semen\nfrom statistics import mean\nunderConstruction=2400\nsimilar=(lambda x,y: True if (x/y > 1/2 and x/y < 2) else False)\ntakeThisBooth=(lambda v: mean([v[0],v[1],v[2]]))\nbadAss=(lambda y:list(map((lambda x:int(x)),y)))\nshaver=(lambda z: True if z==0 else False)\ndef nuke(s):\n    v=0\n    v2=0\n    for v0 in s:\n#        for v1 in range(2):\n        k0=1+0.5*(-1)**v2\n        if v0[0]==True:\n            v+=1.5*k0\n            if v0[1]==True and v2<=1:\n                return 2*len(s)\n        elif v0[1]==True:\n            v+=0.5*k0\n        v2+=1\n#            else:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:1-30"
     },
     "2959": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "The code is importing several functions from other modules and defining additional lambda functions. It also initializes a variable \"underConstruction\" with the value 2400, and defines a function called \"nuke\" that iterates over a list of boolean values and performs calculations based on their conditions. The exact purpose or application of these variables and functions is unclear without further context.",
         "type": "comment"
     },
     "2960": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "#                pass\n    return v\ndef neuron(shade):\n#    horror=list(shade)\n    crystal=[]\n    dishFish=Magisk(shade)\n#    if len(horror)>rk:\n#        for r,k in enumerate(horror):\n    for k in dishFish:\n#            if r>rk and r%3==rho:\n        crystal.append([chr(k),k])\n#    else:\n#        pass\n            # use the index only.\n    jerkMeOff=list(map((lambda x:x[1]),crystal))\n    fuckme0=f7(jerkMeOff)\n    quickFuck=(True if fuckme0==jerkMeOff else False)\n    # if false then there is duplication.\n    # alphabetical order may not maintained.\n    pureApk=[len(fuckme0)]\n    pureApk.append(shaver(pureApk[0]%2))\n    print(\"-- fuckme1--\")\n    print(fuckme0)\n    print(\"-- fuckme2--\")\n    # to purify the input.\n    fuckme=[fuckme0]\n    if len(fuckme[0])>2:\n        incline=sorted(fuckme[0])\n        decline=[True,False]\n        CykaBlyat=0\n        for decease in range(len(incline)):\n            if incline[decease]==fuckme[0][decease]:\n                pass\n            else:\n                decline[0]=False\n                break",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:31-67"
     },
     "2961": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "Function \"neuron\" takes a shade parameter and returns a list of alphabets in descending order. It first converts the input into a list, then iterates over each element to create a list of character-value pairs. It then extracts only the values from this list, and checks if there are duplicates by comparing the extracted list with its sorted version. If no duplicates exist, it purifies the list by sorting it alphabetically and adding two additional information: length of the list and a boolean value indicating whether it's an even number. Finally, it prints the list before and after purification.",
         "type": "comment"
     },
     "2962": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "        if decline[0]==False:\n            fuckme.append(incline)\n            print(\"NOT THE SAME\\nNOT THE SAME\")\n        else:\n            CykaBlyat+=1\n            print(\"THE SAME\\nTHE SAME\")\n        print(\"\\n---reality---\\n---reality---\\n---reality---\")\n        bitchSureDie=[]\n        for bitchEternity in fuckme:\n            init=\"lua geniusWalk.lua\"\n#            CykaBlyat=0\n            for fuckall in bitchEternity:\n                init+=\" \"+str(fuckall)\n#        print(init)\n#    print(fuckme)\n            myCmd0 = os.popen(init)\n            myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))\n        #myCmd[1]=list(map((lambda x:int(x)),myCmd[1]))\n            dickHead=badAss(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n            if myCmd[0]=='false':\n#                decline[1]=False\n                absoluteDuo=amplifier(decline)\n                print(\"--suck my dick--\")\n        #for knob in myCmd:\n                fake=same_fuck(myCmd[1])\n                print(fake)\n                try:\n                    jk=verizon0(absoluteDuo,fake,pureApk)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:68-96"
     },
     "2963": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "The code checks if a variable is the same, then executes different commands based on whether it's the same or not. It uses various functions like badAss and verizon0 for processing and printing. It also uses os.popen to run another command line script and filters out empty strings from its output. Finally, it handles errors using a try-except block.",
         "type": "comment"
     },
     "2964": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "                    print(\"HOLY SHIT\\nHOLY SHIT\")\n                    print(jk)\n                    bitchSureDie.append(jk)\n                except:\n                    print(\"SECOND FUCK\\nSECOND FUCK\")\n                print(\"--people eater--\")\n                KarlMarx=notorious(dickHead)\n                print(KarlMarx)\n                decline[1]=True\n                if CykaBlyat==1:\n                    print(\"-- cyka blyat --\")\n                    Souviet=list(filter((lambda x: x[0]==1),KarlMarx))[0][1]\n                    Moscow=list(range(len(bitchEternity)))\n                    navyTight=panasonic(Moscow,Souviet)\n#                    wavyTight=aka(Moscow,Souviet,navyTight)\n# related to the exact shit.\n                    Bruises=(lambda x: bitchEternity[x])\n                    Tokyo=(lambda x: [Bruises(x[0]),Bruises(x[1])])\n                    shakeThatBooty0=[list(map(Tokyo,Souviet)),list(map(Bruises,navyTight))]\n                    print(shakeThatBooty0)\n                    try:\n                        shakeIt=verizon1(shakeThatBooty0,pureApk)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:97-118"
     },
     "2965": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "The code appears to be filtering and manipulating data, with some error handling. It appends a value to a list (bitchSureDie), defines a list (KarlMarx) based on conditions, creates another list (Moscow) using the range function, uses the panasonic function to create another list (navyTight), applies lambda functions Bruises and Tokyo to manipulate data, creates a list shakeThatBooty0 with two sublists using map, then tries to use verizon1 on shakeThatBooty0.",
         "type": "comment"
     },
     "2966": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "                        bitchSureDie.append(shakeIt)\n                        print(\"NAVY TIGHT\\nNAVY TIGHT\")\n                        print(shakeIt)\n                    except:\n                        print(\"FIRST FUCK\\nFIRST FUCK\")\n                    print(\"-- cyka blyat --\")\n                else:\n                    CykaBlyat+=1\n            elif len(list(filter((lambda x: x==1),dickHead)))>=1:\n                # for those with simple alignments.\n                # check if difference is one\n                print(\"-- bitch sure die --\")\n                soul=bitchEternity[0]\n                print([soul,soul-1+len(bitchEternity)])\n                print(\"-- bitch sure die --\")\n            else:\n                print(\"SAME DISTANCE BUT NOT EQUAL TO IDENTITY\\nSAME DISTANCE BUT NOT EQUAL TO IDENTITY\")\n            myCmd0.close()\n            print(\"--spilter--\")\n#            counter+=1\n            for mv in myCmd:\n                print(mv)\n            print(\"--spliter--\")\n        try:\n            print(\"--mississippi--\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:119-143"
     },
     "2967": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "The code appears to be checking the differences between two lists and performing different actions based on the results. It seems to involve a mixture of conditional statements and error handling, with some printing of output for debugging or display purposes. It also involves file operations using the `myCmd` variable. The purpose or context of these specific operations is not clear from this code snippet alone.",
         "type": "comment"
     },
     "2968": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "            print(bitchSureDie)\n#            print(dickHead)\n            print(\"--mississippi--\")\n            if not quickFuck:\n                print(\"ATTENTION DUPLICATES FOUND\\nATTENTION DUPLICATES FOUND\")\n#                print(list(set([[fx[1],crystal.count(fx)] for fx in crystal if crystal.count(fx)>1])))\n                nope=[pos[1] for pos in crystal]\n                nah=list(set(nope))\n                print([[happyFuck,nope.count(happyFuck)] for happyFuck in nah if nope.count(happyFuck)>1])\n                # Randall forever!\n                Randall=[index for index, pos in enumerate(nope) if nope.count(pos)>1]\n                print([[nope[index-1],pos,nope[index+1]] for index, pos in enumerate(nope) if index in Randall])\n                print(\"ATTENTION DUPLICATES FOUND\\nATTENTION DUPLICATES FOUND\")\n            if takeThisBooth(list(reversed(sorted([kd[1] for kd in crystal]))))<5000 and takeThisBooth(sorted([kv[1] for kv in crystal]))<underConstruction and len(bitchSureDie)>1 and 61440 not in [svn[1] for svn in crystal]:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:144-157"
     },
     "2969": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "This code snippet prints \"bitchSureDie\" and checks for duplicate values in the \"crystal\" list. If duplicates are found, it prints a warning message and identifies the duplicate positions. It also includes additional conditions: the result of calling \"takeThisBooth\" on reversed and sorted crystal elements must be less than 5000, the result must be less than \"underConstruction\", and \"bitchSureDie\" must have more than one element while excluding \"61440\".",
         "type": "comment"
     },
     "2970": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "                instinct=utilize(similar(nuke(bitchSureDie),len(bitchSureDie)*2),quickFuck,list(filter((lambda x:x[1]!=962),crystal)))\n                if instinct!=[[],[]]:\n                    print(semen(instinct,crystal))\n                    print(\"-- CALL OF WILD --\\n-- CALL OF WILD --\")\n                else:\n                    pass\n            else:\n                print(\"-- TOO YOUNG TO GET FUCKED --\\n-- TOO YOUNG TO GET FUCKED --\") \n        except:\n            print(\"UNFUCKABLE\\nUNFUCKABLE\")\n    else:\n        pass\n    return crystal\n#print(neuron(shade0,9,1))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty.py:158-172"
     },
     "2971": {
-        "file_id": 507,
+        "file_id": 506,
         "content": "The code appears to be filtering a list of values and checking if any match certain conditions. If a match is found, it prints specific messages. If not, it executes an \"else\" statement. There are error handling mechanisms in place for potential exceptions that may occur. The code ends by returning the list called \"crystal\".",
         "type": "comment"
     },
     "2972": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py",
         "type": "filepath"
     },
     "2973": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "The code initializes a multilingual variable, imports functions, defines \"nuke\" function for list processing and sorting. It compares data sources, handles exceptions, filters using various functions and outputs final list. It detects duplicates, prints information, handles exceptions with multiple functions and includes error handling.",
         "type": "summary"
     },
     "2974": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "#shade0=\"     set: А, а, Б, б, В, в, Г, г, Ґ, ґ, Д, д, Е, е, Є, є, Ж, ж, З, з, И, и, І, і, Ї, ї, Й, й, К, к, Л, л, М, м, Н, н, О, о, П, п, Р, р, С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, Ч, ч, Ш, ш, Щ, щ, Ь, ь, Ю, ю, Я, я\"\nimport os\nfrom keepMeSatisfied import same_fuck\nfrom discoveryChannel import notorious\nfrom sonyWalkman import panasonic\nfrom preserveOrder import f7\nfrom alphaGel import amplifier, verizon0, verizon1, utilize\nfrom taiChi import Magisk\nfrom ejaculate import semen\nfrom statistics import mean\nfrom holdMeRightNow import insertOneItem, insertOneRelation, cleanUp\nunderConstruction=2400\nsimilar=(lambda x,y: True if (x/y > 1/2 and x/y < 2) else False)\ntakeThisBooth=(lambda v: mean([v[0],v[1],v[2]]))\nbadAss=(lambda y:list(map((lambda x:int(x)),y)))\nshaver=(lambda z: True if z==0 else False)\ndef nuke(s):\n    v=0\n    v2=0\n    for v0 in s:\n#        for v1 in range(2):\n        k0=1+0.5*(-1)**v2\n        if v0[0]==True:\n            v+=1.5*k0\n            if v0[1]==True and v2<=1:\n                return 2*len(s)\n        elif v0[1]==True:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:1-27"
     },
     "2975": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "The code is defining a variable \"shade0\" containing the alphabet in multiple languages. It then imports functions from other modules, defines a few lambda functions, and initializes a variable \"underConstruction\". The main function \"nuke\" takes an input list and iterates over its elements to calculate some values based on certain conditions, with options to return early if needed.",
         "type": "comment"
     },
     "2976": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "            v+=0.5*k0\n        v2+=1\n#            else:\n#                pass\n    return v\ndef neuron(shade):\n#    horror=list(shade)\n    crystal=[]\n    dishFish=Magisk(shade)\n#    if len(horror)>rk:\n#        for r,k in enumerate(horror):\n    for k in dishFish:\n#            if r>rk and r%3==rho:\n        crystal.append([chr(k),k])\n#    else:\n#        pass\n            # use the index only.\n    jerkMeOff=list(map((lambda x:x[1]),crystal))\n    fuckme0=f7(jerkMeOff)\n    quickFuck=(True if fuckme0==jerkMeOff else False)\n    # if false then there is duplication.\n    # alphabetical order may not maintained.\n    pureApk=[len(fuckme0)]\n    pureApk.append(shaver(pureApk[0]%2))\n    print(\"-- fuckme --\")\n    print(fuckme0)\n    print(\"-- fuckme --\")\n    # to purify the input.\n    fuckme=[fuckme0]\n    if len(fuckme[0])>2:\n        incline=sorted(fuckme[0])\n        decline=[True,False]\n        CykaBlyat=0\n        for decease in range(len(incline)):\n            if incline[decease]==fuckme[0][decease]:\n                pass\n            else:\n                decline[0]=False",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:28-66"
     },
     "2977": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "The code seems to involve processing and sorting a list of characters (possibly letters) from a given input. It involves converting the input into a list, filtering based on certain conditions, checking for duplicates, and sorting the list if it contains more than 2 items. The code also prints the original list, but its purpose is unclear as it's not related to any further processing in the function.",
         "type": "comment"
     },
     "2978": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "                break\n        if decline[0]==False:\n            fuckme.append(incline)\n            print(\"NOT THE SAME\\nNOT THE SAME\")\n        else:\n            CykaBlyat+=1\n            print(\"THE SAME\\nTHE SAME\")\n        print(\"\\n---reality---\\n---reality---\\n---reality---\")\n        bitchSureDie=[]\n        for bitchEternity in fuckme:\n            init=\"lua geniusWalk.lua\"\n#            CykaBlyat=0\n            for fuckall in bitchEternity:\n                init+=\" \"+str(fuckall)\n#        print(init)\n#    print(fuckme)\n            myCmd0 = os.popen(init)\n            myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))\n        #myCmd[1]=list(map((lambda x:int(x)),myCmd[1]))\n            dickHead=badAss(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n            if myCmd[0]=='false':\n#                decline[1]=False\n                absoluteDuo=amplifier(decline)\n                print(\"--suck my dick--\")\n        #for knob in myCmd:\n                fake=same_fuck(myCmd[1])\n                print(fake)\n                try:",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:67-95"
     },
     "2979": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "This code seems to be comparing data from two sources and determining if they are the same or different. If they are different, it appends the data to a list called fuckme and prints \"NOT THE SAME\" twice. If they are the same, it increments CykaBlyat and prints \"THE SAME\" twice. It then iterates through the fuckme list, executes a lua script with each item in bitchEternity, and stores the results in myCmd. If myCmd[0] is 'false', it performs additional actions including appending to absoluteDuo and printing \"suck my dick\". It also calls same_fuck function with myCmd[1] as argument and prints the result of the function.",
         "type": "comment"
     },
     "2980": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "                    jk=verizon0(absoluteDuo,fake,pureApk)\n                    print(\"HOLY SHIT\\nHOLY SHIT\")\n                    print(jk)\n                    bitchSureDie.append(jk)\n                except:\n                    print(\"SECOND FUCK\\nSECOND FUCK\")\n                print(\"--people eater--\")\n                KarlMarx=notorious(dickHead)\n                print(KarlMarx)\n                decline[1]=True\n                if CykaBlyat==1:\n                    print(\"-- cyka blyat --\")\n                    Souviet=list(filter((lambda x: x[0]==1),KarlMarx))[0][1]\n                    Moscow=list(range(len(bitchEternity)))\n                    navyTight=panasonic(Moscow,Souviet)\n#                    wavyTight=aka(Moscow,Souviet,navyTight)\n# related to the exact shit.\n                    Bruises=(lambda x: bitchEternity[x])\n                    Tokyo=(lambda x: [Bruises(x[0]),Bruises(x[1])])\n                    shakeThatBooty0=[list(map(Tokyo,Souviet)),list(map(Bruises,navyTight))]\n                    print(shakeThatBooty0)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:96-116"
     },
     "2981": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "The code appears to be performing various operations, including exception handling, data filtering, and list manipulation. It seems to involve a process that involves verizon0, notorious, lambda functions, filtering, range, panasonic, aka, and map functions. The output is a list called shakeThatBooty0 which is printed at the end. The code also includes some error handling with \"SECOND FUCK\" message in case of an exception.",
         "type": "comment"
     },
     "2982": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "                    try:\n                        shakeIt=verizon1(shakeThatBooty0,pureApk)\n                        bitchSureDie.append(shakeIt)\n                        print(\"NAVY TIGHT\\nNAVY TIGHT\")\n                        print(shakeIt)\n                    except:\n                        print(\"FIRST FUCK\\nFIRST FUCK\")\n                    print(\"-- cyka blyat --\")\n                else:\n                    CykaBlyat+=1\n            elif len(list(filter((lambda x: x==1),dickHead)))>=1:\n                # for those with simple alignments.\n                # check if difference is one\n                print(\"-- bitch sure die --\")\n                soul=bitchEternity[0]\n                print([soul,soul-1+len(bitchEternity)])\n                print(\"-- bitch sure die --\")\n            else:\n                print(\"SAME DISTANCE BUT NOT EQUAL TO IDENTITY\\nSAME DISTANCE BUT NOT EQUAL TO IDENTITY\")\n            myCmd0.close()\n            print(\"--spilter--\")\n#            counter+=1\n            for mv in myCmd:\n                print(mv)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:117-140"
     },
     "2983": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "This code appears to be part of a larger program that handles different conditions based on the values in lists. It tries to execute certain operations when specific conditions are met and prints messages accordingly. The code also involves handling exceptions and closing a MySQL connection.",
         "type": "comment"
     },
     "2984": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "            print(\"--spliter--\")\n        try:\n            print(\"--mississippi--\")\n            print(bitchSureDie)\n#            print(dickHead)\n            print(\"--mississippi--\")\n            if not quickFuck:\n                print(\"ATTENTION DUPLICATES FOUND\\nATTENTION DUPLICATES FOUND\")\n#                print(list(set([[fx[1],crystal.count(fx)] for fx in crystal if crystal.count(fx)>1])))\n                nope=[pos[1] for pos in crystal]\n                nah=list(set(nope))\n                print([[happyFuck,nope.count(happyFuck)] for happyFuck in nah if nope.count(happyFuck)>1])\n                # Randall forever!\n                Randall=[index for index, pos in enumerate(nope) if nope.count(pos)>1]\n                print([[nope[index-1],pos,nope[index+1]] for index, pos in enumerate(nope) if index in Randall])\n                print(\"ATTENTION DUPLICATES FOUND\\nATTENTION DUPLICATES FOUND\")\n            if takeThisBooth(list(reversed(sorted([kd[1] for kd in crystal]))))<5000 and takeThisBooth(sorted([kv[",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:141-157"
     },
     "2985": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "This code is detecting duplicates in a list and printing relevant information. It first prints \"ATTENTION DUPLICATES FOUND\" if duplicates are found. Then, it creates a set of unique items from the original list and prints these items. Next, it identifies and prints the indices of any duplicate items in the new list. Finally, it checks if a certain condition is met and prints some more information based on this condition. The code uses various Python functions like set(), sorted(), reversed() and list comprehension to perform these tasks.",
         "type": "comment"
     },
     "2986": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "1] for kv in crystal]))<underConstruction and len(bitchSureDie)>1 and 61440 not in [svn[1] for svn in crystal]:\n                instinct=utilize(similar(nuke(bitchSureDie),len(bitchSureDie)*2),quickFuck,list(filter((lambda x:x[1]!=962),crystal)))\n                if instinct!=[[],[]]:\n                    print(semen(instinct,crystal))\n                    print(\"-- CALL OF WILD --\\n-- CALL OF WILD --\")\n                else:\n                    pass\n            else:\n                print(\"-- TOO YOUNG TO GET FUCKED --\\n-- TOO YOUNG TO GET FUCKED --\") \n        except:\n            print(\"UNFUCKABLE\\nUNFUCKABLE\")\n    else:\n        pass\n    return crystal\n#print(neuron(shade0,9,1))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBooty0.py:157-172"
     },
     "2987": {
-        "file_id": 508,
+        "file_id": 507,
         "content": "This code seems to be checking if a certain condition is met, and based on that, it performs specific actions or prints messages. If the condition is not met, it will print different messages. There are multiple error-handling scenarios as well. The code also utilizes various functions like `nuke`, `similar`, `utilize`, `filter`, and `semen`. It's difficult to provide a more accurate interpretation without more context on the functions used.",
         "type": "comment"
     },
     "2988": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py",
         "type": "filepath"
     },
     "2989": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "This code imports functions, defines shades, and manipulates command lists using lua geniusWalk.lua with unclear purpose due to non-standard variable names and disjointed logic. It handles exceptions, finds duplicates in lists/dictionaries for debugging or data validation purposes, searches for duplicates, handles errors, checks user age, and may be part of a larger program related to language or data processing.",
         "type": "summary"
     },
     "2990": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "#shade0=\"     set: А, а, Б, б, В, в, Г, г, Ґ, ґ, Д, д, Е, е, Є, є, Ж, ж, З, з, И, и, І, і, Ї, ї, Й, й, К, к, Л, л, М, м, Н, н, О, о, П, п, Р, р, С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, Ч, ч, Ш, ш, Щ, щ, Ь, ь, Ю, ю, Я, я\"\nimport os\nfrom keepMeSatisfied import same_fuck\nfrom discoveryChannel import notorious\nfrom sonyWalkman import panasonic\nfrom preserveOrder import f7\nfrom alphaGel import amplifier, verizon0, verizon1, utilize\nfrom taiChi import Magisk\nfrom ejaculate import semen\nfrom statistics import mean\nfrom newTestR import toyProject\nunderConstruction=2400\nsimilar=(lambda x,y: True if (x/y > 1/2 and x/y < 2) else False)\ntakeThisBooth=(lambda v: mean([v[0],v[1],v[2]]))\nbadAss=(lambda y:list(map((lambda x:int(x)),y)))\nshaver=(lambda z: True if z==0 else False)\nsilkRoad=(lambda x: [pos[1] for pos in x])\ndef nuke(s):\n    v=0\n    v2=0\n    for v0 in s:\n#        for v1 in range(2):\n        k0=1+0.5*(-1)**v2\n        if v0[0]==True:\n            v+=1.5*k0\n            if v0[1]==True and v2<=1:\n                return 2*len(s)",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:1-27"
     },
     "2991": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "Code imports functions and variables from several modules, defines a list of shades with their characters, and contains a nuke function that iterates through input data, applying some operations based on the boolean values in each element. The nuke function returns the length of the input if certain conditions are met.",
         "type": "comment"
     },
     "2992": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "        elif v0[1]==True:\n            v+=0.5*k0\n        v2+=1\n#            else:\n#                pass\n    return v\ndef neuron(fuckingSavangers,shade):\n    #this is the fucking shit\n    print(\"--fuck me now--\")\n    print(fuckingSavangers)\n    print(\"--fuck me now--\")\n#    horror=list(shade)\n    crystal=[]\n    dishFish=Magisk(shade)\n#    if len(horror)>rk:\n#        for r,k in enumerate(horror):\n    for k in dishFish:\n#            if r>rk and r%3==rho:\n        crystal.append([chr(k),k])\n#    else:\n#        pass\n            # use the index only.\n    jerkMeOff=list(map((lambda x:x[1]),crystal))\n    fuckme0=f7(jerkMeOff)\n    honeyPot=0\n    if fuckme0!=[]:\n        for termIn in fuckme0:\n            try:\n                toyProject(1,[termIn,fuckingSavangers])\n                print(\"CODE INDEXED\")\n            except:\n                print(\"DUPLICATE CODE 1\")\n    else:\n        honeyPot+=1\n    quickFuck=(True if fuckme0==jerkMeOff else False)\n    # if false then there is duplication.\n    # alphabetical order may not maintained.\n    pureApk=[len(fuckme0)]",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:28-66"
     },
     "2993": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "The code defines a function 'neuron' that takes two parameters - 'fuckingSavangers' and 'shade'. It then creates an empty list 'crystal', iterates through the items in 'dishFish' (generated from 'shade'), converts them to characters and appends them to 'crystal'. It then extracts the values from 'crystal' into 'jerkMeOff', applies a function 'f7' on it, and checks for duplicates. If there are no duplicates, 'honeyPot' is incremented by 1; if there are duplicates, 'toyProject' is called with parameters 1 and a list containing the duplicate term and 'fuckingSavangers'. Finally, it returns a boolean value indicating whether or not there were duplicates.",
         "type": "comment"
     },
     "2994": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "    pureApk.append(shaver(pureApk[0]%2))\n    print(\"-- fuckme1--\")\n    print(fuckme0)\n    print(\"-- fuckme2--\")\n    # to purify the input.\n    fuckme=[fuckme0]\n    if len(fuckme[0])>2:\n        incline=sorted(fuckme[0])\n        decline=[True,False]\n        CykaBlyat=0\n        for decease in range(len(incline)):\n            if incline[decease]==fuckme[0][decease]:\n                pass\n            else:\n                decline[0]=False\n                break\n        if decline[0]==False:\n            fuckme.append(incline)\n            print(\"NOT THE SAME\\nNOT THE SAME\")\n        else:\n            CykaBlyat+=1\n            print(\"THE SAME\\nTHE SAME\")\n        print(\"\\n---reality---\\n---reality---\\n---reality---\")\n        bitchSureDie=[]\n        for bitchEternity in fuckme:\n            init=\"lua geniusWalk.lua\"\n#            CykaBlyat=0\n            for fuckall in bitchEternity:\n                init+=\" \"+str(fuckall)\n#        print(init)\n#    print(fuckme)\n            myCmd0 = os.popen(init)\n            myCmd=list(filter((lambda xn:xn!=\"\"),myCmd0.read().split(\"\\n\")))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:67-100"
     },
     "2995": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "The code is performing data purification and comparison, then executing a command for each item in the data. It checks if an input list has more than 2 elements, sorts it, and compares each element with the original list. Depending on whether they are the same or not, it prints a message and proceeds to execute a command using lua geniusWalk.lua with the sorted list as arguments.",
         "type": "comment"
     },
     "2996": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "        #myCmd[1]=list(map((lambda x:int(x)),myCmd[1]))\n            dickHead=badAss(list(filter((lambda x:x!=\"\"),myCmd[1].split(\" \"))))\n            if myCmd[0]=='false':\n#                decline[1]=False\n                absoluteDuo=amplifier(decline)\n                print(\"--suck my dick--\")\n        #for knob in myCmd:\n                fake=same_fuck(myCmd[1])\n                print(fake)\n                try:\n                    jk=verizon0(absoluteDuo,fake,pureApk)\n                    print(\"HOLY SHIT\\nHOLY SHIT\")\n                    print(jk)\n                    bitchSureDie.append(jk)\n                except:\n                    print(\"SECOND FUCK\\nSECOND FUCK\")\n                print(\"--people eater--\")\n                KarlMarx=notorious(dickHead)\n                print(KarlMarx)\n                decline[1]=True\n                if CykaBlyat==1:\n                    print(\"-- cyka blyat --\")\n                    Souviet=list(filter((lambda x: x[0]==1),KarlMarx))[0][1]\n                    Moscow=list(range(len(bitchEternity)))",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:101-124"
     },
     "2997": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "The code is manipulating a command list, filtering out empty strings and converting values to integers. It then performs various operations such as amplifying a 'decline' variable, printing different messages, and appending the result of a 'verizon0' function into a 'bitchSureDie' list. Additionally, it filters a variable named 'KarlMarx', and if 'CykaBlyat' equals 1, it executes additional operations to obtain values for 'Souviet' and 'Moscow'. The purpose of this code is unclear as the variable names are not standard and the logic appears disjointed.",
         "type": "comment"
     },
     "2998": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "                    navyTight=panasonic(Moscow,Souviet)\n#                    wavyTight=aka(Moscow,Souviet,navyTight)\n# related to the exact shit.\n                    Bruises=(lambda x: bitchEternity[x])\n                    Tokyo=(lambda x: [Bruises(x[0]),Bruises(x[1])])\n                    shakeThatBooty0=[list(map(Tokyo,Souviet)),list(map(Bruises,navyTight))]\n                    print(shakeThatBooty0)\n                    try:\n                        shakeIt=verizon1(shakeThatBooty0,pureApk)\n                        bitchSureDie.append(shakeIt)\n                        print(\"NAVY TIGHT\\nNAVY TIGHT\")\n                        print(shakeIt)\n                    except:\n                        print(\"FIRST FUCK\\nFIRST FUCK\")\n                    print(\"-- cyka blyat --\")\n                else:\n                    CykaBlyat+=1\n            elif len(list(filter((lambda x: x==1),dickHead)))>=1:\n                # for those with simple alignments.\n                # check if difference is one\n                print(\"-- bitch sure die --\")",
         "type": "code",
         "location": "/multilingual/rockstar/newdawn/info_gather-v0/wizard/alphabets/shakeThatBootyR.py:125-145"
     },
     "2999": {
-        "file_id": 509,
+        "file_id": 508,
         "content": "This code applies operations on lists and dictionaries, possibly involving lambda functions, then prints out the results. It handles exceptions and includes conditional logic based on list filtering and comparison. The purpose or outcome of the code is not clear without understanding the context of the larger program.",
         "type": "comment"
     }
