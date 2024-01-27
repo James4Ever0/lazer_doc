@@ -1,0 +1,13 @@
+#!/data/data/com.termux/files/usr/bin/expect
+spawn zsh
+expect -re ".*"
+puts $expect_out(buffer)
+send -- "pwd\r"
+expect -re ".*"
+puts $expect_out(buffer)
+send -- "pwd\r"
+expect -re ".*"
+puts $expect_out(buffer)
+send -- "pwd\r"
+expect eof
+puts $expect_out(buffer)

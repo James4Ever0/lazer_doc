@@ -1,0 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/expect
+cd /data/data/com.termux/files/home/lazer/metalearning/methodBank/analyzer
+spawn python
+expect -re ".*" {send -- "import sampleModule\r"}
+expect -re ".*" {send -- "from standardParse import *\r"}
+expect -re ".*" {send -- "monad(\"sampleModule\",globals())\r"}
+expect -re ".*" {send -- "exit()\r"}
+expect eof

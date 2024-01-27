@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/expect
+spawn node
+expect -re ".*" {send -- "2+2\r"}
+expect -re ".*" {send -- "4+4\r"}
+expect -re ".*" {send -- "console.log('hello')\r"}
+expect -re ".*" {send -- ".exit\r"}
+expect eof

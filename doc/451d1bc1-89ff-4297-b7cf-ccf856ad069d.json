@@ -1,0 +1,10 @@
+{
+    "summary": "This code reads \"CommandGrepMainIndex.txt\" and pipes the command output with -h or --help appended to each line, saving them in Aux0/ and Aux1/ respectively. The resulting files are then concatenated into Aux0.sh and Aux1.sh respectively.",
+    "details": [
+        {
+            "comment": "This code reads \"CommandGrepMainIndex.txt\" and pipes the command output with -h or --help appended to each line, saving them in Aux0/ and Aux1/ respectively. The resulting files are then concatenated into Aux0.sh and Aux1.sh respectively.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/AuxCommandGrep.sh\":0-2",
+            "content": "#!/bin/bash\nawk '{print $0 \" -h\" \" | cat > Aux0/\" $0 \".txt\" }' \"CommandGrepMainIndex.txt\" | cat > Aux0.sh\nawk '{print $0 \" --help\" \" | cat > Aux1/\" $0 \".txt\" }' \"CommandGrepMainIndex.txt\" | cat > Aux1.sh"
+        }
+    ]
+}
