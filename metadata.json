@@ -1,7 +1,7 @@
 {
     "url": {
         "full": "https://gitee.com/x00e0d991e368/lazer",
-        "partial": "/x00e0d991e368/lazer"
+        "partial": "x00e0d991e368/lazer"
     },
     "file_mapping": {
         "0": {
@@ -77,7 +77,7 @@
         "15": {
             "filepath": "/README.md",
             "entry_id": 56,
-            "language_id": "markdown"
+            "language_id": "plain-text"
         },
         "16": {
             "filepath": "/README_previous.md",
