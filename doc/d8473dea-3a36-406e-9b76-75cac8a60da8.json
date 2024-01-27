@@ -1,0 +1,10 @@
+{
+    "summary": "This script executes a Git pull command, updating the local repository with changes from the remote 'origin' and 'master' branch.",
+    "details": [
+        {
+            "comment": "This script executes a Git pull command, updating the local repository with changes from the remote 'origin' and 'master' branch.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/updateYourFuck.sh\":0-1",
+            "content": "#!/bin/bash\ngit pull origin master"
+        }
+    ]
+}

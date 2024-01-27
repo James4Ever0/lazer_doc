@@ -1,0 +1,10 @@
+{
+    "summary": "Script to find all executable files in the specified PATH, then lists them alongside existing aliases for command line management.",
+    "details": [
+        {
+            "comment": "Script to find all executable files in the specified PATH, then lists them alongside existing aliases for command line management.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/XListAllCommandsWithAlias.sh\":0-9",
+            "content": "#!/bin/bash\nfunction ListAllCommandsWithAlias\n{\n    COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \\\n        -executable -type f -printf '%P\\n'`\n    ALIASES=`alias | cut -d '=' -f 1`\n    echo \"$COMMANDS\"$'\\n'\"$ALIASES\" | sort -u\n}\nListAllCommandsWithAlias"
+        }
+    ]
+}

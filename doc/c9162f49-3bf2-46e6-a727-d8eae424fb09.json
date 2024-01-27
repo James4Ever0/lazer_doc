@@ -1,0 +1,10 @@
+{
+    "summary": "This command searches for executable files in the directories listed in the PATH variable. It uses echo to display each directory on a new line, then xargs finds files within those directories that are executable and at most one level deep.",
+    "details": [
+        {
+            "comment": "This command searches for executable files in the directories listed in the PATH variable. It uses echo to display each directory on a new line, then xargs finds files within those directories that are executable and at most one level deep.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/MacCS.sh\":0-0",
+            "content": "echo $PATH | tr ':' '\\n' | xargs -I {} find {} -maxdepth 1 -type f -perm '++x'"
+        }
+    ]
+}

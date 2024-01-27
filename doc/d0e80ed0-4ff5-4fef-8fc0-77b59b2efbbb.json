@@ -1,0 +1,10 @@
+{
+    "summary": "The code defines a function named \"command-search\" that searches for commands in the user's PATH environment variable. It uses a loop to iterate through each directory in the PATH and lists the contents of each directory using 'ls'. It then filters the listed files with 'grep', searching for the provided command name. The original Internal Field Separator (IFS) is saved, and then modified to \":\" to separate path components, and finally restored after the search is complete.",
+    "details": [
+        {
+            "comment": "The code defines a function named \"command-search\" that searches for commands in the user's PATH environment variable. It uses a loop to iterate through each directory in the PATH and lists the contents of each directory using 'ls'. It then filters the listed files with 'grep', searching for the provided command name. The original Internal Field Separator (IFS) is saved, and then modified to \":\" to separate path components, and finally restored after the search is complete.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/CommandSearch.sh\":0-12",
+            "content": "#!/bin/bash\nfunction command-search\n{\n   oldIFS=${IFS}\n   IFS=\":\"\n   for p in ${PATH}\n   do\n      ls $p | grep $1\n   done\n   export IFS=${oldIFS}\n}"
+        }
+    ]
+}

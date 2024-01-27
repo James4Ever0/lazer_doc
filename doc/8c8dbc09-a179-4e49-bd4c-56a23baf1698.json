@@ -1,0 +1,10 @@
+{
+    "summary": "Function \"command-grep\" searches for executable files in the system's PATH. It saves the current IFS setting, changes it to colon separator, iterates through each path in PATH variable, and lists all files in that directory using \"ls\". After completing its task, it restores the original IFS value. The output is redirected to a file named \"CommandGrepMainIndex.txt\" for future reference or analysis.",
+    "details": [
+        {
+            "comment": "Function \"command-grep\" searches for executable files in the system's PATH. It saves the current IFS setting, changes it to colon separator, iterates through each path in PATH variable, and lists all files in that directory using \"ls\". After completing its task, it restores the original IFS value. The output is redirected to a file named \"CommandGrepMainIndex.txt\" for future reference or analysis.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/CommandGrep.sh\":0-14",
+            "content": "#!/bin/bash\nfunction command-grep\n{\n   oldIFS=${IFS}\n   IFS=\":\"\n   for p in ${PATH}\n   do\n      ls $p\n   done\n   export IFS=${oldIFS}\n}\ncommand-grep | cat > \"CommandGrepMainIndex.txt\""
+        }
+    ]
+}

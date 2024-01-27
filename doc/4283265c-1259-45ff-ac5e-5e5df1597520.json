@@ -1,0 +1,10 @@
+{
+    "summary": "This Bash script defines a function called ListAllCommands, which takes the PATH as input. It uses xargs to find all executable files in the specified path and outputs them sorted uniquely.",
+    "details": [
+        {
+            "comment": "This Bash script defines a function called ListAllCommands, which takes the PATH as input. It uses xargs to find all executable files in the specified path and outputs them sorted uniquely.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/XListAllCommands.sh\":0-6",
+            "content": "#!/bin/bash\nfunction ListAllCommands\n{\n    echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \\\n        -executable -type f -printf '%P\\n' | sort -u\n}\nListAllCommands"
+        }
+    ]
+}

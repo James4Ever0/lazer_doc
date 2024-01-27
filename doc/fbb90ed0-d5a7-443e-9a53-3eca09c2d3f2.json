@@ -1,0 +1,10 @@
+{
+    "summary": "The code represents a README.md file for a project called \"lazer\". It describes an Advanced Agent AI that acts as a General Problem Solver, capable of automatic information gathering, understanding, and source code generation to make everything executable, analyzable, and controllable.",
+    "details": [
+        {
+            "comment": "The code represents a README.md file for a project called \"lazer\". It describes an Advanced Agent AI that acts as a General Problem Solver, capable of automatic information gathering, understanding, and source code generation to make everything executable, analyzable, and controllable.",
+            "location": "\"/media/root/Prima/works/generated_docs/lazer_doc/src/README.md\":0-3",
+            "content": "# lazer\nstate-of-the-art Advanced Agent AI as a General Problem Solver, including automatic information gathering, understanding and source code generating\n```To make everything executable, analyzable, controllable.```"
+        }
+    ]
+}
