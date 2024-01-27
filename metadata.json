@@ -77,7 +77,7 @@
         "15": {
             "filepath": "/README.md",
             "entry_id": 56,
-            "language_id": "plain-text"
+            "language_id": "markdown"
         },
         "16": {
             "filepath": "/README_previous.md",
@@ -3622,7 +3622,7 @@
         "726": {
             "filepath": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md",
             "entry_id": 4060,
-            "language_id": "plain-text"
+            "language_id": "markdown"
         },
         "727": {
             "filepath": "/multilingual/rockstar/newdawn/info_gather/luacombine/combine.lua",
