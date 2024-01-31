@@ -3622,7 +3622,7 @@
         "723": {
             "filepath": "/multilingual/rockstar/newdawn/info_gather/luacombine/README.md",
             "entry_id": 4060,
-            "language_id": "plain-text"
+            "language_id": "markdown"
         },
         "724": {
             "filepath": "/multilingual/rockstar/newdawn/info_gather/luacombine/combine.lua",
